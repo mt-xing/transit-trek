@@ -76,7 +76,7 @@ const AdminPage = () => {
         <p>Challenges: {challenges.length}</p>
         <ol>
         {
-          teams.map((t) => <li key={t.id}>Team {t.id + 1}: {t.name} ({t.score})</li>)
+          teams.sort((a, b) => b.score - a.score).map((t) => <li key={t.id}>Team {t.id + 1}: {t.name} ({t.score})</li>)
         }
         </ol>
         <button onClick={() => setState("challenges")}>Edit Challenges</button>

@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
     }
 
     const db = await kv.get<DbInfo>(DB_KEY);
-    const info = db?.teams?.map(x => ({id: x.id, name: x.name, score: x.score})).sort((a, b) => b.score - a.score);
+    const info = db?.teams?.map(x => ({id: x.id, name: x.name, score: x.score}));
     return NextResponse.json(
         { teams: info ?? [] },
         {
