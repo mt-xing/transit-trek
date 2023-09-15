@@ -5,7 +5,6 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(request: NextRequest) {
     const t = request.headers.get("token") ?? "";
-    console.log("Process token", t);
 
     if (t !== PUBLIC_GET_TOKEN) {
         return NextResponse.json(

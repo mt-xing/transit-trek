@@ -170,7 +170,7 @@ const AdminPage = () => {
         <p>Challenge: <select value={selChal} onChange={e => setSelChal(parseInt(e.target.value))}><option value="-1">PICK</option>{challenges.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}</select></p>
         {
             selTeam !== -1 && selChal !== -1 && teams[selTeam] && challenges[selChal] ? <>
-                <h2>Challlenge Status</h2>
+                <h2>Challenge Status</h2>
                 <p>Team: {teams[selTeam].name}</p>
                 <p>Challenge: {challenges[selChal].name}</p>
                 {challenges[selChal].desc ? <p>{challenges[selChal].desc}</p> : null}
@@ -184,7 +184,7 @@ const AdminPage = () => {
                                 const a = team.challengeStatus[selChal];
                                 const done = a ? a[0] : false;
                                 return <>
-                                {!done ? "Incomplete; check box to complete" : "Complete"}
+                                {!done ? "Incomplete; check box to complete" : "Completed!"}
                                 <br />
                                 <input type="checkbox" checked={done} onChange={e => {
                                     const d = e.target.checked;
@@ -201,18 +201,21 @@ const AdminPage = () => {
                                     if (aRaw.length < challenge.type.num) {return aRaw.concat(Array.from(Array(challenge.type.num - aRaw.length)).map(_ => false))}
                                     return aRaw.slice(0, challenge.type.num);
                                 })();
-                                return <ol>{arr.map((x, i) => <li key={i}>
-                                    <input type="checkbox" checked={x} onChange={e => setTeams(ts => ts.map(t => t.id !== team.id ? t : {...t, challengeStatus: {...t.challengeStatus, [challenge.id]: (() => {
-                                        const x = arr.slice();
-                                        x[i] = e.target.checked;
-                                        if (x.every(y => y) && arr.some(y => !y)) {
-                                            teamChallengePointChange(team.id, challenge, true);
-                                        } else if (x.some(y => !y) && arr.every(x => x)) {
-                                            teamChallengePointChange(team.id, challenge, false);
-                                        }
-                                        return x;
-                                    })()}}))} />
-                                </li>)}</ol>;
+                                return <>
+                                    <p>{arr.every(x => x) ? "Completed!" : "Incomplete"}</p>
+                                    <ol>{arr.map((x, i) => <li key={i}>
+                                        <input type="checkbox" checked={x} onChange={e => setTeams(ts => ts.map(t => t.id !== team.id ? t : {...t, challengeStatus: {...t.challengeStatus, [challenge.id]: (() => {
+                                            const x = arr.slice();
+                                            x[i] = e.target.checked;
+                                            if (x.every(y => y) && arr.some(y => !y)) {
+                                                teamChallengePointChange(team.id, challenge, true);
+                                            } else if (x.some(y => !y) && arr.every(x => x)) {
+                                                teamChallengePointChange(team.id, challenge, false);
+                                            }
+                                            return x;
+                                        })()}}))} />
+                                    </li>)}</ol>
+                                </>;
                             }
                             case "unlimited": {
                                 const a = team.challengeStatus[selChal];
@@ -236,7 +239,7 @@ const AdminPage = () => {
                 }
             </> : null
         }
-        <p><button onClick={() => {setState("home");setSelTeam(-1);setSelChal(-1);}}>Done</button></p>
+        <p><button onClick={() => {setState("home");setSelTeam(-1);setSelChal(-1);}}>Return Home</button></p>
     </>, [selTeam, selChal, teams, challenges, teamChallengePointChange]);
 
     const pageContents = useMemo(() => {
