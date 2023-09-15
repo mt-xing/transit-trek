@@ -26,15 +26,19 @@
 
 .homeRank ol > li {
     margin: 15px 0;
-    padding: 15px 10px 15px 70px;
+    padding: 15px 50px;
     background: #F24E69;
-    counter-increment: item;
     position: relative;
     overflow: hidden;
     border-radius: 15px;
 }
 
-.homeRank ol > li::before {
+.homeRank ol > .rankLi {
+    padding: 15px 10px 15px 70px;
+    counter-increment: item;
+}
+
+.homeRank ol > .rankLi::before {
     content: counter(item);
     position: absolute;
     left: 5px; top: 0; bottom: 0;

@@ -7,7 +7,7 @@ import { useCallback, useEffect, useState } from "react";
 type TeamInfo = {id: number, name: string, score: number};
 
 export default function Home() {
-  const [teams, setTeams] = useState<TeamInfo[][]>([]);
+  const [teams, setTeams] = useState<TeamInfo[][] | null>(null);
 
   const setTeamInfo = useCallback((x: TeamInfo[]) => {
     const res: Map<number, TeamInfo[]> = new Map();
@@ -23,21 +23,21 @@ export default function Home() {
     setTeams(arr);
   }, []);
 
-  useEffect(() => {
+  const getInfo = useCallback(() => {
     fetch("/api/public-get", {headers: {token: PUBLIC_GET_TOKEN}}).then(res => {
       res.json().then((x: {teams: TeamInfo[]}) => setTeamInfo(x.teams ?? []));
     });
+  }, [setTeamInfo]);
 
-    const interval = setInterval(() => {
-      fetch("/api/public-get", {headers: {token: PUBLIC_GET_TOKEN}}).then(res => {
-        res.json().then((x: {teams: TeamInfo[]}) => setTeamInfo(x.teams ?? []));
-      });
-    }, 15*1000);
+  useEffect(() => {
+    getInfo();
+
+    const interval = setInterval(getInfo, 10*1000);
   
     return () => {
       clearInterval(interval);
     }
-  }, [setTeamInfo]);
+  }, [getInfo]);
 
   return (
     <div className={styles.homeWrap}>
@@ -48,7 +48,9 @@ export default function Home() {
       <main className={styles.homeRank}>
         <ol>
         {
-          teams?.map((t) => <li key={t[0].score}>
+          teams === null ? <li>Loading...</li> :
+          teams.length === 0 ? <li>Scores will be displayed here when the game begins</li> :
+          teams.map((t) => <li key={t[0].score} className={styles.rankLi}>
             {t[0].score} point{t[0].score === 1 ? "" : "s"}
             <ul>
               {t.map(tt => <li key={tt.id}>{tt.name}</li>)}
