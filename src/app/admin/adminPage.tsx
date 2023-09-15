@@ -4,22 +4,45 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 
 import styles from "./admin.module.css";
 import { Challenge, DbInfo, Team } from "../types";
+import { CLIENT_ID, REDIRECT_URI } from "./consts";
 
 type PageState = "home" | "teams" | "challenges" | "entry";
 
+const loginUrl = `https://accounts.google.com/o/oauth2/v2/auth?scope=email&response_type=token&redirect_uri=${REDIRECT_URI}&client_id=${CLIENT_ID}`;
+
 const AdminPage = () => {
-    const [loaded, setLoaded] = useState<boolean>(false);
+    const [token, setToken] = useState<string | null>(null);
     const [state, setState] = useState<PageState>("home");
     const [challenges, setChallenges] = useState<Challenge[]>([]);
     const [teams, setTeams] = useState<Team[]>([]);
 
     useEffect(() => {
-        fetch("/api/private-get").then(d => d.json().then(x => {
+        const fragmentString = location.hash.substring(1);
+
+        const params: Record<string, string> = {};
+        const regex = /([^&=]+)=([^&]*)/g
+        let m;
+        while (m = regex.exec(fragmentString)) {
+            params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+        }
+
+        if (!params.access_token) {
+            location.href = loginUrl;
+            return;
+        }
+
+        const token: string = params.access_token;
+
+        fetch("/api/private-get", {
+            headers: {
+                token,
+            },
+        }).then(d => d.json().then(x => {
             console.log(x);
             setTeams(x.teams);
             setChallenges(x.challenges);
             if (x.teams && x.challenges) {
-                setLoaded(true);
+                setToken(token);
             } else {
                 alert("ERROR: Fetch failed");
             }
@@ -27,15 +50,22 @@ const AdminPage = () => {
     }, []);
 
     useEffect(() => {
-        if (!loaded){ return; }
+        if (!token){ return; }
         const data: DbInfo = {
             teams, challenges
         };
         fetch("/api/private-save", {
             method: "POST",
             body: JSON.stringify(data),
-        })
-    }, [challenges, teams, loaded]);
+            headers: {
+                token,
+            },
+        }).then(res => {
+            if (res.status !== 200) {
+                alert("Failed to save");
+            }
+        }).catch(() => alert("Failed to save"));
+    }, [challenges, teams, token]);
 
     const homePage = useMemo(() => <>
         <p>Challenges: {challenges.length}</p>
@@ -220,7 +250,7 @@ const AdminPage = () => {
     }, [state, homePage, teamsPage, challengePage, entryPage]);
     return <div className={styles.adminWrap}>
         <h1>Super Secret Admin Page</h1>
-        {loaded ? pageContents : "LOADING"}
+        {token ? pageContents : "LOADING"}
     </div>;
 };
 export default AdminPage;
