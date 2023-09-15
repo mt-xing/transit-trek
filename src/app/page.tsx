@@ -1,5 +1,6 @@
 "use client"
 
+import { PUBLIC_GET_TOKEN } from "./consts";
 import styles from "./home.module.css";
 import { useEffect, useState } from "react";
 
@@ -9,12 +10,12 @@ export default function Home() {
   const [teams, setTeams] = useState<TeamInfo[]>([]);
 
   useEffect(() => {
-    fetch("/api/public-get").then(res => {
+    fetch("/api/public-get", {headers: {token: PUBLIC_GET_TOKEN}}).then(res => {
       res.json().then(x => setTeams(x.teams ?? []));
     });
 
     const interval = setInterval(() => {
-      fetch("/api/public-get").then(res => {
+      fetch("/api/public-get", {headers: {token: PUBLIC_GET_TOKEN}}).then(res => {
         res.json().then(x => setTeams(x.teams ?? []));
       });
     }, 15*1000);
