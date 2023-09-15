@@ -255,6 +255,7 @@ const AdminPage = () => {
     }, [state, homePage, teamsPage, challengePage, entryPage]);
     return <div className={styles.adminWrap}>
         <h1>Super Secret Admin Page</h1>
+        <p><a href="/admin" style={{padding: "10px 20px", background: "white", display: "inline-block"}}>Force Refresh</a></p>
         {token ? pageContents : "LOADING"}
     </div>;
 };
