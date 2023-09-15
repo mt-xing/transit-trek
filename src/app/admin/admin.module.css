@@ -1,0 +1,12 @@
+.adminWrap input[type="number"] {
+    width: 50px;
+}
+
+.adminWrap input[type="checkbox"] {
+    width: 100px;
+    height: 100px;
+}
+
+.adminWrap select, .adminWrap input {
+    padding: 20px 40px;
+}

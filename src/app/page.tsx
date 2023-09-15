@@ -2,9 +2,9 @@ import styles from "./home.module.css"
 
 export default function Home() {
   const teams = [
-    {id: 1, name: "test name", score: 2},
-    {id: 2, name: "another team", score: 5}, 
-    {id: 3, name: "hello world", score: 12},
+    {id: 0, name: "test name", score: 1},
+    {id: 1, name: "another team", score: 5}, 
+    {id: 2, name: "hello world", score: 12},
   ].sort((a, b) => b.score - a.score);
 
   return (
@@ -17,7 +17,7 @@ export default function Home() {
         <h1>Team Rankings</h1>
         <ol>
         {
-          teams.map((t) => <li key={t.id}>Team {t.id}: {t.name} ({t.score})</li>)
+          teams.map((t) => <li key={t.id}>Team {t.id + 1}: {t.name} ({t.score} point{t.score === 1 ? "" : "s"})</li>)
         }
         </ol>
       </main>
