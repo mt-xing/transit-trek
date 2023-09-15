@@ -1,11 +1,28 @@
-import styles from "./home.module.css"
+"use client"
+
+import styles from "./home.module.css";
+import { useEffect, useState } from "react";
+
+type TeamInfo = {id: number, name: string, score: number};
 
 export default function Home() {
-  const teams = [
-    {id: 0, name: "test name", score: 1},
-    {id: 1, name: "another team", score: 5}, 
-    {id: 2, name: "hello world", score: 12},
-  ].sort((a, b) => b.score - a.score);
+  const [teams, setTeams] = useState<TeamInfo[]>([]);
+
+  useEffect(() => {
+    fetch("/api/public-get").then(res => {
+      res.json().then(x => setTeams(x.teams ?? []));
+    });
+
+    const interval = setInterval(() => {
+      fetch("/api/public-get").then(res => {
+        res.json().then(x => setTeams(x.teams ?? []));
+      });
+    }, 15*1000);
+  
+    return () => {
+      clearInterval(interval);
+    }
+  }, []);
 
   return (
     <div className={styles.homeWrap}>
@@ -17,7 +34,7 @@ export default function Home() {
         <h1>Team Rankings</h1>
         <ol>
         {
-          teams.map((t) => <li key={t.id}>Team {t.id + 1}: {t.name} ({t.score} point{t.score === 1 ? "" : "s"})</li>)
+          teams?.map((t) => <li key={t.id}>Team {t.id + 1}: {t.name} ({t.score} point{t.score === 1 ? "" : "s"})</li>)
         }
         </ol>
       </main>

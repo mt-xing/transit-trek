@@ -3,29 +3,39 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 import styles from "./admin.module.css";
+import { Challenge, DbInfo, Team } from "../types";
 
 type PageState = "home" | "teams" | "challenges" | "entry";
 
-type Challenge = {
-    id: number;
-    name: string;
-    desc: string;
-    point: number;
-    type: {t: "one"} | {t: "multiple", num: number} | {t: "unlimited"};
-};
-
-type Team = {
-    id: number;
-    name: string;
-    score: number;
-    history: {jsTimestamp: number, log: string}[];
-    challengeStatus: Record<number, boolean[] | undefined>;
-};
-
 const AdminPage = () => {
+    const [loaded, setLoaded] = useState<boolean>(false);
     const [state, setState] = useState<PageState>("home");
     const [challenges, setChallenges] = useState<Challenge[]>([]);
     const [teams, setTeams] = useState<Team[]>([]);
+
+    useEffect(() => {
+        fetch("/api/private-get").then(d => d.json().then(x => {
+            console.log(x);
+            setTeams(x.teams);
+            setChallenges(x.challenges);
+            if (x.teams && x.challenges) {
+                setLoaded(true);
+            } else {
+                alert("ERROR: Fetch failed");
+            }
+        }));
+    }, []);
+
+    useEffect(() => {
+        if (!loaded){ return; }
+        const data: DbInfo = {
+            teams, challenges
+        };
+        fetch("/api/private-save", {
+            method: "POST",
+            body: JSON.stringify(data),
+        })
+    }, [challenges, teams, loaded]);
 
     const homePage = useMemo(() => <>
         <p>Challenges: {challenges.length}</p>
@@ -210,7 +220,7 @@ const AdminPage = () => {
     }, [state, homePage, teamsPage, challengePage, entryPage]);
     return <div className={styles.adminWrap}>
         <h1>Super Secret Admin Page</h1>
-        {pageContents}
+        {loaded ? pageContents : "LOADING"}
     </div>;
 };
 export default AdminPage;
