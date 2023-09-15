@@ -6,6 +6,9 @@ import { useCallback, useEffect, useState } from "react";
 
 type TeamInfo = {id: number, name: string, score: number};
 
+type CacheInfo = {teams: TeamInfo[], expires: number};
+const cacheKey = "trek-cache";
+
 export default function Home() {
   const [teams, setTeams] = useState<TeamInfo[][] | null>(null);
 
@@ -25,19 +28,35 @@ export default function Home() {
 
   const getInfo = useCallback(() => {
     fetch("/api/public-get", {headers: {token: PUBLIC_GET_TOKEN}}).then(res => {
-      res.json().then((x: {teams: TeamInfo[]}) => setTeamInfo(x.teams ?? []));
+      res.json().then((x: {teams: TeamInfo[]}) => {
+        setTeamInfo(x.teams ?? []);
+        const c: CacheInfo = {
+          teams: x.teams ?? [],
+          expires: (new Date()).getTime() + 9*1000,
+        };
+        localStorage.setItem(cacheKey, JSON.stringify(c));
+      });
     });
   }, [setTeamInfo]);
 
   useEffect(() => {
-    getInfo();
+
+    const cacheRaw = localStorage.getItem(cacheKey);
+    const cache: CacheInfo | undefined = cacheRaw ? JSON.parse(cacheRaw) : undefined;
+
+    if (!cache || cache.expires < (new Date()).getTime()) {
+      getInfo();
+    } else {
+      console.log("Stale cache; not going to refresh");
+      setTeamInfo(cache.teams);
+    }
 
     const interval = setInterval(getInfo, 10*1000);
   
     return () => {
       clearInterval(interval);
     }
-  }, [getInfo]);
+  }, [getInfo, setTeamInfo]);
 
   return (
     <div className={styles.homeWrap}>
