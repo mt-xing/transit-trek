@@ -8,11 +8,7 @@ export async function GET() {
     const db = await kv.get<DbInfo>(DB_KEY);
     const info = db?.teams?.map(x => ({id: x.id, name: x.name, score: x.score})).sort((a, b) => b.score - a.score);
     return NextResponse.json(
-    {
-        teams: info ?? []
-    },
-    {
-        status: 200,
-    },
+        { teams: info ?? [] },
+        { status: 200 },
     );
 }
