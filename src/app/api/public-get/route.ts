@@ -5,7 +5,6 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
     const db = await kv.get<DbInfo>(DB_KEY);
-    console.log(JSON.stringify(db?.teams));
     const info = db?.teams?.map(x => ({id: x.id, name: x.name, score: x.score})).sort((a, b) => b.score - a.score);
     return NextResponse.json(
         { teams: info ?? [] },
