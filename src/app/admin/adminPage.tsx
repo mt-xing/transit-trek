@@ -37,16 +37,21 @@ const AdminPage = () => {
             headers: {
                 token,
             },
-        }).then(d => d.json().then(x => {
-            console.log(x);
-            setTeams(x.teams);
-            setChallenges(x.challenges);
-            if (x.teams && x.challenges) {
-                setToken(token);
-            } else {
-                alert("ERROR: Fetch failed");
+        }).then(d => {
+            if (d.status !== 200) {
+                alert("Failed to fetch"); return;
             }
-        }));
+            d.json().then(x => {
+                console.log(x);
+                setTeams(x.teams);
+                setChallenges(x.challenges);
+                if (x.teams && x.challenges) {
+                    setToken(token);
+                } else {
+                    alert("ERROR: Fetch failed");
+                }
+            });
+        }).catch(() => alert("failed to fetch"));
     }, []);
 
     useEffect(() => {
