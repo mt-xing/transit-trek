@@ -183,9 +183,10 @@ const AdminPage = () => {
         <p>Challenge Filter: <input type="text" value={chalSearch} onChange={e => {
             const v = e.target.value;
             setChalSearch(v);
-            if (v && challenges.filter(x => x.name.toLowerCase().indexOf(v.toLowerCase()) > -1).length === 1) {
+            const vS = v.toLowerCase();
+            if (vS && challenges.filter(x => x.name.toLowerCase().indexOf(vS) > -1).length === 1) {
                 console.log("Auto");
-                setSelChal(challenges.find(x => x.name.toLowerCase().indexOf(v.toLowerCase()) > -1)!.id);
+                setSelChal(challenges.find(x => x.name.toLowerCase().indexOf(vS) > -1)!.id);
             } else {
                 setSelChal(-1);
             }
