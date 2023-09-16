@@ -154,6 +154,7 @@ const AdminPage = () => {
     </>, [teams, unsetTeam, addTeam]);
 
     const [selTeam, setSelTeam] = useState<number>(-1);
+    const [chalSearch, setChalSearch] = useState<string>("");
     const [selChal, setSelChal] = useState<number>(-1);
     const teamChallengePointChange = useCallback((teamId: number, challenge: Challenge, status: boolean) => {
         setTeams(teams => teams.map(t => t.id !== teamId ? t : {
@@ -168,7 +169,7 @@ const AdminPage = () => {
     const teamRef = useRef<HTMLSelectElement>(null);
     useEffect(() => {
         const handle = (e: KeyboardEvent) => {
-            if (e.key === "Control") {
+            if (e.code === "ControlRight") {
                 teamRef.current?.focus();
             }
         };
@@ -179,7 +180,17 @@ const AdminPage = () => {
     }, []);
     const entryPage = useMemo(() => <>
         <p>Team: <select ref={teamRef} value={selTeam} onChange={e => setSelTeam(parseInt(e.target.value))}><option value="-1">PICK</option>{teams.sort((a,b) => a.id-b.id).map(t => <option key={t.id} value={t.id}>{(t.id + 1)}: {t.name}</option>)}</select></p>
-        <p>Challenge: <select value={selChal} onChange={e => setSelChal(parseInt(e.target.value))}><option value="-1">PICK</option>{challenges.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}</select></p>
+        <p>Challenge Filter: <input type="text" value={chalSearch} onChange={e => {
+            const v = e.target.value;
+            setChalSearch(v);
+            if (v && challenges.filter(x => x.name.toLowerCase().indexOf(v.toLowerCase()) > -1).length === 1) {
+                console.log("Auto");
+                setSelChal(challenges.find(x => x.name.toLowerCase().indexOf(v.toLowerCase()) > -1)!.id);
+            } else {
+                setSelChal(-1);
+            }
+        }} /></p>
+        <p>Challenge: <select value={selChal} onChange={e => setSelChal(parseInt(e.target.value))}><option value="-1">PICK</option>{challenges.filter(c => !chalSearch || c.name.toLowerCase().indexOf(chalSearch.toLowerCase()) > -1).map(t => <option key={t.id} value={t.id}>{t.name}</option>)}</select></p>
         {
             selTeam !== -1 && selChal !== -1 && teams[selTeam] && challenges[selChal] ? <>
                 <h2>Challenge Status</h2>
@@ -252,7 +263,7 @@ const AdminPage = () => {
             </> : null
         }
         <p><button onClick={() => {setState("home");setSelTeam(-1);setSelChal(-1);}}>Return Home</button></p>
-    </>, [selTeam, selChal, teams, challenges, teamChallengePointChange]);
+    </>, [selTeam, selChal, chalSearch, teams, challenges, teamChallengePointChange]);
 
     const pageContents = useMemo(() => {
         switch (state) {
