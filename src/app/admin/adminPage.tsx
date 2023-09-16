@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import styles from "./admin.module.css";
 import { Challenge, DbInfo, Team } from "../types";
@@ -81,7 +81,7 @@ const AdminPage = () => {
         </ol>
         <button onClick={() => setState("challenges")}>Edit Challenges</button>
         <button onClick={() => setState("teams")}>Edit Teams</button>
-        <button onClick={() => setState("entry")}>Enter Points</button>
+        <button onClick={() => setState("entry")} className={styles.bigBtn}>Enter Points</button>
     </>, [challenges, teams]);
 
     const [ucName, setUcName] = useState<string>("");
@@ -165,8 +165,20 @@ const AdminPage = () => {
             })
         }));
     }, []);
+    const teamRef = useRef<HTMLSelectElement>(null);
+    useEffect(() => {
+        const handle = (e: KeyboardEvent) => {
+            if (e.key === "Control") {
+                teamRef.current?.focus();
+            }
+        };
+        window.addEventListener("keydown", handle);
+        return () => {
+            window.removeEventListener("keydown", handle);
+        }
+    }, []);
     const entryPage = useMemo(() => <>
-        <p>Team: <select value={selTeam} onChange={e => setSelTeam(parseInt(e.target.value))}><option value="-1">PICK</option>{teams.map(t => <option key={t.id} value={t.id}>{(t.id + 1)}: {t.name}</option>)}</select></p>
+        <p>Team: <select ref={teamRef} value={selTeam} onChange={e => setSelTeam(parseInt(e.target.value))}><option value="-1">PICK</option>{teams.sort((a,b) => a.id-b.id).map(t => <option key={t.id} value={t.id}>{(t.id + 1)}: {t.name}</option>)}</select></p>
         <p>Challenge: <select value={selChal} onChange={e => setSelChal(parseInt(e.target.value))}><option value="-1">PICK</option>{challenges.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}</select></p>
         {
             selTeam !== -1 && selChal !== -1 && teams[selTeam] && challenges[selChal] ? <>
@@ -227,11 +239,11 @@ const AdminPage = () => {
                                     <button onClick={e => {
                                         setTeams(ts => ts.map(t => t.id !== team.id ? t : {...t, challengeStatus: {...t.challengeStatus, [challenge.id]: Array.from(Array(arr+1)).map(_ => true)}}));
                                         teamChallengePointChange(team.id, challenge, true);
-                                    }}>+ Add One</button>
+                                    }} className={styles.bigBtn}>+ Add One</button>
                                     <button onClick={e => {
                                         setTeams(ts => ts.map(t => t.id !== team.id ? t : {...t, challengeStatus: {...t.challengeStatus, [challenge.id]: Array.from(Array(arr-1 > 0 ? arr-1 : 0)).map(_ => true)}}));
                                         teamChallengePointChange(team.id, challenge, false);
-                                    }}>- Sub One</button>
+                                    }} className={styles.bigBtn}>- Sub One</button>
                                 </>;
                             }
                         }
@@ -258,7 +270,7 @@ const AdminPage = () => {
     }, [state, homePage, teamsPage, challengePage, entryPage]);
     return <div className={styles.adminWrap}>
         <h1>Super Secret Admin Page</h1>
-        <p><a href="/admin" style={{padding: "10px 20px", background: "white", display: "inline-block"}}>Force Refresh</a></p>
+        <p><a href="/admin" className={styles.bigBtn}>Force Refresh</a></p>
         {token ? pageContents : "LOADING"}
     </div>;
 };
