@@ -6,10 +6,14 @@
     min-height: 100vh;
 }
 
+.homeHeader {
+    margin-right: 100px;
+    text-align: center;
+}
+
 .homeHeader img {
     width: 500px;
     max-width: 80vw;
-    margin-right: 100px;
     border-radius: 30px;
 }
 
@@ -59,7 +63,8 @@
     .homeWrap {
         flex-direction: column;
     }
-    .homeHeader img {
+
+    .homeHeader {
         margin-right: 0;
     }
 

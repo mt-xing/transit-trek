@@ -63,6 +63,7 @@ export default function Home() {
       <header className={styles.homeHeader}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <h1><img src='/trek.png' alt="" /></h1>
+        <p>Standings refresh every 10 seconds.<br />Reloading the page does not speed that up.</p>
       </header>
       <main className={styles.homeRank}>
         <ol>
