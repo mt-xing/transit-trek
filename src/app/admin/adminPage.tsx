@@ -5,6 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import styles from "./admin.module.css";
 import { Challenge, DbInfo, Team } from "../types";
 import { CLIENT_ID, REDIRECT_URI } from "./consts";
+import { useDebounce } from "@uidotdev/usehooks";
 
 type PageState = "home" | "teams" | "challenges" | "entry";
 
@@ -54,14 +55,14 @@ const AdminPage = () => {
         }).catch(() => alert("failed to fetch"));
     }, []);
 
+    const dataToSendUnDebounced = useMemo<DbInfo>(() => ({teams, challenges}), [teams, challenges]);
+    const dataToSend = useDebounce<DbInfo>(dataToSendUnDebounced, 500);
     useEffect(() => {
         if (!token){ return; }
-        const data: DbInfo = {
-            teams, challenges
-        };
+        
         fetch("/api/private-save", {
             method: "POST",
-            body: JSON.stringify(data),
+            body: JSON.stringify(dataToSend),
             headers: {
                 token,
             },
@@ -70,7 +71,7 @@ const AdminPage = () => {
                 alert("Failed to save");
             }
         }).catch(() => alert("Failed to save"));
-    }, [challenges, teams, token]);
+    }, [dataToSend, token]);
 
     const homePage = useMemo(() => <>
         <p>Challenges: {challenges.length}</p>
