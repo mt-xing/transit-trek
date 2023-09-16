@@ -51,7 +51,7 @@
 }
 
 .homeRank ul {
-    list-style-type: "⮞ ";
+    list-style-type: "► ";
 }
 
 @media(max-width: 1000px) {
