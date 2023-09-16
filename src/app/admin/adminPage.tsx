@@ -11,6 +11,8 @@ type PageState = "home" | "teams" | "challenges" | "entry";
 
 const loginUrl = `https://accounts.google.com/o/oauth2/v2/auth?scope=email&response_type=token&redirect_uri=${REDIRECT_URI}&client_id=${CLIENT_ID}`;
 
+const SAVE_DEBOUNCE_MS = 1000;
+
 const AdminPage = () => {
     const [token, setToken] = useState<string | null>(null);
     const [state, setState] = useState<PageState>("home");
@@ -56,7 +58,7 @@ const AdminPage = () => {
     }, []);
 
     const dataToSendUnDebounced = useMemo<DbInfo>(() => ({teams, challenges}), [teams, challenges]);
-    const dataToSend = useDebounce<DbInfo>(dataToSendUnDebounced, 500);
+    const dataToSend = useDebounce<DbInfo>(dataToSendUnDebounced, SAVE_DEBOUNCE_MS);
     useEffect(() => {
         if (!token){ return; }
         
