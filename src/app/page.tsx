@@ -1,13 +1,15 @@
 "use client"
 
-import { PUBLIC_GET_TOKEN } from "./consts";
+// import { PUBLIC_GET_TOKEN } from "./consts";
 import styles from "./home.module.css";
 import { useCallback, useEffect, useState } from "react";
 
+import finalStandings from './final_standings.json' assert { type: 'json' };
+
 type TeamInfo = {id: number, name: string, score: number};
 
-type CacheInfo = {teams: TeamInfo[], expires: number};
-const cacheKey = "trek-cache";
+// type CacheInfo = {teams: TeamInfo[], expires: number};
+// const cacheKey = "trek-cache";
 
 export default function Home() {
   const [teams, setTeams] = useState<TeamInfo[][] | null>(null);
@@ -27,43 +29,50 @@ export default function Home() {
   }, []);
 
   const getInfo = useCallback(() => {
-    fetch("/api/public-get", {headers: {token: PUBLIC_GET_TOKEN}}).then(res => {
-      res.json().then((x: {teams: TeamInfo[]}) => {
-        setTeamInfo(x.teams ?? []);
-        const c: CacheInfo = {
-          teams: x.teams ?? [],
-          expires: (new Date()).getTime() + 9*1000,
-        };
-        localStorage.setItem(cacheKey, JSON.stringify(c));
-      });
-    });
+    // fetch("/api/public-get", {headers: {token: PUBLIC_GET_TOKEN}}).then(res => {
+    //   res.json().then((x: {teams: TeamInfo[]}) => {
+    //     setTeamInfo(x.teams ?? []);
+    //     const c: CacheInfo = {
+    //       teams: x.teams ?? [],
+    //       expires: (new Date()).getTime() + 9*1000,
+    //     };
+    //     localStorage.setItem(cacheKey, JSON.stringify(c));
+    //   });
+    // });
+    setTeamInfo(finalStandings.teams);
   }, [setTeamInfo]);
 
   useEffect(() => {
 
-    const cacheRaw = localStorage.getItem(cacheKey);
-    const cache: CacheInfo | undefined = cacheRaw ? JSON.parse(cacheRaw) : undefined;
+    // const cacheRaw = localStorage.getItem(cacheKey);
+    // const cache: CacheInfo | undefined = cacheRaw ? JSON.parse(cacheRaw) : undefined;
 
-    if (!cache || cache.expires < (new Date()).getTime()) {
-      getInfo();
-    } else {
-      console.log("Stale cache; not going to refresh");
-      setTeamInfo(cache.teams);
-    }
+    // if (!cache || cache.expires < (new Date()).getTime()) {
+    //   getInfo();
+    // } else {
+    //   console.log("Stale cache; not going to refresh");
+    //   setTeamInfo(cache.teams);
+    // }
 
-    const interval = setInterval(getInfo, 10*1000);
+    // const interval = setInterval(getInfo, 10*1000);
   
-    return () => {
-      clearInterval(interval);
+    // return () => {
+    //   clearInterval(interval);
+    // }
+    getInfo();
+    //  }, [getInfo, setTeamInfo]);
+    if (window.location.host !== "localhost:3000" && window.location.host !== "transit-trek.vercel.app") {
+      window.location.href = "https://transit-trek.vercel.app";
     }
-  }, [getInfo, setTeamInfo]);
+  }, [getInfo]);
 
   return (
     <div className={styles.homeWrap}>
       <header className={styles.homeHeader}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <h1><img src='/trek.png' alt="" /></h1>
-        <p>Standings refresh every 10 seconds.<br />Reloading the page does not speed that up.</p>
+        {/* <p>Standings refresh every 10 seconds.<br />Reloading the page does not speed that up.</p> */}
+        <p>Thank you for playing!</p>
       </header>
       <main className={styles.homeRank}>
         <ol>

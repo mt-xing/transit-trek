@@ -41,7 +41,7 @@ const AdminPage = () => {
                 token,
             },
         }).then(d => {
-            if (d.status !== 200) {//
+            if (d.status !== 200) {
                 alert("Failed to fetch"); return;
             }
             d.json().then(x => {

@@ -1,0 +1,59 @@
+{
+    "teams": [
+        {
+            "id": 0,
+            "name": "Team 1: SAMA",
+            "score": 25
+        },
+        {
+            "id": 1,
+            "name": "Team 2: The Rocky Mountains",
+            "score": 28
+        },
+        {
+            "id": 2,
+            "name": "Team 3: See ya!",
+            "score": 42
+        },
+        {
+            "id": 3,
+            "name": "Team 4: Blinded in Seattle",
+            "score": 18
+        },
+        {
+            "id": 4,
+            "name": "Team 5: Team 4",
+            "score": 39
+        },
+        {
+            "id": 5,
+            "name": "Team 6: Team East Coast",
+            "score": 34
+        },
+        {
+            "id": 6,
+            "name": "Team 7: No Shoes No Shirt No Surface",
+            "score": 31
+        },
+        {
+            "id": 7,
+            "name": "Team 8: Team Leoryashi",
+            "score": 29
+        },
+        {
+            "id": 8,
+            "name": "Team 9: Seattle Freezers",
+            "score": 31
+        },
+        {
+            "id": 9,
+            "name": "Team 10: Mortal Kombat",
+            "score": 31
+        },
+        {
+            "id": 10,
+            "name": "Team 11: The Three Musketeers",
+            "score": 19
+        }
+    ]
+}
