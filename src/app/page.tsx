@@ -172,6 +172,9 @@ export default function Home() {
               <tr>{challenge.teams.map((_, i) => <th key={i}>Team {i+1}</th>)}</tr>
               <tr>{challenge.teams.map((x, i) => <td key={i}>{x ? '✅' : '​'}</td>)}</tr>
             </table>
+            {
+              challenge.name === "Caught" ? <p>Only Team 11 was caught twice</p> : null
+            }
           </Fragment>)
         }
       </div>
