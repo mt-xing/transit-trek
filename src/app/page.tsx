@@ -2,9 +2,12 @@
 
 // import { PUBLIC_GET_TOKEN } from "./consts";
 import styles from "./home.module.css";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import finalStandings from './final_standings.json' assert { type: 'json' };
+import finalData from './final_data.json' assert { type: 'json' };
+import "chart.js/auto";
+import { Line } from "react-chartjs-2";
 
 type TeamInfo = {id: number, name: string, score: number};
 
@@ -66,28 +69,77 @@ export default function Home() {
     }
   }, [getInfo]);
 
+  const lineGraphData = useMemo(() => {
+    return Array
+      .from(Array(finalStandings.teams.length))
+      .map((_, teamId) => finalData.vals.map((val) => ({
+        x: val.jsTimestamp,
+        y: val.scores[teamId],
+      })));
+  }, [finalStandings.teams, finalData]);
+
   return (
-    <div className={styles.homeWrap}>
-      <header className={styles.homeHeader}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <h1><img src='/trek.png' alt="" /></h1>
-        {/* <p>Standings refresh every 10 seconds.<br />Reloading the page does not speed that up.</p> */}
-        <p>Thank you for playing!</p>
-      </header>
-      <main className={styles.homeRank}>
-        <ol>
-        {
-          teams === null ? <li>Loading...</li> :
-          teams.length === 0 ? <li>Scores will be displayed here when the game begins</li> :
-          teams.map((t) => <li key={t[0].score} className={styles.rankLi}>
-            {t[0].score} point{t[0].score === 1 ? "" : "s"}
-            <ul>
-              {t.map(tt => <li key={tt.id}>{tt.name}</li>)}
-            </ul>
-          </li>)
-        }
-        </ol>
-      </main>
-    </div>
+    <>
+      <div className={styles.homeWrap}>
+        <header className={styles.homeHeader}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <h1><img src='/trek.png' alt="" /></h1>
+          {/* <p>Standings refresh every 10 seconds.<br />Reloading the page does not speed that up.</p> */}
+          <p>Thank you for playing!</p>
+        </header>
+        <main className={styles.homeRank}>
+          <ol>
+          {
+            teams === null ? <li>Loading...</li> :
+            teams.length === 0 ? <li>Scores will be displayed here when the game begins</li> :
+            teams.map((t) => <li key={t[0].score} className={styles.rankLi}>
+              {t[0].score} point{t[0].score === 1 ? "" : "s"}
+              <ul>
+                {t.map(tt => <li key={tt.id}>{tt.name}</li>)}
+              </ul>
+            </li>)
+          }
+          </ol>
+        </main>
+      </div>
+      <div className={styles.summaryBlock}>
+        <h2>Game Progression</h2>
+        <Line data={{
+          datasets: lineGraphData.map((d, i) => ({
+            label: `Team ${i+1}`,
+            data: d,
+            fill: false,
+            stepped: true,
+          }))
+        }} options={{
+          scales: {
+            xAxes: {
+              type: "linear",
+              ticks: {
+                callback: val => new Date(parseInt(`${val}`)).toTimeString().split(' ')[0]
+              },
+              max: 1694912500000,
+            }
+          },
+          elements: {
+            point: {
+              radius: 0,
+              hitRadius: 5,
+            }
+          },
+          interaction: {
+            mode: 'index',
+            intersect: false,
+          },
+          plugins: {
+            tooltip: {
+              callbacks: {
+                title: (args) => new Date(parseInt(args[0].label.replaceAll(",", ""))).toTimeString().split(' ')[0]
+              },
+            },
+          },
+        }}/>
+      </div>
+    </>
   )
 }
