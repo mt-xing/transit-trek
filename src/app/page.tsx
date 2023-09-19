@@ -166,7 +166,7 @@ export default function Home() {
       <div className={styles.summaryBlock}>
         <h2>Challenge Details</h2>
         {
-          challenges.map(challenge => <Fragment key={challenge.name}>
+          challenges.filter(x => x.name.indexOf("Manual Point") === -1).map(challenge => <Fragment key={challenge.name}>
             <h3>{challenge.name}</h3>
             <table>
               <tr>{challenge.teams.map((_, i) => <th key={i}>Team {i+1}</th>)}</tr>
