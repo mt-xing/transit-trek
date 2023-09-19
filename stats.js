@@ -1,5 +1,5 @@
 const fs = require('fs');
-/** @type {{teams: {id:number,name:string,score:number,history:{jsTimestamp:number,log:string}[]}[], challenges: unknown[]}} */
+/** @type {{teams: {id:number,name:string,score:number,history:{jsTimestamp:number,log:string}[],challengeStatus:Record<string,boolean[]|undefined>}[], challenges: {id: number, name: string}[]}} */
 const data = JSON.parse(fs.readFileSync('./tt2.json', 'utf8'));
 
 const [min, max] = data.teams.reduce((a, team) => {
@@ -58,3 +58,12 @@ allLogs.forEach((logEntry) => {
 logger.write(`${max+PADDING}${teamScoreTally.reduce((a, x) => `${a},${x}`, '')}\n`);
 outputJson.vals.push({jsTimestamp: max + PADDING, scores: teamScoreTally.slice()});
 fs.writeFileSync('out.json', JSON.stringify(outputJson));
+
+
+
+
+const challengeData = data.challenges.map((challenge) => ({
+    name: challenge.name,
+    teams: data.teams.map((team) => !!(team.challengeStatus[`${challenge.id}`]?.every(x => x)))
+}));
+fs.writeFileSync('challenges.json', JSON.stringify(challengeData));

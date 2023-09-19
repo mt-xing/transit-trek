@@ -2,10 +2,11 @@
 
 // import { PUBLIC_GET_TOKEN } from "./consts";
 import styles from "./home.module.css";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 
 import finalStandings from './final_standings.json' assert { type: 'json' };
 import finalData from './final_data.json' assert { type: 'json' };
+import challengesData from './challenges.json' assert { type: 'json' };
 import "chart.js/auto";
 import { Line } from "react-chartjs-2";
 
@@ -76,7 +77,15 @@ export default function Home() {
         x: val.jsTimestamp,
         y: val.scores[teamId],
       })));
-  }, [finalStandings.teams, finalData]);
+  }, []);
+
+  const challenges = useMemo(() => 
+    challengesData
+      .sort((aa, b) => aa.teams.reduce((a, x) => x ? a + 1 : a, 0) - b.teams.reduce((a, x) => x ? a + 1 : a, 0))
+      .map(x => ({teams: x.teams, name: (x.name.substring(3) + (x.name.charAt(0) === 'S' ? ' (Selfie)' : ''))})),
+  []);
+  const allComplete = useMemo(() => challenges.filter(x => x.teams.every(y=>y)), [challenges]);
+  const noComplete = useMemo(() => challenges.filter(x => x.teams.every(y=>!y)), [challenges]);
 
   return (
     <>
@@ -139,6 +148,32 @@ export default function Home() {
             },
           },
         }}/>
+      </div>
+      <div className={styles.summaryBlock}>
+        <h2>Easiest Challenge{allComplete.length !== 1 ? 's' : ''}</h2>
+        <p>Every team completed {allComplete.length !== 1 ? 'these' : 'this'} challenge{allComplete.length !== 1 ? 's' : ''}</p>
+        <ul>
+          {allComplete.map(c => <li key={c.name}>{c.name}</li>)}
+        </ul>
+      </div>
+      <div className={styles.summaryBlock}>
+        <h2>Hardest Challenge{noComplete.length !== 1 ? 's' : ''}</h2>
+        <p>No teams completed {noComplete.length !== 1 ? 'these' : 'this'} challenge{noComplete.length !== 1 ? 's' : ''}</p>
+        <ul>
+          {noComplete.map(c => <li key={c.name}>{c.name}</li>)}
+        </ul>
+      </div>
+      <div className={styles.summaryBlock}>
+        <h2>Challenge Details</h2>
+        {
+          challenges.map(challenge => <Fragment key={challenge.name}>
+            <h3>{challenge.name}</h3>
+            <table>
+              <tr>{challenge.teams.map((_, i) => <th key={i}>Team {i+1}</th>)}</tr>
+              <tr>{challenge.teams.map((x, i) => <td key={i}>{x ? '✅' : '​'}</td>)}</tr>
+            </table>
+          </Fragment>)
+        }
       </div>
     </>
   )

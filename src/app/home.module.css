@@ -81,3 +81,24 @@
     width: 100%;
     margin: 100px auto;
 }
+
+.summaryBlock ul, .summaryBlock table {
+    display: inline-block;
+}
+
+.summaryBlock table {
+    border-collapse: collapse;
+    max-width: 100%;
+    overflow-x: auto;
+}
+.summaryBlock td, .summaryBlock th {
+    border-left: 1px white solid;
+    padding: 0 5px;
+}
+.summaryBlock td:first-child, .summaryBlock th:first-child {
+    border: none;
+}
+
+.summaryBlock h3 {
+    margin-top: 50px;
+}
