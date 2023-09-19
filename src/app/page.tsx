@@ -65,8 +65,8 @@ export default function Home() {
     // }
     getInfo();
     //  }, [getInfo, setTeamInfo]);
-    if (window.location.host !== "localhost:3000" && window.location.host !== "transit-trek.vercel.app") {
-      window.location.href = "https://transit-trek.vercel.app";
+    if (window.location.host !== "localhost:3000" && window.location.host !== "transittrek.org") {
+      window.location.href = "https://transittrek.org";
     }
   }, [getInfo]);
 
