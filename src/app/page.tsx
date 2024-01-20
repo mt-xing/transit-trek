@@ -15,24 +15,39 @@ type TeamInfo = {id: number, name: string, score: number};
 // type CacheInfo = {teams: TeamInfo[], expires: number};
 // const cacheKey = "trek-cache";
 
+const setTeamInfoRaw = (x: TeamInfo[]) => {
+  const res: Map<number, TeamInfo[]> = new Map();
+  x.forEach(team => {
+    const existing = res.get(team.score)
+    if (existing) {
+      res.set(team.score, existing.concat(team));
+    } else {
+      res.set(team.score, [team]);
+    }
+  });
+  const arr = Array.from(res).sort((a, b) => b[0] - a[0]).map(([_, teams]) => teams);
+  return arr;
+};
+
 export default function Home() {
-  const [teams, setTeams] = useState<TeamInfo[][] | null>(null);
+  // const [teams, setTeams] = useState<TeamInfo[][] | null>(null);
+  const teams = setTeamInfoRaw(finalStandings.teams);
 
-  const setTeamInfo = useCallback((x: TeamInfo[]) => {
-    const res: Map<number, TeamInfo[]> = new Map();
-    x.forEach(team => {
-      const existing = res.get(team.score)
-      if (existing) {
-        res.set(team.score, existing.concat(team));
-      } else {
-        res.set(team.score, [team]);
-      }
-    });
-    const arr = Array.from(res).sort((a, b) => b[0] - a[0]).map(([_, teams]) => teams);
-    setTeams(arr);
-  }, []);
+  // const setTeamInfo = useCallback((x: TeamInfo[]) => {
+  //   const res: Map<number, TeamInfo[]> = new Map();
+  //   x.forEach(team => {
+  //     const existing = res.get(team.score)
+  //     if (existing) {
+  //       res.set(team.score, existing.concat(team));
+  //     } else {
+  //       res.set(team.score, [team]);
+  //     }
+  //   });
+  //   const arr = Array.from(res).sort((a, b) => b[0] - a[0]).map(([_, teams]) => teams);
+  //   setTeams(arr);
+  // }, []);
 
-  const getInfo = useCallback(() => {
+  // const getInfo = useCallback(() => {
     // fetch("/api/public-get", {headers: {token: PUBLIC_GET_TOKEN}}).then(res => {
     //   res.json().then((x: {teams: TeamInfo[]}) => {
     //     setTeamInfo(x.teams ?? []);
@@ -43,8 +58,8 @@ export default function Home() {
     //     localStorage.setItem(cacheKey, JSON.stringify(c));
     //   });
     // });
-    setTeamInfo(finalStandings.teams);
-  }, [setTeamInfo]);
+    // setTeamInfo(finalStandings.teams);
+  // }, [setTeamInfo]);
 
   useEffect(() => {
 
@@ -63,12 +78,12 @@ export default function Home() {
     // return () => {
     //   clearInterval(interval);
     // }
-    getInfo();
+    // getInfo();
     //  }, [getInfo, setTeamInfo]);
     if (window.location.host !== "localhost:3000" && window.location.host !== "transittrek.org") {
       window.location.href = "https://transittrek.org";
     }
-  }, [getInfo]);
+  }, []);//[getInfo]);
 
   const lineGraphData = useMemo(() => {
     return Array
