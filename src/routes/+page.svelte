@@ -2,6 +2,15 @@
 	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		if (location.host.indexOf("localhost") !== 0) {
+			document.location.replace("/tt2/index.html");
+		} else {
+			console.log("Local dev");
+		}
+	});
 </script>
 
 <svelte:head>
