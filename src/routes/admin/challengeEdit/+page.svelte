@@ -1,12 +1,16 @@
 <script lang="ts">
-    let title = "";
-    let description = "";
+	import type { ChallengeType } from '../../../types/challenge';
+	import type { PageData } from './$types';
+	
+	export let data: PageData;
+    const challenge = data.challenge;
+    
+    let title = challenge?.title ?? "";
+    let description = challenge?.desc ?? "";
 
-    type ChallengeType = 'single' | 'multi' | 'unlimited';
-    let type: ChallengeType = "single";
+    let type: ChallengeType = challenge?.type ?? 'single';
 
-    let multiNum = 2;
-
+    let multiNum = challenge?.type === 'multi' ? challenge.num : 2;
 </script>
 
 <h1>Edit: <em>{title || "Untitled Challenge"}</em></h1>
