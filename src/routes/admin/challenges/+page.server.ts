@@ -1,5 +1,5 @@
-import type { PageServerLoad } from './$types';
 import { CosmosClient } from '@azure/cosmos';
+import type { PageServerLoad } from './$types';
 import { DB_URL, READ_KEY } from '$env/static/private';
 import type { ChallengeDefinition } from '../../../types/challenge';
 

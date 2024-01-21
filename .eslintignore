@@ -9,6 +9,7 @@ node_modules
 
 .eslintrc.cjs
 svelte.config.js
+vite.config.ts
 
 # Ignore files for PNPM, NPM and YARN
 pnpm-lock.yaml

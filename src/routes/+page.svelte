@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-		if (location.host.indexOf('localhost') !== 0) {
+		if (document.location.host.indexOf('localhost') !== 0) {
 			document.location.replace('/tt2/index.html');
 		} else {
 			document.location.replace('/oldHome');

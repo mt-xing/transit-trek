@@ -95,12 +95,11 @@
 <form
 	method="POST"
 	action="?/enter"
-	use:enhance={() => {
+	use:enhance={() =>
 		// prevent default callback from resetting the form
-		return ({ update }) => {
+		({ update }) => {
 			update({ reset: false });
-		};
-	}}
+		}}
 >
 	<a class="how-to-play" href="/sverdle/how-to-play">How to play</a>
 
