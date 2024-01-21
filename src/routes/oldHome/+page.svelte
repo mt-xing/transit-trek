@@ -5,10 +5,10 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-		if (location.host.indexOf("localhost") !== 0) {
-			document.location.replace("/tt2/index.html");
+		if (location.host.indexOf('localhost') !== 0) {
+			document.location.replace('/tt2/index.html');
 		} else {
-			console.log("Local dev");
+			console.log('Local dev');
 		}
 	});
 </script>

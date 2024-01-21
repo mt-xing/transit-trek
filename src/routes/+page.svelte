@@ -2,10 +2,10 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-		if (location.host.indexOf("localhost") !== 0) {
-			document.location.replace("/tt2/index.html");
+		if (location.host.indexOf('localhost') !== 0) {
+			document.location.replace('/tt2/index.html');
 		} else {
-			document.location.replace("/oldHome");
+			document.location.replace('/oldHome');
 		}
 	});
 </script>
@@ -19,8 +19,11 @@
 
 <style>
 	div {
-        background: black;
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-    }
+		background: black;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
 </style>
