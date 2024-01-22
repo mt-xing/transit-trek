@@ -1,11 +1,8 @@
 {
-	"eslint.validate": [
-		"javascript",
-		"svelte"
-	],
+	"eslint.validate": ["javascript", "svelte"],
 	"editor.formatOnSave": true,
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
+		"source.fixAll.eslint": "explicit"
 	},
-	"files.eol": "\n",
+	"files.eol": "\n"
 }

@@ -40,6 +40,8 @@
 		"node": ">=18.13 <19"
 	},
 	"dependencies": {
+		"@auth/core": "^0.22.0",
+		"@auth/sveltekit": "^0.8.0",
 		"@azure/cosmos": "^4.0.0"
 	}
 }
