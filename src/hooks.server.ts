@@ -10,7 +10,7 @@ const authorization: Handle = async ({ event, resolve }) => {
 	if (event.url.pathname.startsWith('/admin')) {
 		const session = await event.locals.getSession();
 		if (!session || !session.user) {
-			const remainingUrl = event.url.pathname.substring(7);
+			const remainingUrl = event.url.pathname.substring('/admin/'.length);
 			throw redirect(303, `/auth/${remainingUrl}`);
 		} else if (!isValidAdmin(session.user)) {
 			throw error(401, "No Arjun Allowed");
