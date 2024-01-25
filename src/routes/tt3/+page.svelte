@@ -533,4 +533,62 @@
 		background-size: cover;
 		background-position: center;
 	}
+
+	@media (max-width: 1100px) {
+		main {
+			margin-top: 0;
+			padding: 10px 25px;
+		}
+
+		.textWrap {
+			margin-top: calc(40vh - 12.5vw);
+			height: 50vw;
+		}
+
+		.textBlurWrap svg,
+		.textShadowWrap svg {
+			height: 50vw;
+		}
+
+		.textBlurWrap text:nth-child(2),
+		.textShadowWrap svg text:nth-child(3),
+		.textShadowWrap h1 span {
+			font-size: 26.25vw;
+		}
+
+		.textShadowWrap h1 {
+			line-height: 13.5vw;
+
+			text-shadow: black 0 0 1.5vw;
+			-webkit-text-stroke: 1.3vw black;
+		}
+
+		.textBlurWrap text:nth-child(2),
+		.textShadowWrap svg text:nth-child(3) {
+			transform: translateY(-3.6vw);
+		}
+
+		.textShadowWrap svg,
+		.textBlurWrap,
+		.textShadowWrap h1 {
+			font-size: 15vw;
+		}
+
+		.textShadowWrap h1 span {
+			line-height: 19.5vw;
+			-webkit-text-stroke: 2vw black;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		.topLogo {
+			font-size: 5vw;
+			-webkit-text-stroke: 0.2vw black;
+		}
+
+		.topLogo img {
+			width: 10vw;
+			margin-right: 2vw;
+		}
+	}
 </style>
