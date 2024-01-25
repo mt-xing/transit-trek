@@ -540,6 +540,10 @@
 			padding: 10px 25px;
 		}
 
+		blockquote h3 {
+			font-size: 1.5em;
+		}
+
 		.textWrap {
 			margin-top: calc(40vh - 12.5vw);
 			height: 50vw;
