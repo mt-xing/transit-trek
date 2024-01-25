@@ -77,6 +77,300 @@
 		<li>3 to 4 people per team</li>
 		<li>4 hours long competition period</li>
 	</ul>
+
+	<h2>Rules</h2>
+	<h3>Basic Gameplay Logistics</h3>
+	<ul>
+		<li>
+			The objective of the game is to get from the starting point to the pit stop via public transit
+			as quickly as you can.
+		</li>
+		<li>
+			In order to take modes of public transit, each team needs to earn passes to take a certain
+			mode of transportation or a certain route.
+		</li>
+		<li>
+			Once passes are earned, they are forever valid for unlimited two-way travel between the origin
+			and destination.
+		</li>
+		<li>
+			Every player (that’s you!; also known as a Transit Trekker) must have a fully charged mobile
+			phone with Signal installed.
+			<ul><li>Signal will be used to communicate between participants and the organizers.</li></ul>
+		</li>
+		<li>At least one Transit Trekker in the team must have an iPhone with Find My Friends.</li>
+		<li>
+			Every Transit Trekker must be wearing a bandana provided by the organizers. This way, you can
+			easily be identified as a participant.
+		</li>
+		<li>
+			For tracking purposes, one team member needs to share their location with the organizers on
+			Find My Friends.
+		</li>
+		<li>
+			Players must travel by foot or public transit where they can use their ORCA card. This
+			includes Link light rail, all public buses, streetcars/trams, and the Seattle Monorail.
+			<ul>
+				<li>
+					Absolutely no traveling on cars, motorcycles, trucks, boats, planes, bicycles, scooters,
+					or Segways. Doing so could result in penalties up to/including disqualification.
+				</li>
+			</ul>
+		</li>
+		<li>
+			There are a few zones where you cannot cross on foot. They are called pedestrian exclusion
+			zones. They are listed at the bottom of this document. You are welcome to walk on the streets
+			listed as part of the pedestrian exclusion zones, but cannot cross them in order to progress
+			further in the game. You can only use public transit to get across those zones.
+			<ul>
+				<li>
+					Any violations of the pedestrian exclusion zones will result in a 30 minute penalty for
+					each violation.
+				</li>
+			</ul>
+		</li>
+		<li>
+			Running is only allowed to catch public transit (if it’s about to depart) or if you are within
+			sight of the pit stop. Everyone’s bodies are built differently and not all of us have bodies
+			well suited to running long distances. To ensure fairness, please do not run at any other
+			point of the game.
+		</li>
+		<li>Team members must stay together (within 10 feet of each other) at all times.</li>
+		<li>
+			Transit Trekkers must stay within the bounds of the game.
+			<ul>
+				<li>
+					Because it is not fair to exit the bounds of the game, teams will have 1 point deducted
+					for each violation detected.
+				</li>
+			</ul>
+		</li>
+		<li>
+			You get one 10 minute bio break. If you don’t take it, a 10 minute penalty will be given to
+			you when you arrive at the finish line.
+			<ul>
+				<li>
+					For instance, if you take a bio break and you arrive at 5:30pm, your game time counts as 3
+					hours 30 minutes. However, if you don’t take a bio break and you arrive at 5:30pm, your
+					game time counts as 3 hours 40 minutes.
+				</li>
+				<li>You have to tell us when you are starting and ending the bio break.</li>
+			</ul>
+		</li>
+		<li>
+			You cannot take a bio break while doing a task and you cannot do any tasks when taking a bio
+			break. You are, however, allowed to strategize during the bio break.
+		</li>
+		<li>
+			In case a bio break takes longer than 10 minutes, please inform the organizers so they can
+			keep track of your team’s situation. Health and safety always come first, but it’s important
+			for the organizers to keep track of exceptional circumstances affecting gameplay.
+		</li>
+	</ul>
+
+	<h3>Completing Challenge Tasks</h3>
+	<ul>
+		<li>The list of tasks are in the last portion of this document.</li>
+		<li>
+			Tasks earn you passes. Passes allow you to go to a specific place, sometimes with a limitation
+			on where they can be used from.
+		</li>
+		<li>
+			To officially complete a task, they must be reported to the organizers via Signal as soon as
+			they are completed (for verification and tabulation purposes).
+			<ul>
+				<li>
+					If a task requires you to complete multiple stages/steps, don’t report it to the
+					organizers until all stages/steps of that task are complete.
+				</li>
+				<li>However, if you complete a task in its entirety, you must report it immediately.</li>
+				<li>
+					You won’t receive your pass to move on to the next part until the organizers inform your
+					team you’ve successfully completed the task.
+				</li>
+				<li>
+					If the organizers inform the team that their task was not successfully completed, the
+					organizers will not inform the team of what they did incorrectly, and the team may try to
+					repeat the task at most two more times. After that, they cannot continue attempting to
+					complete the task and must try another task.
+				</li>
+			</ul>
+		</li>
+		<li>
+			Whenever possible, tasks may be completed simultaneously with other tasks, but team members
+			cannot split up in order to accomplish multiple tasks simultaneously. Instead, you can start
+			one task and keep it going while you start on another.
+		</li>
+		<li>
+			You may be required to make small purchases under $20 throughout the game to complete certain
+			tasks (ORCA card taps don’t count as purchases). These tasks will be clearly marked with a
+			dollar sign and alternative tasks will be available to allow you to avoid paying. You will not
+			be reimbursed for any monetary costs associated with completing the task.
+		</li>
+		<li>
+			If a task requires a certain item, it must be purchased after the game starts. Items you have
+			with you won’t count unless explicitly permitted by the task.
+		</li>
+		<li>
+			If a task requires pictures as proof (which almost all of them do), all team members must be
+			in the picture (as a selfie) unless explicitly not required. When in doubt, ask the
+			organizers.
+		</li>
+		<li>
+			If a task says you can’t look something up, it means you also can’t ask a non-participating
+			person to look it up for you or tell you the answer.
+		</li>
+		<li>
+			<strong>
+				If you are not sure about what counts as successfully completing a task, ask the organizers.
+			</strong>
+			Failure to ask may result in you not earning the points if your actions don’t qualify as properly
+			completing the task.
+		</li>
+		<li>
+			If a task requires each team member to procure something, then teams which have more members
+			than other teams only need to get the number of items equivalent to the smallest team’s size.
+			For instance, if the smallest team size is 4, then teams of 5 will only need to get 4 items.
+		</li>
+		<li>
+			When completing tasks, please do not do anything that might lead to danger.
+			<strong>Safety first.</strong>
+			If you are concerned that you or other teams completing a task may result in harm, please contact
+			the organizers immediately. They may issue a notice to everyone that a certain task is removed
+			from the game due to safety concerns.
+		</li>
+		<li>
+			<strong>
+				Be sure, when communicating with organizers, that you tell them what you are sending
+				evidence for.
+			</strong>
+		</li>
+	</ul>
+
+	<h3>Interacting with Other Teams</h3>
+	<ul>
+		<li>
+			Teams may not have any intentional contact with each other during the game, unless they see
+			each other in person, or as otherwise specified in the rules.
+		</li>
+	</ul>
+
+	<h3>Concluding the Game</h3>
+	<ul>
+		<li>
+			Teams should aim to arrive at the pit stop as quickly as possible (of course, as this is a
+			race!), but they need to make sure they are there by the end of the game, or they might not be
+			eligible to be ranked.
+		</li>
+		<li>
+			If teams have not reached Pioneer Square or the International District by 5:45pm, they will be
+			required to take the fastest public transit from wherever they are to Chinatown/International
+			District and go to Hing Hay Park.
+		</li>
+		<li>At the end of the game, teams will be ranked by how quickly they arrived.</li>
+		<li>All times are reported in U.S. Pacific Daylight Time.</li>
+		<li>
+			Clarifications are issued by the organizers and are final. When appropriate, the
+			clarifications will be announced to all teams, not just yours.
+		</li>
+		<li>
+			Tiebreaking rules
+			<ul>
+				<li>
+					The number of rules broken will be the first to break ties, with fewer rule violations
+					giving higher priority. This excludes rules that give an explicit time penalty.
+				</li>
+				<li>
+					Second, the time penalties are factored in. This may include a failure to take a bio break
+					or crossing the pedestrian exclusion zones.
+				</li>
+				<li>
+					Third, a team who successfully completed more challenges and earned more passes through
+					the course of the game will be given higher priority.
+				</li>
+				<li>
+					All else failing, then it’s a fight to the death with rock paper scissors, best out of 3.
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<h3>Miscellaneous</h3>
+	<ul>
+		<li>
+			Rules can be changed by the organizers at any time before, during, and after the competition
+			period. Whatever the organizers say can override any of the written rules. Rule changes will
+			be clearly broadcasted on the Signal group.
+		</li>
+	</ul>
+
+	<h3>Game Zone and Game Boundaries</h3>
+	<p>To be announced at a later time</p>
+
+	<h3>Starting Point</h3>
+	<p>
+		Show up to Northgate Station <strong>by 1:00pm</strong>. Parking is available at this park and
+		ride location, though this tends to be a popular park and ride garage, so you may wish to park
+		at the Amazon Spheres and take the Link over to Northgate if you think that’d be more
+		convenient. The rules will be explained and participants will have the opportunity to ask
+		clarifying questions to the organizers before the game starts. You will also have the chance to
+		meet your team and discuss basic strategy. The game will begin when everyone is present and the
+		organizers announce the start. Take your time or hurry up. The choice is yours;
+		<strong>don’t be late!</strong>
+	</p>
+	<p>
+		One member of your team should be designated as the primary representative, who will be
+		responsible for communicating with the organizers.
+	</p>
+
+	<h3>Ending Point</h3>
+	<p>The ending point will be Hing Hay Park in Chinatown.</p>
+
+	<h3>Starting Procedures</h3>
+	<ul>
+		<li>Pick a name for your team</li>
+		<li>Pick a representative for the team, who will share their location with the organizers</li>
+		<li>
+			Get your bandana! (and pay for it if you haven’t already)
+			<ul>
+				<li>Does not apply if you are bringing your bandana from the last Transit Trek</li>
+			</ul>
+		</li>
+		<li>Read the rules and ask questions to the organizers for clarification</li>
+		<li>Decide as a team what the strategy is and how to start</li>
+	</ul>
+
+	<blockquote>
+		<h3>Safety Disclaimer</h3>
+		<p>
+			You (a Participant) and your safety are of paramount importance during your participation in
+			the Seattle Transit Trek (the “Game”). You are strongly advised to avoid areas that may
+			present imminent danger to you or your fellow Participants. In case a diversion needs to be
+			made, you should report it to the Organizers and appropriate compensation in terms of points
+			and/or time will be made for you, including but not limited to, bonus points, the waiver of a
+			late return penalty, etc.
+		</p>
+		<p>
+			You may also not engage in any illegal activity to gain an unfair advantage in the Game. Doing
+			so will result in penalties including/up to disqualification.
+		</p>
+		<p>
+			By participating in the Game, you agree that you are playing the Game at your own risk. You
+			furthermore agree to hold the Organizers harmless and hold your fellow Participants harmless,
+			even by the negligence of the Organizers or fellow Participants.
+		</p>
+		<p>
+			<strong>
+				IN NO EVENT WILL THE ORGANIZERS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT,
+				INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES ARISING FROM
+				YOUR PARTICIPATION IN THIS GAME, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH
+				DAMAGES. BY PARTICIPATING IN THIS GAME, YOU HEREBY WAIVE, RELEASE, AND DISCHARGE THE
+				ORGANIZERS AND THEIR AGENTS OF ANY AND ALL LIABILITY OR DAMAGES OF ANY KIND RELATED TO,
+				ARISING FROM, OR IN ANY WAY CONNECTED WITH, YOUR PARTICIPATION IN THIS GAME, INCLUDING THOSE
+				ALLEGEDLY ATTRIBUTED TO THE NEGLIGENT ACTS OR OMISSIONS OF THE AFOREMENTIONED PARTIES.
+			</strong>
+		</p>
+	</blockquote>
 </main>
 
 <style>
@@ -100,11 +394,28 @@
 		font-size: 20px;
 	}
 
+	blockquote {
+		border: 5px red solid;
+		background: black;
+		padding: 20px 40px;
+		margin: 40px 0;
+		font-size: 1.2em;
+
+		box-shadow: 10px 10px 20px 10px black;
+	}
+
+	blockquote h3 {
+		margin-top: 10px;
+		font-size: 2em;
+	}
+
 	.textWrap {
 		margin-top: calc(50vh - 12.5vw);
 		height: 25vw;
 		width: 100%;
 		position: relative;
+
+		transform: translateZ(0);
 	}
 
 	.textBlurWrap text:nth-child(2),
