@@ -377,6 +377,13 @@
 </main>
 
 <style>
+	@font-face {
+		font-family: 'Selawik';
+		font-style: bold;
+		font-weight: 900;
+		src: url($lib/fonts/selawkb.woff2);
+	}
+
 	:global(body) {
 		padding: 0;
 		margin: 0;
@@ -466,7 +473,7 @@
 	}
 
 	.textShadowWrap h1 {
-		font-family: 'Segoe UI', 'Helvetica', sans-serif;
+		font-family: 'Segoe UI', 'Selawik', 'Helvetica', sans-serif;
 		font-weight: 900;
 		font-size: 10vw;
 		text-align: center;
@@ -481,7 +488,7 @@
 	}
 
 	.textShadowWrap svg {
-		font-family: 'Segoe UI', 'Helvetica', sans-serif;
+		font-family: 'Segoe UI', 'Selawik', 'Helvetica', sans-serif;
 		font-weight: 900;
 		font-size: 10vw;
 		text-align: center;
@@ -506,7 +513,7 @@
 
 		margin: 0;
 
-		font-family: 'Segoe UI', 'Helvetica', sans-serif;
+		font-family: 'Segoe UI', 'Selawik', 'Helvetica', sans-serif;
 		font-weight: 900;
 		font-size: 10vw;
 		text-align: center;
