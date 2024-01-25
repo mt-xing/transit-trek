@@ -1,7 +1,10 @@
 <script lang="ts">
+	import ttLogo from '$lib/images/tt-logo-blank.png';
 </script>
 
 <div id="bgImg"></div>
+
+<div class="topLogo"><img src={ttLogo} alt="" /> Seattle Transit Trek</div>
 
 <div class="textWrap">
 	<div class="textBlurWrap">
@@ -377,6 +380,7 @@
 	:global(body) {
 		padding: 0;
 		margin: 0;
+		font-family: 'Segoe UI', 'Helvetica', sans-serif;
 	}
 
 	main {
@@ -407,6 +411,32 @@
 	blockquote h3 {
 		margin-top: 10px;
 		font-size: 2em;
+	}
+
+	.topLogo {
+		position: absolute;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+
+		color: rgba(255, 255, 255, 0.7);
+		font-weight: 900;
+		font-size: 50px;
+		text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+		-webkit-text-stroke: 2px black;
+		paint-order: stroke fill;
+
+		top: 5vh;
+		left: 0;
+		right: 0;
+	}
+
+	.topLogo img {
+		width: 100px;
+		margin-right: 20px;
+		opacity: 0.9;
+		box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.5);
 	}
 
 	.textWrap {
