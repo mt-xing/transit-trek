@@ -488,6 +488,7 @@
 	}
 
 	.textShadowWrap svg {
+		pointer-events: none;
 		font-family: 'Segoe UI', 'Selawik', 'Helvetica', sans-serif;
 		font-weight: 900;
 		font-size: 10vw;
@@ -508,6 +509,8 @@
 	}
 
 	.textBlurWrap {
+		pointer-events: none;
+
 		backdrop-filter: invert(1) blur(5px);
 		clip-path: url(#clipPath);
 
