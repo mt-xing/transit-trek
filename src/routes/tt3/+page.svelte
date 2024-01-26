@@ -377,17 +377,12 @@
 </main>
 
 <style>
-	@font-face {
-		font-family: 'Selawik';
-		font-style: bold;
-		font-weight: 900;
-		src: url($lib/fonts/selawkb.woff2);
-	}
+	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 	:global(body) {
 		padding: 0;
 		margin: 0;
-		font-family: 'Segoe UI', 'Helvetica', sans-serif;
+		font-family: 'Noto Sans', 'Helvetica', sans-serif;
 	}
 
 	main {
@@ -401,7 +396,7 @@
 		color: white;
 		padding: 5vh 10vh;
 		box-sizing: border-box;
-		font-family: 'Segoe UI', 'Helvetica', sans-serif;
+		font-family: 'Noto Sans', 'Helvetica', sans-serif;
 		font-size: 20px;
 	}
 
@@ -473,12 +468,13 @@
 	}
 
 	.textShadowWrap h1 {
-		font-family: 'Segoe UI', 'Selawik', 'Helvetica', sans-serif;
+		font-family: 'Noto Sans', 'Helvetica', sans-serif;
 		font-weight: 900;
 		font-size: 10vw;
 		text-align: center;
 		margin: 0;
 		line-height: 9vw;
+		transform: translateY(0.1vw);
 
 		color: white;
 
@@ -489,7 +485,7 @@
 
 	.textShadowWrap svg {
 		pointer-events: none;
-		font-family: 'Segoe UI', 'Selawik', 'Helvetica', sans-serif;
+		font-family: 'Noto Sans', 'Helvetica', sans-serif;
 		font-weight: 900;
 		font-size: 10vw;
 		text-align: center;
@@ -498,6 +494,7 @@
 		width: 100%;
 		height: 25vw;
 	}
+
 	#maskPath {
 		background: white;
 		color: black;
@@ -516,7 +513,7 @@
 
 		margin: 0;
 
-		font-family: 'Segoe UI', 'Selawik', 'Helvetica', sans-serif;
+		font-family: 'Noto Sans', 'Helvetica', sans-serif;
 		font-weight: 900;
 		font-size: 10vw;
 		text-align: center;
@@ -546,7 +543,7 @@
 
 	@media (max-width: 1100px) {
 		main {
-			margin-top: 0;
+			margin-top: 5vh;
 			padding: 10px 25px;
 		}
 
@@ -572,9 +569,10 @@
 
 		.textShadowWrap h1 {
 			line-height: 13.5vw;
+			transform: translateY(0.2vw);
 
 			text-shadow: black 0 0 1.5vw;
-			-webkit-text-stroke: 1.3vw black;
+			-webkit-text-stroke: 1.6vw black;
 		}
 
 		.textBlurWrap text:nth-child(2),
@@ -590,7 +588,7 @@
 
 		.textShadowWrap h1 span {
 			line-height: 19.5vw;
-			-webkit-text-stroke: 2vw black;
+			-webkit-text-stroke: 2.5vw black;
 		}
 	}
 
@@ -603,6 +601,12 @@
 		.topLogo img {
 			width: 10vw;
 			margin-right: 2vw;
+		}
+	}
+
+	@media (max-width: 700px) {
+		main {
+			margin-top: 10vh;
 		}
 	}
 </style>
