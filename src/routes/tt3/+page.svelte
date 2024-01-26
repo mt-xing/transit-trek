@@ -45,6 +45,8 @@
 	</div>
 </div>
 
+<p class="date">May 2024 (Date TBD)</p>
+
 <main>
 	<p>
 		You are at Northgate Station to eat some yummy Chinese food. You soon realize you are actually
@@ -455,6 +457,16 @@
 		box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.5);
 	}
 
+	.date {
+		color: white;
+		font-weight: 900;
+		font-size: 50px;
+		text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+		-webkit-text-stroke: 2px black;
+		paint-order: stroke fill;
+		text-align: center;
+	}
+
 	.textWrap {
 		margin-top: calc(50vh - 12.5vw);
 		height: 25vw;
@@ -561,6 +573,11 @@
 			padding: 10px 25px;
 		}
 
+		.date {
+			margin: 0;
+			transform: translateY(-5vh);
+		}
+
 		blockquote h3 {
 			font-size: 1.5em;
 		}
@@ -607,7 +624,8 @@
 	}
 
 	@media (max-width: 1000px) {
-		.topLogo {
+		.topLogo,
+		.date {
 			font-size: 5vw;
 			-webkit-text-stroke: 0.2vw black;
 		}
@@ -621,6 +639,12 @@
 	@media (max-width: 700px) {
 		main {
 			margin-top: 10vh;
+		}
+	}
+
+	@media (min-aspect-ratio: 25/9) {
+		.textWrap {
+			margin-top: max(5vw, 150px);
 		}
 	}
 </style>
