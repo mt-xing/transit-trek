@@ -16,6 +16,11 @@
 
 <svelte:window bind:scrollY={y} bind:innerHeight />
 
+<svelte:head>
+	<title>Transit Trek: Race Across Seattle</title>
+	<meta name="description" content="Seattle Transit Trek's May 2024 event, Race Across Seattle" />
+</svelte:head>
+
 <div id="bgImg" style="background-position: 50% {parallaxY * 100}%"></div>
 
 <div class="topLogo"><img src={ttLogo} alt="" /> Seattle Transit Trek</div>
