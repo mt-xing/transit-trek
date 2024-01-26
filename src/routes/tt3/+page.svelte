@@ -1,8 +1,22 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import ttLogo from '$lib/images/tt-logo-blank.png';
+
+	let y: number;
+	let innerHeight: number;
+
+	let loaded = false;
+	onMount(() => {
+		loaded = true;
+	});
+
+	let parallaxY: number;
+	$: parallaxY = loaded ? y / (document.documentElement.scrollHeight - innerHeight) : 0;
 </script>
 
-<div id="bgImg"></div>
+<svelte:window bind:scrollY={y} bind:innerHeight />
+
+<div id="bgImg" style="background-position: 50% {parallaxY * 100}%"></div>
 
 <div class="topLogo"><img src={ttLogo} alt="" /> Seattle Transit Trek</div>
 
