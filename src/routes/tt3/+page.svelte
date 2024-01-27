@@ -423,7 +423,7 @@
 
 		width: 90%;
 		max-width: 1500px;
-		margin: 15vh auto 12.5vh auto;
+		margin: 15vh auto 50px auto;
 		color: white;
 		padding: 5vh 10vh;
 		box-sizing: border-box;
@@ -501,7 +501,7 @@
 	}
 
 	.textWrap {
-		margin-top: calc(50vh - 12.5vw);
+		margin-top: max(calc(50vh - 12.5vw), 200px);
 		height: 25vw;
 		width: 100%;
 		position: relative;
@@ -616,7 +616,7 @@
 		}
 
 		.textWrap {
-			margin-top: calc(40vh - 12.5vw);
+			margin-top: max(calc(40vh - 12.5vw), 150px);
 			height: 50vw;
 		}
 
