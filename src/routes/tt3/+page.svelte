@@ -164,8 +164,9 @@
 			Transit Trekkers must stay within the bounds of the game.
 			<ul>
 				<li>
-					Because it is not fair to exit the bounds of the game, teams will have 1 point deducted
-					for each violation detected.
+					Because it is not fair to exit the bounds of the game, teams will be subject to a time
+					penalty (to be determined by the organizers on a case-by-case basis) for each violation
+					detected.
 				</li>
 			</ul>
 		</li>
@@ -248,7 +249,7 @@
 			<strong>
 				If you are not sure about what counts as successfully completing a task, ask the organizers.
 			</strong>
-			Failure to ask may result in you not earning the points if your actions don’t qualify as properly
+			Failure to ask may result in you not earning the pass if your actions don’t qualify as properly
 			completing the task.
 		</li>
 		<li>
