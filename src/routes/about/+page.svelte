@@ -60,6 +60,7 @@
 	</p>
 
 	<h2>Frequently asked questions</h2>
+	<h3>Logistics</h3>
 	<p><b>Does it cost money to participate?</b></p>
 	<p>
 		To join the game, you need a Transit Trek bandana. If you purchased one previously, you can
@@ -85,21 +86,50 @@
 		Transit Treks are team-based. Team sizes are usually 4 people, although sizes of 3 to 5 are
 		permitted.
 	</p>
-	<p><b>How many people have participated in the past?</b></p>
+	<p><b>How do I participate in the Transit Trek?</b></p>
 	<p>
-		Transit Trek 2 featured about 45 participants. In the future, we hope to expand to accommodate a
-		larger number of participants.
+		The Transit Trek Signal group is the main place where we post news about when the next Transit
+		Trek will be. Ask one of the organizers or someone who's already in the Signal group for
+		information on how to join. Once you are in the group, stay tuned for info on how to sign up for
+		the Transit Trek.
 	</p>
-	<p><b>Why does this event only take place during the summer?</b></p>
+	<p><b>Do I need to work at Microsoft to participate in the Transit Trek?</b></p>
 	<p>
-		There will be ample daylight during the summer months that allow us to run the game when it is
-		bright outside. That makes the game safer to play. The weather is nice enough in the summer that
-		we don't have to worry about rain. We'd prefer to respect your time by avoiding postponements of
-		the event as best as we can. If we were to run them outside of the summer months, it would
-		become far more difficult for us to make such guarantees. We know that you might already be
-		planning on taking advantage of the good weather by going hiking or kayaking. That's why we are
-		offering three different Transit Treks in 2024. Participate in one, two, or all three of
-		them&mdash;it's up to you!
+		Nope! While the Transit Trek is mainly advertised for EIC Microsoft FTEs to participate, we also
+		welcome Microsoft interns, Amazon employees, and other friends to join.
+	</p>
+	<p><b>Do I need to organize my own team?</b></p>
+	<p>
+		You can either form your own team of 4 participants or you can ask us to form a team for you! If
+		you don't know anyone else participating, that's not a problem at all. You're still more than
+		welcome to sign up!
+	</p>
+	<p>
+		<b
+			>Are there past Transit Treks I can refer back to so I have an idea of what they might be
+			like? Should I study up on anything?</b
+		>
+	</p>
+	<p>
+		We're happy to share documents from some of the prior Transit Treks. However, keep in mind that
+		the game changes each time, so looking at them will only give you some context on the overall
+		premise of Transit Treks; it won't help you get a leg up on the upcoming game.
+	</p>
+	<p>
+		The only thing you should absolutely study up on is the public transit network within the game
+		area of the upcoming Transit Trek. While you are always welcome to use Google Maps to plan your
+		journey, it'll serve you better if you know what routes exist ahead of time.
+	</p>
+	<p><b>What is the timeline of signing up and preparing for a Transit Trek?</b></p>
+	<p>
+		We tend to finalize the date and the theme of the game about one month ahead, but sometimes we
+		might <s>procrastinate</s> be a bit more pressed for time, depending on the situation. Around this
+		time, you'll need to sign up for the Transit Trek. The cutoff to sign up will usually be one week
+		before the day of the Trek. This gives us enough time to create and assign teams.
+	</p>
+	<p>
+		The full list of challenges will only be released when the game starts at 2pm on the day of the
+		Trek.
 	</p>
 	<p><b>How accessible is the game?</b></p>
 	<p>We try to make the game as accessible as possible. For example:</p>
@@ -131,14 +161,23 @@
 			fare during the game.)
 		</li>
 	</ul>
-	<p><b>How did the Transit Trek start?</b></p>
+	<h3>History, origins, and premise</h3>
+	<p><b>How was the Transit Trek invented and how did it start?</b></p>
 	<p>
-		The Transit Trek was started in 2023, inspired by two games: the <i
+		The Transit Trek was invented in 2023, inspired by two games: the <i
 			>Seattle Treasure Transit Trek</i
 		>
 		created by Steven Schulte for his friends and <i>Jet Lag: The Game</i> created by Wendover
-		Productions. We also draw comparisons to <i>The Amazing Race</i>, although we were not directly
-		inspired by it (but we think it's a great TV show you should watch!).
+		Productions. It started after friends Arjun and Jeffrey finished Steven's puzzle- and
+		transit-based <i>Trek</i> and realized they loved it and wanted to create their own version
+		based on Steven's game and <i>Jet Lag</i>. The resulting Seattle Transit Trek has Steven's
+		blessings and combines the transit-oriented nature of Steven's game with the dynamism and
+		task-oriented game mechanics of <i>Jet Lag</i>.
+	</p>
+	<p>
+		Occasionally, the Trek also draws comparisons to <i>The Amazing Race</i>, but we were not
+		directly inspired by it. (That being said, we think it's a great TV show you should watch, as it
+		can serve as inspiration for how you can succeed in the Transit Trek!)
 	</p>
 	<p><b>Is this a puzzle game?</b></p>
 	<p>
@@ -164,18 +203,23 @@
 		travel is the challenge. The challenges are meant to be simple roadblocks on the path of the
 		travel; they are far less the focus.
 	</p>
-	<p><b>How do I participate in the Transit Trek?</b></p>
+	<p><b>How many people have participated in the past?</b></p>
 	<p>
-		The Transit Trek Signal group is the main place where we post news about when the next Transit
-		Trek will be. Ask one of the organizers or someone who's already in the Signal group for
-		information on how to join. Once you are in the group, stay tuned for info on how to sign up for
-		the Transit Trek.
+		Transit Trek 2 featured about 45 participants. In the future, we hope to expand to accommodate a
+		larger number of participants.
 	</p>
-	<p><b>Do I need to work at Microsoft to participate in the Transit Trek?</b></p>
+	<p><b>Why does this event only take place during the summer?</b></p>
 	<p>
-		Nope! While the Transit Trek is mainly advertised for EIC Microsoft FTEs to participate, we also
-		welcome Microsoft interns, Amazon employees, and other friends to join.
+		There will be ample daylight during the summer months that allow us to run the game when it is
+		bright outside. That makes the game safer to play. The weather is nice enough in the summer that
+		we don't have to worry about rain or whether it will be too cold. We'd prefer to respect your
+		time by avoiding postponements of the event as best as we can. If we were to run them outside of
+		the summer months, it would become far more difficult for us to make such guarantees. We know
+		that you might already be planning on taking advantage of the good weather by going hiking or
+		kayaking. That's why we are offering three different Transit Treks in 2024. Participate in one,
+		two, or all three of them&mdash;it's up to you!
 	</p>
+	<h3>Future plans</h3>
 	<p><b>Are there plans to hold Transit Treks outside of Seattle?</b></p>
 	<p>
 		When there is enough demand to fly out to a different city, we will do it. However, asking
@@ -192,6 +236,7 @@
 		the border between the United States and Canada. For these reasons, we have thus far avoided
 		planning Transit Treks in those two cities.
 	</p>
+	<h3>Behind the scenes</h3>
 	<p><b>Can we volunteer to help organize the Transit Treks?</b></p>
 	<p>
 		Yes of course! We invite past participants to become volunteers if they are interested in doing
