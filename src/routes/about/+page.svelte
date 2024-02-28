@@ -165,7 +165,7 @@
 	<p><b>How was the Transit Trek invented and how did it start?</b></p>
 	<p>
 		The Transit Trek was invented in 2023, inspired by two games: the <i
-			>Seattle Treasure Transit Trek</i
+			>Seattle Transit Treasure Trek</i
 		>
 		created by Steven Schulte for his friends and <i>Jet Lag: The Game</i> created by Wendover
 		Productions. It started after friends Arjun and Jeffrey finished Steven's puzzle- and
