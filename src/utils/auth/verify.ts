@@ -1,7 +1,5 @@
 import type { User } from "@auth/sveltekit";
-// import { ADMINS } from "$env/static/private";
-
-const ADMINS = "jeffwang16@gmail.com";
+import { ADMINS } from "$env/static/private";
 
 const validAdminEmails = new Set(ADMINS.split("||"));
 
