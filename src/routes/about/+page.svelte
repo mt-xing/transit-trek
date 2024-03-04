@@ -50,13 +50,16 @@
 	<h1>About the Seattle Transit Trek</h1>
 
 	<p>
-		The Seattle Transit Trek is a recurring event that takes place several times each year during
-		the summer months.
+		The Seattle Transit Trek is a team-based scavenger hunt played in Seattle using its public
+		transit system. Teams compete by completing various challenges around town while using Seattle's
+		public transit system to get around, but each iteration of the Transit Trek has its own unique
+		twist.
 	</p>
 
 	<p>
-		The game premise and rules change each time, but one thing remains constant: the Transit Trek is
-		always completed on public transit!
+		Transit Treks take place several times each year during the summer months. The game premise and
+		rules change each time, but one thing remains constant: the Transit Trek is always completed on
+		public transit!
 	</p>
 
 	<h2>Frequently asked questions</h2>
@@ -161,6 +164,53 @@
 			fare during the game.)
 		</li>
 	</ul>
+	<h3>Game rules</h3>
+	<p>
+		Most game rules differ between each game. However, there are some rules that always remain
+		constant. They are explained below in great detail (to ensure there is no ambiguity when the
+		game is played).
+	</p>
+	<p><b>What can I travel on during the Transit Trek?</b></p>
+	<p>
+		You can either travel as a pedestrian or on public transit. The forms of public transit
+		permitted are: (1) anything either branded as Sound Transit or operated by King County Metro,
+		(2) the Seattle Center Monorail, and (3) the Seattle Streetcars.
+	</p>
+	<p>
+		An easy way to tell if you can travel on a mode of transportation or not is: do they accept ORCA
+		cards and accept ORCA regional day or monthly passes? If so, you can use it!
+	</p>
+	<p>
+		Prohibited modes of transportation include but are not limited to: privately owned automobiles
+		(including those used to provide rideshare services), police cars, fire trucks, ambulances,
+		semi-trailer trucks, motorcycles, scooters (whether electric or manual), bicycles (whether
+		electric, electric-assisted, or manual), unicycles, boats (including canoes and kayaks),
+		paddleboards, jet skis, ships (including ferries operated by Washington State Ferries),
+		airplanes, hydroplanes, seaplanes, and gliders.
+	</p>
+	<p>
+		Washington State Ferries technically accept ORCA cards but they do not accept ORCA regional day
+		or monthly passes, so they are prohibited. Also, they do not serve intra-Seattle routes, so as a
+		practical matter, they aren't allowed.
+	</p>
+	<p><b>Can I get outside help?</b></p>
+	<p>
+		Using Google Maps, a search engine, or a chatbot is usually allowed unless expressly prohibited.
+	</p>
+	<p>Intentional communication with other teams and colluding are prohibited.</p>
+	<p><b>Are there places I cannot go?</b></p>
+	<p>
+		The games have a boundary clearly defined in a map that's viewable on Google Maps. Leaving the
+		boundary is typically not permitted, although this depends on the game.
+	</p>
+	<p>
+		Places which are not accessible to everyone participating in the game may not be accessed during
+		the game.
+	</p>
+	<p>
+		If you happen to live within the game area, it is not acceptable to return to your home during
+		the game, as this could give an unfair advantage to the competitors who live in the game area.
+	</p>
 	<h3>History, origins, and premise</h3>
 	<p><b>How was the Transit Trek invented and how did it start?</b></p>
 	<p>
@@ -210,15 +260,49 @@
 	</p>
 	<p><b>Why does this event only take place during the summer?</b></p>
 	<p>
-		There will be ample daylight during the summer months that allow us to run the game when it is
-		bright outside. That makes the game safer to play. The weather is nice enough in the summer that
-		we don't have to worry about rain or whether it will be too cold. We'd prefer to respect your
-		time by avoiding postponements of the event as best as we can. If we were to run them outside of
-		the summer months, it would become far more difficult for us to make such guarantees. We know
-		that you might already be planning on taking advantage of the good weather by going hiking or
-		kayaking. That's why we are offering three different Transit Treks in 2024. Participate in one,
-		two, or all three of them&mdash;it's up to you!
+		There are many reasons, but they all boil down to safety and accessibility. There will be ample
+		daylight during the summer months that allow us to run the game when it is bright outside. That
+		makes the game safer to play. The weather is nice enough in the summer that we don't have to
+		worry about rain or whether it will be too cold. We'd prefer to respect your time by avoiding
+		postponements of the event as best as we can. We also don't want you to get sick from doing a
+		Transit Trek because it's too cold and wet outside. If we were to run them outside of the summer
+		months, it would become far more difficult for us to make such guarantees. We know that you
+		might already be planning on taking advantage of the good weather by going hiking or kayaking.
+		That's why we are offering three different Transit Treks in 2024. Participate in one, two, or
+		all three of them&mdash;it's up to you!
 	</p>
+	<p><b>Why should I participate in the Transit Trek?</b></p>
+	<ol>
+		<li>Dozens of participants have had lots of fun competing in past Transit Treks!</li>
+		<li>
+			The game is very environmentally friendly because everyone is required to travel either on
+			foot or by existing public transit routes, which would run regardless of whether the Transit
+			Trek occurred on that day or not. You can play without any guilt about creating unnecessary
+			carbon emissions!
+		</li>
+		<li>
+			It's only half a day on a Saturday, so you don't need to dedicate your whole weekend to it.
+		</li>
+		<li>
+			It's basically free to participate. There's a requirement to buy a bandana, but it's 50¢ and
+			you can reuse it for future Transit Treks.
+		</li>
+		<li>
+			No two Transit Treks are alike. The premise of the game changes each time. A team that won the
+			previous Transit Trek might not repeat their feat in a future Transit Trek.
+		</li>
+		<li>
+			Transit Treks are thoroughly planned, researched, and tested in advance. We tend to spend at
+			least 20 hours planning each Transit Trek. Each Transit Trek is also analyzed from a formal
+			game design perspective. We've iterated on multiple versions of Transit Treks and learned from
+			mistakes in the past. We also solicit feedback at the conclusion of each Transit Trek to make
+			the next one better.
+		</li>
+		<li>
+			Last but not least, we can't emphasize enough that it's <u>so much fun</u>!
+		</li>
+	</ol>
+
 	<h3>Future plans</h3>
 	<p><b>Are there plans to hold Transit Treks outside of Seattle?</b></p>
 	<p>
