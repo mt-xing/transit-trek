@@ -50,7 +50,7 @@
 	</div>
 </div>
 
-<p class="date">May / June 2024 (Date TBD)</p>
+<p class="date">June 8, 2024</p>
 
 <main>
 	<p>
