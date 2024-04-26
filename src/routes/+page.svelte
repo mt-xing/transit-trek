@@ -3,7 +3,7 @@
 
 	onMount(() => {
 		if (document.location.host.indexOf('localhost') !== 0) {
-			document.location.replace('/tt2/index.html');
+			document.location.replace('/tt3');
 		} else {
 			document.location.replace('/oldHome');
 		}
