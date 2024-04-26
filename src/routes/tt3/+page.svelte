@@ -74,9 +74,9 @@
 		<li>
 			Either:
 			<ul>
-				<li>A bandana from Seattle Transit Trek #2, or</li>
+				<li>A bandana from Seattle Transit Trek #2 and a $2 participation fee, or</li>
 				<li>
-					$0.50 participation fee. In return, you will be given a bandana to be used throughout the
+					A $2.50 participation fee. In return, you will be given a bandana to be used throughout the
 					game (and to keep as a souvenir!)
 				</li>
 			</ul>
@@ -195,7 +195,6 @@
 
 	<h3>Completing Challenge Tasks</h3>
 	<ul>
-		<li>The list of tasks are in the last portion of this document.</li>
 		<li>
 			Tasks earn you passes. Passes allow you to go to a specific place, sometimes with a limitation
 			on where they can be used from.
