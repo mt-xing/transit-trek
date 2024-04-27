@@ -76,8 +76,8 @@
 			<ul>
 				<li>A bandana from Seattle Transit Trek #2 and a $2 participation fee, or</li>
 				<li>
-					A $2.50 participation fee. In return, you will be given a bandana to be used throughout the
-					game (and to keep as a souvenir!)
+					A $2.50 participation fee. In return, you will be given a bandana to be used throughout
+					the game (and to keep as a souvenir!)
 				</li>
 			</ul>
 		</li>
@@ -143,9 +143,9 @@
 		</li>
 		<li>
 			There are a few zones where you cannot cross on foot. They are called pedestrian exclusion
-			zones. They are listed at the bottom of this document. You are welcome to walk on the streets
-			listed as part of the pedestrian exclusion zones, but cannot cross them in order to progress
-			further in the game. You can only use public transit to get across those zones.
+			zones, and will be provided along with the map. You are welcome to walk on the streets listed
+			as part of the pedestrian exclusion zones, but cannot cross them in order to progress further
+			in the game. You can only use public transit to get across those zones.
 			<ul>
 				<li>
 					Any violations of the pedestrian exclusion zones will result in a 30 minute penalty for
