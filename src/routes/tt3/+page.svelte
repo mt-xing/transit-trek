@@ -148,8 +148,8 @@
 			in the game. You can only use public transit to get across those zones.
 			<ul>
 				<li>
-					Any violations of the pedestrian exclusion zones will result in a 30 minute penalty for
-					each violation.
+					If you go across the pedestrian exclusion zones anyway, you’ll have to go back and
+					resume playing the game from there.
 				</li>
 			</ul>
 		</li>
@@ -334,13 +334,13 @@
 	<h3>Starting Point</h3>
 	<p>
 		Show up to Northgate Station <strong>by 1:00pm</strong>. Parking is available at this park and
-		ride location, though this tends to be a popular park and ride garage, so you may wish to park
-		at the Amazon Spheres and take the Link over to Northgate if you think that’d be more
-		convenient. The rules will be explained and participants will have the opportunity to ask
-		clarifying questions to the organizers before the game starts. You will also have the chance to
-		meet your team and discuss basic strategy. The game will begin when everyone is present and the
-		organizers announce the start. Take your time or hurry up. The choice is yours;
-		<strong>don’t be late!</strong>
+		ride location, though this tends to be a popular park and ride garage, and you'll have to backtrack
+		all the way back here from the ending point, so you may wish to park downtown instead
+		at the Amazon Spheres and take the Link 1 Line over to Northgate Station. The rules will be
+		explained and participants will have the opportunity to ask clarifying questions to the organizers
+		before the game starts. You will also have the chance to meet your team and discuss basic strategy.
+		The game will begin when everyone is present and the organizers announce the start. Take your time
+		or hurry up. The choice is yours; <strong>don’t be late!</strong>
 	</p>
 	<p>
 		One member of your team should be designated as the primary representative, who will be
