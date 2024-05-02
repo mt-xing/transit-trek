@@ -52,6 +52,16 @@
 
 <p class="date">June 8, 2024</p>
 
+<iframe
+	class="trailer"
+	src="https://www.youtube.com/embed/Dm37v_4uTx4?si=EpMBcGqZY8iS57wh"
+	title="YouTube video player"
+	frameborder="0"
+	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+	referrerpolicy="strict-origin-when-cross-origin"
+	allowfullscreen
+></iframe>
+
 <main>
 	<p>
 		You are at Northgate Station to eat some yummy Chinese food. You soon realize you are actually
@@ -707,5 +717,13 @@
 		.textWrap {
 			margin-top: max(5vw, 150px);
 		}
+	}
+
+	.trailer {
+		width: 75vw;
+		height: 42.1875vw;
+		margin: 5vw auto;
+		display: block;
+		box-shadow: black 0 0 25px 25px;
 	}
 </style>
