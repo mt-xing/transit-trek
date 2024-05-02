@@ -98,10 +98,6 @@
 		<li>Water</li>
 		<li>Battery pack (for your phone)</li>
 		<li>Snacks, if you might get hungry during the event</li>
-		<li>
-			A change of clothes or a towel, if you are preparing for the possibility of a task involving
-			water
-		</li>
 	</ul>
 
 	<h2>Basics</h2>
