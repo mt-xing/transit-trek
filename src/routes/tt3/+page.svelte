@@ -52,6 +52,11 @@
 
 <p class="date">June 8, 2024</p>
 
+<div class="signupwrap">
+	<h2>Ready to trek?</h2>
+	<a href="https://partiful.com/e/ktJpfrbWDDxx2jA0NoKa">Sign Up</a>
+</div>
+
 <iframe
 	class="trailer"
 	src="https://www.youtube.com/embed/Dm37v_4uTx4?si=EpMBcGqZY8iS57wh"
@@ -154,8 +159,8 @@
 			in the game. You can only use public transit to get across those zones.
 			<ul>
 				<li>
-					If you go across the pedestrian exclusion zones anyway, you’ll have to go back and
-					resume playing the game from there.
+					If you go across the pedestrian exclusion zones anyway, you’ll have to go back and resume
+					playing the game from there.
 				</li>
 			</ul>
 		</li>
@@ -340,13 +345,13 @@
 	<h3>Starting Point</h3>
 	<p>
 		Show up to Northgate Station <strong>by 1:00pm</strong>. Parking is available at this park and
-		ride location, though this tends to be a popular park and ride garage, and you'll have to backtrack
-		all the way back here from the ending point, so you may wish to park downtown instead
+		ride location, though this tends to be a popular park and ride garage, and you'll have to
+		backtrack all the way back here from the ending point, so you may wish to park downtown instead
 		at the Amazon Spheres and take the Link 1 Line over to Northgate Station. The rules will be
-		explained and participants will have the opportunity to ask clarifying questions to the organizers
-		before the game starts. You will also have the chance to meet your team and discuss basic strategy.
-		The game will begin when everyone is present and the organizers announce the start. Take your time
-		or hurry up. The choice is yours; <strong>don’t be late!</strong>
+		explained and participants will have the opportunity to ask clarifying questions to the
+		organizers before the game starts. You will also have the chance to meet your team and discuss
+		basic strategy. The game will begin when everyone is present and the organizers announce the
+		start. Take your time or hurry up. The choice is yours; <strong>don’t be late!</strong>
 	</p>
 	<p>
 		One member of your team should be designated as the primary representative, who will be
@@ -721,5 +726,116 @@
 		margin: 5vw auto;
 		display: block;
 		box-shadow: black 0 0 25px 25px;
+	}
+
+	.signupwrap {
+		margin: 5vw auto;
+		padding: 40px 80px;
+		text-align: center;
+
+		background: rgba(0, 0, 0, 0.75);
+		backdrop-filter: blur(10px);
+		box-shadow: 0 0 15px 10px black;
+
+		max-width: 800px;
+		box-sizing: border-box;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.signupwrap h2 {
+		color: white;
+		font-weight: 900;
+		font-size: 30px;
+		text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+		-webkit-text-stroke: 2px black;
+		paint-order: stroke fill;
+		text-align: center;
+		margin: 0 2em 0 0;
+	}
+
+	.signupwrap a {
+		padding: 20px 60px;
+		display: inline-block;
+		color: white;
+		text-decoration: none;
+		position: relative;
+		overflow: hidden;
+		text-shadow: 0 0 15px black;
+		-webkit-text-stroke: 2px black;
+		paint-order: stroke fill;
+		font-weight: bold;
+		font-size: 25px;
+		box-shadow: 0 0 1px 1px white;
+
+		transition: box-shadow 0.5s ease-in-out;
+	}
+
+	.signupwrap a:hover,
+	.signupwrap a:focus {
+		box-shadow: 0 0 20px 0px white;
+	}
+
+	.signupwrap a:active {
+		transition: box-shadow 0.1s ease-in-out;
+		box-shadow: 0 0 20px 0px black;
+	}
+
+	.signupwrap a::after {
+		content: '➤';
+		margin-left: 1em;
+		display: inline-block;
+		transform: translateX(0);
+		transition: transform 0.25s ease-in-out;
+	}
+
+	.signupwrap a:hover::after,
+	.signupwrap a:focus::after {
+		transform: translateX(1em);
+	}
+
+	.signupwrap a::before {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: -1;
+		background: linear-gradient(
+			to right,
+			#e6400e 0%,
+			#9366b3 25%,
+			#0596cf 50%,
+			rgba(0, 0, 255, 0) 100%
+		);
+		top: 0;
+		left: 0;
+		width: 200%;
+		height: 100%;
+		transform: translateX(-100%);
+		transition: transform 0.5s ease-in-out;
+	}
+
+	.signupwrap a:hover::before,
+	.signupwrap a:focus::before {
+		transform: translateX(0);
+	}
+
+	@media (max-width: 800px) {
+		.signupwrap {
+			flex-direction: column;
+			margin-top: 75px;
+			margin-bottom: 100px;
+		}
+
+		.signupwrap h2 {
+			margin: 0 0 40px 0;
+			font-size: 5vw;
+		}
+
+		.signupwrap a {
+			font-size: 4vw;
+		}
 	}
 </style>
