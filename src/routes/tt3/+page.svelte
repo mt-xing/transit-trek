@@ -53,7 +53,7 @@
 <p class="date">June 8, 2024</p>
 
 <div class="signupwrap">
-	<h2>Ready to trek?</h2>
+	<h2>Ready to Trek?</h2>
 	<a href="https://partiful.com/e/ktJpfrbWDDxx2jA0NoKa">Sign Up</a>
 </div>
 
