@@ -1,7 +1,7 @@
 import { CosmosClient } from '@azure/cosmos';
-import { error } from '@sveltejs/kit';
-import type { PageServerLoad } from './$types';
-import { DB_URL, READ_KEY } from '$env/static/private';
+import { error, redirect } from '@sveltejs/kit';
+import type { Actions, PageServerLoad } from './$types';
+import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
 import type { ChallengeDefinition } from '../../../types/challenge';
 
 const client = new CosmosClient({
@@ -26,6 +26,28 @@ export const load: PageServerLoad = async ({ locals }) => {
 			desc: c.desc,
 			type: c.type,
 			id: c.id,
+			mapPos: c.mapPos,
 		})),
 	};
 };
+
+const writeClient = new CosmosClient({
+	endpoint: DB_URL,
+	key: WRITE_KEY,
+});
+
+export const actions = {
+	newChallenge: async () => {
+		await writeClient
+			.database('transit-trek')
+			.container('challenges')
+			.items.create({
+				title: '',
+				desc: '',
+				type: 'single',
+				mapPos: -999,
+			});
+
+		redirect(303, '/admin/challenges');
+	},
+} satisfies Actions;

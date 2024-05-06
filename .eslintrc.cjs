@@ -38,5 +38,18 @@ module.exports = {
 		'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
 		'import/no-unresolved': 'off',
 		'@typescript-eslint/no-throw-literal': 'off',
+		'no-plusplus': 'off',
+		"@typescript-eslint/no-unused-vars": [
+			"error",
+			{
+				"args": "all",
+				"argsIgnorePattern": "^_",
+				"caughtErrors": "all",
+				"caughtErrorsIgnorePattern": "^_",
+				"destructuredArrayIgnorePattern": "^_",
+				"varsIgnorePattern": "^_",
+				"ignoreRestSiblings": true
+			}
+		]
 	},
 };
