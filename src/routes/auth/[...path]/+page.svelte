@@ -16,7 +16,7 @@
 <p><small>*Doubters := Arjun</small></p>
 <p>
 	<button on:click={() => signIn('google')}>
-		<img src="google_btn.svg" alt="Sign in with Google" />
+		<img src="/google_btn.svg" alt="Sign in with Google" />
 	</button>
 </p>
 
