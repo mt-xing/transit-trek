@@ -18,8 +18,15 @@ export const load: PageServerLoad = async ({ url }) => {
 			.container('challenges')
 			.item(id, id)
 			.read<ChallengeDefinition>();
+		const res2 = await client
+			.database('transit-trek')
+			.container('challenges')
+			.items.readAll<ChallengeDefinition>()
+			.fetchAll();
+
 		return {
 			challenge: res.resource,
+			allChallenges: res2.resources,
 		};
 	}
 	return {};

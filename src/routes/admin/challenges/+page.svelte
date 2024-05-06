@@ -12,7 +12,8 @@
 <ul>
 	{#each challenges as challenge}
 		<li>
-			<a href="/admin/challengeEdit?id={challenge.id}">{challenge.mapPos}: {challenge.title}</a>
+			<a href="/admin/challengeEdit?id={challenge.id}">{challenge.mapPos}: {challenge.title}</a> -
+			<a href="/admin/challengeTest?id={challenge.id}">(Preview)</a>
 		</li>
 	{/each}
 </ul>

@@ -99,7 +99,6 @@
 		<select bind:value={type} name="type">
 			<option value="single">Single (one and done)</option>
 			<option value="multi">Multi-Part</option>
-			<option value="unlimited">Unlimited (no upper bound)</option>
 			<option value="subtask">Subtasks</option>
 		</select>
 	</p>
