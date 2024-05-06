@@ -13,3 +13,6 @@
 		<button on:click={() => signOut()} class="button">Sign out</button>
 	{/if}
 </p>
+
+<h2>Challenges</h2>
+<p><a href="/admin/challenges">Edit Challenges</a></p>

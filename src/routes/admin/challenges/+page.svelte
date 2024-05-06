@@ -7,7 +7,7 @@
 	challenges.sort((a, b) => a.mapPos - b.mapPos);
 </script>
 
-<p>{JSON.stringify(challenges)}</p>
+<h1>Challenges</h1>
 
 <ul>
 	{#each challenges as challenge}
@@ -20,3 +20,14 @@
 <form method="POST" action="?/newChallenge">
 	<button type="submit">Create New Challenge</button>
 </form>
+
+<style>
+	li {
+		font-size: 20px;
+		margin: 0.5em 0;
+	}
+
+	button {
+		padding: 0.5em 1em;
+	}
+</style>

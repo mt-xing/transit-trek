@@ -7,16 +7,15 @@
 
 	let title = challenge?.title ?? '';
 	let description = challenge?.desc ?? '';
-	let unlockDescription = challenge?.unlockDesc ?? '';
 	let rewardDescription = challenge?.rewardDesc ?? '';
 	let privateNotes = challenge?.privateNotes ?? '';
 
 	let mapPos = challenge?.mapPos ?? 0;
 
-	let unlockMapPos = challenge?.unlockMapPos;
+	let unlockMapPos = challenge?.unlockMapPos ? challenge.unlockMapPos.join(',') : undefined;
 	function handleChangeGate() {
 		if (unlockMapPos === undefined) {
-			unlockMapPos = 0;
+			unlockMapPos = '0';
 		} else {
 			unlockMapPos = undefined;
 		}
@@ -40,8 +39,8 @@
 		}
 	}
 
-	let subtaskMapPos = 0;
-	let subtaskMin = 0;
+	let subtaskMapPos = challenge?.type === 'subtask' ? challenge.subtaskInfo.mapPos : 0;
+	let subtaskMin = challenge?.type === 'subtask' ? challenge.subtaskInfo.minRequired : 0;
 </script>
 
 <h1>Edit: <em>{title || 'Untitled Challenge'}</em></h1>
@@ -58,11 +57,6 @@
 	</p>
 
 	<p>
-		Unlock Requirements:
-		<textarea bind:value={unlockDescription} name="unlockDesc"></textarea>
-	</p>
-
-	<p>
 		Reward Description:
 		<textarea bind:value={rewardDescription} name="rewardDesc"></textarea>
 	</p>
@@ -74,7 +68,7 @@
 
 	<p>
 		Map Position (multiple challenges can have the same position):
-		<input type="number" bind:value={mapPos} name="mapPos" />
+		<input type="number" bind:value={mapPos} name="mapPos" step="any" />
 	</p>
 
 	<p>
@@ -90,9 +84,9 @@
 	</p>
 	{#if unlockMapPos !== undefined}
 		<p>
-			Map Position of previous challenge: <input
+			Map Position of previous challenge (comma separated if more than one): <input
 				bind:value={unlockMapPos}
-				type="number"
+				type="text"
 				name="unlockMapPos"
 			/>
 		</p>
@@ -128,7 +122,12 @@
 
 	{#if type === 'subtask'}
 		<p>
-			Subtasks map position: <input bind:value={subtaskMapPos} type="number" name="subtaskMapPos" />
+			Subtasks map position: <input
+				bind:value={subtaskMapPos}
+				type="number"
+				name="subtaskMapPos"
+				step="any"
+			/>
 		</p>
 		<p>
 			Number of subtasks required for completion: <input
@@ -145,3 +144,10 @@
 </form>
 
 <a href="/admin/challenges">Discard and Return</a>
+
+<style>
+	textarea {
+		min-width: 400px;
+		min-height: 10em;
+	}
+</style>

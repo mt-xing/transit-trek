@@ -40,11 +40,10 @@ export const actions = {
 			id,
 			title: data.get('title') as string,
 			desc: data.get('desc') as string,
-			unlockDesc: (data.get('unlockDesc') as string) || undefined,
 			rewardDesc: (data.get('rewardDesc') as string) || undefined,
 			privateNotes: (data.get('privateNotes') as string) || undefined,
-			mapPos: parseInt(data.get('mapPos') as string, 10),
-			unlockMapPos: data.get('unlockMapPosActive') ? parseInt(data.get('unlockMapPos') as string, 10) : undefined,
+			mapPos: parseFloat(data.get('mapPos') as string),
+			unlockMapPos: data.get('unlockMapPosActive') ? (data.get('unlockMapPos') as string).split(",").map(parseFloat) : undefined,
 		};
 		const type = data.get('type') as ChallengeType;
 		const newChallengeInfo = ((): ChallengeDefinition => {
@@ -63,7 +62,7 @@ export const actions = {
 						...challengeBase,
 						type: 'subtask',
 						subtaskInfo: {
-							mapPos: parseInt(data.get('subtaskMapPos') as string, 10),
+							mapPos: parseFloat(data.get('subtaskMapPos') as string),
 							minRequired: parseInt(data.get('subtaskMinRequired') as string, 10),
 						}
 					}
