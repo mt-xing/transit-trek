@@ -34,7 +34,10 @@ export const actions = {
 	default: async (event: RequestEvent) => {
 		const data = await event.request.formData();
 		const id = event.url.searchParams.get('id');
-		if (!id) { return; }
+		if (!id) {
+			redirect(303, '/admin/challenges');
+			return;
+		}
 
 		const challengeBase = {
 			id,

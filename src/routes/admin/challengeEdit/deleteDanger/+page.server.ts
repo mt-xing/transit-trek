@@ -12,9 +12,13 @@ export const actions = {
 	default: async (event: RequestEvent) => {
 		const data = await event.request.formData();
 		const id = data.get("id") as string;
-		if (!id) { return; }
+		if (!id) {
+			redirect(303, '/admin/challenges');
+			return;
+		}
 		const sanityString = data.get("sanityString") as string;
 		if (sanityString !== id.substring(0, 5)) {
+			redirect(303, '/admin/challenges');
 			return;
 		}
 
