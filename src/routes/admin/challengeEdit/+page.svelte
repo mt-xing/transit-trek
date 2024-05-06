@@ -41,6 +41,8 @@
 
 	let subtaskMapPos = challenge?.type === 'subtask' ? challenge.subtaskInfo.mapPos : 0;
 	let subtaskMin = challenge?.type === 'subtask' ? challenge.subtaskInfo.minRequired : 0;
+
+	let deleteString = '';
 </script>
 
 <h1>Edit: <em>{title || 'Untitled Challenge'}</em></h1>
@@ -144,6 +146,22 @@
 </form>
 
 <a href="/admin/challenges">Discard and Return</a>
+
+<div>
+	<h2>Danger Zone</h2>
+	<p>
+		Delete this challenge by typing the first five characters of the ID in the box: <code
+			>{challenge?.id.substring(0, 5)}</code
+		>
+	</p>
+	<form action="/admin/challengeEdit/deleteDanger" method="POST">
+		<input type="hidden" value={challenge?.id ?? ''} name="id" />
+		<p><input type="text" bind:value={deleteString} maxlength="5" name="sanityString" /></p>
+		<p>
+			<button disabled={deleteString !== (challenge?.id.substring(0, 5) ?? '99999')}>DELETE</button>
+		</p>
+	</form>
+</div>
 
 <style>
 	textarea {
