@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PublicChallengeDefinition } from '../types/challenge';
+	import ImmutableCheckbox from './immutableCheckbox.svelte';
 
 	export let challenge: PublicChallengeDefinition;
 	export let allChallenges: PublicChallengeDefinition[];
@@ -16,18 +17,20 @@
 	{/if}
 	<h2>Progress</h2>
 	{#if challenge.type === 'single'}
-		<input type="checkbox" />
+		<ImmutableCheckbox checked={true} />
 	{:else if challenge.type === 'multi'}
-		<ol>
+		<ol class="multiList" role="list">
 			{#each challenge.partDescs as c}
-				<li><input type="checkbox" /> {c}</li>
+				<li><ImmutableCheckbox checked={false} text={c} /></li>
 			{/each}
 		</ol>
 	{:else if challenge.type === 'subtask'}
 		<p>Complete {challenge.subtaskInfo.minRequired} of the following:</p>
-		<ul>
+		<ul class="multiList" role="list">
 			{#each allChallenges.filter((x) => x.mapPos === challenge.subtaskInfo.mapPos) as c}
-				<li><input type="checkbox" /> {c.title}</li>
+				<li>
+					<ImmutableCheckbox checked={false} text={c.title} callback={() => {}} />
+				</li>
 			{/each}
 		</ul>
 	{/if}
@@ -40,13 +43,14 @@
 		margin: 50px auto;
 		width: calc(100% - 50px);
 		max-width: 500px;
-		padding: 30px 50px;
+		padding: 50px 30px;
 		border-radius: 50px;
 		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 	}
 
 	h1 {
 		font-size: 32px;
+		margin-top: 0;
 	}
 
 	h2 {
@@ -61,5 +65,10 @@
 	}
 	:global(.sep)::after {
 		content: ' —';
+	}
+
+	.multiList {
+		list-style: none;
+		padding: 0;
 	}
 </style>
