@@ -5,4 +5,8 @@ export type Team = {
     challengeProgress: ChallengeProgress;
 };
 
-export type ChallengeProgress = Record<string, boolean[] | undefined>;
+export type ChallengeProgress = Record<string, {
+    manualUnlock?: boolean;
+    manualComplete?: boolean;
+    progress: boolean[] | undefined;
+}>;

@@ -44,6 +44,7 @@
 		align-items: center;
 		justify-content: center;
 		margin-right: 0.5em;
+		font-weight: bold;
 	}
 
 	.checkbox.checked {
