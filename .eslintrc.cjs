@@ -39,6 +39,7 @@ module.exports = {
 		'import/no-unresolved': 'off',
 		'@typescript-eslint/no-throw-literal': 'off',
 		'no-plusplus': 'off',
+		'consistent-return': 'off',
 		"@typescript-eslint/no-unused-vars": [
 			"error",
 			{

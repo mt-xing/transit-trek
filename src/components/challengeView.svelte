@@ -1,13 +1,23 @@
 <script lang="ts">
+	import { fly } from 'svelte/transition';
 	import type { PublicChallengeDefinition } from '../types/challenge';
 	import ImmutableCheckbox from './immutableCheckbox.svelte';
+	import type { ChallengeProgress } from '../types/team';
+	import { isChallengeComplete } from '../utils/challenge';
 
 	export let challenge: PublicChallengeDefinition;
 	export let allChallenges: PublicChallengeDefinition[];
+	export let allChallengeProgress: ChallengeProgress;
+	export let iteration: number = 0;
+	export let closeCallback: () => void;
+
+	let openChallenge: PublicChallengeDefinition | undefined;
+	const progress = allChallengeProgress[challenge.id];
 </script>
 
-<section>
+<section style="margin-top: {50 + iteration * 40}px" transition:fly={{ y: 200 }}>
 	<h1>{challenge.title}</h1>
+	<button on:click={closeCallback} class="closeBtn" aria-label="Close">╳</button>
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<p>{@html challenge.desc}</p>
 	{#if challenge.rewardDesc}
@@ -17,11 +27,11 @@
 	{/if}
 	<h2>Progress</h2>
 	{#if challenge.type === 'single'}
-		<ImmutableCheckbox checked={true} />
+		<ImmutableCheckbox checked={progress?.[0] ?? false} />
 	{:else if challenge.type === 'multi'}
 		<ol class="multiList" role="list">
-			{#each challenge.partDescs as c}
-				<li><ImmutableCheckbox checked={false} text={c} /></li>
+			{#each challenge.partDescs as c, i}
+				<li><ImmutableCheckbox checked={progress?.[i] ?? false} text={c} /></li>
 			{/each}
 		</ol>
 	{:else if challenge.type === 'subtask'}
@@ -29,12 +39,30 @@
 		<ul class="multiList" role="list">
 			{#each allChallenges.filter((x) => x.mapPos === challenge.subtaskInfo.mapPos) as c}
 				<li>
-					<ImmutableCheckbox checked={false} text={c.title} callback={() => {}} />
+					<ImmutableCheckbox
+						checked={isChallengeComplete(c, allChallenges, allChallengeProgress)}
+						text={c.title}
+						callback={() => {
+							openChallenge = c;
+						}}
+					/>
 				</li>
 			{/each}
 		</ul>
 	{/if}
 </section>
+
+{#if openChallenge}
+	<svelte:self
+		{allChallenges}
+		{allChallengeProgress}
+		challenge={openChallenge}
+		iteration={iteration + 1}
+		closeCallback={() => {
+			openChallenge = undefined;
+		}}
+	/>
+{/if}
 
 <style>
 	section {
@@ -46,29 +74,55 @@
 		padding: 50px 30px;
 		border-radius: 50px;
 		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.closeBtn {
+		position: absolute;
+		top: 60px;
+		left: 30px;
+		background: none;
+		border: none;
+		cursor: pointer;
 	}
 
 	h1 {
 		font-size: 32px;
 		margin-top: 0;
+		padding-left: 35px;
 	}
 
 	h2 {
 		font-size: 24px;
 	}
 
-	:global(.sep) {
+	section :global(.sep) {
 		display: block;
 	}
-	:global(.sep)::before {
+	section :global(.sep)::before {
 		content: '— ';
 	}
-	:global(.sep)::after {
+	section :global(.sep)::after {
 		content: ' —';
 	}
 
 	.multiList {
 		list-style: none;
 		padding: 0;
+	}
+
+	section :global(a) {
+		color: black;
+	}
+	section :global(a):hover,
+	section :global(a):focus {
+		text-decoration: none;
+	}
+	section :global(a):active {
+		text-decoration: underline;
 	}
 </style>
