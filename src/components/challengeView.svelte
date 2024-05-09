@@ -12,10 +12,10 @@
 	export let closeCallback: () => void;
 
 	let openChallenge: PublicChallengeDefinition | undefined;
-	const progress = allChallengeProgress[challenge.id];
+	$: progress = allChallengeProgress[challenge.id];
 
-	const isUnlocked = isChallengeUnlocked(challenge, allChallenges, allChallengeProgress);
-	const isComplete = isChallengeComplete(challenge, allChallenges, allChallengeProgress);
+	$: isUnlocked = isChallengeUnlocked(challenge, allChallenges, allChallengeProgress);
+	$: isComplete = isChallengeComplete(challenge, allChallenges, allChallengeProgress);
 </script>
 
 <section
