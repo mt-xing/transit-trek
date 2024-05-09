@@ -31,6 +31,7 @@
 		align-items: center;
 		justify-content: start;
 		margin-bottom: 10px;
+		text-align: left;
 	}
 
 	.checkbox {

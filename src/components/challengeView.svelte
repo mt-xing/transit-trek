@@ -19,18 +19,19 @@
 </script>
 
 <section
-	style="margin-top: {50 + iteration * 40}px; {openChallenge !== undefined
+	style="margin-top: {50 + iteration * 40}px; max-height: calc(100vh - {80 +
+		iteration * 40}px); {openChallenge !== undefined
 		? 'filter: blur(3px); pointer-events: none;'
 		: ''}"
 	transition:fly={{ y: 200 }}
 >
 	<span class={`header ${isUnlocked ? 'unlocked ' : ''} ${isComplete ? 'complete' : 'incomplete'}`}>
 		{#if isComplete}
-			✓
+			🎫
 		{:else if !isUnlocked}
 			🔒
 		{:else}
-			🎫
+			🔓
 		{/if}
 	</span>
 
@@ -163,13 +164,13 @@
 		width: 140px;
 		max-width: calc(50vw - 110px);
 		position: absolute;
-		right: calc(100% + 20px);
-		height: 10px;
+		right: calc(100% + 30px);
+		height: 30px;
 	}
 
 	.header::after {
 		right: unset;
-		left: calc(100% + 20px);
+		left: calc(100% + 30px);
 	}
 
 	.closeBtn {
