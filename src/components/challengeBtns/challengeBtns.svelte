@@ -18,4 +18,12 @@
 </div>
 
 <style>
+	div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100px;
+		width: 100px;
+	}
 </style>

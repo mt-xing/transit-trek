@@ -64,12 +64,17 @@
 
 	.challengeBtns {
 		position: relative;
-		top: -100px;
-		left: -10px;
+		top: -130px;
+		left: -35px;
 	}
 
 	.challengeBtns.left {
-		top: -140px;
-		left: 45px;
+		top: -165px;
+		left: 15px;
+	}
+
+	.challengeBtns.right {
+		top: -165px;
+		left: -85px;
 	}
 </style>

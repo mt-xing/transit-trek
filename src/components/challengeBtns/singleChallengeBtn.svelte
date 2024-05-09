@@ -37,7 +37,7 @@
 		background: white;
 		font-size: 20px;
 		cursor: pointer;
-		margin: 5px;
+		margin: 2px;
 	}
 
 	.done {
