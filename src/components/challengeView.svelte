@@ -124,6 +124,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
+z-index: 2;
 
 		max-height: calc(100vh - 200px);
 		overflow-y: auto;
