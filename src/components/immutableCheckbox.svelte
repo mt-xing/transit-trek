@@ -58,6 +58,7 @@
 		background: none;
 		border: none;
 		text-decoration: underline;
+		text-align: left;
 	}
 
 	button::after {

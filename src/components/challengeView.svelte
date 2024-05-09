@@ -117,17 +117,18 @@
 		width: calc(100% - 50px);
 		max-width: 500px;
 		padding: 50px 30px;
-		border-radius: 50px;
+		border-radius: 30px;
 		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
-z-index: 2;
+		z-index: 2;
 
 		max-height: calc(100vh - 200px);
 		overflow-y: auto;
+		overflow-x: hidden;
 	}
 
 	.header {
@@ -136,14 +137,15 @@ z-index: 2;
 		justify-content: center;
 
 		--color: #95a5a6;
+		background: var(--color);
+		box-sizing: border-box;
 
 		position: relative;
 		font-size: 45px;
-		width: 70px;
-		height: 70px;
-		border-radius: 70px;
-		border: var(--color) solid 10px;
-		margin: -20px auto 20px auto;
+		width: calc(100% + 60px);
+		left: -30px;
+		height: 100px;
+		margin: -50px 0 20px 0;
 	}
 
 	.header.unlocked.incomplete {
@@ -152,41 +154,22 @@ z-index: 2;
 
 	.header.complete {
 		--color: #27ae60;
-		color: white;
-		background: var(--color);
-		font-weight: bold;
-	}
-
-	.header::before,
-	.header::after {
-		content: '';
-		display: block;
-		background: var(--color);
-		width: 140px;
-		max-width: calc(50vw - 110px);
-		position: absolute;
-		right: calc(100% + 30px);
-		height: 30px;
-	}
-
-	.header::after {
-		right: unset;
-		left: calc(100% + 30px);
 	}
 
 	.closeBtn {
 		position: absolute;
-		top: 150px;
+		top: 40px;
 		left: 30px;
 		background: none;
 		border: none;
 		cursor: pointer;
+		text-shadow: 0 0 5px white;
+		font-weight: bold;
 	}
 
 	h1 {
 		font-size: 32px;
 		margin-top: 0;
-		padding-left: 35px;
 	}
 
 	h2 {
