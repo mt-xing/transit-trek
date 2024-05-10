@@ -29,6 +29,11 @@
 	button {
 		width: 40px;
 		height: 40px;
+
+		flex-shrink: 0;
+		flex-grow: 0;
+		overflow: hidden;
+
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;

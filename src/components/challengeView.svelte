@@ -19,9 +19,7 @@
 </script>
 
 <section
-	style="margin-top: {50 + iteration * 40}px; {openChallenge !== undefined
-		? 'filter: blur(3px); pointer-events: none;'
-		: ''}"
+	style={openChallenge !== undefined ? 'filter: blur(3px); pointer-events: none;' : ''}
 	transition:fly={{ y: 200 }}
 >
 	<span class={`header ${isUnlocked ? 'unlocked ' : ''} ${isComplete ? 'complete' : 'incomplete'}`}>
@@ -34,7 +32,7 @@
 		{/if}
 	</span>
 
-	<div style="max-height: calc(100vh - {230 + iteration * 40}px);" class="content">
+	<div style="max-height: calc(100vh - {220 + iteration * 40}px);" class="content">
 		<h1>{challenge.title}</h1>
 		<button on:click={closeCallback} class="closeBtn" aria-label="Close">╳</button>
 
@@ -115,14 +113,14 @@
 	section {
 		background: #ecf0f1;
 		box-sizing: border-box;
-		margin: 50px auto;
+		margin: 30px auto;
 		width: calc(100% - 50px);
 		max-width: 500px;
 		border-radius: 20px;
 		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 
 		position: fixed;
-		top: 0;
+		bottom: 0;
 		left: 0;
 		right: 0;
 		z-index: 2;
