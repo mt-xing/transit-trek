@@ -104,6 +104,7 @@
 	h2,
 	p {
 		text-align: center;
+		padding: 0 10px;
 	}
 
 	.timeString {

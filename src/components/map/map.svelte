@@ -107,5 +107,7 @@
 	}
 	p {
 		margin-top: 0;
+		text-align: center;
+		padding: 0 10px;
 	}
 </style>
