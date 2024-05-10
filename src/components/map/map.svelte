@@ -2,7 +2,6 @@
 	import type { PublicChallengeDefinition } from '../../types/challenge';
 	import type { ChallengeProgress } from '../../types/team';
 
-	import SingleChallengeBtn from '../challengeBtns/singleChallengeBtn.svelte';
 	import MapDest from './mapDest.svelte';
 	import MapLine from './mapLine.svelte';
 
@@ -14,17 +13,6 @@
 	const inlineProps = { t: 'inline' as const, openCallback };
 </script>
 
-<h2>Anytime Challenges</h2>
-<p>Completing these will result in additional time being returned to your final score.</p>
-<div class="anytimes">
-	{#each allChallenges.filter((x) => x.mapPos === 99) as c}
-		<span>
-			<SingleChallengeBtn {allChallenges} {challengeProgress} {openCallback} challenge={c} />
-		</span>
-	{/each}
-</div>
-
-<h2 style="margin-top: 50px;margin-bottom: 30px;">Map</h2>
 <section>
 	<div style="grid-row: 1; grid-column: 2;"><MapDest title="Northgate" /></div>
 	<div style="grid-row: 2; grid-column: 2;">
@@ -95,18 +83,5 @@
 		grid-auto-rows: 30px 100px;
 		margin-top: 10px;
 		margin-bottom: 50px;
-	}
-
-	.anytimes > span {
-		margin: 0 5px;
-	}
-
-	h2 {
-		margin-bottom: 0;
-	}
-	p {
-		margin-top: 0;
-		text-align: center;
-		padding: 0 10px;
 	}
 </style>

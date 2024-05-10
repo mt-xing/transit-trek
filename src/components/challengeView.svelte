@@ -117,7 +117,7 @@
 		width: calc(100% - 50px);
 		max-width: 500px;
 		border-radius: 20px;
-		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+		box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
 
 		position: fixed;
 		bottom: 0;

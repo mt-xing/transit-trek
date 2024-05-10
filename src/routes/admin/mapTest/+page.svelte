@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SingleChallengeBtn from '../../../components/challengeBtns/singleChallengeBtn.svelte';
 	import ChallengeView from '../../../components/challengeView.svelte';
 	import Map from '../../../components/map/map.svelte';
 	import type { PublicChallengeDefinition } from '../../../types/challenge';
@@ -52,36 +53,59 @@
 		clearInterval(clear);
 		clear = setInterval(updateTimeString, 1000);
 	}
+
+	const openCallback = (c: PublicChallengeDefinition) => {
+		if (selectedChallenge === null) {
+			selectedChallenge = c;
+		}
+	};
 </script>
 
-<h1>Team 0: <em>Test Team</em></h1>
-<p>This page is private and should only be viewed by members of your team.</p>
-<p>
-	Keep the URL secret. If it's accidentally exposed, let Game Control know via Signal and we can
-	generate a new link for you.
-</p>
+<svelte:head>
+	<title>Transit Trek: Team 0 Dashboard</title>
+	<meta name="description" content="Seattle Transit Trek's May 2024 event, Race Across Seattle" />
+</svelte:head>
 
-<h2>Time</h2>
-<p class="timeString">{timeString}</p>
-{#if teamPenalty > 0}
-	<p>+{teamPenalty} minute penalty</p>
-{:else if teamPenalty < 0}
-	<p>-{-1 * teamPenalty} minute handicap</p>
-{/if}
+<h1><em>Test Team</em><br />Team 0 Dashboard</h1>
 
-{#if allChallenges}
-	<div class="map">
-		<Map
-			{allChallenges}
-			{challengeProgress}
-			openCallback={(c) => {
-				if (selectedChallenge === null) {
-					selectedChallenge = c;
-				}
-			}}
-		/>
+<div class="card">
+	<p>This page is private and should only be viewed by members of your team.</p>
+	<p>
+		Keep the URL secret. If it's accidentally exposed, let Game Control know via Signal and we can
+		generate a new link for you.
+	</p>
+</div>
+
+<div class="card">
+	<h2>Time</h2>
+	<p class="timeString">{timeString}</p>
+	{#if teamPenalty > 0}
+		<p>+{teamPenalty} minute penalty</p>
+	{:else if teamPenalty < 0}
+		<p>-{-1 * teamPenalty} minute handicap</p>
+	{/if}
+</div>
+
+<div class="card">
+	<h2>Anytime Challenges</h2>
+	<p>Completing these will result in additional time being returned to your final score.</p>
+	<div class="anytimes">
+		{#each allChallenges.filter((x) => x.mapPos === 99) as c}
+			<span>
+				<SingleChallengeBtn {allChallenges} {challengeProgress} {openCallback} challenge={c} />
+			</span>
+		{/each}
 	</div>
-{/if}
+</div>
+
+<div class="card">
+	<h2>Map</h2>
+	{#if allChallenges}
+		<div class="map">
+			<Map {allChallenges} {challengeProgress} {openCallback} />
+		</div>
+	{/if}
+</div>
 
 {#if selectedChallenge !== null}
 	<ChallengeView
@@ -118,13 +142,41 @@
 		background: #2c3e50;
 		color: white;
 		margin-top: 0;
-		padding: 50px 0;
+		padding: 50px 20px 160px 20px;
+		box-sizing: border-box;
+		width: 100%;
 		text-shadow: 0 0 15px black;
 		font-size: 40px;
+		margin-bottom: -140px;
 	}
 
 	:global(body) {
 		margin: 0;
 		padding: 0;
+		background: #ecf0f1;
+	}
+
+	.card {
+		background: white;
+		max-width: 500px;
+		width: calc(100% - 50px);
+		margin: 20px auto;
+		padding: 20px 10px;
+		box-sizing: border-box;
+		border-radius: 15px;
+		box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
+		overflow-x: hidden;
+	}
+
+	.card h2 {
+		margin: 5px 0 10px 0;
+	}
+
+	.anytimes {
+		text-align: center;
+	}
+
+	.anytimes > span {
+		margin: 0 5px;
 	}
 </style>
