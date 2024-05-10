@@ -2,7 +2,7 @@
 	import type { PublicChallengeDefinition } from '../../types/challenge';
 	import type { ChallengeProgress } from '../../types/team';
 
-	import ChallengeBtns from '../challengeBtns/challengeBtns.svelte';
+	import SingleChallengeBtn from '../challengeBtns/singleChallengeBtn.svelte';
 	import MapDest from './mapDest.svelte';
 	import MapLine from './mapLine.svelte';
 
@@ -14,6 +14,17 @@
 	const inlineProps = { t: 'inline' as const, openCallback };
 </script>
 
+<h2>Anytime Challenges</h2>
+<p>Completing these will result in additional time being returned to your final score.</p>
+<div class="anytimes">
+	{#each allChallenges.filter((x) => x.mapPos === 99) as c}
+		<span>
+			<SingleChallengeBtn {allChallenges} {challengeProgress} {openCallback} challenge={c} />
+		</span>
+	{/each}
+</div>
+
+<h2 style="margin-top: 50px;">Map</h2>
 <section>
 	<div style="grid-row: 1; grid-column: 2;"><MapDest title="Northgate" /></div>
 	<div style="grid-row: 2; grid-column: 2;">
@@ -75,8 +86,6 @@
 	<div style="grid-row: 19; grid-column: 2;"><MapDest title="Hing Hay Park" /></div>
 </section>
 
-<ChallengeBtns {allChallenges} {challengeProgress} {openCallback} mapPos={99} />
-
 <style>
 	section {
 		width: 300px;
@@ -84,5 +93,19 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-auto-rows: 30px 100px;
+		padding-left: 70px;
+		margin-top: 10px;
+		margin-bottom: 50px;
+	}
+
+	.anytimes > span {
+		margin: 0 5px;
+	}
+
+	h2 {
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 0;
 	}
 </style>

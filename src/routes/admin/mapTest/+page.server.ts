@@ -17,5 +17,6 @@ export const load: PageServerLoad = async () => {
 
 	return {
 		allChallenges: res2.resources,
+		startTime: new Date().getTime(),
 	};
 };

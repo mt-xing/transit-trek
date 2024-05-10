@@ -41,14 +41,14 @@
 	}
 
 	.done {
-		border: 5px #27ae60 solid;
+		border: 7px #27ae60 solid;
 	}
 
 	.incomplete.lock {
-		border: 2px #c0392b solid;
+		border: 1px #7f8c8d solid;
 	}
 
 	.incomplete.unlock {
-		border: 2px #2980b9 solid;
+		border: 3px #2980b9 solid;
 	}
 </style>

@@ -5,7 +5,7 @@
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-	const { allChallenges } = data;
+	const { allChallenges, startTime } = data;
 	const challengeProgress = {
 		'b2afe19c-d245-4461-89e2-d373371e354a': { progress: [true] },
 		'a84efa50-22d3-4ff9-860f-c4f010756fdc': { progress: [true], manualUnlock: true },
@@ -21,12 +21,55 @@
 			progress: undefined,
 		},
 	};
+	const teamPenalty = 10;
 
 	let selectedChallenge: null | PublicChallengeDefinition = null;
+
+	let timeString = '--:--:--';
+	function padToTwo(x: number) {
+		if (x < 10) {
+			return `0${x}`;
+		}
+		return x;
+	}
+	function updateTimeString() {
+		const d = new Date().getTime();
+		const delta = d - startTime;
+
+		if (delta < 0) {
+			timeString = 'Game has not started yet';
+		} else {
+			const hours = Math.floor(delta / 1000 / 60 / 60);
+			const min = Math.floor((delta - hours * 60 * 60 * 1000) / 1000 / 60);
+			const sec = Math.floor((delta - hours * 60 * 60 * 1000 - min * 60 * 1000) / 1000);
+			timeString = `${padToTwo(hours)}:${padToTwo(min)}:${padToTwo(sec)}`;
+		}
+	}
+
+	let clear: ReturnType<typeof setInterval> | undefined;
+	$: {
+		clearInterval(clear);
+		clear = setInterval(updateTimeString, 1000);
+	}
 </script>
 
+<h1>Team 0: <em>Test Team</em></h1>
+<p>This page is private and should only be viewed by members of your team.</p>
+<p>
+	Keep the URL secret. If it's accidentally exposed, let Game Control know via Signal and we can
+	generate a new link for you.
+</p>
+
+<h2>Time</h2>
+<p class="timeString">{timeString}</p>
+{#if teamPenalty > 0}
+	<p>+{teamPenalty} minute penalty</p>
+{:else if teamPenalty < 0}
+	<p>-{-1 * teamPenalty} minute handicap</p>
+{/if}
+
 {#if allChallenges}
-	<div>
+	<div class="map">
 		<Map
 			{allChallenges}
 			{challengeProgress}
@@ -49,3 +92,37 @@
 		}}
 	/>
 {/if}
+
+<style>
+	.map {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	h1,
+	h2,
+	p {
+		text-align: center;
+	}
+
+	.timeString {
+		font-family: 'Consolas', monospace;
+		font-size: 2em;
+		margin: 0;
+	}
+
+	h1 {
+		background: #2c3e50;
+		color: white;
+		margin-top: 0;
+		padding: 50px 0;
+		text-shadow: 0 0 15px black;
+		font-size: 40px;
+	}
+
+	:global(body) {
+		margin: 0;
+		padding: 0;
+	}
+</style>
