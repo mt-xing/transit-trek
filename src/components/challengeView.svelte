@@ -166,6 +166,7 @@
 		border: none;
 		cursor: pointer;
 		font-weight: bold;
+		color: black;
 
 		background: rgba(255, 255, 255, 0.5);
 		width: 30px;
