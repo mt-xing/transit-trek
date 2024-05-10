@@ -167,8 +167,15 @@
 		background: none;
 		border: none;
 		cursor: pointer;
-		text-shadow: 0 0 5px white;
 		font-weight: bold;
+
+		background: rgba(255, 255, 255, 0.5);
+		width: 30px;
+		height: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 15px;
 	}
 
 	h1 {
