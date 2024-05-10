@@ -8,7 +8,7 @@
 	export let openCallback: (c: PublicChallengeDefinition) => void;
 	export let mapPos: number;
 
-	const challenges = allChallenges.filter((x) => x.mapPos === mapPos);
+	$: challenges = allChallenges.filter((x) => x.mapPos === mapPos);
 </script>
 
 <div>
@@ -20,10 +20,11 @@
 <style>
 	div {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		height: 100px;
+		height: 50px;
 		width: 100px;
+		background: white;
 	}
 </style>

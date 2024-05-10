@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PublicChallengeDefinition } from '../../types/challenge';
 	import type { ChallengeProgress } from '../../types/team';
+	import { isChallengeComplete, isChallengeUnlocked } from '../../utils/challenge';
 	import ChallengeBtns from '../challengeBtns/challengeBtns.svelte';
 
 	export let dir: 'vert' | 'left' | 'right';
@@ -11,19 +12,26 @@
 		  }
 		| {
 				t: 'inline';
-				allChallenges: PublicChallengeDefinition[];
-				challengeProgress: ChallengeProgress;
 				openCallback: (c: PublicChallengeDefinition) => void;
 		  };
+	export let allChallenges: PublicChallengeDefinition[];
+	export let challengeProgress: ChallengeProgress;
+
+	$: challenges = allChallenges.filter((x) => x.mapPos === mapPos);
+
+	$: isUnlocked = challenges.some((x) => isChallengeUnlocked(x, allChallenges, challengeProgress));
+	$: isComplete = challenges.some((x) => isChallengeComplete(x, allChallenges, challengeProgress));
 </script>
 
-<div class={`line ${dir}`}></div>
+<div
+	class={`line ${dir} ${isUnlocked ? 'unlock' : 'lock'} ${isComplete ? 'done' : 'incomplete'} ${mapInfo.t === 'inline' ? 'inline' : 'after'}`}
+></div>
 
 {#if mapInfo.t === 'inline'}
 	<div class={`challengeBtns ${dir}`}>
 		<ChallengeBtns
-			allChallenges={mapInfo.allChallenges}
-			challengeProgress={mapInfo.challengeProgress}
+			{allChallenges}
+			{challengeProgress}
 			openCallback={mapInfo.openCallback}
 			{mapPos}
 		/>
@@ -35,46 +43,62 @@
 		background: #7f8c8d;
 		box-sizing: border-box;
 		position: relative;
+		width: 4px;
+	}
+
+	.line.done {
+		background: #27ae60;
+		width: 10px;
+	}
+
+	.line.incomplete.unlock.inline {
+		background: linear-gradient(to bottom, #2980b9 49%, #7f8c8d 51%);
 	}
 
 	.line.vert {
 		top: -15px;
-		left: 14px;
-		width: 2px;
+		left: 13px;
 		height: 130px;
+	}
+	.line.vert.done {
+		left: 10px;
 	}
 
 	.line.right {
 		top: -15px;
-		left: -86px;
+		left: -87px;
 		height: 164px;
-		width: 2px;
 		transform: rotate(-37.568592deg);
 		transform-origin: top center;
+	}
+	.line.right.done {
+		left: -90px;
 	}
 
 	.line.left {
 		top: -15px;
-		right: -114px;
+		right: -113px;
 		height: 164px;
-		width: 2px;
 		transform: rotate(37.568592deg);
 		transform-origin: top center;
+	}
+	.line.left.done {
+		right: -110px;
 	}
 
 	.challengeBtns {
 		position: relative;
-		top: -130px;
+		top: -105px;
 		left: -35px;
 	}
 
 	.challengeBtns.left {
-		top: -165px;
+		top: -140px;
 		left: 15px;
 	}
 
 	.challengeBtns.right {
-		top: -165px;
+		top: -140px;
 		left: -85px;
 	}
 </style>

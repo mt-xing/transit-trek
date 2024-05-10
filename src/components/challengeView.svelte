@@ -117,7 +117,7 @@
 		width: calc(100% - 50px);
 		max-width: 500px;
 		padding: 50px 30px;
-		border-radius: 30px;
+		border-radius: 20px;
 		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 
 		position: fixed;
@@ -145,7 +145,7 @@
 		width: calc(100% + 60px);
 		left: -30px;
 		height: 100px;
-		margin: -50px 0 20px 0;
+		margin: -50px 0 25px 0;
 	}
 
 	.header.unlocked.incomplete {

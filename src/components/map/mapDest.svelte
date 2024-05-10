@@ -11,7 +11,7 @@
 		width: 30px;
 		height: 30px;
 		background: white;
-		border: black 3px solid;
+		border: black 4px solid;
 		border-radius: 30px;
 		box-sizing: border-box;
 		position: relative;

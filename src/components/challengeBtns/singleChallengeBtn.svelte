@@ -8,8 +8,8 @@
 	export let challengeProgress: ChallengeProgress;
 	export let openCallback: (c: PublicChallengeDefinition) => void;
 
-	const isUnlocked = isChallengeUnlocked(challenge, allChallenges, challengeProgress);
-	const isComplete = isChallengeComplete(challenge, allChallenges, challengeProgress);
+	$: isUnlocked = isChallengeUnlocked(challenge, allChallenges, challengeProgress);
+	$: isComplete = isChallengeComplete(challenge, allChallenges, challengeProgress);
 </script>
 
 <button
