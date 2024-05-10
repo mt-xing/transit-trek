@@ -333,6 +333,18 @@
 	<h3>Miscellaneous</h3>
 	<ul>
 		<li>
+			You must obey all applicable laws, regulations, and rules during the game. (To be fair, it's
+			probably also smart to obey laws outside the game.)
+		</li>
+		<li>
+			You must correctly pay the fare when taking transit. This includes both tapping on but
+			<strong>also tapping off</strong> the Link.
+		</li>
+		<li>
+			You may not obstruct any transit from operating along its normal schedule (by, for example,
+			holding the doors open as they're closing).
+		</li>
+		<li>
 			Rules can be changed by the organizers at any time before, during, and after the competition
 			period. Whatever the organizers say can override any of the written rules. Rule changes will
 			be clearly broadcasted on the Signal group.
