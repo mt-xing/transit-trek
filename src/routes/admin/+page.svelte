@@ -16,4 +16,4 @@
 
 <h2>Challenges</h2>
 <p><a href="/admin/challenges">Edit Challenges</a></p>
-<p><a href="/admin/mapTest">Map Preview</a></p>
+<p><a href="/admin/mapTest">Team Page Preview</a></p>
