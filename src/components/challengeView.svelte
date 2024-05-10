@@ -19,8 +19,7 @@
 </script>
 
 <section
-	style="margin-top: {50 + iteration * 40}px; max-height: calc(100vh - {80 +
-		iteration * 40}px); {openChallenge !== undefined
+	style="margin-top: {50 + iteration * 40}px; {openChallenge !== undefined
 		? 'filter: blur(3px); pointer-events: none;'
 		: ''}"
 	transition:fly={{ y: 200 }}
@@ -35,66 +34,69 @@
 		{/if}
 	</span>
 
-	<h1>{challenge.title}</h1>
-	<button on:click={closeCallback} class="closeBtn" aria-label="Close">╳</button>
+	<div style="max-height: calc(100vh - {230 + iteration * 40}px);" class="content">
+		<h1>{challenge.title}</h1>
+		<button on:click={closeCallback} class="closeBtn" aria-label="Close">╳</button>
 
-	{#if progress?.manualComplete !== undefined}
-		<p class="msg">The status of this challenge has been overridden by Game Control.</p>
-	{:else if progress?.manualUnlock === true}
-		<p class="msg">This challenge has been manually unlocked by Game Control.</p>
-	{:else if progress?.manualUnlock === false}
-		<p class="msg">This challenge has been manually locked by Game Control.</p>
-	{/if}
+		{#if progress?.manualComplete !== undefined}
+			<p class="msg">The status of this challenge has been overridden by Game Control.</p>
+		{:else if progress?.manualUnlock === true}
+			<p class="msg">This challenge has been manually unlocked by Game Control.</p>
+		{:else if progress?.manualUnlock === false}
+			<p class="msg">This challenge has been manually locked by Game Control.</p>
+		{/if}
 
-	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-	<p>{@html challenge.desc}</p>
-	{#if challenge.rewardDesc}
-		<h2>Reward</h2>
 		<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-		<p>{@html challenge.rewardDesc}</p>
-	{/if}
-	<h2>Progress</h2>
+		<p>{@html challenge.desc}</p>
+		{#if challenge.rewardDesc}
+			<h2>Reward</h2>
+			<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+			<p>{@html challenge.rewardDesc}</p>
+		{/if}
+		<h2>Progress</h2>
 
-	{#if progress?.manualComplete === true}
-		<p class="msg">
-			<ImmutableCheckbox checked={true} />
-			The challenge has been marked as complete by Game Control, regardless of the status shown below.
-		</p>
-	{:else if progress?.manualComplete === false}
-		<p class="msg">
-			<ImmutableCheckbox checked={false} />
-			This challenge has been marked as incomplete by Game Control, regardless of the status shown below.
-		</p>
-	{:else if !isUnlocked}
-		<p class="msg" style="font-weight: normal">You have not yet unlocked this challenge.</p>
-	{/if}
+		{#if progress?.manualComplete === true}
+			<p class="msg">
+				<ImmutableCheckbox checked={true} />
+				The challenge has been marked as complete by Game Control, regardless of the status shown below.
+			</p>
+		{:else if progress?.manualComplete === false}
+			<p class="msg">
+				<ImmutableCheckbox checked={false} />
+				This challenge has been marked as incomplete by Game Control, regardless of the status shown
+				below.
+			</p>
+		{:else if !isUnlocked}
+			<p class="msg" style="font-weight: normal">You have not yet unlocked this challenge.</p>
+		{/if}
 
-	{#if challenge.type === 'single'}
-		<ImmutableCheckbox checked={progress?.progress?.[0] ?? false} />
-	{:else if challenge.type === 'multi'}
-		<ol class="multiList" role="list">
-			{#each challenge.partDescs as c, i}
-				<li><ImmutableCheckbox checked={progress?.progress?.[i] ?? false} text={c} /></li>
-			{/each}
-		</ol>
-	{:else if challenge.type === 'subtask'}
-		<p>Complete {challenge.subtaskInfo.minRequired} of the following:</p>
-		<ul class="multiList" role="list">
-			{#each allChallenges.filter((x) => x.mapPos === challenge.subtaskInfo.mapPos) as c}
-				<li>
-					<ImmutableCheckbox
-						checked={isChallengeComplete(c, allChallenges, allChallengeProgress)}
-						text={c.title}
-						callback={() => {
-							if (openChallenge === undefined) {
-								openChallenge = c;
-							}
-						}}
-					/>
-				</li>
-			{/each}
-		</ul>
-	{/if}
+		{#if challenge.type === 'single'}
+			<ImmutableCheckbox checked={progress?.progress?.[0] ?? false} />
+		{:else if challenge.type === 'multi'}
+			<ol class="multiList" role="list">
+				{#each challenge.partDescs as c, i}
+					<li><ImmutableCheckbox checked={progress?.progress?.[i] ?? false} text={c} /></li>
+				{/each}
+			</ol>
+		{:else if challenge.type === 'subtask'}
+			<p>Complete {challenge.subtaskInfo.minRequired} of the following:</p>
+			<ul class="multiList" role="list">
+				{#each allChallenges.filter((x) => x.mapPos === challenge.subtaskInfo.mapPos) as c}
+					<li>
+						<ImmutableCheckbox
+							checked={isChallengeComplete(c, allChallenges, allChallengeProgress)}
+							text={c.title}
+							callback={() => {
+								if (openChallenge === undefined) {
+									openChallenge = c;
+								}
+							}}
+						/>
+					</li>
+				{/each}
+			</ul>
+		{/if}
+	</div>
 </section>
 
 {#if openChallenge}
@@ -116,7 +118,6 @@
 		margin: 50px auto;
 		width: calc(100% - 50px);
 		max-width: 500px;
-		padding: 50px 30px;
 		border-radius: 20px;
 		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 
@@ -126,9 +127,12 @@
 		right: 0;
 		z-index: 2;
 
-		max-height: calc(100vh - 200px);
 		overflow-y: auto;
-		overflow-x: hidden;
+	}
+
+	.content {
+		overflow-y: auto;
+		padding: 30px;
 	}
 
 	.header {
@@ -142,10 +146,10 @@
 
 		position: relative;
 		font-size: 45px;
-		width: calc(100% + 60px);
-		left: -30px;
+		width: 100%;
+		left: 0;
 		height: 100px;
-		margin: -50px 0 25px 0;
+		margin: 0;
 	}
 
 	.header.unlocked.incomplete {
