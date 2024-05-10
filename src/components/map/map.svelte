@@ -24,7 +24,7 @@
 	{/each}
 </div>
 
-<h2 style="margin-top: 50px;">Map</h2>
+<h2 style="margin-top: 50px;margin-bottom: 30px;">Map</h2>
 <section>
 	<div style="grid-row: 1; grid-column: 2;"><MapDest title="Northgate" /></div>
 	<div style="grid-row: 2; grid-column: 2;">
@@ -93,7 +93,6 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-auto-rows: 30px 100px;
-		padding-left: 70px;
 		margin-top: 10px;
 		margin-bottom: 50px;
 	}
