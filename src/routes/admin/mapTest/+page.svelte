@@ -40,8 +40,9 @@
 			timeString = 'Game has not started yet';
 		} else {
 			const hours = Math.floor(delta / 1000 / 60 / 60);
-			const min = Math.floor((delta - hours * 60 * 60 * 1000) / 1000 / 60);
-			const sec = Math.floor((delta - hours * 60 * 60 * 1000 - min * 60 * 1000) / 1000);
+			const rawMins = delta - hours * 60 * 60 * 1000;
+			const min = Math.floor(rawMins / 1000 / 60);
+			const sec = Math.floor((rawMins - min * 60 * 1000) / 1000);
 			timeString = `${padToTwo(hours)}:${padToTwo(min)}:${padToTwo(sec)}`;
 		}
 	}
