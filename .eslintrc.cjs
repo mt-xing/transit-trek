@@ -41,6 +41,7 @@ module.exports = {
 		'no-plusplus': 'off',
 		'consistent-return': 'off',
 		'@typescript-eslint/no-use-before-define': 'off',
+		'svelte/no-dupe-style-properties': 'off',
 		"@typescript-eslint/no-unused-vars": [
 			"error",
 			{
