@@ -689,7 +689,7 @@
 
 		.textBlurWrap text:nth-child(2),
 		.textShadowWrap svg text:nth-child(3) {
-			transform: translateY(-3.6vw);
+			transform: translateY(-3.85vw);
 		}
 
 		.textShadowWrap svg,
