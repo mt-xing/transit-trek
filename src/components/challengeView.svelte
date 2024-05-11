@@ -32,7 +32,11 @@
 		{/if}
 	</span>
 
-	<div style="max-height: calc(100vh - {220 + iteration * 40}px);" class="content">
+	<div
+		style="max-height: calc(100vh - {220 + iteration * 40}px);max-height: calc(100svh - {220 +
+			iteration * 40}px);"
+		class="content"
+	>
 		<h1>{challenge.title}</h1>
 		<button on:click={closeCallback} class="closeBtn" aria-label="Close">╳</button>
 
