@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ChallengeType } from '../../../types/challenge';
+	import type { ChallengeType } from '../../../../types/challenge';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -153,7 +153,7 @@
 			>{challenge?.id.substring(0, 5)}</code
 		>
 	</p>
-	<form action="/admin/challengeEdit/deleteDanger" method="POST">
+	<form action="/admin/challenges/edit/deleteDanger" method="POST">
 		<input type="hidden" value={challenge?.id ?? ''} name="id" />
 		<p><input type="text" bind:value={deleteString} maxlength="5" name="sanityString" /></p>
 		<p>

@@ -12,7 +12,7 @@
 <ul>
 	{#each challenges as challenge}
 		<li>
-			<a href="/admin/challengeEdit?id={challenge.id}">{challenge.mapPos}: {challenge.title}</a>
+			<a href="/admin/challenges/edit?id={challenge.id}">{challenge.mapPos}: {challenge.title}</a>
 		</li>
 	{/each}
 </ul>
@@ -20,6 +20,8 @@
 <form method="POST" action="?/newChallenge">
 	<button type="submit">Create New Challenge</button>
 </form>
+
+<p><a href="/admin">Back</a></p>
 
 <style>
 	li {
