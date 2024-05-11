@@ -4,3 +4,5 @@ export type GameState = {
     t: 'ongoing' | 'post',
     startTime: number,
 };
+
+export const GAME_KEY = 'game';
