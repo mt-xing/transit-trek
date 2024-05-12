@@ -16,6 +16,7 @@
 	<h1>Game State: 🛑 Not started</h1>
 
 	<form method="POST" action="?/startGame">
+		<input type="hidden" value="unknown" name="unknown" />
 		<button type="submit">Start Game</button>
 	</form>
 {:else if gameState.t === 'ongoing'}
@@ -23,6 +24,7 @@
 	<p>Start Time: {new Date(ogStartTime)}</p>
 
 	<form method="POST" action="?/endGame">
+		<input type="hidden" value="unknown" name="unknown" />
 		<button type="submit">End Game</button>
 	</form>
 {:else if gameState.t === 'post'}
@@ -30,6 +32,7 @@
 	<p>Start Time: {new Date(ogStartTime)}</p>
 
 	<form method="POST" action="?/resumeGame">
+		<input type="hidden" value="unknown" name="unknown" />
 		<button type="submit">Resume Game</button>
 	</form>
 {/if}
