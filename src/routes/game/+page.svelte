@@ -104,6 +104,9 @@
 		{#if gameState?.t === 'post'}
 			<p>Game has concluded.</p>
 		{/if}
+		{#if gameState?.t === 'ongoing' && team.finishTime}
+			<p>Congratulations on finishing!</p>
+		{/if}
 	</div>
 
 	{#if gameState.t === 'pre'}
