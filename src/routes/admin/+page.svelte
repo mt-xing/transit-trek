@@ -20,4 +20,4 @@
 
 <h2>Game Operations</h2>
 <p><a href="/admin/game">Game State</a></p>
-<p>Team Finishes</p>
+<p><a href="/admin/finish">Team Finishes</a></p>
