@@ -14,7 +14,10 @@
 	{/if}
 </p>
 
-<h2>Challenges</h2>
+<h2>Setup</h2>
 <p><a href="/admin/challenges">Edit Challenges</a></p>
 <p><a href="/admin/teams">Edit Teams</a></p>
+
+<h2>Game Operations</h2>
 <p><a href="/admin/game">Game State</a></p>
+<p>Team Finishes</p>
