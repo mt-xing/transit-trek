@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { PublicChallengeDefinition } from '../../types/challenge';
-	import type { ChallengeProgress } from '../../types/team';
+	import type { DashboardPassthroughInfo } from '../../types/map';
 	import SingleChallengeBtn from './singleChallengeBtn.svelte';
 
-	export let allChallenges: PublicChallengeDefinition[];
-	export let challengeProgress: ChallengeProgress;
+	export let dashboardInfo: DashboardPassthroughInfo;
+	$: ({ allChallenges } = dashboardInfo);
 	export let openCallback: (c: PublicChallengeDefinition) => void;
 	export let mapPos: number;
 
@@ -13,7 +13,7 @@
 
 <div>
 	{#each challenges as c}
-		<SingleChallengeBtn {allChallenges} {challengeProgress} {openCallback} challenge={c} />
+		<SingleChallengeBtn {dashboardInfo} {openCallback} challenge={c} />
 	{/each}
 </div>
 

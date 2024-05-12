@@ -1,15 +1,14 @@
 <script lang="ts">
 	import type { PublicChallengeDefinition } from '../../types/challenge';
-	import type { ChallengeProgress } from '../../types/team';
+	import type { DashboardPassthroughInfo } from '../../types/map';
 	import { isChallengeComplete, isChallengeUnlocked } from '../../utils/challenge';
 
 	export let challenge: PublicChallengeDefinition;
-	export let allChallenges: PublicChallengeDefinition[];
-	export let challengeProgress: ChallengeProgress;
+	export let dashboardInfo: DashboardPassthroughInfo;
 	export let openCallback: (c: PublicChallengeDefinition) => void;
 
-	$: isUnlocked = isChallengeUnlocked(challenge, allChallenges, challengeProgress);
-	$: isComplete = isChallengeComplete(challenge, allChallenges, challengeProgress);
+	$: isUnlocked = isChallengeUnlocked(challenge, dashboardInfo);
+	$: isComplete = isChallengeComplete(challenge, dashboardInfo);
 </script>
 
 <button

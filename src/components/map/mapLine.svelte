@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PublicChallengeDefinition } from '../../types/challenge';
-	import type { ChallengeProgress } from '../../types/team';
+	import type { DashboardPassthroughInfo } from '../../types/map';
 	import { isChallengeComplete, isChallengeUnlocked } from '../../utils/challenge';
 	import ChallengeBtns from '../challengeBtns/challengeBtns.svelte';
 
@@ -14,13 +14,13 @@
 				t: 'inline';
 				openCallback: (c: PublicChallengeDefinition) => void;
 		  };
-	export let allChallenges: PublicChallengeDefinition[];
-	export let challengeProgress: ChallengeProgress;
+	export let dashboardInfo: DashboardPassthroughInfo;
+	$: ({ allChallenges } = dashboardInfo);
 
 	$: challenges = allChallenges.filter((x) => x.mapPos === mapPos);
 
-	$: isUnlocked = challenges.some((x) => isChallengeUnlocked(x, allChallenges, challengeProgress));
-	$: isComplete = challenges.some((x) => isChallengeComplete(x, allChallenges, challengeProgress));
+	$: isUnlocked = challenges.some((x) => isChallengeUnlocked(x, dashboardInfo));
+	$: isComplete = challenges.some((x) => isChallengeComplete(x, dashboardInfo));
 </script>
 
 <div
@@ -29,12 +29,7 @@
 
 {#if mapInfo.t === 'inline'}
 	<div class={`challengeBtns ${dir}`}>
-		<ChallengeBtns
-			{allChallenges}
-			{challengeProgress}
-			openCallback={mapInfo.openCallback}
-			{mapPos}
-		/>
+		<ChallengeBtns {dashboardInfo} openCallback={mapInfo.openCallback} {mapPos} />
 	</div>
 {/if}
 

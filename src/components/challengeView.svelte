@@ -2,20 +2,20 @@
 	import { fly } from 'svelte/transition';
 	import type { PublicChallengeDefinition } from '../types/challenge';
 	import ImmutableCheckbox from './immutableCheckbox.svelte';
-	import type { ChallengeProgress } from '../types/team';
 	import { isChallengeComplete, isChallengeUnlocked } from '../utils/challenge';
+	import type { DashboardPassthroughInfo } from '../types/map';
 
 	export let challenge: PublicChallengeDefinition;
-	export let allChallenges: PublicChallengeDefinition[];
-	export let allChallengeProgress: ChallengeProgress;
+	export let dashboardInfo: DashboardPassthroughInfo;
+	$: ({ allChallenges, challengeProgress } = dashboardInfo);
 	export let iteration: number = 0;
 	export let closeCallback: () => void;
 
 	let openChallenge: PublicChallengeDefinition | undefined;
-	$: progress = allChallengeProgress[challenge.id];
+	$: progress = challengeProgress[challenge.id];
 
-	$: isUnlocked = isChallengeUnlocked(challenge, allChallenges, allChallengeProgress);
-	$: isComplete = isChallengeComplete(challenge, allChallenges, allChallengeProgress);
+	$: isUnlocked = isChallengeUnlocked(challenge, dashboardInfo);
+	$: isComplete = isChallengeComplete(challenge, dashboardInfo);
 </script>
 
 <section
@@ -86,7 +86,7 @@
 				{#each allChallenges.filter((x) => x.mapPos === challenge.subtaskInfo.mapPos) as c}
 					<li>
 						<ImmutableCheckbox
-							checked={isChallengeComplete(c, allChallenges, allChallengeProgress)}
+							checked={isChallengeComplete(c, dashboardInfo)}
 							text={c.title}
 							callback={() => {
 								if (openChallenge === undefined) {
@@ -103,8 +103,7 @@
 
 {#if openChallenge}
 	<svelte:self
-		{allChallenges}
-		{allChallengeProgress}
+		{dashboardInfo}
 		challenge={openChallenge}
 		iteration={iteration + 1}
 		closeCallback={() => {

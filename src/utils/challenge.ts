@@ -1,18 +1,19 @@
 import type { PublicChallengeDefinition } from "../types/challenge";
-import type { ChallengeProgress } from "../types/team";
+import type { DashboardPassthroughInfo } from "../types/map";
 import assertUnreachable from "./assertUnreachable";
 
 export function isChallengeComplete(
     challenge: PublicChallengeDefinition,
-    allChallenges: PublicChallengeDefinition[],
-    challengeProgress: ChallengeProgress
+    info: DashboardPassthroughInfo,
 ): boolean {
+    const { challengeProgress, allChallenges } = info;
+
     const manual = challengeProgress[challenge.id]?.manualComplete;
     if (manual !== undefined) {
         return manual;
     }
 
-    if (!isChallengeUnlocked(challenge, allChallenges, challengeProgress)) {
+    if (!isChallengeUnlocked(challenge, info)) {
         return false;
     }
 
@@ -25,20 +26,26 @@ export function isChallengeComplete(
             return challenge.partDescs.every((_, i) => (progress?.progress?.[i]));
         case 'subtask': {
             const subtasks = allChallenges.filter((x) => x.mapPos === challenge.subtaskInfo.mapPos);
-            const count = subtasks.reduce((a, x) => isChallengeComplete(x, allChallenges, challengeProgress) ? a + 1 : a, 0);
+            const count = subtasks.reduce((a, x) => isChallengeComplete(x, info) ? a + 1 : a, 0);
             return count >= challenge.subtaskInfo.minRequired;
         }
         default: assertUnreachable(challenge);
     }
 }
 
-export function isChallengeUnlocked(challenge: PublicChallengeDefinition,
-    allChallenges: PublicChallengeDefinition[],
-    challengeProgress: ChallengeProgress): boolean {
+export function isChallengeUnlocked(
+    challenge: PublicChallengeDefinition,
+    info: DashboardPassthroughInfo,
+): boolean {
+    const { challengeProgress, allChallenges, gameState } = info;
 
     const manual = challengeProgress[challenge.id]?.manualUnlock;
     if (manual !== undefined) {
         return manual;
+    }
+
+    if (gameState.t === 'pre') {
+        return false;
     }
 
     if (challenge.unlockMapPos === undefined) {
@@ -46,5 +53,5 @@ export function isChallengeUnlocked(challenge: PublicChallengeDefinition,
     }
     const unlocks = new Set(challenge.unlockMapPos);
     const unlockChallenges = allChallenges.filter((x) => unlocks.has(x.mapPos));
-    return unlockChallenges.some(x => isChallengeComplete(x, allChallenges, challengeProgress));
+    return unlockChallenges.some(x => isChallengeComplete(x, info));
 }

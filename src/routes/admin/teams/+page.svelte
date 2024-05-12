@@ -12,7 +12,8 @@
 <ul>
 	{#each teams as team}
 		<li>
-			<a href="/admin/teams/edit?id={team.id}">{team.teamNum}: {team.name}</a>
+			<a href="/admin/teams/edit?id={team.id}">{team.teamNum}: {team.name}</a> -
+			<a target="_blank" href="/game?id={team.secret}">(View Dashboard)</a>
 		</li>
 	{/each}
 </ul>
