@@ -78,7 +78,7 @@
 	<meta name="description" content="Seattle Transit Trek's May 2024 event, Race Across Seattle" />
 </svelte:head>
 
-{#if team && allChallenges && gameState}
+{#if team && gameState}
 	<h1><em>{team.name || 'Untitled Team'}</em><br />Team {team.teamNum} Dashboard</h1>
 
 	<div class="card">
@@ -99,42 +99,50 @@
 				<p>(includes {team.timePenaltyMin} minute handicap)</p>
 			{/if}
 		{:else}
-			<p>Game has not started yet</p>
+			<p>Game has not started yet.</p>
 		{/if}
 		{#if gameState?.t === 'post'}
 			<p>Game has concluded.</p>
 		{/if}
 	</div>
 
-	<div class="card">
-		<h2>Anytime Challenges</h2>
-		<p>Completing these will result in additional time being returned to your final score.</p>
-		<div class="anytimes">
-			{#each allChallenges.filter((x) => x.mapPos === 99) as c}
-				<span>
-					<SingleChallengeBtn {dashboardInfo} {openCallback} challenge={c} />
-				</span>
-			{/each}
+	{#if gameState.t === 'pre'}
+		<div class="card">
+			<h2>Challenges</h2>
+			<p style="font-size: 100px;margin: 0;">🔒</p>
+			<p>Challenges will be revealed when the game starts.</p>
 		</div>
-	</div>
-
-	<div class="card">
-		<h2>Map</h2>
-		{#if allChallenges}
-			<div class="map">
-				<Map {dashboardInfo} {openCallback} />
+	{:else}
+		<div class="card">
+			<h2>Anytime Challenges</h2>
+			<p>Completing these will result in additional time being returned to your final score.</p>
+			<div class="anytimes">
+				{#each allChallenges.filter((x) => x.mapPos === 99) as c}
+					<span>
+						<SingleChallengeBtn {dashboardInfo} {openCallback} challenge={c} />
+					</span>
+				{/each}
 			</div>
-		{/if}
-	</div>
+		</div>
 
-	{#if selectedChallenge !== null}
-		<ChallengeView
-			challenge={selectedChallenge}
-			{dashboardInfo}
-			closeCallback={() => {
-				selectedChallenge = null;
-			}}
-		/>
+		<div class="card">
+			<h2>Map</h2>
+			{#if allChallenges}
+				<div class="map">
+					<Map {dashboardInfo} {openCallback} />
+				</div>
+			{/if}
+		</div>
+
+		{#if selectedChallenge !== null}
+			<ChallengeView
+				challenge={selectedChallenge}
+				{dashboardInfo}
+				closeCallback={() => {
+					selectedChallenge = null;
+				}}
+			/>
+		{/if}
 	{/if}
 {:else}
 	<h1>Invalid Link :(</h1>

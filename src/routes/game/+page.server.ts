@@ -78,21 +78,24 @@ export const load: PageServerLoad = async ({ url }) => {
 		return {};
 	}
 
-	const challengeRes = await client
-		.database('transit-trek')
-		.container('challenges')
-		.items.readAll<ChallengeDefinition>()
-		.fetchAll();
-
 	const gameStateRes = await client
 		.database('transit-trek')
 		.container('game')
 		.item(GAME_KEY, GAME_KEY)
 		.read<GameState>();
+	const gameState = gameStateFilter(gameStateRes.resource);
+
+	const challengeRes = gameState.t !== 'pre'
+		? await client
+			.database('transit-trek')
+			.container('challenges')
+			.items.readAll<ChallengeDefinition>()
+			.fetchAll()
+		: { resources: [] };
 
 	return {
 		allChallenges: challengeRes.resources.map(publicChallengeFilter),
-		gameState: gameStateFilter(gameStateRes.resource),
+		gameState,
 		// team: {
 		// 	id: 'abcd',
 		// 	teamNum: 1,
