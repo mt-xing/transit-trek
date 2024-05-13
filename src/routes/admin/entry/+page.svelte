@@ -41,7 +41,9 @@
 
 	$: {
 		if (filteredChallenges.length === 1) {
-			[selectedChallenge] = filteredChallenges;
+			// eslint-disable-next-line prefer-destructuring
+			selectedChallenge = filteredChallenges[0];
+			populateProgress();
 		} else if (filteredChallenges.length === 0) {
 			selectedChallenge = undefined;
 		}
@@ -55,6 +57,7 @@
 {/if}
 
 <p>
+	<!-- svelte-ignore a11y-autofocus -->
 	<select
 		autofocus={true}
 		bind:value={selectedTeam}
