@@ -22,3 +22,4 @@
 <p><a href="/admin/game">Game State</a></p>
 <p><a href="/admin/finish">Team Finishes</a></p>
 <p><a href="/admin/entry">Challenge Status Entry</a></p>
+<p><a href="/admin/batchUnlock">Batch Unlock</a></p>
