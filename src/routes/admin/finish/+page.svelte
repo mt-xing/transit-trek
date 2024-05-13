@@ -49,4 +49,8 @@
 	button {
 		padding: 0.5em 1em;
 	}
+
+	select {
+		padding: 1em 2em;
+	}
 </style>

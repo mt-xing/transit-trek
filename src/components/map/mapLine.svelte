@@ -44,6 +44,7 @@
 	.line.done {
 		background: #27ae60;
 		width: 10px;
+		border-radius: 5px;
 	}
 
 	.line.incomplete.unlock.inline {
