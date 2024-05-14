@@ -4,11 +4,11 @@
 	import { isChallengeComplete, isChallengeUnlocked } from '../../utils/challenge';
 	import ChallengeBtns from '../challengeBtns/challengeBtns.svelte';
 
-	export let dir: 'vert' | 'left' | 'right';
+	export let dir: 'vert' | 'left' | 'right' | 'dot';
 	export let mapPos: number;
 	export let mapInfo:
 		| {
-				t: 'after';
+				t: 'after' | 'before';
 		  }
 		| {
 				t: 'inline';
@@ -24,7 +24,7 @@
 </script>
 
 <div
-	class={`line ${dir} ${isUnlocked ? 'unlock' : 'lock'} ${isComplete ? 'done' : 'incomplete'} ${mapInfo.t === 'inline' ? 'inline' : 'after'}`}
+	class={`line ${dir} ${isUnlocked ? 'unlock' : 'lock'} ${isComplete ? 'done' : 'incomplete'} ${mapInfo.t}`}
 ></div>
 
 {#if mapInfo.t === 'inline'}
@@ -44,11 +44,14 @@
 	.line.done {
 		background: #27ae60;
 		width: 10px;
-		border-radius: 5px;
 	}
 
 	.line.incomplete.unlock.inline {
 		background: linear-gradient(to bottom, #2980b9 49%, #7f8c8d 51%);
+	}
+
+	.line.incomplete.unlock.before {
+		background: #2980b9;
 	}
 
 	.line.vert {
@@ -58,6 +61,19 @@
 	}
 	.line.vert.done {
 		left: 10px;
+	}
+
+	.line.dot {
+		top: 13px;
+		left: 13px;
+		height: 4px;
+		border-radius: 2px;
+	}
+	.line.dot.done {
+		top: 10px;
+		left: 10px;
+		height: 10px;
+		border-radius: 5px;
 	}
 
 	.line.right {
