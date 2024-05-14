@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { ChallengeDefinition } from '../../../types/challenge';
-	import type { Team } from '../../../types/team';
+	import type { ChallengeDefinition } from '../../../../types/challenge';
+	import type { Team } from '../../../../types/team';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -106,7 +106,7 @@
 	</form>
 {/if}
 
-<p style="margin-top:3em"><a href="/admin">Discard and Go Back</a></p>
+<p style="margin-top:3em"><a href="/admin/entry">Discard and Go Back</a></p>
 
 <style>
 	select {

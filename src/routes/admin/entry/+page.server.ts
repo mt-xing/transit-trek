@@ -90,6 +90,10 @@ export const actions = {
 				value: newVal,
 			}]);
 
-		redirect(303, '/admin/entry');
+		if (parseInt(data.get('challengeMapPos') as string, 10) === 99) {
+			redirect(303, `/admin/finish?${teamId}`);
+		} else {
+			redirect(303, '/admin/entry');
+		}
 	},
 } satisfies Actions;

@@ -86,6 +86,10 @@
 		{/each}
 	</select>
 </p>
+<p>
+	Parent tasks aren't shown here. Unlock them through
+	<a href="/admin/entry/batchUnlock">Batch Unlock</a>
+</p>
 
 {#if selectedTeam && selectedChallenge}
 	<h2>

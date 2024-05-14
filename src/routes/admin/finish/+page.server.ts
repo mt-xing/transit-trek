@@ -78,4 +78,46 @@ export const actions = {
 
 		redirect(303, '/admin/finish');
 	},
+	changeFinishTime: async (event: RequestEvent) => {
+		const data = await event.request.formData();
+		const id = data.get("id") as string;
+		const finishTime = parseInt(data.get("finishTime") as string, 10);
+		if (!id || Number.isNaN(finishTime)) {
+			redirect(303, '/admin/finish');
+			return;
+		}
+
+		await writeClient
+			.database('transit-trek')
+			.container('teams')
+			.item(id, id)
+			.patch([{
+				op: 'add',
+				path: '/finishTime',
+				value: finishTime,
+			}]);
+
+		redirect(303, '/admin/finish');
+	},
+	changePenalty: async (event: RequestEvent) => {
+		const data = await event.request.formData();
+		const id = data.get("id") as string;
+		const timePenaltyMin = parseInt(data.get("timePenaltyMin") as string, 10);
+		if (!id || Number.isNaN(timePenaltyMin)) {
+			redirect(303, '/admin/finish');
+			return;
+		}
+
+		await writeClient
+			.database('transit-trek')
+			.container('teams')
+			.item(id, id)
+			.patch([{
+				op: 'replace',
+				path: '/timePenaltyMin',
+				value: timePenaltyMin,
+			}]);
+
+		redirect(303, '/admin/finish');
+	},
 } satisfies Actions;

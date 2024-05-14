@@ -1,10 +1,10 @@
 import { CosmosClient } from '@azure/cosmos';
 import { redirect } from '@sveltejs/kit';
 import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
-import { GAME_KEY, type GameState } from '../../../types/game';
+import { GAME_KEY, type GameState } from '../../../../types/game';
 import type { Actions, PageServerLoad, RequestEvent } from './$types';
-import type { ChallengeProgress, Team } from '../../../types/team';
-import type { ChallengeDefinition } from '../../../types/challenge';
+import type { ChallengeProgress, Team } from '../../../../types/team';
+import type { ChallengeDefinition } from '../../../../types/challenge';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,
@@ -62,7 +62,7 @@ export const actions = {
 		const teamId = data.get("teamId") as string;
 		const subtasks = data.get("subtasks") as string;
 		if (!teamId || !subtasks) {
-			redirect(303, '/admin/batchUnlock');
+			redirect(303, '/admin/entry/batchUnlock');
 			return;
 		}
 
@@ -105,14 +105,14 @@ export const actions = {
 				};
 			}));
 
-		redirect(303, '/admin/batchUnlock');
+		redirect(303, '/admin/entry/batchUnlock');
 	},
 	complete: async (event: RequestEvent) => {
 		const data = await event.request.formData();
 		const teamId = data.get("teamId") as string;
 		const challengeId = data.get("challengeId") as string;
 		if (!teamId || !challengeId) {
-			redirect(303, '/admin/batchUnlock');
+			redirect(303, '/admin/entry/batchUnlock');
 			return;
 		}
 
@@ -154,6 +154,6 @@ export const actions = {
 				};
 			})()]);
 
-		redirect(303, '/admin/batchUnlock');
+		redirect(303, '/admin/entry/batchUnlock');
 	},
 } satisfies Actions;

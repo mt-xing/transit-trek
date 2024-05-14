@@ -151,6 +151,7 @@
 			</p>
 			<input type="hidden" bind:value={teamId} name="teamId" />
 			<input type="hidden" bind:value={challenge.id} name="challengeId" />
+			<input type="hidden" bind:value={challenge.mapPos} name="challengeMapPos" />
 			<button type="submit">Commit Changes (for this task only)</button>
 		</form>
 	</section>
