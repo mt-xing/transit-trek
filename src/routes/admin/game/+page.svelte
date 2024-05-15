@@ -12,8 +12,15 @@
 	let resetString = '';
 </script>
 
-{#if gameState.t === 'pre'}
+{#if gameState.t === 'pre' && !gameState.countdown}
 	<h1>Game State: 🛑 Not started</h1>
+
+	<form method="POST" action="?/countdown">
+		<input type="hidden" value="unknown" name="unknown" />
+		<button type="submit">Countdown to Start</button>
+	</form>
+{:else if gameState.t === 'pre' && gameState.countdown}
+	<h1>Game State: ⚠️ Countdown</h1>
 
 	<form method="POST" action="?/startGame">
 		<input type="hidden" value="unknown" name="unknown" />

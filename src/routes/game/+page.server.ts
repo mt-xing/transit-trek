@@ -34,11 +34,11 @@ function publicChallengeFilter(x: ChallengeDefinition): PublicChallengeDefinitio
 
 function gameStateFilter(x?: GameState): GameState {
 	if (!x) {
-		return { t: 'pre' };
+		return { t: 'pre', countdown: false, };
 	}
 	switch (x.t) {
 		case 'pre':
-			return { t: 'pre' };
+			return { t: 'pre', countdown: x.countdown };
 		default:
 			return {
 				t: x.t,
@@ -96,29 +96,6 @@ export const load: PageServerLoad = async ({ url }) => {
 	return {
 		allChallenges: challengeRes.resources.map(publicChallengeFilter),
 		gameState,
-		// team: {
-		// 	id: 'abcd',
-		// 	teamNum: 1,
-		// 	secret: 'xyz',
-		// 	name: '',
-		// 	timePenaltyMin: 10,
-		// 	challengeProgress: {
-		// 		'b2afe19c-d245-4461-89e2-d373371e354a': { progress: [true] },
-		// 		'a84efa50-22d3-4ff9-860f-c4f010756fdc': { progress: [true], manualUnlock: true },
-		// 		'3b914c8f-e728-41d5-a142-b27f19aba575': { progress: [true] },
-		// 		'843bbbb0-3ab1-417a-a1b4-a69bb06ec7af': { progress: [true, true, true] },
-		// 		'08e2fc05-fca2-4f35-90ca-94e959d6571f': {
-		// 			progress: [true, true],
-		// 			manualUnlock: true,
-		// 			manualComplete: false,
-		// 		},
-		// 		'6aed52ef-df4f-4bba-9fac-8aed85ce04b2': {
-		// 			manualUnlock: true,
-		// 			progress: undefined,
-		// 		},
-		// 	},
-		// 	finishTime: 1715468137161,
-		// } as Team,
 		team: teamFilter(teamQuery[0]),
 	};
 };

@@ -28,6 +28,19 @@ const writeClient = new CosmosClient({
 });
 
 export const actions = {
+	countdown: async () => {
+		const gameState: GameState = {
+			t: "pre",
+			countdown: true,
+		};
+		await writeClient
+			.database('transit-trek')
+			.container('game')
+			.item(GAME_KEY, GAME_KEY)
+			.replace({ ...gameState, id: GAME_KEY });
+
+		redirect(303, '/admin/game');
+	},
 	startGame: async () => {
 		const gameState: GameState = {
 			t: "ongoing",
@@ -106,6 +119,7 @@ export const actions = {
 		}
 		const gameState: GameState = {
 			t: 'pre',
+			countdown: false,
 		};
 		await writeClient
 			.database('transit-trek')

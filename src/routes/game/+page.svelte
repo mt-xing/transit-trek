@@ -11,7 +11,7 @@
 	const { allChallenges, gameState, team } = data;
 	$: dashboardInfo = {
 		allChallenges: allChallenges ?? [],
-		gameState: gameState ?? { t: 'pre' },
+		gameState: gameState ?? { t: 'pre', countdown: false },
 		challengeProgress: team?.challengeProgress ?? {},
 	};
 
@@ -98,6 +98,8 @@
 			{:else if team.timePenaltyMin < 0}
 				<p>(includes {team.timePenaltyMin} minute handicap)</p>
 			{/if}
+		{:else if gameState?.t === 'pre' && gameState.countdown}
+			<p>Standby. Game will start soon.</p>
 		{:else}
 			<p>Game has not started yet.</p>
 		{/if}
