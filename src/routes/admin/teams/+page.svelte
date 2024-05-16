@@ -19,6 +19,7 @@
 </ul>
 
 <form method="POST" action="?/newTeam">
+	<input type="hidden" value="unknown" name="unknown" />
 	<button type="submit">Create New Team</button>
 </form>
 

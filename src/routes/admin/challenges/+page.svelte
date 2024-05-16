@@ -18,6 +18,7 @@
 </ul>
 
 <form method="POST" action="?/newChallenge">
+	<input type="hidden" value="unknown" name="unknown" />
 	<button type="submit">Create New Challenge</button>
 </form>
 
