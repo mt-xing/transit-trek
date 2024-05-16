@@ -143,7 +143,7 @@
 		transform-origin: top center;
 	}
 	.line.arcright.done {
-		left: -110px;
+		left: -90px;
 	}
 	.line.arcright.second {
 		right: unset;
@@ -154,7 +154,7 @@
 		transform-origin: top center;
 	}
 	.line.arcright.done.second {
-		left: 60px;
+		left: -41px;
 	}
 
 	.line.incomplete.unlock.inline.arcleft,
