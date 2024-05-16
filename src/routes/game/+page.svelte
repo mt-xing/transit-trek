@@ -6,9 +6,10 @@
 	import type { PublicChallengeDefinition } from '../../types/challenge';
 	import assertUnreachable from '../../utils/assertUnreachable';
 	import type { PageData } from './$types';
+	import type { GameState } from '../../types/game';
 
 	export let data: PageData;
-	const { allChallenges, gameState, team } = data;
+	let { allChallenges, gameState, team } = data;
 	$: dashboardInfo = {
 		allChallenges: allChallenges ?? [],
 		gameState: gameState ?? { t: 'pre', countdown: false },
@@ -71,6 +72,84 @@
 			selectedChallenge = c;
 		}
 	};
+
+	const gameStateUpdateTime = (gs?: GameState) => {
+		if (!gs) {
+			return 10000;
+		}
+		switch (gs.t) {
+			case 'pre':
+				return gs.countdown ? 1000 : 10000;
+			case 'ongoing':
+			case 'post':
+				return 60 * 1000;
+			default:
+				assertUnreachable(gs);
+		}
+	};
+	const teamUpdateTime = (gs?: GameState) => (gs?.t === 'ongoing' ? 10 * 1000 : 30 * 1000);
+	const challengeUpdateTime = 60 * 1000;
+
+	let teamUpdateInterval: ReturnType<typeof setInterval> | undefined;
+	let challengeUpdateInterval: ReturnType<typeof setInterval> | undefined;
+
+	onMount(() => {
+		const updateTeamState = async () => {
+			const newTeamRes = await fetch(`/game/api/team${window.location.search}`);
+			if (newTeamRes.ok) {
+				try {
+					const newTeam = await newTeamRes.json();
+					if (newTeam) {
+						team = newTeam;
+					}
+				} catch (e) {
+					// eslint-disable-next-line no-console
+					console.error(e);
+				}
+			}
+		};
+
+		const updateChallenges = async () => {
+			const newChallengesRes = await fetch(`/game/api/challenges${window.location.search}`);
+			if (newChallengesRes.ok) {
+				try {
+					const newChallenges = await newChallengesRes.json();
+					if (newChallenges) {
+						allChallenges = newChallenges as PublicChallengeDefinition[];
+					}
+				} catch (e) {
+					// eslint-disable-next-line no-console
+					console.error(e);
+				}
+			}
+		};
+
+		const updateGameState = async () => {
+			const newStateRes = await fetch('/game/api/game');
+			if (newStateRes.ok) {
+				const newState = (await newStateRes.json()) as GameState | undefined;
+				if (newState) {
+					if (gameState?.t !== newState.t) {
+						clearInterval(teamUpdateInterval);
+						teamUpdateInterval = setInterval(updateTeamState, teamUpdateTime(newState));
+
+						clearInterval(challengeUpdateInterval);
+						if (newState.t !== 'pre') {
+							challengeUpdateInterval = setInterval(updateChallenges, challengeUpdateTime);
+							if (newState.t === 'ongoing') {
+								updateChallenges();
+							}
+						}
+					}
+					gameState = newState;
+				}
+			}
+			setTimeout(updateGameState, gameStateUpdateTime(gameState));
+		};
+
+		setTimeout(updateGameState, 1000);
+		teamUpdateInterval = setInterval(updateTeamState, teamUpdateTime(gameState));
+	});
 </script>
 
 <svelte:head>
@@ -117,7 +196,7 @@
 			<p style="font-size: 100px;margin: 0;">🔒</p>
 			<p>Challenges will be revealed when the game starts.</p>
 		</div>
-	{:else}
+	{:else if allChallenges !== undefined}
 		<div class="card">
 			<h2>Anytime Challenges</h2>
 			<p>Completing these will result in additional time being returned to your final score.</p>
