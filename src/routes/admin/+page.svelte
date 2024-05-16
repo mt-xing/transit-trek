@@ -22,3 +22,19 @@
 <p><a href="/admin/game">Game State</a></p>
 <p><a href="/admin/finish">Team Finishes</a></p>
 <p><a href="/admin/entry">Challenge Status Entry</a></p>
+
+<style>
+	h1,
+	h2,
+	p {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	a {
+		padding: 1em 2em;
+		border: 1px black solid;
+		display: inline-block;
+		margin: 0 20px;
+	}
+</style>

@@ -1,4 +1,5 @@
 import { CosmosClient } from '@azure/cosmos';
+import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import { DB_URL, READ_KEY } from '$env/static/private';
 import type { ChallengeDefinition } from '../../types/challenge';
@@ -13,7 +14,8 @@ const client = new CosmosClient({
 export const load: PageServerLoad = async ({ url }) => {
 	const id = url.searchParams.get('id');
 	if (!id) {
-		return {};
+		error(401, "No Arjun Allowed");
+		return;
 	}
 
 	const teamQuery = (await client
@@ -26,7 +28,8 @@ export const load: PageServerLoad = async ({ url }) => {
 		})
 		.fetchAll()).resources;
 	if (teamQuery.length !== 1) {
-		return {};
+		error(401, "No Arjun Allowed");
+		return;
 	}
 
 	const gameStateRes = await client
