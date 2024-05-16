@@ -47,6 +47,7 @@ export const actions = {
 			privateNotes: (data.get('privateNotes') as string) || undefined,
 			mapPos: parseFloat(data.get('mapPos') as string),
 			unlockMapPos: data.get('unlockMapPosActive') ? (data.get('unlockMapPos') as string).split(",").map(parseFloat) : undefined,
+			minSubtracted: data.get('minSubtractedActive') ? parseInt(data.get('minSubtracted') as string, 10) : undefined,
 		};
 		const type = data.get('type') as ChallengeType;
 		const newChallengeInfo = ((): ChallengeDefinition => {

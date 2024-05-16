@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import type { Team } from '../../../types/team';
 	import type { PageData } from './$types';
 
@@ -13,25 +12,7 @@
 	$: teams.sort((a, b) => a.teamNum - b.teamNum);
 
 	let selectedTeam: undefined | Team;
-	let showAlert = false;
-
-	onMount(() => {
-		const teamId = window.location.search.substring(1);
-		if (teamId) {
-			const candidate = teams.find((x) => x.id === teamId);
-			if (candidate) {
-				selectedTeam = candidate;
-				showAlert = true;
-			}
-		}
-	});
 </script>
-
-{#if showAlert}
-	<div class="bigAlert">
-		<h1>EDIT THE TIME PENALTY</h1>
-	</div>
-{/if}
 
 <h1>Team Finishes</h1>
 
@@ -105,14 +86,5 @@
 		font-size: 1.5em;
 		border-top: 5px black solid;
 		padding: 0 1.5em;
-	}
-
-	.bigAlert {
-		background: red;
-		color: white;
-		font-size: 5em;
-	}
-	.bigAlert h1 {
-		margin: 0;
 	}
 </style>

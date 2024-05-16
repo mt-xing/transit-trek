@@ -21,6 +21,15 @@
 		}
 	}
 
+	let minSubtracted = challenge?.minSubtracted;
+	function handleChangeMinSub() {
+		if (minSubtracted === undefined) {
+			minSubtracted = 0;
+		} else {
+			minSubtracted = undefined;
+		}
+	}
+
 	let type: ChallengeType = challenge?.type ?? 'single';
 
 	let multiPartDescs = challenge?.type === 'multi' ? challenge.partDescs : ['', ''];
@@ -95,6 +104,28 @@
 	{/if}
 
 	<p>
+		<label>
+			Does this challenge provide time benefits?
+			<input
+				type="checkbox"
+				checked={minSubtracted !== undefined}
+				on:click={handleChangeMinSub}
+				name="minSubtractedActive"
+			/>
+		</label>
+	</p>
+	{#if minSubtracted !== undefined}
+		<p>
+			Number of minutes to give back to team who completes this challenge: <input
+				bind:value={minSubtracted}
+				type="number"
+				name="minSubtracted"
+				step="1"
+			/>
+		</p>
+	{/if}
+
+	<p>
 		Completion Type:
 		<select bind:value={type} name="type">
 			<option value="single">Single (one and done)</option>
@@ -119,9 +150,7 @@
 				<li><input type="text" bind:value={multiPartDescs[i]} name={`partDescs${i}`} /></li>
 			{/each}
 		</ol>
-	{/if}
-
-	{#if type === 'subtask'}
+	{:else if type === 'subtask'}
 		<p>
 			Subtasks map position: <input
 				bind:value={subtaskMapPos}

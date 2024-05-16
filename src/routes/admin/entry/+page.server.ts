@@ -1,10 +1,11 @@
-import { CosmosClient } from '@azure/cosmos';
+import { CosmosClient, type PatchRequestBody } from '@azure/cosmos';
 import { redirect } from '@sveltejs/kit';
 import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
 import { GAME_KEY, type GameState } from '../../../types/game';
 import type { Actions, PageServerLoad, RequestEvent } from './$types';
 import type { ChallengeProgress, Team } from '../../../types/team';
 import type { ChallengeDefinition } from '../../../types/challenge';
+import { isChallengeComplete } from '../../../utils/challenge';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,
@@ -80,20 +81,61 @@ export const actions = {
 			progress
 		}
 
+		const patchOps: PatchRequestBody = [{
+			op: 'add',
+			path: `/challengeProgress/${challengeId}`,
+			value: newVal,
+		}];
+
+		if (data.get("minSubtracted") !== "") {
+			const minSubtracted = parseInt(data.get("minSubtracted") as string, 10);
+			const existingTeam = (
+				await client
+					.database('transit-trek')
+					.container('teams')
+					.item(teamId, teamId)
+					.read<Team>()
+			).resource;
+			const allChallenges = (await client
+				.database('transit-trek')
+				.container('challenges')
+				.items.readAll<ChallengeDefinition>()
+				.fetchAll()).resources;
+			const challenge = allChallenges.find(x => x.id === challengeId);
+			if (existingTeam && challenge) {
+				const originallyComplete = isChallengeComplete(challenge, {
+					allChallenges,
+					gameState: { t: 'ongoing', startTime: 1 },
+					challengeProgress: existingTeam.challengeProgress
+				});
+				const nowComplete = isChallengeComplete(challenge, {
+					allChallenges,
+					gameState: { t: 'ongoing', startTime: 1 },
+					challengeProgress: { ...existingTeam.challengeProgress, [challengeId]: newVal },
+				});
+
+				if (!originallyComplete && nowComplete) {
+					patchOps.push({
+						op: 'incr',
+						path: '/timePenaltyMin',
+						value: -1 * minSubtracted,
+					});
+				} else if (originallyComplete && !nowComplete) {
+					patchOps.push({
+						op: 'incr',
+						path: '/timePenaltyMin',
+						value: minSubtracted,
+					});
+				}
+			}
+		}
+
 		await writeClient
 			.database('transit-trek')
 			.container('teams')
 			.item(teamId, teamId)
-			.patch([{
-				op: 'add',
-				path: `/challengeProgress/${challengeId}`,
-				value: newVal,
-			}]);
+			.patch(patchOps);
 
-		if (parseInt(data.get('challengeMapPos') as string, 10) === 99) {
-			redirect(303, `/admin/finish?${teamId}`);
-		} else {
-			redirect(303, '/admin/entry');
-		}
+		redirect(303, '/admin/entry');
 	},
 } satisfies Actions;

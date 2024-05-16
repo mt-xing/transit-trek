@@ -7,6 +7,7 @@ export type ChallengeDefinition = {
 	mapPos: number;
 	// Map pos that must be finished to unlock this one
 	unlockMapPos?: number[];
+	minSubtracted?: number;
 } & (
 		| {
 			type: 'single';
