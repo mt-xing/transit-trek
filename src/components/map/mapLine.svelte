@@ -4,7 +4,7 @@
 	import { isChallengeComplete, isChallengeUnlocked } from '../../utils/challenge';
 	import ChallengeBtns from '../challengeBtns/challengeBtns.svelte';
 
-	export let dir: 'vert' | 'left' | 'right' | 'dot';
+	export let dir: 'vert' | 'left' | 'right' | 'dot' | 'arcleft' | 'arcright' | 'short';
 	export let mapPos: number;
 	export let mapInfo:
 		| {
@@ -31,6 +31,12 @@
 	<div class={`challengeBtns ${dir}`}>
 		<ChallengeBtns {dashboardInfo} openCallback={mapInfo.openCallback} {mapPos} />
 	</div>
+{/if}
+
+{#if dir === 'arcleft' || dir === 'arcright'}
+	<div
+		class={`line ${dir} ${isUnlocked ? 'unlock' : 'lock'} ${isComplete ? 'done' : 'incomplete'} ${mapInfo.t} second`}
+	></div>
 {/if}
 
 <style>
@@ -60,6 +66,15 @@
 		height: 130px;
 	}
 	.line.vert.done {
+		left: 10px;
+	}
+
+	.line.short {
+		top: -15px;
+		left: 13px;
+		height: 60px;
+	}
+	.line.short.done {
 		left: 10px;
 	}
 
@@ -98,6 +113,60 @@
 		right: -110px;
 	}
 
+	.line.arcleft {
+		top: -15px;
+		right: -113px;
+		height: 82px;
+		transform: rotate(37.568592deg);
+		transform-origin: top center;
+	}
+	.line.arcleft.done {
+		right: -110px;
+	}
+	.line.arcleft.second {
+		right: unset;
+		top: -83px;
+		left: 63px;
+		height: 82px;
+		transform: rotate(-37.568592deg);
+		transform-origin: top center;
+	}
+	.line.arcleft.done.second {
+		left: 60px;
+	}
+
+	.line.arcright {
+		top: -15px;
+		left: -87px;
+		height: 82px;
+		transform: rotate(-37.568592deg);
+		transform-origin: top center;
+	}
+	.line.arcright.done {
+		left: -110px;
+	}
+	.line.arcright.second {
+		right: unset;
+		top: -83px;
+		left: -38px;
+		height: 82px;
+		transform: rotate(37.568592deg);
+		transform-origin: top center;
+	}
+	.line.arcright.done.second {
+		left: 60px;
+	}
+
+	.line.incomplete.unlock.inline.arcleft,
+	.line.incomplete.unlock.inline.arcright {
+		background: #2980b9;
+	}
+
+	.line.incomplete.unlock.inline.arcleft.second,
+	.line.incomplete.unlock.inline.arcright.second {
+		background: #7f8c8d;
+	}
+
 	.challengeBtns {
 		position: relative;
 		top: -105px;
@@ -112,5 +181,17 @@
 	.challengeBtns.right {
 		top: -140px;
 		left: -85px;
+	}
+
+	.challengeBtns.arcleft {
+		top: -58px;
+		left: 15px;
+		z-index: 2;
+	}
+
+	.challengeBtns.arcright {
+		top: -58px;
+		left: -85px;
+		z-index: 2;
 	}
 </style>
