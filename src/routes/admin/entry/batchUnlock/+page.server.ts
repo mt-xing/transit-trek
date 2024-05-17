@@ -1,10 +1,11 @@
-import { CosmosClient } from '@azure/cosmos';
+import { CosmosClient, type PatchOperation } from '@azure/cosmos';
 import { redirect } from '@sveltejs/kit';
 import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
 import { GAME_KEY, type GameState } from '../../../../types/game';
 import type { Actions, PageServerLoad, RequestEvent } from './$types';
 import type { ChallengeProgress, Team } from '../../../../types/team';
 import type { ChallengeDefinition } from '../../../../types/challenge';
+import { LOGS_KEY, logOp, writeLog } from '../../../../types/logs';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,
@@ -105,6 +106,19 @@ export const actions = {
 				};
 			}));
 
+		const time = (new Date()).getTime();
+		await writeClient
+			.database('transit-trek')
+			.container('game')
+			.item(LOGS_KEY, LOGS_KEY)
+			.patch(subtaskList.map((subtaskId): PatchOperation => logOp({
+				time,
+				t: 'entryPartial',
+				teamId,
+				challengeId: subtaskId,
+				value: { manualUnlock: manualUnlock === undefined ? 'undefined' : manualUnlock }
+			})));
+
 		redirect(303, '/admin/entry/batchUnlock');
 	},
 	complete: async (event: RequestEvent) => {
@@ -153,6 +167,15 @@ export const actions = {
 					value: manualComplete
 				};
 			})()]);
+
+		await writeLog({
+			t: 'entryPartial',
+			teamId,
+			challengeId,
+			value: {
+				manualComplete: manualComplete === undefined ? 'undefined' : manualComplete
+			}
+		})
 
 		redirect(303, '/admin/entry/batchUnlock');
 	},

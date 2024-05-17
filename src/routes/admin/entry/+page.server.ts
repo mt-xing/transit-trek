@@ -6,6 +6,7 @@ import type { Actions, PageServerLoad, RequestEvent } from './$types';
 import type { ChallengeProgress, Team } from '../../../types/team';
 import type { ChallengeDefinition } from '../../../types/challenge';
 import { isChallengeComplete } from '../../../utils/challenge';
+import { writeLog } from '../../../types/logs';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,
@@ -135,6 +136,13 @@ export const actions = {
 			.container('teams')
 			.item(teamId, teamId)
 			.patch(patchOps);
+
+		await writeLog({
+			t: 'entry',
+			teamId,
+			challengeId,
+			value: newVal,
+		});
 
 		redirect(303, '/admin/entry');
 	},

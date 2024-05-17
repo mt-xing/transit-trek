@@ -26,7 +26,7 @@ export type ChallengeDefinition = {
 	);
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type DistributiveOmit<T, K extends keyof any> = T extends any
+export type DistributiveOmit<T, K extends keyof any> = T extends any
 	? Omit<T, K>
 	: never;
 export type PublicChallengeDefinition = DistributiveOmit<ChallengeDefinition, "privateNotes">;

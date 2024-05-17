@@ -4,6 +4,7 @@ import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
 import { GAME_KEY, type GameState } from '../../../types/game';
 import type { Actions, PageServerLoad, RequestEvent } from './$types';
 import type { Team } from '../../../types/team';
+import { writeLog } from '../../../types/logs';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,
@@ -57,6 +58,12 @@ export const actions = {
 				value: (new Date()).getTime(),
 			}]);
 
+		await writeLog({
+			t: 'finish',
+			teamId: id,
+			finish: true,
+		});
+
 		redirect(303, '/admin/finish');
 	},
 	unfinishTeam: async (event: RequestEvent) => {
@@ -75,6 +82,12 @@ export const actions = {
 				op: 'remove',
 				path: '/finishTime',
 			}]);
+
+		await writeLog({
+			t: 'finish',
+			teamId: id,
+			finish: false,
+		});
 
 		redirect(303, '/admin/finish');
 	},
@@ -97,6 +110,12 @@ export const actions = {
 				value: finishTime,
 			}]);
 
+		await writeLog({
+			t: 'adjustFinish',
+			teamId: id,
+			newFinishTime: finishTime,
+		});
+
 		redirect(303, '/admin/finish');
 	},
 	changePenalty: async (event: RequestEvent) => {
@@ -117,6 +136,12 @@ export const actions = {
 				path: '/timePenaltyMin',
 				value: timePenaltyMin,
 			}]);
+
+		await writeLog({
+			t: 'adjustPenaltyManual',
+			teamId: id,
+			newPenalty: timePenaltyMin,
+		});
 
 		redirect(303, '/admin/finish');
 	},
