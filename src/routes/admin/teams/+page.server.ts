@@ -31,7 +31,7 @@ export const actions = {
 			teamNum: -99,
 			secret: crypto.randomUUID(),
 			name: "",
-			timePenaltyMin: 10,
+			timePenaltyMin: 20,
 			challengeProgress: {},
 		}
 		await writeClient
