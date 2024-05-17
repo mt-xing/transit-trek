@@ -201,7 +201,9 @@
 			<h2>Anytime Challenges</h2>
 			<p>Completing these will result in additional time being returned to your final score.</p>
 			<div class="anytimes">
-				{#each allChallenges.filter((x) => x.mapPos === 99) as c}
+				{#each allChallenges
+					.filter((x) => x.mapPos === 99)
+					.sort((a, b) => a.title.localeCompare(b.title)) as c}
 					<span>
 						<SingleChallengeBtn {dashboardInfo} {openCallback} challenge={c} />
 					</span>
