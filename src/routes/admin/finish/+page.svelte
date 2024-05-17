@@ -1,22 +1,48 @@
 <script lang="ts">
-	import type { Team } from '../../../types/team';
+	import type { ChallengeProgress, Team } from '../../../types/team';
+	import { isChallengeComplete } from '../../../utils/challenge';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
 
-	const { teams, gameState } = data;
+	const { teams, gameState, challenges } = data;
 	if (!gameState) {
 		throw new Error();
 	}
+	const finalChallenges = challenges.filter((x) => x.mapPos === 10);
 
 	$: teams.sort((a, b) => a.teamNum - b.teamNum);
 
 	let selectedTeam: undefined | Team;
+	let selectedTeamStatus: undefined | boolean;
+
+	$: {
+		(async (teamId: string | undefined) => {
+			if (!teamId) {
+				return;
+			}
+			const res = await fetch(`/admin/finish/api?id=${teamId}`);
+			const teamData = (await res.json()) as Team;
+			const done = finalChallenges.some((x) =>
+				isChallengeComplete(x, {
+					allChallenges: challenges,
+					gameState,
+					challengeProgress: teamData.challengeProgress,
+				}),
+			);
+			selectedTeamStatus = done;
+		})(selectedTeam?.id);
+	}
 </script>
 
 <h1>Team Finishes</h1>
 
-<select bind:value={selectedTeam}>
+<select
+	bind:value={selectedTeam}
+	on:change={() => {
+		selectedTeamStatus = undefined;
+	}}
+>
 	<option value={undefined}>-- SELECT A TEAM --</option>
 	{#each teams as team}
 		<option value={team}>{team.teamNum}: {team.name}</option>
@@ -29,10 +55,25 @@
 
 {#if selectedTeam}
 	<h2>{selectedTeam.teamNum}: {selectedTeam.name}</h2>
+
+	{#if selectedTeamStatus === undefined}
+		<h3>⚠️⚠️⚠️ Loading Team Status</h3>
+	{:else if selectedTeamStatus === false}
+		<h3 class="alert">
+			🛑🛑🛑 This team has <strong>NOT</strong> completed the final challenge yet.
+		</h3>
+	{/if}
+
 	{#if selectedTeam.finishTime === undefined}
 		<form method="POST" action="?/finishTeam">
 			<input type="hidden" bind:value={selectedTeam.id} name="id" />
-			<button type="submit">Mark Team as Finished</button>
+			<button type="submit">
+				{#if selectedTeamStatus === true}
+					Mark Team as Finished
+				{:else}
+					<strong>MANUAL OVERRIDE</strong><br />and mark team as finished anyways
+				{/if}
+			</button>
 		</form>
 		<p class="seperator">
 			To the person working the finish line at Hing Hay Park: you should not need to edit anything
@@ -86,5 +127,12 @@
 		font-size: 1.5em;
 		border-top: 5px black solid;
 		padding: 0 1.5em;
+	}
+
+	.alert {
+		font-size: 30px;
+		border: 10px red solid;
+		background: yellow;
+		padding: 1em 0.5em;
 	}
 </style>

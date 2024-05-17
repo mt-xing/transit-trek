@@ -5,6 +5,7 @@ import { GAME_KEY, type GameState } from '../../../types/game';
 import type { Actions, PageServerLoad, RequestEvent } from './$types';
 import type { Team } from '../../../types/team';
 import { writeLog } from '../../../types/logs';
+import type { ChallengeDefinition } from '../../../types/challenge';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,
@@ -21,16 +22,23 @@ async function getGameState() {
 }
 
 export const load: PageServerLoad = async () => {
-	const [res, gameState] = await Promise.all([
+	const [res, gameState, challengeRes] = await Promise.all([
 		client
 			.database('transit-trek')
 			.container('teams')
 			.items.readAll<Team>()
 			.fetchAll(),
-		getGameState()]);
+		getGameState(),
+		client
+			.database('transit-trek')
+			.container('challenges')
+			.items.readAll<ChallengeDefinition>()
+			.fetchAll(),
+	]);
 	return {
 		teams: res.resources,
 		gameState,
+		challenges: challengeRes.resources,
 	};
 };
 
