@@ -21,7 +21,7 @@
 
 <form action="?/resetDanger" method="POST">
 	<h2>Danger Zone</h2>
-	<p>Type <code>reset</code> below to reset the game state to "Not started"</p>
+	<p>Type <code>reset</code> below to delete all logs.</p>
 	<p><input type="text" bind:value={resetString} maxlength="5" name="sanityString" /></p>
 	<p>
 		<button disabled={resetString !== 'reset'}>RESET</button>
