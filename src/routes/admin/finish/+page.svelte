@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ChallengeProgress, Team } from '../../../types/team';
+	import type { Team } from '../../../types/team';
 	import { isChallengeComplete } from '../../../utils/challenge';
 	import type { PageData } from './$types';
 
