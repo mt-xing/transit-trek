@@ -81,7 +81,7 @@
 		<option value={undefined}>-- SELECT A CHALLENGE --</option>
 		{#each validChallenges.filter((x) => (filter ? x.title
 						.toLowerCase()
-						.indexOf(filter) !== -1 : true)) as challenge}
+						.indexOf(filter.toLowerCase()) !== -1 : true)) as challenge}
 			<option value={challenge}>{challenge.mapPos}: {challenge.title}</option>
 		{/each}
 	</select>
