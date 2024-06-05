@@ -215,10 +215,10 @@
 			they are completed (for verification and tabulation purposes).
 			<ul>
 				<li>
-					If a task requires you to complete multiple stages/steps, don’t report it to the
-					organizers until all stages/steps of that task are complete.
+					If a task requires you to complete multiple stages/steps, you may report each stage's
+					completion to the organizers separately.
 				</li>
-				<li>However, if you complete a task in its entirety, you must report it immediately.</li>
+				<li>If you complete a task in its entirety, you must report it immediately.</li>
 				<li>
 					You won’t receive your pass to move on to the next part until the organizers inform your
 					team you’ve successfully completed the task.
