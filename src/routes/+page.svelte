@@ -730,11 +730,15 @@
 	}
 
 	.trailer {
-		width: 75vw;
-		height: 42.1875vw;
+		width: 90vw;
+		height: 50.625vw;
+		max-width: 1500px;
+		max-height: 843.75px;
+		border: 1.5vw rgba(0, 0, 0, 0.85) solid;
+		box-sizing: border-box;
 		margin: 5vw auto;
 		display: block;
-		box-shadow: black 0 0 25px 25px;
+		box-shadow: 0 0 15px 10px black;
 	}
 
 	.signupwrap {
