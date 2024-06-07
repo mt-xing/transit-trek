@@ -220,6 +220,46 @@
 			{/if}
 		</div>
 
+		<div class="card">
+			<h2>Pedestrian Exclusions</h2>
+			<p>
+				In general, do not travel between any two points on the above map until you have completed a
+				challenge that lets you do so.
+			</p>
+			<p>
+				More specifically, you may not cross any of the following streets or landmarks of Seattle
+				until you have earned its corresponding pass. Your pass will specify the method by which you
+				may cross these boundaries.
+			</p>
+			<ul>
+				<li>NE 43rd Street</li>
+				<li>
+					Lake Washington Ship Canal<br />
+					<small>
+						Any bridge that crosses the Montlake Cut, Lake Union, or the Lake Washington Ship Canal.
+						Non-exhaustive list of bridges prohibited: Aurora Ave Bridge • I-5 Ship Canal Bridge •
+						Fremont Bridge • Montlake Bridge • University Bridge
+					</small>
+				</li>
+				<li>Pike Street</li>
+				<li>Madison Street</li>
+				<li>South Jackson Street</li>
+			</ul>
+		</div>
+
+		<div class="card">
+			<h2>Boundaries</h2>
+			<p>
+				The map linked below shows the official game boundaries:<br />
+				<a
+					href="https://www.google.com/maps/d/u/0/edit?mid=1p_0iBuZtzvBioUJY7iY43IhDj77oSa8&usp=sharing"
+					target="_blank"
+					style="color: black;">Game Boundaries</a
+				>
+			</p>
+			<p>The game will not require you to leave the marked zone.</p>
+		</div>
+
 		{#if selectedChallenge !== null}
 			<ChallengeView
 				challenge={selectedChallenge}
