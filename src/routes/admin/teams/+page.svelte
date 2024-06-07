@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { copyGreeting } from './greetingMsg';
 
 	export let data: PageData;
 
@@ -13,7 +14,10 @@
 	{#each teams as team}
 		<li>
 			<a href="/admin/teams/edit?id={team.id}">{team.teamNum}: {team.name}</a> -
-			<a target="_blank" href="/game?id={team.secret}">(View Dashboard)</a>
+			<a target="_blank" href="/game?id={team.secret}">(View Dashboard)</a> -
+			<button on:click={copyGreeting.bind(undefined, team.secret, team.teamNum)}
+				>Copy Greeting</button
+			>
 		</li>
 	{/each}
 </ul>
