@@ -345,6 +345,10 @@
 			holding the doors open as they're closing).
 		</li>
 		<li>
+			You may be filmed during the game for future promotional purposes unless you explicitly ask us
+			not to film you.
+		</li>
+		<li>
 			Rules can be changed by the organizers at any time before, during, and after the competition
 			period. Whatever the organizers say can override any of the written rules. Rule changes will
 			be clearly broadcasted on the Signal group.
