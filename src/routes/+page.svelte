@@ -78,7 +78,7 @@
 	<h2>Requirements</h2>
 	<ul>
 		<li>
-			ORCA card with either a pass or at least $9 loaded on it
+			ORCA card with either a pass or at least $10 loaded on it
 			<br /><small>Microsoft- and Amazon-issued ORCA cards suffice for this requirement</small>
 		</li>
 		<li>
