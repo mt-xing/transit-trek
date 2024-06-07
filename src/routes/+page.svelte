@@ -751,6 +751,7 @@
 		box-shadow: 0 0 15px 10px black;
 
 		max-width: 800px;
+		width: 90%;
 		box-sizing: border-box;
 
 		display: flex;
@@ -840,15 +841,17 @@
 			flex-direction: column;
 			margin-top: 75px;
 			margin-bottom: 100px;
+
+			padding: 5vw 10vw;
 		}
 
 		.signupwrap h2 {
 			margin: 0 0 40px 0;
-			font-size: 5vw;
+			font-size: min(5vw, 30px);
 		}
 
 		.signupwrap a {
-			font-size: 4vw;
+			font-size: min(4vw, 25px);
 		}
 	}
 </style>
