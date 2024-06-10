@@ -53,8 +53,8 @@
 <p class="date">June 8, 2024</p>
 
 <div class="signupwrap">
-	<h2>Ready to Trek?</h2>
-	<a href="https://partiful.com/e/ktJpfrbWDDxx2jA0NoKa">Sign Up</a>
+	<h2>Thanks for Playing!</h2>
+	<a href="/tt3/results">Results</a>
 </div>
 
 <iframe
@@ -758,7 +758,7 @@
 		width: 90%;
 		box-sizing: border-box;
 
-		display: none;
+		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
