@@ -60,7 +60,7 @@
 		{#if progress?.manualComplete === true}
 			<p class="msg">
 				<ImmutableCheckbox checked={true} />
-				The challenge has been marked as complete by Game Control, regardless of the status shown below.
+				This challenge has been marked as complete by Game Control, regardless of the status shown below.
 			</p>
 		{:else if progress?.manualComplete === false}
 			<p class="msg">
