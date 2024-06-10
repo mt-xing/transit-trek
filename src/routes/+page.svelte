@@ -840,7 +840,7 @@
 		transform: translateX(0);
 	}
 
-	@media (max-width: 800px) {
+	@media (max-width: 900px) {
 		.signupwrap {
 			flex-direction: column;
 			margin-top: 75px;
