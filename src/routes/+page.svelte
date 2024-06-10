@@ -18,7 +18,7 @@
 
 <svelte:head>
 	<title>Transit Trek: Race Across Seattle</title>
-	<meta name="description" content="Seattle Transit Trek's May 2024 event, Race Across Seattle" />
+	<meta name="description" content="Seattle Transit Trek's June 2024 event, Race Across Seattle" />
 </svelte:head>
 
 <div id="bgImg" style="background-position: 50% {parallaxY * 100}%"></div>

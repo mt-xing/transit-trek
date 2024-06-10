@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import type { PublicChallengeDefinition } from '../../../types/challenge';
 	import ChallengeView from '../../../components/challengeView.svelte';
 	import type { ChallengeProgress, Team } from '../../../types/team';
@@ -10,6 +11,17 @@
 	import type { LogEntry } from '../../../types/logs';
 	import { browser } from '$app/environment';
 	import Error from '../../+error.svelte';
+
+	let y: number;
+	let innerHeight: number;
+
+	let loaded = false;
+	onMount(() => {
+		loaded = true;
+	});
+
+	let parallaxY: number;
+	$: parallaxY = loaded ? y / (document.documentElement.scrollHeight - innerHeight) : 0;
 
 	const startTime = 1717880516094;
 
@@ -256,69 +268,98 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Race Across Seattle Results</title>
+	<meta
+		name="description"
+		content="Final standings from Seattle Transit Trek's June 2024 event, Race Across Seattle"
+	/>
+</svelte:head>
+
+<svelte:window bind:scrollY={y} bind:innerHeight />
+
+<div id="bgImg" style="background-position: 50% {parallaxY * 100}%"></div>
+
 <h1>Results</h1>
 
 <section class="podium">
 	<h2>Podium</h2>
 
 	{#each teams as team, i}
-		<span class="rank">{i + 1}</span>
-		<h3>Team {team.teamNum}: {team.name}</h3>
-		<p>Final Time: <code>{computeTeamTime(team)}</code></p>
-		{#if team.timePenaltyMin > 0}
-			<p>Includes +{team.timePenaltyMin} minute penalty</p>
-		{:else if team.timePenaltyMin < 0}
-			<p>Includes {team.timePenaltyMin} minute handicap</p>
-		{/if}
+		<div class={`place${i + 1}`}>
+			<span class="rank">{i + 1}</span>
+			<h3>Team {team.teamNum}: {team.name}</h3>
+			<p>Final Time: <code>{computeTeamTime(team)}</code></p>
+			{#if team.timePenaltyMin > 0}
+				<p>Includes +{team.timePenaltyMin} minute penalty</p>
+			{:else if team.timePenaltyMin < 0}
+				<p>Includes {team.timePenaltyMin} minute handicap</p>
+			{/if}
+		</div>
 	{/each}
 </section>
 
 <section class="map">
-	<h2>Map Distribution</h2>
-	<ul>
-		<li>
-			<label
-				><input type="radio" name="teamInfo" value={-1} bind:group={selectedTeam} />Overview</label
-			>
-		</li>
-		{#each teams as team, i}
-			<li>
+	<h2>Map</h2>
+	<div class="mapInner">
+		<ul>
+			<li class={selectedTeam === -1 ? 'selected' : ''}>
 				<label
-					><input type="radio" name="teamInfo" value={i} bind:group={selectedTeam} />{i + 1}: Team {team.teamNum}
-					{team.name}</label
+					><input
+						type="radio"
+						name="teamInfo"
+						value={-1}
+						bind:group={selectedTeam}
+					/>Overview</label
 				>
 			</li>
-		{/each}
-	</ul>
-	<div style="position:relative;">
-		<Map
-			dashboardInfo={{
-				challengeProgress:
-					selectedTeam > -1 ? teams[selectedTeam].challengeProgress : overallChallengeProgress,
-				allChallenges: challenges,
-				gameState,
-			}}
-			{openCallback}
-		/>
-		<div class="mapPercent" style="top: 65px; left: 5px;">{getTeamsCompletedMapPos(1)}</div>
-		<div class="mapPercent" style="top: 65px; left: 190px;">{getTeamsCompletedMapPos(1.5, -1)}</div>
-		<div class="mapPercent" style="top: 250px; left: 15px;">{getTeamsCompletedMapPos(5, 1)}</div>
-		<div class="mapPercent" style="top: 250px; left: 175px;">{getTeamsCompletedMapPos(3)}</div>
-		<div class="mapPercent" style="top: 645px; left: 15px;">{getTeamsCompletedMapPos(7)}</div>
-		<div class="mapPercent" style="top: 645px; left: 190px;">{getTeamsCompletedMapPos(6)}</div>
-	</div>
-	<div>
-		{#if selectedTeam === -1}
-			<p>Select a team to see their specific route.</p>
-		{:else}
-			{#if teams[selectedTeam].teamNum in teamSpecificComments}
-				<p>{teamSpecificComments[teams[selectedTeam].teamNum]}</p>
-			{/if}
-			<p class="timestamp"><span>{timeToString(startTime)}</span> ✅ Game Started</p>
-			{#each getEntriesForTeam(teams[selectedTeam]) as entry}
-				<p class="timestamp"><span>{timeToString(entry.time)}</span> {entry.text}</p>
+			{#each teams as team, i}
+				<li class={selectedTeam === i ? 'selected' : ''}>
+					<label>
+						<input type="radio" name="teamInfo" value={i} bind:group={selectedTeam} />
+						({i + 1}) Team {team.teamNum}:
+						{team.name}
+					</label>
+				</li>
 			{/each}
-		{/if}
+		</ul>
+		<div style="position:relative;" class="mapWrap">
+			<Map
+				dashboardInfo={{
+					challengeProgress:
+						selectedTeam > -1 ? teams[selectedTeam].challengeProgress : overallChallengeProgress,
+					allChallenges: challenges,
+					gameState,
+				}}
+				{openCallback}
+			/>
+			<div class="mapPercent" style="top: 65px; left: 5px;">{getTeamsCompletedMapPos(1)}</div>
+			<div class="mapPercent" style="top: 65px; left: 190px;">
+				{getTeamsCompletedMapPos(1.5, -1)}
+			</div>
+			<div class="mapPercent" style="top: 250px; left: 15px;">{getTeamsCompletedMapPos(5, 1)}</div>
+			<div class="mapPercent" style="top: 250px; left: 175px;">{getTeamsCompletedMapPos(3)}</div>
+			<div class="mapPercent" style="top: 645px; left: 15px;">{getTeamsCompletedMapPos(7)}</div>
+			<div class="mapPercent" style="top: 645px; left: 190px;">{getTeamsCompletedMapPos(6)}</div>
+		</div>
+		<div class="infoWrap">
+			{#if selectedTeam === -1}
+				<p>Select a team to see their specific route.</p>
+			{:else}
+				<h3>
+					Team {teams[selectedTeam].teamNum}: {teams[selectedTeam].name}<br />(Rank {selectedTeam +
+						1} of
+					{teams.length})
+				</h3>
+				{#if teams[selectedTeam].teamNum in teamSpecificComments}
+					<p>{teamSpecificComments[teams[selectedTeam].teamNum]}</p>
+				{/if}
+				<p class="timestamp"><span>{timeToString(startTime)}</span> ✅ Game Started</p>
+				{#each getEntriesForTeam(teams[selectedTeam]) as entry}
+					<p class="timestamp"><span>{timeToString(entry.time)}</span> {entry.text}</p>
+				{/each}
+			{/if}
+		</div>
 	</div>
 </section>
 
@@ -348,28 +389,39 @@
 						class="percentBar"
 						style={`width: ${(numCompleteEachChallenge[challengeId.cid] * 100) / teams.length}%;`}
 					></span>
-					{Math.round((numCompleteEachChallenge[challengeId.cid] * 100) / teams.length)}%</td
-				>
+					<span class="percentText">
+						{Math.round((numCompleteEachChallenge[challengeId.cid] * 100) / teams.length)}%
+					</span>
+				</td>
 			</tr>
 		{/each}
 	</table>
 	<h3>Team Breakdown</h3>
-	<table>
-		<tr>
-			<th>Challenge</th>
-			{#each teamsUnsorted as team}
-				<td>Team {team.teamNum}<br />{team.name}</td>
-			{/each}
-		</tr>
-		{#each challengeIdArray.sort((a, b) => {
-			const aa = challengeMap[a];
-			const bb = challengeMap[b];
-			if (aa.mapPos !== bb.mapPos) {
-				if (aa.mapPos === 99) {
-					return -1;
-				}
-				if (bb.mapPos === 99) {
-					return 1;
+	<div class="teamBreakdownWrap">
+		<table class="teamBreakdown">
+			<tr>
+				<th>Challenge</th>
+				{#each teamsUnsorted as team}
+					<td>Team {team.teamNum}<br />{team.name}</td>
+				{/each}
+			</tr>
+			{#each challengeIdArray.sort((a, b) => {
+				const aa = challengeMap[a];
+				const bb = challengeMap[b];
+				if (aa.mapPos !== bb.mapPos) {
+					if (aa.mapPos === 99) {
+						return -1;
+					}
+					if (bb.mapPos === 99) {
+						return 1;
+					}
+					if (aa.title === 'Howl Like Huskies') {
+						return 4.25 - bb.mapPos;
+					}
+					if (bb.title === 'Howl Like Huskies') {
+						return aa.mapPos - 4.25;
+					}
+					return aa.mapPos - bb.mapPos;
 				}
 				if (aa.title === 'Howl Like Huskies') {
 					return 4.25 - bb.mapPos;
@@ -377,29 +429,27 @@
 				if (bb.title === 'Howl Like Huskies') {
 					return aa.mapPos - 4.25;
 				}
-				return aa.mapPos - bb.mapPos;
-			}
-			if (aa.title === 'Howl Like Huskies') {
-				return 4.25 - bb.mapPos;
-			}
-			if (bb.title === 'Howl Like Huskies') {
-				return aa.mapPos - 4.25;
-			}
-			return aa.title.localeCompare(bb.title);
-		}) as challengeId}
-			<tr>
-				<td>
-					{(challengeMap[challengeId].mapPos * 10) % 10 === 1 ? '\xa0\xa0⤷ ' : ''}
-					{(challengeMap[challengeId].mapPos * 10) % 10 === 2 ? '\xa0\xa0\xa0\xa0⤷ ' : ''}
-					{(challengeMap[challengeId].mapPos * 10) % 10 === 3 ? '\xa0\xa0\xa0\xa0⤷ ' : ''}
-					{challengeMap[challengeId].title}
-				</td>
-				{#each teamsUnsorted as team}
-					<td>{teamsCompletedChallenges[team.id].has(challengeId) ? '✅' : ''}</td>
-				{/each}
-			</tr>
-		{/each}
-	</table>
+				return aa.title.localeCompare(bb.title);
+			}) as challengeId}
+				<tr>
+					<td>
+						{(challengeMap[challengeId].mapPos * 10) % 10 === 1 ? '\xa0\xa0⤷ ' : ''}
+						{(challengeMap[challengeId].mapPos * 10) % 10 === 2 ? '\xa0\xa0\xa0\xa0⤷ ' : ''}
+						{(challengeMap[challengeId].mapPos * 10) % 10 === 3 ? '\xa0\xa0\xa0\xa0⤷ ' : ''}
+						{challengeMap[challengeId].title}
+					</td>
+					{#each teamsUnsorted as team}
+						<td>{teamsCompletedChallenges[team.id].has(challengeId) ? '✅' : ''}</td>
+					{/each}
+				</tr>
+			{/each}
+		</table>
+	</div>
+</section>
+
+<section class="signupwrap">
+	<h2>Thank You For Playing!</h2>
+	<p style="text-align: center;"><a href="/"><span style="position:relative;">Home</span></a></p>
 </section>
 
 {#if selectedChallenge !== null}
@@ -418,10 +468,151 @@
 {/if}
 
 <style>
+	h1 {
+		color: white;
+		font-weight: 900;
+		font-size: 100px;
+		text-align: center;
+
+		text-shadow: black 0 0 1.5vw;
+		-webkit-text-stroke: 5px black;
+	}
+
+	#bgImg {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		background-image: url($lib/images/transit-trek-bg-wide.png);
+		background-size: cover;
+		background-position: center;
+	}
+
+	section {
+		background: #ecf0f1;
+		width: 80%;
+		margin: 20px auto;
+		padding: 40px 50px;
+		box-sizing: border-box;
+		border-radius: 15px;
+		box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
+		overflow-x: hidden;
+	}
+
+	section h2 {
+		margin-top: 0;
+		text-align: center;
+		font-size: 40px;
+	}
+
+	.podium > div {
+		position: relative;
+		padding-left: 50px;
+		height: 6em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.podium > div.place1 {
+		background: radial-gradient(
+				ellipse farthest-corner at right bottom,
+				#fedb37 0%,
+				#fdb931 8%,
+				#9f7928 30%,
+				#8a6e2f 40%,
+				transparent 80%
+			),
+			radial-gradient(
+				ellipse farthest-corner at left top,
+				#ffffff 0%,
+				#ffffac 8%,
+				#d1b464 25%,
+				#5d4a1f 62.5%,
+				#5d4a1f 100%
+			);
+	}
+
+	.podium > div.place2 {
+		background: radial-gradient(
+				ellipse farthest-corner at left top,
+				#a8a9ad 0%,
+				#d7d7d8 40%,
+				transparent 80%
+			),
+			radial-gradient(
+				ellipse farthest-corner at right bottom,
+				#d7d7d8 0%,
+				#c0c0c3 50%,
+				#a8a9ad 100%
+			);
+	}
+
+	.podium > div.place3 {
+		background: #cd7f32;
+		background: linear-gradient(to bottom, #cd7f32 0%, #be7023 100%);
+	}
+
+	.podium > div > h3 {
+		margin: 0;
+	}
+
+	.podium > div > p {
+		margin: 5px 0 0 0;
+	}
+
 	.podium .rank {
-		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		font-size: 200%;
 		font-weight: 900;
+	}
+
+	.podium code {
+		font-size: 20px;
+	}
+
+	.map .mapInner {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.map ul {
+		list-style: none;
+		padding: 0;
+		width: 33%;
+		box-sizing: border-box;
+	}
+
+	.map ul li label {
+		display: inline-block;
+		padding: 10px 5px;
+	}
+
+	.map ul li label,
+	.map ul li input {
+		cursor: pointer;
+	}
+
+	.map ul li.selected {
+		font-weight: bold;
+	}
+
+	.map .mapWrap {
+		margin: auto;
+	}
+
+	.map .infoWrap {
+		width: 33%;
+		margin-left: 30px;
+		box-sizing: border-box;
 	}
 
 	.map .mapPercent {
@@ -431,8 +622,38 @@
 		opacity: 0.7;
 	}
 
-	.timestamp span {
+	.map .timestamp span {
 		font-size: 26px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+	}
+
+	.map .timestamp {
+		position: relative;
+		min-height: 40px;
+		padding-left: 110px;
+		display: flex;
+		align-items: center;
+	}
+
+	.challengeStats table {
+		border-collapse: collapse;
+	}
+
+	.challengeStats td,
+	.challengeStats tr {
+		padding: 5px 15px;
+	}
+
+	.challengeStats table tr:nth-child(even) {
+		background: rgba(0, 0, 0, 0.075);
+	}
+
+	.challengeStats table.teamBreakdown {
+		width: 100%;
+		table-layout: fixed;
 	}
 
 	.challengeStats td {
@@ -441,8 +662,125 @@
 
 	.challengeStats .percentBar {
 		position: absolute;
-		z-index: -1;
+		z-index: 0;
 		height: 100%;
-		background: green;
+		background: linear-gradient(to right, #e6400e 0%, #9366b3 50%, #0596cf 100%);
+		left: 0;
+		top: 0;
+	}
+
+	.challengeStats .percentText {
+		z-index: 1;
+		font-weight: bold;
+		text-shadow: 0 0 5px white;
+		position: relative;
+	}
+
+	.signupwrap a {
+		padding: 20px 60px;
+		display: inline-block;
+		color: black;
+		text-decoration: none;
+		position: relative;
+		overflow: hidden;
+		text-shadow: 0 0 15px white;
+		-webkit-text-stroke: 2px white;
+		paint-order: stroke fill;
+		font-weight: bold;
+		font-size: 25px;
+		box-shadow: 0 0 1px 1px black;
+
+		transition:
+			box-shadow 0.5s ease-in-out,
+			color 0.5s ease-in-out,
+			text-shadow 0.5s ease-in-out,
+			-webkit-text-stroke 0.5s ease-in-out;
+	}
+
+	.signupwrap a:hover,
+	.signupwrap a:focus {
+		box-shadow: 0 0 20px 0px black;
+		color: white;
+		text-shadow: 0 0 15px black;
+		-webkit-text-stroke: 2px black;
+	}
+
+	.signupwrap a:active {
+		transition: box-shadow 0.1s ease-in-out;
+		box-shadow: 0 0 20px 0px white;
+	}
+
+	.signupwrap a::after {
+		content: '➤';
+		margin-left: 1em;
+		display: inline-block;
+		transform: translateX(0);
+		transition: transform 0.25s ease-in-out;
+	}
+
+	.signupwrap a:hover::after,
+	.signupwrap a:focus::after {
+		transform: translateX(1em);
+	}
+
+	.signupwrap a::before {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: 0;
+		background: linear-gradient(
+			to right,
+			#e6400e 0%,
+			#9366b3 25%,
+			#0596cf 50%,
+			rgba(0, 0, 255, 0) 100%
+		);
+		top: 0;
+		left: 0;
+		width: 200%;
+		height: 100%;
+		transform: translateX(-100%);
+		transition: transform 0.5s ease-in-out;
+	}
+
+	.signupwrap a:hover::before,
+	.signupwrap a:focus::before {
+		transform: translateX(0);
+	}
+
+	@media (max-width: 1650px) {
+		.challengeStats .teamBreakdownWrap {
+			width: 100%;
+			overflow-x: auto;
+		}
+
+		.challengeStats table.teamBreakdown {
+			width: 1300px;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		section {
+			width: 90%;
+		}
+	}
+
+	@media (max-width: 800px) {
+		section {
+			width: 95%;
+		}
+
+		.map .mapInner {
+			flex-direction: column;
+		}
+
+		.map .mapInner ul,
+		.map .mapInner .infoWrap {
+			width: 100%;
+		}
+
+		.map .mapInner .infoWrap {
+			margin-left: 0;
+		}
 	}
 </style>
