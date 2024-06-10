@@ -782,5 +782,9 @@
 		.map .mapInner .infoWrap {
 			margin-left: 0;
 		}
+
+		.podium > div {
+			height: 9em;
+		}
 	}
 </style>
