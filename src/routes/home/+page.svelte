@@ -14,20 +14,51 @@
 	<h1 class="topLogo"><img src={ttLogo} alt="" /> Seattle Transit Trek</h1>
 </section>
 
-<section class="subheading">
+<section class="midsection">
 	<p>
 		Transit Treks are part scavenger hunt, part games of skill, strategy, and pure dumb luck played
 		across the Puget Sound.
 	</p>
+</section>
+
+<section class="picsection tt3">
+	<h2>Most Recent Game</h2>
+	<p class="title">Race Across<br /><span>Seattle</span></p>
+	<p class="btnwrap">
+		<a href="/tt3" class="bigbtn">Learn More</a>
+	</p>
+</section>
+
+<section class="midsection">
+	Transit Treks take place several times each year during the summer months. The game premise and
+	rules change each time, but one thing remains constant: the Transit Trek is always completed on
+	public transit!
+</section>
+
+<section class="picsection rules">
+	<h2>See the City</h2>
 	<p>
 		Each Trek has different rules, but they all take familiar concepts and blow them up to span the
 		entire city. From Hide and Seek to Capture the Flag, players will traverse the city, completing
-		challenges along the way, to compete for glory and not much else. All on public transit, of
-		course. Transit Treks are for anyone with an ORCA card and a willingness to use it.
+		challenges along the way, to compete for glory and not much else. All on public transit.
 	</p>
-	<a href="/about" class="bigbtn">Learn More</a>
+
+	<h2>Ride the Transit</h2>
+	<p>
+		Ever taken the monorail? How about the streetcar? How well do you <em>really</em> know the Link?
+		Show off your understanding of Seattle's public transit as you traverse the city by foot, bus, train,
+		and more. Transit Treks are for anyone with an ORCA card and a willingness to use it.
+	</p>
+
+	<h2>Trek to Victory</h2>
+	<a href="/about" class="bigbtn">FAQs</a>
 </section>
-<section class="transit">
+
+<section class="midsection">
+	<p>Sound interesting? Join the Signal group to stay updated on new events.</p>
+</section>
+
+<section class="picsection previousEvents">
 	<h2>Previous Events</h2>
 	<ul>
 		<li>
@@ -58,6 +89,23 @@
 			</a>
 		</li>
 	</ul>
+</section>
+
+<section class="midsection credit">
+	<p>
+		This page includes photography by
+		<a href="https://www.pexels.com/photo/aerial-view-of-city-buildings-3964406/" target="_blank">
+			Josh Fields on Pexels
+		</a>
+		and by
+		<a
+			href="https://unsplash.com/photos/selective-focus-photography-of-glacier-mountain-under-blue-sky-jF6GX9rX3Bw"
+			target="_blank"
+		>
+			Lucas Davies on Unsplash
+		</a>. The graphic for Transit Trek 3 includes additional works credited on the
+		<a href="/tt3">game's page</a>.
+	</p>
 </section>
 
 <style>
@@ -134,15 +182,17 @@
 		mask-image: radial-gradient(rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0));
 	}
 
-	.subheading {
-		background: #f24d69;
+	.midsection {
+		background: linear-gradient(to bottom right, #f24d69, #e53935);
 		color: white;
-		padding: 70px 100px;
+		padding: 70px max(15%, 50px);
 		font-size: 22px;
 		text-align: center;
+
+		text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 	}
 
-	.transit {
+	.picsection {
 		min-height: 40vh;
 		padding: 100px;
 		position: relative;
@@ -153,7 +203,7 @@
 		box-shadow: inset 0 0 15px black;
 	}
 
-	.transit h2 {
+	.picsection h2 {
 		font-size: 40px;
 
 		text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
@@ -161,19 +211,116 @@
 		paint-order: stroke fill;
 	}
 
-	.transit ul {
-		max-width: 40%;
+	.picsection::before,
+	.picsection::after {
+		content: '';
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+
+	.picsection::before {
+		z-index: -1;
+		background: rgba(0, 0, 0, 0.5);
+		backdrop-filter: blur(5px);
+		mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 70%);
+	}
+
+	.picsection::after {
+		z-index: -2;
+
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+	}
+
+	.picsection ul,
+	.picsection p,
+	.picsection h2 {
+		width: 60%;
+		max-width: 600px;
+	}
+
+	.tt3::after {
+		background-image: url($lib/images/transit-trek-bg-wide.png);
+	}
+
+	.tt3::before {
+		display: none;
+	}
+
+	.tt3 h2 {
+		text-align: center;
+		width: 100%;
+		max-width: unset;
+	}
+
+	.tt3 {
+		text-align: center;
+	}
+
+	.tt3 .title {
+		font-size: 8vw;
+		font-weight: 900;
+		width: 100%;
+		max-width: unset;
+		margin: 0;
+
+		text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.7);
+		-webkit-text-stroke: 1vw black;
+		paint-order: stroke fill;
+	}
+
+	.tt3 .title span {
+		font-size: 13.5vw;
+		margin-top: -5vw;
+		display: inline-block;
+	}
+
+	.tt3 .btnwrap {
+		padding: 40px 80px;
+		text-align: center;
+
+		background: rgba(0, 0, 0, 0.75);
+		backdrop-filter: blur(10px);
+		box-shadow: 0 0 15px 10px black;
+
+		max-width: 500px;
+		width: 90%;
+		box-sizing: border-box;
+		margin: 1vw auto;
+	}
+
+	.tt3 .bigbtn::before {
+		background: linear-gradient(
+			to right,
+			#e6400e 0%,
+			#9366b3 25%,
+			#0596cf 50%,
+			rgba(0, 0, 255, 0) 100%
+		);
+	}
+
+	.rules::after {
+		background-image: url($lib/images/pexels-josh-fields-seattle.jpg);
+		background-position: center right;
+	}
+
+	.previousEvents ul {
 		list-style: none;
 		padding: 0;
 	}
 
-	.transit li {
+	.previousEvents li {
 		display: block;
 		padding: 0;
 		margin-bottom: 20px;
 	}
 
-	.transit li a {
+	.previousEvents li a {
 		display: block;
 		padding: 20px 60px 20px 100px;
 		background: black;
@@ -194,26 +341,26 @@
 		transform: scale(1);
 	}
 
-	.transit li a:hover,
-	.transit li a:focus {
+	.previousEvents li a:hover,
+	.previousEvents li a:focus {
 		transform: scale(1.01);
 	}
 
-	.transit li a:active {
+	.previousEvents li a:active {
 		transform: scale(0.99);
 		transition: transform 0.1s ease-in-out;
 	}
 
-	.transit li a h3 {
+	.previousEvents li a h3 {
 		margin-bottom: 0;
 		font-size: 24px;
 	}
 
-	.transit li a p {
+	.previousEvents li a p {
 		margin-top: 0;
 	}
 
-	.transit li a::before {
+	.previousEvents li a::before {
 		content: var(--num);
 		position: absolute;
 		top: 0;
@@ -229,36 +376,13 @@
 		justify-content: center;
 	}
 
-	.transit::before,
-	.transit::after {
-		content: '';
-
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-	}
-
-	.transit::before {
-		z-index: -1;
-		background: rgba(0, 0, 0, 0.5);
-		backdrop-filter: blur(5px);
-		mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 70%);
-	}
-
-	.transit::after {
-		z-index: -2;
-
-		background-image: url($lib/images/pexels-josh-fields-seattle.jpg);
-		background-size: cover;
-		background-position: center;
+	.picsection.previousEvents::after {
+		background-image: url($lib/images/lucas-davies-unsplash-rainier.jpg);
 	}
 
 	.bigbtn {
 		position: relative;
 		z-index: 2;
-		margin-top: 25px;
 
 		padding: 20px 60px;
 		display: inline-block;
@@ -316,5 +440,26 @@
 	.bigbtn:hover::before,
 	.bigbtn:focus::before {
 		transform: translateX(0);
+	}
+
+	.midsection.credit {
+		padding: 30px 50px;
+		font-size: 14px;
+		text-align: left;
+
+		text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+	}
+
+	.midsection.credit a {
+		color: white;
+	}
+
+	.midsection.credit a:hover,
+	.midsection.credit a:focus {
+		text-decoration: none;
+	}
+
+	.midsection.credit a:active {
+		text-decoration: underline;
 	}
 </style>
