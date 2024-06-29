@@ -4,6 +4,17 @@
 	import tt3Bg from '$lib/images/transit-trek-bg-wide.png';
 </script>
 
+<svelte:head>
+	<title>Seattle Transit Trek</title>
+	<meta
+		name="description"
+		content="The Seattle Transit Trek is a team-based scavenger hunt played in Seattle using its public
+		transit system. Teams compete by completing various challenges around town while using Seattle's
+		public transit system to get around, but each iteration of the Transit Trek has its own unique
+		twist."
+	/>
+</svelte:head>
+
 <section class="header">
 	<div class="video">
 		<video autoplay loop muted preload="auto" poster={linkStation}>
