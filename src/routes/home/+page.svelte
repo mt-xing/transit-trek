@@ -23,7 +23,32 @@
 
 <section class="picsection tt3">
 	<h2>Most Recent Game</h2>
-	<p class="title">Race Across<br /><span>Seattle</span></p>
+
+	<div class="textWrap">
+		<div class="textBlurWrap">
+			<svg aria-hidden="true">
+				<clipPath id="clipPath">
+					<text dominant-baseline="hanging" text-anchor="middle" x="50%" y="0%">Race Across</text>
+					<text dominant-baseline="hanging" text-anchor="middle" x="50%" y="30%">Seattle</text>
+				</clipPath>
+			</svg>
+		</div>
+		<div class="textShadowWrap">
+			<h1>Race Across<br /><span>Seattle</span></h1>
+			<svg aria-hidden="true">
+				<mask id="maskPath">
+					<rect width="100%" height="100%" fill="white" />
+					<text color="black" dominant-baseline="hanging" text-anchor="middle" x="50%" y="0%"
+						>Race Across</text
+					>
+					<text color="black" dominant-baseline="hanging" text-anchor="middle" x="50%" y="30%"
+						>Seattle</text
+					>
+				</mask>
+			</svg>
+		</div>
+	</div>
+
 	<p class="btnwrap">
 		<a href="/tt3" class="bigbtn">Learn More</a>
 	</p>
@@ -262,18 +287,6 @@
 		text-align: center;
 	}
 
-	.tt3 .title {
-		font-size: 8vw;
-		font-weight: 900;
-		width: 100%;
-		max-width: unset;
-		margin: 0;
-
-		text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.7);
-		-webkit-text-stroke: 1vw black;
-		paint-order: stroke fill;
-	}
-
 	.tt3 .title span {
 		font-size: 13.5vw;
 		margin-top: -5vw;
@@ -461,5 +474,94 @@
 
 	.midsection.credit a:active {
 		text-decoration: underline;
+	}
+
+	.textWrap {
+		margin-top: 0;
+		height: 25vw;
+		width: 100%;
+		position: relative;
+
+		transform: translateZ(0);
+	}
+
+	.textBlurWrap text:nth-child(2),
+	.textShadowWrap svg text:nth-child(3),
+	.textShadowWrap h1 span {
+		font-size: 17.5vw;
+	}
+
+	.textShadowWrap {
+		margin: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		mask: url(#maskPath);
+	}
+
+	.textShadowWrap h1 {
+		font-family: 'Noto Sans', 'Helvetica', sans-serif;
+		font-weight: 900;
+		font-size: 10vw;
+		text-align: center;
+		margin: 0;
+		line-height: 9vw;
+		transform: translateY(0.1vw);
+
+		color: white;
+
+		text-shadow: black 0 0 1.5vw;
+		-webkit-text-stroke: 1.3vw black;
+		paint-order: stroke fill;
+	}
+
+	.textShadowWrap svg {
+		pointer-events: none;
+		font-family: 'Noto Sans', 'Helvetica', sans-serif;
+		font-weight: 900;
+		font-size: 10vw;
+		text-align: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 25vw;
+	}
+
+	#maskPath {
+		background: white;
+		color: black;
+	}
+
+	.textShadowWrap h1 span {
+		line-height: 13vw;
+		-webkit-text-stroke: 1.8vw black;
+	}
+
+	.textBlurWrap {
+		pointer-events: none;
+
+		backdrop-filter: invert(1) blur(5px);
+		clip-path: url(#clipPath);
+
+		margin: 0;
+
+		font-family: 'Noto Sans', 'Helvetica', sans-serif;
+		font-weight: 900;
+		font-size: 10vw;
+		text-align: center;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.textBlurWrap svg {
+		width: 100%;
+		height: 25vw;
 	}
 </style>
