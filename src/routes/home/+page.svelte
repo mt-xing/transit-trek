@@ -181,7 +181,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 80%;
+		height: 80lvh;
 		min-height: 500px;
 
 		object-fit: cover;
