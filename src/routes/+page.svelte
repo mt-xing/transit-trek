@@ -293,6 +293,7 @@
 
 	.tt3::after {
 		background-image: url($lib/images/transit-trek-bg-wide.png);
+		background-position: top center;
 	}
 
 	.tt3::before {
