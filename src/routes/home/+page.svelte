@@ -133,16 +133,14 @@
 <section class="midsection credit">
 	<p>
 		This page includes photography by
-		<a href="https://www.pexels.com/photo/aerial-view-of-city-buildings-3964406/" target="_blank">
-			Josh Fields on Pexels
-		</a>
+		<a href="https://www.pexels.com/photo/aerial-view-of-city-buildings-3964406/" target="_blank"
+			>Josh Fields on Pexels</a
+		>
 		and by
 		<a
 			href="https://unsplash.com/photos/selective-focus-photography-of-glacier-mountain-under-blue-sky-jF6GX9rX3Bw"
-			target="_blank"
-		>
-			Lucas Davies on Unsplash
-		</a>. The graphic for Transit Trek 3 includes additional works credited on the
+			target="_blank">Lucas Davies on Unsplash</a
+		>. The graphic for Transit Trek 3 includes additional works credited on the
 		<a href="/tt3">game's page</a>.
 	</p>
 </section>
