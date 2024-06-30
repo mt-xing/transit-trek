@@ -22,7 +22,10 @@
 			<img src={linkStation} alt="" />
 		</video>
 	</div>
-	<h1 class="topLogo"><img src={ttLogo} alt="" /> Seattle Transit Trek</h1>
+	<h1 class="topLogo">
+		<img src={ttLogo} alt="" />
+		<span class="text">Seattle <span>Transit Trek</span></span>
+	</h1>
 </section>
 
 <section class="midsection">
@@ -145,11 +148,17 @@
 </section>
 
 <style>
+	:global(body) {
+		padding: 0;
+		margin: 0;
+	}
+
 	.header {
 		padding: 0;
 		margin: 0;
 		width: 100%;
 		height: 80vh;
+		min-height: 500px;
 		overflow: hidden;
 		position: relative;
 
@@ -175,6 +184,7 @@
 		left: 0;
 		width: 100%;
 		height: 80%;
+		min-height: 500px;
 
 		object-fit: cover;
 		object-position: center;
@@ -195,9 +205,8 @@
 		-webkit-text-stroke: 10px black;
 		paint-order: stroke fill;
 
-		top: 5vh;
-		left: 0;
-		right: 0;
+		max-width: 90%;
+		margin: 0 auto;
 	}
 
 	.topLogo img {
@@ -574,5 +583,72 @@
 	.textBlurWrap svg {
 		width: 100%;
 		height: 25vw;
+	}
+
+	@media (max-width: 1400px) {
+		.topLogo .text {
+			display: inline-flex;
+			flex-direction: column;
+			font-size: 80px;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		.topLogo .text {
+			font-size: 8vw;
+			-webkit-text-stroke: 1vw black;
+		}
+
+		.topLogo img {
+			width: 18vw;
+			margin-right: 5vw;
+		}
+	}
+
+	@media (max-width: 800px) {
+		.picsection.tt3 {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.tt3 .btnwrap {
+			max-width: unset;
+			width: 100%;
+			margin-top: 50px;
+		}
+
+		.picsection::before {
+			z-index: -1;
+			background: rgba(0, 0, 0, 0.5);
+			backdrop-filter: blur(5px);
+			mask-image: unset;
+		}
+
+		.picsection ul,
+		.picsection p,
+		.picsection h2 {
+			width: 100%;
+			max-width: unset;
+		}
+
+		.tt3 h2 {
+			font-size: 5vw;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.picsection {
+			padding-left: 10%;
+			padding-right: 10%;
+		}
+
+		.tt3 .bigbtn {
+			font-size: 5vw;
+		}
+
+		.tt3 .btnwrap {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
 	}
 </style>
