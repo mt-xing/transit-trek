@@ -449,7 +449,7 @@
 
 <section class="signupwrap">
 	<h2>Thank You For Playing!</h2>
-	<p style="text-align: center;"><a href="/"><span style="position:relative;">Home</span></a></p>
+	<p style="text-align: center;"><a href="/tt3"><span style="position:relative;">Home</span></a></p>
 </section>
 
 {#if selectedChallenge !== null}
