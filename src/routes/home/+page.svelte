@@ -114,7 +114,7 @@
 				href="/tt2/index.html"
 				style="--num: '2';background: linear-gradient(to right, #1B5E20, #7CB342)"
 			>
-				<h3>Dash From Dushma</h3>
+				<h3>Hide and Seek</h3>
 				<p>September 16, 2023</p>
 			</a>
 		</li>
@@ -146,9 +146,12 @@
 </section>
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 	:global(body) {
 		padding: 0;
 		margin: 0;
+		font-family: 'Noto Sans', 'Helvetica', sans-serif;
 	}
 
 	.header {
