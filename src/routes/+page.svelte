@@ -141,7 +141,8 @@
 			href="https://unsplash.com/photos/selective-focus-photography-of-glacier-mountain-under-blue-sky-jF6GX9rX3Bw"
 			target="_blank">Lucas Davies on Unsplash</a
 		>. The graphic for Transit Trek 3 includes additional works credited on the
-		<a href="/tt3">game's page</a>.
+		<a href="/tt3">game's page</a>. We don't recommend running on escalators, despite what the
+		montage above shows.
 	</p>
 </section>
 
