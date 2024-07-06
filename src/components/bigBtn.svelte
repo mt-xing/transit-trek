@@ -57,7 +57,6 @@
 		display: block;
 		position: absolute;
 		z-index: -1;
-		/* background: linear-gradient(to right, #4ef26d 0%, #4e6af2 50%, rgba(0, 0, 255, 0) 100%); */
 		background: var(--color);
 		top: 0;
 		left: 0;
