@@ -24,6 +24,8 @@
 		top: 5vh;
 		left: 0;
 		right: 0;
+
+		z-index: 5;
 	}
 
 	.topLogo img {
