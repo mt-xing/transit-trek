@@ -1,8 +1,9 @@
 <script lang="ts">
 	import ttLogo from '$lib/images/tt-logo-blank.png';
+	import { HOME_PAGE } from '../utils/paths';
 </script>
 
-<a href="/" class="topLogo"><img src={ttLogo} alt="" /> Seattle Transit Trek</a>
+<a href={HOME_PAGE} class="topLogo"><img src={ttLogo} alt="" /> Seattle Transit Trek</a>
 
 <style>
 	.topLogo {

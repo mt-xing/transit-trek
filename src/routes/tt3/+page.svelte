@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import ttLogo from '$lib/images/tt-logo-blank.png';
+	import { HOME_PAGE } from '../../utils/paths';
 
 	let y: number;
 	let innerHeight: number;
@@ -23,7 +24,7 @@
 
 <div id="bgImg" style="background-position: 50% {parallaxY * 100}%"></div>
 
-<a class="topLogo" href="/"><img src={ttLogo} alt="" /> Seattle Transit Trek</a>
+<a class="topLogo" href={HOME_PAGE}><img src={ttLogo} alt="" /> Seattle Transit Trek</a>
 
 <div class="textWrap">
 	<div class="textBlurWrap">
