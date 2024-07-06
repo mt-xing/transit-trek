@@ -29,6 +29,11 @@
 	$: secondParallaxTop = loaded ? `${mouseY * window.innerHeight * -secondParallax}px` : '';
 </script>
 
+<svelte:head>
+	<title>Transit Trek: Hide and Seek</title>
+	<meta name="description" content="Seattle Transit Trek's August 2024 event, Hide and Seek" />
+</svelte:head>
+
 <TopLogo />
 
 <div class="bodyBg"></div>
