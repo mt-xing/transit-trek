@@ -42,6 +42,7 @@ module.exports = {
 		'consistent-return': 'off',
 		'@typescript-eslint/no-use-before-define': 'off',
 		'svelte/no-dupe-style-properties': 'off',
+		'linebreak-style': 'error',
 		"@typescript-eslint/no-unused-vars": [
 			"error",
 			{

@@ -2,6 +2,7 @@
 	import ttLogo from '$lib/images/tt-logo-blank.png';
 	import linkStation from '$lib/images/link_station.jpg';
 	import tt3Bg from '$lib/images/transit-trek-bg-wide.png';
+	import BigBtn from '../components/bigBtn.svelte';
 </script>
 
 <svelte:head>
@@ -64,7 +65,7 @@
 	</div>
 
 	<p class="btnwrap">
-		<a href="/tt3" class="bigbtn">Learn More</a>
+		<BigBtn href="/tt3" text="Learn More" />
 	</p>
 </section>
 
@@ -90,7 +91,7 @@
 	</p>
 
 	<h2>Trek to Victory</h2>
-	<a href="/about" class="bigbtn">FAQs</a>
+	<BigBtn href="/about" text="FAQs" color={['#4ef26d', '#4e6af2']} />
 </section>
 
 <section class="midsection">
@@ -331,16 +332,6 @@
 		margin: 1vw auto;
 	}
 
-	.tt3 .bigbtn::before {
-		background: linear-gradient(
-			to right,
-			#e6400e 0%,
-			#9366b3 25%,
-			#0596cf 50%,
-			rgba(0, 0, 255, 0) 100%
-		);
-	}
-
 	.rules::after {
 		background-image: url($lib/images/pexels-josh-fields-seattle.jpg);
 		background-position: center right;
@@ -415,68 +406,6 @@
 
 	.picsection.previousEvents::after {
 		background-image: url($lib/images/lucas-davies-unsplash-rainier.jpg);
-	}
-
-	.bigbtn {
-		position: relative;
-		z-index: 2;
-
-		padding: 20px 60px;
-		display: inline-block;
-		color: white;
-		text-decoration: none;
-		position: relative;
-		overflow: hidden;
-		text-shadow: 0 0 15px black;
-		-webkit-text-stroke: 2px black;
-		paint-order: stroke fill;
-		font-weight: bold;
-		font-size: 25px;
-		box-shadow: 0 0 1px 1px white;
-
-		transition: box-shadow 0.5s ease-in-out;
-	}
-
-	.bigbtn:hover,
-	.bigbtn:focus {
-		box-shadow: 0 0 20px 0px white;
-	}
-
-	.bigbtn:active {
-		transition: box-shadow 0.1s ease-in-out;
-		box-shadow: 0 0 20px 0px black;
-	}
-
-	.bigbtn::after {
-		content: '➤';
-		margin-left: 1em;
-		display: inline-block;
-		transform: translateX(0);
-		transition: transform 0.25s ease-in-out;
-	}
-
-	.bigbtn:hover::after,
-	.bigbtn:focus::after {
-		transform: translateX(1em);
-	}
-
-	.bigbtn::before {
-		content: '';
-		display: block;
-		position: absolute;
-		z-index: -1;
-		background: linear-gradient(to right, #4ef26d 0%, #4e6af2 50%, rgba(0, 0, 255, 0) 100%);
-		top: 0;
-		left: 0;
-		width: 200%;
-		height: 100%;
-		transform: translateX(-100%);
-		transition: transform 0.5s ease-in-out;
-	}
-
-	.bigbtn:hover::before,
-	.bigbtn:focus::before {
-		transform: translateX(0);
 	}
 
 	.midsection.credit {
@@ -644,10 +573,6 @@
 		.picsection {
 			padding-left: 10%;
 			padding-right: 10%;
-		}
-
-		.tt3 .bigbtn {
-			font-size: 5vw;
 		}
 
 		.tt3 .btnwrap {
