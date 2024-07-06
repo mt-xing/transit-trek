@@ -3,7 +3,8 @@
 	import TopLogo from '../../components/topLogo.svelte';
 	import bg_clean from '$lib/images/tt4/bg_clean.png';
 	import shards_clean from '$lib/images/tt4/shards_clean.png';
-	import text_clean from '$lib/images/tt4/text_clean.png';
+	import text_clean from '$lib/images/tt4/text_clean_2.png';
+	import eye_clean from '$lib/images/tt4/eye.gif';
 
 	let mouseX = 0.5;
 	let mouseY = 0.5;
@@ -59,8 +60,9 @@
             top: {secondParallaxTop};"
 	/>
 	<div class="gradient"></div>
-	<img src={text_clean} alt="" />
-	<h1 class="text">Hide & Seek</h1>
+	<img class="text" src={text_clean} alt="" />
+	<div class="eyeWrap"><img src={eye_clean} alt="" /></div>
+	<h1>Hide & Seek</h1>
 	<h2 class="date">August 3, 2024</h2>
 </section>
 
@@ -112,15 +114,17 @@
 	}
 
 	.hero h1 {
-		font-size: 10vw;
+		font-size: 12vw;
 		color: white;
+		font-family: 'Segoe UI', 'Arial', sans-serif;
+		font-weight: 900;
 	}
 
 	.hero h2 {
 		position: absolute;
 		z-index: 2;
 
-		bottom: 10vw;
+		bottom: min(10vw, 10vh);
 		color: white;
 
 		font-weight: 900;
@@ -129,6 +133,20 @@
 		-webkit-text-stroke: 5px black;
 		paint-order: stroke fill;
 		text-align: center;
+	}
+
+	.hero .eyeWrap {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, calc(min(1vw, 1.8vh) - 50%));
+		z-index: 2;
+		opacity: 0.8;
+		pointer-events: none;
+	}
+
+	.hero .eyeWrap img {
+		max-width: min(10vw, 18vh);
 	}
 
 	.bodyBg {
