@@ -168,9 +168,9 @@
 		<h2>Don't Get Caught</h2>
 		<p>
 			In the past, the Dean of Students only would have dealt with you had you been caught. But this
-			time, they find your 9 absences this year so suspicious, they are actively trying to sabotage
-			your day. They've forced your best friend to share their location, and worst of all, they’ll
-			be actively monitoring it this time.
+			year, they find your 9 absences so suspicious that they will actively sabotage your day.
+			They've forced your best friend to share their location, and worst of all, they’ll be actively
+			monitoring it this time.
 		</p>
 	</div>
 </section>
@@ -348,6 +348,7 @@
 		top: 100vh;
 		left: 0;
 		z-index: 1;
+		pointer-events: none;
 	}
 
 	.bgShard.big {
@@ -363,13 +364,13 @@
 	@media (max-width: 700px) {
 		section.left,
 		section.right {
-			flex-direction: column;
+			flex-direction: column-reverse;
 		}
 
 		section.left > div,
 		section.right > div {
 			width: 100%;
-			margin: 50px 0 0 0;
+			margin: 0 0 50px 0;
 		}
 
 		section.left > img,
