@@ -19,23 +19,35 @@
 	let mouseX = 0.5;
 	let mouseY = 0.5;
 
-	let shardInfo: { x: number; y: number; rot: number; size: number; big: boolean }[] = [
-		{ x: 12, y: 25, rot: 20, size: 1, big: true },
-		{ x: 72, y: 80, rot: -20, size: 1, big: true },
-		{ x: 5, y: 145, rot: 60, size: 1, big: true },
-		{ x: 75, y: 180, rot: -60, size: 1, big: true },
-	];
+	let scrollY: number;
+	let innerHeight: number;
+
+	let shardInfo: { x: number; y: number; rot: number; size: number; big: boolean }[] = [];
 
 	let loaded = false;
+
+	let parallaxY: number;
+	$: parallaxY = loaded ? scrollY / (document.documentElement.scrollHeight - innerHeight) : 0;
+
 	onMount(() => {
 		loaded = true;
 		const maxHeight =
-			((document.body.scrollHeight - window.innerHeight) / window.innerHeight) * 100;
+			((document.body.scrollHeight - window.innerHeight * 1.2) / window.innerHeight) * 100;
+
+		[
+			{ x: 12, y: 25, rot: 20, size: 1, big: true },
+			{ x: 72, y: 80, rot: -20, size: 1, big: true },
+			{ x: 5, y: 145, rot: 60, size: 1, big: true },
+			{ x: 75, y: 180, rot: -60, size: 1, big: true },
+		].forEach((s, i, a) => {
+			shardInfo.push({ ...s, y: (maxHeight * (i + 0.5)) / a.length });
+		});
+
 		for (let i = 0; i < 10; i++) {
 			const x = Math.random() * 80;
 			const y = Math.random() * maxHeight;
 			const rot = Math.random() * 360;
-			const size = Math.random() * 0.1 + 0.15;
+			const size = Math.random() * 0.2 + 0.1;
 			shardInfo.push({ x, y, rot, size, big: false });
 		}
 		shardInfo = shardInfo;
@@ -55,12 +67,16 @@
 
 	$: secondParallaxLeft = loaded ? `${mouseX * window.innerWidth * -secondParallax}px` : '';
 	$: secondParallaxTop = loaded ? `${mouseY * window.innerHeight * -secondParallax}px` : '';
+
+	$: bigShardParallaxY = (parallaxY - 0.5) * 0.15 * innerHeight;
 </script>
 
 <svelte:head>
 	<title>Transit Trek: Hide and Seek</title>
 	<meta name="description" content="Seattle Transit Trek's August 2024 event, Hide and Seek" />
 </svelte:head>
+
+<svelte:window bind:scrollY bind:innerHeight />
 
 <TopLogo />
 
@@ -105,42 +121,18 @@
 		src={shardImgs[i % shardImgs.length]}
 		alt=""
 		class="bgShard {shard.big ? 'big' : 'small'}"
-		style="transform: translate({shard.x}vw, {shard.y}vh) rotate({shard.rot}deg) scale({shard.size});"
+		style="transform: translate({shard.x}vw, calc({shard.y}vh + {(parallaxY - 0.5) *
+			(shard.big ? 0.3 : 0.5) *
+			innerHeight}px)) rotate({shard.rot}deg) scale({shard.size});"
 	/>
 {/each}
 
-<!-- <img src={bg1} alt="" class="bgShard" style="transform: translate(12vw, 25vh) rotate(20deg);" />
-<img src={bg2} alt="" class="bgShard" style="transform: translate(72vw, 80vh) rotate(-20deg);" />
-<img src={bg3} alt="" class="bgShard" style="transform: translate(5vw, 145vh) rotate(60deg);" />
-<img src={bg4} alt="" class="bgShard" style="transform: translate(75vw, 180vh) rotate(-60deg);" />
-
-<img
-	src={bg4}
-	alt=""
-	class="bgShard"
-	style="transform: translate(72vw, 25vh) rotate(20deg) scale(0.2);"
-/>
-<img
-	src={bg3}
-	alt=""
-	class="bgShard"
-	style="transform: translate(12vw, 80vh) rotate(-20deg) scale(0.2);"
-/>
-<img
-	src={bg2}
-	alt=""
-	class="bgShard"
-	style="transform: translate(75vw, 125vh) rotate(60deg) scale(0.2);"
-/>
-<img
-	src={bg1}
-	alt=""
-	class="bgShard"
-	style="transform: translate(5vw, 180vh) rotate(-60deg) scale(0.2);"
-/> -->
-
 <section class="right">
-	<img src={shard1} alt="" />
+	<img
+		src={shard1}
+		alt=""
+		style="transform: translateY({bigShardParallaxY}px)rotate({(parallaxY - 0.5) * 0.1}rad);"
+	/>
 	<div>
 		<h2>It's Senior Skip Day!</h2>
 		<p>
@@ -151,19 +143,28 @@
 	</div>
 </section>
 
-<section class="left">
-	<img src={shard2} alt="" />
+<section class="left long">
+	<img
+		src={shard3}
+		alt=""
+		style="transform: translateY({bigShardParallaxY}px)rotate({(parallaxY - 0.5) * -0.05}rad);"
+	/>
 	<div>
 		<h2>See the City</h2>
 		<p>
 			Your goal is to do as many fun things on your agenda (“tasks”) as possible without being
-			spotted by the Dean of Students.
+			spotted by the Dean of Students. Take transit! Explore the city! Get to all of the touristy
+			sights without the help of a car.
 		</p>
 	</div>
 </section>
 
-<section class="right long">
-	<img src={shard3} alt="" />
+<section class="right">
+	<img
+		src={shard2}
+		alt=""
+		style="transform: translateY({bigShardParallaxY}px)rotate({(parallaxY - 0.5) * 0.15}rad);"
+	/>
 	<div>
 		<h2>Don't Get Caught</h2>
 		<p>
@@ -282,7 +283,7 @@
 
 		width: 80%;
 		margin: 100px auto;
-		max-width: 1000px;
+		max-width: 1200px;
 
 		display: flex;
 		align-items: center;
@@ -291,14 +292,14 @@
 
 	section.right > div,
 	section.left > div {
-		width: 50%;
+		width: 60%;
 		position: relative;
 		z-index: 2;
 	}
 
 	section.right img,
 	section.left img {
-		max-width: 40%;
+		max-width: 30%;
 		opacity: 0.8;
 	}
 
@@ -322,7 +323,7 @@
 		width: 40%;
 	}
 
-	section.right.long img {
+	section.long img {
 		max-width: 50%;
 	}
 
