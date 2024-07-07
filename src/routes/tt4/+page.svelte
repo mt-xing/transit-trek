@@ -179,6 +179,12 @@
 <p style="margin: 200px 0; color: white; text-align: center; font-size: 30px;">More Details TBA</p>
 
 <style>
+	:global(body) {
+		padding: 0;
+		margin: 0;
+		overflow-x: hidden;
+	}
+
 	.hero {
 		width: 100%;
 		height: 100vh;
@@ -319,7 +325,7 @@
 		margin-left: 10%;
 	}
 
-	section.right > div {
+	section.long > div {
 		width: 40%;
 	}
 
@@ -353,5 +359,27 @@
 	.bgShard.small {
 		filter: brightness(0.7);
 		opacity: 0.5;
+	}
+
+	@media (max-width: 700px) {
+		section.left,
+		section.right {
+			flex-direction: column;
+		}
+
+		section.left > div,
+		section.right > div {
+			width: 100%;
+			margin: 50px 0 0 0;
+		}
+
+		section.left > img,
+		section.right > img {
+			max-width: 250px;
+		}
+
+		section.long > img {
+			max-width: 70%;
+		}
 	}
 </style>
