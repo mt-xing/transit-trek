@@ -4,15 +4,41 @@
 	import bg_clean from '$lib/images/tt4/bg_clean.png';
 	import shards_clean from '$lib/images/tt4/shards_clean.png';
 	import text_clean from '$lib/images/tt4/text_clean_2.png';
-	import eye_clean from '$lib/images/tt4/eye.gif';
 	import eye_vid_webm from '$lib/images/tt4/test.webm';
+	import shard1 from '$lib/images/tt4/shard_1.png';
+	import shard2 from '$lib/images/tt4/shard_2.png';
+	import shard3 from '$lib/images/tt4/shard_3.png';
+
+	import bg1 from '$lib/images/tt4/bg_shards/bg_1.png';
+	import bg2 from '$lib/images/tt4/bg_shards/bg_2.png';
+	import bg3 from '$lib/images/tt4/bg_shards/bg_3.png';
+	import bg4 from '$lib/images/tt4/bg_shards/bg_4.png';
+
+	const shardImgs = [bg1, bg2, bg3, bg4];
 
 	let mouseX = 0.5;
 	let mouseY = 0.5;
 
+	let shardInfo: { x: number; y: number; rot: number; size: number; big: boolean }[] = [
+		{ x: 12, y: 25, rot: 20, size: 1, big: true },
+		{ x: 72, y: 80, rot: -20, size: 1, big: true },
+		{ x: 5, y: 145, rot: 60, size: 1, big: true },
+		{ x: 75, y: 180, rot: -60, size: 1, big: true },
+	];
+
 	let loaded = false;
 	onMount(() => {
 		loaded = true;
+		const maxHeight =
+			((document.body.scrollHeight - window.innerHeight) / window.innerHeight) * 100;
+		for (let i = 0; i < 10; i++) {
+			const x = Math.random() * 80;
+			const y = Math.random() * maxHeight;
+			const rot = Math.random() * 360;
+			const size = Math.random() * 0.1 + 0.15;
+			shardInfo.push({ x, y, rot, size, big: false });
+		}
+		shardInfo = shardInfo;
 	});
 
 	function handleMousemove(event: MouseEvent) {
@@ -62,7 +88,6 @@
 	/>
 	<div class="gradient"></div>
 	<img class="text" src={text_clean} alt="" />
-	<!-- <div class="eyeWrap"><img src={eye_clean} alt="" /></div> -->
 	<video width="200" height="200" class="eyeWrap" autoplay muted playsinline>
 		<!-- <source 
 		  src="https://rotato.netlify.app/alpha-demo/movie-hevc.mov" 
@@ -71,6 +96,83 @@
 	</video>
 	<h1>Hide & Seek</h1>
 	<h2 class="date">August 3, 2024</h2>
+</section>
+
+<div class="postHero"></div>
+
+{#each shardInfo as shard, i}
+	<img
+		src={shardImgs[i % shardImgs.length]}
+		alt=""
+		class="bgShard {shard.big ? 'big' : 'small'}"
+		style="transform: translate({shard.x}vw, {shard.y}vh) rotate({shard.rot}deg) scale({shard.size});"
+	/>
+{/each}
+
+<!-- <img src={bg1} alt="" class="bgShard" style="transform: translate(12vw, 25vh) rotate(20deg);" />
+<img src={bg2} alt="" class="bgShard" style="transform: translate(72vw, 80vh) rotate(-20deg);" />
+<img src={bg3} alt="" class="bgShard" style="transform: translate(5vw, 145vh) rotate(60deg);" />
+<img src={bg4} alt="" class="bgShard" style="transform: translate(75vw, 180vh) rotate(-60deg);" />
+
+<img
+	src={bg4}
+	alt=""
+	class="bgShard"
+	style="transform: translate(72vw, 25vh) rotate(20deg) scale(0.2);"
+/>
+<img
+	src={bg3}
+	alt=""
+	class="bgShard"
+	style="transform: translate(12vw, 80vh) rotate(-20deg) scale(0.2);"
+/>
+<img
+	src={bg2}
+	alt=""
+	class="bgShard"
+	style="transform: translate(75vw, 125vh) rotate(60deg) scale(0.2);"
+/>
+<img
+	src={bg1}
+	alt=""
+	class="bgShard"
+	style="transform: translate(5vw, 180vh) rotate(-60deg) scale(0.2);"
+/> -->
+
+<section class="right">
+	<img src={shard1} alt="" />
+	<div>
+		<h2>It's Senior Skip Day!</h2>
+		<p>
+			You and your friends are trying to have a fun-packed day in Seattle. Unfortunately, your
+			school's Dean of Students is suspicious of you calling in sick, and if they catch you with
+			your friends, your day will be ruined. Even worse, they'll be in Seattle tracking you down.
+		</p>
+	</div>
+</section>
+
+<section class="left">
+	<img src={shard2} alt="" />
+	<div>
+		<h2>See the City</h2>
+		<p>
+			Your goal is to do as many fun things on your agenda (“tasks”) as possible without being
+			spotted by the Dean of Students.
+		</p>
+	</div>
+</section>
+
+<section class="right long">
+	<img src={shard3} alt="" />
+	<div>
+		<h2>Don't Get Caught</h2>
+		<p>
+			In the past, the Dean of Students only would have dealt with you had you been caught. But this
+			time, they find your 9 absences this year so suspicious, they are actively trying to sabotage
+			your day. They've forced your best friend to share their location, and worst of all, they’ll
+			be actively monitoring it this time.
+		</p>
+	</div>
 </section>
 
 <p style="margin: 200px 0; color: white; text-align: center; font-size: 30px;">More Details TBA</p>
@@ -160,6 +262,95 @@
 		left: 0;
 		bottom: 0;
 		right: 0;
-		background: #0e0a1a;
+		background: radial-gradient(farthest-corner at 0 0, #150f37, #0e0a1a);
+	}
+
+	.postHero {
+		position: absolute;
+		z-index: 1;
+		top: 100vh;
+		left: 0;
+		right: 0;
+		height: 10vw;
+		background: linear-gradient(to bottom, #0e0a1a, rgba(0, 0, 0, 0));
+	}
+
+	section.right,
+	section.left {
+		color: white;
+		font-size: 1.2em;
+
+		width: 80%;
+		margin: 100px auto;
+		max-width: 1000px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	section.right > div,
+	section.left > div {
+		width: 50%;
+		position: relative;
+		z-index: 2;
+	}
+
+	section.right img,
+	section.left img {
+		max-width: 40%;
+		opacity: 0.8;
+	}
+
+	section.right {
+		flex-direction: row-reverse;
+	}
+
+	section.right div {
+		margin-right: 10%;
+	}
+
+	section.left {
+		flex-direction: row;
+	}
+
+	section.left div {
+		margin-left: 10%;
+	}
+
+	section.right > div {
+		width: 40%;
+	}
+
+	section.right.long img {
+		max-width: 50%;
+	}
+
+	section.right h2,
+	section.left h2 {
+		text-shadow:
+			0 0 20px purple,
+			20px 0 20px purple,
+			-20px 0 20px purple,
+			0 10px 20px purple,
+			0 -10px 20px purple;
+	}
+
+	.bgShard {
+		position: absolute;
+		width: max(20vw, 200px);
+		top: 100vh;
+		left: 0;
+		z-index: 1;
+	}
+
+	.bgShard.big {
+		opacity: 0.7;
+		filter: blur(5px) brightness(0.7);
+	}
+
+	.bgShard.small {
+		filter: brightness(0.7);
+		opacity: 0.5;
 	}
 </style>
