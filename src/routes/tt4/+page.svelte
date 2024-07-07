@@ -5,6 +5,7 @@
 	import shards_clean from '$lib/images/tt4/shards_clean.png';
 	import text_clean from '$lib/images/tt4/text_clean_2.png';
 	import eye_clean from '$lib/images/tt4/eye.gif';
+	import eye_vid_webm from '$lib/images/tt4/test.webm';
 
 	let mouseX = 0.5;
 	let mouseY = 0.5;
@@ -61,7 +62,13 @@
 	/>
 	<div class="gradient"></div>
 	<img class="text" src={text_clean} alt="" />
-	<div class="eyeWrap"><img src={eye_clean} alt="" /></div>
+	<!-- <div class="eyeWrap"><img src={eye_clean} alt="" /></div> -->
+	<video width="200" height="200" class="eyeWrap" autoplay muted playsinline>
+		<!-- <source 
+		  src="https://rotato.netlify.app/alpha-demo/movie-hevc.mov" 
+		  type='video/mp4; codecs="hvc1"'> -->
+		<source src={eye_vid_webm} type="video/webm" />
+	</video>
 	<h1>Hide & Seek</h1>
 	<h2 class="date">August 3, 2024</h2>
 </section>
@@ -143,9 +150,6 @@
 		z-index: 2;
 		opacity: 0.8;
 		pointer-events: none;
-	}
-
-	.hero .eyeWrap img {
 		max-width: min(10vw, 18vh);
 	}
 
