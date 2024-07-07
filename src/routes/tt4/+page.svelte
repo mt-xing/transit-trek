@@ -76,14 +76,13 @@
 	<meta name="description" content="Seattle Transit Trek's August 2024 event, Hide and Seek" />
 </svelte:head>
 
-<svelte:window bind:scrollY bind:innerHeight />
+<svelte:window bind:scrollY bind:innerHeight on:mousemove={handleMousemove} />
 
 <TopLogo />
 
 <div class="bodyBg"></div>
 
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<section class="hero" on:mousemove={handleMousemove}>
+<section class="hero">
 	<img
 		src={bg_clean}
 		alt=""
@@ -275,11 +274,11 @@
 	.postHero {
 		position: absolute;
 		z-index: 1;
-		top: 100vh;
+		top: 90vh;
 		left: 0;
 		right: 0;
-		height: 10vw;
-		background: linear-gradient(to bottom, #0e0a1a, rgba(0, 0, 0, 0));
+		height: 20vh;
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #0e0a1a, rgba(0, 0, 0, 0));
 	}
 
 	section.right,
