@@ -60,13 +60,15 @@
 
 	const firstParallax = 0.01;
 
+	$: parallaxMouseY = loaded ? mouseY - Math.min(scrollY / window.innerHeight, 1) * 20 : mouseY;
+
 	$: firstParallaxLeft = loaded ? `${mouseX * window.innerWidth * -firstParallax}px` : '';
-	$: firstParallaxTop = loaded ? `${mouseY * window.innerHeight * -firstParallax}px` : '';
+	$: firstParallaxTop = loaded ? `${parallaxMouseY * window.innerHeight * -firstParallax}px` : '';
 
 	const secondParallax = 0.005;
 
 	$: secondParallaxLeft = loaded ? `${mouseX * window.innerWidth * -secondParallax}px` : '';
-	$: secondParallaxTop = loaded ? `${mouseY * window.innerHeight * -secondParallax}px` : '';
+	$: secondParallaxTop = loaded ? `${parallaxMouseY * window.innerHeight * -secondParallax}px` : '';
 
 	$: bigShardParallaxY = (parallaxY - 0.5) * 0.15 * innerHeight;
 </script>
