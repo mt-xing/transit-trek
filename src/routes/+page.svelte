@@ -2,6 +2,7 @@
 	import ttLogo from '$lib/images/tt-logo-blank.png';
 	import linkStation from '$lib/images/link_station.jpg';
 	import tt3Bg from '$lib/images/transit-trek-bg-wide.png';
+	import tt4Text from '$lib/images/tt4/text_clean_no_glow.png';
 	import BigBtn from '../components/bigBtn.svelte';
 </script>
 
@@ -36,36 +37,13 @@
 	</p>
 </section>
 
-<section class="picsection tt3">
-	<h2>Most Recent Game</h2>
+<section class="picsection tt4">
+	<h2>Upcoming Game</h2>
 
-	<div class="textWrap">
-		<div class="textBlurWrap">
-			<svg aria-hidden="true">
-				<clipPath id="clipPath">
-					<text dominant-baseline="hanging" text-anchor="middle" x="50%" y="0%">Race Across</text>
-					<text dominant-baseline="hanging" text-anchor="middle" x="50%" y="30%">Seattle</text>
-				</clipPath>
-			</svg>
-		</div>
-		<div class="textShadowWrap">
-			<h1>Race Across<br /><span>Seattle</span></h1>
-			<svg aria-hidden="true">
-				<mask id="maskPath">
-					<rect width="100%" height="100%" fill="white" />
-					<text color="black" dominant-baseline="hanging" text-anchor="middle" x="50%" y="0%"
-						>Race Across</text
-					>
-					<text color="black" dominant-baseline="hanging" text-anchor="middle" x="50%" y="30%"
-						>Seattle</text
-					>
-				</mask>
-			</svg>
-		</div>
-	</div>
+	<img src={tt4Text} alt="Hide and Seek" />
 
 	<p class="btnwrap">
-		<BigBtn href="/tt3" text="Learn More" />
+		<BigBtn href="/tt4" text="Learn More" color={['rgb(255,100,255)', 'rgb(50,0,100)']} />
 	</p>
 </section>
 
@@ -293,43 +271,42 @@
 		max-width: 600px;
 	}
 
-	.tt3::after {
-		background-image: url($lib/images/transit-trek-bg-wide.png);
+	.tt4::after {
+		background-image: url($lib/images/tt4/bg_graphic.png);
 		background-position: top center;
 	}
 
-	.tt3::before {
+	.tt4::before {
 		display: none;
 	}
 
-	.tt3 h2 {
+	.tt4 h2 {
 		text-align: center;
 		width: 100%;
 		max-width: unset;
 	}
 
-	.tt3 {
+	.tt4 {
 		text-align: center;
 	}
 
-	.tt3 .title span {
-		font-size: 13.5vw;
-		margin-top: -5vw;
-		display: inline-block;
-	}
-
-	.tt3 .btnwrap {
-		padding: 40px 80px;
+	.tt4 .btnwrap {
+		padding: 0;
 		text-align: center;
 
 		background: rgba(0, 0, 0, 0.75);
 		backdrop-filter: blur(10px);
 		box-shadow: 0 0 15px 10px black;
 
-		max-width: 500px;
-		width: 90%;
+		max-width: initial;
+		width: initial;
+		display: inline-block;
 		box-sizing: border-box;
 		margin: 1vw auto;
+	}
+
+	.tt4 img {
+		max-width: 90%;
 	}
 
 	.rules::after {
@@ -429,95 +406,6 @@
 		text-decoration: underline;
 	}
 
-	.textWrap {
-		margin-top: 0;
-		height: 25vw;
-		width: 100%;
-		position: relative;
-
-		transform: translateZ(0);
-	}
-
-	.textBlurWrap text:nth-child(2),
-	.textShadowWrap svg text:nth-child(3),
-	.textShadowWrap h1 span {
-		font-size: 17.5vw;
-	}
-
-	.textShadowWrap {
-		margin: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-
-		mask: url(#maskPath);
-	}
-
-	.textShadowWrap h1 {
-		font-family: 'Noto Sans', 'Helvetica', sans-serif;
-		font-weight: 900;
-		font-size: 10vw;
-		text-align: center;
-		margin: 0;
-		line-height: 9vw;
-		transform: translateY(0.1vw);
-
-		color: white;
-
-		text-shadow: black 0 0 1.5vw;
-		-webkit-text-stroke: 1.3vw black;
-		paint-order: stroke fill;
-	}
-
-	.textShadowWrap svg {
-		pointer-events: none;
-		font-family: 'Noto Sans', 'Helvetica', sans-serif;
-		font-weight: 900;
-		font-size: 10vw;
-		text-align: center;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 25vw;
-	}
-
-	#maskPath {
-		background: white;
-		color: black;
-	}
-
-	.textShadowWrap h1 span {
-		line-height: 13vw;
-		-webkit-text-stroke: 1.8vw black;
-	}
-
-	.textBlurWrap {
-		pointer-events: none;
-
-		backdrop-filter: invert(1) blur(5px);
-		clip-path: url(#clipPath);
-
-		margin: 0;
-
-		font-family: 'Noto Sans', 'Helvetica', sans-serif;
-		font-weight: 900;
-		font-size: 10vw;
-		text-align: center;
-
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-	}
-
-	.textBlurWrap svg {
-		width: 100%;
-		height: 25vw;
-	}
-
 	@media (max-width: 1400px) {
 		.topLogo .text {
 			display: inline-flex;
@@ -527,6 +415,11 @@
 	}
 
 	@media (max-width: 1000px) {
+		.picsection.tt4 {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
 		.topLogo .text {
 			font-size: 8vw;
 			-webkit-text-stroke: 1vw black;
@@ -539,14 +432,8 @@
 	}
 
 	@media (max-width: 800px) {
-		.picsection.tt3 {
-			padding-left: 0;
-			padding-right: 0;
-		}
-
-		.tt3 .btnwrap {
+		.tt4 .btnwrap {
 			max-width: unset;
-			width: 100%;
 			margin-top: 50px;
 		}
 
@@ -564,7 +451,7 @@
 			max-width: unset;
 		}
 
-		.tt3 h2 {
+		.tt4 h2 {
 			font-size: 5vw;
 		}
 	}
@@ -575,7 +462,7 @@
 			padding-right: 10%;
 		}
 
-		.tt3 .btnwrap {
+		.tt4 .btnwrap {
 			padding-left: 10px;
 			padding-right: 10px;
 		}
