@@ -21,7 +21,7 @@
 
 	.smallBtn::after {
 		content: '➤';
-		margin-left: 1em;
+		margin-left: 0.5em;
 		display: inline-block;
 		transform: translateX(0);
 		transition: transform 0.25s ease-in-out;

@@ -17,6 +17,8 @@
 	import bg4 from '$lib/images/tt4/bg_shards/bg_4.png';
 	import { HOME_PAGE } from '../../utils/paths';
 
+	const PARTIFUL_LINK = 'https://partiful.com/e/xewzRnBpyz9KKKOocilt';
+
 	const shardImgs = [bg1, bg2, bg3, bg4];
 
 	let mouseX = 0.5;
@@ -35,7 +37,7 @@
 	onMount(() => {
 		loaded = true;
 		const maxHeight =
-			((document.body.scrollHeight - window.innerHeight * 1.4) / window.innerHeight) * 100;
+			((document.body.scrollHeight - window.innerHeight * 2) / window.innerHeight) * 100;
 
 		[
 			{ x: 12, y: 25, rot: 20, size: 1, big: true },
@@ -130,10 +132,15 @@
 		alt=""
 		class="bgShard {shard.big ? 'big' : 'small'}"
 		style="transform: translate({shard.x}vw, calc({shard.y}vh + {(parallaxY - 0.5) *
-			(shard.big ? 0.3 : 0.5) *
+			(shard.big ? 0.9 : 1.5) *
 			innerHeight}px)) rotate({shard.rot}deg) scale({shard.size});"
 	/>
 {/each}
+
+<p class="midtext signupWrap upper">
+	<strong>Ready to Trek?</strong>
+	<BigBtn href={PARTIFUL_LINK} text="Sign Up" color={['rgb(255,100,255)', 'rgb(50,0,100)']} />
+</p>
 
 <section class="right">
 	<img
@@ -184,9 +191,9 @@
 	</div>
 </section>
 
-<p class="midtext signupWrap">
-	<strong>Ready to Trek?</strong>
-	<BigBtn href={HOME_PAGE} text="Sign Up" />
+<p class="midtext signupWrap lower">
+	<strong>Sound Fun?</strong>
+	<BigBtn href={PARTIFUL_LINK} text="Sign Up" color={['rgb(255,100,255)', 'rgb(50,0,100)']} />
 </p>
 
 <p class="midtext">
@@ -195,7 +202,9 @@
 	<SmallBtn href={HOME_PAGE} text="Learn More" />
 </p>
 
-<p class="midtext" style="margin-top: 200px;">Read on for detailed game rules and instructions.</p>
+<p class="midtext" style="margin-top: 200px;">
+	Read on for detailed game rules, instructions, and important notices.
+</p>
 
 <details style="margin-top: 100px">
 	<summary><h2>Requirements</h2></summary>
@@ -597,7 +606,7 @@
 			href="https://www.pexels.com/photo/photo-of-white-ferris-wheel-across-city-buildings-2322707/"
 			target="_blank">Garrett Morrow</a
 		>
-		on Pexels, as well as photography by
+		on Pexels, and photography by
 		<a
 			href="https://unsplash.com/photos/selective-focus-photography-of-glacier-mountain-under-blue-sky-jF6GX9rX3Bw"
 			target="_blank">Lucas Davies</a
@@ -614,7 +623,7 @@
 		<a href="https://unsplash.com/photos/public-market-center-signage-xsqF178XAhk" target="_blank"
 			>Sabine Ojeil</a
 		>
-		on Unsplash. In addition, illustrations from
+		on Unsplash, as well as illustrations by
 		<a
 			href="https://www.freepik.com/free-vector/realistic-glass-shard-pieces_23996211.htm"
 			target="_blank">pikisuperstar</a
@@ -623,7 +632,7 @@
 		<a
 			href="https://www.freepik.com/free-vector/broken-glass-fragments-shards-realistic-set_4300945.htm"
 			target="_blank">macrovector</a
-		> from Freepik are also present.
+		> from Freepik.
 	</p>
 </small>
 
@@ -827,6 +836,13 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
+	}
+
+	.signupWrap.upper {
+		margin: 200px auto 50px auto;
+	}
+
+	.signupWrap.lower {
 		margin: 200px auto 250px auto;
 	}
 
@@ -852,8 +868,16 @@
 		box-shadow: 2px 2px 10px black;
 	}
 
+	details summary {
+		cursor: pointer;
+	}
+
+	details summary::marker {
+		font-size: 24px;
+	}
+
 	details h2 {
-		display: inline-block;
+		display: inline;
 		margin: 0;
 	}
 
@@ -889,6 +913,16 @@
 		position: relative;
 		z-index: 2;
 		margin: 0 20px;
+		padding: 10px 20px;
+	}
+
+	@media (max-width: 1100px) {
+		details,
+		.midtext,
+		.disclaimer {
+			margin-left: 5vw;
+			margin-right: 5vw;
+		}
 	}
 
 	@media (max-width: 700px) {
@@ -910,6 +944,22 @@
 
 		section.long > img {
 			max-width: 70%;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.signupWrap {
+			flex-direction: column;
+		}
+
+		.signupWrap strong {
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+
+		details {
+			padding-left: 10vw;
+			padding-right: 10vw;
 		}
 	}
 </style>
