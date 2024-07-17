@@ -7,6 +7,7 @@
 	import shards_clean from '$lib/images/tt4/shards_clean.png';
 	import text_clean from '$lib/images/tt4/text_clean_2.png';
 	import eye_vid_webm from '$lib/images/tt4/eye.webm';
+	import eye_vid_hevc from '$lib/images/tt4/eye-hevc.mov';
 	import shard1 from '$lib/images/tt4/shard_1.png';
 	import shard2 from '$lib/images/tt4/shard_2.png';
 	import shard3 from '$lib/images/tt4/shard_3.png';
@@ -115,9 +116,7 @@
 	<div class="gradient"></div>
 	<img class="text" src={text_clean} alt="" />
 	<video width="256" height="256" class="eyeWrap" autoplay muted playsinline loop>
-		<!-- <source 
-		  src="https://rotato.netlify.app/alpha-demo/movie-hevc.mov" 
-		  type='video/mp4; codecs="hvc1"'> -->
+		<source src={eye_vid_hevc} type={'video/mp4; codecs="hvc1"'} />
 		<source src={eye_vid_webm} type="video/webm" />
 	</video>
 	<h1>Hide & Seek</h1>
