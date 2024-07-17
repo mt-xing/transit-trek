@@ -6,7 +6,7 @@
 	import bg_clean from '$lib/images/tt4/bg_clean.png';
 	import shards_clean from '$lib/images/tt4/shards_clean.png';
 	import text_clean from '$lib/images/tt4/text_clean_2.png';
-	import eye_vid_webm from '$lib/images/tt4/test.webm';
+	import eye_vid_webm from '$lib/images/tt4/eye.webm';
 	import shard1 from '$lib/images/tt4/shard_1.png';
 	import shard2 from '$lib/images/tt4/shard_2.png';
 	import shard3 from '$lib/images/tt4/shard_3.png';
@@ -114,7 +114,7 @@
 	/>
 	<div class="gradient"></div>
 	<img class="text" src={text_clean} alt="" />
-	<video width="200" height="200" class="eyeWrap" autoplay muted playsinline>
+	<video width="256" height="256" class="eyeWrap" autoplay muted playsinline loop>
 		<!-- <source 
 		  src="https://rotato.netlify.app/alpha-demo/movie-hevc.mov" 
 		  type='video/mp4; codecs="hvc1"'> -->
@@ -717,7 +717,7 @@
 		z-index: 2;
 		opacity: 0.8;
 		pointer-events: none;
-		max-width: min(10vw, 18vh);
+		max-width: min(12vw, 21.6vh);
 	}
 
 	.bodyBg {
