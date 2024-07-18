@@ -541,9 +541,7 @@
 	<details>
 		<summary><h2>Ending Point</h2></summary>
 		<p>
-			The ending point will be a shop in Pike Place Market, to be announced on Signal one hour
-			before the end of the game. The zone demarcating where the game could end is marked on the
-			above map.
+			The ending point will be Asean Streat in Westlake.
 		</p>
 	</details>
 
