@@ -43,7 +43,7 @@
 	<img src={tt4Text} alt="Hide and Seek" />
 
 	<p class="btnwrap">
-		<BigBtn href="/tt4" text="Learn More" color={['rgb(255,100,255)', 'rgb(50,0,100)']} />
+		<BigBtn href="/tt4" text="Learn More" color={['rgb(255,100,255)', 'rgb(50,0,100)']} external={true} />
 	</p>
 </section>
 
