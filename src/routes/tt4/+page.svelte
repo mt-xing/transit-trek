@@ -490,7 +490,9 @@
 		<ul>
 			<li>
 				You must obey all applicable laws, regulations, and rules during the game. (To be fair, it's
-				probably also smart to obey laws outside the game.)
+				probably also smart to obey laws outside the game.). <strong
+					>This includes jaywalking.</strong
+				>
 			</li>
 			<li>
 				You must correctly pay the fare when taking transit. This includes both tapping on but
