@@ -692,6 +692,8 @@
 	.hero .text {
 		object-fit: contain;
 		object-position: center center;
+
+		z-index: 5;
 	}
 
 	.hero .gradient {
@@ -831,7 +833,7 @@
 	}
 
 	.bgShard.small {
-		filter: brightness(0.7);
+		filter: blur(10px) brightness(0.7);
 		opacity: 0.5;
 	}
 
