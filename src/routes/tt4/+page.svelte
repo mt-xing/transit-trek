@@ -540,9 +540,7 @@
 
 	<details>
 		<summary><h2>Ending Point</h2></summary>
-		<p>
-			The ending point will be Asean Streat in Westlake.
-		</p>
+		<p>The ending point will be Asean Streat in Westlake.</p>
 	</details>
 
 	<details>
