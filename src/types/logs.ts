@@ -47,7 +47,7 @@ export function logOp(entry: LogEntry): PatchOperation {
 export async function writeLog(entry: DistributiveOmit<LogEntry, "time">) {
     await writeClient
         .database('transit-trek')
-        .container('game')
+        .container('tt3-game')
         .item(LOGS_KEY, LOGS_KEY)
         .patch([logOp({ ...entry, time: (new Date()).getTime() })]);
 }

@@ -1,23 +1,6 @@
-<script lang="ts">
-	import { signOut } from '@auth/sveltekit/client';
-	import { page } from '$app/stores';
-</script>
-
-<h1>Super Secret Admin Page</h1>
-<p>
-	{#if $page.data.session}
-		<span>
-			<small>Signed in as</small><br />
-			<strong>{$page.data.session.user?.name ?? 'User'}</strong>
-		</span>
-		<button on:click={() => signOut()} class="button">Sign out</button>
-	{/if}
-</p>
-
-<h1>TT4</h1>
+<h1>TT3: Super Secret Admin Page</h1>
 
 <h2>Setup</h2>
-<h1>TODO</h1>
 <p><a href="/admin/tt3/challenges">Edit Challenges</a></p>
 <p><a href="/admin/tt3/teams">Edit Teams</a></p>
 
@@ -27,8 +10,8 @@
 <p><a href="/admin/tt3/entry">Challenge Status Entry</a></p>
 <p><a href="/admin/tt3/logs">Logs</a></p>
 
-<h2>Old Events</h2>
-<p><a href="/admin/tt3">TT3</a></p>
+<h2>Back</h2>
+<p><a href="/admin">Back</a></p>
 
 <style>
 	h1,
