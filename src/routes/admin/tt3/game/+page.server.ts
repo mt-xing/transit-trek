@@ -1,7 +1,7 @@
 import { CosmosClient } from '@azure/cosmos';
 import { redirect } from '@sveltejs/kit';
 import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
-import { GAME_KEY, type TT3GameState } from '../../../../types/game';
+import { GAME_KEY, type TT3GameState } from '../../../../types/tt3/game';
 import type { Actions, PageServerLoad, RequestEvent } from './$types';
 
 const client = new CosmosClient({

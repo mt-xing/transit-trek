@@ -2,7 +2,7 @@ import { CosmosClient } from '@azure/cosmos';
 import { error, redirect } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
 import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
-import type { TT3ChallengeDefinition } from '../../../../types/challenge';
+import type { TT3ChallengeDefinition } from '../../../../types/tt3/challenge';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,

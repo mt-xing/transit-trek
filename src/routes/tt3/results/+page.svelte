@@ -1,14 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import type { TT3PublicChallengeDefinition } from '../../../types/challenge';
+	import type { TT3PublicChallengeDefinition } from '../../../types/tt3/challenge';
 	import ChallengeView from '../../../components/challengeView.svelte';
-	import type { TT3ChallengeProgress, TT3Team } from '../../../types/team';
+	import type { TT3ChallengeProgress, TT3Team } from '../../../types/tt3/team';
 	import challengesRaw from '../challenges.json';
 	import results from '../results.json';
 	import teamsRaw from '../teams.json';
 	import Map from '../../../components/map/map.svelte';
 	import { isChallengeComplete } from '../../../utils/challenge';
-	import type { TT3LogEntry } from '../../../types/logs';
+	import type { TT3LogEntry } from '../../../types/tt3/logs';
 	import { browser } from '$app/environment';
 	import Error from '../../+error.svelte';
 

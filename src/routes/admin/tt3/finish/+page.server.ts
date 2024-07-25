@@ -1,11 +1,11 @@
 import { CosmosClient } from '@azure/cosmos';
 import { redirect } from '@sveltejs/kit';
 import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
-import { GAME_KEY, type TT3GameState } from '../../../../types/game';
+import { GAME_KEY, type TT3GameState } from '../../../../types/tt3/game';
 import type { Actions, PageServerLoad, RequestEvent } from './$types';
-import type { TT3Team } from '../../../../types/team';
-import { writeLog } from '../../../../types/logs';
-import type { TT3ChallengeDefinition } from '../../../../types/challenge';
+import type { TT3Team } from '../../../../types/tt3/team';
+import { writeLog } from '../../../../types/tt3/logs';
+import type { TT3ChallengeDefinition } from '../../../../types/tt3/challenge';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,

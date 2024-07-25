@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ChallengeEntry from '../../../../components/challengeEntry.svelte';
-	import type { TT3ChallengeDefinition } from '../../../../types/challenge';
-	import type { TT3Team } from '../../../../types/team';
+	import type { TT3ChallengeDefinition } from '../../../../types/tt3/challenge';
+	import type { TT3Team } from '../../../../types/tt3/team';
 	import type { PageData } from './$types';
 
 	export let data: PageData;

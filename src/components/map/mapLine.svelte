@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { TT3PublicChallengeDefinition } from '../../types/challenge';
-	import type { TT3DashboardPassthroughInfo } from '../../types/map';
+	import type { TT3PublicChallengeDefinition } from '../../types/tt3/challenge';
+	import type { TT3DashboardPassthroughInfo } from '../../types/tt3/map';
 	import { isChallengeComplete, isChallengeUnlocked } from '../../utils/challenge';
 	import ChallengeBtns from '../challengeBtns/challengeBtns.svelte';
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { TT3ChallengeType } from '../../../../../types/challenge';
+	import type { TT3ChallengeType } from '../../../../../types/tt3/challenge';
 	import type { PageData } from './$types';
 
 	export let data: PageData;

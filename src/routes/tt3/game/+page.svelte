@@ -3,10 +3,10 @@
 	import SingleChallengeBtn from '../../../components/challengeBtns/singleChallengeBtn.svelte';
 	import ChallengeView from '../../../components/challengeView.svelte';
 	import Map from '../../../components/map/map.svelte';
-	import type { TT3PublicChallengeDefinition } from '../../../types/challenge';
+	import type { TT3PublicChallengeDefinition } from '../../../types/tt3/challenge';
 	import assertUnreachable from '../../../utils/assertUnreachable';
 	import type { PageData } from './$types';
-	import type { TT3GameState } from '../../../types/game';
+	import type { TT3GameState } from '../../../types/tt3/game';
 
 	export let data: PageData;
 	let { allChallenges, gameState, team } = data;

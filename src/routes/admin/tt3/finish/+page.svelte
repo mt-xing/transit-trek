@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { TT3Team } from '../../../../types/team';
+	import type { TT3Team } from '../../../../types/tt3/team';
 	import { isChallengeComplete } from '../../../../utils/challenge';
 	import type { PageData } from './$types';
 

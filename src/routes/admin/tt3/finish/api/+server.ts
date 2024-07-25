@@ -2,7 +2,7 @@ import { CosmosClient } from '@azure/cosmos';
 import { error, json } from '@sveltejs/kit';
 import { DB_URL, READ_KEY } from '$env/static/private';
 import type { RequestHandler } from './$types';
-import type { TT3Team } from '../../../../../types/team';
+import type { TT3Team } from '../../../../../types/tt3/team';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,

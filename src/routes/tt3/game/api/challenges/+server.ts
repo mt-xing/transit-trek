@@ -1,9 +1,9 @@
 import { CosmosClient } from '@azure/cosmos';
 import { error, json, type RequestHandler } from '@sveltejs/kit';
 import { DB_URL, READ_KEY } from '$env/static/private';
-import { GAME_KEY, type TT3GameState } from '../../../../../types/game';
+import { GAME_KEY, type TT3GameState } from '../../../../../types/tt3/game';
 import { publicChallengeFilter } from '../../util';
-import type { TT3ChallengeDefinition } from '../../../../../types/challenge';
+import type { TT3ChallengeDefinition } from '../../../../../types/tt3/challenge';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,

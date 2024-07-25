@@ -1,9 +1,9 @@
 import type {
 	TT3ChallengeDefinition,
 	TT3PublicChallengeDefinition,
-} from '../../../types/challenge';
-import type { TT3GameState } from '../../../types/game';
-import type { TT3Team } from '../../../types/team';
+} from '../../../types/tt3/challenge';
+import type { TT3GameState } from '../../../types/tt3/game';
+import type { TT3Team } from '../../../types/tt3/team';
 import assertUnreachable from '../../../utils/assertUnreachable';
 
 export function publicChallengeFilter(x: TT3ChallengeDefinition): TT3PublicChallengeDefinition {

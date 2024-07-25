@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { TT3ChallengeDefinition } from '../types/challenge';
+	import type { TT3ChallengeDefinition } from '../types/tt3/challenge';
 	import ImmutableCheckbox from './immutableCheckbox.svelte';
 	import { isChallengeComplete, isChallengeUnlocked } from '../utils/challenge';
-	import type { TT3ChallengeProgress } from '../types/team';
-	import type { TT3GameState } from '../types/game';
+	import type { TT3ChallengeProgress } from '../types/tt3/team';
+	import type { TT3GameState } from '../types/tt3/game';
 
 	export let teamId: string;
 	export let challenge: TT3ChallengeDefinition;
