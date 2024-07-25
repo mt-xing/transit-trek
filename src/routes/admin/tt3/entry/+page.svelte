@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ChallengeEntry from '../../../../components/challengeEntry.svelte';
+	import ChallengeEntry from '../../../../components/tt3/tt3ChallengeEntry.svelte';
 	import type { TT3ChallengeDefinition } from '../../../../types/tt3/challenge';
 	import type { TT3Team } from '../../../../types/tt3/team';
 	import type { PageData } from './$types';

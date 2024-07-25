@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import type { TT3PublicChallengeDefinition } from '../../../types/tt3/challenge';
-	import ChallengeView from '../../../components/challengeView.svelte';
+	import ChallengeView from '../../../components/tt3/tt3ChallengeView.svelte';
 	import type { TT3ChallengeProgress, TT3Team } from '../../../types/tt3/team';
 	import challengesRaw from '../challenges.json';
 	import results from '../results.json';

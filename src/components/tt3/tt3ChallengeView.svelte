@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
-	import type { TT3PublicChallengeDefinition } from '../types/tt3/challenge';
-	import ImmutableCheckbox from './immutableCheckbox.svelte';
-	import { isChallengeComplete, isChallengeUnlocked } from '../utils/challenge';
-	import type { TT3DashboardPassthroughInfo } from '../types/tt3/map';
+	import type { TT3PublicChallengeDefinition } from '../../types/tt3/challenge';
+	import ImmutableCheckbox from './tt3ImmutableCheckbox.svelte';
+	import { isChallengeComplete, isChallengeUnlocked } from '../../utils/challenge';
+	import type { TT3DashboardPassthroughInfo } from '../../types/tt3/map';
 
 	export let challenge: TT3PublicChallengeDefinition;
 	export let dashboardInfo: TT3DashboardPassthroughInfo;
