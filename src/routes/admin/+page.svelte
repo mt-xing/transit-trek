@@ -17,15 +17,10 @@
 <h1>TT4</h1>
 
 <h2>Setup</h2>
-<h1>TODO</h1>
-<p><a href="/admin/tt3/challenges">Edit Challenges</a></p>
-<p><a href="/admin/tt3/teams">Edit Teams</a></p>
+<p><a href="/admin/tt4/challenges">Edit Challenges</a></p>
 
 <h2>Game Operations</h2>
-<p><a href="/admin/tt3/game">Game State</a></p>
-<p><a href="/admin/tt3/finish">Team Finishes</a></p>
-<p><a href="/admin/tt3/entry">Challenge Status Entry</a></p>
-<p><a href="/admin/tt3/logs">Logs</a></p>
+<p>TODO</p>
 
 <h2>Old Events</h2>
 <p><a href="/admin/tt3">TT3</a></p>
