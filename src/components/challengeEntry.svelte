@@ -1,15 +1,15 @@
 <script lang="ts">
-	import type { ChallengeDefinition } from '../types/challenge';
+	import type { TT3ChallengeDefinition } from '../types/challenge';
 	import ImmutableCheckbox from './immutableCheckbox.svelte';
 	import { isChallengeComplete, isChallengeUnlocked } from '../utils/challenge';
-	import type { ChallengeProgress } from '../types/team';
-	import type { GameState } from '../types/game';
+	import type { TT3ChallengeProgress } from '../types/team';
+	import type { TT3GameState } from '../types/game';
 
 	export let teamId: string;
-	export let challenge: ChallengeDefinition;
-	export let allChallenges: ChallengeDefinition[];
-	export let challengeProgress: ChallengeProgress;
-	export let gameState: GameState;
+	export let challenge: TT3ChallengeDefinition;
+	export let allChallenges: TT3ChallengeDefinition[];
+	export let challengeProgress: TT3ChallengeProgress;
+	export let gameState: TT3GameState;
 
 	$: progress = challengeProgress[challenge.id];
 

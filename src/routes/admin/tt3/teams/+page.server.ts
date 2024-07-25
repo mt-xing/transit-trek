@@ -2,7 +2,7 @@ import { CosmosClient } from '@azure/cosmos';
 import { redirect } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
 import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
-import type { Team } from '../../../../types/team';
+import type { TT3Team } from '../../../../types/team';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,
@@ -13,7 +13,7 @@ export const load: PageServerLoad = async () => {
 	const res = await client
 		.database('transit-trek')
 		.container('tt3-teams')
-		.items.readAll<Team>()
+		.items.readAll<TT3Team>()
 		.fetchAll();
 
 	return {
@@ -28,17 +28,14 @@ const writeClient = new CosmosClient({
 
 export const actions = {
 	newTeam: async () => {
-		const team: Omit<Team, "id"> = {
+		const team: Omit<TT3Team, 'id'> = {
 			teamNum: -99,
 			secret: crypto.randomUUID(),
-			name: "",
+			name: '',
 			timePenaltyMin: 20,
 			challengeProgress: {},
-		}
-		await writeClient
-			.database('transit-trek')
-			.container('tt3-teams')
-			.items.create(team);
+		};
+		await writeClient.database('transit-trek').container('tt3-teams').items.create(team);
 
 		redirect(303, '/admin/tt3/teams');
 	},

@@ -1,11 +1,11 @@
 import { CosmosClient } from '@azure/cosmos';
 import { redirect } from '@sveltejs/kit';
 import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
-import { GAME_KEY, type GameState } from '../../../../types/game';
+import { GAME_KEY, type TT3GameState } from '../../../../types/game';
 import type { Actions, PageServerLoad, RequestEvent } from './$types';
-import type { Team } from '../../../../types/team';
+import type { TT3Team } from '../../../../types/team';
 import { writeLog } from '../../../../types/logs';
-import type { ChallengeDefinition } from '../../../../types/challenge';
+import type { TT3ChallengeDefinition } from '../../../../types/challenge';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,
@@ -17,22 +17,18 @@ async function getGameState() {
 		.database('transit-trek')
 		.container('tt3-game')
 		.item(GAME_KEY, GAME_KEY)
-		.read<GameState>();
+		.read<TT3GameState>();
 	return res.resource;
 }
 
 export const load: PageServerLoad = async () => {
 	const [res, gameState, challengeRes] = await Promise.all([
-		client
-			.database('transit-trek')
-			.container('tt3-teams')
-			.items.readAll<Team>()
-			.fetchAll(),
+		client.database('transit-trek').container('tt3-teams').items.readAll<TT3Team>().fetchAll(),
 		getGameState(),
 		client
 			.database('transit-trek')
 			.container('tt3-challenges')
-			.items.readAll<ChallengeDefinition>()
+			.items.readAll<TT3ChallengeDefinition>()
 			.fetchAll(),
 	]);
 	return {
@@ -50,7 +46,7 @@ const writeClient = new CosmosClient({
 export const actions = {
 	finishTeam: async (event: RequestEvent) => {
 		const data = await event.request.formData();
-		const id = data.get("id") as string;
+		const id = data.get('id') as string;
 		if (!id) {
 			redirect(303, '/admin/tt3/finish');
 			return;
@@ -60,11 +56,13 @@ export const actions = {
 			.database('transit-trek')
 			.container('tt3-teams')
 			.item(id, id)
-			.patch([{
-				op: 'add',
-				path: '/finishTime',
-				value: (new Date()).getTime(),
-			}]);
+			.patch([
+				{
+					op: 'add',
+					path: '/finishTime',
+					value: new Date().getTime(),
+				},
+			]);
 
 		await writeLog({
 			t: 'finish',
@@ -76,7 +74,7 @@ export const actions = {
 	},
 	unfinishTeam: async (event: RequestEvent) => {
 		const data = await event.request.formData();
-		const id = data.get("id") as string;
+		const id = data.get('id') as string;
 		if (!id) {
 			redirect(303, '/admin/tt3/finish');
 			return;
@@ -86,10 +84,12 @@ export const actions = {
 			.database('transit-trek')
 			.container('tt3-teams')
 			.item(id, id)
-			.patch([{
-				op: 'remove',
-				path: '/finishTime',
-			}]);
+			.patch([
+				{
+					op: 'remove',
+					path: '/finishTime',
+				},
+			]);
 
 		await writeLog({
 			t: 'finish',
@@ -101,8 +101,8 @@ export const actions = {
 	},
 	changeFinishTime: async (event: RequestEvent) => {
 		const data = await event.request.formData();
-		const id = data.get("id") as string;
-		const finishTime = parseInt(data.get("finishTime") as string, 10);
+		const id = data.get('id') as string;
+		const finishTime = parseInt(data.get('finishTime') as string, 10);
 		if (!id || Number.isNaN(finishTime)) {
 			redirect(303, '/admin/tt3/finish');
 			return;
@@ -112,11 +112,13 @@ export const actions = {
 			.database('transit-trek')
 			.container('tt3-teams')
 			.item(id, id)
-			.patch([{
-				op: 'add',
-				path: '/finishTime',
-				value: finishTime,
-			}]);
+			.patch([
+				{
+					op: 'add',
+					path: '/finishTime',
+					value: finishTime,
+				},
+			]);
 
 		await writeLog({
 			t: 'adjustFinish',
@@ -128,8 +130,8 @@ export const actions = {
 	},
 	changePenalty: async (event: RequestEvent) => {
 		const data = await event.request.formData();
-		const id = data.get("id") as string;
-		const timePenaltyMin = parseInt(data.get("timePenaltyMin") as string, 10);
+		const id = data.get('id') as string;
+		const timePenaltyMin = parseInt(data.get('timePenaltyMin') as string, 10);
 		if (!id || Number.isNaN(timePenaltyMin)) {
 			redirect(303, '/admin/tt3/finish');
 			return;
@@ -139,11 +141,13 @@ export const actions = {
 			.database('transit-trek')
 			.container('tt3-teams')
 			.item(id, id)
-			.patch([{
-				op: 'replace',
-				path: '/timePenaltyMin',
-				value: timePenaltyMin,
-			}]);
+			.patch([
+				{
+					op: 'replace',
+					path: '/timePenaltyMin',
+					value: timePenaltyMin,
+				},
+			]);
 
 		await writeLog({
 			t: 'adjustPenaltyManual',

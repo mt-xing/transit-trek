@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Team } from '../../../../types/team';
+	import type { TT3Team } from '../../../../types/team';
 	import { isChallengeComplete } from '../../../../utils/challenge';
 	import type { PageData } from './$types';
 
@@ -13,7 +13,7 @@
 
 	$: teams.sort((a, b) => a.teamNum - b.teamNum);
 
-	let selectedTeam: undefined | Team;
+	let selectedTeam: undefined | TT3Team;
 	let selectedTeamStatus: undefined | boolean;
 
 	$: {
@@ -22,7 +22,7 @@
 				return;
 			}
 			const res = await fetch(`/admin/tt3/finish/api?id=${teamId}`);
-			const teamData = (await res.json()) as Team;
+			const teamData = (await res.json()) as TT3Team;
 			const done = finalChallenges.some((x) =>
 				isChallengeComplete(x, {
 					allChallenges: challenges,

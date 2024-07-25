@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { PublicChallengeDefinition } from '../../types/challenge';
-	import type { DashboardPassthroughInfo } from '../../types/map';
+	import type { TT3PublicChallengeDefinition } from '../../types/challenge';
+	import type { TT3DashboardPassthroughInfo } from '../../types/map';
 	import { isChallengeComplete, isChallengeUnlocked } from '../../utils/challenge';
 
-	export let challenge: PublicChallengeDefinition;
-	export let dashboardInfo: DashboardPassthroughInfo;
-	export let openCallback: (c: PublicChallengeDefinition) => void;
+	export let challenge: TT3PublicChallengeDefinition;
+	export let dashboardInfo: TT3DashboardPassthroughInfo;
+	export let openCallback: (c: TT3PublicChallengeDefinition) => void;
 
 	$: isUnlocked = isChallengeUnlocked(challenge, dashboardInfo);
 	$: isComplete = isChallengeComplete(challenge, dashboardInfo);

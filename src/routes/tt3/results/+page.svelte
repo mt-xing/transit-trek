@@ -1,14 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import type { PublicChallengeDefinition } from '../../../types/challenge';
+	import type { TT3PublicChallengeDefinition } from '../../../types/challenge';
 	import ChallengeView from '../../../components/challengeView.svelte';
-	import type { ChallengeProgress, Team } from '../../../types/team';
+	import type { TT3ChallengeProgress, TT3Team } from '../../../types/team';
 	import challengesRaw from '../challenges.json';
 	import results from '../results.json';
 	import teamsRaw from '../teams.json';
 	import Map from '../../../components/map/map.svelte';
 	import { isChallengeComplete } from '../../../utils/challenge';
-	import type { LogEntry } from '../../../types/logs';
+	import type { TT3LogEntry } from '../../../types/logs';
 	import { browser } from '$app/environment';
 	import Error from '../../+error.svelte';
 
@@ -25,11 +25,12 @@
 
 	const startTime = 1717880516094;
 
-	const teams: Team[] = teamsRaw as unknown as Team[];
-	const challenges: PublicChallengeDefinition[] = challengesRaw as PublicChallengeDefinition[];
-	const logs: LogEntry[] = results as LogEntry[];
+	const teams: TT3Team[] = teamsRaw as unknown as TT3Team[];
+	const challenges: TT3PublicChallengeDefinition[] =
+		challengesRaw as TT3PublicChallengeDefinition[];
+	const logs: TT3LogEntry[] = results as TT3LogEntry[];
 
-	const challengeMap: Record<string, PublicChallengeDefinition> = challenges.reduce(
+	const challengeMap: Record<string, TT3PublicChallengeDefinition> = challenges.reduce(
 		(a, x) => ({ ...a, [x.id]: x }),
 		{},
 	);
@@ -75,7 +76,7 @@
 		)}%`;
 	}
 
-	const overallChallengeProgress: ChallengeProgress = {
+	const overallChallengeProgress: TT3ChallengeProgress = {
 		...challenges.reduce(
 			(a, c) => ({
 				...a,
@@ -132,7 +133,7 @@
 		}
 		return x;
 	}
-	function computeTeamTime(team: Team): string {
+	function computeTeamTime(team: TT3Team): string {
 		if (!team.finishTime) {
 			return '00:00:00';
 		}
@@ -145,8 +146,8 @@
 		return `${padToTwo(hours)}:${padToTwo(min)}:${padToTwo(sec)}`;
 	}
 
-	let selectedChallenge: null | PublicChallengeDefinition = null;
-	const openCallback = (c: PublicChallengeDefinition) => {
+	let selectedChallenge: null | TT3PublicChallengeDefinition = null;
+	const openCallback = (c: TT3PublicChallengeDefinition) => {
 		if (selectedChallenge === null) {
 			selectedChallenge = c;
 		}
@@ -157,7 +158,7 @@
 		return date.toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' }).split(' ')[0];
 	}
 
-	function getEntriesForTeam(team: Team) {
+	function getEntriesForTeam(team: TT3Team) {
 		const teamId = team.id;
 		const relevantLogs = logs
 			.filter((x) => x.t === 'entry' || x.t === 'finish')
@@ -166,7 +167,7 @@
 		const r: { time: number; text: string }[] = [];
 
 		const completedChallenges = new Set<string>();
-		const currentProgress: ChallengeProgress = {};
+		const currentProgress: TT3ChallengeProgress = {};
 
 		// eslint-disable-next-line no-restricted-syntax
 		for (const l of relevantLogs) {
@@ -194,7 +195,7 @@
 					});
 				}
 
-				const newVal: ChallengeProgress[string] = {
+				const newVal: TT3ChallengeProgress[string] = {
 					manualComplete: manualComplete as boolean | undefined,
 					manualUnlock: manualUnlock as boolean | undefined,
 					progress,

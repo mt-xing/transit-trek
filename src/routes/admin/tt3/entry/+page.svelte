@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ChallengeEntry from '../../../../components/challengeEntry.svelte';
-	import type { ChallengeDefinition } from '../../../../types/challenge';
-	import type { Team } from '../../../../types/team';
+	import type { TT3ChallengeDefinition } from '../../../../types/challenge';
+	import type { TT3Team } from '../../../../types/team';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -16,8 +16,8 @@
 		.filter((x) => x.type !== 'subtask')
 		.sort((a, b) => a.mapPos - b.mapPos);
 
-	let selectedTeam: undefined | Team;
-	let selectedChallenge: undefined | ChallengeDefinition;
+	let selectedTeam: undefined | TT3Team;
+	let selectedChallenge: undefined | TT3ChallengeDefinition;
 
 	function populateProgress() {
 		if (

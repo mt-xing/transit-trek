@@ -1,702 +1,396 @@
 [
-    {
-        "teamNum": 1,
-        "id": "34e99b4e-eecc-4a93-8e24-4a03d119c250",
-        "name": "Public Nuisance",
-        "timePenaltyMin": 0,
-        "challengeProgress": {
-            "04baa400-0fb2-4d03-9615-2fbbf2da429c": {
-                "progress": [
-                    true
-                ]
-            },
-            "b2afe19c-d245-4461-89e2-d373371e354a": {
-                "progress": [
-                    true
-                ]
-            },
-            "1305db89-69ac-45da-a53a-9e77669ed53f": {
-                "progress": [
-                    true
-                ]
-            },
-            "03e1337f-4433-4f9b-82c3-2456587026d5": {
-                "manualUnlock": false,
-                "progress": [
-                    false,
-                    false,
-                    false
-                ]
-            },
-            "f3c68ff7-d49e-4e47-8903-d39cd17a29dd": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "613d43ec-fb1b-461b-a850-c8414f6dcb3e": {
-                "progress": [
-                    true
-                ]
-            },
-            "9a560127-4d67-404d-8993-e15de119555e": {
-                "progress": [
-                    true
-                ]
-            },
-            "6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            }
-        },
-        "finishTime": 1717889599709
-    },
-    {
-        "teamNum": 2,
-        "id": "6fddcc12-e8a9-4592-8794-d1d64ed3b34c",
-        "name": "AMC Theaters🤪🥸你好👋🏻。",
-        "timePenaltyMin": 7,
-        "challengeProgress": {
-            "04baa400-0fb2-4d03-9615-2fbbf2da429c": {
-                "progress": [
-                    true
-                ]
-            },
-            "b2afe19c-d245-4461-89e2-d373371e354a": {
-                "progress": [
-                    true
-                ]
-            },
-            "1305db89-69ac-45da-a53a-9e77669ed53f": {
-                "progress": [
-                    true
-                ]
-            },
-            "03e1337f-4433-4f9b-82c3-2456587026d5": {
-                "manualUnlock": false,
-                "progress": [
-                    false,
-                    false,
-                    false
-                ]
-            },
-            "c9482b99-1846-49cb-8565-2c404346670b": {
-                "progress": [
-                    true
-                ]
-            },
-            "33c83d44-1747-4990-93d2-a6a5170bdc3f": {
-                "progress": [
-                    true
-                ]
-            },
-            "70e8075a-4a16-4232-821c-84d45b88b54c": {
-                "progress": [
-                    true
-                ]
-            },
-            "e2c5bcc4-e90f-4c7b-a876-6ada5db5c2a6": {
-                "progress": [
-                    true
-                ]
-            },
-            "3b914c8f-e728-41d5-a142-b27f19aba575": {
-                "progress": [
-                    true,
-                    true,
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "843bbbb0-3ab1-417a-a1b4-a69bb06ec7af": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "9a560127-4d67-404d-8993-e15de119555e": {
-                "progress": [
-                    true
-                ]
-            },
-            "6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            }
-        },
-        "finishTime": 1717894425110
-    },
-    {
-        "teamNum": 3,
-        "id": "6c3ef2ed-3b1a-44a7-af5e-432380a65047",
-        "name": "SAMA",
-        "timePenaltyMin": -3,
-        "challengeProgress": {
-            "04baa400-0fb2-4d03-9615-2fbbf2da429c": {
-                "progress": [
-                    true
-                ]
-            },
-            "b2afe19c-d245-4461-89e2-d373371e354a": {
-                "progress": [
-                    true
-                ]
-            },
-            "613d43ec-fb1b-461b-a850-c8414f6dcb3e": {
-                "progress": [
-                    true
-                ]
-            },
-            "33c83d44-1747-4990-93d2-a6a5170bdc3f": {
-                "progress": [
-                    true
-                ]
-            },
-            "1305db89-69ac-45da-a53a-9e77669ed53f": {
-                "progress": [
-                    true
-                ]
-            },
-            "03e1337f-4433-4f9b-82c3-2456587026d5": {
-                "manualUnlock": false,
-                "progress": [
-                    false,
-                    false,
-                    false
-                ]
-            },
-            "c9482b99-1846-49cb-8565-2c404346670b": {
-                "progress": [
-                    true
-                ]
-            },
-            "3b914c8f-e728-41d5-a142-b27f19aba575": {
-                "progress": [
-                    true,
-                    true,
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "bcbe3825-0a0b-4908-9fa0-f1a92f16b7c9": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "e2c5bcc4-e90f-4c7b-a876-6ada5db5c2a6": {
-                "progress": [
-                    true
-                ]
-            },
-            "843bbbb0-3ab1-417a-a1b4-a69bb06ec7af": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "9a560127-4d67-404d-8993-e15de119555e": {
-                "progress": [
-                    true
-                ]
-            },
-            "6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            }
-        },
-        "finishTime": 1717893405547
-    },
-    {
-        "teamNum": 4,
-        "id": "e98b35c9-c310-4f29-99c1-8077072061a1",
-        "name": "Beatlescirclejerk",
-        "timePenaltyMin": -3,
-        "challengeProgress": {
-            "04baa400-0fb2-4d03-9615-2fbbf2da429c": {
-                "progress": [
-                    true
-                ]
-            },
-            "b2afe19c-d245-4461-89e2-d373371e354a": {
-                "progress": [
-                    true
-                ]
-            },
-            "32b0a15f-f5fc-47ea-878f-a316cb6695d3": {
-                "progress": [
-                    true,
-                    true,
-                    true,
-                    true,
-                    false,
-                    true,
-                    true,
-                    true,
-                    true,
-                    false
-                ]
-            },
-            "33c83d44-1747-4990-93d2-a6a5170bdc3f": {
-                "progress": [
-                    true
-                ]
-            },
-            "a84efa50-22d3-4ff9-860f-c4f010756fdc": {
-                "progress": [
-                    true
-                ]
-            },
-            "03e1337f-4433-4f9b-82c3-2456587026d5": {
-                "manualUnlock": false,
-                "progress": [
-                    false,
-                    false,
-                    false
-                ]
-            },
-            "c9482b99-1846-49cb-8565-2c404346670b": {
-                "progress": [
-                    true
-                ]
-            },
-            "3b914c8f-e728-41d5-a142-b27f19aba575": {
-                "progress": [
-                    true,
-                    true,
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "bcbe3825-0a0b-4908-9fa0-f1a92f16b7c9": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "613d43ec-fb1b-461b-a850-c8414f6dcb3e": {
-                "progress": [
-                    true
-                ]
-            },
-            "e2c5bcc4-e90f-4c7b-a876-6ada5db5c2a6": {
-                "progress": [
-                    true
-                ]
-            },
-            "843bbbb0-3ab1-417a-a1b4-a69bb06ec7af": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "9a560127-4d67-404d-8993-e15de119555e": {
-                "progress": [
-                    true
-                ]
-            },
-            "6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            }
-        },
-        "finishTime": 1717892863927
-    },
-    {
-        "teamNum": 5,
-        "id": "026a8229-158b-474d-869a-c5d932cb3d1e",
-        "name": "Sigma Extended Household",
-        "timePenaltyMin": 0,
-        "challengeProgress": {
-            "04baa400-0fb2-4d03-9615-2fbbf2da429c": {
-                "progress": [
-                    true
-                ]
-            },
-            "b2afe19c-d245-4461-89e2-d373371e354a": {
-                "progress": [
-                    true
-                ]
-            },
-            "a84efa50-22d3-4ff9-860f-c4f010756fdc": {
-                "progress": [
-                    true
-                ]
-            },
-            "c9482b99-1846-49cb-8565-2c404346670b": {
-                "progress": [
-                    true
-                ]
-            },
-            "3b914c8f-e728-41d5-a142-b27f19aba575": {
-                "progress": [
-                    true,
-                    true,
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "03e1337f-4433-4f9b-82c3-2456587026d5": {
-                "manualComplete": true,
-                "progress": [
-                    false,
-                    false,
-                    false
-                ]
-            },
-            "bcbe3825-0a0b-4908-9fa0-f1a92f16b7c9": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "70e8075a-4a16-4232-821c-84d45b88b54c": {
-                "progress": [
-                    true
-                ]
-            },
-            "9a560127-4d67-404d-8993-e15de119555e": {
-                "progress": [
-                    true
-                ]
-            },
-            "6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "613d43ec-fb1b-461b-a850-c8414f6dcb3e": {
-                "progress": [
-                    true
-                ]
-            }
-        },
-        "finishTime": 1717889606521
-    },
-    {
-        "teamNum": 6,
-        "id": "9bab37d8-4604-4ffa-8ab0-f469131b437e",
-        "name": "Team Name",
-        "timePenaltyMin": 0,
-        "challengeProgress": {
-            "04baa400-0fb2-4d03-9615-2fbbf2da429c": {
-                "progress": [
-                    true
-                ]
-            },
-            "b2afe19c-d245-4461-89e2-d373371e354a": {
-                "progress": [
-                    true
-                ]
-            },
-            "1305db89-69ac-45da-a53a-9e77669ed53f": {
-                "progress": [
-                    true
-                ]
-            },
-            "03e1337f-4433-4f9b-82c3-2456587026d5": {
-                "manualUnlock": false,
-                "progress": [
-                    false,
-                    false,
-                    false
-                ]
-            },
-            "f3c68ff7-d49e-4e47-8903-d39cd17a29dd": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "613d43ec-fb1b-461b-a850-c8414f6dcb3e": {
-                "progress": [
-                    true
-                ]
-            },
-            "9a560127-4d67-404d-8993-e15de119555e": {
-                "progress": [
-                    true
-                ]
-            },
-            "6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            }
-        },
-        "finishTime": 1717890322403
-    },
-    {
-        "teamNum": 7,
-        "id": "d52ebfea-9cec-46d0-8b51-bc9b91f0a263",
-        "name": "Fare Ambassadors",
-        "timePenaltyMin": 7,
-        "challengeProgress": {
-            "04baa400-0fb2-4d03-9615-2fbbf2da429c": {
-                "progress": [
-                    true
-                ]
-            },
-            "b2afe19c-d245-4461-89e2-d373371e354a": {
-                "progress": [
-                    true
-                ]
-            },
-            "33c83d44-1747-4990-93d2-a6a5170bdc3f": {
-                "progress": [
-                    true
-                ]
-            },
-            "03e1337f-4433-4f9b-82c3-2456587026d5": {
-                "manualUnlock": false,
-                "progress": [
-                    false,
-                    false,
-                    false
-                ]
-            },
-            "1305db89-69ac-45da-a53a-9e77669ed53f": {
-                "progress": [
-                    true
-                ]
-            },
-            "9a560127-4d67-404d-8993-e15de119555e": {
-                "manualUnlock": true,
-                "progress": [
-                    true
-                ]
-            },
-            "6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            }
-        },
-        "finishTime": 1717890291529
-    },
-    {
-        "teamNum": 8,
-        "id": "24ef60a2-8738-480a-a743-f79228986576",
-        "name": "Quantum Questers",
-        "timePenaltyMin": -3,
-        "challengeProgress": {
-            "b2afe19c-d245-4461-89e2-d373371e354a": {
-                "progress": [
-                    true
-                ]
-            },
-            "32b0a15f-f5fc-47ea-878f-a316cb6695d3": {
-                "progress": [
-                    true,
-                    false,
-                    false,
-                    false,
-                    false,
-                    true,
-                    true,
-                    false,
-                    false,
-                    false
-                ]
-            },
-            "04baa400-0fb2-4d03-9615-2fbbf2da429c": {
-                "progress": [
-                    true
-                ]
-            },
-            "f3c68ff7-d49e-4e47-8903-d39cd17a29dd": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "33c83d44-1747-4990-93d2-a6a5170bdc3f": {
-                "progress": [
-                    true
-                ]
-            },
-            "1305db89-69ac-45da-a53a-9e77669ed53f": {
-                "progress": [
-                    true
-                ]
-            },
-            "03e1337f-4433-4f9b-82c3-2456587026d5": {
-                "manualUnlock": false,
-                "progress": [
-                    false,
-                    false,
-                    false
-                ]
-            },
-            "9a560127-4d67-404d-8993-e15de119555e": {
-                "progress": [
-                    true
-                ]
-            },
-            "6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "613d43ec-fb1b-461b-a850-c8414f6dcb3e": {
-                "progress": [
-                    true
-                ]
-            }
-        },
-        "finishTime": 1717889999561
-    },
-    {
-        "teamNum": 9,
-        "id": "f15ccb9d-fe05-44e9-8a28-c87bc6ebb22c",
-        "name": "Transiting Girlies",
-        "timePenaltyMin": 0,
-        "challengeProgress": {
-            "b2afe19c-d245-4461-89e2-d373371e354a": {
-                "progress": [
-                    true
-                ]
-            },
-            "32b0a15f-f5fc-47ea-878f-a316cb6695d3": {
-                "progress": [
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "04baa400-0fb2-4d03-9615-2fbbf2da429c": {
-                "progress": [
-                    true
-                ]
-            },
-            "1305db89-69ac-45da-a53a-9e77669ed53f": {
-                "progress": [
-                    true
-                ]
-            },
-            "03e1337f-4433-4f9b-82c3-2456587026d5": {
-                "manualUnlock": false,
-                "progress": [
-                    false,
-                    false,
-                    false
-                ]
-            },
-            "f3c68ff7-d49e-4e47-8903-d39cd17a29dd": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "9a560127-4d67-404d-8993-e15de119555e": {
-                "progress": [
-                    true
-                ]
-            },
-            "613d43ec-fb1b-461b-a850-c8414f6dcb3e": {
-                "progress": [
-                    true
-                ]
-            },
-            "6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            }
-        },
-        "finishTime": 1717891261870
-    }
+	{
+		"teamNum": 1,
+		"id": "34e99b4e-eecc-4a93-8e24-4a03d119c250",
+		"name": "Public Nuisance",
+		"timePenaltyMin": 0,
+		"challengeProgress": {
+			"04baa400-0fb2-4d03-9615-2fbbf2da429c": {
+				"progress": [true]
+			},
+			"b2afe19c-d245-4461-89e2-d373371e354a": {
+				"progress": [true]
+			},
+			"1305db89-69ac-45da-a53a-9e77669ed53f": {
+				"progress": [true]
+			},
+			"03e1337f-4433-4f9b-82c3-2456587026d5": {
+				"manualUnlock": false,
+				"progress": [false, false, false]
+			},
+			"f3c68ff7-d49e-4e47-8903-d39cd17a29dd": {
+				"progress": [true, true]
+			},
+			"613d43ec-fb1b-461b-a850-c8414f6dcb3e": {
+				"progress": [true]
+			},
+			"9a560127-4d67-404d-8993-e15de119555e": {
+				"progress": [true]
+			},
+			"6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
+				"progress": [true, true]
+			},
+			"f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
+				"progress": [true, true, true]
+			}
+		},
+		"finishTime": 1717889599709
+	},
+	{
+		"teamNum": 2,
+		"id": "6fddcc12-e8a9-4592-8794-d1d64ed3b34c",
+		"name": "AMC Theaters🤪🥸你好👋🏻。",
+		"timePenaltyMin": 7,
+		"challengeProgress": {
+			"04baa400-0fb2-4d03-9615-2fbbf2da429c": {
+				"progress": [true]
+			},
+			"b2afe19c-d245-4461-89e2-d373371e354a": {
+				"progress": [true]
+			},
+			"1305db89-69ac-45da-a53a-9e77669ed53f": {
+				"progress": [true]
+			},
+			"03e1337f-4433-4f9b-82c3-2456587026d5": {
+				"manualUnlock": false,
+				"progress": [false, false, false]
+			},
+			"c9482b99-1846-49cb-8565-2c404346670b": {
+				"progress": [true]
+			},
+			"33c83d44-1747-4990-93d2-a6a5170bdc3f": {
+				"progress": [true]
+			},
+			"70e8075a-4a16-4232-821c-84d45b88b54c": {
+				"progress": [true]
+			},
+			"e2c5bcc4-e90f-4c7b-a876-6ada5db5c2a6": {
+				"progress": [true]
+			},
+			"3b914c8f-e728-41d5-a142-b27f19aba575": {
+				"progress": [true, true, true, true, true]
+			},
+			"843bbbb0-3ab1-417a-a1b4-a69bb06ec7af": {
+				"progress": [true, true, true]
+			},
+			"9a560127-4d67-404d-8993-e15de119555e": {
+				"progress": [true]
+			},
+			"6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
+				"progress": [true, true]
+			},
+			"f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
+				"progress": [true, true, true]
+			}
+		},
+		"finishTime": 1717894425110
+	},
+	{
+		"teamNum": 3,
+		"id": "6c3ef2ed-3b1a-44a7-af5e-432380a65047",
+		"name": "SAMA",
+		"timePenaltyMin": -3,
+		"challengeProgress": {
+			"04baa400-0fb2-4d03-9615-2fbbf2da429c": {
+				"progress": [true]
+			},
+			"b2afe19c-d245-4461-89e2-d373371e354a": {
+				"progress": [true]
+			},
+			"613d43ec-fb1b-461b-a850-c8414f6dcb3e": {
+				"progress": [true]
+			},
+			"33c83d44-1747-4990-93d2-a6a5170bdc3f": {
+				"progress": [true]
+			},
+			"1305db89-69ac-45da-a53a-9e77669ed53f": {
+				"progress": [true]
+			},
+			"03e1337f-4433-4f9b-82c3-2456587026d5": {
+				"manualUnlock": false,
+				"progress": [false, false, false]
+			},
+			"c9482b99-1846-49cb-8565-2c404346670b": {
+				"progress": [true]
+			},
+			"3b914c8f-e728-41d5-a142-b27f19aba575": {
+				"progress": [true, true, true, true, true]
+			},
+			"bcbe3825-0a0b-4908-9fa0-f1a92f16b7c9": {
+				"progress": [true, true, true]
+			},
+			"e2c5bcc4-e90f-4c7b-a876-6ada5db5c2a6": {
+				"progress": [true]
+			},
+			"843bbbb0-3ab1-417a-a1b4-a69bb06ec7af": {
+				"progress": [true, true, true]
+			},
+			"9a560127-4d67-404d-8993-e15de119555e": {
+				"progress": [true]
+			},
+			"6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
+				"progress": [true, true]
+			},
+			"f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
+				"progress": [true, true, true]
+			}
+		},
+		"finishTime": 1717893405547
+	},
+	{
+		"teamNum": 4,
+		"id": "e98b35c9-c310-4f29-99c1-8077072061a1",
+		"name": "Beatlescirclejerk",
+		"timePenaltyMin": -3,
+		"challengeProgress": {
+			"04baa400-0fb2-4d03-9615-2fbbf2da429c": {
+				"progress": [true]
+			},
+			"b2afe19c-d245-4461-89e2-d373371e354a": {
+				"progress": [true]
+			},
+			"32b0a15f-f5fc-47ea-878f-a316cb6695d3": {
+				"progress": [true, true, true, true, false, true, true, true, true, false]
+			},
+			"33c83d44-1747-4990-93d2-a6a5170bdc3f": {
+				"progress": [true]
+			},
+			"a84efa50-22d3-4ff9-860f-c4f010756fdc": {
+				"progress": [true]
+			},
+			"03e1337f-4433-4f9b-82c3-2456587026d5": {
+				"manualUnlock": false,
+				"progress": [false, false, false]
+			},
+			"c9482b99-1846-49cb-8565-2c404346670b": {
+				"progress": [true]
+			},
+			"3b914c8f-e728-41d5-a142-b27f19aba575": {
+				"progress": [true, true, true, true, true]
+			},
+			"bcbe3825-0a0b-4908-9fa0-f1a92f16b7c9": {
+				"progress": [true, true, true]
+			},
+			"613d43ec-fb1b-461b-a850-c8414f6dcb3e": {
+				"progress": [true]
+			},
+			"e2c5bcc4-e90f-4c7b-a876-6ada5db5c2a6": {
+				"progress": [true]
+			},
+			"843bbbb0-3ab1-417a-a1b4-a69bb06ec7af": {
+				"progress": [true, true, true]
+			},
+			"9a560127-4d67-404d-8993-e15de119555e": {
+				"progress": [true]
+			},
+			"6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
+				"progress": [true, true]
+			},
+			"f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
+				"progress": [true, true, true]
+			}
+		},
+		"finishTime": 1717892863927
+	},
+	{
+		"teamNum": 5,
+		"id": "026a8229-158b-474d-869a-c5d932cb3d1e",
+		"name": "Sigma Extended Household",
+		"timePenaltyMin": 0,
+		"challengeProgress": {
+			"04baa400-0fb2-4d03-9615-2fbbf2da429c": {
+				"progress": [true]
+			},
+			"b2afe19c-d245-4461-89e2-d373371e354a": {
+				"progress": [true]
+			},
+			"a84efa50-22d3-4ff9-860f-c4f010756fdc": {
+				"progress": [true]
+			},
+			"c9482b99-1846-49cb-8565-2c404346670b": {
+				"progress": [true]
+			},
+			"3b914c8f-e728-41d5-a142-b27f19aba575": {
+				"progress": [true, true, true, true, true]
+			},
+			"03e1337f-4433-4f9b-82c3-2456587026d5": {
+				"manualComplete": true,
+				"progress": [false, false, false]
+			},
+			"bcbe3825-0a0b-4908-9fa0-f1a92f16b7c9": {
+				"progress": [true, true, true]
+			},
+			"70e8075a-4a16-4232-821c-84d45b88b54c": {
+				"progress": [true]
+			},
+			"9a560127-4d67-404d-8993-e15de119555e": {
+				"progress": [true]
+			},
+			"6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
+				"progress": [true, true]
+			},
+			"f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
+				"progress": [true, true, true]
+			},
+			"613d43ec-fb1b-461b-a850-c8414f6dcb3e": {
+				"progress": [true]
+			}
+		},
+		"finishTime": 1717889606521
+	},
+	{
+		"teamNum": 6,
+		"id": "9bab37d8-4604-4ffa-8ab0-f469131b437e",
+		"name": "Team Name",
+		"timePenaltyMin": 0,
+		"challengeProgress": {
+			"04baa400-0fb2-4d03-9615-2fbbf2da429c": {
+				"progress": [true]
+			},
+			"b2afe19c-d245-4461-89e2-d373371e354a": {
+				"progress": [true]
+			},
+			"1305db89-69ac-45da-a53a-9e77669ed53f": {
+				"progress": [true]
+			},
+			"03e1337f-4433-4f9b-82c3-2456587026d5": {
+				"manualUnlock": false,
+				"progress": [false, false, false]
+			},
+			"f3c68ff7-d49e-4e47-8903-d39cd17a29dd": {
+				"progress": [true, true]
+			},
+			"613d43ec-fb1b-461b-a850-c8414f6dcb3e": {
+				"progress": [true]
+			},
+			"9a560127-4d67-404d-8993-e15de119555e": {
+				"progress": [true]
+			},
+			"6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
+				"progress": [true, true]
+			},
+			"f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
+				"progress": [true, true, true]
+			}
+		},
+		"finishTime": 1717890322403
+	},
+	{
+		"teamNum": 7,
+		"id": "d52ebfea-9cec-46d0-8b51-bc9b91f0a263",
+		"name": "Fare Ambassadors",
+		"timePenaltyMin": 7,
+		"challengeProgress": {
+			"04baa400-0fb2-4d03-9615-2fbbf2da429c": {
+				"progress": [true]
+			},
+			"b2afe19c-d245-4461-89e2-d373371e354a": {
+				"progress": [true]
+			},
+			"33c83d44-1747-4990-93d2-a6a5170bdc3f": {
+				"progress": [true]
+			},
+			"03e1337f-4433-4f9b-82c3-2456587026d5": {
+				"manualUnlock": false,
+				"progress": [false, false, false]
+			},
+			"1305db89-69ac-45da-a53a-9e77669ed53f": {
+				"progress": [true]
+			},
+			"9a560127-4d67-404d-8993-e15de119555e": {
+				"manualUnlock": true,
+				"progress": [true]
+			},
+			"6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
+				"progress": [true, true]
+			},
+			"f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
+				"progress": [true, true, true]
+			}
+		},
+		"finishTime": 1717890291529
+	},
+	{
+		"teamNum": 8,
+		"id": "24ef60a2-8738-480a-a743-f79228986576",
+		"name": "Quantum Questers",
+		"timePenaltyMin": -3,
+		"challengeProgress": {
+			"b2afe19c-d245-4461-89e2-d373371e354a": {
+				"progress": [true]
+			},
+			"32b0a15f-f5fc-47ea-878f-a316cb6695d3": {
+				"progress": [true, false, false, false, false, true, true, false, false, false]
+			},
+			"04baa400-0fb2-4d03-9615-2fbbf2da429c": {
+				"progress": [true]
+			},
+			"f3c68ff7-d49e-4e47-8903-d39cd17a29dd": {
+				"progress": [true, true]
+			},
+			"33c83d44-1747-4990-93d2-a6a5170bdc3f": {
+				"progress": [true]
+			},
+			"1305db89-69ac-45da-a53a-9e77669ed53f": {
+				"progress": [true]
+			},
+			"03e1337f-4433-4f9b-82c3-2456587026d5": {
+				"manualUnlock": false,
+				"progress": [false, false, false]
+			},
+			"9a560127-4d67-404d-8993-e15de119555e": {
+				"progress": [true]
+			},
+			"6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
+				"progress": [true, true]
+			},
+			"f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
+				"progress": [true, true, true]
+			},
+			"613d43ec-fb1b-461b-a850-c8414f6dcb3e": {
+				"progress": [true]
+			}
+		},
+		"finishTime": 1717889999561
+	},
+	{
+		"teamNum": 9,
+		"id": "f15ccb9d-fe05-44e9-8a28-c87bc6ebb22c",
+		"name": "Transiting Girlies",
+		"timePenaltyMin": 0,
+		"challengeProgress": {
+			"b2afe19c-d245-4461-89e2-d373371e354a": {
+				"progress": [true]
+			},
+			"32b0a15f-f5fc-47ea-878f-a316cb6695d3": {
+				"progress": [true, true, true, true, true, true, true, true, true, true]
+			},
+			"04baa400-0fb2-4d03-9615-2fbbf2da429c": {
+				"progress": [true]
+			},
+			"1305db89-69ac-45da-a53a-9e77669ed53f": {
+				"progress": [true]
+			},
+			"03e1337f-4433-4f9b-82c3-2456587026d5": {
+				"manualUnlock": false,
+				"progress": [false, false, false]
+			},
+			"f3c68ff7-d49e-4e47-8903-d39cd17a29dd": {
+				"progress": [true, true]
+			},
+			"9a560127-4d67-404d-8993-e15de119555e": {
+				"progress": [true]
+			},
+			"613d43ec-fb1b-461b-a850-c8414f6dcb3e": {
+				"progress": [true]
+			},
+			"6aed52ef-df4f-4bba-9fac-8aed85ce04b2": {
+				"progress": [true, true]
+			},
+			"f9156369-41d9-41a9-9dde-bce9e0c31e5d": {
+				"progress": [true, true, true]
+			}
+		},
+		"finishTime": 1717891261870
+	}
 ]

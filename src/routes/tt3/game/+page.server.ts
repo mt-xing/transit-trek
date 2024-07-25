@@ -2,8 +2,8 @@ import { CosmosClient } from '@azure/cosmos';
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import { DB_URL, READ_KEY } from '$env/static/private';
-import type { ChallengeDefinition } from '../../../types/challenge';
-import { GAME_KEY, type GameState } from '../../../types/game';
+import type { TT3ChallengeDefinition } from '../../../types/challenge';
+import { GAME_KEY, type TT3GameState } from '../../../types/game';
 import { gameStateFilter, publicChallengeFilter, teamFilter } from './util';
 
 const client = new CosmosClient({
@@ -14,21 +14,22 @@ const client = new CosmosClient({
 export const load: PageServerLoad = async ({ url }) => {
 	const id = url.searchParams.get('id');
 	if (!id) {
-		error(401, "No Arjun Allowed");
+		error(401, 'No Arjun Allowed');
 		return;
 	}
 
-	const teamQuery = (await client
-		.database('transit-trek')
-		.container('tt3-teams')
-		.items
-		.query({
-			query: 'SELECT * from c WHERE c.secret = @secret',
-			parameters: [{ name: '@secret', value: id }],
-		})
-		.fetchAll()).resources;
+	const teamQuery = (
+		await client
+			.database('transit-trek')
+			.container('tt3-teams')
+			.items.query({
+				query: 'SELECT * from c WHERE c.secret = @secret',
+				parameters: [{ name: '@secret', value: id }],
+			})
+			.fetchAll()
+	).resources;
 	if (teamQuery.length !== 1) {
-		error(401, "No Arjun Allowed");
+		error(401, 'No Arjun Allowed');
 		return;
 	}
 
@@ -36,16 +37,17 @@ export const load: PageServerLoad = async ({ url }) => {
 		.database('transit-trek')
 		.container('tt3-game')
 		.item(GAME_KEY, GAME_KEY)
-		.read<GameState>();
+		.read<TT3GameState>();
 	const gameState = gameStateFilter(gameStateRes.resource);
 
-	const challengeRes = gameState.t !== 'pre'
-		? await client
-			.database('transit-trek')
-			.container('tt3-challenges')
-			.items.readAll<ChallengeDefinition>()
-			.fetchAll()
-		: { resources: [] };
+	const challengeRes =
+		gameState.t !== 'pre'
+			? await client
+					.database('transit-trek')
+					.container('tt3-challenges')
+					.items.readAll<TT3ChallengeDefinition>()
+					.fetchAll()
+			: { resources: [] };
 
 	return {
 		allChallenges: challengeRes.resources.map(publicChallengeFilter),

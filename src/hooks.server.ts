@@ -13,7 +13,7 @@ const authorization: Handle = async ({ event, resolve }) => {
 			const remainingUrl = event.url.pathname.substring('/admin/'.length);
 			throw redirect(303, `/auth/${remainingUrl}`);
 		} else if (!isValidAdmin(session.user)) {
-			throw error(401, "No Arjun Allowed");
+			throw error(401, 'No Arjun Allowed');
 		}
 	}
 
@@ -25,5 +25,5 @@ export const handle = sequence(
 	SvelteKitAuth({
 		providers: [Google({ clientId: GOOGLE_CLIENT_ID, clientSecret: GOOGLE_CLIENT_SECRET })],
 	}),
-	authorization
+	authorization,
 );

@@ -1,347 +1,272 @@
 [
-    {
-        "title": "License Plate Hunter",
-        "desc": "In the surrounding parking lots and parking garages, find five license plates from any state that is at least 1,000 miles away from Washington State, and five vanity plates.</p>\r\n<p>For plates from other states, the closest point of the state must be at least 1000 miles away from the closest point in Washington state. Be careful: this excludes quite a few states. At most two plates can be from the same state.</p>\r\n<p>Vanity plates must contain content that is clearly not randomly generated, as judged by Game Control.</p>\r\n<p>An out-of-state vanity plate <strong>can</strong> count towards both requirements; once for the vanity plate, another time for the out-of-state plate.</p>\r\n<p>For each plate, take a selfie with all team members visible and the license plate.",
-        "type": "multi",
-        "id": "32b0a15f-f5fc-47ea-878f-a316cb6695d3",
-        "mapPos": 1,
-        "partDescs": [
-            "Out-of-state 1",
-            "Out-of-state 2",
-            "Out-of-state 3",
-            "Out-of-state 4",
-            "Out-of-state 5",
-            "Vanity 1",
-            "Vanity 2",
-            "Vanity 3",
-            "Vanity 4",
-            "Vanity 5"
-        ],
-        "rewardDesc": "A train ride on the Link from Northgate Station to Roosevelt Station"
-    },
-    {
-        "title": "Find Something",
-        "desc": "Find one of the following, take a selfie of your team within 5 feet of it, and send it to us:</p>\r\n<ul><li>An ATM</li><li>A Tesla supercharger</li><li>A bicycle locker</li></ul>\r\n<p>",
-        "type": "single",
-        "id": "b2afe19c-d245-4461-89e2-d373371e354a",
-        "mapPos": 1.5,
-        "rewardDesc": "A bus ride from anywhere in the Northgate area to Roosevelt Station"
-    },
-    {
-        "title": "A Tale of Two Stores",
-        "desc": "Complete your choice of either Whole Paycheck or Dai-So You Think You Can Dance?",
-        "type": "subtask",
-        "id": "4f6174e3-cf67-423b-b234-9be4832ab074",
-        "mapPos": 2,
-        "subtaskInfo": {
-            "mapPos": 2.1,
-            "minRequired": 1
-        },
-        "unlockMapPos": [
-            1,
-            1.5
-        ],
-        "rewardDesc": "A train ride on the Link from Roosevelt Station to the U-District Station <span class=\"sep\">or</span> The ability to take any bus to Seattle Center"
-    },
-    {
-        "title": "Whole Paycheck",
-        "desc": "Find an item at Whole Foods that costs more than $75 without customizations/addons. You do not need to buy it, but the whole team should take a selfie with the price tag. This cannot be something that is priced by weight.",
-        "type": "single",
-        "id": "a84efa50-22d3-4ff9-860f-c4f010756fdc",
-        "mapPos": 2.1,
-        "unlockMapPos": [
-            1,
-            1.5
-        ]
-    },
-    {
-        "title": "Dai-So You Think You Can Dance?",
-        "desc": "Go in front of the former Daiso in Roosevelt Square. It is located at 6411 12th Ave NE. Have one team member breakdance outside of the store for 1 minute. If you don’t know how to breakdance, try your best and you’ll still receive credit!",
-        "type": "single",
-        "id": "1305db89-69ac-45da-a53a-9e77669ed53f",
-        "mapPos": 2.1,
-        "unlockMapPos": [
-            1,
-            1.5
-        ]
-    },
-    {
-        "title": "Oh, Neptune!",
-        "desc": "Go to where <i>Ali Wong: Baby Cobra</i> was filmed. Every team member should puff up their cheeks with air as much as possible (like Mrs. Puff from SpongeBob) and take a selfie in front of the building.",
-        "type": "single",
-        "id": "c9482b99-1846-49cb-8565-2c404346670b",
-        "mapPos": 3,
-        "unlockMapPos": [
-            2
-        ],
-        "rewardDesc": "The ability to go south of NE 43rd St to UW station by foot, bus, or the Link"
-    },
-    {
-        "title": "Back In College",
-        "desc": "Complete both Hunt Among Huskies and Howl Like Huskies.",
-        "type": "subtask",
-        "id": "2170672c-aade-4a8a-a7f8-ce6a1acaa891",
-        "mapPos": 4,
-        "subtaskInfo": {
-            "mapPos": 4.1,
-            "minRequired": 2
-        },
-        "unlockMapPos": [
-            3
-        ],
-        "rewardDesc": "A train ride on the Link from the University of Washington Station to Capitol Hill Station."
-    },
-    {
-        "title": "Hunt Among Huskies",
-        "desc": "Two of the following options must be completed to finish this task.",
-        "type": "subtask",
-        "id": "6cccde20-0818-41da-a0c2-89eec359b169",
-        "mapPos": 4.1,
-        "subtaskInfo": {
-            "mapPos": 4.2,
-            "minRequired": 2
-        },
-        "unlockMapPos": [
-            3
-        ]
-    },
-    {
-        "title": "Howl Like Huskies",
-        "desc": "Two of the following options must be completed to finish this task.",
-        "type": "subtask",
-        "id": "0d4b9046-f57a-404e-b2f7-0469fb0c6a3a",
-        "mapPos": 4.1,
-        "subtaskInfo": {
-            "mapPos": 4.3,
-            "minRequired": 2
-        },
-        "unlockMapPos": [
-            3
-        ]
-    },
-    {
-        "title": "Pearson, Cengage, and McGraw–Hill Are Evil",
-        "desc": "Remember your college days when you had to buy overpriced textbooks? Get ready to be transported back to that. Go to the University Bookstore on the Ave (University Ave) and find one of each:</p>\r\n<ul>\r\n<li>A textbook that costs over $300</li>\r\n<li>A textbook with a consumable one-time code (for an online component)</li>\r\n<li>A textbook written by a professor who has taught at the University of Washington at any point in their career</li>\r\n</ul>\r\n<p>Your team should take a selfie with each textbook. The textbooks must be published by one of the following major publishers: Pearson, Cengage, or McGraw–Hill.\r\n",
-        "type": "multi",
-        "id": "03e1337f-4433-4f9b-82c3-2456587026d5",
-        "mapPos": 4.2,
-        "partDescs": [
-            "Over $300",
-            "Online Code",
-            "Faculty Member"
-        ],
-        "unlockMapPos": [
-            3
-        ]
-    },
-    {
-        "title": "Husky Hunting",
-        "desc": "Find all of the following and have your team take a selfie with each:</p>\r\n<ul>\r\n<li>A statue of a husky</li>\r\n<li>A building named after a member of the Gates family</li>\r\n<li>A building named after a company</li>\r\n</ul>\r\n<p>",
-        "type": "multi",
-        "id": "843bbbb0-3ab1-417a-a1b4-a69bb06ec7af",
-        "mapPos": 4.2,
-        "partDescs": [
-            "Husky",
-            "Gates",
-            "Company"
-        ],
-        "unlockMapPos": [
-            3
-        ]
-    },
-    {
-        "title": "Boba Along The Ave",
-        "desc": "Find five shops that sell boba, at least one of which must be north of NE 47th St, and at least one of which must be south of NE 42nd St. At least one shop must be on Roosevelt Way NE. You must be right in front of these stores when taking the selfie.</p>\r\n<p>Based on feedback from prior participants, we ask you this time to <strong>please NOT buy any drinks to consume</strong> (unless you really want to).",
-        "type": "multi",
-        "id": "3b914c8f-e728-41d5-a142-b27f19aba575",
-        "mapPos": 4.2,
-        "partDescs": [
-            "Shop 1 (north of NE 47th)",
-            "Shop 2 (south of NE 42nd)",
-            "Shop 3 (on Roosevelt Way NE)",
-            "Shop 4",
-            "Shop 5"
-        ],
-        "unlockMapPos": [
-            3
-        ]
-    },
-    {
-        "title": "Express Yourself (like Madonna)",
-        "desc": "Red Square at the University of Washington is known for being a “town square” of sorts. One of your team members should go to UW’s Red Square and express their appreciation for a subject matter <strong>related to the title or lyrics of a Madonna song</strong> (except for <i>Papa Don’t Preach</i>) while livestreaming it to the organizer(s) on Signal or FaceTime. Singing is highly encouraged!</p>\r\n\r\n<p>Example: I am not dreaming of San Pedro in my sleep! (Do not use that example or you won’t earn any points.)</p>\r\n\r\n<p><small>Please don’t make your speech  about any controversial topics. Transit Treks are supposed to be just for fun; we don’t want any trouble with the general public. Failure to comply will result in the task not counting for your team.</small></p>",
-        "type": "single",
-        "id": "e2c5bcc4-e90f-4c7b-a876-6ada5db5c2a6",
-        "mapPos": 4.3,
-        "unlockMapPos": [
-            3
-        ]
-    },
-    {
-        "title": "Honky McHonkface",
-        "desc": "<small>(If you choose to do this task, a Transit Trek volunteer will be on hand at the U-District Station to provide you with a poster.)</small></p>\r\n<p>Create a large, easily visible sign on a poster and elicit three honks from a passing, actively moving vehicle on either 15th Ave NE or University Ave. The three honks must be captured on video in video clips each of which are at most 5 seconds long.</p>\r\n<p>The sign is allowed to ask the vehicle to honk - for instance, it can start with “Honk if you like…”. You cannot talk to drivers to convince them to honk—you are only allowed to show them the sign. Also, please keep your signs PG and non-controversial.",
-        "type": "multi",
-        "id": "bcbe3825-0a0b-4908-9fa0-f1a92f16b7c9",
-        "mapPos": 4.3,
-        "partDescs": [
-            "Honk 1",
-            "Honk 2",
-            "Honk 3"
-        ],
-        "unlockMapPos": [
-            3
-        ]
-    },
-    {
-        "title": "Act It Out",
-        "desc": "In front of the Glenn Hughes Penthouse Theatre [sic], film your team reenacting one of the following Monty Python sketches:</p>\r\n<ul>\r\n<li><a href=\"https://www.youtube.com/watch?v=t2c-X8HiBng\" target=\"_blank\">Constitutional Peasants</a> (<a href=\"http://montypython.50webs.com/scripts/Holy_Grail/Scene3.htm\" target=\"_blank\">script</a>)</li>\r\n<li><a href=\"https://www.youtube.com/watch?v=zIV4poUZAQo\" target=\"_blank\">The Knights who say Ni!</a> (<a href=\"https://genius.com/Monty-python-the-knights-who-say-ni-annotated\" target=\"_blank\">script</a>) (up to where Arthur says “not another shrubbery”)</li>\r\n<li><a href=\"https://www.youtube.com/watch?v=uLlv_aZjHXc\" target=\"_blank\">Argument Clinic</a> (<a href=\"https://www.virginiawestern.edu/eng111/ArgumentClinic-MontyPython.pdf\" target=\"_blank\">script</a>) (start with Mr. Barnard on page 2 and end at page 5 when the customer says “oh shut up”)</li>\r\n<li><a href=\"https://www.youtube.com/watch?v=QSo0duY7-9s\" target=\"_blank\">Insulting Frenchman</a> (<a href=\"http://montypython.50webs.com/scripts/Holy_Grail/Scene8.htm\" target=\"_blank\">script</a>) (please do the accent as best as you can)</li>\r\n</ul>\r\n\r\n<p><small>If you participated in mTT1, you cannot do Insulting Frenchman.</small>",
-        "type": "single",
-        "id": "70e8075a-4a16-4232-821c-84d45b88b54c",
-        "mapPos": 4.3,
-        "unlockMapPos": [
-            3
-        ]
-    },
-    {
-        "title": "Seattle Grace Hospital",
-        "desc": "Take a group selfie in front of the building they used in Grey’s Anatomy for exterior shots of Seattle Grace Hospital, where Meredith Grey once worked. (There’s no actual hospital, but try to see if you can figure out what it really is…) Tell us what the “hospital” actually is.",
-        "type": "multi",
-        "id": "f3c68ff7-d49e-4e47-8903-d39cd17a29dd",
-        "mapPos": 5,
-        "partDescs": [
-            "Group Selfie",
-            "Hospital's Identity"
-        ],
-        "unlockMapPos": [
-            2
-        ],
-        "rewardDesc": "A ride on the Seattle Monorail from Seattle Center to Westlake Station AND a train ride on the Link from Westlake Station to Capitol Hill\r\n <span class=\"sep\">or</span> \r\nA direct bus ride from Seattle Center to Capitol Hill Station\r\n"
-    },
-    {
-        "title": "Formerly Known As Twitter",
-        "desc": "Visit the AMP (AIDS Memorial Pathway). Hold up a picture of the old Twitter bird logo on someone’s phone. Use forced perspective to make it look like the same size as the X. Take a picture of the X and the bird logo together.",
-        "type": "single",
-        "id": "9a560127-4d67-404d-8993-e15de119555e",
-        "mapPos": 6,
-        "unlockMapPos": [
-            4,
-            5
-        ],
-        "rewardDesc": "A streetcar ride on the First Hill Streetcar from Broadway & Pike-Pine Station up to Yesler & Broadway Station\r\n<span class=\"sep\">and</span>\r\nAny bus ride from First Hill to Pioneer Square. You may not go south of Yesler Way on these buses.<br />You may exit the streetcar before Yesler if you desire. You may also choose to walk to Pioneer Square from anywhere south of Madison Street."
-    },
-    {
-        "title": "A Streetcar Not Desired",
-        "desc": "Complete both Pious Places and Is This Record-ing? to unlock this pass.",
-        "type": "subtask",
-        "id": "d542f76c-00fb-47dd-bff3-b99ef00c0be1",
-        "mapPos": 7,
-        "subtaskInfo": {
-            "mapPos": 7.1,
-            "minRequired": 2
-        },
-        "unlockMapPos": [
-            4,
-            5
-        ],
-        "rewardDesc": "A train ride on the Link from Capitol Hill Station to University Street Station"
-    },
-    {
-        "title": "Pious Places",
-        "desc": "<p>Find two churches with European countries in their names.</p>\r\n<p>Take a selfie in front of them. Note their architecture. Then, tell us the names of the churches and about what differences in design they have.</p>",
-        "type": "multi",
-        "id": "cfa58ece-f4a5-45ea-b6f2-0d6719c5de5d",
-        "mapPos": 7.1,
-        "partDescs": [
-            "Church 1 Selfie",
-            "Church 1 Name",
-            "Church 2 Selfie",
-            "Church 2 Name",
-            "Differences in Designs"
-        ],
-        "unlockMapPos": [
-            4,
-            5
-        ]
-    },
-    {
-        "title": "Is This Record-ing?",
-        "desc": "Go to a record shop in the Capitol Hill area and find a grunge vinyl LP. (It must be actual grunge; post-grunge is not acceptable. When in doubt, ask the game coordinator.) It must not be a compilation; it needs to be an original album. Don’t buy this LP. Take a picture of the LP with a team member making a peace sign with it.</p>\r\n<p>If the store employees don’t like you doing that, skip that part and have the whole team take a selfie outside (but only after you entered the store first and found the vinyl). If you do this, you must also tell us what the album and artist you found was.</p>\r\n<p>If there is no vinyl for sale that fulfills these conditions, you must complete another task.</p>\r\n\r\n<p>(Note: if you happen to find a nice grunge LP that you really want to buy, you can buy it if there are other grunge LPs that would still be available for other teams to successfully complete this task.)",
-        "type": "single",
-        "id": "e6681085-2b6f-463b-941a-b95edfabb9b4",
-        "mapPos": 7.1,
-        "unlockMapPos": [
-            4,
-            5
-        ]
-    },
-    {
-        "title": "Seattle Art Museum",
-        "desc": "There is a moving sculpture outside the Seattle Art Museum’s front entrance. Find out the name of this sculpture and film a 3 second video of the whole team in front of it moving. Send us that video and the name of this sculpture.",
-        "type": "multi",
-        "id": "08e2fc05-fca2-4f35-90ca-94e959d6571f",
-        "mapPos": 8,
-        "partDescs": [
-            "Video",
-            "Name"
-        ],
-        "unlockMapPos": [
-            7
-        ],
-        "rewardDesc": "A train ride on the Link from University Street Station to Pioneer Square Station"
-    },
-    {
-        "title": "Touring Seattle",
-        "desc": "Find two places in the Pioneer Square area that offer tourist tours. Take a team selfie in front of their places of establishments. Let us know which places you found.",
-        "type": "multi",
-        "id": "6aed52ef-df4f-4bba-9fac-8aed85ce04b2",
-        "mapPos": 9,
-        "partDescs": [
-            "Tour 1",
-            "Tour 2"
-        ],
-        "unlockMapPos": [
-            6,
-            8
-        ],
-        "rewardDesc": "A transit ride to International District / Chinatown Station"
-    },
-    {
-        "title": "Summing Up the Dim Sum",
-        "desc": "Visit at least two dim sum restaurants in the area and look at their takeout dim sum menu. Then, note down ten different types of dim sum, at least five types of which must be the same between the two restaurants. In the interest of fairness, only refer to the English names (i.e. the Cantonese transliterations) of the dim sum dishes.",
-        "type": "multi",
-        "id": "f9156369-41d9-41a9-9dde-bce9e0c31e5d",
-        "mapPos": 10,
-        "partDescs": [
-            "Restaurant 1",
-            "Restaurant 2",
-            "10 Items"
-        ],
-        "unlockMapPos": [
-            9
-        ],
-        "rewardDesc": "The ability to enter Hing Hay Park"
-    },
-    {
-        "title": "A Team Name",
-        "desc": "You must come up with and tell Game Control your team name. Failure to do so will result in a 10 minute penalty being applied to your score. Your name may not be offensive, nor may it intentionally attempt to impersonate another team (eg: Team 5 may not name themselves \"Team 4\").",
-        "type": "single",
-        "id": "04baa400-0fb2-4d03-9615-2fbbf2da429c",
-        "mapPos": 99,
-        "minSubtracted": 10
-    },
-    {
-        "title": "Bio Break",
-        "desc": "You get one mandatory 10 minute team bio break. If you don’t take it, a 10 minute penalty will be applied to your time.",
-        "type": "single",
-        "id": "613d43ec-fb1b-461b-a850-c8414f6dcb3e",
-        "mapPos": 99,
-        "minSubtracted": 10
-    },
-    {
-        "title": "Lyric Challenge",
-        "desc": "Pick a song from the below list and find two contiguous lines from the song comprising at least 10 distinct words. (Oohs and ahhs and other mumblings in the song do not count.) Then, whenever you find Arjun Pherwani in the game, ask him to guess the song which the lyrics are from. If he doesn’t guess it correctly within 10 seconds, you get a 3 minute advantage!</p>\r\n\r\n<p>List:</p>\r\n<ul>\r\n<li>आयुष्मान खुराना, पानी डा रंग\r\n</li><li>Audioslave, Like A Stone\r\n</li><li>The Beatles, And Your Bird Can Sing\r\n</li><li>The Beatles, Back In The U.S.S.R.\r\n</li><li>The Beatles, Blackbird\r\n</li><li>The Beatles, Day Tripper\r\n</li><li>The Beatles, Doctor Robert\r\n</li><li>The Beatles, Drive My Car\r\n</li><li>The Beatles, Eleanor Rigby\r\n</li><li>The Beatles, Glass Onion\r\n</li><li>The Beatles, Good Day Sunshine\r\n</li><li>The Beatles, Got To Get You Into My Life\r\n</li><li>The Beatles, Hello, Goodbye\r\n</li><li>The Beatles, Helter Skelter\r\n</li><li>The Beatles, Here Comes The Sun\r\n</li><li>The Beatles, Hey Jude\r\n</li><li>The Beatles, Lovely Rita\r\n</li><li>The Beatles, In My Life\r\n</li><li>The Beatles, Maxwell’s Silver Hammer\r\n</li><li>The Beatles, Norwegian Wood (This Bird Has Flown)\r\n</li><li>The Beatles, Revolution\r\n</li><li>The Beatles, She Said She Said\r\n</li><li>The Beatles, Something\r\n</li><li>The Beatles, Taxman\r\n</li><li>The Beatles, Ticket to Ride\r\n</li><li>Black Sabbath, Iron Man\r\n</li><li>Black Sabbath, Paranoid\r\n</li><li>Blue Öyster Cult, (Don’t Fear) The Reaper\r\n</li><li>Boston, Amanda\r\n</li><li>Boston, More Than A Feeling\r\n</li><li>Boston, Peace of Mind\r\n</li><li>David Bowie, Starman\r\n</li><li>David Bowie, Ziggy Stardust\r\n</li><li>Don McLean, American Pie\r\n</li><li>Don McLean, Vincent\r\n</li><li>Fleetwood Mac, Dreams\r\n</li><li>Fleetwood Mac, Rhiannon\r\n</li><li>Fleetwood Mac, The Chain\r\n</li><li>Fountains of Wayne, Stacy’s Mom\r\n</li><li>Green Day, American Idiot\r\n</li><li>Green Day, Give Me Novacaine / She’s a Rebel\r\n</li><li>Green Day, Holiday / Boulevard of Broken Dreams\r\n</li><li>Green Day, Homecoming\r\n</li><li>Green Day, Jesus of Suburbia\r\n</li><li>Green Day, Whatsername\r\n</li><li>Jethro Tull, Aqualung\r\n</li><li>Jethro Tull, We Used to Know\r\n</li><li>John Denver, Take Me Home, Country Roads\r\n</li><li>Led Zeppelin, Immigrant Song\r\n</li><li>Led Zeppelin, Kashmir\r\n</li><li>Led Zeppelin, Stairway to Heaven\r\n</li><li>Linkin Park, In The End\r\n</li><li>Linkin Park, What I’ve Done\r\n</li><li>Madonna, La Isla Bonita\r\n</li><li>Matchbox Twenty, 3AM\r\n</li><li>Matchbox Twenty, Push\r\n</li><li>Metallica, Enter Sandman\r\n</li><li>The Monkees, Pleasant Valley Sunday\r\n</li><li>My Chemical Romance, Welcome to the Black Parade\r\n</li><li>Nickelback, How You Remind Me\r\n</li><li>Nickelback, If Today Was Your Last Day\r\n</li><li>Nirvana, Come As You Are\r\n</li><li>Nirvana, Smells Like Teen Spirit\r\n</li><li>Paul McCartney, Band On The Run\r\n</li><li>Paul McCartney, Let Me Roll It\r\n</li><li>Pink Floyd, Another Brick In The Wall (Part 2)\r\n</li><li>Pink Floyd, Breathe (In The Air)\r\n</li><li>Pink Floyd, Comfortably Numb\r\n</li><li>Pink Floyd, Money\r\n</li><li>Pink Floyd, Time\r\n</li><li>Pink Floyd, Wish You Were Here\r\n</li><li>Soundgarden, Black Hole Sun\r\n</li><li>The Who, Baba O’Riley\r\n</li><li>The Who, Behind Blue Eyes\r\n</li><li>The Who, Pinball Wizard</li>\r\n</ul>",
-        "type": "single",
-        "id": "33c83d44-1747-4990-93d2-a6a5170bdc3f",
-        "mapPos": 99,
-        "minSubtracted": 3
-    }
+	{
+		"title": "License Plate Hunter",
+		"desc": "In the surrounding parking lots and parking garages, find five license plates from any state that is at least 1,000 miles away from Washington State, and five vanity plates.</p>\r\n<p>For plates from other states, the closest point of the state must be at least 1000 miles away from the closest point in Washington state. Be careful: this excludes quite a few states. At most two plates can be from the same state.</p>\r\n<p>Vanity plates must contain content that is clearly not randomly generated, as judged by Game Control.</p>\r\n<p>An out-of-state vanity plate <strong>can</strong> count towards both requirements; once for the vanity plate, another time for the out-of-state plate.</p>\r\n<p>For each plate, take a selfie with all team members visible and the license plate.",
+		"type": "multi",
+		"id": "32b0a15f-f5fc-47ea-878f-a316cb6695d3",
+		"mapPos": 1,
+		"partDescs": [
+			"Out-of-state 1",
+			"Out-of-state 2",
+			"Out-of-state 3",
+			"Out-of-state 4",
+			"Out-of-state 5",
+			"Vanity 1",
+			"Vanity 2",
+			"Vanity 3",
+			"Vanity 4",
+			"Vanity 5"
+		],
+		"rewardDesc": "A train ride on the Link from Northgate Station to Roosevelt Station"
+	},
+	{
+		"title": "Find Something",
+		"desc": "Find one of the following, take a selfie of your team within 5 feet of it, and send it to us:</p>\r\n<ul><li>An ATM</li><li>A Tesla supercharger</li><li>A bicycle locker</li></ul>\r\n<p>",
+		"type": "single",
+		"id": "b2afe19c-d245-4461-89e2-d373371e354a",
+		"mapPos": 1.5,
+		"rewardDesc": "A bus ride from anywhere in the Northgate area to Roosevelt Station"
+	},
+	{
+		"title": "A Tale of Two Stores",
+		"desc": "Complete your choice of either Whole Paycheck or Dai-So You Think You Can Dance?",
+		"type": "subtask",
+		"id": "4f6174e3-cf67-423b-b234-9be4832ab074",
+		"mapPos": 2,
+		"subtaskInfo": {
+			"mapPos": 2.1,
+			"minRequired": 1
+		},
+		"unlockMapPos": [1, 1.5],
+		"rewardDesc": "A train ride on the Link from Roosevelt Station to the U-District Station <span class=\"sep\">or</span> The ability to take any bus to Seattle Center"
+	},
+	{
+		"title": "Whole Paycheck",
+		"desc": "Find an item at Whole Foods that costs more than $75 without customizations/addons. You do not need to buy it, but the whole team should take a selfie with the price tag. This cannot be something that is priced by weight.",
+		"type": "single",
+		"id": "a84efa50-22d3-4ff9-860f-c4f010756fdc",
+		"mapPos": 2.1,
+		"unlockMapPos": [1, 1.5]
+	},
+	{
+		"title": "Dai-So You Think You Can Dance?",
+		"desc": "Go in front of the former Daiso in Roosevelt Square. It is located at 6411 12th Ave NE. Have one team member breakdance outside of the store for 1 minute. If you don’t know how to breakdance, try your best and you’ll still receive credit!",
+		"type": "single",
+		"id": "1305db89-69ac-45da-a53a-9e77669ed53f",
+		"mapPos": 2.1,
+		"unlockMapPos": [1, 1.5]
+	},
+	{
+		"title": "Oh, Neptune!",
+		"desc": "Go to where <i>Ali Wong: Baby Cobra</i> was filmed. Every team member should puff up their cheeks with air as much as possible (like Mrs. Puff from SpongeBob) and take a selfie in front of the building.",
+		"type": "single",
+		"id": "c9482b99-1846-49cb-8565-2c404346670b",
+		"mapPos": 3,
+		"unlockMapPos": [2],
+		"rewardDesc": "The ability to go south of NE 43rd St to UW station by foot, bus, or the Link"
+	},
+	{
+		"title": "Back In College",
+		"desc": "Complete both Hunt Among Huskies and Howl Like Huskies.",
+		"type": "subtask",
+		"id": "2170672c-aade-4a8a-a7f8-ce6a1acaa891",
+		"mapPos": 4,
+		"subtaskInfo": {
+			"mapPos": 4.1,
+			"minRequired": 2
+		},
+		"unlockMapPos": [3],
+		"rewardDesc": "A train ride on the Link from the University of Washington Station to Capitol Hill Station."
+	},
+	{
+		"title": "Hunt Among Huskies",
+		"desc": "Two of the following options must be completed to finish this task.",
+		"type": "subtask",
+		"id": "6cccde20-0818-41da-a0c2-89eec359b169",
+		"mapPos": 4.1,
+		"subtaskInfo": {
+			"mapPos": 4.2,
+			"minRequired": 2
+		},
+		"unlockMapPos": [3]
+	},
+	{
+		"title": "Howl Like Huskies",
+		"desc": "Two of the following options must be completed to finish this task.",
+		"type": "subtask",
+		"id": "0d4b9046-f57a-404e-b2f7-0469fb0c6a3a",
+		"mapPos": 4.1,
+		"subtaskInfo": {
+			"mapPos": 4.3,
+			"minRequired": 2
+		},
+		"unlockMapPos": [3]
+	},
+	{
+		"title": "Pearson, Cengage, and McGraw–Hill Are Evil",
+		"desc": "Remember your college days when you had to buy overpriced textbooks? Get ready to be transported back to that. Go to the University Bookstore on the Ave (University Ave) and find one of each:</p>\r\n<ul>\r\n<li>A textbook that costs over $300</li>\r\n<li>A textbook with a consumable one-time code (for an online component)</li>\r\n<li>A textbook written by a professor who has taught at the University of Washington at any point in their career</li>\r\n</ul>\r\n<p>Your team should take a selfie with each textbook. The textbooks must be published by one of the following major publishers: Pearson, Cengage, or McGraw–Hill.\r\n",
+		"type": "multi",
+		"id": "03e1337f-4433-4f9b-82c3-2456587026d5",
+		"mapPos": 4.2,
+		"partDescs": ["Over $300", "Online Code", "Faculty Member"],
+		"unlockMapPos": [3]
+	},
+	{
+		"title": "Husky Hunting",
+		"desc": "Find all of the following and have your team take a selfie with each:</p>\r\n<ul>\r\n<li>A statue of a husky</li>\r\n<li>A building named after a member of the Gates family</li>\r\n<li>A building named after a company</li>\r\n</ul>\r\n<p>",
+		"type": "multi",
+		"id": "843bbbb0-3ab1-417a-a1b4-a69bb06ec7af",
+		"mapPos": 4.2,
+		"partDescs": ["Husky", "Gates", "Company"],
+		"unlockMapPos": [3]
+	},
+	{
+		"title": "Boba Along The Ave",
+		"desc": "Find five shops that sell boba, at least one of which must be north of NE 47th St, and at least one of which must be south of NE 42nd St. At least one shop must be on Roosevelt Way NE. You must be right in front of these stores when taking the selfie.</p>\r\n<p>Based on feedback from prior participants, we ask you this time to <strong>please NOT buy any drinks to consume</strong> (unless you really want to).",
+		"type": "multi",
+		"id": "3b914c8f-e728-41d5-a142-b27f19aba575",
+		"mapPos": 4.2,
+		"partDescs": [
+			"Shop 1 (north of NE 47th)",
+			"Shop 2 (south of NE 42nd)",
+			"Shop 3 (on Roosevelt Way NE)",
+			"Shop 4",
+			"Shop 5"
+		],
+		"unlockMapPos": [3]
+	},
+	{
+		"title": "Express Yourself (like Madonna)",
+		"desc": "Red Square at the University of Washington is known for being a “town square” of sorts. One of your team members should go to UW’s Red Square and express their appreciation for a subject matter <strong>related to the title or lyrics of a Madonna song</strong> (except for <i>Papa Don’t Preach</i>) while livestreaming it to the organizer(s) on Signal or FaceTime. Singing is highly encouraged!</p>\r\n\r\n<p>Example: I am not dreaming of San Pedro in my sleep! (Do not use that example or you won’t earn any points.)</p>\r\n\r\n<p><small>Please don’t make your speech  about any controversial topics. Transit Treks are supposed to be just for fun; we don’t want any trouble with the general public. Failure to comply will result in the task not counting for your team.</small></p>",
+		"type": "single",
+		"id": "e2c5bcc4-e90f-4c7b-a876-6ada5db5c2a6",
+		"mapPos": 4.3,
+		"unlockMapPos": [3]
+	},
+	{
+		"title": "Honky McHonkface",
+		"desc": "<small>(If you choose to do this task, a Transit Trek volunteer will be on hand at the U-District Station to provide you with a poster.)</small></p>\r\n<p>Create a large, easily visible sign on a poster and elicit three honks from a passing, actively moving vehicle on either 15th Ave NE or University Ave. The three honks must be captured on video in video clips each of which are at most 5 seconds long.</p>\r\n<p>The sign is allowed to ask the vehicle to honk - for instance, it can start with “Honk if you like…”. You cannot talk to drivers to convince them to honk—you are only allowed to show them the sign. Also, please keep your signs PG and non-controversial.",
+		"type": "multi",
+		"id": "bcbe3825-0a0b-4908-9fa0-f1a92f16b7c9",
+		"mapPos": 4.3,
+		"partDescs": ["Honk 1", "Honk 2", "Honk 3"],
+		"unlockMapPos": [3]
+	},
+	{
+		"title": "Act It Out",
+		"desc": "In front of the Glenn Hughes Penthouse Theatre [sic], film your team reenacting one of the following Monty Python sketches:</p>\r\n<ul>\r\n<li><a href=\"https://www.youtube.com/watch?v=t2c-X8HiBng\" target=\"_blank\">Constitutional Peasants</a> (<a href=\"http://montypython.50webs.com/scripts/Holy_Grail/Scene3.htm\" target=\"_blank\">script</a>)</li>\r\n<li><a href=\"https://www.youtube.com/watch?v=zIV4poUZAQo\" target=\"_blank\">The Knights who say Ni!</a> (<a href=\"https://genius.com/Monty-python-the-knights-who-say-ni-annotated\" target=\"_blank\">script</a>) (up to where Arthur says “not another shrubbery”)</li>\r\n<li><a href=\"https://www.youtube.com/watch?v=uLlv_aZjHXc\" target=\"_blank\">Argument Clinic</a> (<a href=\"https://www.virginiawestern.edu/eng111/ArgumentClinic-MontyPython.pdf\" target=\"_blank\">script</a>) (start with Mr. Barnard on page 2 and end at page 5 when the customer says “oh shut up”)</li>\r\n<li><a href=\"https://www.youtube.com/watch?v=QSo0duY7-9s\" target=\"_blank\">Insulting Frenchman</a> (<a href=\"http://montypython.50webs.com/scripts/Holy_Grail/Scene8.htm\" target=\"_blank\">script</a>) (please do the accent as best as you can)</li>\r\n</ul>\r\n\r\n<p><small>If you participated in mTT1, you cannot do Insulting Frenchman.</small>",
+		"type": "single",
+		"id": "70e8075a-4a16-4232-821c-84d45b88b54c",
+		"mapPos": 4.3,
+		"unlockMapPos": [3]
+	},
+	{
+		"title": "Seattle Grace Hospital",
+		"desc": "Take a group selfie in front of the building they used in Grey’s Anatomy for exterior shots of Seattle Grace Hospital, where Meredith Grey once worked. (There’s no actual hospital, but try to see if you can figure out what it really is…) Tell us what the “hospital” actually is.",
+		"type": "multi",
+		"id": "f3c68ff7-d49e-4e47-8903-d39cd17a29dd",
+		"mapPos": 5,
+		"partDescs": ["Group Selfie", "Hospital's Identity"],
+		"unlockMapPos": [2],
+		"rewardDesc": "A ride on the Seattle Monorail from Seattle Center to Westlake Station AND a train ride on the Link from Westlake Station to Capitol Hill\r\n <span class=\"sep\">or</span> \r\nA direct bus ride from Seattle Center to Capitol Hill Station\r\n"
+	},
+	{
+		"title": "Formerly Known As Twitter",
+		"desc": "Visit the AMP (AIDS Memorial Pathway). Hold up a picture of the old Twitter bird logo on someone’s phone. Use forced perspective to make it look like the same size as the X. Take a picture of the X and the bird logo together.",
+		"type": "single",
+		"id": "9a560127-4d67-404d-8993-e15de119555e",
+		"mapPos": 6,
+		"unlockMapPos": [4, 5],
+		"rewardDesc": "A streetcar ride on the First Hill Streetcar from Broadway & Pike-Pine Station up to Yesler & Broadway Station\r\n<span class=\"sep\">and</span>\r\nAny bus ride from First Hill to Pioneer Square. You may not go south of Yesler Way on these buses.<br />You may exit the streetcar before Yesler if you desire. You may also choose to walk to Pioneer Square from anywhere south of Madison Street."
+	},
+	{
+		"title": "A Streetcar Not Desired",
+		"desc": "Complete both Pious Places and Is This Record-ing? to unlock this pass.",
+		"type": "subtask",
+		"id": "d542f76c-00fb-47dd-bff3-b99ef00c0be1",
+		"mapPos": 7,
+		"subtaskInfo": {
+			"mapPos": 7.1,
+			"minRequired": 2
+		},
+		"unlockMapPos": [4, 5],
+		"rewardDesc": "A train ride on the Link from Capitol Hill Station to University Street Station"
+	},
+	{
+		"title": "Pious Places",
+		"desc": "<p>Find two churches with European countries in their names.</p>\r\n<p>Take a selfie in front of them. Note their architecture. Then, tell us the names of the churches and about what differences in design they have.</p>",
+		"type": "multi",
+		"id": "cfa58ece-f4a5-45ea-b6f2-0d6719c5de5d",
+		"mapPos": 7.1,
+		"partDescs": [
+			"Church 1 Selfie",
+			"Church 1 Name",
+			"Church 2 Selfie",
+			"Church 2 Name",
+			"Differences in Designs"
+		],
+		"unlockMapPos": [4, 5]
+	},
+	{
+		"title": "Is This Record-ing?",
+		"desc": "Go to a record shop in the Capitol Hill area and find a grunge vinyl LP. (It must be actual grunge; post-grunge is not acceptable. When in doubt, ask the game coordinator.) It must not be a compilation; it needs to be an original album. Don’t buy this LP. Take a picture of the LP with a team member making a peace sign with it.</p>\r\n<p>If the store employees don’t like you doing that, skip that part and have the whole team take a selfie outside (but only after you entered the store first and found the vinyl). If you do this, you must also tell us what the album and artist you found was.</p>\r\n<p>If there is no vinyl for sale that fulfills these conditions, you must complete another task.</p>\r\n\r\n<p>(Note: if you happen to find a nice grunge LP that you really want to buy, you can buy it if there are other grunge LPs that would still be available for other teams to successfully complete this task.)",
+		"type": "single",
+		"id": "e6681085-2b6f-463b-941a-b95edfabb9b4",
+		"mapPos": 7.1,
+		"unlockMapPos": [4, 5]
+	},
+	{
+		"title": "Seattle Art Museum",
+		"desc": "There is a moving sculpture outside the Seattle Art Museum’s front entrance. Find out the name of this sculpture and film a 3 second video of the whole team in front of it moving. Send us that video and the name of this sculpture.",
+		"type": "multi",
+		"id": "08e2fc05-fca2-4f35-90ca-94e959d6571f",
+		"mapPos": 8,
+		"partDescs": ["Video", "Name"],
+		"unlockMapPos": [7],
+		"rewardDesc": "A train ride on the Link from University Street Station to Pioneer Square Station"
+	},
+	{
+		"title": "Touring Seattle",
+		"desc": "Find two places in the Pioneer Square area that offer tourist tours. Take a team selfie in front of their places of establishments. Let us know which places you found.",
+		"type": "multi",
+		"id": "6aed52ef-df4f-4bba-9fac-8aed85ce04b2",
+		"mapPos": 9,
+		"partDescs": ["Tour 1", "Tour 2"],
+		"unlockMapPos": [6, 8],
+		"rewardDesc": "A transit ride to International District / Chinatown Station"
+	},
+	{
+		"title": "Summing Up the Dim Sum",
+		"desc": "Visit at least two dim sum restaurants in the area and look at their takeout dim sum menu. Then, note down ten different types of dim sum, at least five types of which must be the same between the two restaurants. In the interest of fairness, only refer to the English names (i.e. the Cantonese transliterations) of the dim sum dishes.",
+		"type": "multi",
+		"id": "f9156369-41d9-41a9-9dde-bce9e0c31e5d",
+		"mapPos": 10,
+		"partDescs": ["Restaurant 1", "Restaurant 2", "10 Items"],
+		"unlockMapPos": [9],
+		"rewardDesc": "The ability to enter Hing Hay Park"
+	},
+	{
+		"title": "A Team Name",
+		"desc": "You must come up with and tell Game Control your team name. Failure to do so will result in a 10 minute penalty being applied to your score. Your name may not be offensive, nor may it intentionally attempt to impersonate another team (eg: Team 5 may not name themselves \"Team 4\").",
+		"type": "single",
+		"id": "04baa400-0fb2-4d03-9615-2fbbf2da429c",
+		"mapPos": 99,
+		"minSubtracted": 10
+	},
+	{
+		"title": "Bio Break",
+		"desc": "You get one mandatory 10 minute team bio break. If you don’t take it, a 10 minute penalty will be applied to your time.",
+		"type": "single",
+		"id": "613d43ec-fb1b-461b-a850-c8414f6dcb3e",
+		"mapPos": 99,
+		"minSubtracted": 10
+	},
+	{
+		"title": "Lyric Challenge",
+		"desc": "Pick a song from the below list and find two contiguous lines from the song comprising at least 10 distinct words. (Oohs and ahhs and other mumblings in the song do not count.) Then, whenever you find Arjun Pherwani in the game, ask him to guess the song which the lyrics are from. If he doesn’t guess it correctly within 10 seconds, you get a 3 minute advantage!</p>\r\n\r\n<p>List:</p>\r\n<ul>\r\n<li>आयुष्मान खुराना, पानी डा रंग\r\n</li><li>Audioslave, Like A Stone\r\n</li><li>The Beatles, And Your Bird Can Sing\r\n</li><li>The Beatles, Back In The U.S.S.R.\r\n</li><li>The Beatles, Blackbird\r\n</li><li>The Beatles, Day Tripper\r\n</li><li>The Beatles, Doctor Robert\r\n</li><li>The Beatles, Drive My Car\r\n</li><li>The Beatles, Eleanor Rigby\r\n</li><li>The Beatles, Glass Onion\r\n</li><li>The Beatles, Good Day Sunshine\r\n</li><li>The Beatles, Got To Get You Into My Life\r\n</li><li>The Beatles, Hello, Goodbye\r\n</li><li>The Beatles, Helter Skelter\r\n</li><li>The Beatles, Here Comes The Sun\r\n</li><li>The Beatles, Hey Jude\r\n</li><li>The Beatles, Lovely Rita\r\n</li><li>The Beatles, In My Life\r\n</li><li>The Beatles, Maxwell’s Silver Hammer\r\n</li><li>The Beatles, Norwegian Wood (This Bird Has Flown)\r\n</li><li>The Beatles, Revolution\r\n</li><li>The Beatles, She Said She Said\r\n</li><li>The Beatles, Something\r\n</li><li>The Beatles, Taxman\r\n</li><li>The Beatles, Ticket to Ride\r\n</li><li>Black Sabbath, Iron Man\r\n</li><li>Black Sabbath, Paranoid\r\n</li><li>Blue Öyster Cult, (Don’t Fear) The Reaper\r\n</li><li>Boston, Amanda\r\n</li><li>Boston, More Than A Feeling\r\n</li><li>Boston, Peace of Mind\r\n</li><li>David Bowie, Starman\r\n</li><li>David Bowie, Ziggy Stardust\r\n</li><li>Don McLean, American Pie\r\n</li><li>Don McLean, Vincent\r\n</li><li>Fleetwood Mac, Dreams\r\n</li><li>Fleetwood Mac, Rhiannon\r\n</li><li>Fleetwood Mac, The Chain\r\n</li><li>Fountains of Wayne, Stacy’s Mom\r\n</li><li>Green Day, American Idiot\r\n</li><li>Green Day, Give Me Novacaine / She’s a Rebel\r\n</li><li>Green Day, Holiday / Boulevard of Broken Dreams\r\n</li><li>Green Day, Homecoming\r\n</li><li>Green Day, Jesus of Suburbia\r\n</li><li>Green Day, Whatsername\r\n</li><li>Jethro Tull, Aqualung\r\n</li><li>Jethro Tull, We Used to Know\r\n</li><li>John Denver, Take Me Home, Country Roads\r\n</li><li>Led Zeppelin, Immigrant Song\r\n</li><li>Led Zeppelin, Kashmir\r\n</li><li>Led Zeppelin, Stairway to Heaven\r\n</li><li>Linkin Park, In The End\r\n</li><li>Linkin Park, What I’ve Done\r\n</li><li>Madonna, La Isla Bonita\r\n</li><li>Matchbox Twenty, 3AM\r\n</li><li>Matchbox Twenty, Push\r\n</li><li>Metallica, Enter Sandman\r\n</li><li>The Monkees, Pleasant Valley Sunday\r\n</li><li>My Chemical Romance, Welcome to the Black Parade\r\n</li><li>Nickelback, How You Remind Me\r\n</li><li>Nickelback, If Today Was Your Last Day\r\n</li><li>Nirvana, Come As You Are\r\n</li><li>Nirvana, Smells Like Teen Spirit\r\n</li><li>Paul McCartney, Band On The Run\r\n</li><li>Paul McCartney, Let Me Roll It\r\n</li><li>Pink Floyd, Another Brick In The Wall (Part 2)\r\n</li><li>Pink Floyd, Breathe (In The Air)\r\n</li><li>Pink Floyd, Comfortably Numb\r\n</li><li>Pink Floyd, Money\r\n</li><li>Pink Floyd, Time\r\n</li><li>Pink Floyd, Wish You Were Here\r\n</li><li>Soundgarden, Black Hole Sun\r\n</li><li>The Who, Baba O’Riley\r\n</li><li>The Who, Behind Blue Eyes\r\n</li><li>The Who, Pinball Wizard</li>\r\n</ul>",
+		"type": "single",
+		"id": "33c83d44-1747-4990-93d2-a6a5170bdc3f",
+		"mapPos": 99,
+		"minSubtracted": 3
+	}
 ]

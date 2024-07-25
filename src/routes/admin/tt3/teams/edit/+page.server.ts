@@ -2,7 +2,7 @@ import { CosmosClient } from '@azure/cosmos';
 import { redirect } from '@sveltejs/kit';
 import type { Actions, PageServerLoad, RequestEvent } from './$types';
 import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
-import type { Team } from '../../../../../types/team';
+import type { TT3Team } from '../../../../../types/team';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,
@@ -16,7 +16,7 @@ export const load: PageServerLoad = async ({ url }) => {
 			.database('transit-trek')
 			.container('tt3-teams')
 			.item(id, id)
-			.read<Team>();
+			.read<TT3Team>();
 		return {
 			team: res.resource,
 		};
@@ -45,15 +45,18 @@ export const actions = {
 			.database('transit-trek')
 			.container('tt3-teams')
 			.item(id, id)
-			.patch([{
-				op: 'replace',
-				path: '/name',
-				value: name,
-			}, {
-				op: 'replace',
-				path: '/teamNum',
-				value: teamNum,
-			}]);
+			.patch([
+				{
+					op: 'replace',
+					path: '/name',
+					value: name,
+				},
+				{
+					op: 'replace',
+					path: '/teamNum',
+					value: teamNum,
+				},
+			]);
 
 		redirect(303, '/admin/tt3/teams');
 	},

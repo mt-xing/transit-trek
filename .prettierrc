@@ -2,10 +2,8 @@
 	"useTabs": true,
 	"singleQuote": true,
 	"printWidth": 100,
-	"plugins": [
-		"prettier-plugin-svelte"
-	],
-	"eol": "\n",
+	"plugins": ["prettier-plugin-svelte"],
+	"endOfLine": "lf",
 	"overrides": [
 		{
 			"files": "*.svelte",

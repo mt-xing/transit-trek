@@ -7,7 +7,9 @@
 	$: finalColor = `linear-gradient(to right, ${color.map((x, i, a) => `${x} ${(i / Math.max(a.length - 1, 1)) * 50}%`).join(', ')}, rgba(0, 0, 255, 0) 100%)`;
 </script>
 
-<a {href} class="bigbtn" style="--color: {finalColor}" rel={external ? "external" : undefined}>{text}</a>
+<a {href} class="bigbtn" style="--color: {finalColor}" rel={external ? 'external' : undefined}
+	>{text}</a
+>
 
 <style>
 	.bigbtn {

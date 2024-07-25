@@ -3,10 +3,10 @@
 	import SingleChallengeBtn from '../../../components/challengeBtns/singleChallengeBtn.svelte';
 	import ChallengeView from '../../../components/challengeView.svelte';
 	import Map from '../../../components/map/map.svelte';
-	import type { PublicChallengeDefinition } from '../../../types/challenge';
+	import type { TT3PublicChallengeDefinition } from '../../../types/challenge';
 	import assertUnreachable from '../../../utils/assertUnreachable';
 	import type { PageData } from './$types';
-	import type { GameState } from '../../../types/game';
+	import type { TT3GameState } from '../../../types/game';
 
 	export let data: PageData;
 	let { allChallenges, gameState, team } = data;
@@ -16,7 +16,7 @@
 		challengeProgress: team?.challengeProgress ?? {},
 	};
 
-	let selectedChallenge: null | PublicChallengeDefinition = null;
+	let selectedChallenge: null | TT3PublicChallengeDefinition = null;
 
 	let timeString = '--:--:--';
 	function padToTwo(x: number) {
@@ -67,13 +67,13 @@
 	}
 	onMount(updateTimeString);
 
-	const openCallback = (c: PublicChallengeDefinition) => {
+	const openCallback = (c: TT3PublicChallengeDefinition) => {
 		if (selectedChallenge === null) {
 			selectedChallenge = c;
 		}
 	};
 
-	const gameStateUpdateTime = (gs?: GameState) => {
+	const gameStateUpdateTime = (gs?: TT3GameState) => {
 		if (!gs) {
 			return 10000;
 		}
@@ -87,7 +87,7 @@
 				assertUnreachable(gs);
 		}
 	};
-	const teamUpdateTime = (gs?: GameState) => (gs?.t === 'ongoing' ? 10 * 1000 : 30 * 1000);
+	const teamUpdateTime = (gs?: TT3GameState) => (gs?.t === 'ongoing' ? 10 * 1000 : 30 * 1000);
 	const challengeUpdateTime = 60 * 1000;
 
 	let teamUpdateInterval: ReturnType<typeof setInterval> | undefined;
@@ -115,7 +115,7 @@
 				try {
 					const newChallenges = await newChallengesRes.json();
 					if (newChallenges) {
-						allChallenges = newChallenges as PublicChallengeDefinition[];
+						allChallenges = newChallenges as TT3PublicChallengeDefinition[];
 					}
 				} catch (e) {
 					// eslint-disable-next-line no-console
@@ -127,7 +127,7 @@
 		const updateGameState = async () => {
 			const newStateRes = await fetch('/tt3/game/api/game');
 			if (newStateRes.ok) {
-				const newState = (await newStateRes.json()) as GameState | undefined;
+				const newState = (await newStateRes.json()) as TT3GameState | undefined;
 				if (newState) {
 					if (gameState?.t !== newState.t) {
 						clearInterval(teamUpdateInterval);

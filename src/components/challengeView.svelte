@@ -1,17 +1,17 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
-	import type { PublicChallengeDefinition } from '../types/challenge';
+	import type { TT3PublicChallengeDefinition } from '../types/challenge';
 	import ImmutableCheckbox from './immutableCheckbox.svelte';
 	import { isChallengeComplete, isChallengeUnlocked } from '../utils/challenge';
-	import type { DashboardPassthroughInfo } from '../types/map';
+	import type { TT3DashboardPassthroughInfo } from '../types/map';
 
-	export let challenge: PublicChallengeDefinition;
-	export let dashboardInfo: DashboardPassthroughInfo;
+	export let challenge: TT3PublicChallengeDefinition;
+	export let dashboardInfo: TT3DashboardPassthroughInfo;
 	$: ({ allChallenges, challengeProgress } = dashboardInfo);
 	export let iteration: number = 0;
 	export let closeCallback: () => void;
 
-	let openChallenge: PublicChallengeDefinition | undefined;
+	let openChallenge: TT3PublicChallengeDefinition | undefined;
 	$: progress = challengeProgress[challenge.id];
 
 	$: isUnlocked = isChallengeUnlocked(challenge, dashboardInfo);

@@ -1,10 +1,10 @@
 import { CosmosClient, type PatchRequestBody } from '@azure/cosmos';
 import { redirect } from '@sveltejs/kit';
 import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
-import { GAME_KEY, type GameState } from '../../../../types/game';
+import { GAME_KEY, type TT3GameState } from '../../../../types/game';
 import type { Actions, PageServerLoad, RequestEvent } from './$types';
-import type { ChallengeProgress, Team } from '../../../../types/team';
-import type { ChallengeDefinition } from '../../../../types/challenge';
+import type { TT3ChallengeProgress, TT3Team } from '../../../../types/team';
+import type { TT3ChallengeDefinition } from '../../../../types/challenge';
 import { isChallengeComplete } from '../../../../utils/challenge';
 import { writeLog } from '../../../../types/logs';
 
@@ -18,22 +18,18 @@ async function getGameState() {
 		.database('transit-trek')
 		.container('tt3-game')
 		.item(GAME_KEY, GAME_KEY)
-		.read<GameState>();
+		.read<TT3GameState>();
 	return res.resource;
 }
 
 export const load: PageServerLoad = async () => {
 	const [res, gameState, challengeRes] = await Promise.all([
-		client
-			.database('transit-trek')
-			.container('tt3-teams')
-			.items.readAll<Team>()
-			.fetchAll(),
+		client.database('transit-trek').container('tt3-teams').items.readAll<TT3Team>().fetchAll(),
 		getGameState(),
 		client
 			.database('transit-trek')
 			.container('tt3-challenges')
-			.items.readAll<ChallengeDefinition>()
+			.items.readAll<TT3ChallengeDefinition>()
 			.fetchAll(),
 	]);
 	return {
@@ -61,53 +57,62 @@ function boolOrUndef(x: unknown) {
 export const actions = {
 	saveProgress: async (event: RequestEvent) => {
 		const data = await event.request.formData();
-		const teamId = data.get("teamId") as string;
-		const challengeId = data.get("challengeId") as string;
+		const teamId = data.get('teamId') as string;
+		const challengeId = data.get('challengeId') as string;
 		if (!teamId || !challengeId) {
 			redirect(303, '/admin/tt3/entry');
 			return;
 		}
 
-		const manualUnlock = boolOrUndef(data.get("manualUnlock"));
-		const manualComplete = boolOrUndef(data.get("manualComplete"));
+		const manualUnlock = boolOrUndef(data.get('manualUnlock'));
+		const manualComplete = boolOrUndef(data.get('manualComplete'));
 
 		const max = parseInt(data.get('max') as string, 10);
 
 		const progress = Array.from(Array(max)).fill(false);
-		data.getAll("progress").map((x: unknown) => parseInt(x as string, 10)).forEach(x => { progress[x] = true })
+		data
+			.getAll('progress')
+			.map((x: unknown) => parseInt(x as string, 10))
+			.forEach((x) => {
+				progress[x] = true;
+			});
 
-		const newVal: ChallengeProgress[string] = {
+		const newVal: TT3ChallengeProgress[string] = {
 			manualComplete,
 			manualUnlock,
-			progress
-		}
+			progress,
+		};
 
-		const patchOps: PatchRequestBody = [{
-			op: 'add',
-			path: `/challengeProgress/${challengeId}`,
-			value: newVal,
-		}];
+		const patchOps: PatchRequestBody = [
+			{
+				op: 'add',
+				path: `/challengeProgress/${challengeId}`,
+				value: newVal,
+			},
+		];
 
-		if (data.get("minSubtracted") !== "") {
-			const minSubtracted = parseInt(data.get("minSubtracted") as string, 10);
+		if (data.get('minSubtracted') !== '') {
+			const minSubtracted = parseInt(data.get('minSubtracted') as string, 10);
 			const existingTeam = (
 				await client
 					.database('transit-trek')
 					.container('tt3-teams')
 					.item(teamId, teamId)
-					.read<Team>()
+					.read<TT3Team>()
 			).resource;
-			const allChallenges = (await client
-				.database('transit-trek')
-				.container('tt3-challenges')
-				.items.readAll<ChallengeDefinition>()
-				.fetchAll()).resources;
-			const challenge = allChallenges.find(x => x.id === challengeId);
+			const allChallenges = (
+				await client
+					.database('transit-trek')
+					.container('tt3-challenges')
+					.items.readAll<TT3ChallengeDefinition>()
+					.fetchAll()
+			).resources;
+			const challenge = allChallenges.find((x) => x.id === challengeId);
 			if (existingTeam && challenge) {
 				const originallyComplete = isChallengeComplete(challenge, {
 					allChallenges,
 					gameState: { t: 'ongoing', startTime: 1 },
-					challengeProgress: existingTeam.challengeProgress
+					challengeProgress: existingTeam.challengeProgress,
 				});
 				const nowComplete = isChallengeComplete(challenge, {
 					allChallenges,

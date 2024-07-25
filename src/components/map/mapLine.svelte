@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { PublicChallengeDefinition } from '../../types/challenge';
-	import type { DashboardPassthroughInfo } from '../../types/map';
+	import type { TT3PublicChallengeDefinition } from '../../types/challenge';
+	import type { TT3DashboardPassthroughInfo } from '../../types/map';
 	import { isChallengeComplete, isChallengeUnlocked } from '../../utils/challenge';
 	import ChallengeBtns from '../challengeBtns/challengeBtns.svelte';
 
@@ -12,9 +12,9 @@
 		  }
 		| {
 				t: 'inline';
-				openCallback: (c: PublicChallengeDefinition) => void;
+				openCallback: (c: TT3PublicChallengeDefinition) => void;
 		  };
-	export let dashboardInfo: DashboardPassthroughInfo;
+	export let dashboardInfo: TT3DashboardPassthroughInfo;
 	$: ({ allChallenges } = dashboardInfo);
 
 	$: challenges = allChallenges.filter((x) => x.mapPos === mapPos);

@@ -1,9 +1,9 @@
-import type { PublicChallengeDefinition } from "./challenge"
-import type { GameState } from "./game"
-import type { ChallengeProgress } from "./team"
+import type { TT3PublicChallengeDefinition } from './challenge';
+import type { TT3GameState } from './game';
+import type { TT3ChallengeProgress } from './team';
 
-export type DashboardPassthroughInfo = {
-    allChallenges: PublicChallengeDefinition[],
-    challengeProgress: ChallengeProgress,
-    gameState: GameState,
-}
+export type TT3DashboardPassthroughInfo = {
+	allChallenges: TT3PublicChallengeDefinition[];
+	challengeProgress: TT3ChallengeProgress;
+	gameState: TT3GameState;
+};

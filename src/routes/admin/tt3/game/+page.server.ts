@@ -1,7 +1,7 @@
 import { CosmosClient } from '@azure/cosmos';
 import { redirect } from '@sveltejs/kit';
 import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
-import { GAME_KEY, type GameState } from '../../../../types/game';
+import { GAME_KEY, type TT3GameState } from '../../../../types/game';
 import type { Actions, PageServerLoad, RequestEvent } from './$types';
 
 const client = new CosmosClient({
@@ -14,7 +14,7 @@ async function getGameState() {
 		.database('transit-trek')
 		.container('tt3-game')
 		.item(GAME_KEY, GAME_KEY)
-		.read<GameState>();
+		.read<TT3GameState>();
 	return res.resource;
 }
 
@@ -29,8 +29,8 @@ const writeClient = new CosmosClient({
 
 export const actions = {
 	countdown: async () => {
-		const gameState: GameState = {
-			t: "pre",
+		const gameState: TT3GameState = {
+			t: 'pre',
 			countdown: true,
 		};
 		await writeClient
@@ -42,9 +42,9 @@ export const actions = {
 		redirect(303, '/admin/tt3/game');
 	},
 	startGame: async () => {
-		const gameState: GameState = {
-			t: "ongoing",
-			startTime: (new Date()).getTime(),
+		const gameState: TT3GameState = {
+			t: 'ongoing',
+			startTime: new Date().getTime(),
 		};
 		await writeClient
 			.database('transit-trek')
@@ -60,8 +60,8 @@ export const actions = {
 			redirect(303, '/admin/tt3/game');
 			return;
 		}
-		const gameState: GameState = {
-			t: "post",
+		const gameState: TT3GameState = {
+			t: 'post',
 			startTime: current.startTime,
 		};
 		await writeClient
@@ -78,8 +78,8 @@ export const actions = {
 			redirect(303, '/admin/tt3/game');
 			return;
 		}
-		const gameState: GameState = {
-			t: "ongoing",
+		const gameState: TT3GameState = {
+			t: 'ongoing',
 			startTime: current.startTime,
 		};
 		await writeClient
@@ -91,16 +91,15 @@ export const actions = {
 		redirect(303, '/admin/tt3/game');
 	},
 	changeTime: async (event: RequestEvent) => {
-
 		const data = await event.request.formData();
 		const current = await getGameState();
 		if (!current || current.t === 'pre') {
 			redirect(303, '/admin/tt3/game');
 			return;
 		}
-		const gameState: GameState = {
+		const gameState: TT3GameState = {
 			t: current.t,
-			startTime: parseInt(data.get('startTime') as string, 10)
+			startTime: parseInt(data.get('startTime') as string, 10),
 		};
 		await writeClient
 			.database('transit-trek')
@@ -112,12 +111,12 @@ export const actions = {
 	},
 	resetDanger: async (event: RequestEvent) => {
 		const data = await event.request.formData();
-		const sanityString = data.get("sanityString") as string;
+		const sanityString = data.get('sanityString') as string;
 		if (sanityString !== 'reset') {
 			redirect(303, '/admin/tt3/game');
 			return;
 		}
-		const gameState: GameState = {
+		const gameState: TT3GameState = {
 			t: 'pre',
 			countdown: false,
 		};

@@ -1,3 +1,3 @@
 export const load = ({ params }) => ({
-    path: params.path
+	path: params.path,
 });

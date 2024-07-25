@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ChallengeType } from '../../../../../types/challenge';
+	import type { TT3ChallengeType } from '../../../../../types/challenge';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -30,7 +30,7 @@
 		}
 	}
 
-	let type: ChallengeType = challenge?.type ?? 'single';
+	let type: TT3ChallengeType = challenge?.type ?? 'single';
 
 	let multiPartDescs = challenge?.type === 'multi' ? challenge.partDescs : ['', ''];
 	function changeMultiParts(event: Event) {

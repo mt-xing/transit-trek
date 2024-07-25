@@ -2,7 +2,7 @@ import { CosmosClient } from '@azure/cosmos';
 import { error, redirect } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
 import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
-import type { ChallengeDefinition } from '../../../../types/challenge';
+import type { TT3ChallengeDefinition } from '../../../../types/challenge';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,
@@ -18,7 +18,7 @@ export const load: PageServerLoad = async ({ locals }) => {
 	const res = await client
 		.database('transit-trek')
 		.container('tt3-challenges')
-		.items.readAll<ChallengeDefinition>()
+		.items.readAll<TT3ChallengeDefinition>()
 		.fetchAll();
 
 	return {
@@ -39,15 +39,12 @@ const writeClient = new CosmosClient({
 
 export const actions = {
 	newChallenge: async () => {
-		await writeClient
-			.database('transit-trek')
-			.container('tt3-challenges')
-			.items.create({
-				title: '',
-				desc: '',
-				type: 'single',
-				mapPos: -999,
-			});
+		await writeClient.database('transit-trek').container('tt3-challenges').items.create({
+			title: '',
+			desc: '',
+			type: 'single',
+			mapPos: -999,
+		});
 
 		redirect(303, '/admin/tt3/challenges');
 	},
