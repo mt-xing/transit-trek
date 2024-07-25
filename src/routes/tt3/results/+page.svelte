@@ -6,7 +6,7 @@
 	import challengesRaw from '../challenges.json';
 	import results from '../results.json';
 	import teamsRaw from '../teams.json';
-	import Map from '../../../components/map/map.svelte';
+	import Map from '../../../components/tt3/map/map.svelte';
 	import { isChallengeComplete } from '../../../utils/challenge';
 	import type { TT3LogEntry } from '../../../types/tt3/logs';
 	import { browser } from '$app/environment';
@@ -220,14 +220,16 @@
 				} else if (newlyCompletedChallenges.length > 1) {
 					newlyCompletedChallenges.forEach((x) => completedChallenges.add(x.id));
 
-					const dependencyChain = newlyCompletedChallenges.filter((x) => x.type !== 'subtask');
+					const dependencyChain: TT3PublicChallengeDefinition[] = newlyCompletedChallenges.filter(
+						(x) => x.type !== 'subtask',
+					);
 					if (dependencyChain.length !== 1) {
 						// eslint-disable-next-line no-console
 						console.error(newlyCompletedChallenges);
 						// @ts-expect-error idk why errors don't work
 						throw new Error('Failed to build chain');
 					}
-					let current = dependencyChain[0];
+					let current: TT3PublicChallengeDefinition = dependencyChain[0];
 					let bail = 99;
 					while (current) {
 						const next = newlyCompletedChallenges.filter(

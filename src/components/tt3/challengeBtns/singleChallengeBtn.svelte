@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { TT3PublicChallengeDefinition } from '../../types/tt3/challenge';
-	import type { TT3DashboardPassthroughInfo } from '../../types/tt3/map';
-	import { isChallengeComplete, isChallengeUnlocked } from '../../utils/challenge';
+	import type { TT3PublicChallengeDefinition } from '../../../types/tt3/challenge';
+	import type { TT3DashboardPassthroughInfo } from '../../../types/tt3/map';
+	import { isChallengeComplete, isChallengeUnlocked } from '../../../utils/challenge';
 
 	export let challenge: TT3PublicChallengeDefinition;
 	export let dashboardInfo: TT3DashboardPassthroughInfo;

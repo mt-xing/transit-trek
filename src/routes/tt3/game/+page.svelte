@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import SingleChallengeBtn from '../../../components/challengeBtns/singleChallengeBtn.svelte';
+	import SingleChallengeBtn from '../../../components/tt3/challengeBtns/singleChallengeBtn.svelte';
 	import ChallengeView from '../../../components/challengeView.svelte';
-	import Map from '../../../components/map/map.svelte';
+	import Map from '../../../components/tt3/map/map.svelte';
 	import type { TT3PublicChallengeDefinition } from '../../../types/tt3/challenge';
 	import assertUnreachable from '../../../utils/assertUnreachable';
 	import type { PageData } from './$types';
