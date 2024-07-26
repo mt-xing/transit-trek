@@ -18,6 +18,7 @@
 
 <h2>Setup</h2>
 <p><a href="/admin/tt4/challenges">Edit Challenges</a></p>
+<p><a href="/admin/tt4/teams">Edit Teams</a></p>
 
 <h2>Game Operations</h2>
 <p>TODO</p>
