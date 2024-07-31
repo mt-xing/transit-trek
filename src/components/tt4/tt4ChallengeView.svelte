@@ -10,8 +10,8 @@
 
 	export let challenge: TT4PublicChallengeDefinition;
 	export let challengeProgress: TT4ChallengeProgress;
-	export let iteration: number = 0;
 	export let closeCallback: () => void;
+	export let isFloat: boolean;
 
 	$: progress = challengeProgress[challenge.id];
 
@@ -20,7 +20,7 @@
 
 <section
 	transition:fly={{ y: 200 }}
-	class={`${challenge.category} ${isComplete ? 'complete' : 'incomplete'}`}
+	class={`${challenge.category} ${isComplete ? 'complete' : 'incomplete'} ${isFloat ? '' : 'inline'}`}
 >
 	<span class="header">
 		{#if isComplete}
@@ -36,13 +36,11 @@
 		{/if}
 	</span>
 
-	<div
-		style="max-height: calc(100vh - {220 + iteration * 40}px);max-height: calc(100svh - {220 +
-			iteration * 40}px);"
-		class="content"
-	>
+	<div class="content">
 		<h1>{challenge.title}</h1>
-		<button on:click={closeCallback} class="closeBtn" aria-label="Close">╳</button>
+		{#if isFloat}
+			<button on:click={closeCallback} class="closeBtn" aria-label="Close">╳</button>
+		{/if}
 
 		{#if progress?.manualComplete !== undefined}
 			<p class="msg override">The status of this challenge has been overridden by Game Control.</p>
@@ -115,6 +113,12 @@
 		overflow-y: auto;
 	}
 
+	section.inline {
+		position: relative;
+		max-width: initial;
+		margin: 0 auto;
+	}
+
 	section.selfie {
 		box-shadow: 0 0 20px 5px rgba(241, 196, 15, 0.25);
 		background: radial-gradient(
@@ -169,6 +173,8 @@
 	.content {
 		overflow-y: auto;
 		padding: 30px;
+		max-height: calc(100vh - 220px);
+		max-height: calc(100svh - 220px);
 	}
 
 	.header {
