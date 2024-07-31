@@ -33,7 +33,7 @@ export const actions = {
 			secret: crypto.randomUUID(),
 			name: '',
 			score: 0,
-			caught: 0,
+			catchTimes: [],
 			challengeProgress: {},
 		};
 		await writeClient.database('transit-trek').container('tt4-teams').items.create(team);

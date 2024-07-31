@@ -4,8 +4,7 @@ export type TT4Team = {
 	secret: string;
 	name: string;
 	score: number;
-	caught: number;
-	mostRecentCatch?: number;
+	catchTimes: number[];
 	challengeProgress: TT4ChallengeProgress;
 };
 
