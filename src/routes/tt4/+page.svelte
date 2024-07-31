@@ -597,7 +597,7 @@
 		</p>
 	</blockquote>
 
-	<div class="midtext" style="text-align: left; margin: 150px auto;">
+	<div class="midtext" style="text-align: left; margin: 150px auto; width: calc(100% - 100px)">
 		<h2 style="text-align: center;">Acknowledgements</h2>
 		<p>Thank you to all of the people who worked to make the Seattle Transit Trek possible!</p>
 		<ul>
