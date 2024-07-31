@@ -15,9 +15,6 @@ export type TT4ChallengeDefinition = {
 			type: 'multi';
 			partDescs: string[];
 	  }
-	| {
-			type: 'repeat';
-	  }
 );
 
 export type TT4PublicChallengeDefinition = DistributiveOmit<TT4ChallengeDefinition, 'privateNotes'>;

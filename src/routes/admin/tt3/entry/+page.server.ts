@@ -5,7 +5,7 @@ import { GAME_KEY, type TT3GameState } from '../../../../types/tt3/game';
 import type { Actions, PageServerLoad, RequestEvent } from './$types';
 import type { TT3ChallengeProgress, TT3Team } from '../../../../types/tt3/team';
 import type { TT3ChallengeDefinition } from '../../../../types/tt3/challenge';
-import { isChallengeComplete } from '../../../../utils/challenge';
+import { isTt3ChallengeComplete } from '../../../../utils/tt3/challenge';
 import { writeLog } from '../../../../types/tt3/logs';
 
 const client = new CosmosClient({
@@ -109,12 +109,12 @@ export const actions = {
 			).resources;
 			const challenge = allChallenges.find((x) => x.id === challengeId);
 			if (existingTeam && challenge) {
-				const originallyComplete = isChallengeComplete(challenge, {
+				const originallyComplete = isTt3ChallengeComplete(challenge, {
 					allChallenges,
 					gameState: { t: 'ongoing', startTime: 1 },
 					challengeProgress: existingTeam.challengeProgress,
 				});
-				const nowComplete = isChallengeComplete(challenge, {
+				const nowComplete = isTt3ChallengeComplete(challenge, {
 					allChallenges,
 					gameState: { t: 'ongoing', startTime: 1 },
 					challengeProgress: { ...existingTeam.challengeProgress, [challengeId]: newVal },

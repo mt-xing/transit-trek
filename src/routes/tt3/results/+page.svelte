@@ -7,7 +7,7 @@
 	import results from '../results.json';
 	import teamsRaw from '../teams.json';
 	import Map from '../../../components/tt3/map/map.svelte';
-	import { isChallengeComplete } from '../../../utils/challenge';
+	import { isTt3ChallengeComplete } from '../../../utils/tt3/challenge';
 	import type { TT3LogEntry } from '../../../types/tt3/logs';
 	import { browser } from '$app/environment';
 	import Error from '../../+error.svelte';
@@ -43,7 +43,7 @@
 			[x.id]: new Set(
 				challenges
 					.filter((c) =>
-						isChallengeComplete(c, {
+						isTt3ChallengeComplete(c, {
 							allChallenges: challenges,
 							challengeProgress: x.challengeProgress,
 							gameState,
@@ -205,7 +205,7 @@
 				const newlyCompletedChallenges = challenges.filter(
 					(c) =>
 						!completedChallenges.has(c.id) &&
-						isChallengeComplete(c, {
+						isTt3ChallengeComplete(c, {
 							allChallenges: challenges,
 							challengeProgress: currentProgress,
 							gameState,

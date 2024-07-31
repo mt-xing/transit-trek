@@ -2,7 +2,7 @@
 	import { fly } from 'svelte/transition';
 	import type { TT3PublicChallengeDefinition } from '../../types/tt3/challenge';
 	import ImmutableCheckbox from './tt3ImmutableCheckbox.svelte';
-	import { isChallengeComplete, isChallengeUnlocked } from '../../utils/challenge';
+	import { isTt3ChallengeComplete, isTt3ChallengeUnlocked } from '../../utils/tt3/challenge';
 	import type { TT3DashboardPassthroughInfo } from '../../types/tt3/map';
 
 	export let challenge: TT3PublicChallengeDefinition;
@@ -14,8 +14,8 @@
 	let openChallenge: TT3PublicChallengeDefinition | undefined;
 	$: progress = challengeProgress[challenge.id];
 
-	$: isUnlocked = isChallengeUnlocked(challenge, dashboardInfo);
-	$: isComplete = isChallengeComplete(challenge, dashboardInfo);
+	$: isUnlocked = isTt3ChallengeUnlocked(challenge, dashboardInfo);
+	$: isComplete = isTt3ChallengeComplete(challenge, dashboardInfo);
 </script>
 
 <section
@@ -86,7 +86,7 @@
 				{#each allChallenges.filter((x) => x.mapPos === challenge.subtaskInfo.mapPos) as c}
 					<li>
 						<ImmutableCheckbox
-							checked={isChallengeComplete(c, dashboardInfo)}
+							checked={isTt3ChallengeComplete(c, dashboardInfo)}
 							text={c.title}
 							callback={() => {
 								if (openChallenge === undefined) {

@@ -19,6 +19,7 @@
 	{#each challenges[category] as challenge}
 		<li>
 			<a href="/admin/tt4/challenges/edit?id={challenge.id}">{category}: {challenge.title}</a>
+			(<a href="/admin/tt4/challenges/preview?id={challenge.id}">Preview</a>)
 		</li>
 	{/each}
 {/each}

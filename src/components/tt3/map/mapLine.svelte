@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { TT3PublicChallengeDefinition } from '../../../types/tt3/challenge';
 	import type { TT3DashboardPassthroughInfo } from '../../../types/tt3/map';
-	import { isChallengeComplete, isChallengeUnlocked } from '../../../utils/challenge';
+	import { isTt3ChallengeComplete, isTt3ChallengeUnlocked } from '../../../utils/tt3/challenge';
 	import ChallengeBtns from '../challengeBtns/challengeBtns.svelte';
 
 	export let dir: 'vert' | 'left' | 'right' | 'dot' | 'arcleft' | 'arcright' | 'short';
@@ -19,8 +19,8 @@
 
 	$: challenges = allChallenges.filter((x) => x.mapPos === mapPos);
 
-	$: isUnlocked = challenges.some((x) => isChallengeUnlocked(x, dashboardInfo));
-	$: isComplete = challenges.some((x) => isChallengeComplete(x, dashboardInfo));
+	$: isUnlocked = challenges.some((x) => isTt3ChallengeUnlocked(x, dashboardInfo));
+	$: isComplete = challenges.some((x) => isTt3ChallengeComplete(x, dashboardInfo));
 </script>
 
 <div

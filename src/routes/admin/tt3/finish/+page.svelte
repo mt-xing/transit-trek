@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { TT3Team } from '../../../../types/tt3/team';
-	import { isChallengeComplete } from '../../../../utils/challenge';
+	import { isTt3ChallengeComplete } from '../../../../utils/tt3/challenge';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -24,7 +24,7 @@
 			const res = await fetch(`/admin/tt3/finish/api?id=${teamId}`);
 			const teamData = (await res.json()) as TT3Team;
 			const done = finalChallenges.some((x) =>
-				isChallengeComplete(x, {
+				isTt3ChallengeComplete(x, {
 					allChallenges: challenges,
 					gameState,
 					challengeProgress: teamData.challengeProgress,

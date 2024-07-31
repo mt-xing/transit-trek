@@ -1,8 +1,8 @@
-import type { TT3PublicChallengeDefinition } from '../types/tt3/challenge';
-import type { TT3DashboardPassthroughInfo } from '../types/tt3/map';
-import assertUnreachable from './assertUnreachable';
+import type { TT3PublicChallengeDefinition } from '../../types/tt3/challenge';
+import type { TT3DashboardPassthroughInfo } from '../../types/tt3/map';
+import assertUnreachable from '../assertUnreachable';
 
-export function isChallengeComplete(
+export function isTt3ChallengeComplete(
 	challenge: TT3PublicChallengeDefinition,
 	info: TT3DashboardPassthroughInfo,
 ): boolean {
@@ -13,7 +13,7 @@ export function isChallengeComplete(
 		return manual;
 	}
 
-	if (!isChallengeUnlocked(challenge, info)) {
+	if (!isTt3ChallengeUnlocked(challenge, info)) {
 		return false;
 	}
 
@@ -26,7 +26,7 @@ export function isChallengeComplete(
 			return challenge.partDescs.every((_, i) => progress?.progress?.[i]);
 		case 'subtask': {
 			const subtasks = allChallenges.filter((x) => x.mapPos === challenge.subtaskInfo.mapPos);
-			const count = subtasks.reduce((a, x) => (isChallengeComplete(x, info) ? a + 1 : a), 0);
+			const count = subtasks.reduce((a, x) => (isTt3ChallengeComplete(x, info) ? a + 1 : a), 0);
 			return count >= challenge.subtaskInfo.minRequired;
 		}
 		default:
@@ -34,7 +34,7 @@ export function isChallengeComplete(
 	}
 }
 
-export function isChallengeUnlocked(
+export function isTt3ChallengeUnlocked(
 	challenge: TT3PublicChallengeDefinition,
 	info: TT3DashboardPassthroughInfo,
 ): boolean {
@@ -54,5 +54,5 @@ export function isChallengeUnlocked(
 	}
 	const unlocks = new Set(challenge.unlockMapPos);
 	const unlockChallenges = allChallenges.filter((x) => unlocks.has(x.mapPos));
-	return unlockChallenges.some((x) => isChallengeComplete(x, info));
+	return unlockChallenges.some((x) => isTt3ChallengeComplete(x, info));
 }

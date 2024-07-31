@@ -64,8 +64,6 @@ export const actions = {
 							(_, i) => data.get(`partDescs${i}`) as string,
 						),
 					};
-				case 'repeat':
-					return { type, ...challengeBase };
 				default:
 					return assertUnreachable(type);
 			}

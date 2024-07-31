@@ -1,14 +1,14 @@
 <script lang="ts">
 	import type { TT3PublicChallengeDefinition } from '../../../types/tt3/challenge';
 	import type { TT3DashboardPassthroughInfo } from '../../../types/tt3/map';
-	import { isChallengeComplete, isChallengeUnlocked } from '../../../utils/challenge';
+	import { isTt3ChallengeComplete, isTt3ChallengeUnlocked } from '../../../utils/tt3/challenge';
 
 	export let challenge: TT3PublicChallengeDefinition;
 	export let dashboardInfo: TT3DashboardPassthroughInfo;
 	export let openCallback: (c: TT3PublicChallengeDefinition) => void;
 
-	$: isUnlocked = isChallengeUnlocked(challenge, dashboardInfo);
-	$: isComplete = isChallengeComplete(challenge, dashboardInfo);
+	$: isUnlocked = isTt3ChallengeUnlocked(challenge, dashboardInfo);
+	$: isComplete = isTt3ChallengeComplete(challenge, dashboardInfo);
 </script>
 
 <button

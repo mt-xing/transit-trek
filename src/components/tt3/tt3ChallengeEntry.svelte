@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { TT3ChallengeDefinition } from '../../types/tt3/challenge';
 	import ImmutableCheckbox from './tt3ImmutableCheckbox.svelte';
-	import { isChallengeComplete, isChallengeUnlocked } from '../../utils/challenge';
+	import { isTt3ChallengeComplete, isTt3ChallengeUnlocked } from '../../utils/tt3/challenge';
 	import type { TT3ChallengeProgress } from '../../types/tt3/team';
 	import type { TT3GameState } from '../../types/tt3/game';
 
@@ -18,8 +18,8 @@
 		challengeProgress,
 		gameState,
 	};
-	$: isUnlocked = isChallengeUnlocked(challenge, dashboardInfo);
-	$: isComplete = isChallengeComplete(challenge, dashboardInfo);
+	$: isUnlocked = isTt3ChallengeUnlocked(challenge, dashboardInfo);
+	$: isComplete = isTt3ChallengeComplete(challenge, dashboardInfo);
 
 	function changeCheckbox(index: number) {
 		const current = progress.progress?.[index] ?? false;
