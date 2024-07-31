@@ -16,6 +16,7 @@
 			}}
 			challengeProgress={{
 				'5f36ac75-ab5a-43d1-a59b-c8f683f4bfc0': { progress: [], manualComplete: true },
+				'5c5ea111-c3d4-4e76-89f4-34bf81205fc8': { progress: [true, true, true] },
 			}}
 		/>
 	{/if}

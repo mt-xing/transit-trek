@@ -23,7 +23,9 @@
 	class={`${challenge.category} ${isComplete ? 'complete' : 'incomplete'}`}
 >
 	<span class="header">
-		{#if challenge.category === 'selfie'}
+		{#if isComplete}
+			✅
+		{:else if challenge.category === 'selfie'}
 			📷
 		{:else if challenge.category === 'experience'}
 			🎫
@@ -46,27 +48,25 @@
 			<p class="msg override">The status of this challenge has been overridden by Game Control.</p>
 		{/if}
 
+		<p class={`msg ${challenge.category}`}>
+			{challenge.points} point{challenge.points === 1 ? '' : 's'}
+		</p>
+
 		<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 		<p>{@html challenge.desc}</p>
 
-		{#if challenge.category === 'selfie'}
-			<p class={`msg ${challenge.category}`}>
-				<span class="big">{tt4ChallengeCategoryNames[challenge.category]}</span>
+		<p class={`msg ${challenge.category}`}>
+			<span class="big">{tt4ChallengeCategoryNames[challenge.category]}</span>
+			{#if challenge.category === 'selfie'}
 				For this challenge, you must submit a team selfie with all team members visible.
-			</p>
-		{:else if challenge.category === 'experience'}
-			<p class={`msg ${challenge.category}`}>
-				<span class="big">{tt4ChallengeCategoryNames[challenge.category]}</span>
+			{:else if challenge.category === 'experience'}
 				For this challenge, go to the indicated location and follow the instructions. If a selfie is
 				requested, all team members must be visible unless explicitly stated otherwise.
-			</p>
-		{:else if challenge.category === 'distraction'}
-			<p class={`msg ${challenge.category}`}>
-				<span class="big">{tt4ChallengeCategoryNames[challenge.category]}</span>
-				Much like the D&Ds in RuneScape, this is a side quest that can be done at any point. If a selfie
-				is requested, all team members must be visible unless explicitly stated otherwise.
-			</p>
-		{/if}
+			{:else if challenge.category === 'distraction'}
+				Much like the D&Ds in RuneScape, this is a side quest that can be done at any point. If a
+				selfie is requested, all team members must be visible unless explicitly stated otherwise.
+			{/if}
+		</p>
 
 		<h2>Progress</h2>
 
@@ -189,12 +189,14 @@
 	}
 
 	section.complete {
-		box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.25);
+		box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.5);
 	}
 
 	section.complete .header {
-		background: white;
-		overflow: hidden;
+		background: radial-gradient(farthest-corner at 0 0, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0));
+
+		font-weight: bold;
+		text-shadow: 0 0 15px white;
 	}
 
 	.closeBtn {
