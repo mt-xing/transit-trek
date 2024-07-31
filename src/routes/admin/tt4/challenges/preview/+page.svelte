@@ -22,9 +22,14 @@
 </div>
 
 <style>
+	:global(body) {
+		padding: 0;
+		margin: 0;
+	}
+
 	#wrap {
 		width: 100%;
-		min-height: 100vh;
+		min-height: 100svh;
 		background: radial-gradient(farthest-corner at 0 0, #150f37, black);
 	}
 </style>
