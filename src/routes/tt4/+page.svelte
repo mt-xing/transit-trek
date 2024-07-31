@@ -597,6 +597,36 @@
 		</p>
 	</blockquote>
 
+	<div class="midtext" style="text-align: left; margin: 150px auto;">
+		<h2 style="text-align: center;">Acknowledgements</h2>
+		<p>Thank you to all of the people who worked to make the Seattle Transit Trek possible!</p>
+		<ul>
+			<li>
+				<strong>Michael Xing</strong>: Game coordinator, author of the Transit Trek web app, Transit
+				Trek 4 editor, Transit Trek co-organizer
+			</li>
+			<li>
+				<strong>Arjun Pherwani</strong>: Doubter of Michael Xing, co-creator of the Transit Trek,
+				team logistics coordinator, Transit Trek co-organizer
+			</li>
+			<li>
+				<strong>Steven Schulte</strong>: Original inspiration for the Transit Trek, world record
+				holder for ‘getting caught the most in a Transit Trek game’
+			</li>
+			<li>
+				<strong>Jet Lag: The Game</strong>: Inspiration for Transit Trek games
+			</li>
+			<li>
+				<strong>You, the Transit Trekker!</strong> Thank you for participating and making this Transit
+				Trek a success.
+			</li>
+		</ul>
+		<p>
+			Sincerely,<br /><strong>Jeffrey Wang</strong><br />Transit Trek 4 author, co-creator of the
+			Transit Trek, Transit Trek co-organizer
+		</p>
+	</div>
+
 	<small class="credits">
 		<p>
 			This page includes photography by
