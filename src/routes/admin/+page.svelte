@@ -27,6 +27,10 @@
 <p><a href="/admin/tt4/teamInfo">Team Info</a></p>
 <p><a href="/admin/tt4/logs">Logs</a></p>
 
+<h2>Progress Overview</h2>
+<p><a href="/admin/tt4/summary/standings">Standings</a></p>
+<p><a href="/admin/tt4/summary/heatmap">Heat Map</a></p>
+
 <h2>Old Events</h2>
 <p><a href="/admin/tt3">TT3</a></p>
 
