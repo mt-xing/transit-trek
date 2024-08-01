@@ -19,7 +19,7 @@
 </script>
 
 <section
-	transition:fly={{ y: 200 }}
+	transition:fly={isFloat ? { y: 200 } : { duration: 0 }}
 	class={`${challenge.category} ${isComplete ? 'complete' : 'incomplete'} ${isFloat ? '' : 'inline'}`}
 >
 	<span class="header">
@@ -175,6 +175,10 @@
 		padding: 30px;
 		max-height: calc(100vh - 220px);
 		max-height: calc(100svh - 220px);
+	}
+
+	section.inline .content {
+		max-height: initial;
 	}
 
 	.header {

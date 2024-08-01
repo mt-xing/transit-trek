@@ -6,7 +6,7 @@ import type { Actions, PageServerLoad, RequestEvent } from './$types';
 import type { TT3ChallengeProgress, TT3Team } from '../../../../types/tt3/team';
 import type { TT3ChallengeDefinition } from '../../../../types/tt3/challenge';
 import { isTt3ChallengeComplete } from '../../../../utils/tt3/challenge';
-import { writeLog } from '../../../../types/tt3/logs';
+import { writeTt3Log } from '../../../../types/tt3/logs';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,
@@ -142,7 +142,7 @@ export const actions = {
 			.item(teamId, teamId)
 			.patch(patchOps);
 
-		await writeLog({
+		await writeTt3Log({
 			t: 'entry',
 			teamId,
 			challengeId,

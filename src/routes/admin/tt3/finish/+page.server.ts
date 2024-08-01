@@ -4,7 +4,7 @@ import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
 import { GAME_KEY, type TT3GameState } from '../../../../types/tt3/game';
 import type { Actions, PageServerLoad, RequestEvent } from './$types';
 import type { TT3Team } from '../../../../types/tt3/team';
-import { writeLog } from '../../../../types/tt3/logs';
+import { writeTt3Log } from '../../../../types/tt3/logs';
 import type { TT3ChallengeDefinition } from '../../../../types/tt3/challenge';
 
 const client = new CosmosClient({
@@ -64,7 +64,7 @@ export const actions = {
 				},
 			]);
 
-		await writeLog({
+		await writeTt3Log({
 			t: 'finish',
 			teamId: id,
 			finish: true,
@@ -91,7 +91,7 @@ export const actions = {
 				},
 			]);
 
-		await writeLog({
+		await writeTt3Log({
 			t: 'finish',
 			teamId: id,
 			finish: false,
@@ -120,7 +120,7 @@ export const actions = {
 				},
 			]);
 
-		await writeLog({
+		await writeTt3Log({
 			t: 'adjustFinish',
 			teamId: id,
 			newFinishTime: finishTime,
@@ -149,7 +149,7 @@ export const actions = {
 				},
 			]);
 
-		await writeLog({
+		await writeTt3Log({
 			t: 'adjustPenaltyManual',
 			teamId: id,
 			newPenalty: timePenaltyMin,

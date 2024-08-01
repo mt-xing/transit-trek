@@ -5,7 +5,7 @@ import { GAME_KEY, type TT3GameState } from '../../../../../types/tt3/game';
 import type { Actions, PageServerLoad, RequestEvent } from './$types';
 import type { TT3ChallengeProgress, TT3Team } from '../../../../../types/tt3/team';
 import type { TT3ChallengeDefinition } from '../../../../../types/tt3/challenge';
-import { LOGS_KEY, logOp, writeLog } from '../../../../../types/tt3/logs';
+import { LOGS_KEY, logTt3Op, writeTt3Log } from '../../../../../types/tt3/logs';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,
@@ -115,7 +115,7 @@ export const actions = {
 			.patch(
 				subtaskList.map(
 					(subtaskId): PatchOperation =>
-						logOp({
+						logTt3Op({
 							time,
 							t: 'entryPartial',
 							teamId,
@@ -179,7 +179,7 @@ export const actions = {
 				})(),
 			]);
 
-		await writeLog({
+		await writeTt3Log({
 			t: 'entryPartial',
 			teamId,
 			challengeId,

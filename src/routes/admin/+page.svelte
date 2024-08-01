@@ -21,7 +21,7 @@
 <p><a href="/admin/tt4/teams">Edit Teams</a></p>
 
 <h2>Game Operations</h2>
-<p>TODO</p>
+<p><a href="/admin/tt4/entry">Challenge Status Entry</a></p>
 
 <h2>Old Events</h2>
 <p><a href="/admin/tt3">TT3</a></p>

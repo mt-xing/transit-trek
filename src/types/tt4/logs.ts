@@ -1,8 +1,8 @@
 import { CosmosClient, type PatchOperation } from '@azure/cosmos';
 import { DB_URL, WRITE_KEY } from '$env/static/private';
-import type { DistributiveOmit } from './challenge';
+import type { DistributiveOmit } from '../tt3/challenge';
 
-export type TT3LogEntry = {
+export type TT4LogEntry = {
 	time: number;
 	teamId: string;
 } & (
@@ -36,7 +36,7 @@ const writeClient = new CosmosClient({
 	key: WRITE_KEY,
 });
 
-export function logTt3Op(entry: TT3LogEntry): PatchOperation {
+export function logTt4Op(entry: TT4LogEntry): PatchOperation {
 	return {
 		op: 'add',
 		path: '/log/-',
@@ -44,10 +44,10 @@ export function logTt3Op(entry: TT3LogEntry): PatchOperation {
 	};
 }
 
-export async function writeTt3Log(entry: DistributiveOmit<TT3LogEntry, 'time'>) {
+export async function writeTt4Log(entry: DistributiveOmit<TT4LogEntry, 'time'>) {
 	await writeClient
 		.database('transit-trek')
-		.container('tt3-game')
+		.container('tt4-game')
 		.item(LOGS_KEY, LOGS_KEY)
-		.patch([logTt3Op({ ...entry, time: new Date().getTime() })]);
+		.patch([logTt4Op({ ...entry, time: new Date().getTime() })]);
 }
