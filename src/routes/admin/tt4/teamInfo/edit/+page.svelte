@@ -25,15 +25,6 @@
 	<button type="submit">Update Name</button>
 </form>
 
-<form method="POST" action="?/scoreAdjust">
-	<h2>Score</h2>
-	<input type="hidden" value={id} name="id" />
-	<p>Current Score: {team.score}</p>
-	<p>Apply manual adjustment:</p>
-	<p>+<input type="number" bind:value={scoreAdjust} name="scoreAdjust" /> points</p>
-	<button type="submit">Apply to score</button>
-</form>
-
 <h2>Bio Break</h2>
 {#if team.bioBreakTaken}
 	<form method="POST" action="?/undoBio">
@@ -48,6 +39,15 @@
 		<button type="submit">Complete bio break</button>
 	</form>
 {/if}
+
+<form method="POST" action="?/scoreAdjust">
+	<h2>Score</h2>
+	<input type="hidden" value={id} name="id" />
+	<p>Current Score: {team.score}</p>
+	<p>Apply manual adjustment:</p>
+	<p>+<input type="number" bind:value={scoreAdjust} name="scoreAdjust" /> points</p>
+	<button type="submit">Apply to score</button>
+</form>
 
 <form method="POST" action="?/catchAdjust">
 	<h2>Catch Times</h2>
