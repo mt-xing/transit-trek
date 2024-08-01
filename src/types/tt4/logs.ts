@@ -22,6 +22,18 @@ export type TT4LogEntry = {
 			t: 'gameState';
 			text: string;
 	  }
+	| {
+			t: 'teamEdit';
+			text: string;
+	  }
+	| {
+			t: 'teamScoreAdjust';
+			amount: number;
+	  }
+	| {
+			t: 'bioBreak';
+			taken: boolean;
+	  }
 );
 
 export const LOGS_KEY = 'log';

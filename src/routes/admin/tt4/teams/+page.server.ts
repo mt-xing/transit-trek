@@ -35,6 +35,7 @@ export const actions = {
 			score: 0,
 			catchTimes: [],
 			challengeProgress: {},
+			bioBreakTaken: false,
 		};
 		await writeClient.database('transit-trek').container('tt4-teams').items.create(team);
 

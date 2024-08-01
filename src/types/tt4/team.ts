@@ -6,6 +6,7 @@ export type TT4Team = {
 	score: number;
 	catchTimes: number[];
 	challengeProgress: TT4ChallengeProgress;
+	bioBreakTaken: boolean;
 };
 
 export type TT4ChallengeProgress = Record<

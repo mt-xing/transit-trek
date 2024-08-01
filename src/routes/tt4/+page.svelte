@@ -249,7 +249,7 @@
 			<li>Each task is worth a certain number of points, specified below</li>
 			<li>Most tasks are relatively close to public transit stations</li>
 			<li>
-				If your team is caught by a chaser, your team will be frozen for 10 minutes and you lose 5
+				If your team is caught by a chaser, your team will be impaired for 10 minutes and you lose 5
 				points
 			</li>
 			<li>3 to 4 people per team</li>

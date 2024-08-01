@@ -14,7 +14,7 @@
 
 	$: validCatch = !!(selectedTeamStatus && gameStateCanCatch);
 
-	const COOLDOWN = 15 * 1000 * 60; // 15 min
+	const COOLDOWN = 10 * 1000 * 60; // 10 min
 
 	$: {
 		(async (teamId: string | undefined) => {

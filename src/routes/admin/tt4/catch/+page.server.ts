@@ -47,6 +47,11 @@ export const actions = {
 					path: '/catchTimes/-',
 					value: catchTime,
 				},
+				{
+					op: 'incr',
+					path: '/score',
+					value: -5,
+				},
 			]);
 
 		await writeClient
