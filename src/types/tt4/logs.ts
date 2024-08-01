@@ -7,25 +7,16 @@ export type TT4LogEntry = {
 	teamId: string;
 } & (
 	| {
-			t: 'entry' | 'entryPartial';
+			t: 'entry';
 			challengeId: string;
 			value: {
-				manualUnlock?: boolean | string;
 				manualComplete?: boolean | string;
 				progress?: boolean[];
 			};
 	  }
 	| {
-			t: 'finish';
-			finish: boolean;
-	  }
-	| {
-			t: 'adjustFinish';
-			newFinishTime: number;
-	  }
-	| {
-			t: 'adjustPenaltyManual';
-			newPenalty: number;
+			t: 'caught';
+			manualEdit?: { oldTime: number; newTime: number };
 	  }
 );
 

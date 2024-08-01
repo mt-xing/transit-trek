@@ -21,6 +21,7 @@
 <p><a href="/admin/tt4/teams">Edit Teams</a></p>
 
 <h2>Game Operations</h2>
+<p><a href="/admin/tt4/catch">Catchers CLICK ME</a></p>
 <p><a href="/admin/tt4/entry">Challenge Status Entry</a></p>
 
 <h2>Old Events</h2>
