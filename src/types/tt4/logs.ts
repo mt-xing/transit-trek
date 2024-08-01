@@ -18,6 +18,10 @@ export type TT4LogEntry = {
 			t: 'caught';
 			manualEdit?: { oldTime: number; newTime: number };
 	  }
+	| {
+			t: 'gameState';
+			text: string;
+	  }
 );
 
 export const LOGS_KEY = 'log';

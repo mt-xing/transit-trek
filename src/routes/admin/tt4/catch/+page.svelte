@@ -64,16 +64,18 @@
 		</h3>
 	{/if}
 
-	<form method="POST" action="?/catchTeam">
-		<input type="hidden" bind:value={selectedTeam.id} name="id" />
-		<button type="submit" style="padding: 1em 2em;">
-			{#if validCatch}
-				Catch Team
-			{:else}
-				<strong>MANUAL OVERRIDE</strong><br />and catch team anyways
-			{/if}
-		</button>
-	</form>
+	{#if selectedTeamStatus !== undefined && gameStateCanCatch !== undefined}
+		<form method="POST" action="?/catchTeam">
+			<input type="hidden" bind:value={selectedTeam.id} name="id" />
+			<button type="submit" style="padding: 1em 2em;">
+				{#if validCatch}
+					Catch Team
+				{:else}
+					<strong>MANUAL OVERRIDE</strong><br />and catch team anyways
+				{/if}
+			</button>
+		</form>
+	{/if}
 {/if}
 
 <p style="margin-top:3em"><a href="/admin">Discard and Go Back</a></p>

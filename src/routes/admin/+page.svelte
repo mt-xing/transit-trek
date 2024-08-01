@@ -22,6 +22,7 @@
 
 <h2>Game Operations</h2>
 <p><a href="/admin/tt4/catch">Catchers CLICK ME</a></p>
+<p><a href="/admin/tt4/game">Game State</a></p>
 <p><a href="/admin/tt4/entry">Challenge Status Entry</a></p>
 <p><a href="/admin/tt4/logs">Logs</a></p>
 
