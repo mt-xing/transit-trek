@@ -16,6 +16,13 @@
 	export let data: PageData;
 	let { allChallenges, gameState, team } = data;
 
+	type TeamRank = { teamNum: number; score: number; name: string };
+	let rankings: TeamRank[][] = [];
+	$: teamRank =
+		rankings.length === 0
+			? '?'
+			: `${rankings.findIndex((x) => x.some((y) => y.teamNum === team?.teamNum)) + 1}`;
+
 	let hideComplete: boolean = false;
 
 	$: sortedChallenges = sortTt4Challenges(
@@ -49,11 +56,15 @@
 	};
 	const teamUpdateTime = (gs?: TT4GameState) => (gs?.t === 'ongoing' ? 10 * 1000 : 30 * 1000);
 	const challengeUpdateTime = 60 * 1000;
+	const rankUpdateTime = (gs?: TT4GameState) => (gs?.t === 'ongoing' ? 15 * 1000 : 60 * 1000);
 
 	let teamUpdateInterval: ReturnType<typeof setInterval> | undefined;
 	let challengeUpdateInterval: ReturnType<typeof setInterval> | undefined;
+	let rankUpdateInterval: ReturnType<typeof setInterval> | undefined;
 
 	onMount(() => {
+		loaded = true;
+
 		const updateTeamState = async () => {
 			const newTeamRes = await fetch(`/tt4/game/api/team${window.location.search}`);
 			if (newTeamRes.ok) {
@@ -93,6 +104,9 @@
 						clearInterval(teamUpdateInterval);
 						teamUpdateInterval = setInterval(updateTeamState, teamUpdateTime(newState));
 
+						clearInterval(rankUpdateInterval);
+						rankUpdateInterval = setInterval(updateRank, rankUpdateTime(newState));
+
 						clearInterval(challengeUpdateInterval);
 						if (newState.t !== 'pre') {
 							challengeUpdateInterval = setInterval(updateChallenges, challengeUpdateTime);
@@ -106,12 +120,40 @@
 			}
 			setTimeout(updateGameState, gameStateUpdateTime(gameState));
 		};
+		const updateRank = async () => {
+			const newRankRes = await fetch(`/tt4/game/api/rank${window.location.search}`);
+			if (newRankRes.ok) {
+				try {
+					const newRank = (await newRankRes.json()) as TeamRank[];
+					if (newRank) {
+						const res: Map<number, TeamRank[]> = new Map();
+						newRank.forEach((t) => {
+							const existing = res.get(t.score);
+							if (existing) {
+								res.set(t.score, existing.concat(t));
+							} else {
+								res.set(t.score, [t]);
+							}
+						});
+						const arr = Array.from(res)
+							.sort((a, b) => b[0] - a[0])
+							.map(([_, teams]) => teams);
+						rankings = arr;
+					}
+				} catch (e) {
+					// eslint-disable-next-line no-console
+					console.error(e);
+				}
+			}
+		};
 
 		setTimeout(updateGameState, 1000);
 		teamUpdateInterval = setInterval(updateTeamState, teamUpdateTime(gameState));
+		rankUpdateInterval = setInterval(updateRank, rankUpdateTime(gameState));
 	});
 
 	let caughtTime: string | undefined;
+	let loaded = false;
 
 	function padToTwo(x: number) {
 		if (x < 10) {
@@ -126,10 +168,8 @@
 		if (canTt4TeamBeCaught(team.catchTimes)) {
 			caughtTime = undefined;
 		} else {
-			if (caughtTime === undefined) {
+			if (caughtTime === undefined && loaded) {
 				navigator.vibrate([500, 250, 500, 250, 1000]);
-				selectedChallenge = null;
-				document.getElementById('caughtCard')?.scrollIntoView({ behavior: 'smooth' });
 			}
 			const delta = remainingSafeTimeTt4(team.catchTimes);
 			const min = Math.floor(delta / 1000 / 60);
@@ -167,19 +207,36 @@
 	</div>
 
 	<div class="card">
-		<h2>Score</h2>
-		<p class="timeString">{team.score}</p>
+		<div class="multiCard">
+			<div>
+				<h2>Score</h2>
+				<p class="timeString">{team.score}</p>
+			</div>
+			<div>
+				<h2>Rank</h2>
+				<p class="timeString">{teamRank}</p>
+			</div>
+		</div>
+		<p style="margin-bottom: -1em;">
+			Your team has been caught {team.catchTimes.length} time{team.catchTimes.length === 1
+				? '.'
+				: 's.'}
+		</p>
 		{#if gameState?.t === 'pre' && gameState.countdown}
 			<p>Standby. Game will start soon.</p>
 		{:else if gameState?.t === 'pre'}
 			<p>Game has not started yet.</p>
 		{:else if gameState?.t === 'post'}
 			<p>Game has concluded.</p>
+		{:else if gameState?.t === 'ongoing' && gameState.catchEnabled}
+			<p>🏃‍♂️ Chasers are active.</p>
+		{:else if gameState?.t === 'ongoing' && !gameState.catchEnabled}
+			<p>🛑 Chasers are <strong>not</strong> active.</p>
 		{/if}
 	</div>
 
-	<div class={`card${caughtTime !== undefined ? ' caught' : ''}`} id="caughtCard">
-		{#if caughtTime !== undefined}
+	{#if caughtTime !== undefined}
+		<div class="card caught" id="caughtCard">
 			<h2>Caught!</h2>
 			<p class="timeString">{caughtTime}</p>
 			<p>
@@ -187,13 +244,8 @@
 				minutes, as if they had a cast on. They may alternate feet every 30 seconds. They may be
 				(and probably should be) assisted by at least one, if not two, other team members.
 			</p>
-		{/if}
-		<p>
-			Your team has been caught {team.catchTimes.length} time{team.catchTimes.length === 1
-				? ''
-				: 's'}
-		</p>
-	</div>
+		</div>
+	{/if}
 
 	{#if gameState.t === 'pre'}
 		<div class="card">
@@ -242,6 +294,26 @@
 				{/each}
 			</ul>
 		{/each}
+
+		<div class="card">
+			<h2>Standings</h2>
+			{#if rankings.length > 0}
+				<ol class="rankingList">
+					{#each rankings as rank}
+						<li>
+							<span>{rank[0].score} point{rank[0].score === 1 ? '' : 's'}</span>
+							<ul>
+								{#each rank as t}
+									<li>Team {t.teamNum}: {t.name || 'Untitled Team'}</li>
+								{/each}
+							</ul>
+						</li>
+					{/each}
+				</ol>
+			{:else}
+				<p>Rankings will be shown here in a few seconds.</p>
+			{/if}
+		</div>
 
 		{#if selectedChallenge !== null}
 			<ChallengeView
@@ -445,5 +517,55 @@
 
 	.challengeList.distraction {
 		--color: 41, 128, 185;
+	}
+
+	.rankingList {
+		counter-reset: item;
+		list-style: none;
+		padding: 0;
+	}
+
+	.rankingList > li {
+		margin: 20px 0;
+		padding: 15px 50px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.rankingList > li {
+		padding: 15px 10px 15px 70px;
+		counter-increment: item;
+	}
+
+	.rankingList > li::before {
+		content: counter(item);
+		position: absolute;
+		left: 5px;
+		top: 0;
+		bottom: 0;
+		width: 55px;
+		text-align: center;
+		font-size: 50px;
+		font-weight: bold;
+		opacity: 0.5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.rankingList ul {
+		list-style-type: '➤  ';
+		padding-left: 30px;
+	}
+
+	.card .multiCard {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.card .multiCard > div {
+		flex-grow: 1;
 	}
 </style>
