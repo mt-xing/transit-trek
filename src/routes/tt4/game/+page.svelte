@@ -279,7 +279,7 @@
 	{:else if allChallenges !== undefined}
 		<div class="card">
 			<h2>Challenges</h2>
-			<p>Completed challenges to earn points.<br />Tap on any to see more details.</p>
+			<p>Complete challenges to earn points.<br />Tap on any to see more details.</p>
 			<label style="text-align: center;display: block; cursor: pointer;"
 				><input type="checkbox" bind:checked={hideComplete} style="cursor: pointer;" /> Hide Completed</label
 			>
