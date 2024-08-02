@@ -247,7 +247,7 @@
 		</div>
 	{/if}
 
-	{#if !team.bioBreakTaken || !team.name}
+	{#if !team.name || (!team.bioBreakTaken && gameState?.t === 'ongoing')}
 		<div class="card">
 			<h2>Notice</h2>
 			{#if !team.name}
