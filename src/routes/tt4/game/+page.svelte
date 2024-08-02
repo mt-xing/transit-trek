@@ -247,6 +247,29 @@
 		</div>
 	{/if}
 
+	{#if !team.bioBreakTaken || !team.name}
+		<div class="card">
+			<h2>Notice</h2>
+			{#if !team.name}
+				<p>
+					You have not provided us with a team name. Your team is not eligible to rank until a name
+					is provided. Please let Game Control know of your team name once it is decided.
+				</p>
+			{:else if !team.bioBreakTaken}
+				<p>Your team has not yet taken a bio break.</p>
+				<p>
+					Each team is required to take a 10 minute food/bio break sometime between the beginning of
+					the 2nd hour and end of the 3rd hour. You are encouraged to do so only when you are safely
+					far away from the chasers or in a safe zone.
+				</p>
+				<p>
+					Your team is not eligible to win until your bio break is taken. Please let Game Control
+					know when you start and end your break.
+				</p>
+			{/if}
+		</div>
+	{/if}
+
 	{#if gameState.t === 'pre'}
 		<div class="card">
 			<h2>Challenges</h2>
