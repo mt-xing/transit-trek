@@ -21,7 +21,9 @@
 <p><a href="/admin/tt4/teams">Edit Teams</a></p>
 
 <h2>Game Operations</h2>
+<p><strong>IF YOU ARE A CATCHER CLICK THIS ONE BELOW ↓ ↓ ↓</strong></p>
 <p><a href="/admin/tt4/catch">Catchers CLICK ME</a></p>
+<p><strong>↑ ↑ ↑</strong></p>
 <p><a href="/admin/tt4/game">Game State</a></p>
 <p><a href="/admin/tt4/entry">Challenge Status Entry</a></p>
 <p><a href="/admin/tt4/teamInfo">Team Info</a></p>
