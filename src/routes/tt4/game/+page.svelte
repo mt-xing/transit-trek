@@ -465,7 +465,7 @@
 		background: radial-gradient(
 			farthest-corner at 0 0,
 			rgba(var(--color), 0.2),
-			rgba(0, 0, 0, 0.7) 50%
+			rgba(0, 0, 0, 0.7) 65%
 		);
 		cursor: pointer;
 
