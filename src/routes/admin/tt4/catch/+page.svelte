@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { TT4GameState } from '../../../../types/tt4/game';
 	import type { TT4Team } from '../../../../types/tt4/team';
+	import { canTt4TeamBeCaught } from '../../../../utils/tt4/catch';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -14,8 +15,6 @@
 
 	$: validCatch = !!(selectedTeamStatus && gameStateCanCatch);
 
-	const COOLDOWN = 10 * 1000 * 60; // 10 min
-
 	$: {
 		(async (teamId: string | undefined) => {
 			if (!teamId) {
@@ -28,9 +27,7 @@
 			const gameState = (await res2.json()) as TT4GameState;
 
 			gameStateCanCatch = gameState.t === 'ongoing' && gameState.catchEnabled;
-			selectedTeamStatus =
-				teamData.catchTimes.length === 0 ||
-				teamData.catchTimes[teamData.catchTimes.length - 1] + COOLDOWN < new Date().getTime();
+			selectedTeamStatus = canTt4TeamBeCaught(teamData.catchTimes);
 		})(selectedTeam?.id);
 	}
 </script>

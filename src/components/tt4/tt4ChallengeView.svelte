@@ -123,13 +123,13 @@
 		box-shadow: 0 0 20px 5px rgba(241, 196, 15, 0.25);
 		background: radial-gradient(
 			farthest-corner at 0 0,
-			rgba(241, 196, 15, 0.15),
-			rgba(0, 0, 0, 0.5) 50%
+			rgba(241, 196, 15, 0.2),
+			rgba(0, 0, 0, 0.7) 50%
 		);
 	}
 
 	section.selfie .header {
-		background: radial-gradient(farthest-corner at 0 0, rgba(241, 196, 15, 0.2), rgba(0, 0, 0, 0));
+		background: radial-gradient(farthest-corner at 0 0, rgba(241, 196, 15, 0.3), rgba(0, 0, 0, 0));
 	}
 
 	.msg.selfie {
@@ -137,16 +137,16 @@
 	}
 
 	section.experience {
-		box-shadow: 0 0 20px 5px rgba(39, 174, 96, 0.25);
+		box-shadow: 0 0 20px 10px rgba(39, 174, 96, 0.25);
 		background: radial-gradient(
 			farthest-corner at 0 0,
-			rgba(39, 174, 96, 0.15),
-			rgba(0, 0, 0, 0.5) 50%
+			rgba(39, 174, 96, 0.2),
+			rgba(0, 0, 0, 0.7) 50%
 		);
 	}
 
 	section.experience .header {
-		background: radial-gradient(farthest-corner at 0 0, rgba(39, 174, 96, 0.2), rgba(0, 0, 0, 0));
+		background: radial-gradient(farthest-corner at 0 0, rgba(39, 174, 96, 0.3), rgba(0, 0, 0, 0));
 	}
 
 	.msg.experience {
@@ -154,16 +154,16 @@
 	}
 
 	section.distraction {
-		box-shadow: 0 0 20px 5px rgba(41, 128, 185, 0.25);
+		box-shadow: 0 0 25px 10px rgba(41, 128, 185, 0.25);
 		background: radial-gradient(
 			farthest-corner at 0 0,
-			rgba(41, 128, 185, 0.15),
-			rgba(0, 0, 0, 0.5) 50%
+			rgba(41, 128, 185, 0.2),
+			rgba(0, 0, 0, 0.7) 50%
 		);
 	}
 
 	section.distraction .header {
-		background: radial-gradient(farthest-corner at 0 0, rgba(41, 128, 185, 0.2), rgba(0, 0, 0, 0));
+		background: radial-gradient(farthest-corner at 0 0, rgba(41, 128, 185, 0.3), rgba(0, 0, 0, 0));
 	}
 
 	.msg.distraction {
@@ -199,7 +199,7 @@
 	}
 
 	section.complete {
-		box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.5);
+		box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.5);
 	}
 
 	section.complete .header {
