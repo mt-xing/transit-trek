@@ -10,6 +10,8 @@
 
 <h1>Heatmap</h1>
 
+<p>This page does <strong>NOT</strong> auto-update. Refresh for new data.</p>
+
 <table>
 	<tr>
 		<th>Team Name</th>

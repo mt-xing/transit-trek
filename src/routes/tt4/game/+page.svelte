@@ -150,6 +150,8 @@
 		setTimeout(updateGameState, 1000);
 		teamUpdateInterval = setInterval(updateTeamState, teamUpdateTime(gameState));
 		rankUpdateInterval = setInterval(updateRank, rankUpdateTime(gameState));
+
+		setTimeout(updateRank, 3000);
 	});
 
 	let caughtTime: string | undefined;
@@ -214,7 +216,7 @@
 			</div>
 			<div>
 				<h2>Rank</h2>
-				<p class="timeString">{teamRank}</p>
+				<p class="timeString">{gameState?.t === 'pre' ? '—' : teamRank}</p>
 			</div>
 		</div>
 		<p style="margin-bottom: -1em;">
