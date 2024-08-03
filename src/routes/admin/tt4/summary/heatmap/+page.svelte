@@ -16,7 +16,7 @@
 	<tr>
 		<th>Team Name</th>
 		{#each challenges as challenge}
-			<td>{challenge.title}</td>
+			<td class="challengeName">{challenge.title}</td>
 		{/each}
 	</tr>
 	{#each teams as team}
@@ -43,5 +43,11 @@
 
 	th {
 		min-width: 200px;
+	}
+
+	.challengeName {
+		line-break: anywhere;
+		width: 3vw;
+		font-size: 12px;
 	}
 </style>
