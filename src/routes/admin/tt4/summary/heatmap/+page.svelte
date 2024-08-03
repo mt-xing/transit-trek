@@ -18,10 +18,12 @@
 		{/each}
 	</tr>
 	{#each teams as team}
-		<th>{team.teamNum}: {team.name} ({team.score} pts)</th>
-		{#each challenges as challenge}
-			<td>{isTt4ChallengeComplete(challenge, team.challengeProgress) ? '✅' : ''}</td>
-		{/each}
+		<tr>
+			<th>{team.teamNum}: {team.name} ({team.score} pts)</th>
+			{#each challenges as challenge}
+				<td>{isTt4ChallengeComplete(challenge, team.challengeProgress) ? '✅' : ''}</td>
+			{/each}
+		</tr>
 	{/each}
 </table>
 

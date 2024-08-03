@@ -67,3 +67,10 @@
 </form>
 
 <a href="/admin/tt4/teamInfo" style="display: block; margin-top: 100px;">Discard and Return</a>
+
+<style>
+	textarea {
+		min-width: 400px;
+		min-height: 3em;
+	}
+</style>
