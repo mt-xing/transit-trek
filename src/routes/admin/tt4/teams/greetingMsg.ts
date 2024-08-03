@@ -6,7 +6,7 @@ Note that this URL is specific to your team and should be kept secret, so please
 
 On your dashboard, once the game starts, you will be able to see all the challenges available to you, your team's score, rank, and other important progress information.
 
-Please know that this is effectively the same sketchy site from the last trek I threw together in my spare time which has been hastily plastered over to accomodate this new game, so I apologize in advance if it breaks or goes down during the game. Fingers crossed it'll be okay though.
+Please know that this is effectively the same sketchy site from the last trek I threw together in my spare time which has been hastily plastered over to accommodate this new game, so I apologize in advance if it breaks or goes down during the game. Fingers crossed it'll be okay though.
 
 Finally, your first task is to come up with a team name, so if you have not yet already, please decide amongst yourselves what you want your name to be. Just let me know once you have it.
 
