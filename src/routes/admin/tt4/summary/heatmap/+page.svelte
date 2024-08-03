@@ -34,14 +34,16 @@
 
 <table>
 	<tr>
-		<th>Team Name</th>
+		<th style="max-width: 200px;">Team Name</th>
 		{#each challenges as challenge}
 			<td class="challengeName">{challenge.title}</td>
 		{/each}
 	</tr>
 	{#each teams as team}
 		<tr>
-			<th>{team.teamNum}: {team.name} ({team.score} pts)</th>
+			<th style="max-width: 200px;line-break: anywhere;"
+				>{team.teamNum}: {team.name} ({team.score} pts)</th
+			>
 			{#each challenges as challenge}
 				<td>{isTt4ChallengeComplete(challenge, team.challengeProgress) ? '✅' : ''}</td>
 			{/each}
