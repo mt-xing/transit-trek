@@ -62,7 +62,7 @@
 				requested, all team members must be visible unless explicitly stated otherwise.
 			{:else if challenge.category === 'distraction'}
 				Much like the D&Ds in RuneScape, this is a side quest that can be done at any point. If a
-				selfie is requested, all team members must be visible unless explicitly stated otherwise.
+				selfie is requested, all team members must be visible.
 			{/if}
 		</p>
 
