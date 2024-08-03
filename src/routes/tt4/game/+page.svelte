@@ -342,6 +342,22 @@
 			{/if}
 		</div>
 
+		<div class="card">
+			<h2>Safe Zones</h2>
+			<p style="font-weight: bold;">50 feet within the public bathrooms at Pike Place Market</p>
+			<p>
+				We strongly recommend you take your bio break here. The chasers will not be waiting for you
+				to leave here, and you can safely take a break here without fearing being chased.
+			</p>
+			<p style="font-weight: bold;">Mean Sandwich</p>
+			<p>
+				This is a really awesome sandwich shop in Ballard. While it might take longer than 10
+				minutes to get a sandwich prepared here, you can feel free to come here to support a
+				business run by an ex-Microsoft employee who’s super cool! Their sandwiches are super good,
+				btw. Support your local businesses! &lt;3
+			</p>
+		</div>
+
 		{#if selectedChallenge !== null}
 			<ChallengeView
 				challenge={selectedChallenge}
