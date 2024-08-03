@@ -32,7 +32,7 @@
 	}
 </script>
 
-<h1>Catcher Central</h1>
+<h1>Chaser Central</h1>
 
 <select
 	bind:value={selectedTeam}

@@ -296,13 +296,13 @@
 						<button on:click={() => openCallback(challenge)}>
 							<span class="icon">
 								{#if isTt4ChallengeComplete(challenge, team.challengeProgress)}
-									<span style="transform: translateY(5px)scale(0.8);">✅</span>
+									<span style="transform: translateY(-5px)scale(0.8);">✅</span>
 								{:else if category === 'selfie'}
-									📷
+									<span style="transform: translateY(-12px)">📷</span>
 								{:else if category === 'experience'}
-									🎫
+									<span style="transform: translateY(-5px)">🎫</span>
 								{:else if category === 'distraction'}
-									🔮
+									<span style="transform: translateY(-5px)">🔮</span>
 								{/if}
 							</span>
 							<div class="wrap">
@@ -310,7 +310,9 @@
 								<p>{previewText(challenge.desc)}</p>
 							</div>
 							<span class="points">
-								{challenge.points}<span>pts</span>
+								{challenge.points}<span style={challenge.points === 1 ? 'margin-right: 5px;' : ''}
+									>pt{challenge.points === 1 ? '' : 's'}</span
+								>
 							</span>
 						</button>
 					</li>
@@ -481,8 +483,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 50px;
-		transform: translateY(-10px);
+		font-size: 40px;
 		margin-right: 20px;
 	}
 
