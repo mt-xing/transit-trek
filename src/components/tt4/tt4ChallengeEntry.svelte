@@ -33,6 +33,9 @@
 	</div>
 
 	<section class="inputs">
+		{#if challenge.privateNotes}
+			<p>{challenge.privateNotes}</p>
+		{/if}
 		<form method="POST" action="?/saveProgress">
 			<h2>Progress</h2>
 			{#if challenge.type === 'single'}
