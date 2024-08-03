@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { isTt4ChallengeComplete } from '../../../../../utils/tt4/challenge';
 	import type { PageData } from './$types';
 
@@ -6,11 +7,30 @@
 
 	const { teams, challenges } = data;
 	teams.sort((a, b) => a.teamNum - b.teamNum);
+
+	let isRefresh = false;
+
+	onMount(() => {
+		if (window.location.search === '?refresh') {
+			isRefresh = true;
+			setTimeout(() => {
+				// eslint-disable-next-line no-restricted-globals
+				location.reload();
+			}, 10 * 1000);
+		}
+	});
 </script>
 
 <h1>Heatmap</h1>
 
-<p>This page does <strong>NOT</strong> auto-update. Refresh for new data.</p>
+{#if isRefresh}
+	<p>Auto refresh every 10 seconds enabled.</p>
+{:else}
+	<p>
+		This page does <strong>NOT</strong> auto-update. Refresh for new data. Click
+		<a href="?refresh" rel="external">here</a> to auto-refresh.
+	</p>
+{/if}
 
 <table>
 	<tr>
