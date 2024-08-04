@@ -88,6 +88,7 @@
 		<li>
 			<a
 				href="/tt4"
+				rel="external"
 				style="--num: '4';background-image: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0)), url({tt4Bg});"
 			>
 				<h3 style="-webkit-text-stroke: 4px black;">Hide and Seek 2</h3>
