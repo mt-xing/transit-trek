@@ -2,6 +2,7 @@
 	import ttLogo from '$lib/images/tt-logo-blank.png';
 	import linkStation from '$lib/images/link_station.jpg';
 	import tt3Bg from '$lib/images/transit-trek-bg-wide.png';
+	import tt4Bg from '$lib/images/tt4/bg_graphic.png';
 	import tt4Text from '$lib/images/tt4/text_clean_no_glow.png';
 	import BigBtn from '../components/bigBtn.svelte';
 </script>
@@ -38,7 +39,7 @@
 </section>
 
 <section class="picsection tt4">
-	<h2>Upcoming Game</h2>
+	<h2>Most Recent Game</h2>
 
 	<img src={tt4Text} alt="Hide and Seek" />
 
@@ -84,6 +85,15 @@
 <section class="picsection previousEvents">
 	<h2>Previous Events</h2>
 	<ul>
+		<li>
+			<a
+				href="/tt4"
+				style="--num: '4';background-image: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0)), url({tt4Bg});"
+			>
+				<h3 style="-webkit-text-stroke: 4px black;">Hide and Seek 2</h3>
+				<p>August 3, 2024</p>
+			</a>
+		</li>
 		<li>
 			<a
 				href="/tt3"

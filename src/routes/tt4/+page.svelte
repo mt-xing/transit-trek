@@ -138,8 +138,8 @@
 	{/each}
 
 	<p class="midtext signupWrap upper">
-		<strong>Ready to Trek?</strong>
-		<BigBtn href={PARTIFUL_LINK} text="Sign Up" color={['rgb(255,100,255)', 'rgb(50,0,100)']} />
+		<!-- <strong>Ready to Trek?</strong>
+		<BigBtn href={PARTIFUL_LINK} text="Sign Up" color={['rgb(255,100,255)', 'rgb(50,0,100)']} /> -->
 	</p>
 
 	<section class="right">
@@ -191,12 +191,12 @@
 		</div>
 	</section>
 
-	<p class="midtext signupWrap lower">
+	<!-- <p class="midtext signupWrap lower">
 		<strong>Sound Fun?</strong>
 		<BigBtn href={PARTIFUL_LINK} text="Sign Up" color={['rgb(255,100,255)', 'rgb(50,0,100)']} />
-	</p>
+	</p> -->
 
-	<p class="midtext">
+	<p class="midtext" style="margin-top: 200px;">
 		Transit Treks are part scavenger hunt, part games of skill, strategy, and pure dumb luck played
 		across the Puget Sound.
 		<SmallBtn href={HOME_PAGE} text="Learn More" />
