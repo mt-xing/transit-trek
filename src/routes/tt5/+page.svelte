@@ -777,6 +777,11 @@
 			margin-right: 5vw;
 		}
 
+		.disclaimer::before {
+			width: 60px;
+			height: 60px;
+		}
+
 		.midtext.paper.big {
 			background-image: none;
 			background: #e2caa3;
