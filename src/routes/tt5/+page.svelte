@@ -6,6 +6,7 @@
 
 	import main_bg from '$lib/images/tt5/main_bg.png';
 	import img_text from '$lib/images/tt5/logo.png';
+	import side_pic from '$lib/images/tt5/side_pic.png';
 
     const PARTIFUL_LINK = "https://transittrek.org/"
 </script>
@@ -33,24 +34,34 @@
 		<h2 class="date">September 21, 2024</h2>
 	</section>
 
-    <p>
-        This one's a scavenger hunt. No gimmicks. No tricks. Just a straight race to complete as many tasks across Seattle as you can.
-    </p>
+    <div class="textwrap">
+        <img
+                src={side_pic}
+                alt=""
+                class="leftpic"
+            />
+        <p class="midtext paper right">
+            This one's a scavenger hunt. No gimmicks. No tricks. Just a straight race to complete as many tasks across Seattle as you can.
+        </p>
+    </div>
 
 	<p class="midtext signupWrap upper">
 		<strong>Ready to Trek?</strong>
 		<BigBtn isBlack={true} href={PARTIFUL_LINK} text="Sign Up" color={['rgb(255,0,0)', 'rgb(128,0,0)']} />
 	</p>
 
-	<p class="midtext" style="margin-top: 200px;">
-		Transit Treks are part scavenger hunt, part games of skill, strategy, and pure dumb luck played
-		across the Puget Sound.
-		<SmallBtn href={HOME_PAGE} text="Learn More" isBlack={true} />
-	</p>
+	<div class="midtext paper full" style="margin-top: 100px;">
+        <p>
+            Transit Treks are part scavenger hunt, part games of skill, strategy, and pure dumb luck played
+            across the Puget Sound.
+            <SmallBtn href={HOME_PAGE} text="Learn More" isBlack={true} />
+        </p>
+        <p style="margin-top: 3em;">
+            Read on for detailed game rules, instructions, and important notices.
+        </p>
+    </div>
 
-	<p class="midtext" style="margin-top: 200px;">
-		Read on for detailed game rules, instructions, and important notices.
-	</p>
+	
 
 	<details style="margin-top: 100px">
 		<summary><h2>Requirements</h2></summary>
@@ -373,7 +384,7 @@
 		</p>
 	</blockquote>
 
-	<div class="midtext" style="text-align: left; margin: 150px auto; width: calc(100% - 100px)">
+	<div class="midtext paper full" style="padding: 10em 5em;">
 		<h2 style="text-align: center;">Acknowledgements</h2>
 		<p>Thank you to all of the people who worked to make the Seattle Transit Trek possible!</p>
 		<ul>
@@ -541,6 +552,47 @@
 		margin: 0 auto;
 	}
 
+    .textwrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 150px;
+    }
+
+    .textwrap .leftpic {
+        max-width: 30vw;
+        margin-right: 10vw;
+    }
+
+    .midtext.paper {
+        background-image: url($lib/images/tt5/paper.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        width: 30vw;
+        height: 20vw;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 10vw 5vw;
+        box-sizing: border-box;
+        position: relative;
+
+        margin: 0;
+    }
+
+    .midtext.paper.full {
+        width: 60vw;
+        height: 40vw;
+        margin: 0 auto;
+    }
+
 	.signupWrap {
 		font-size: 30px;
 		display: flex;
@@ -593,7 +645,7 @@
         transform: translateX(9px)rotate(0);
     }
 
-    details::before, .disclaimer::before, .signupWrap::before {
+    details::before, .disclaimer::before, .signupWrap::before, .midtext.paper::before {
         content: '';
         position: absolute;
         width: 3vw;
@@ -605,6 +657,16 @@
         background-size: contain;
         background-repeat: no-repeat;
         pointer-events: none;
+    }
+
+    .midtext.paper::before{
+        top: 2vw;
+    }
+
+    .midtext.paper.full::before{
+        top: 6vw;
+        width: 4vw;
+        height: 4vw;
     }
 
 	details summary {
