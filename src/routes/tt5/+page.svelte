@@ -50,7 +50,7 @@
 			played across the Puget Sound.
 			<SmallBtn href={HOME_PAGE} text="Learn More" isBlack={true} />
 		</p>
-		<p style="margin-top: 3em;">
+		<p style="margin-top: 2vw;">
 			Read on for detailed game rules, instructions, and important notices.
 		</p>
 	</div>
@@ -383,7 +383,7 @@
 		</p>
 	</blockquote>
 
-	<div class="midtext paper big" style="padding: 10em 5em;">
+	<div class="midtext paper big">
 		<h2 style="text-align: center;">Acknowledgements</h2>
 		<p>Thank you to all of the people who worked to make the Seattle Transit Trek possible!</p>
 		<ul>
@@ -568,6 +568,8 @@
 		width: 60vw;
 		height: 40vw;
 		margin: 0 auto;
+
+		padding: 0 10vw;
 	}
 
 	.midtext.paper.big {
@@ -575,6 +577,7 @@
 		height: 53vw;
 		margin: 0 auto;
 		max-width: none;
+		padding: 7vw 15vw;
 	}
 
 	.midtext.paper.big ul {
@@ -640,8 +643,8 @@
 	.midtext.paper::before {
 		content: '';
 		position: absolute;
-		width: 3vw;
-		height: 3vw;
+		width: 50px;
+		height: 50px;
 		top: 5px;
 		left: 45%;
 		z-index: 1;
@@ -655,16 +658,11 @@
 		top: 2vw;
 	}
 
-	.midtext.paper.full::before {
-		top: 6vw;
-		width: 4vw;
-		height: 4vw;
-	}
-
+	.midtext.paper.full::before,
 	.midtext.paper.big::before {
 		top: 6vw;
-		width: 4vw;
-		height: 4vw;
+		width: 60px;
+		height: 60px;
 	}
 
 	details summary {
@@ -723,6 +721,20 @@
 		padding: 10px 20px;
 	}
 
+	@media (max-width: 1500px) {
+		.midtext.paper.big {
+			width: 85vw;
+			height: 65vw;
+			margin: 0 auto;
+			max-width: none;
+			padding: 7vw 15vw;
+		}
+
+		.midtext.paper.big ul {
+			max-width: initial;
+		}
+	}
+
 	@media (max-width: 1300px) {
 		.textwrap {
 			margin-top: 50px;
@@ -737,6 +749,24 @@
 			width: 40vw;
 			height: 30vw;
 		}
+
+		.midtext.paper.big {
+			background-image: none;
+			background: #e2caa3;
+			box-shadow:
+				inset 0 0 40px 20px #ab6838,
+				-5px 5px 15px black;
+			height: unset;
+			padding: 2em 3em !important;
+
+			width: 80%;
+		}
+
+		.midtext.paper.big::before {
+			top: 10px;
+			width: 50px;
+			height: 50px;
+		}
 	}
 
 	@media (max-width: 1100px) {
@@ -746,6 +776,24 @@
 			margin-left: 5vw;
 			margin-right: 5vw;
 		}
+
+		.midtext.paper.big {
+			background-image: none;
+			background: #e2caa3;
+			box-shadow:
+				inset 0 0 40px 20px #ab6838,
+				-5px 5px 15px black;
+			height: unset;
+			padding: 2em 3em !important;
+
+			width: 80%;
+		}
+
+		.midtext.paper.big::before {
+			top: 10px;
+			width: 50px;
+			height: 50px;
+		}
 	}
 
 	@media (max-width: 900px) {
@@ -753,9 +801,14 @@
 			object-fit: cover;
 		}
 
+		.hero img.text {
+			transform: scale(1.4);
+			transform-origin: center;
+		}
+
 		.textwrap {
 			flex-direction: column-reverse;
-			margin-top: 0;
+			margin-top: 50px;
 		}
 
 		.textwrap .leftpic {
@@ -776,12 +829,35 @@
 			width: 50px;
 			height: 50px;
 		}
+
+		.midtext.paper.full {
+			width: 85%;
+			height: 63vw;
+		}
+
+		.midtext.paper.full::before {
+			top: 10vw;
+		}
+	}
+
+	@media (max-width: 700px) {
+		.textwrap .midtext.paper {
+			width: 100%;
+			height: 80vw;
+			max-width: none;
+			max-height: none;
+
+			padding: 0 4.5em;
+		}
+
+		.textwrap .midtext.paper::before {
+			top: 12vw;
+		}
 	}
 
 	@media (max-width: 600px) {
-		.hero img.text {
-			transform: scale(1.4);
-			transform-origin: center;
+		.textwrap .leftpic {
+			max-width: 80%;
 		}
 
 		.signupWrap {
@@ -802,24 +878,16 @@
 			font-size: 8vw;
 		}
 
-		.midtext.paper.full,
-		.midtext.paper.big {
-			background-image: none;
-			background: #e2caa3;
-			box-shadow:
-				inset 0 0 40px 20px #ab6838,
-				-5px 5px 15px black;
-			height: unset;
-			padding: 2em 3em !important;
+		.midtext.paper.full {
+			width: 100%;
+			height: 80vw;
 
-			width: 80%;
+			font-size: 1em;
 		}
 
-		.midtext.paper.full::before,
-		.midtext.paper.big::before {
-			top: 10px;
-			width: 50px;
-			height: 50px;
+		.midtext.paper.full p {
+			display: flex;
+			flex-direction: column;
 		}
 	}
 </style>
