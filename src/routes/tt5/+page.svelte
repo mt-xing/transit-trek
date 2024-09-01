@@ -8,7 +8,7 @@
 	import img_text from '$lib/images/tt5/logo.png';
 	import side_pic from '$lib/images/tt5/side_pic.png';
 
-    const PARTIFUL_LINK = "https://transittrek.org/"
+	const PARTIFUL_LINK = 'https://transittrek.org/';
 </script>
 
 <svelte:head>
@@ -20,48 +20,40 @@
 	<TopLogo />
 
 	<section class="hero">
-		<img
-			src={main_bg}
-			alt=""
-			class="main"
-		/>
-		<img
-			src={img_text}
-			alt=""
-			class="text"
-		/>
-        <h1>The Emerald City Expedition</h1>
+		<img src={main_bg} alt="" class="main" />
+		<img src={img_text} alt="" class="text" />
+		<h1>The Emerald City Expedition</h1>
 		<h2 class="date">September 21, 2024</h2>
 	</section>
 
-    <div class="textwrap">
-        <img
-                src={side_pic}
-                alt=""
-                class="leftpic"
-            />
-        <p class="midtext paper right">
-            This one's a scavenger hunt. No gimmicks. No tricks. Just a straight race to complete as many tasks across Seattle as you can.
-        </p>
-    </div>
+	<div class="textwrap">
+		<img src={side_pic} alt="" class="leftpic" />
+		<p class="midtext paper right">
+			This one's a scavenger hunt. No gimmicks. No tricks. Just a straight race to complete as many
+			tasks across Seattle as you can.
+		</p>
+	</div>
 
 	<p class="midtext signupWrap upper">
 		<strong>Ready to Trek?</strong>
-		<BigBtn isBlack={true} href={PARTIFUL_LINK} text="Sign Up" color={['rgb(255,0,0)', 'rgb(128,0,0)']} />
+		<BigBtn
+			isBlack={true}
+			href={PARTIFUL_LINK}
+			text="Sign Up"
+			color={['rgb(255,0,0)', 'rgb(128,0,0)']}
+		/>
 	</p>
 
 	<div class="midtext paper full" style="margin-top: 100px;">
-        <p>
-            Transit Treks are part scavenger hunt, part games of skill, strategy, and pure dumb luck played
-            across the Puget Sound.
-            <SmallBtn href={HOME_PAGE} text="Learn More" isBlack={true} />
-        </p>
-        <p style="margin-top: 3em;">
-            Read on for detailed game rules, instructions, and important notices.
-        </p>
-    </div>
-
-	
+		<p>
+			Transit Treks are part scavenger hunt, part games of skill, strategy, and pure dumb luck
+			played across the Puget Sound.
+			<SmallBtn href={HOME_PAGE} text="Learn More" isBlack={true} />
+		</p>
+		<p style="margin-top: 3em;">
+			Read on for detailed game rules, instructions, and important notices.
+		</p>
+	</div>
 
 	<details style="margin-top: 100px">
 		<summary><h2>Requirements</h2></summary>
@@ -70,8 +62,10 @@
 				ORCA card with either a pass or at least $10 loaded on it<br />
 				<small>Microsoft- and Amazon-issued ORCA cards suffice for this requirement</small>
 			</li>
-			<li>A smartphone<br />
-				<small>One team member must have an iPhone with Find My Friends enabled</small></li>
+			<li>
+				A smartphone<br />
+				<small>One team member must have an iPhone with Find My Friends enabled</small>
+			</li>
 			<li>Joined the Signal group</li>
 			<li>
 				Either:
@@ -123,23 +117,24 @@
 			</li>
 			<li>At least one player in the team must have an iPhone with Find My Friends.</li>
 			<li>Every player must be wearing a bandana provided by the organizers.</li>
-			<li>For tracking purposes, one team member needs to share their location with the organizers on Find My Friends.</li>
+			<li>
+				For tracking purposes, one team member needs to share their location with the organizers on
+				Find My Friends.
+			</li>
 			<li>
 				Players must travel by foot or public transit operated by the City of Seattle, the Seattle
 				Monorail, King County Metro, or branded as Sound Transit.
 				<ul>
 					<li>
-						Absolutely no traveling on cars, trucks, boats, planes, bikes, scooters, or Segways. Doing so could result in penalties up to / including disqualification.
+						Absolutely no traveling on cars, trucks, boats, planes, bikes, scooters, or Segways.
+						Doing so could result in penalties up to / including disqualification.
 					</li>
 				</ul>
 			</li>
-			<li>
-				Players must stay within the bounds of the game.
-			</li>
+			<li>Players must stay within the bounds of the game.</li>
 			<li>
 				Each team is required to take a 10 minute food/bio break sometime between the beginning of
-				the 2nd hour and end of the 3rd hour. Failure to do so will result in
-				disqualification.
+				the 2nd hour and end of the 3rd hour. Failure to do so will result in disqualification.
 			</li>
 			<li>
 				In case a bio break takes longer than 10 minutes, please inform the organizers so they can
@@ -154,7 +149,10 @@
 			<li>
 				There are two types of challenges that will earn you points:
 				<ul>
-					<li><strong>Tasks.</strong> Follow the instructions provided. May require being at a specific location, potentially at a specific time.</li>
+					<li>
+						<strong>Tasks.</strong> Follow the instructions provided. May require being at a specific
+						location, potentially at a specific time.
+					</li>
 					<li>
 						<strong>Find This.</strong> Within the game area, try to find where a given picture was taken.
 					</li>
@@ -257,7 +255,9 @@
 						The amount of rules broken will be the first to break ties, with fewer rule violations
 						giving higher priority
 					</li>
-					<li>Next, a team who successfully completed more challenges will be given higher priority</li>
+					<li>
+						Next, a team who successfully completed more challenges will be given higher priority
+					</li>
 					<li>
 						All else failing, then it’s a fight to the death with rock paper scissors, best out of
 						3.
@@ -275,7 +275,8 @@
 				>
 			</li>
 			<li>
-				You must correctly pay the fare when taking transit. Note you no longer need to tap off of the Link.
+				You must correctly pay the fare when taking transit. Note you no longer need to tap off of
+				the Link.
 			</li>
 			<li>
 				You may not obstruct any transit from operating along its normal schedule (by, for example,
@@ -296,7 +297,7 @@
 	<details>
 		<summary><h2>Game Zone + Boundaries</h2></summary>
 		<p>Will be provided at a later date.</p>
-        <!-- <p>
+		<!-- <p>
 			The map linked below shows the official game boundaries:<br />
 			<a
 				href="https://www.google.com/maps/d/u/0/edit?mid=1S8LD3VtSfWChnx_HwOy2LDIONo3_NwU&usp=sharing"
@@ -337,9 +338,7 @@
 			<li>Sign in with the organizers</li>
 			<li>Listen to the logistics overview</li>
 			<li>Pick a name for your team</li>
-			<li>
-				Pick a representative for the team, who will share their location with the organizers
-			</li>
+			<li>Pick a representative for the team, who will share their location with the organizers</li>
 			<li>Get your bandana! (and pay for it if you haven’t already)</li>
 			<li>Read the rules and ask questions to the organizers for clarification</li>
 			<li>Take a group picture!</li>
@@ -384,7 +383,7 @@
 		</p>
 	</blockquote>
 
-	<div class="midtext paper full" style="padding: 10em 5em;">
+	<div class="midtext paper big" style="padding: 10em 5em;">
 		<h2 style="text-align: center;">Acknowledgements</h2>
 		<p>Thank you to all of the people who worked to make the Seattle Transit Trek possible!</p>
 		<ul>
@@ -419,41 +418,18 @@
 			This page includes photography by
 			<a href="https://www.pexels.com/photo/aerial-view-of-city-buildings-3964406/" target="_blank"
 				>Josh Fields</a
-			>,
-			<a href="https://www.pexels.com/photo/space-needle-seattle-944636/" target="_blank"
-				>Zoe Pappas</a
-			>, and
+			>
+			and
 			<a
 				href="https://www.pexels.com/photo/photo-of-white-ferris-wheel-across-city-buildings-2322707/"
 				target="_blank">Garrett Morrow</a
 			>
 			on Pexels, and photography by
-			<a
-				href="https://unsplash.com/photos/selective-focus-photography-of-glacier-mountain-under-blue-sky-jF6GX9rX3Bw"
-				target="_blank">Lucas Davies</a
-			>,<a href="https://unsplash.com/photos/man-in-brown-jacket-statue-7mH9jwVVwSg" target="_blank"
-				>Hester Qiang</a
-			>,
-			<a href="https://unsplash.com/photos/book-lot-on-shelf-_ar2ENzmqb0" target="_blank"
-				>Sylvia Yang</a
-			>,
-			<a
-				href="https://unsplash.com/photos/city-buildings-under-blue-sky-photography-1mFSRB6SBQw"
-				target="_blank">Nitish Meena</a
-			>, and
 			<a href="https://unsplash.com/photos/public-market-center-signage-xsqF178XAhk" target="_blank"
 				>Sabine Ojeil</a
 			>
-			on Unsplash, as well as illustrations by
-			<a
-				href="https://www.freepik.com/free-vector/realistic-glass-shard-pieces_23996211.htm"
-				target="_blank">pikisuperstar</a
-			>
-			and
-			<a
-				href="https://www.freepik.com/free-vector/broken-glass-fragments-shards-realistic-set_4300945.htm"
-				target="_blank">macrovector</a
-			> from Freepik.
+			on Unsplash, as well as photography by
+			<a href="https://www.loc.gov/item/2018698702/" target="_blank">Carol Highsmith</a>.
 		</p>
 	</small>
 </div>
@@ -472,9 +448,9 @@
 		overflow-x: hidden;
 		overflow-y: hidden;
 
-        background-image: url($lib/images/tt5/bg_repeat.jpg);
-        background-size: 100% auto;
-        background-repeat: repeat-y;
+		background-image: url($lib/images/tt5/bg_repeat.jpg);
+		background-size: 100% auto;
+		background-repeat: repeat-y;
 	}
 
 	.hero {
@@ -488,13 +464,14 @@
 		justify-content: center;
 	}
 
-    .hero img.main, .hero img.text {
+	.hero img.main,
+	.hero img.text {
 		position: absolute;
 		pointer-events: none;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
 
 	.hero > img {
 		object-fit: cover;
@@ -522,7 +499,7 @@
 		color: white;
 		font-family: 'Segoe UI', 'Arial', sans-serif;
 		font-weight: 900;
-        opacity: 0;
+		opacity: 0;
 	}
 
 	.hero h2 {
@@ -552,46 +529,58 @@
 		margin: 0 auto;
 	}
 
-    .textwrap {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+	.textwrap {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
 
-        margin-top: 150px;
-    }
+		margin-top: 150px;
+	}
 
-    .textwrap .leftpic {
-        max-width: 30vw;
-        margin-right: 10vw;
-    }
+	.textwrap .leftpic {
+		max-width: 30vw;
+		margin-right: 10vw;
+	}
 
-    .midtext.paper {
-        background-image: url($lib/images/tt5/paper.png);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
+	.midtext.paper {
+		background-image: url($lib/images/tt5/paper.png);
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
 
-        width: 30vw;
-        height: 20vw;
+		width: 30vw;
+		height: 20vw;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 
-        padding: 10vw 5vw;
-        box-sizing: border-box;
-        position: relative;
+		padding: 10vw 5vw;
+		box-sizing: border-box;
+		position: relative;
 
-        margin: 0;
-    }
+		margin: 0;
+	}
 
-    .midtext.paper.full {
-        width: 60vw;
-        height: 40vw;
-        margin: 0 auto;
-    }
+	.midtext.paper.full {
+		width: 60vw;
+		height: 40vw;
+		margin: 0 auto;
+	}
+
+	.midtext.paper.big {
+		width: 80vw;
+		height: 53vw;
+		margin: 0 auto;
+		max-width: none;
+	}
+
+	.midtext.paper.big ul {
+		max-width: 1000px;
+		text-align: left;
+	}
 
 	.signupWrap {
 		font-size: 30px;
@@ -600,12 +589,12 @@
 		align-items: center;
 		justify-content: center;
 
-        background: rgb(255, 255, 128);
-        color: black;
+		background: rgb(255, 255, 128);
+		color: black;
 		box-shadow: -2px 2px 10px black;
 
-        width: 400px;
-        padding: 80px 0;
+		width: 400px;
+		padding: 80px 0;
 	}
 
 	.signupWrap.upper {
@@ -633,41 +622,50 @@
 		box-shadow: -2px 2px 10px black;
 	}
 
-    details:nth-child(odd) {
-        transform: translateX(5px)rotate(-0.1deg);
-    }
+	details:nth-child(odd) {
+		transform: translateX(5px) rotate(-0.1deg);
+	}
 
-    details:nth-child(even) {
-        transform: translateX(-5px)rotate(0.1deg);
-    }
+	details:nth-child(even) {
+		transform: translateX(-5px) rotate(0.1deg);
+	}
 
-    details:nth-child(9) {
-        transform: translateX(9px)rotate(0);
-    }
+	details:nth-child(9) {
+		transform: translateX(9px) rotate(0);
+	}
 
-    details::before, .disclaimer::before, .signupWrap::before, .midtext.paper::before {
-        content: '';
-        position: absolute;
-        width: 3vw;
-        height: 3vw;
-        top: 5px;
-        left: 45%;
-        z-index: 1;
-        background-image: url($lib/images/tt5/pin.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        pointer-events: none;
-    }
+	details::before,
+	.disclaimer::before,
+	.signupWrap::before,
+	.midtext.paper::before {
+		content: '';
+		position: absolute;
+		width: 3vw;
+		height: 3vw;
+		top: 5px;
+		left: 45%;
+		z-index: 1;
+		background-image: url($lib/images/tt5/pin.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		pointer-events: none;
+	}
 
-    .midtext.paper::before{
-        top: 2vw;
-    }
+	.midtext.paper::before {
+		top: 2vw;
+	}
 
-    .midtext.paper.full::before{
-        top: 6vw;
-        width: 4vw;
-        height: 4vw;
-    }
+	.midtext.paper.full::before {
+		top: 6vw;
+		width: 4vw;
+		height: 4vw;
+	}
+
+	.midtext.paper.big::before {
+		top: 6vw;
+		width: 4vw;
+		height: 4vw;
+	}
 
 	details summary {
 		cursor: pointer;
@@ -695,15 +693,17 @@
 		box-sizing: border-box;
 		font-size: 1.2em;
 
-		box-shadow: 0 0 15px 20px red inset, -5px 5px 15px black;
+		box-shadow:
+			0 0 15px 20px red inset,
+			-5px 5px 15px black;
 	}
 
-    .disclaimer::before {
-        width: 4vw;
-        height: 4vw;
-        top: 30px;
-        left: 44%;
-    }
+	.disclaimer::before {
+		width: 4vw;
+		height: 4vw;
+		top: 30px;
+		left: 44%;
+	}
 
 	.disclaimer h3 {
 		margin-top: 10px;
