@@ -1,9 +1,10 @@
 <script lang="ts">
 	export let text: string;
 	export let href: string;
+	export let isBlack: boolean = false;
 </script>
 
-<a {href} class="smallBtn">{text}</a>
+<a {href} class="smallBtn{isBlack ? ' black' : ''}">{text}</a>
 
 <style>
 	.smallBtn {
@@ -17,6 +18,11 @@
 		font-size: 20px;
 
 		white-space: nowrap;
+	}
+
+	.smallBtn.black {
+		color: black;
+		text-shadow: 0 0 15px white;
 	}
 
 	.smallBtn::after {

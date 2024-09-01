@@ -3,11 +3,13 @@
 	export let href: string;
 	export let color: string[] = ['#e6400e', '#9366b3', '#0596cf'];
 	export let external: boolean = false;
+	export let isBlock: boolean = false;
+	export let isBlack: boolean = false;
 
 	$: finalColor = `linear-gradient(to right, ${color.map((x, i, a) => `${x} ${(i / Math.max(a.length - 1, 1)) * 50}%`).join(', ')}, rgba(0, 0, 255, 0) 100%)`;
 </script>
 
-<a {href} class="bigbtn" style="--color: {finalColor}" rel={external ? 'external' : undefined}
+<a {href} class="bigbtn{isBlack ? ' black' : ''}" style="--color: {finalColor}{isBlock ? ';display: block;' : ''}" rel={external ? 'external' : undefined}
 	>{text}</a
 >
 
@@ -30,6 +32,10 @@
 		box-shadow: 0 0 1px 1px white;
 
 		transition: box-shadow 0.5s ease-in-out;
+	}
+
+	.bigbtn.black {
+		box-shadow: 0 0 1px 1px black;
 	}
 
 	.bigbtn:hover,

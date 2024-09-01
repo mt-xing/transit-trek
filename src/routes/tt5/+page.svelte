@@ -33,20 +33,19 @@
 		<h2 class="date">September 21, 2024</h2>
 	</section>
 
+    <p>
+        This one's a scavenger hunt. No gimmicks. No tricks. Just a straight race to complete as many tasks across Seattle as you can.
+    </p>
+
 	<p class="midtext signupWrap upper">
 		<strong>Ready to Trek?</strong>
-		<BigBtn href={PARTIFUL_LINK} text="Sign Up" color={['rgb(255,100,255)', 'rgb(50,0,100)']} />
-	</p>
-
-	<p class="midtext signupWrap lower">
-		<strong>Sound Fun?</strong>
-		<BigBtn href={PARTIFUL_LINK} text="Sign Up" color={['rgb(255,100,255)', 'rgb(50,0,100)']} />
+		<BigBtn isBlack={true} href={PARTIFUL_LINK} text="Sign Up" color={['rgb(255,0,0)', 'rgb(128,0,0)']} />
 	</p>
 
 	<p class="midtext" style="margin-top: 200px;">
 		Transit Treks are part scavenger hunt, part games of skill, strategy, and pure dumb luck played
 		across the Puget Sound.
-		<SmallBtn href={HOME_PAGE} text="Learn More" />
+		<SmallBtn href={HOME_PAGE} text="Learn More" isBlack={true} />
 	</p>
 
 	<p class="midtext" style="margin-top: 200px;">
@@ -57,11 +56,11 @@
 		<summary><h2>Requirements</h2></summary>
 		<ul>
 			<li>
-				ORCA card with either a pass or at least $9.75 loaded on it<br />
+				ORCA card with either a pass or at least $10 loaded on it<br />
 				<small>Microsoft- and Amazon-issued ORCA cards suffice for this requirement</small>
 			</li>
-			<li>A smartphone</li>
-			<li>One team member must have an iPhone with Find My Friends enabled</li>
+			<li>A smartphone<br />
+				<small>One team member must have an iPhone with Find My Friends enabled</small></li>
 			<li>Joined the Signal group</li>
 			<li>
 				Either:
@@ -88,17 +87,9 @@
 		<summary>
 			<h2>Basics</h2>
 		</summary>
-		<p>
-			Objective of the game: earn as many points as possible without being caught by a chaser (the
-			Dean of Students)
-		</p>
 		<ul>
-			<li>Each task is worth a certain number of points, specified below</li>
+			<li>Each task is worth a certain number of points</li>
 			<li>Most tasks are relatively close to public transit stations</li>
-			<li>
-				If your team is caught by a chaser, your team will be impaired for 10 minutes and you lose 5
-				points
-			</li>
 			<li>3 to 4 people per team</li>
 			<li>4 hours long competition period</li>
 		</ul>
@@ -111,7 +102,7 @@
 
 		<h3>Basic Gameplay Logistics</h3>
 		<ul>
-			<li>The objective of the game is to earn as many points as possible without being caught.</li>
+			<li>The objective of the game is to earn as many points as possible in the allotted time.</li>
 			<li>
 				Every player (that’s you!; also known as a Transit Trekker) must have a fully charged mobile
 				phone with Signal installed.
@@ -119,76 +110,24 @@
 					<li>Signal will be used to communicate between participants and the organizers.</li>
 				</ul>
 			</li>
-			<li>You can be caught by a chaser in any part of the game except safe zones.</li>
 			<li>At least one player in the team must have an iPhone with Find My Friends.</li>
 			<li>Every player must be wearing a bandana provided by the organizers.</li>
-			<li>
-				There will be more than one chaser, with the exact number to be announced on the day of.
-			</li>
-			<li>
-				The chasers will share their location with one member from each team (whoever has an
-				iPhone).
-			</li>
-			<li>You will be required to share your exact location.</li>
-			<li>
-				You will not know what the chaser’s plans are, but expect them to visit many of the same
-				places you’ll be going to.
-			</li>
-			<li>
-				You will be considered “caught” by a chaser if the chaser sees you and tells you to stop.
-				<ul><li>You can’t run away from the chaser if they catch you visually.</li></ul>
-			</li>
-			<li>
-				If caught by a chaser, you will be required to choose an impairment for 10 minutes and you
-				lose 5 points.
-			</li>
-			<li>
-				During the first 15 and the last 15 minutes of the game, there is a moratorium on chasing
-				and the chasers won’t be going after you, nor will they be able to catch you. It is,
-				however, in your team’s interest to get as far away from them as possible during the first
-				15 minutes of the game.
-			</li>
+			<li>For tracking purposes, one team member needs to share their location with the organizers on Find My Friends.</li>
 			<li>
 				Players must travel by foot or public transit operated by the City of Seattle, the Seattle
 				Monorail, King County Metro, or branded as Sound Transit.
 				<ul>
 					<li>
-						Absolutely no traveling on cars, trucks, boats, planes, bikes, scooters, or Segways.
+						Absolutely no traveling on cars, trucks, boats, planes, bikes, scooters, or Segways. Doing so could result in penalties up to / including disqualification.
 					</li>
 				</ul>
 			</li>
 			<li>
-				Chasers may travel by any mode of transportation, whether it is a public or private mode of
-				transport.
-			</li>
-			<li>
-				Players and chasers must stay within the bounds of the game.
-				<ul>
-					<li>
-						Because it is not fair to exit the bounds of the game to hide from the chaser, teams
-						will have 1 point deducted for each violation detected.
-					</li>
-				</ul>
-			</li>
-			<li>
-				<strong
-					>Players may not intentionally hide in publicly inaccessible areas to escape detection.</strong
-				>
-				For instance, if you live within the game area, you may not hide your team in your apartment/house.
-				You also may not hide in a bathroom to evade capture unless you are taking a genuine bio break.
-				You may not purchase access to a venue that requires paid ticketed admission or is otherwise
-				de facto unreachable by a chaser.
-				<ul>
-					<li>
-						Doing so without consent from the organizers will result in point penalties or
-						disqualification from the game.
-					</li>
-				</ul>
+				Players must stay within the bounds of the game.
 			</li>
 			<li>
 				Each team is required to take a 10 minute food/bio break sometime between the beginning of
-				the 2nd hour and end of the 3rd hour. You are encouraged to do so only when you are safely
-				far away from the chasers, or if you are in a safe zone. Failure to do so will result in
+				the 2nd hour and end of the 3rd hour. Failure to do so will result in
 				disqualification.
 			</li>
 			<li>
@@ -198,28 +137,15 @@
 			</li>
 		</ul>
 
-		Impairments:
-		<ul>
-			<li>
-				One team member must hop around with one foot for 10 minutes, as if they had a cast on. They
-				may alternate feet every 30 seconds. They may be (and probably should be) assisted by at
-				least one, if not two, other team members.
-			</li>
-		</ul>
-
 		<h3>Completing Challenge Tasks</h3>
 		<ul>
-			<li>The list of tasks are in the last portion of this document.</li>
+			<li>The list of tasks will be provided once the game starts.</li>
 			<li>
-				There are three types of challenges that will earn you points:
+				There are two types of challenges that will earn you points:
 				<ul>
-					<li><strong>Take selfies.</strong> Visit a location and take a selfie there.</li>
+					<li><strong>Tasks.</strong> Follow the instructions provided. May require being at a specific location, potentially at a specific time.</li>
 					<li>
-						<strong>Experiences.</strong> Go to a specified location and follow the instructions provided.
-					</li>
-					<li>
-						<strong>Distractions and diversions.</strong> Much like the D&Ds in RuneScape, these are
-						side quests and can be done at any point in the game.
+						<strong>Find This.</strong> Within the game area, try to find where a given picture was taken.
 					</li>
 				</ul>
 			</li>
@@ -320,11 +246,7 @@
 						The amount of rules broken will be the first to break ties, with fewer rule violations
 						giving higher priority
 					</li>
-					<li>The number of times a team was caught by chasers will next be used to tiebreak</li>
-					<li>
-						If the teams each were caught the same number of times, the number of times they were
-						reported by other teams will be taken into account
-					</li>
+					<li>Next, a team who successfully completed more challenges will be given higher priority</li>
 					<li>
 						All else failing, then it’s a fight to the death with rock paper scissors, best out of
 						3.
@@ -342,8 +264,7 @@
 				>
 			</li>
 			<li>
-				You must correctly pay the fare when taking transit. This includes both tapping on but
-				<strong>also tapping off</strong> the Link.
+				You must correctly pay the fare when taking transit. Note you no longer need to tap off of the Link.
 			</li>
 			<li>
 				You may not obstruct any transit from operating along its normal schedule (by, for example,
@@ -363,15 +284,16 @@
 
 	<details>
 		<summary><h2>Game Zone + Boundaries</h2></summary>
-		<p>
+		<p>Will be provided at a later date.</p>
+        <!-- <p>
 			The map linked below shows the official game boundaries:<br />
 			<a
 				href="https://www.google.com/maps/d/u/0/edit?mid=1S8LD3VtSfWChnx_HwOy2LDIONo3_NwU&usp=sharing"
 				target="_blank"
-				style="color: white;">Game Boundaries</a
+				style="color: black;">Game Boundaries</a
 			>
 		</p>
-		<p>The game will not require you to leave the marked zone.</p>
+		<p>The game will not require you to leave the marked zone.</p> -->
 	</details>
 
 	<details>
@@ -405,8 +327,7 @@
 			<li>Listen to the logistics overview</li>
 			<li>Pick a name for your team</li>
 			<li>
-				Pick a representative for the team, who will be able to see the chasers’ locations (and
-				whose location will be shared with the chasers)
+				Pick a representative for the team, who will share their location with the organizers
 			</li>
 			<li>Get your bandana! (and pay for it if you haven’t already)</li>
 			<li>Read the rules and ask questions to the organizers for clarification</li>
@@ -540,7 +461,7 @@
 		overflow-x: hidden;
 		overflow-y: hidden;
 
-        background-image: url($lib/images/tt5/bg_repeat.jpeg);
+        background-image: url($lib/images/tt5/bg_repeat.jpg);
         background-size: 100% auto;
         background-repeat: repeat-y;
 	}
@@ -610,7 +531,9 @@
 
 	.midtext {
 		text-align: center;
-		color: white;
+		color: black;
+		text-shadow: 0 0 10px white;
+		paint-order: stroke fill;
 		font-size: 20px;
 		position: relative;
 		z-index: 2;
@@ -621,39 +544,68 @@
 	.signupWrap {
 		font-size: 30px;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+
+        background: rgb(255, 255, 128);
+        color: black;
+		box-shadow: -2px 2px 10px black;
+
+        width: 400px;
+        padding: 80px 0;
 	}
 
 	.signupWrap.upper {
 		margin: 200px auto 50px auto;
 	}
 
-	.signupWrap.lower {
-		margin: 200px auto 250px auto;
-	}
-
 	.signupWrap strong {
-		margin-right: 50px;
+		margin-bottom: 30px;
 	}
 
 	details {
 		color: black;
 
-		background: rgba(255, 255, 128);
+		background: rgb(255, 255, 128);
 		max-width: 1000px;
 		display: block;
 		margin: 70px auto;
-		padding: 2em 4em;
+		padding: 2.5em 4em;
 		box-sizing: border-box;
 
 		z-index: 3;
 		position: relative;
 
 		backdrop-filter: blur(10px);
-		box-shadow: 2px 2px 10px black;
+		box-shadow: -2px 2px 10px black;
 	}
+
+    details:nth-child(odd) {
+        transform: translateX(5px)rotate(-0.1deg);
+    }
+
+    details:nth-child(even) {
+        transform: translateX(-5px)rotate(0.1deg);
+    }
+
+    details:nth-child(9) {
+        transform: translateX(9px)rotate(0);
+    }
+
+    details::before, .disclaimer::before, .signupWrap::before {
+        content: '';
+        position: absolute;
+        width: 3vw;
+        height: 3vw;
+        top: 5px;
+        left: 45%;
+        z-index: 1;
+        background-image: url($lib/images/tt5/pin.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        pointer-events: none;
+    }
 
 	details summary {
 		cursor: pointer;
@@ -673,16 +625,23 @@
 		display: block;
 		margin: 120px auto;
 		border: 5px red solid;
-		background: black;
-		color: white;
+		background: rgb(255, 255, 128);
+		color: black;
 		position: relative;
 		z-index: 2;
-		padding: 30px 60px;
+		padding: 50px 70px;
 		box-sizing: border-box;
 		font-size: 1.2em;
 
-		box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.4);
+		box-shadow: 0 0 15px 20px red inset, -5px 5px 15px black;
 	}
+
+    .disclaimer::before {
+        width: 4vw;
+        height: 4vw;
+        top: 30px;
+        left: 44%;
+    }
 
 	.disclaimer h3 {
 		margin-top: 10px;
