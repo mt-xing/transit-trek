@@ -3,7 +3,7 @@
 	import linkStation from '$lib/images/link_station.jpg';
 	import tt3Bg from '$lib/images/transit-trek-bg-wide.png';
 	import tt4Bg from '$lib/images/tt4/bg_graphic.png';
-	import tt4Text from '$lib/images/tt4/text_clean_no_glow.png';
+	import tt5Text from '$lib/images/tt5/tt5_logo_cropped.png';
 	import BigBtn from '../components/bigBtn.svelte';
 </script>
 
@@ -38,16 +38,17 @@
 	</p>
 </section>
 
-<section class="picsection tt4">
-	<h2>Most Recent Game</h2>
+<section class="picsection tt5">
+	<h2>Upcoming Game</h2>
 
-	<img src={tt4Text} alt="Hide and Seek" />
+	<img src={tt5Text} alt="The Emerald City Expedition" />
 
 	<p class="btnwrap">
 		<BigBtn
-			href="/tt4"
+			isBlock={true}
+			href="/tt5"
 			text="Learn More"
-			color={['rgb(255,100,255)', 'rgb(50,0,100)']}
+			color={['rgb(255,0,0)', 'rgb(128,0,0)']}
 			external={true}
 		/>
 	</p>
@@ -287,32 +288,32 @@
 		max-width: 600px;
 	}
 
-	.tt4::after {
-		background-image: url($lib/images/tt4/bg_graphic.png);
-		background-position: top center;
+	.tt5::after {
+		background-image: url($lib/images/tt5/tt5_bg.jpg);
+		background-position: center;
 	}
 
-	.tt4::before {
+	.tt5::before {
 		display: none;
 	}
 
-	.tt4 h2 {
+	.tt5 h2 {
 		text-align: center;
 		width: 100%;
 		max-width: unset;
 	}
 
-	.tt4 {
+	.tt5 {
 		text-align: center;
 	}
 
-	.tt4 .btnwrap {
+	.tt5 .btnwrap {
 		padding: 0;
 		text-align: center;
 
-		background: rgba(0, 0, 0, 0.75);
+		background: #D5B60A;
 		backdrop-filter: blur(10px);
-		box-shadow: 0 0 15px 10px black;
+		box-shadow: 0 0 15px 0 black;
 
 		max-width: initial;
 		width: initial;
@@ -321,7 +322,7 @@
 		margin: 1vw auto;
 	}
 
-	.tt4 img {
+	.tt5 img {
 		max-width: 90%;
 	}
 
@@ -431,7 +432,7 @@
 	}
 
 	@media (max-width: 1000px) {
-		.picsection.tt4 {
+		.picsection.tt5 {
 			padding-left: 0;
 			padding-right: 0;
 		}
@@ -448,7 +449,7 @@
 	}
 
 	@media (max-width: 800px) {
-		.tt4 .btnwrap {
+		.tt5 .btnwrap {
 			max-width: unset;
 			margin-top: 50px;
 		}
@@ -467,7 +468,7 @@
 			max-width: unset;
 		}
 
-		.tt4 h2 {
+		.tt5 h2 {
 			font-size: 5vw;
 		}
 	}
@@ -478,7 +479,7 @@
 			padding-right: 10%;
 		}
 
-		.tt4 .btnwrap {
+		.tt5 .btnwrap {
 			padding-left: 10px;
 			padding-right: 10px;
 		}

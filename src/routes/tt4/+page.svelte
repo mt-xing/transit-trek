@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import BigBtn from '../../components/bigBtn.svelte';
+	// import BigBtn from '../../components/bigBtn.svelte';
 	import SmallBtn from '../../components/smallBtn.svelte';
 	import TopLogo from '../../components/topLogo.svelte';
 	import bg_clean from '$lib/images/tt4/bg_clean.png';
@@ -17,8 +17,6 @@
 	import bg3 from '$lib/images/tt4/bg_shards/bg_3.png';
 	import bg4 from '$lib/images/tt4/bg_shards/bg_4.png';
 	import { HOME_PAGE } from '../../utils/paths';
-
-	const PARTIFUL_LINK = 'https://partiful.com/e/xewzRnBpyz9KKKOocilt';
 
 	const shardImgs = [bg1, bg2, bg3, bg4];
 
@@ -895,13 +893,13 @@
 		margin: 200px auto 50px auto;
 	}
 
-	.signupWrap.lower {
+	/* .signupWrap.lower {
 		margin: 200px auto 250px auto;
 	}
 
 	.signupWrap strong {
 		margin-right: 50px;
-	}
+	} */
 
 	details {
 		color: white;
@@ -1005,10 +1003,10 @@
 			flex-direction: column;
 		}
 
-		.signupWrap strong {
+		/* .signupWrap strong {
 			margin-right: 0;
 			margin-bottom: 30px;
-		}
+		} */
 
 		details {
 			padding-left: 10vw;
