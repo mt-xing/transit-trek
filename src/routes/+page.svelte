@@ -311,7 +311,7 @@
 		padding: 0;
 		text-align: center;
 
-		background: #D5B60A;
+		background: #d5b60a;
 		backdrop-filter: blur(10px);
 		box-shadow: 0 0 15px 0 black;
 
@@ -477,11 +477,6 @@
 		.picsection {
 			padding-left: 10%;
 			padding-right: 10%;
-		}
-
-		.tt5 .btnwrap {
-			padding-left: 10px;
-			padding-right: 10px;
 		}
 	}
 </style>

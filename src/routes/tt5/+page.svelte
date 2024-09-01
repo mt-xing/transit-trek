@@ -791,7 +791,8 @@
 			height: unset;
 			padding: 2em 3em !important;
 
-			width: 80%;
+			width: 90%;
+			box-sizing: border-box;
 		}
 
 		.midtext.paper.big::before {
@@ -858,6 +859,10 @@
 		.textwrap .midtext.paper::before {
 			top: 12vw;
 		}
+
+		.midtext.paper.big {
+			padding: 2em 2em !important;
+		}
 	}
 
 	@media (max-width: 600px) {
@@ -867,6 +872,9 @@
 
 		.signupWrap {
 			flex-direction: column;
+			width: 75%;
+			padding-top: 2em;
+			padding-bottom: 2em;
 		}
 
 		.signupWrap strong {
