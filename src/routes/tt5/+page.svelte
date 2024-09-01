@@ -723,6 +723,22 @@
 		padding: 10px 20px;
 	}
 
+	@media (max-width: 1300px) {
+		.textwrap {
+			margin-top: 50px;
+		}
+
+		.textwrap .leftpic {
+			max-width: 40vw;
+			margin-right: 5vw;
+		}
+
+		.textwrap .midtext.paper {
+			width: 40vw;
+			height: 30vw;
+		}
+	}
+
 	@media (max-width: 1100px) {
 		details,
 		.midtext,
@@ -732,7 +748,42 @@
 		}
 	}
 
+	@media (max-width: 900px) {
+		.hero img.main {
+			object-fit: cover;
+		}
+
+		.textwrap {
+			flex-direction: column-reverse;
+			margin-top: 0;
+		}
+
+		.textwrap .leftpic {
+			max-width: 60vw;
+			margin-right: 0;
+			margin-top: 100px;
+		}
+
+		.textwrap .midtext.paper {
+			width: 60vw;
+			height: 45vw;
+			padding-left: 3em;
+			padding-right: 3em;
+		}
+
+		.textwrap .midtext.paper::before {
+			top: 50px;
+			width: 50px;
+			height: 50px;
+		}
+	}
+
 	@media (max-width: 600px) {
+		.hero img.text {
+			transform: scale(1.4);
+			transform-origin: center;
+		}
+
 		.signupWrap {
 			flex-direction: column;
 		}
@@ -745,6 +796,30 @@
 		details {
 			padding-left: 10vw;
 			padding-right: 10vw;
+		}
+
+		.hero .date {
+			font-size: 8vw;
+		}
+
+		.midtext.paper.full,
+		.midtext.paper.big {
+			background-image: none;
+			background: #e2caa3;
+			box-shadow:
+				inset 0 0 40px 20px #ab6838,
+				-5px 5px 15px black;
+			height: unset;
+			padding: 2em 3em !important;
+
+			width: 80%;
+		}
+
+		.midtext.paper.full::before,
+		.midtext.paper.big::before {
+			top: 10px;
+			width: 50px;
+			height: 50px;
 		}
 	}
 </style>
