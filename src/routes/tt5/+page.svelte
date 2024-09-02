@@ -633,8 +633,8 @@
 		transform: translateX(-5px) rotate(0.1deg);
 	}
 
-	details:nth-child(9) {
-		transform: translateX(9px) rotate(0);
+	details:nth-child(8) {
+		transform: translateX(-9px) rotate(0);
 	}
 
 	details::before,
