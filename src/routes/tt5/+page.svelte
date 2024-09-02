@@ -8,7 +8,7 @@
 	import img_text from '$lib/images/tt5/logo.png';
 	import side_pic from '$lib/images/tt5/side_pic.png';
 
-	const PARTIFUL_LINK = 'https://transittrek.org/';
+	const PARTIFUL_LINK = 'https://partiful.com/e/3gs7n8wIY3Q7e2WWYHII';
 </script>
 
 <svelte:head>
