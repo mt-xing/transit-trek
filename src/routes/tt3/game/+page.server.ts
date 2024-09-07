@@ -43,10 +43,10 @@ export const load: PageServerLoad = async ({ url }) => {
 	const challengeRes =
 		gameState.t !== 'pre'
 			? await client
-				.database('transit-trek')
-				.container('tt3-challenges')
-				.items.readAll<TT3ChallengeDefinition>()
-				.fetchAll()
+					.database('transit-trek')
+					.container('tt3-challenges')
+					.items.readAll<TT3ChallengeDefinition>()
+					.fetchAll()
 			: { resources: [] };
 
 	return {
