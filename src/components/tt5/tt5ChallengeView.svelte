@@ -231,7 +231,7 @@
 	}
 
 	section :global(a) {
-		color: white;
+		color: black;
 	}
 	section :global(a):hover,
 	section :global(a):focus {
@@ -242,7 +242,7 @@
 	}
 
 	.msg {
-		--color: white;
+		--color: black;
 		border: 2px var(--color) solid;
 		border-left: 6px var(--color) solid;
 		padding: 1em 1.5em;
@@ -258,9 +258,8 @@
 
 	.msg.override {
 		font-weight: bold;
-		box-shadow: 0 0 20px 0 rgba(255, 255, 255, 1);
+		border: 2px black solid;
 		padding: 1.5em 2em;
-		border: none;
 		margin: 30px 0;
 	}
 </style>
