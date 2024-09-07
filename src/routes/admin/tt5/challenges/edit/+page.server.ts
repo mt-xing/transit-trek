@@ -50,6 +50,7 @@ export const actions = {
 			points: parseFloat(data.get('points') as string),
 			category: data.get('category') as TT5ChallengeCategory,
 			privateNotes: (data.get('privateNotes') as string) || undefined,
+			shrinkTitle: !!data.get('shrinkTitle'),
 		};
 		const type = data.get('type') as TT5ChallengeType;
 		const newChallengeInfo = ((): TT5ChallengeDefinition => {

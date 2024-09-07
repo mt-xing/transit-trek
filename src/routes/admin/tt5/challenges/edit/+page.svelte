@@ -14,6 +14,7 @@
 	let points = challenge?.points ?? 0;
 	let category = challenge?.category ?? 'selfie';
 	let privateNotes = challenge?.privateNotes ?? '';
+	let shrinkTitle = challenge?.shrinkTitle ?? false;
 
 	let type: TT5ChallengeType = challenge?.type ?? 'single';
 
@@ -42,6 +43,13 @@
 	<p>
 		Title:
 		<input type="text" bind:value={title} name="title" />
+	</p>
+
+	<p>
+		<label>
+			Title shrinks for comedic effect
+			<input type="checkbox" bind:checked={shrinkTitle} name="shrinkTitle" />
+		</label>
 	</p>
 
 	<p>

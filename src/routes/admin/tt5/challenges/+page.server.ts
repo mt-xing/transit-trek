@@ -40,6 +40,7 @@ export const actions = {
 			type: 'single',
 			points: 0,
 			category: 'challenge',
+			shrinkTitle: false,
 		};
 		await writeClient
 			.database('transit-trek')

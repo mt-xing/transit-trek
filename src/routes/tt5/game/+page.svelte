@@ -11,6 +11,7 @@
 	import type { PageData } from './$types';
 	import type { TT5GameState } from '../../../types/tt5/game';
 	import { isTt5ChallengeComplete } from '../../../utils/tt5/challenge';
+	import Tt5ShrinkingTitle from '../../../components/tt5/tt5ShrinkingTitle.svelte';
 
 	export let data: PageData;
 	let { allChallenges, gameState, team } = data;
@@ -245,7 +246,11 @@
 								{/if}
 							</span>
 							<div class="wrap">
-								<h4>{challenge.title}</h4>
+								{#if challenge.shrinkTitle}
+									<h4 style="margin-bottom: 2em;"><Tt5ShrinkingTitle text={challenge.title} /></h4>
+								{:else}
+									<h4>{challenge.title}</h4>
+								{/if}
 								<p>{previewText(challenge.desc)}</p>
 							</div>
 							<span class="points">

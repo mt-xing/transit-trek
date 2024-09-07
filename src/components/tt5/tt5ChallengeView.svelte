@@ -7,6 +7,7 @@
 	import ImmutableCheckbox from './tt5ImmutableCheckbox.svelte';
 	import { isTt5ChallengeComplete } from '../../utils/tt5/challenge';
 	import type { TT5ChallengeProgress } from '../../types/tt5/team';
+	import Tt5ShrinkingTitle from './tt5ShrinkingTitle.svelte';
 
 	export let challenge: TT5PublicChallengeDefinition;
 	export let challengeProgress: TT5ChallengeProgress;
@@ -35,7 +36,13 @@
 	</span>
 
 	<div class="content">
-		<h1>{challenge.title}</h1>
+		<h1>
+			{#if challenge.shrinkTitle}
+				<Tt5ShrinkingTitle text={challenge.title} />
+			{:else}
+				{challenge.title}
+			{/if}
+		</h1>
 		{#if isFloat}
 			<button on:click={closeCallback} class="closeBtn" aria-label="Close">╳</button>
 		{/if}

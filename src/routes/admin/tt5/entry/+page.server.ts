@@ -35,7 +35,7 @@ export const load: PageServerLoad = async () => {
 	return {
 		teams: res.resources,
 		gameState,
-		challenges: challengeRes.resources,
+		challenges: challengeRes.resources.map(x => x.shrinkTitle ? {...x, title: x.title.split(".")[0]} : x),
 	};
 };
 

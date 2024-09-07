@@ -13,6 +13,7 @@ export function publicTt5ChallengeFilter(x: TT5ChallengeDefinition): TT5PublicCh
 		desc: x.desc,
 		points: x.points,
 		category: x.category,
+		shrinkTitle: x.shrinkTitle,
 	};
 	switch (x.type) {
 		case 'single':
@@ -32,7 +33,7 @@ export function gameStateTt5Filter(x?: TT5GameState): TT5GameState {
 		case 'pre':
 			return { t: 'pre', countdown: x.countdown };
 		case 'ongoing':
-			return { t: 'ongoing', catchEnabled: x.catchEnabled };
+			return { t: 'ongoing' };
 		default:
 			return {
 				t: x.t,

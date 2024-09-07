@@ -7,6 +7,7 @@ export type TT5ChallengeDefinition = {
 	points: number;
 	category: TT5ChallengeCategory;
 	privateNotes?: string;
+	shrinkTitle: boolean;
 } & (
 	| {
 			type: 'single';
