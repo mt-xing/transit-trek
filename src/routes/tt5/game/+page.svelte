@@ -160,6 +160,13 @@
 <svelte:head>
 	<title>Transit Trek: Team {team?.teamNum} Dashboard</title>
 	<meta name="description" content="Seattle Transit Trek's August 2024 event, Hide and Seek 2" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+		rel="stylesheet"
+	/>
 </svelte:head>
 
 {#if team && gameState}
@@ -321,12 +328,20 @@
 	}
 
 	h1 {
-		color: rgb(128, 0, 0);
+		color: #a10000;
+		-webkit-text-stroke: 2px white;
+		paint-order: stroke fill;
+
+		font-family: 'Caveat', cursive;
+		font-optical-sizing: auto;
+		font-weight: 700;
+		font-style: normal;
+
 		margin-top: 0;
 		padding: 50px 20px 30px 20px;
 		box-sizing: border-box;
 		width: 100%;
-		font-size: 40px;
+		font-size: 50px;
 		text-shadow: 0 0 20px white;
 	}
 
