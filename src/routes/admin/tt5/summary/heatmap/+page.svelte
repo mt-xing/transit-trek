@@ -41,11 +41,21 @@
 	</tr>
 	{#each teams as team}
 		<tr>
-			<th style="max-width: 200px;line-break: anywhere;"
-				>{team.teamNum}: {team.name} ({team.score} pts)</th
-			>
+			<th style="max-width: 200px;line-break: anywhere;">
+				{team.teamNum}: {team.name} ({team.score} pts)
+
+				{#if !team.bioBreakTaken}
+					❌ bio
+				{/if}
+			</th>
 			{#each challenges as challenge}
-				<td>{isTt5ChallengeComplete(challenge, team.challengeProgress) ? '✅' : ''}</td>
+				<td>
+					{#if isTt5ChallengeComplete(challenge, team.challengeProgress)}
+						✅
+					{:else if team.challengeProgress[challenge.id]?.progress?.some((x) => !!x)}
+						🚸
+					{/if}
+				</td>
 			{/each}
 		</tr>
 	{/each}
