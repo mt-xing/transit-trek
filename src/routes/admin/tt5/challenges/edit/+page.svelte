@@ -1,5 +1,9 @@
 <script lang="ts">
-	import type { TT5ChallengeType } from '../../../../../types/tt5/challenge';
+	import {
+		iterateTt5Categories,
+		tt5ChallengeCategoryNames,
+		type TT5ChallengeType,
+	} from '../../../../../types/tt5/challenge';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -53,9 +57,9 @@
 	<p>
 		Challenge Category:
 		<select bind:value={category} name="category">
-			<option value="selfie">Selfie</option>
-			<option value="experience">Experience</option>
-			<option value="distraction">Distraction</option>
+			{#each iterateTt5Categories(tt5ChallengeCategoryNames) as categoryName}
+				<option value={categoryName}>{tt5ChallengeCategoryNames[categoryName]}</option>
+			{/each}
 		</select>
 	</p>
 

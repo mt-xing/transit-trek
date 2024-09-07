@@ -20,7 +20,7 @@ export type TT5ChallengeDefinition = {
 export type TT5PublicChallengeDefinition = DistributiveOmit<TT5ChallengeDefinition, 'privateNotes'>;
 
 export type TT5ChallengeType = TT5ChallengeDefinition['type'];
-export type TT5ChallengeCategory = 'selfie' | 'experience' | 'distraction';
+export type TT5ChallengeCategory = 'challenge' | 'find';
 
 export function sortTt5Challenges<T extends TT5PublicChallengeDefinition>(
 	list: T[],
@@ -31,17 +31,15 @@ export function sortTt5Challenges<T extends TT5PublicChallengeDefinition>(
 			return a;
 		},
 		{
-			selfie: [],
-			experience: [],
-			distraction: [],
+			challenge: [],
+			find: [],
 		} as Record<TT5ChallengeCategory, T[]>,
 	);
 }
 
 export const tt5ChallengeCategoryNames: Record<TT5ChallengeCategory, string> = {
-	selfie: 'Take a Selfie',
-	experience: 'Experiences',
-	distraction: 'Distractions and Diversions',
+	challenge: 'Challenge Tasks',
+	find: 'Find This',
 };
 
 export function iterateTt5Categories<T>(x: Record<TT5ChallengeCategory, T>) {
