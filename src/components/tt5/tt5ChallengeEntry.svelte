@@ -26,7 +26,7 @@
 </script>
 
 {#if progress}
-	<div class="secWrap" style="background: black;">
+	<div class="secWrap" style="background: white;">
 		{#key challenge.id}
 			<Tt5ChallengeView isFloat={false} {challengeProgress} {challenge} closeCallback={() => {}} />
 		{/key}

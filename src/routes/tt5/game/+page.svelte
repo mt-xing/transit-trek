@@ -354,7 +354,7 @@
 		position: absolute;
 		width: 40px;
 		height: 40px;
-		top: 10px;
+		top: 5px;
 		left: 45%;
 		z-index: 1;
 		background-image: url($lib/images/tt5/pin.png);

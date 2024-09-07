@@ -91,7 +91,10 @@
 
 <style>
 	section {
-		background: white;
+		background: url($lib/images/tt5/paper.png);
+		background-size: 100% auto;
+		background-position: center top;
+		background-repeat: repeat-y;
 		color: black;
 		box-sizing: border-box;
 		margin: 30px auto;
