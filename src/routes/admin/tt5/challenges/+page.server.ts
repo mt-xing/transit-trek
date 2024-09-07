@@ -39,7 +39,7 @@ export const actions = {
 			desc: '',
 			type: 'single',
 			points: 0,
-			category: 'selfie',
+			category: 'challenge',
 		};
 		await writeClient
 			.database('transit-trek')

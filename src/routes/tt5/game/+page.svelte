@@ -189,10 +189,6 @@
 			<p>Game has not started yet.</p>
 		{:else if gameState?.t === 'post'}
 			<p>Game has concluded.</p>
-		{:else if gameState?.t === 'ongoing' && gameState.catchEnabled}
-			<p>🏃‍♂️ Chasers are active.</p>
-		{:else if gameState?.t === 'ongoing' && !gameState.catchEnabled}
-			<p>🛑 Chasers are <strong>not</strong> active.</p>
 		{/if}
 	</div>
 
@@ -206,11 +202,7 @@
 				</p>
 			{:else if !team.bioBreakTaken}
 				<p>Your team has not yet taken a bio break.</p>
-				<p>
-					Each team is required to take a 10 minute food/bio break sometime between the beginning of
-					the 2nd hour and end of the 3rd hour. You are encouraged to do so only when you are safely
-					far away from the chasers or in a safe zone.
-				</p>
+				<p>Each team is required to take a 10 minute food/bio break sometime during the game.</p>
 				<p>
 					Your team is not eligible to win until your bio break is taken. Please let Game Control
 					know when you start and end your break.
@@ -324,71 +316,77 @@
 	}
 
 	h1 {
-		color: white;
+		color: rgb(128, 0, 0);
 		margin-top: 0;
-		padding: 50px 20px;
+		padding: 50px 20px 30px 20px;
 		box-sizing: border-box;
 		width: 100%;
 		font-size: 40px;
-		text-shadow:
-			0 0 20px purple,
-			0 10px 20px purple,
-			0 -10px 20px purple;
+		text-shadow: 0 0 20px white;
 	}
 
 	:global(body) {
 		margin: 0;
 		padding: 0;
-		background: radial-gradient(farthest-corner at 0 0, #150f37, black);
-		background-attachment: fixed;
+
+		background-image: url($lib/images/tt5/bg_repeat.jpg);
+		background-size: 100% auto;
+		background-repeat: repeat-y;
 	}
 
 	.card {
-		background: rgba(0, 0, 0, 0.5);
-		color: white;
+		background: rgb(255, 255, 128);
+		color: black;
 		backdrop-filter: blur(10px);
-		border-top: 2px rgba(255, 150, 255, 0.5) solid;
-		box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
+		border-top: 2px rgba(128, 0, 0, 0.5) solid;
+		box-shadow: -5px 5px 5px 0 rgba(0, 0, 0, 0.2);
 
 		max-width: 500px;
 		width: calc(100% - 50px);
 		margin: 20px auto;
-		padding: 20px 10px;
+		padding: 30px 10px 20px 10px;
 		box-sizing: border-box;
 		overflow-x: hidden;
+	}
+
+	.card::before {
+		content: '';
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		top: 10px;
+		left: 45%;
+		z-index: 1;
+		background-image: url($lib/images/tt5/pin.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		pointer-events: none;
 	}
 
 	.card h2 {
 		margin: 5px 0 10px 0;
 	}
 
-	.card.caught {
-		border-top: 2px red solid;
-		border-bottom: 2px red solid;
-		box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.5);
-	}
-
 	.card.challenges {
 		padding: 0 0 0 20px;
 		border-top: none;
-		border-left: 2px var(--color) solid;
-		margin-left: max(calc(50vw - 250px), 25px);
-		background: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+		border-left: 10px var(--color) solid;
+		background: linear-gradient(to right, rgb(255, 255, 128), rgba(255, 255, 128, 0.5));
+	}
+
+	.card.challenges::before {
+		display: none;
 	}
 
 	.card.challenges h3 {
 		font-weight: normal;
 	}
 
-	.card.challenges.selfie {
-		--color: rgba(241, 196, 15, 1);
-	}
-
-	.card.challenges.experience {
+	.card.challenges.challenge {
 		--color: rgba(39, 174, 96, 1);
 	}
 
-	.card.challenges.distraction {
+	.card.challenges.find {
 		--color: rgba(41, 128, 185, 1);
 	}
 
@@ -408,14 +406,12 @@
 
 	.challengeList button {
 		border: none;
-		color: white;
+		color: black;
 		width: 100%;
 		padding: 20px 30px;
-		background: radial-gradient(
-			farthest-corner at 0 0,
-			rgba(var(--color), 0.2),
-			rgba(0, 0, 0, 0.7) 65%
-		);
+		background: linear-gradient(to bottom right, rgba(var(--color), 0.2), rgba(var(--color), 0) 50%),
+			white;
+		border-left: 5px rgb(var(--color)) solid;
 		cursor: pointer;
 
 		display: flex;
@@ -423,7 +419,7 @@
 		align-items: center;
 		justify-content: center;
 
-		box-shadow: 0 0 10px 0 rgba(var(--color), 0.25);
+		box-shadow: -5px 5px 5px 0 rgba(0, 0, 0, 0.2);
 	}
 
 	.challengeList .icon {
@@ -478,15 +474,11 @@
 		-webkit-box-orient: vertical;
 	}
 
-	.challengeList.selfie {
-		--color: 241, 196, 15;
-	}
-
-	.challengeList.experience {
+	.challengeList.challenge {
 		--color: 39, 174, 96;
 	}
 
-	.challengeList.distraction {
+	.challengeList.find {
 		--color: 41, 128, 185;
 	}
 

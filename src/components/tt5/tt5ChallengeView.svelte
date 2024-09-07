@@ -25,12 +25,10 @@
 	<span class="header">
 		{#if isComplete}
 			✅
-		{:else if challenge.category === 'selfie'}
+		{:else if challenge.category === 'find'}
 			📷
-		{:else if challenge.category === 'experience'}
+		{:else if challenge.category === 'challenge'}
 			🎫
-		{:else if challenge.category === 'distraction'}
-			🔮
 		{:else}
 			🔓
 		{/if}
@@ -55,14 +53,12 @@
 
 		<p class={`msg ${challenge.category}`}>
 			<span class="big">{tt5ChallengeCategoryNames[challenge.category]}</span>
-			{#if challenge.category === 'selfie'}
-				For this challenge, you must submit a team selfie with all team members visible.
-			{:else if challenge.category === 'experience'}
-				For this challenge, go to the indicated location and follow the instructions. If a selfie is
-				requested, all team members must be visible unless explicitly stated otherwise.
-			{:else if challenge.category === 'distraction'}
-				Much like the D&Ds in RuneScape, this is a side quest that can be done at any point. If a
-				selfie is requested, all team members must be visible.
+			{#if challenge.category === 'find'}
+				Within the game area, try to find where this is located. Once found, take a team selfie and
+				let us know where you found it.
+			{:else if challenge.category === 'challenge'}
+				For this challenge, follow the instructions. If a selfie is requested, all team members must
+				be visible unless explicitly stated otherwise.
 			{/if}
 		</p>
 
@@ -119,24 +115,7 @@
 		margin: 0 auto;
 	}
 
-	section.selfie {
-		box-shadow: 0 0 20px 5px rgba(241, 196, 15, 0.25);
-		background: radial-gradient(
-			farthest-corner at 0 0,
-			rgba(241, 196, 15, 0.2),
-			rgba(0, 0, 0, 0.7) 50%
-		);
-	}
-
-	section.selfie .header {
-		background: radial-gradient(farthest-corner at 0 0, rgba(241, 196, 15, 0.3), rgba(0, 0, 0, 0));
-	}
-
-	.msg.selfie {
-		--color: rgba(241, 196, 15, 1);
-	}
-
-	section.experience {
+	section.challenge {
 		box-shadow: 0 0 20px 10px rgba(39, 174, 96, 0.25);
 		background: radial-gradient(
 			farthest-corner at 0 0,
@@ -145,15 +124,15 @@
 		);
 	}
 
-	section.experience .header {
+	section.challenge .header {
 		background: radial-gradient(farthest-corner at 0 0, rgba(39, 174, 96, 0.3), rgba(0, 0, 0, 0));
 	}
 
-	.msg.experience {
+	.msg.challenge {
 		--color: rgba(39, 174, 96, 1);
 	}
 
-	section.distraction {
+	section.find {
 		box-shadow: 0 0 25px 10px rgba(41, 128, 185, 0.25);
 		background: radial-gradient(
 			farthest-corner at 0 0,
@@ -162,11 +141,11 @@
 		);
 	}
 
-	section.distraction .header {
+	section.find .header {
 		background: radial-gradient(farthest-corner at 0 0, rgba(41, 128, 185, 0.3), rgba(0, 0, 0, 0));
 	}
 
-	.msg.distraction {
+	.msg.find {
 		--color: rgba(41, 128, 185, 1);
 	}
 

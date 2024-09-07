@@ -45,7 +45,6 @@ export const actions = {
 	startGame: async () => {
 		const gameState: TT5GameState = {
 			t: 'ongoing',
-			catchEnabled: false,
 		};
 		await writeClient
 			.database('transit-trek')
@@ -54,46 +53,6 @@ export const actions = {
 			.replace({ ...gameState, id: GAME_KEY });
 
 		await writeTt5Log({ t: 'gameState', teamId: '', text: 'Start Game' });
-
-		redirect(303, '/admin/tt5/game');
-	},
-	enableCatch: async () => {
-		const current = await getGameState();
-		if (current?.t !== 'ongoing') {
-			redirect(303, '/admin/tt5/game');
-			return;
-		}
-		const gameState: TT5GameState = {
-			t: 'ongoing',
-			catchEnabled: true,
-		};
-		await writeClient
-			.database('transit-trek')
-			.container('tt5-game')
-			.item(GAME_KEY, GAME_KEY)
-			.replace({ ...gameState, id: GAME_KEY });
-
-		await writeTt5Log({ t: 'gameState', teamId: '', text: 'Catch Start' });
-
-		redirect(303, '/admin/tt5/game');
-	},
-	disableCatch: async () => {
-		const current = await getGameState();
-		if (current?.t !== 'ongoing') {
-			redirect(303, '/admin/tt5/game');
-			return;
-		}
-		const gameState: TT5GameState = {
-			t: 'ongoing',
-			catchEnabled: false,
-		};
-		await writeClient
-			.database('transit-trek')
-			.container('tt5-game')
-			.item(GAME_KEY, GAME_KEY)
-			.replace({ ...gameState, id: GAME_KEY });
-
-		await writeTt5Log({ t: 'gameState', teamId: '', text: 'Catch End' });
 
 		redirect(303, '/admin/tt5/game');
 	},
@@ -124,7 +83,6 @@ export const actions = {
 		}
 		const gameState: TT5GameState = {
 			t: 'ongoing',
-			catchEnabled: true,
 		};
 		await writeClient
 			.database('transit-trek')

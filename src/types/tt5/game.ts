@@ -5,7 +5,6 @@ export type TT5GameState =
 	  }
 	| {
 			t: 'ongoing';
-			catchEnabled: boolean;
 	  }
 	| {
 			t: 'post';

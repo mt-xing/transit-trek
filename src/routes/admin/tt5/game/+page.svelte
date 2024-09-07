@@ -27,25 +27,8 @@
 	</form>
 {:else if gameState.t === 'ongoing'}
 	<h1>Game State: 🟢🏃‍♂️ Ongoing</h1>
-	<h2>Catch Enabled: {gameState.catchEnabled ? '✅ YES' : '🛑 NO'}</h2>
 
-	{#if gameState.catchEnabled}
-		<form method="POST" action="?/disableCatch">
-			<input type="hidden" value="unknown" name="unknown" />
-			<button type="submit">Disable Catch</button>
-		</form>
-	{:else}
-		<form method="POST" action="?/enableCatch">
-			<input type="hidden" value="unknown" name="unknown" />
-			<button type="submit">Enable Catch</button>
-		</form>
-	{/if}
-
-	<form
-		method="POST"
-		action="?/endGame"
-		style="border-top: 1px black solid; margin-top: 100px; padding-top: 20px;"
-	>
+	<form method="POST" action="?/endGame">
 		<input type="hidden" value="unknown" name="unknown" />
 		<button type="submit">End Game</button>
 	</form>
