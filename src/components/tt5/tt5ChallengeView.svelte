@@ -19,7 +19,7 @@
 </script>
 
 <section
-	transition:fly={isFloat ? { y: 200 } : { duration: 0 }}
+	transition:fly={isFloat ? { y: 200, x: -20 } : { duration: 0 }}
 	class={`${challenge.category} ${isComplete ? 'complete' : 'incomplete'} ${isFloat ? '' : 'inline'}`}
 >
 	<span class="header">
@@ -91,14 +91,13 @@
 
 <style>
 	section {
-		background: rgba(0, 0, 0, 0.5);
-		color: white;
-		backdrop-filter: blur(20px);
+		background: white;
+		color: black;
 		box-sizing: border-box;
 		margin: 30px auto;
-		width: calc(100% - 50px);
-		max-width: 500px;
-		box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+		width: calc(100% - 20px);
+		max-width: 520px;
+		box-shadow: -5px 5px 10px 2px rgba(0, 0, 0, 0.3);
 
 		position: fixed;
 		bottom: 0;
@@ -115,34 +114,16 @@
 		margin: 0 auto;
 	}
 
-	section.challenge {
-		box-shadow: 0 0 20px 10px rgba(39, 174, 96, 0.25);
-		background: radial-gradient(
-			farthest-corner at 0 0,
-			rgba(39, 174, 96, 0.2),
-			rgba(0, 0, 0, 0.7) 50%
-		);
-	}
-
 	section.challenge .header {
-		background: radial-gradient(farthest-corner at 0 0, rgba(39, 174, 96, 0.3), rgba(0, 0, 0, 0));
+		background: rgba(39, 174, 96, 1);
 	}
 
 	.msg.challenge {
 		--color: rgba(39, 174, 96, 1);
 	}
 
-	section.find {
-		box-shadow: 0 0 25px 10px rgba(41, 128, 185, 0.25);
-		background: radial-gradient(
-			farthest-corner at 0 0,
-			rgba(41, 128, 185, 0.2),
-			rgba(0, 0, 0, 0.7) 50%
-		);
-	}
-
 	section.find .header {
-		background: radial-gradient(farthest-corner at 0 0, rgba(41, 128, 185, 0.3), rgba(0, 0, 0, 0));
+		background: rgb(41, 128, 185);
 	}
 
 	.msg.find {
@@ -182,16 +163,14 @@
 	}
 
 	section.complete .header {
-		background: radial-gradient(farthest-corner at 0 0, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0));
-
 		font-weight: bold;
-		text-shadow: 0 0 15px white;
+		text-shadow: 0 0 30px white;
 	}
 
 	.closeBtn {
 		position: absolute;
 		top: 40px;
-		right: 30px;
+		left: 30px;
 		background: none;
 		border: none;
 		cursor: pointer;
@@ -247,9 +226,9 @@
 	}
 
 	.msg {
-		background: black;
 		--color: white;
-		border-left: 2px var(--color) solid;
+		border: 2px var(--color) solid;
+		border-left: 6px var(--color) solid;
 		padding: 1em 1.5em;
 		margin: 20px 0;
 	}
