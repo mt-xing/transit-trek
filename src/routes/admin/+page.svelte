@@ -14,27 +14,28 @@
 	{/if}
 </p>
 
-<h1>TT4</h1>
+<h1>TT5</h1>
 
 <h2>Setup</h2>
-<p><a href="/admin/tt4/challenges">Edit Challenges</a></p>
-<p><a href="/admin/tt4/teams">Edit Teams</a></p>
+<p><a href="/admin/tt5/challenges">Edit Challenges</a></p>
+<p><a href="/admin/tt5/teams">Edit Teams</a></p>
 
 <h2>Game Operations</h2>
 <p><strong>IF YOU ARE A CHASER CLICK THIS ONE BELOW ↓ ↓ ↓</strong></p>
-<p><a href="/admin/tt4/catch">Chasers CLICK ME</a></p>
+<p><a href="/admin/tt5/catch">Chasers CLICK ME</a></p>
 <p><strong>↑ ↑ ↑</strong></p>
-<p><a href="/admin/tt4/game">Game State</a></p>
-<p><a href="/admin/tt4/entry">Challenge Status Entry</a></p>
-<p><a href="/admin/tt4/teamInfo">Team Info</a></p>
-<p><a href="/admin/tt4/logs">Logs</a></p>
+<p><a href="/admin/tt5/game">Game State</a></p>
+<p><a href="/admin/tt5/entry">Challenge Status Entry</a></p>
+<p><a href="/admin/tt5/teamInfo">Team Info</a></p>
+<p><a href="/admin/tt5/logs">Logs</a></p>
 
 <h2>Progress Overview</h2>
-<p><a href="/admin/tt4/summary/standings">Standings</a></p>
-<p><a href="/admin/tt4/summary/heatmap">Heat Map</a></p>
+<p><a href="/admin/tt5/summary/standings">Standings</a></p>
+<p><a href="/admin/tt5/summary/heatmap">Heat Map</a></p>
 
 <h2>Old Events</h2>
 <p><a href="/admin/tt3">TT3</a></p>
+<p><a href="/admin/tt4">TT4</a></p>
 
 <style>
 	h1,
