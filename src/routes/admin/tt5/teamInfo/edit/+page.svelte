@@ -9,9 +9,7 @@
 	}
 
 	let { name } = team;
-	const { teamNum, id, catchTimes } = team;
-
-	let catchTimesString = catchTimes.join(',');
+	const { teamNum, id } = team;
 
 	let scoreAdjust = 0;
 </script>
@@ -49,28 +47,4 @@
 	<button type="submit">Apply to score</button>
 </form>
 
-<form method="POST" action="?/catchAdjust">
-	<h2>Catch Times</h2>
-	<input type="hidden" value={id} name="id" />
-	<textarea bind:value={catchTimesString} name="catchTimes"></textarea>
-	{#if !catchTimesString}
-		<p>No catches</p>
-	{:else}
-		<p>Preview:</p>
-		<ul>
-			{#each catchTimesString.split(',') as catchTimeRaw}
-				<li>{new Date(parseInt(catchTimeRaw, 10))}</li>
-			{/each}
-		</ul>
-	{/if}
-	<button type="submit">Manual Update</button>
-</form>
-
 <a href="/admin/tt5/teamInfo" style="display: block; margin-top: 100px;">Discard and Return</a>
-
-<style>
-	textarea {
-		min-width: 400px;
-		min-height: 3em;
-	}
-</style>

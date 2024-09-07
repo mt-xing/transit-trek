@@ -15,10 +15,6 @@ export type TT5LogEntry = {
 			};
 	  }
 	| {
-			t: 'caught';
-			manualEdit?: { oldTime: number; newTime: number };
-	  }
-	| {
 			t: 'gameState';
 			text: string;
 	  }

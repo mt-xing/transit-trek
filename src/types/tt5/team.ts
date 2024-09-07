@@ -4,7 +4,6 @@ export type TT5Team = {
 	secret: string;
 	name: string;
 	score: number;
-	catchTimes: number[];
 	challengeProgress: TT5ChallengeProgress;
 	bioBreakTaken: boolean;
 };
