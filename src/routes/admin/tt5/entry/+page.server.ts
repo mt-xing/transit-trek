@@ -66,6 +66,8 @@ export const actions = {
 
 		const manualComplete = boolOrUndef(data.get('manualComplete'));
 
+		const bonus = boolOrUndef(data.get("bonusProgress"));
+
 		const max = parseInt(data.get('max') as string, 10);
 
 		const progress = Array.from(Array(max)).fill(false);
@@ -78,6 +80,7 @@ export const actions = {
 
 		const newVal: TT5ChallengeProgress[string] = {
 			manualComplete,
+			bonus,
 			progress,
 		};
 
@@ -116,6 +119,21 @@ export const actions = {
 					op: 'incr',
 					path: '/score',
 					value: -1 * score,
+				});
+			}
+
+			const originalBonus = existingTeam.challengeProgress[challenge.id]?.bonus === true;
+			if (!originalBonus && bonus) {
+				patchOps.push({
+					op: 'incr',
+					path: '/score',
+					value: challenge.bonus ?? 0,
+				});
+			} else if (originalBonus && !bonus) {
+				patchOps.push({
+					op: 'incr',
+					path: '/score',
+					value: -1 * (challenge.bonus ?? 0),
 				});
 			}
 		}

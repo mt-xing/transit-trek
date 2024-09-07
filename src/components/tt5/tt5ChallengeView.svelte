@@ -93,6 +93,12 @@
 				{/each}
 			</ol>
 		{/if}
+
+		{#if challenge.bonus}
+			<h3>Bonus</h3>
+			<p>Additional {challenge.bonus} point{challenge.bonus === 1 ? '' : 's'}</p>
+			<ImmutableCheckbox checked={progress?.bonus ?? false} />
+		{/if}
 	</div>
 </section>
 

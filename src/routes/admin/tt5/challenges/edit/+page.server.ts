@@ -51,6 +51,7 @@ export const actions = {
 			category: data.get('category') as TT5ChallengeCategory,
 			privateNotes: (data.get('privateNotes') as string) || undefined,
 			shrinkTitle: !!data.get('shrinkTitle'),
+			bonus: (data.get('bonusEnabled') ? parseInt(data.get('bonusAmount') as string, 10) : undefined),
 		};
 		const type = data.get('type') as TT5ChallengeType;
 		const newChallengeInfo = ((): TT5ChallengeDefinition => {

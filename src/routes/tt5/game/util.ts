@@ -14,6 +14,7 @@ export function publicTt5ChallengeFilter(x: TT5ChallengeDefinition): TT5PublicCh
 		points: x.points,
 		category: x.category,
 		shrinkTitle: x.shrinkTitle,
+		bonus: x.bonus,
 	};
 	switch (x.type) {
 		case 'single':

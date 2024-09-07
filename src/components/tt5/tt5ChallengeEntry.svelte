@@ -23,6 +23,16 @@
 
 		challengeProgress = { ...challengeProgress, [challenge.id]: progress };
 	}
+
+	function changeBonus() {
+		if (progress.bonus) {
+			progress.bonus = false;
+		} else {
+			progress.bonus = true;
+		}
+
+		challengeProgress = { ...challengeProgress, [challenge.id]: progress };
+	}
 </script>
 
 {#if progress}
@@ -79,6 +89,20 @@
 			<input type="hidden" bind:value={teamId} name="teamId" />
 			<input type="hidden" bind:value={challenge.id} name="challengeId" />
 			<input type="hidden" bind:value={challengeJson} name="challengeJson" />
+
+			{#if challenge.bonus}
+				<h2>Bonus</h2>
+				<p>
+					<input
+						type="checkbox"
+						name="bonusProgress"
+						value="true"
+						checked={progress?.bonus ?? false}
+						on:change={() => changeBonus()}
+					/>
+				</p>
+			{/if}
+
 			<button type="submit">Commit Changes (for this task only)</button>
 		</form>
 	</section>

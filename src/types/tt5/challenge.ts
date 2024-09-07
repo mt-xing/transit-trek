@@ -8,6 +8,7 @@ export type TT5ChallengeDefinition = {
 	category: TT5ChallengeCategory;
 	privateNotes?: string;
 	shrinkTitle: boolean;
+	bonus?: number;
 } & (
 	| {
 			type: 'single';

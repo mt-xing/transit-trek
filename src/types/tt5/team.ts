@@ -12,6 +12,7 @@ export type TT5ChallengeProgress = Record<
 	string,
 	{
 		manualComplete?: boolean;
+		bonus?: boolean;
 		progress: boolean[] | undefined;
 	}
 >;

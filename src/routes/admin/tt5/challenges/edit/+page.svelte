@@ -16,6 +16,9 @@
 	let privateNotes = challenge?.privateNotes ?? '';
 	let shrinkTitle = challenge?.shrinkTitle ?? false;
 
+	let bonusEnabled = (challenge?.bonus ?? 0) > 0;
+	let bonusAmount = challenge?.bonus ?? 1;
+
 	let type: TT5ChallengeType = challenge?.type ?? 'single';
 
 	let multiPartDescs = challenge?.type === 'multi' ? challenge.partDescs : ['', ''];
@@ -61,6 +64,18 @@
 		Points Awarded for Completion (can be negative):
 		<input type="number" bind:value={points} name="points" step="any" />
 	</p>
+
+	<p>
+		Bonus:
+		<input type="checkbox" bind:checked={bonusEnabled} name="bonusEnabled" />
+	</p>
+
+	{#if bonusEnabled}
+		<p>
+			Bonus Amount:
+			<input type="number" bind:value={bonusAmount} name="bonusAmount" step="any" />
+		</p>
+	{/if}
 
 	<p>
 		Challenge Category:
