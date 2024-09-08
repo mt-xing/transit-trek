@@ -104,7 +104,8 @@
 
 <style>
 	section {
-		background: url($lib/images/tt5/paper.png);
+		background-color: white;
+		background-image: url($lib/images/tt5/paper.png);
 		background-size: 100% auto;
 		background-position: center top;
 		background-repeat: repeat-y;
