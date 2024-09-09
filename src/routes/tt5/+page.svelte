@@ -544,7 +544,7 @@
 	}
 
 	.midtext.paper {
-		background-image: url($lib/images/tt5/paper.png);
+		background-image: url($lib/images/tt5/og_paper.png);
 		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
