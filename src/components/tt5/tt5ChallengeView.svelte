@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
+	import { onMount } from 'svelte';
 	import {
 		tt5ChallengeCategoryNames,
 		type TT5PublicChallengeDefinition,
@@ -17,6 +18,26 @@
 	$: progress = challengeProgress[challenge.id];
 
 	$: isComplete = isTt5ChallengeComplete(challenge, challengeProgress);
+
+	let imgLoaded: undefined | boolean;
+	let descWrap: HTMLParagraphElement;
+	onMount(() => {
+		const allImgs = descWrap.getElementsByTagName('IMG');
+		if (allImgs.length > 0) {
+			imgLoaded = false;
+		}
+		const loadImg = () => {
+			imgLoaded = true;
+		};
+		// eslint-disable-next-line no-restricted-syntax
+		for (const el of allImgs) {
+			if ((el as HTMLImageElement).complete) {
+				imgLoaded = true;
+			} else {
+				el.addEventListener('load', loadImg);
+			}
+		}
+	});
 </script>
 
 <section
@@ -55,8 +76,14 @@
 			{challenge.points} point{challenge.points === 1 ? '' : 's'}
 		</p>
 
+		<img
+			style="max-width: 60px;{imgLoaded !== false ? 'display: none' : ''}"
+			src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Ajax_loader_metal_512.gif"
+			alt=""
+		/>
+
 		<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-		<p>{@html challenge.desc}</p>
+		<p bind:this={descWrap}>{@html challenge.desc}</p>
 
 		<p class={`msg ${challenge.category}`}>
 			<span class="big">{tt5ChallengeCategoryNames[challenge.category]}</span>
@@ -105,10 +132,6 @@
 <style>
 	section {
 		background-color: white;
-		background-image: url($lib/images/tt5/paper.png);
-		background-size: 100% auto;
-		background-position: center top;
-		background-repeat: repeat-y;
 		color: black;
 		box-sizing: border-box;
 		margin: 30px auto;
@@ -152,6 +175,12 @@
 		padding: 30px;
 		max-height: calc(100vh - 220px);
 		max-height: calc(100svh - 220px);
+
+		background-image: url($lib/images/tt5/paper.png);
+		background-size: 100% auto;
+		background-position: center top;
+		background-repeat: repeat-y;
+		background-attachment: local;
 	}
 
 	section.inline .content {
