@@ -28,6 +28,10 @@
 	}, 1000);
 </script>
 
+<svelte:head>
+	<title>Extremely Secret Code</title>
+</svelte:head>
+
 <div class="content {isTime ? 'time' : ''}">
 	<p>Your code is:</p>
 	<h1>7</h1>
