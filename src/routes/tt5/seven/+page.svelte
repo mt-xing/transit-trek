@@ -1,5 +1,11 @@
 <script lang="ts">
-	let time = `${new Date().getHours()}:${new Date().getMinutes()}`;
+	function setTime() {
+		const d = new Date();
+		const hours = d.getHours() % 12;
+		return `${hours === 0 ? '12' : hours}:${padToTwo(d.getMinutes())}`;
+	}
+
+	let time = setTime();
 	let isTime = false;
 
 	function padToTwo(n: number) {
@@ -13,8 +19,7 @@
 	}
 
 	setInterval(() => {
-		const d = new Date();
-		time = `${d.getHours()}:${padToTwo(d.getMinutes())}`;
+		time = setTime();
 		if (time === '5:20' || time === '17:20' || time === '05:20') {
 			isTime = true;
 		} else {
