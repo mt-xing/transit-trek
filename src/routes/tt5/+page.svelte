@@ -296,16 +296,15 @@
 
 	<details>
 		<summary><h2>Game Zone + Boundaries</h2></summary>
-		<p>Will be provided at a later date.</p>
-		<!-- <p>
+		<p>
 			The map linked below shows the official game boundaries:<br />
 			<a
-				href="https://www.google.com/maps/d/u/0/edit?mid=1S8LD3VtSfWChnx_HwOy2LDIONo3_NwU&usp=sharing"
+				href="https://www.google.com/maps/d/u/0/edit?mid=1VTRXC-T_dsomkPm0d4DNd_vsrOc9nAA&usp=sharing"
 				target="_blank"
 				style="color: black;">Game Boundaries</a
 			>
 		</p>
-		<p>The game will not require you to leave the marked zone.</p> -->
+		<p>The game will not require you to leave the marked zone.</p>
 	</details>
 
 	<details>
