@@ -34,7 +34,7 @@
 		</p>
 	</div>
 
-	<p class="midtext signupWrap upper">
+	<!-- <p class="midtext signupWrap upper">
 		<strong>Ready to Trek?</strong>
 		<BigBtn
 			isBlack={true}
@@ -42,7 +42,7 @@
 			text="Sign Up"
 			color={['rgb(255,0,0)', 'rgb(128,0,0)']}
 		/>
-	</p>
+	</p> -->
 
 	<div class="midtext paper full" style="margin-top: 100px;">
 		<p>

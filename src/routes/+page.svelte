@@ -3,6 +3,7 @@
 	import linkStation from '$lib/images/link_station.jpg';
 	import tt3Bg from '$lib/images/transit-trek-bg-wide.png';
 	import tt4Bg from '$lib/images/tt4/bg_graphic.png';
+	import tt5Bg from '$lib/images/tt5/tt5_bg.jpg';
 	import tt5Text from '$lib/images/tt5/tt5_logo_cropped.png';
 	import BigBtn from '../components/bigBtn.svelte';
 </script>
@@ -39,7 +40,7 @@
 </section>
 
 <section class="picsection tt5">
-	<h2>Upcoming Game</h2>
+	<h2>Most Recent Game</h2>
 
 	<img src={tt5Text} alt="The Emerald City Expedition" />
 
@@ -86,6 +87,12 @@
 <section class="picsection previousEvents">
 	<h2>Previous Events</h2>
 	<ul>
+		<li>
+			<a href="/tt5" style="--num: '5';background-image: url({tt5Bg});">
+				<h3>Emerald City Expedition</h3>
+				<p>September 21, 2024</p>
+			</a>
+		</li>
 		<li>
 			<a
 				href="/tt4"
