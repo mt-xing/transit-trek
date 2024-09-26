@@ -123,7 +123,7 @@
 		</li>
 		<li>
 			<a
-				href="https://docs.google.com/document/d/1P1TBWLbEbnG3r6GH53068GhnDM3Ym05oeC0l_9479mo/"
+				href="/tt2/tt1.pdf"
 				style="--num: '1';background: linear-gradient(to right, #f24d69, #FF6F00)"
 			>
 				<h3>Ballard and Fremont</h3>
