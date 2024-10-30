@@ -198,7 +198,7 @@
 
 	<p class="midtext signupWrap lower">
 		<strong>Thanks For Playing!</strong>
-		<BigBtn href="/tt4" text="Back" color={['rgb(255,100,255)', 'rgb(50,0,100)']} />
+		<BigBtn href="/tt4" external={true} text="Back" color={['rgb(255,100,255)', 'rgb(50,0,100)']} />
 	</p>
 </div>
 
