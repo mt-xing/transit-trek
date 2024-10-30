@@ -138,8 +138,11 @@
 </script>
 
 <svelte:head>
-	<title>Transit Trek: Hide and Seek</title>
-	<meta name="description" content="Seattle Transit Trek's August 2024 event, Hide and Seek" />
+	<title>Hide and Seek Results</title>
+	<meta
+		name="description"
+		content="Final standings from Seattle Transit Trek's August 2024 event, Hide and Seek"
+	/>
 </svelte:head>
 
 <svelte:window bind:scrollY bind:innerHeight />
