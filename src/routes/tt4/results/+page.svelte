@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import BigBtn from '../../../components/bigBtn.svelte';
 	import TopLogo from '../../../components/topLogo.svelte';
+	import ChallengeView from '../../../components/tt4/tt4ChallengeView.svelte';
 
 	import bg1 from '$lib/images/tt4/bg_shards/bg_1.png';
 	import bg2 from '$lib/images/tt4/bg_shards/bg_2.png';
@@ -10,8 +11,10 @@
 
 	import teamsRaw from './teams.json';
 	import challengesRaw from './challenges.json';
-	import type { TT4Team } from '../../../types/tt4/team';
+	import type { TT4ChallengeProgress, TT4Team } from '../../../types/tt4/team';
 	import {
+		iterateTt4Categories,
+		tt4ChallengeCategoryNames,
 		type TT4ChallengeCategory,
 		type TT4PublicChallengeDefinition,
 	} from '../../../types/tt4/challenge';
@@ -57,6 +60,40 @@
 	);
 	const challengeIdArray = rawChallengesList.map((x) => x.id);
 
+	const overallChallengeProgress: TT4ChallengeProgress = {
+		...rawChallengesList.reduce(
+			(a, c) => ({
+				...a,
+				[c.id]: {
+					progress:
+						numCompleteEachChallenge[c.id] > teams.length / 2
+							? Array.from(Array(99)).map((_) => true)
+							: [false],
+				},
+			}),
+			{},
+		),
+	};
+
+	function previewText(x: string): string {
+		return x.replace(/<[^>]*>?/gm, '');
+	}
+
+	let selectedChallenge: null | TT4PublicChallengeDefinition = null;
+
+	const openCallback = (c: TT4PublicChallengeDefinition) => {
+		if (selectedChallenge === null) {
+			selectedChallenge = c;
+		}
+	};
+
+	let selectedTeam: number = -1;
+
+	$: teamProgress =
+		selectedTeam === -1
+			? overallChallengeProgress
+			: teamsUnsorted[selectedTeam - 1].challengeProgress;
+
 	// SCROLL EFFECTS
 
 	const shardImgs = [bg1, bg2, bg3, bg4];
@@ -74,7 +111,7 @@
 	onMount(() => {
 		loaded = true;
 		const maxHeight =
-			((document.body.scrollHeight - window.innerHeight) / window.innerHeight) * 100;
+			((document.body.scrollHeight - 2.5 * window.innerHeight) / window.innerHeight) * 100;
 
 		[
 			{ x: 72, y: 25, rot: 130, size: 1, big: true },
@@ -89,7 +126,7 @@
 			shardInfo.push({ ...s, y: (maxHeight * (i + 1)) / a.length });
 		});
 
-		for (let i = 0; i < 20; i++) {
+		for (let i = 0; i < 50; i++) {
 			const x = Math.random() * 80;
 			const y = Math.random() * maxHeight;
 			const rot = Math.random() * 360;
@@ -120,7 +157,7 @@
 			alt=""
 			class="bgShard {shard.big ? 'big' : 'small'}"
 			style="transform: translate({shard.x}vw, calc({shard.y}vh + {(parallaxY - 0.5) *
-				(shard.big ? 0.9 : 1.5) *
+				(shard.big ? 4 : 6) *
 				innerHeight}px)) rotate({shard.rot}deg) scale({shard.size});"
 		/>
 	{/each}
@@ -168,6 +205,84 @@
 		</table>
 	</section>
 
+	<section class="info challengeWrap">
+		<div>
+			<h2>Progress</h2>
+			<ul>
+				<li class={selectedTeam === -1 ? 'selected' : ''}>
+					<label
+						><input
+							type="radio"
+							name="teamSelect"
+							value={-1}
+							bind:group={selectedTeam}
+						/>Overview</label
+					>
+				</li>
+				{#each teams as team}
+					<li class={selectedTeam === team.teamNum ? 'selected' : ''}>
+						<label>
+							<input
+								type="radio"
+								name="teamSelect"
+								value={team.teamNum}
+								bind:group={selectedTeam}
+							/>
+							Team {team.teamNum}:
+							{team.name}
+							<span style="font-size: 0.7em">({team.score} pt{team.score === 1 ? '' : 's'})</span>
+						</label>
+					</li>
+				{/each}
+			</ul>
+			<select bind:value={selectedTeam}>
+				<option value={-1}>Overview</option>
+				{#each teams as team}
+					<option value={team.teamNum}>
+						Team {team.teamNum}:
+						{team.name} ({team.score} pt{team.score === 1 ? '' : 's'})
+					</option>
+				{/each}
+			</select>
+		</div>
+		<div>
+			{#each iterateTt4Categories(challenges) as category}
+				<div class={`card challenges ${category}`}>
+					<h3>{tt4ChallengeCategoryNames[category]}</h3>
+				</div>
+
+				<ul class={`challengeList ${category}`}>
+					{#each challenges[category] as challenge}
+						<li>
+							<button on:click={() => openCallback(challenge)}>
+								<span class="icon">
+									{#if isTt4ChallengeComplete(challenge, teamProgress)}
+										<span style="transform: translateY(-5px)scale(0.8);">✅</span>
+									{:else if category === 'selfie'}
+										<span style="transform: translateY(-12px)">📷</span>
+									{:else if category === 'experience'}
+										<span style="transform: translateY(-5px)">🎫</span>
+									{:else if category === 'distraction'}
+										<span style="transform: translateY(-5px)">🔮</span>
+									{/if}
+								</span>
+								<div class="wrap">
+									<h4>{challenge.title}</h4>
+									<p>{previewText(challenge.desc)}</p>
+								</div>
+								<span class="points">
+									{challenge.points}<span style={challenge.points === 1 ? 'margin-right: 5px;' : ''}
+										>pt{challenge.points === 1 ? '' : 's'}</span
+									>
+								</span>
+							</button>
+						</li>
+					{/each}
+				</ul>
+			{/each}
+		</div>
+	</section>
+
 	<section class="info">
 		<h2>Team Breakdown</h2>
 		<div class="teamBreakdownWrap">
@@ -202,6 +317,17 @@
 	</p>
 </div>
 
+{#if selectedChallenge !== null}
+	<ChallengeView
+		challenge={selectedChallenge}
+		challengeProgress={teamProgress}
+		closeCallback={() => {
+			selectedChallenge = null;
+		}}
+		isFloat={true}
+	/>
+{/if}
+
 <style>
 	:global(body) {
 		padding: 0;
@@ -209,12 +335,13 @@
 	}
 
 	#outerWrap {
-		position: relative;
 		width: 100%;
 		padding: 0;
 		margin: 0;
-		overflow-x: hidden;
-		overflow-y: hidden;
+		overflow-x: clip;
+		overflow-y: clip;
+		display: flow-root;
+		position: relative;
 	}
 
 	.bodyBg {
@@ -447,16 +574,27 @@
 	.challengePopularity .percentBar {
 		position: absolute;
 		z-index: 0;
-		height: 100%;
+		height: calc(100% - 2px);
 		background: linear-gradient(to right, #150f37, #0596cf 100%);
 		left: 0;
-		top: 0;
+		top: 1px;
+		box-sizing: border-box;
 	}
 
 	.challengePopularity .percentText {
 		z-index: 1;
 		font-weight: bold;
 		position: relative;
+		text-shadow: 0 0 3px black;
+	}
+
+	.challengePopularity table {
+		width: 100%;
+	}
+
+	.challengePopularity th {
+		padding: 1em;
+		text-align: left;
 	}
 
 	table.teamBreakdown {
@@ -500,6 +638,196 @@
 
 		.podium > div {
 			height: 9em;
+		}
+	}
+
+	.card.challenges {
+		padding: 0 0 0 20px;
+		border-top: none;
+		border-left: 2px var(--color) solid;
+		background: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+	}
+
+	.card.challenges h3 {
+		font-weight: normal;
+	}
+
+	.card.challenges.selfie {
+		--color: rgba(241, 196, 15, 1);
+	}
+
+	.card.challenges.experience {
+		--color: rgba(39, 174, 96, 1);
+	}
+
+	.card.challenges.distraction {
+		--color: rgba(41, 128, 185, 1);
+	}
+
+	.card {
+		background: rgba(0, 0, 0, 0.5);
+		color: white;
+		backdrop-filter: blur(10px);
+		border-top: 2px rgba(255, 150, 255, 0.5) solid;
+		box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
+
+		width: 100%;
+		margin: 20px auto;
+		padding: 20px 10px;
+		box-sizing: border-box;
+		overflow-x: hidden;
+	}
+	.challengeList {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		width: 100%;
+		margin: 20px auto;
+	}
+
+	.challengeList li {
+		margin-bottom: 10px;
+	}
+
+	.challengeList button {
+		border: none;
+		color: white;
+		width: 100%;
+		padding: 20px 30px;
+		background: radial-gradient(
+			farthest-corner at 0 0,
+			rgba(var(--color), 0.2),
+			rgba(0, 0, 0, 0.7) 65%
+		);
+		cursor: pointer;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+
+		box-shadow: 0 0 10px 0 rgba(var(--color), 0.25);
+	}
+
+	.challengeList .icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 40px;
+		margin-right: 20px;
+	}
+
+	.challengeList .points {
+		display: flex;
+		flex-direction: row;
+		align-items: end;
+		justify-content: center;
+		font-size: 50px;
+		margin-left: 20px;
+		opacity: 0.6;
+	}
+
+	.challengeList .points > span {
+		font-size: 12px;
+		padding-bottom: 10px;
+		padding-left: 2px;
+	}
+
+	.challengeList .wrap {
+		display: block;
+		flex-grow: 1;
+		min-width: 0;
+	}
+
+	.challengeList .wrap h4 {
+		font-size: 16px;
+		margin: 0 0 5px 0;
+		font-weight: normal;
+
+		text-align: left;
+	}
+
+	.challengeList .wrap p {
+		text-overflow: ellipsis;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+
+		text-align: left;
+
+		display: -webkit-box;
+		line-clamp: 2;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+	}
+
+	.challengeList.selfie {
+		--color: 241, 196, 15;
+	}
+
+	.challengeList.experience {
+		--color: 39, 174, 96;
+	}
+
+	.challengeList.distraction {
+		--color: 41, 128, 185;
+	}
+
+	.challengeWrap > div {
+		display: inline-block;
+	}
+
+	.challengeWrap > div:first-child {
+		width: 350px;
+		position: sticky;
+		top: 0;
+		vertical-align: top;
+		box-sizing: border-box;
+	}
+
+	.challengeWrap > div:first-child ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.challengeWrap > div:first-child li {
+		margin-bottom: 5px;
+	}
+
+	.challengeWrap > div:first-child label {
+		cursor: pointer;
+	}
+
+	.challengeWrap > div:last-child {
+		width: calc(100% - 355px);
+	}
+
+	.challengeWrap select {
+		padding: 1em 2em;
+		display: none;
+	}
+
+	@media (max-width: 900px) {
+		.challengeWrap > div {
+			display: block;
+			width: 100%;
+		}
+
+		.challengeWrap > div:first-child {
+			position: relative;
+		}
+
+		.challengeWrap > div:first-child ul {
+			display: none;
+		}
+
+		.challengeWrap select {
+			display: initial;
+		}
+
+		.challengeWrap > div:last-child {
+			width: 100%;
 		}
 	}
 </style>
