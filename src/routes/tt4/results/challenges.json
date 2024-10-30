@@ -1,0 +1,398 @@
+{
+    "selfie": [
+        {
+            "id": "5f36ac75-ab5a-43d1-a59b-c8f683f4bfc0",
+            "title": "Concerts Galore",
+            "desc": "Visit at least three concert halls in Seattle among the following list: Benaroya Hall, the Moore Theatre, the 5th Avenue Theatre, Neptune Theatre, and the Paramount Theatre.",
+            "points": 3,
+            "category": "selfie",
+            "type": "multi",
+            "partDescs": [
+                "Hall 1",
+                "Hall 2",
+                "Hall 3"
+            ]
+        },
+        {
+            "id": "b2d3b8da-b366-4973-b080-cb909047b228",
+            "title": "I'll See You in Court",
+            "desc": "Find two buildings used by the U.S. federal government as courthouses. The buildings must be wholly, or nearly wholly, used as a courthouse. State and local courthouses do not count. Federal buildings with small federal courts within them do not count either.",
+            "points": 2,
+            "category": "selfie",
+            "type": "multi",
+            "partDescs": [
+                "Courthouse 1",
+                "Courthouse 2"
+            ]
+        },
+        {
+            "type": "single",
+            "id": "ea6f022d-823a-46ba-8741-0d3515fbe180",
+            "title": "Won't You Come and Wash the Rain Away",
+            "desc": "Find an outdoor sculpture in Volunteer Park by Isamu Noguchi.",
+            "points": 3,
+            "category": "selfie",
+            "privateNotes": "Black Sun (sculpture): The statue is situated on the eastern edge of the park's man-made reservoir, across from the Seattle Asian Art Museum. "
+        },
+        {
+            "type": "single",
+            "id": "0f08578d-632b-4a30-b59d-3a0048ad1591",
+            "title": "I Can’t Sleep in a Houseboat ffs",
+            "desc": "Find the houseboat featured in the film <i>Sleepless in Seattle</i>.",
+            "points": 2,
+            "category": "selfie",
+            "privateNotes": "2460 Westlake Ave N"
+        },
+        {
+            "type": "single",
+            "id": "c35d9c23-f940-41e0-9504-ceb9ceb88402",
+            "title": "Fifty Shades of Grey",
+            "desc": "Whether you’re into BDSM or not, find Christian Grey's condo.",
+            "points": 1,
+            "category": "selfie",
+            "privateNotes": "Escala (1920 4th ave)"
+        },
+        {
+            "type": "single",
+            "id": "1d431c54-2a14-45ed-b301-78eef915c26c",
+            "title": "Space Haystack",
+            "desc": "Find Columbia Center and take a picture of it. Be sure you are within 50 feet of the tower.",
+            "points": 1,
+            "category": "selfie"
+        },
+        {
+            "type": "single",
+            "id": "d96969b7-c2c7-490a-a928-68bfaf60f2a2",
+            "title": "Gas Works Park",
+            "desc": "Take a selfie at Gas Works Park (probably at Kite Hill) with the skyline of Seattle by pointing the camera towards Lake Union. The Space Needle must be visible in the selfie.",
+            "points": 3,
+            "category": "selfie",
+            "privateNotes": "The picture must be clearly from Gas Works Park."
+        },
+        {
+            "type": "single",
+            "id": "5036203a-4533-424d-969b-0f1fe2fd574e",
+            "title": "Kerry Park",
+            "desc": "Take a selfie with the skyline of Seattle and the statue on the north edge of Kerry Park (on Highland Rd).\n",
+            "points": 3,
+            "category": "selfie",
+            "privateNotes": "If it is not taken from Highland Rd, the Seattle skyline won't be visible."
+        },
+        {
+            "id": "55b692d1-902f-434c-9b33-28d03e0731c9",
+            "title": "Sports Fan",
+            "desc": "Take a selfie within 100 feet of all of the following: Climate Pledge Arena, Lumen Field, and T-Mobile Park. Please note the Lumen Field parking garage will not count.",
+            "points": 3,
+            "category": "selfie",
+            "type": "multi",
+            "partDescs": [
+                "Climate Pledge Arena",
+                "Lumen Field",
+                "T-Mobile Park"
+            ]
+        },
+        {
+            "type": "single",
+            "id": "3b47d785-b5c7-44fb-b570-f65c369a2555",
+            "title": "National Nordic Museum",
+            "desc": "Take a selfie in front of the main entrance of the National Nordic Museum (within 50 feet of it). You don’t need to go inside.\n",
+            "points": 4,
+            "category": "selfie"
+        },
+        {
+            "type": "single",
+            "id": "d956c276-f320-4089-8f6c-4a061a8c8b3b",
+            "title": "Center for Wooden Boats",
+            "desc": "Take a selfie in front of the Center for Wooden Boats in South Lake Union.",
+            "points": 2,
+            "category": "selfie",
+            "privateNotes": "This needs to be the one in South Lake Union, not the building at Gas Works Park."
+        },
+        {
+            "type": "single",
+            "id": "0039ccbb-0c11-45ad-8ae7-2de1f47484c9",
+            "title": "Scandinavian Cafe",
+            "desc": "Find a Scandinavian cafe near the Seattle City Light Denny Substation.\n",
+            "points": 2,
+            "category": "selfie",
+            "privateNotes": "Café Hagen Modern Scandinavian Café"
+        },
+        {
+            "type": "single",
+            "id": "0ecabee5-21da-4a19-b65d-039ca5b6d27b",
+            "title": "Carl S. English Jr. Botanical Garden",
+            "desc": "Visit this botanical garden near the Ballard Locks.\n",
+            "points": 5,
+            "category": "selfie"
+        },
+        {
+            "id": "eaffb8a4-5c3c-4c78-9160-3600dfe01309",
+            "title": "Amazon Go",
+            "desc": "Find two Amazon Go stores in the game area.\n",
+            "points": 2,
+            "category": "selfie",
+            "type": "multi",
+            "partDescs": [
+                "Store 1",
+                "Store 2"
+            ]
+        },
+        {
+            "type": "single",
+            "id": "95efa0e7-3f00-425d-af16-3e11dcd4d3a8",
+            "title": "Où Sont Mes Croissants?",
+            "desc": "Find a business in Seattle that sells croissants. The aforementioned business does not need to be open when you visit.\n",
+            "points": 1,
+            "category": "selfie",
+            "privateNotes": "Examples of acceptable establishments:\n\n1. La Parisienne\n2. Le Panier"
+        },
+        {
+            "id": "2cc91dc2-ce04-4bdb-b491-b08f89ec433c",
+            "title": "Lie-max Snobbery",
+            "desc": "Find and take a team selfie in front of the only true IMAX GT* (Grand Theatre) venue in the Seattle area. Tell us the name of the place. You do not need to buy admission to the venue; as long as the building is visible in your photo, you will get credit.</p>\n\n<p><small>* An IMAX GT venue has a screen with an aspect ratio of 1.43:1. The one in the Seattle area uses dual laser projectors instead of traditional film projectors.</small></p>\n<p><small>Note there is a famous IMAX theater in NYC called \"Lincoln Square\" which has nothing to do with the Lincoln Square in Bellevue.</small>",
+            "points": 1,
+            "category": "selfie",
+            "type": "multi",
+            "partDescs": [
+                "Selfie",
+                "Venue Name"
+            ]
+        },
+        {
+            "type": "single",
+            "id": "81a694f8-3b09-474c-86f5-d5ec4c8cef34",
+            "title": "OG Starbucks",
+            "desc": "Go to the <em>original</em> location of the first Starbucks. (Hint: it’s not the one at 1912 Pike Place! The address is 2010 Western Ave.) Snap a pic with the business that’s currently based at that address.",
+            "points": 1,
+            "category": "selfie",
+            "privateNotes": "Seatown Rub Shack & FishFry, though Rub w/ Love Shack is close enough"
+        }
+    ],
+    "experience": [
+        {
+            "id": "5c5ea111-c3d4-4e76-89f4-34bf81205fc8",
+            "title": "Get That Food Away From Me!",
+            "desc": "Find three foods at three different vendors at Pike Place Market that could trigger someone to have gastrointestinal discomfort. One of the foods must be not suitable for people with celiac disease, another for people with lactose intolerance, and a third containing nuts. You don’t need to buy this item; just take a picture of it as close as possible with the consent of the vendor. No selfie needed.",
+            "points": 2,
+            "category": "experience",
+            "type": "multi",
+            "partDescs": [
+                "Celiac Disease",
+                "Lactose Intolerance",
+                "Nuts"
+            ]
+        },
+        {
+            "id": "980d790c-4062-4d8b-a449-37b8dcdfadb9",
+            "title": "Pearson, Cengage, and McGraw-Hill Are Evil",
+            "desc": "Remember your college days when you had to buy overpriced textbooks? Get ready to be transported back to that. Go to the University Bookstore on the Ave (University Ave) and find one of each:</p>\n<ul>\n<li>A textbook that costs over $300</li>\n<li>A textbook with a consumable one-time code (for an online component)</li>\n<li>A textbook written by a professor who has taught at the University of Washington at any point in their career</li>\n</ul>\n<p>Your team should take a selfie with each textbook and provide us with the ISBN of each book. The textbooks must be published by one of the following major publishers: Pearson, Cengage, or McGraw–Hill.\n",
+            "points": 3,
+            "category": "experience",
+            "type": "multi",
+            "partDescs": [
+                "Over $300",
+                "Online Code",
+                "Faculty Member"
+            ]
+        },
+        {
+            "id": "23f3058d-6276-4a08-bc9e-678527c62350",
+            "title": "Seattle Art Museum",
+            "desc": "There is a moving sculpture outside the Seattle Art Museum’s front entrance. Find out the name of this sculpture and film a 3 second video of the whole team in front of it moving. Send us that video and the name of this sculpture.\n",
+            "points": 2,
+            "category": "experience",
+            "type": "multi",
+            "partDescs": [
+                "Video",
+                "Name"
+            ]
+        },
+        {
+            "type": "single",
+            "id": "85144906-ddb0-4f7e-9e5b-cfdce6986615",
+            "title": "Center for Wooden Boats",
+            "desc": "Find the nine wooden boats on this website: <a href=\"https://www.cwb.org/exhibit/historic-small-craft-of-the-pacific-nw\" target=\"_blank\">https://www.cwb.org/exhibit/historic-small-craft-of-the-pacific-nw</a>.</p>\n<p>\nTake a selfie with them.</p>\n<p>\n<strong>WARNING:</strong> Closes at 4pm.</p>\n<p>\nAlso note, this is the SLU location, NOT the one next to Gas Works Park.\n",
+            "points": 4,
+            "category": "experience"
+        },
+        {
+            "id": "b53b68ae-f1ce-4ed5-a77a-545ced94227c",
+            "title": "Frye Art Museum",
+            "desc": "Go inside the Frye Art Museum. Find three pieces of work by Stephanie Syjuco.\n",
+            "points": 4,
+            "category": "experience",
+            "type": "multi",
+            "partDescs": [
+                "Work 1",
+                "Work 2",
+                "Work 3"
+            ]
+        },
+        {
+            "id": "d33b2ac6-de9f-4a87-a55a-9d7e64193dca",
+            "title": "Gamer",
+            "desc": "At Blue Highway Games, find two of the games recommended by the staff, as denoted <a href=\"https://www.bluehighwaygames.com/shop/game-recommendations/staff-picks-of-the-month/\" target=\"_blank\">on their website</a>. You may NOT ask for help with finding the games.",
+            "points": 5,
+            "category": "experience",
+            "type": "multi",
+            "partDescs": [
+                "Game 1",
+                "Game 2"
+            ]
+        },
+        {
+            "id": "f997d0db-4239-416e-b1cc-e514c2b3bc1e",
+            "title": "I Love Eating Dick's",
+            "desc": "Go to two of the following Dick’s Drive-In locations: Capitol Hill, South Lake Union, or Wallingford, and count how many people are in each line when you visit. Send the organizers a picture of the line and let us know how many people are in each line. (Optionally, you can buy something from there and eat it.)",
+            "points": 4,
+            "category": "experience",
+            "type": "multi",
+            "partDescs": [
+                "Store 1 Picture",
+                "Store 1 Head Count",
+                "Store 2 Picture",
+                "Store 2 Head Count"
+            ]
+        },
+        {
+            "type": "single",
+            "id": "3318a05c-56ae-4fe2-b003-12d0d7d976ea",
+            "title": "Theo Chocolate",
+            "desc": "Visit the Theo Chocolate store in Fremont and find a seasonal flavor. You do not need to buy the chocolate; just take a picture of it. (You can buy it if you’d like though!)",
+            "points": 3,
+            "category": "experience"
+        },
+        {
+            "type": "single",
+            "id": "6438932e-c717-4ff1-88d5-1f9531ebc63d",
+            "title": "Cat Café",
+            "desc": "Find a cat café. If you can enter, take a group selfie with at least one cat. Otherwise, if the cat café requires reservations, just try your best to take a selfie outside the café.\n",
+            "points": 3,
+            "category": "experience",
+            "privateNotes": "NEKO Cat Cafe in Capitol Hill\n\n519 E Pine St, Seattle, WA 98122\n\nhttps://maps.app.goo.gl/63ahEkrjySKGiUTJ8"
+        },
+        {
+            "id": "cf098c06-9739-446b-a3aa-6a9a8f5055b0",
+            "title": "Is This Record-ing?",
+            "desc": "Go to two record shops in Capitol Hill within 4 blocks of Broadway and find a grunge vinyl LP. (It must be actual grunge; post-grunge is not acceptable. When in doubt, ask the game coordinator.) It must not be a compilation; it needs to be an original album. Don’t buy this LP. Take a picture of the LP with a team member making a peace sign with it.</p>\n<p>If the store employees don’t like you doing that, skip that part and have the whole team take a selfie outside (but only after you entered the store first and found the vinyl). If you do this, you must also tell us what the album and artist you found was.</p>\n<p>If there is no vinyl for sale that fulfills these conditions, you must complete another task.</p>\n\n<p>(Note: if you happen to find a nice grunge LP that you really want to buy, you can buy it if there are other grunge LPs that would still be available for other teams to successfully complete this task.)",
+            "points": 2,
+            "category": "experience",
+            "type": "multi",
+            "partDescs": [
+                "Record Shop 1",
+                "Record Shop 2"
+            ]
+        },
+        {
+            "id": "99e6d39f-d3d7-4bd3-b15d-5efd988ad915",
+            "title": "Pious Places",
+            "desc": "<p>Find two churches east of Broadway near Capitol Hill with European countries in their names.</p>\n<p>Take a selfie in front of them. Note their architecture. Then, tell us the names of the churches and about what differences in design they have.</p>",
+            "points": 2,
+            "category": "experience",
+            "type": "multi",
+            "partDescs": [
+                "Church 1 Selfie",
+                "Church 1 Name",
+                "Church 2 Selfie",
+                "Church 2 Name",
+                "Differences in Designs"
+            ]
+        },
+        {
+            "type": "single",
+            "id": "10cd83bd-1cb5-4d78-8bb1-f5187359fb70",
+            "title": "Shut Down the Link",
+            "desc": "Find the large green clock in front of the Ben Bridge Jeweler store near 5th and Pine. Using forced perspective, take a picture of your team appearing to lift the clock up, like a construction crew about to puncture a hole through the downtown tunnel and cause the Link to shut down.\n</p>\n<p>The team member taking the photo does not need to be in the picture.",
+            "points": 1,
+            "category": "experience"
+        },
+        {
+            "id": "d9fa56f6-0617-43a4-be66-c390618a4160",
+            "title": "Union (of 2) Lake(shores)",
+            "desc": "Record a video of the team performing 20 total burpees at Lake Union Park and a video of the team performing 20 total burpees at Gas Works Park. The burpees may be divided up among team members however you choose (eg: one person doing all 20, or four people each doing five, etc.). A burpee is defined as a push up followed immediately by a jumping jack.\n",
+            "points": 5,
+            "category": "experience",
+            "type": "multi",
+            "partDescs": [
+                "Lake Union Park",
+                "Gas Works Park"
+            ]
+        }
+    ],
+    "distraction": [
+        {
+            "type": "single",
+            "id": "601a0033-04e1-4df8-8efa-855e95414da7",
+            "title": "I Sea a Cruise Ship!",
+            "desc": "If you find a cruise ship, send us a picture with your team in it and tell us the name of the ship. You must be able to prove to us that’s indeed the ship you saw based on the preponderance of the evidence.\n</p><p>\nNote: ferries, such as the ships operated by Washington State Ferries, Kitsap Fast Ferries, and the FRS Clipper do not count.\n",
+            "points": 1,
+            "category": "distraction",
+            "privateNotes": "Should be operated by a company like Carnival, Norwegian, Princess, etc."
+        },
+        {
+            "type": "single",
+            "id": "5e0d63f1-63c2-44df-9966-a4fbd9ad8a14",
+            "title": "Old Dawgs Don't Take New Trains",
+            "desc": "If you see or take a Series 1 Kinkisharyo-Mitsui Link train, take a selfie with it and send it to us.\n</p><p><img src=\"/tt4/link_guide.jpg\" alt=\"Series 1 trains have smaller, framed windows, puke-green floors, dot matrix displays above the windows, and no colored RGB light strips along the doors\" />",
+            "points": 1,
+            "category": "distraction"
+        },
+        {
+            "type": "single",
+            "id": "57469233-ca1f-482b-a3b6-83e493c92961",
+            "title": "A Streetcar Not Desired",
+            "desc": "If you find yourself next to a streetcar, send the organizers a video, at least 5 seconds and no longer than 15 seconds in length, of your team walking faster than a nearby streetcar. The streetcar cannot be stopped at a station, but may be stuck in traffic or waiting for a traffic light. The streetcar must also be visible in your video.\n",
+            "points": 1,
+            "category": "distraction"
+        },
+        {
+            "type": "single",
+            "id": "b7448fcd-29f3-4936-93b4-528e2940d361",
+            "title": "License Plate Hunter 2.0",
+            "desc": "We had some… heated feedback about the License Plate Hunter challenge from Transit Trek 3.\n</p><p>\nThis time, we’ll go easy on you. If you find any out-of-state plate (just one) and take a selfie with it, you get a point. Please only take a photo with a stationary vehicle whose engine/motor is off. <strong>DO NOT TAKE A PHOTO WITH A CAR THAT IS OCCUPIED.</strong>",
+            "points": 1,
+            "category": "distraction"
+        },
+        {
+            "type": "single",
+            "id": "4dcf3828-72fd-4c30-9275-efab42854599",
+            "title": "CrowdStrike",
+            "desc": "If you see a digital display, most likely a TV, that clearly looks like it’s corrupted (whether for software or hardware reasons), send us a picture (no selfie needed) and you get points!",
+            "points": 3,
+            "category": "distraction"
+        },
+        {
+            "id": "032a582d-0519-4f56-b885-dd26fe8eeb9b",
+            "title": "Purple Sidewalks (Vault Lights)",
+            "desc": "Find three “purple sidewalks” in the ground (known as vault lights). They are waffle-shaped and were used as skylights (to let light into the underground city of Seattle) in the 19th century. The glass turned purple because they contained manganese. Send a selfie with them and tell us the location (Google Maps link is fine) of each selfie. They must be at least 1,000 feet apart from each other.\n</p><p>\nMore info: <a href=\"https://seattlemag.com/food-and-culture/backstory-how-pioneer-squares-purple-sidewalk-skylights-came-be/\" target=\"_blank\">https://seattlemag.com/food-and-culture/backstory-how-pioneer-squares-purple-sidewalk-skylights-came-be/</a>",
+            "points": 2,
+            "category": "distraction",
+            "type": "multi",
+            "partDescs": [
+                "Sidewalk 1",
+                "Sidewalk 2",
+                "Sidewalk 3"
+            ]
+        },
+        {
+            "type": "single",
+            "id": "76c2a248-d182-46ad-ab04-725f6c9ac498",
+            "title": "Lyrics Challenge 2.0: Electric Boogaloo",
+            "desc": "This time we need to make things a bit more fair for poor Arjun. (He’s the dude who’s forming the teams.) Pick a Beatles song from the below list and find two contiguous lines from the song comprising at least 10 distinct words. (Oohs and ahhs and other mumblings in the song do not count.) Send it to Game Control in the Signal chat, who will then pass it on to Arjun. He will be given 15 seconds to guess it. If he fails to guess it correctly, you get 3 points. No points are given or deducted if he guesses it correctly. <strong>You only get one try</strong>, so choose wisely!\n</p>\n<ul>\n\n<li>Because\n</li><li>Blackbird\n</li><li>Day Tripper\n</li><li>Doctor Robert\n</li><li>Drive My Car\n</li><li>Eleanor Rigby\n</li><li>Glass Onion\n</li><li>Hello, Goodbye\n</li><li>Here Comes The Sun\n</li><li>Hey Jude\n</li><li>In My Life\n</li><li>I Want You (She’s So Heavy)\n</li><li>Lovely Rita\n</li><li>Maxwell’s Silver Hammer\n</li><li>Norwegian Wood (This Bird Has Flown)\n</li><li>Octopus’s Garden\n</li><li>Revolution\n</li><li>She Came In Through The Bathroom Window\n</li><li>She Said She Said\n</li><li>Something\n</li><li>Taxman\n</li><li>Ticket to Ride\n</li>\n</ul><p>",
+            "points": 3,
+            "category": "distraction"
+        },
+        {
+            "id": "c4c205fd-866d-4d62-af18-3af24ef0eef1",
+            "title": "Plane Goes Brrrrr",
+            "desc": "If you find a plane that can be attributed to the Blue Angels, snap a picture (no selfie needed) and send it to us. Also, you must send us the tail number of the plane. You can find it on Flightradar24.",
+            "points": 1,
+            "category": "distraction",
+            "type": "multi",
+            "partDescs": [
+                "Picture",
+                "Tail Number"
+            ]
+        }
+    ]
+}

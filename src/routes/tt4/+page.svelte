@@ -17,6 +17,7 @@
 	import bg3 from '$lib/images/tt4/bg_shards/bg_3.png';
 	import bg4 from '$lib/images/tt4/bg_shards/bg_4.png';
 	import { HOME_PAGE } from '../../utils/paths';
+	import BigBtn from '../../components/bigBtn.svelte';
 
 	const shardImgs = [bg1, bg2, bg3, bg4];
 
@@ -136,8 +137,8 @@
 	{/each}
 
 	<p class="midtext signupWrap upper">
-		<!-- <strong>Ready to Trek?</strong>
-		<BigBtn href={PARTIFUL_LINK} text="Sign Up" color={['rgb(255,100,255)', 'rgb(50,0,100)']} /> -->
+		<strong>Thanks For Playing</strong>
+		<BigBtn href="/tt4/results" text="Results" color={['rgb(255,100,255)', 'rgb(50,0,100)']} />
 	</p>
 
 	<section class="right">
@@ -895,11 +896,11 @@
 
 	/* .signupWrap.lower {
 		margin: 200px auto 250px auto;
-	}
+	} */
 
 	.signupWrap strong {
 		margin-right: 50px;
-	} */
+	}
 
 	details {
 		color: white;
@@ -1003,10 +1004,10 @@
 			flex-direction: column;
 		}
 
-		/* .signupWrap strong {
+		.signupWrap strong {
 			margin-right: 0;
 			margin-bottom: 30px;
-		} */
+		}
 
 		details {
 			padding-left: 10vw;
