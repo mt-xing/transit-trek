@@ -107,7 +107,7 @@
 				<span class="rank">{i + 1}</span>
 				<h3>Team {team.teamNum}: {team.name}</h3>
 				<p>
-					Total Score: <code>{team.score}</code>
+					Total Score: <code>{Math.floor(team.score)}</code>
 				</p>
 			</div>
 		{/each}
@@ -177,7 +177,7 @@
 				{#each teams as team}
 					<option value={team.teamNum}>
 						Team {team.teamNum}:
-						{team.name} ({team.score} pt{team.score === 1 ? '' : 's'})
+						{team.name} ({Math.floor(team.score)} pt{team.score === 1 ? '' : 's'})
 					</option>
 				{/each}
 			</select>
@@ -483,7 +483,7 @@
 	}
 
 	.challengePopularity table tr:nth-child(even) {
-		background: rgba(255, 255, 255, 0.05);
+		background: rgba(0, 0, 0, 0.05);
 	}
 
 	.challengePopularity td {
