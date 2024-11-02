@@ -33,7 +33,6 @@ export const actions = {
 			secret: crypto.randomUUID(),
 			name: '',
 			score: 0,
-			catchTimes: [],
 			challengeProgress: {},
 			bioBreakTaken: false,
 		};

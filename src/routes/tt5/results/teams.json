@@ -1,0 +1,1388 @@
+[
+    {
+        "teamNum": 1,
+        "secret": "66235d1a-0626-4544-8e5b-03ae562cc75c",
+        "name": "🦅💥🇺🇸just one more lane 🦅💥🇺🇸",
+        "score": 49,
+        "catchTimes": [],
+        "challengeProgress": {
+            "30d32a6c-e241-4f73-8ec6-11257b672df1": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "10f373f7-babb-4629-8394-5ba0387cd4e9": {
+                "progress": [
+                    true,
+                    true,
+                    true
+                ]
+            },
+            "478791b8-a82a-449a-8365-028ff8383b49": {
+                "progress": [
+                    true
+                ]
+            },
+            "90613827-7ed5-4ddd-8138-ccd9e201b19b": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "8bc7a0e5-f4d2-48a5-87df-90fe23cc5946": {
+                "progress": [
+                    true
+                ]
+            },
+            "bf18d84c-a7cc-4865-bbfc-4f20e658f0a2": {
+                "progress": [
+                    true,
+                    true,
+                    true
+                ]
+            },
+            "80daa17e-cd39-4cbd-bfd8-9ff30ab8b34e": {
+                "progress": [
+                    true
+                ]
+            },
+            "99e1c4f8-1a97-4367-a4ed-429acd69a156": {
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "b8b1fb6e-0335-490e-a797-07355d1aefbc": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "8049a555-3a72-4472-bc4a-4dad4850c85e": {
+                "progress": [
+                    true
+                ]
+            },
+            "d809ee5e-1377-44f5-9f90-7b9b7a438578": {
+                "progress": [
+                    true
+                ]
+            },
+            "0bdf42f8-291c-4258-87cc-4c7b0f7ca7c7": {
+                "progress": [
+                    true
+                ]
+            },
+            "778fcb2b-9985-488d-a95e-2c4994048747": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "e95c8ec5-69e6-4ede-af85-92babdf82079": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "f5fa7aae-85f6-4314-ac7c-0a63c5e22ab7": {
+                "progress": [
+                    true
+                ]
+            },
+            "46be67bc-0d9b-4559-9d64-7181e2244d24": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "46a66e1c-a223-4c17-9371-6fa68235a442": {
+                "progress": [
+                    true,
+                    true
+                ]
+            }
+        },
+        "bioBreakTaken": true,
+        "id": "e435dc27-da1e-47b4-a4de-fa6010f1aae0",
+        "_rid": "NT1TAMv-Y6QCAAAAAAAAAA==",
+        "_self": "dbs/NT1TAA==/colls/NT1TAMv-Y6Q=/docs/NT1TAMv-Y6QCAAAAAAAAAA==/",
+        "_etag": "\"30003320-0000-0700-0000-66ef68c40000\"",
+        "_attachments": "attachments/",
+        "_ts": 1726965956
+    },
+    {
+        "teamNum": 2,
+        "secret": "16900956-9fdb-459a-abf8-6e445d3c3933",
+        "name": "The jaywalkers",
+        "score": 33,
+        "catchTimes": [],
+        "challengeProgress": {
+            "10f373f7-babb-4629-8394-5ba0387cd4e9": {
+                "progress": [
+                    true,
+                    true,
+                    true
+                ]
+            },
+            "bf18d84c-a7cc-4865-bbfc-4f20e658f0a2": {
+                "progress": [
+                    true,
+                    true,
+                    true
+                ]
+            },
+            "c5c13184-8452-4215-a62a-5b39e45e18f2": {
+                "progress": [
+                    true
+                ]
+            },
+            "30d32a6c-e241-4f73-8ec6-11257b672df1": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "0bdf42f8-291c-4258-87cc-4c7b0f7ca7c7": {
+                "progress": [
+                    true
+                ]
+            },
+            "90613827-7ed5-4ddd-8138-ccd9e201b19b": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "478791b8-a82a-449a-8365-028ff8383b49": {
+                "progress": [
+                    true
+                ]
+            },
+            "bae68dc7-dc45-481f-bf4d-63a2e2451615": {
+                "progress": [
+                    true
+                ]
+            },
+            "e7c450ca-af37-42d8-860d-6910e99f4266": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "8a63db57-44be-495b-8fa2-8b196ef3a8cc": {
+                "progress": [
+                    true
+                ]
+            },
+            "8049a555-3a72-4472-bc4a-4dad4850c85e": {
+                "progress": [
+                    true
+                ]
+            },
+            "778fcb2b-9985-488d-a95e-2c4994048747": {
+                "progress": [
+                    false,
+                    true
+                ]
+            },
+            "90c5a00f-11fc-40a0-86e6-9103d5dc38ea": {
+                "progress": [
+                    true
+                ]
+            },
+            "e95c8ec5-69e6-4ede-af85-92babdf82079": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "086bed14-5cdb-4879-9695-df33c69a22e9": {
+                "progress": [
+                    true
+                ]
+            }
+        },
+        "bioBreakTaken": true,
+        "id": "c5db3d1d-485a-45f3-811a-6454a0e2fd9b",
+        "_rid": "NT1TAMv-Y6QDAAAAAAAAAA==",
+        "_self": "dbs/NT1TAA==/colls/NT1TAMv-Y6Q=/docs/NT1TAMv-Y6QDAAAAAAAAAA==/",
+        "_etag": "\"30005912-0000-0700-0000-66ef64710000\"",
+        "_attachments": "attachments/",
+        "_ts": 1726964849
+    },
+    {
+        "teamNum": 3,
+        "secret": "6bfbef69-27c4-4a44-b0fd-095bf887471e",
+        "name": "Team Mobile",
+        "score": 21,
+        "catchTimes": [],
+        "challengeProgress": {
+            "10f373f7-babb-4629-8394-5ba0387cd4e9": {
+                "progress": [
+                    true,
+                    true,
+                    true
+                ]
+            },
+            "478791b8-a82a-449a-8365-028ff8383b49": {
+                "progress": [
+                    true
+                ]
+            },
+            "c5c13184-8452-4215-a62a-5b39e45e18f2": {
+                "progress": [
+                    true
+                ]
+            },
+            "8049a555-3a72-4472-bc4a-4dad4850c85e": {
+                "progress": [
+                    true
+                ]
+            },
+            "d71a8c57-6038-43c8-867e-0a1b07abee25": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "bf18d84c-a7cc-4865-bbfc-4f20e658f0a2": {
+                "progress": [
+                    true,
+                    false,
+                    false
+                ]
+            },
+            "f5fa7aae-85f6-4314-ac7c-0a63c5e22ab7": {
+                "progress": [
+                    true
+                ]
+            },
+            "dcc2fa85-2059-4694-978b-f096e7bd5650": {
+                "progress": [
+                    true
+                ]
+            },
+            "8bc7a0e5-f4d2-48a5-87df-90fe23cc5946": {
+                "progress": [
+                    true
+                ]
+            },
+            "90613827-7ed5-4ddd-8138-ccd9e201b19b": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "0bdf42f8-291c-4258-87cc-4c7b0f7ca7c7": {
+                "progress": [
+                    true
+                ]
+            }
+        },
+        "bioBreakTaken": true,
+        "id": "4b09851e-c1f9-48b7-a8a0-862f49d5093b",
+        "_rid": "NT1TAMv-Y6QEAAAAAAAAAA==",
+        "_self": "dbs/NT1TAA==/colls/NT1TAMv-Y6Q=/docs/NT1TAMv-Y6QEAAAAAAAAAA==/",
+        "_etag": "\"2f00cbf9-0000-0700-0000-66ef5ca30000\"",
+        "_attachments": "attachments/",
+        "_ts": 1726962851
+    },
+    {
+        "teamNum": 4,
+        "secret": "0feb3cf7-4f2d-4bb5-b058-de92bc43f962",
+        "name": "🦦 squad",
+        "score": 36,
+        "catchTimes": [],
+        "challengeProgress": {
+            "90613827-7ed5-4ddd-8138-ccd9e201b19b": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "8049a555-3a72-4472-bc4a-4dad4850c85e": {
+                "progress": [
+                    true
+                ]
+            },
+            "d71a8c57-6038-43c8-867e-0a1b07abee25": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "dcc2fa85-2059-4694-978b-f096e7bd5650": {
+                "progress": [
+                    true
+                ]
+            },
+            "bae68dc7-dc45-481f-bf4d-63a2e2451615": {
+                "bonus": true,
+                "progress": [
+                    true
+                ]
+            },
+            "bf18d84c-a7cc-4865-bbfc-4f20e658f0a2": {
+                "progress": [
+                    true,
+                    true,
+                    true
+                ]
+            },
+            "2edfb614-1f40-4b57-8832-44c7678a3f3b": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "46be67bc-0d9b-4559-9d64-7181e2244d24": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "80daa17e-cd39-4cbd-bfd8-9ff30ab8b34e": {
+                "progress": [
+                    true
+                ]
+            },
+            "c5c13184-8452-4215-a62a-5b39e45e18f2": {
+                "progress": [
+                    true
+                ]
+            },
+            "8bc7a0e5-f4d2-48a5-87df-90fe23cc5946": {
+                "progress": [
+                    true
+                ]
+            },
+            "b8b1fb6e-0335-490e-a797-07355d1aefbc": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "c913232a-eb54-438f-a384-710b0e8d5705": {
+                "progress": [
+                    true
+                ]
+            },
+            "478791b8-a82a-449a-8365-028ff8383b49": {
+                "progress": [
+                    true
+                ]
+            }
+        },
+        "bioBreakTaken": true,
+        "id": "967de064-90bd-4af4-ad05-75274e0d6f4e",
+        "_rid": "NT1TAMv-Y6QFAAAAAAAAAA==",
+        "_self": "dbs/NT1TAA==/colls/NT1TAMv-Y6Q=/docs/NT1TAMv-Y6QFAAAAAAAAAA==/",
+        "_etag": "\"3000141b-0000-0700-0000-66ef673d0000\"",
+        "_attachments": "attachments/",
+        "_ts": 1726965565
+    },
+    {
+        "teamNum": 5,
+        "secret": "cc0de80b-eedf-4606-b76f-3fd9da660400",
+        "name": "💃🕺🐐",
+        "score": 24,
+        "catchTimes": [],
+        "challengeProgress": {
+            "d71a8c57-6038-43c8-867e-0a1b07abee25": {
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "478791b8-a82a-449a-8365-028ff8383b49": {
+                "progress": [
+                    true
+                ]
+            },
+            "90613827-7ed5-4ddd-8138-ccd9e201b19b": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "2edfb614-1f40-4b57-8832-44c7678a3f3b": {
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "c913232a-eb54-438f-a384-710b0e8d5705": {
+                "progress": [
+                    true
+                ]
+            },
+            "bae68dc7-dc45-481f-bf4d-63a2e2451615": {
+                "progress": [
+                    true
+                ]
+            },
+            "e7c450ca-af37-42d8-860d-6910e99f4266": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "8049a555-3a72-4472-bc4a-4dad4850c85e": {
+                "progress": [
+                    true
+                ]
+            },
+            "bf18d84c-a7cc-4865-bbfc-4f20e658f0a2": {
+                "progress": [
+                    true,
+                    true,
+                    true
+                ]
+            },
+            "90c5a00f-11fc-40a0-86e6-9103d5dc38ea": {
+                "progress": [
+                    true
+                ]
+            },
+            "30d32a6c-e241-4f73-8ec6-11257b672df1": {
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "8a63db57-44be-495b-8fa2-8b196ef3a8cc": {
+                "progress": [
+                    true
+                ]
+            },
+            "46be67bc-0d9b-4559-9d64-7181e2244d24": {
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "0bdf42f8-291c-4258-87cc-4c7b0f7ca7c7": {
+                "progress": [
+                    true
+                ]
+            },
+            "d809ee5e-1377-44f5-9f90-7b9b7a438578": {
+                "progress": [
+                    true
+                ]
+            }
+        },
+        "bioBreakTaken": true,
+        "id": "c3f9f9ce-692c-41b7-abf1-54e42ca59c81",
+        "_rid": "NT1TAMv-Y6QGAAAAAAAAAA==",
+        "_self": "dbs/NT1TAA==/colls/NT1TAMv-Y6Q=/docs/NT1TAMv-Y6QGAAAAAAAAAA==/",
+        "_etag": "\"30003520-0000-0700-0000-66ef68cd0000\"",
+        "_attachments": "attachments/",
+        "_ts": 1726965965
+    },
+    {
+        "teamNum": 6,
+        "secret": "2f02c0f9-b532-4a9e-873a-503426d8b194",
+        "name": "2 Line Terrors",
+        "score": 38,
+        "catchTimes": [],
+        "challengeProgress": {
+            "8049a555-3a72-4472-bc4a-4dad4850c85e": {
+                "progress": [
+                    true
+                ]
+            },
+            "d71a8c57-6038-43c8-867e-0a1b07abee25": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "10f373f7-babb-4629-8394-5ba0387cd4e9": {
+                "progress": [
+                    true,
+                    true,
+                    true
+                ]
+            },
+            "99e1c4f8-1a97-4367-a4ed-429acd69a156": {
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "dcc2fa85-2059-4694-978b-f096e7bd5650": {
+                "progress": [
+                    true
+                ]
+            },
+            "bae68dc7-dc45-481f-bf4d-63a2e2451615": {
+                "bonus": true,
+                "progress": [
+                    true
+                ]
+            },
+            "478791b8-a82a-449a-8365-028ff8383b49": {
+                "progress": [
+                    true
+                ]
+            },
+            "bf18d84c-a7cc-4865-bbfc-4f20e658f0a2": {
+                "progress": [
+                    true,
+                    true,
+                    true
+                ]
+            },
+            "f5fa7aae-85f6-4314-ac7c-0a63c5e22ab7": {
+                "progress": [
+                    true
+                ]
+            },
+            "30d32a6c-e241-4f73-8ec6-11257b672df1": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "90613827-7ed5-4ddd-8138-ccd9e201b19b": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "e95c8ec5-69e6-4ede-af85-92babdf82079": {
+                "manualComplete": false,
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "90c5a00f-11fc-40a0-86e6-9103d5dc38ea": {
+                "progress": [
+                    true
+                ]
+            },
+            "8bc7a0e5-f4d2-48a5-87df-90fe23cc5946": {
+                "progress": [
+                    true
+                ]
+            },
+            "8a63db57-44be-495b-8fa2-8b196ef3a8cc": {
+                "progress": [
+                    true
+                ]
+            },
+            "46be67bc-0d9b-4559-9d64-7181e2244d24": {
+                "progress": [
+                    true,
+                    true
+                ]
+            }
+        },
+        "bioBreakTaken": true,
+        "id": "f2c6e72e-0424-4ce5-9d92-739e51648291",
+        "_rid": "NT1TAMv-Y6QHAAAAAAAAAA==",
+        "_self": "dbs/NT1TAA==/colls/NT1TAMv-Y6Q=/docs/NT1TAMv-Y6QHAAAAAAAAAA==/",
+        "_etag": "\"3000e626-0000-0700-0000-66ef6ad80000\"",
+        "_attachments": "attachments/",
+        "_ts": 1726966488
+    },
+    {
+        "teamNum": 7,
+        "secret": "e6e1a0a7-6f07-4f38-a3a8-3e735b2eeced",
+        "name": "the teenie tiny blood red koalas 🧚‍♀️🩸🐨",
+        "score": 31,
+        "catchTimes": [],
+        "challengeProgress": {
+            "e95c8ec5-69e6-4ede-af85-92babdf82079": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "8049a555-3a72-4472-bc4a-4dad4850c85e": {
+                "progress": [
+                    true
+                ]
+            },
+            "478791b8-a82a-449a-8365-028ff8383b49": {
+                "progress": [
+                    true
+                ]
+            },
+            "90613827-7ed5-4ddd-8138-ccd9e201b19b": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "d809ee5e-1377-44f5-9f90-7b9b7a438578": {
+                "progress": [
+                    true
+                ]
+            },
+            "0bdf42f8-291c-4258-87cc-4c7b0f7ca7c7": {
+                "progress": [
+                    true
+                ]
+            },
+            "46be67bc-0d9b-4559-9d64-7181e2244d24": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "8bc7a0e5-f4d2-48a5-87df-90fe23cc5946": {
+                "progress": [
+                    true
+                ]
+            },
+            "f5fa7aae-85f6-4314-ac7c-0a63c5e22ab7": {
+                "progress": [
+                    true
+                ]
+            },
+            "bae68dc7-dc45-481f-bf4d-63a2e2451615": {
+                "bonus": true,
+                "progress": [
+                    true
+                ]
+            },
+            "dcc2fa85-2059-4694-978b-f096e7bd5650": {
+                "progress": [
+                    true
+                ]
+            },
+            "b8b1fb6e-0335-490e-a797-07355d1aefbc": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "d71a8c57-6038-43c8-867e-0a1b07abee25": {
+                "progress": [
+                    true,
+                    true
+                ]
+            }
+        },
+        "bioBreakTaken": true,
+        "id": "f12e392b-9d1a-4126-a744-5785ec676120",
+        "_rid": "NT1TAMv-Y6QIAAAAAAAAAA==",
+        "_self": "dbs/NT1TAA==/colls/NT1TAMv-Y6Q=/docs/NT1TAMv-Y6QIAAAAAAAAAA==/",
+        "_etag": "\"3000091e-0000-0700-0000-66ef68210000\"",
+        "_attachments": "attachments/",
+        "_ts": 1726965793
+    },
+    {
+        "teamNum": 8,
+        "secret": "2cea13e7-b409-4da9-a25e-c96ddde26d67",
+        "name": "👺",
+        "score": 35,
+        "catchTimes": [],
+        "challengeProgress": {
+            "478791b8-a82a-449a-8365-028ff8383b49": {
+                "progress": [
+                    true
+                ]
+            },
+            "8bc7a0e5-f4d2-48a5-87df-90fe23cc5946": {
+                "progress": [
+                    true
+                ]
+            },
+            "2edfb614-1f40-4b57-8832-44c7678a3f3b": {
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "bf18d84c-a7cc-4865-bbfc-4f20e658f0a2": {
+                "progress": [
+                    true,
+                    true,
+                    true
+                ]
+            },
+            "90613827-7ed5-4ddd-8138-ccd9e201b19b": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "8049a555-3a72-4472-bc4a-4dad4850c85e": {
+                "progress": [
+                    true
+                ]
+            },
+            "0bdf42f8-291c-4258-87cc-4c7b0f7ca7c7": {
+                "progress": [
+                    true
+                ]
+            },
+            "30d32a6c-e241-4f73-8ec6-11257b672df1": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "c913232a-eb54-438f-a384-710b0e8d5705": {
+                "progress": [
+                    true
+                ]
+            },
+            "bae68dc7-dc45-481f-bf4d-63a2e2451615": {
+                "progress": [
+                    true
+                ]
+            },
+            "e7c450ca-af37-42d8-860d-6910e99f4266": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "90c5a00f-11fc-40a0-86e6-9103d5dc38ea": {
+                "progress": [
+                    true
+                ]
+            },
+            "8a63db57-44be-495b-8fa2-8b196ef3a8cc": {
+                "progress": [
+                    true
+                ]
+            },
+            "46be67bc-0d9b-4559-9d64-7181e2244d24": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "e95c8ec5-69e6-4ede-af85-92babdf82079": {
+                "progress": [
+                    true,
+                    true
+                ]
+            }
+        },
+        "bioBreakTaken": true,
+        "id": "9de7b720-5c81-41f8-930d-f038f2d3ba45",
+        "_rid": "NT1TAMv-Y6QJAAAAAAAAAA==",
+        "_self": "dbs/NT1TAA==/colls/NT1TAMv-Y6Q=/docs/NT1TAMv-Y6QJAAAAAAAAAA==/",
+        "_etag": "\"30003820-0000-0700-0000-66ef68d60000\"",
+        "_attachments": "attachments/",
+        "_ts": 1726965974
+    },
+    {
+        "teamNum": 9,
+        "secret": "878c6cca-3cf5-4ebd-a86e-32e8ac31fb30",
+        "name": "Fabulous Four",
+        "score": 20,
+        "catchTimes": [],
+        "challengeProgress": {
+            "c5c13184-8452-4215-a62a-5b39e45e18f2": {
+                "progress": [
+                    true
+                ]
+            },
+            "8bc7a0e5-f4d2-48a5-87df-90fe23cc5946": {
+                "progress": [
+                    true
+                ]
+            },
+            "bf18d84c-a7cc-4865-bbfc-4f20e658f0a2": {
+                "progress": [
+                    true,
+                    true,
+                    true
+                ]
+            },
+            "478791b8-a82a-449a-8365-028ff8383b49": {
+                "progress": [
+                    true
+                ]
+            },
+            "bae68dc7-dc45-481f-bf4d-63a2e2451615": {
+                "progress": [
+                    true
+                ]
+            },
+            "2edfb614-1f40-4b57-8832-44c7678a3f3b": {
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "80daa17e-cd39-4cbd-bfd8-9ff30ab8b34e": {
+                "progress": [
+                    true
+                ]
+            },
+            "d71a8c57-6038-43c8-867e-0a1b07abee25": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "99e1c4f8-1a97-4367-a4ed-429acd69a156": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "dcc2fa85-2059-4694-978b-f096e7bd5650": {
+                "progress": [
+                    true
+                ]
+            },
+            "e95c8ec5-69e6-4ede-af85-92babdf82079": {
+                "manualComplete": false,
+                "progress": [
+                    true,
+                    false
+                ]
+            }
+        },
+        "bioBreakTaken": true,
+        "id": "aa5d25d8-b59a-43df-aa9e-2b3186ab60ef",
+        "_rid": "NT1TAMv-Y6QKAAAAAAAAAA==",
+        "_self": "dbs/NT1TAA==/colls/NT1TAMv-Y6Q=/docs/NT1TAMv-Y6QKAAAAAAAAAA==/",
+        "_etag": "\"30009a25-0000-0700-0000-66ef6a8f0000\"",
+        "_attachments": "attachments/",
+        "_ts": 1726966415
+    },
+    {
+        "teamNum": 10,
+        "secret": "bb9f008f-bcbb-4ba3-ba72-56f79738ae82",
+        "name": "🦉🦉🦉",
+        "score": 34,
+        "catchTimes": [],
+        "challengeProgress": {
+            "90613827-7ed5-4ddd-8138-ccd9e201b19b": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "8049a555-3a72-4472-bc4a-4dad4850c85e": {
+                "progress": [
+                    true
+                ]
+            },
+            "478791b8-a82a-449a-8365-028ff8383b49": {
+                "progress": [
+                    true
+                ]
+            },
+            "8bc7a0e5-f4d2-48a5-87df-90fe23cc5946": {
+                "progress": [
+                    true
+                ]
+            },
+            "e95c8ec5-69e6-4ede-af85-92babdf82079": {
+                "manualComplete": false,
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "e7c450ca-af37-42d8-860d-6910e99f4266": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "bae68dc7-dc45-481f-bf4d-63a2e2451615": {
+                "progress": [
+                    true
+                ]
+            },
+            "d71a8c57-6038-43c8-867e-0a1b07abee25": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "8a63db57-44be-495b-8fa2-8b196ef3a8cc": {
+                "progress": [
+                    true
+                ]
+            },
+            "46be67bc-0d9b-4559-9d64-7181e2244d24": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "90c5a00f-11fc-40a0-86e6-9103d5dc38ea": {
+                "progress": [
+                    true
+                ]
+            },
+            "30d32a6c-e241-4f73-8ec6-11257b672df1": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "778fcb2b-9985-488d-a95e-2c4994048747": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "f5fa7aae-85f6-4314-ac7c-0a63c5e22ab7": {
+                "progress": [
+                    true
+                ]
+            }
+        },
+        "bioBreakTaken": true,
+        "id": "e2445b3a-bf16-44dc-819c-7fbfd449b868",
+        "_rid": "NT1TAMv-Y6QLAAAAAAAAAA==",
+        "_self": "dbs/NT1TAA==/colls/NT1TAMv-Y6Q=/docs/NT1TAMv-Y6QLAAAAAAAAAA==/",
+        "_etag": "\"30001e25-0000-0700-0000-66ef6a5c0000\"",
+        "_attachments": "attachments/",
+        "_ts": 1726966364
+    },
+    {
+        "teamNum": 11,
+        "secret": "05e60c2a-ae8b-447f-b084-7b2cc304c9f2",
+        "name": "missing 👗er",
+        "score": 40,
+        "catchTimes": [],
+        "challengeProgress": {
+            "d71a8c57-6038-43c8-867e-0a1b07abee25": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "90613827-7ed5-4ddd-8138-ccd9e201b19b": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "478791b8-a82a-449a-8365-028ff8383b49": {
+                "progress": [
+                    true
+                ]
+            },
+            "8bc7a0e5-f4d2-48a5-87df-90fe23cc5946": {
+                "progress": [
+                    true
+                ]
+            },
+            "30d32a6c-e241-4f73-8ec6-11257b672df1": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "2edfb614-1f40-4b57-8832-44c7678a3f3b": {
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "0bdf42f8-291c-4258-87cc-4c7b0f7ca7c7": {
+                "progress": [
+                    true
+                ]
+            },
+            "bf18d84c-a7cc-4865-bbfc-4f20e658f0a2": {
+                "progress": [
+                    true,
+                    true,
+                    true
+                ]
+            },
+            "80daa17e-cd39-4cbd-bfd8-9ff30ab8b34e": {
+                "progress": [
+                    true
+                ]
+            },
+            "8049a555-3a72-4472-bc4a-4dad4850c85e": {
+                "progress": [
+                    true
+                ]
+            },
+            "bae68dc7-dc45-481f-bf4d-63a2e2451615": {
+                "progress": [
+                    true
+                ]
+            },
+            "c5c13184-8452-4215-a62a-5b39e45e18f2": {
+                "progress": [
+                    true
+                ]
+            },
+            "10f373f7-babb-4629-8394-5ba0387cd4e9": {
+                "progress": [
+                    true,
+                    true,
+                    false
+                ]
+            },
+            "e95c8ec5-69e6-4ede-af85-92babdf82079": {
+                "manualComplete": false,
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "b8b1fb6e-0335-490e-a797-07355d1aefbc": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "dcc2fa85-2059-4694-978b-f096e7bd5650": {
+                "progress": [
+                    true
+                ]
+            },
+            "f5fa7aae-85f6-4314-ac7c-0a63c5e22ab7": {
+                "progress": [
+                    true
+                ]
+            },
+            "46a66e1c-a223-4c17-9371-6fa68235a442": {
+                "progress": [
+                    true,
+                    true
+                ]
+            }
+        },
+        "bioBreakTaken": true,
+        "id": "48abeae3-3652-415b-a0d8-5e066853df3b",
+        "_rid": "NT1TAMv-Y6QMAAAAAAAAAA==",
+        "_self": "dbs/NT1TAA==/colls/NT1TAMv-Y6Q=/docs/NT1TAMv-Y6QMAAAAAAAAAA==/",
+        "_etag": "\"3000150d-0000-0700-0000-66ef62d40000\"",
+        "_attachments": "attachments/",
+        "_ts": 1726964436
+    },
+    {
+        "teamNum": 12,
+        "secret": "63b2e864-8a15-40d7-a1b8-d64c17d40007",
+        "name": "Pink Garter Band! 🎺",
+        "score": 29,
+        "catchTimes": [],
+        "challengeProgress": {
+            "10f373f7-babb-4629-8394-5ba0387cd4e9": {
+                "progress": [
+                    true,
+                    false,
+                    false
+                ]
+            },
+            "99e1c4f8-1a97-4367-a4ed-429acd69a156": {
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "dcc2fa85-2059-4694-978b-f096e7bd5650": {
+                "progress": [
+                    true
+                ]
+            },
+            "bae68dc7-dc45-481f-bf4d-63a2e2451615": {
+                "bonus": true,
+                "progress": [
+                    true
+                ]
+            },
+            "f5fa7aae-85f6-4314-ac7c-0a63c5e22ab7": {
+                "progress": [
+                    true
+                ]
+            },
+            "478791b8-a82a-449a-8365-028ff8383b49": {
+                "progress": [
+                    true
+                ]
+            },
+            "30d32a6c-e241-4f73-8ec6-11257b672df1": {
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "90613827-7ed5-4ddd-8138-ccd9e201b19b": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "2edfb614-1f40-4b57-8832-44c7678a3f3b": {
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "e95c8ec5-69e6-4ede-af85-92babdf82079": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "086bed14-5cdb-4879-9695-df33c69a22e9": {
+                "progress": [
+                    true
+                ]
+            },
+            "b8b1fb6e-0335-490e-a797-07355d1aefbc": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "90c5a00f-11fc-40a0-86e6-9103d5dc38ea": {
+                "progress": [
+                    true
+                ]
+            },
+            "8a63db57-44be-495b-8fa2-8b196ef3a8cc": {
+                "progress": [
+                    true
+                ]
+            },
+            "dac814b6-24a5-492d-a27d-7ce077ee2f0d": {
+                "progress": [
+                    true
+                ]
+            },
+            "e7c450ca-af37-42d8-860d-6910e99f4266": {
+                "progress": [
+                    true,
+                    true
+                ]
+            }
+        },
+        "bioBreakTaken": true,
+        "id": "c3d62c8b-c8f1-4360-b311-5ba30f4198ef",
+        "_rid": "NT1TAMv-Y6QNAAAAAAAAAA==",
+        "_self": "dbs/NT1TAA==/colls/NT1TAMv-Y6Q=/docs/NT1TAMv-Y6QNAAAAAAAAAA==/",
+        "_etag": "\"3000830e-0000-0700-0000-66ef632a0000\"",
+        "_attachments": "attachments/",
+        "_ts": 1726964522
+    },
+    {
+        "teamNum": 13,
+        "secret": "a3a52f60-d1b3-487a-a8b3-ce24f135f12f",
+        "name": "Amtrek",
+        "score": 40,
+        "catchTimes": [],
+        "challengeProgress": {
+            "478791b8-a82a-449a-8365-028ff8383b49": {
+                "progress": [
+                    true
+                ]
+            },
+            "d71a8c57-6038-43c8-867e-0a1b07abee25": {
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "bf18d84c-a7cc-4865-bbfc-4f20e658f0a2": {
+                "progress": [
+                    true,
+                    true,
+                    true
+                ]
+            },
+            "bae68dc7-dc45-481f-bf4d-63a2e2451615": {
+                "progress": [
+                    true
+                ]
+            },
+            "c5c13184-8452-4215-a62a-5b39e45e18f2": {
+                "progress": [
+                    true
+                ]
+            },
+            "10f373f7-babb-4629-8394-5ba0387cd4e9": {
+                "progress": [
+                    true,
+                    true,
+                    true
+                ]
+            },
+            "30d32a6c-e241-4f73-8ec6-11257b672df1": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "0bdf42f8-291c-4258-87cc-4c7b0f7ca7c7": {
+                "progress": [
+                    true
+                ]
+            },
+            "8bc7a0e5-f4d2-48a5-87df-90fe23cc5946": {
+                "progress": [
+                    true
+                ]
+            },
+            "d809ee5e-1377-44f5-9f90-7b9b7a438578": {
+                "progress": [
+                    true
+                ]
+            },
+            "e7c450ca-af37-42d8-860d-6910e99f4266": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "c913232a-eb54-438f-a384-710b0e8d5705": {
+                "progress": [
+                    true
+                ]
+            },
+            "e95c8ec5-69e6-4ede-af85-92babdf82079": {
+                "manualComplete": false,
+                "progress": [
+                    true,
+                    false
+                ]
+            },
+            "086bed14-5cdb-4879-9695-df33c69a22e9": {
+                "progress": [
+                    true
+                ]
+            },
+            "b8b1fb6e-0335-490e-a797-07355d1aefbc": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "90c5a00f-11fc-40a0-86e6-9103d5dc38ea": {
+                "progress": [
+                    true
+                ]
+            },
+            "8a63db57-44be-495b-8fa2-8b196ef3a8cc": {
+                "progress": [
+                    true
+                ]
+            },
+            "46be67bc-0d9b-4559-9d64-7181e2244d24": {
+                "progress": [
+                    true,
+                    false
+                ]
+            }
+        },
+        "bioBreakTaken": true,
+        "id": "6fd22a30-0be9-4ba6-b6b6-9a152495806d",
+        "_rid": "NT1TAMv-Y6QOAAAAAAAAAA==",
+        "_self": "dbs/NT1TAA==/colls/NT1TAMv-Y6Q=/docs/NT1TAMv-Y6QOAAAAAAAAAA==/",
+        "_etag": "\"30007b1f-0000-0700-0000-66ef68980000\"",
+        "_attachments": "attachments/",
+        "_ts": 1726965912
+    },
+    {
+        "teamNum": 14,
+        "secret": "7c7869f4-5aa7-49e5-a44e-bc8318042b61",
+        "name": "The 3 Line",
+        "score": 34,
+        "catchTimes": [],
+        "challengeProgress": {
+            "478791b8-a82a-449a-8365-028ff8383b49": {
+                "progress": [
+                    true
+                ]
+            },
+            "d71a8c57-6038-43c8-867e-0a1b07abee25": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "8049a555-3a72-4472-bc4a-4dad4850c85e": {
+                "progress": [
+                    true
+                ]
+            },
+            "90613827-7ed5-4ddd-8138-ccd9e201b19b": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "46be67bc-0d9b-4559-9d64-7181e2244d24": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "bf18d84c-a7cc-4865-bbfc-4f20e658f0a2": {
+                "progress": [
+                    true,
+                    true,
+                    true
+                ]
+            },
+            "c5c13184-8452-4215-a62a-5b39e45e18f2": {
+                "progress": [
+                    true
+                ]
+            },
+            "bae68dc7-dc45-481f-bf4d-63a2e2451615": {
+                "progress": [
+                    true
+                ]
+            },
+            "8bc7a0e5-f4d2-48a5-87df-90fe23cc5946": {
+                "progress": [
+                    true
+                ]
+            },
+            "80daa17e-cd39-4cbd-bfd8-9ff30ab8b34e": {
+                "progress": [
+                    true
+                ]
+            },
+            "10f373f7-babb-4629-8394-5ba0387cd4e9": {
+                "progress": [
+                    true,
+                    true,
+                    false
+                ]
+            },
+            "f5fa7aae-85f6-4314-ac7c-0a63c5e22ab7": {
+                "progress": [
+                    true
+                ]
+            },
+            "46a66e1c-a223-4c17-9371-6fa68235a442": {
+                "progress": [
+                    true,
+                    true
+                ]
+            },
+            "e95c8ec5-69e6-4ede-af85-92babdf82079": {
+                "manualComplete": false,
+                "progress": [
+                    true,
+                    false
+                ]
+            }
+        },
+        "bioBreakTaken": true,
+        "id": "38db0964-05e1-46d6-8d17-13785f50f22e",
+        "_rid": "NT1TAMv-Y6QPAAAAAAAAAA==",
+        "_self": "dbs/NT1TAA==/colls/NT1TAMv-Y6Q=/docs/NT1TAMv-Y6QPAAAAAAAAAA==/",
+        "_etag": "\"3000b024-0000-0700-0000-66ef6a310000\"",
+        "_attachments": "attachments/",
+        "_ts": 1726966321
+    }
+]

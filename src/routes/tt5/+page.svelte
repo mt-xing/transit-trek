@@ -7,8 +7,6 @@
 	import main_bg from '$lib/images/tt5/main_bg.png';
 	import img_text from '$lib/images/tt5/logo.png';
 	import side_pic from '$lib/images/tt5/side_pic.png';
-
-	const PARTIFUL_LINK = 'https://partiful.com/e/3gs7n8wIY3Q7e2WWYHII';
 </script>
 
 <svelte:head>
@@ -34,15 +32,15 @@
 		</p>
 	</div>
 
-	<!-- <p class="midtext signupWrap upper">
-		<strong>Ready to Trek?</strong>
+	<p class="midtext signupWrap upper">
+		<strong>Thanks For Playing!</strong>
 		<BigBtn
 			isBlack={true}
-			href={PARTIFUL_LINK}
-			text="Sign Up"
+			href="/tt5/results"
+			text="Results"
 			color={['rgb(255,0,0)', 'rgb(128,0,0)']}
 		/>
-	</p> -->
+	</p>
 
 	<div class="midtext paper full" style="margin-top: 100px;">
 		<p>
