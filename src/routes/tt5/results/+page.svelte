@@ -167,7 +167,9 @@
 							/>
 							Team {team.teamNum}:
 							{team.name}
-							<span style="font-size: 0.7em">({team.score} pt{team.score === 1 ? '' : 's'})</span>
+							<span style="font-size: 0.7em"
+								>({Math.floor(team.score)} pt{team.score === 1 ? '' : 's'})</span
+							>
 						</label>
 					</li>
 				{/each}
