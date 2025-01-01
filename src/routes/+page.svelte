@@ -41,10 +41,7 @@
 </section>
 
 <section class="picsection ttWrap">
-	<h2>
-		<span style="display: block; font-size: 0.8em;">Thanks For a Great</span>
-		<span style="font-size: 1.4em;">2024 Season</span>
-	</h2>
+	<h2>Thanks For a Great 2024 Season!</h2>
 	<div class="ttList">
 		<a href="/tt3" class="tt3">
 			<div class="textWrap">
@@ -329,7 +326,18 @@
 	}
 
 	.ttWrap::before {
-		display: none;
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		box-shadow: inset 0px 0px 15px black;
+		z-index: 4;
+		background: none;
+		mask-image: none;
+		backdrop-filter: none;
+		pointer-events: none;
 	}
 
 	.ttWrap h2 {
