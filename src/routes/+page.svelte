@@ -664,6 +664,27 @@
 	}
 
 	@media (max-width: 800px) {
+		.ttWrap h2 {
+			background: black;
+			margin-top: 0;
+			position: absolute;
+			padding-top: 1vw;
+		}
+
+		.ttWrap h2::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 100%;
+			height: 5vw;
+			background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+		}
+
+		.ttWrap .ttList {
+			padding-top: 5vw;
+		}
+
 		.ttWrap .ttList a {
 			height: calc(100% / 3);
 			width: 100%;
