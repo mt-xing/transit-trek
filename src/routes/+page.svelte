@@ -735,5 +735,24 @@
 		.textBlurWrap svg {
 			height: 20vw;
 		}
+
+		.ttWrap::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: -5vw;
+			box-shadow: inset 0px 0px 15px black;
+			z-index: 4;
+			background: none;
+			mask-image: none;
+			backdrop-filter: none;
+			pointer-events: none;
+		}
+
+		.ttWrap .ttList a.tt4 img {
+			max-width: 80%;
+		}
 	}
 </style>
