@@ -662,4 +662,18 @@
 			padding-right: 10%;
 		}
 	}
+
+	@media (max-width: 800px) {
+		.ttWrap .ttList a {
+			height: calc(100% / 3);
+			width: 100%;
+		}
+
+		.ttWrap .ttList a.tt4 {
+			border-left: none;
+			border-right: none;
+			border-top: 5px black solid;
+			border-bottom: 5px black solid;
+		}
+	}
 </style>
