@@ -664,6 +664,10 @@
 	}
 
 	@media (max-width: 800px) {
+		.ttWrap {
+			height: 800px;
+		}
+
 		.ttWrap h2 {
 			background: black;
 			margin-top: 0;
@@ -695,6 +699,41 @@
 			border-right: none;
 			border-top: 5px black solid;
 			border-bottom: 5px black solid;
+		}
+
+		.textWrap {
+			height: 17.6vw;
+		}
+
+		.textBlurWrap text:nth-child(2),
+		.textShadowWrap svg text:nth-child(3),
+		.textShadowWrap h1 span {
+			font-size: 14vw;
+		}
+
+		.textShadowWrap h1 {
+			font-size: 8vw;
+			line-height: 7.2vw;
+			text-shadow: black 0 0 1.2vw;
+			-webkit-text-stroke: 1.04vw black;
+		}
+
+		.textShadowWrap svg {
+			font-size: 8vw;
+			height: 20vw;
+		}
+
+		.textShadowWrap h1 span {
+			line-height: 10.4vw;
+			-webkit-text-stroke: 1.44vw black;
+		}
+
+		.textBlurWrap {
+			font-size: 8vw;
+		}
+
+		.textBlurWrap svg {
+			height: 20vw;
 		}
 	}
 </style>
