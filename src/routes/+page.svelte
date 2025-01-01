@@ -3,6 +3,7 @@
 	import linkStation from '$lib/images/link_station.jpg';
 	import tt3Bg from '$lib/images/transit-trek-bg-wide.png';
 	import tt4Bg from '$lib/images/tt4/bg_graphic.png';
+	import tt4Text from '$lib/images/tt4/text_clean_no_glow.png';
 	import tt5Bg from '$lib/images/tt5/tt5_bg.jpg';
 	import tt5Text from '$lib/images/tt5/tt5_logo_cropped.png';
 	import BigBtn from '../components/bigBtn.svelte';
@@ -39,20 +40,46 @@
 	</p>
 </section>
 
-<section class="picsection tt5">
-	<h2>Most Recent Game</h2>
-
-	<img src={tt5Text} alt="The Emerald City Expedition" />
-
-	<p class="btnwrap">
-		<BigBtn
-			isBlock={true}
-			href="/tt5"
-			text="Learn More"
-			color={['rgb(255,0,0)', 'rgb(128,0,0)']}
-			external={true}
-		/>
-	</p>
+<section class="picsection ttWrap">
+	<h2>Thanks For a Great 2024 Season!</h2>
+	<div class="ttList">
+		<a href="/tt3" class="tt3">
+			<div class="textWrap">
+				<div class="textBlurWrap">
+					<svg aria-hidden="true">
+						<clipPath id="clipPath">
+							<text dominant-baseline="hanging" text-anchor="middle" x="50%" y="0%"
+								>Race Across</text
+							>
+							<text dominant-baseline="hanging" text-anchor="middle" x="50%" y="30%">Seattle</text>
+						</clipPath>
+					</svg>
+				</div>
+				<div class="textShadowWrap">
+					<h1>Race Across<br /><span>Seattle</span></h1>
+					<svg aria-hidden="true">
+						<mask id="maskPath">
+							<rect width="100%" height="100%" fill="white" />
+							<text color="black" dominant-baseline="hanging" text-anchor="middle" x="50%" y="0%"
+								>Race Across</text
+							>
+							<text color="black" dominant-baseline="hanging" text-anchor="middle" x="50%" y="30%"
+								>Seattle</text
+							>
+						</mask>
+					</svg>
+				</div>
+			</div>
+		</a>
+		<a href="/tt4" class="tt4"
+			>Hide and Seek
+			<img src={tt4Text} alt="" /></a
+		>
+		<a href="/tt5" class="tt5">
+			The Emerald City Expedition
+			<img src={tt5Text} alt="" />
+		</a>
+	</div>
 </section>
 
 <section class="midsection">
@@ -294,42 +321,197 @@
 		max-width: 600px;
 	}
 
-	.tt5::after {
-		background-image: url($lib/images/tt5/tt5_bg.jpg);
-		background-position: center;
-	}
-
-	.tt5::before {
+	.ttWrap::after {
 		display: none;
 	}
 
-	.tt5 h2 {
+	.ttWrap::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		box-shadow: inset 0px 0px 15px black;
+		z-index: 4;
+		background: none;
+		mask-image: none;
+		backdrop-filter: none;
+		pointer-events: none;
+	}
+
+	.ttWrap h2 {
 		text-align: center;
 		width: 100%;
 		max-width: unset;
+		position: relative;
+		z-index: 2;
+		position: absolute;
+		top: 0;
 	}
 
-	.tt5 {
+	.ttWrap {
 		text-align: center;
-	}
-
-	.tt5 .btnwrap {
-		padding: 0;
-		text-align: center;
-
-		background: #d5b60a;
-		backdrop-filter: blur(10px);
-		box-shadow: 0 0 15px 0 black;
-
-		max-width: initial;
-		width: initial;
-		display: inline-block;
+		height: 600px;
 		box-sizing: border-box;
-		margin: 1vw auto;
+		position: relative;
+		padding: 0;
 	}
 
-	.tt5 img {
-		max-width: 90%;
+	.ttWrap .ttList {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		font-size: 0;
+		overflow: hidden;
+	}
+
+	.ttWrap .ttList a {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		width: calc(100% / 3);
+		height: 100%;
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		vertical-align: top;
+	}
+
+	.ttWrap .ttList a.tt3 {
+		background-image: url($lib/images/transit-trek-bg-wide.png);
+	}
+
+	.ttWrap .ttList a.tt4 {
+		background-image: url($lib/images/tt4/bg_graphic.png);
+		border-left: 5px black solid;
+		border-right: 5px black solid;
+		box-sizing: border-box;
+	}
+
+	.ttWrap .ttList a.tt5 {
+		background-image: url($lib/images/tt5/tt5_bg.jpg);
+	}
+
+	.ttWrap .ttList a img {
+		max-width: 100%;
+		max-height: 100%;
+		transform: scale(1);
+
+		transition: transform 0.25s ease-in-out;
+	}
+
+	.ttWrap .ttList a:hover img,
+	.ttWrap .ttList a:focus img {
+		transform: scale(1.1);
+	}
+
+	.ttWrap .ttList a:active img {
+		transform: scale(0.9);
+		transition: transform 0.05s ease-in-out;
+	}
+
+	.ttWrap .ttList a.tt3:hover .textWrap,
+	.ttWrap .ttList a.tt3:focus .textWrap {
+		transform: translateY(-50%) translateZ(0) scale(1.1);
+	}
+
+	.ttWrap .ttList a.tt3:active .textWrap {
+		transform: translateY(-50%) translateZ(0) scale(0.9);
+		transition: transform 0.05s ease-in-out;
+	}
+
+	.textWrap {
+		margin: 0;
+		height: 8.8vw;
+		width: 100%;
+		position: absolute;
+
+		transform: translateY(-50%) translateZ(0) scale(1);
+		top: 50%;
+		transition: transform 0.25s ease-in-out;
+	}
+
+	.textBlurWrap text:nth-child(2),
+	.textShadowWrap svg text:nth-child(3),
+	.textShadowWrap h1 span {
+		font-size: 7vw;
+	}
+
+	.textShadowWrap {
+		margin: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		mask: url(#maskPath);
+	}
+
+	.textShadowWrap h1 {
+		font-family: 'Noto Sans', 'Helvetica', sans-serif;
+		font-weight: 900;
+		font-size: 4vw;
+		text-align: center;
+		margin: 0;
+		line-height: 3.6vw;
+		transform: translateY(1px);
+
+		color: white;
+
+		text-shadow: black 0 0 0.6vw;
+		-webkit-text-stroke: 0.52vw black;
+		paint-order: stroke fill;
+	}
+
+	.textShadowWrap svg {
+		pointer-events: none;
+		font-family: 'Noto Sans', 'Helvetica', sans-serif;
+		font-weight: 900;
+		font-size: 4vw;
+		text-align: center;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 10vw;
+	}
+
+	#maskPath {
+		background: white;
+		color: black;
+	}
+
+	.textShadowWrap h1 span {
+		line-height: 5.2vw;
+		-webkit-text-stroke: 0.72vw black;
+	}
+
+	.textBlurWrap {
+		pointer-events: none;
+
+		backdrop-filter: invert(1) blur(5px);
+		clip-path: url(#clipPath);
+
+		margin: 0;
+
+		font-family: 'Noto Sans', 'Helvetica', sans-serif;
+		font-weight: 900;
+		font-size: 4vw;
+		text-align: center;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.textBlurWrap svg {
+		width: 100%;
+		height: 10vw;
 	}
 
 	.rules::after {
@@ -438,7 +620,7 @@
 	}
 
 	@media (max-width: 1000px) {
-		.picsection.tt5 {
+		.picsection.ttWrap {
 			padding-left: 0;
 			padding-right: 0;
 		}
@@ -455,11 +637,6 @@
 	}
 
 	@media (max-width: 800px) {
-		.tt5 .btnwrap {
-			max-width: unset;
-			margin-top: 50px;
-		}
-
 		.picsection::before {
 			z-index: -1;
 			background: rgba(0, 0, 0, 0.5);
@@ -474,7 +651,7 @@
 			max-width: unset;
 		}
 
-		.tt5 h2 {
+		.ttWrap h2 {
 			font-size: 5vw;
 		}
 	}
@@ -483,6 +660,99 @@
 		.picsection {
 			padding-left: 10%;
 			padding-right: 10%;
+		}
+	}
+
+	@media (max-width: 800px) {
+		.ttWrap {
+			height: 800px;
+		}
+
+		.ttWrap h2 {
+			background: black;
+			margin-top: 0;
+			position: absolute;
+			padding-top: 1vw;
+		}
+
+		.ttWrap h2::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 100%;
+			height: 5vw;
+			background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+		}
+
+		.ttWrap .ttList {
+			padding-top: 5vw;
+		}
+
+		.ttWrap .ttList a {
+			height: calc(100% / 3);
+			width: 100%;
+		}
+
+		.ttWrap .ttList a.tt4 {
+			border-left: none;
+			border-right: none;
+			border-top: 5px black solid;
+			border-bottom: 5px black solid;
+		}
+
+		.textWrap {
+			height: 17.6vw;
+		}
+
+		.textBlurWrap text:nth-child(2),
+		.textShadowWrap svg text:nth-child(3),
+		.textShadowWrap h1 span {
+			font-size: 14vw;
+		}
+
+		.textShadowWrap h1 {
+			font-size: 8vw;
+			line-height: 7.2vw;
+			text-shadow: black 0 0 1.2vw;
+			-webkit-text-stroke: 1.04vw black;
+		}
+
+		.textShadowWrap svg {
+			font-size: 8vw;
+			height: 20vw;
+		}
+
+		.textShadowWrap h1 span {
+			line-height: 10.4vw;
+			-webkit-text-stroke: 1.44vw black;
+		}
+
+		.textBlurWrap {
+			font-size: 8vw;
+		}
+
+		.textBlurWrap svg {
+			height: 20vw;
+		}
+
+		.ttWrap::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: -5vw;
+			box-shadow: inset 0px 0px 15px black;
+			z-index: 4;
+			background: none;
+			mask-image: none;
+			backdrop-filter: none;
+			pointer-events: none;
+		}
+
+		.ttWrap .ttList a.tt4 img {
+			max-width: 80%;
 		}
 	}
 </style>
