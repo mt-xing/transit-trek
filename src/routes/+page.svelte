@@ -71,7 +71,7 @@
 				</div>
 			</div>
 		</a>
-		<a href="/tt4" class="tt4"
+		<a href="/tt4" class="tt4" rel="external"
 			>Hide and Seek
 			<img src={tt4Text} alt="" /></a
 		>
