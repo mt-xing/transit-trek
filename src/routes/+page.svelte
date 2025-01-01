@@ -406,20 +406,31 @@
 		transition: transform 0.05s ease-in-out;
 	}
 
+	.ttWrap .ttList a.tt3:hover .textWrap,
+	.ttWrap .ttList a.tt3:focus .textWrap {
+		transform: translateY(-50%) translateZ(0) scale(1.1);
+	}
+
+	.ttWrap .ttList a.tt3:active .textWrap {
+		transform: translateY(-50%) translateZ(0) scale(0.9);
+		transition: transform 0.05s ease-in-out;
+	}
+
 	.textWrap {
 		margin: 0;
-		height: 220px;
-		width: 800px;
+		height: 8.8vw;
+		width: 100%;
 		position: absolute;
 
 		transform: translateY(-50%) translateZ(0) scale(1);
 		top: 50%;
+		transition: transform 0.25s ease-in-out;
 	}
 
 	.textBlurWrap text:nth-child(2),
 	.textShadowWrap svg text:nth-child(3),
 	.textShadowWrap h1 span {
-		font-size: 175px;
+		font-size: 7vw;
 	}
 
 	.textShadowWrap {
@@ -436,16 +447,16 @@
 	.textShadowWrap h1 {
 		font-family: 'Noto Sans', 'Helvetica', sans-serif;
 		font-weight: 900;
-		font-size: 100px;
+		font-size: 4vw;
 		text-align: center;
 		margin: 0;
-		line-height: 90px;
+		line-height: 3.6vw;
 		transform: translateY(1px);
 
 		color: white;
 
-		text-shadow: black 0 0 15px;
-		-webkit-text-stroke: 13px black;
+		text-shadow: black 0 0 0.6vw;
+		-webkit-text-stroke: 0.52vw black;
 		paint-order: stroke fill;
 	}
 
@@ -453,12 +464,12 @@
 		pointer-events: none;
 		font-family: 'Noto Sans', 'Helvetica', sans-serif;
 		font-weight: 900;
-		font-size: 100px;
+		font-size: 4vw;
 		text-align: center;
 		position: absolute;
 		top: 0;
 		width: 100%;
-		height: 250px;
+		height: 10vw;
 	}
 
 	#maskPath {
@@ -467,8 +478,8 @@
 	}
 
 	.textShadowWrap h1 span {
-		line-height: 130px;
-		-webkit-text-stroke: 18px black;
+		line-height: 5.2vw;
+		-webkit-text-stroke: 0.72vw black;
 	}
 
 	.textBlurWrap {
@@ -481,7 +492,7 @@
 
 		font-family: 'Noto Sans', 'Helvetica', sans-serif;
 		font-weight: 900;
-		font-size: 100px;
+		font-size: 4vw;
 		text-align: center;
 
 		position: absolute;
@@ -492,7 +503,7 @@
 
 	.textBlurWrap svg {
 		width: 100%;
-		height: 250px;
+		height: 10vw;
 	}
 
 	.rules::after {
