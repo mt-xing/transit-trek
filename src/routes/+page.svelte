@@ -3,6 +3,7 @@
 	import linkStation from '$lib/images/link_station.jpg';
 	import tt3Bg from '$lib/images/transit-trek-bg-wide.png';
 	import tt4Bg from '$lib/images/tt4/bg_graphic.png';
+	import tt4Text from '$lib/images/tt4/text_clean_no_glow.png';
 	import tt5Bg from '$lib/images/tt5/tt5_bg.jpg';
 	import tt5Text from '$lib/images/tt5/tt5_logo_cropped.png';
 	import BigBtn from '../components/bigBtn.svelte';
@@ -39,20 +40,49 @@
 	</p>
 </section>
 
-<section class="picsection tt5">
-	<h2>Most Recent Game</h2>
-
-	<img src={tt5Text} alt="The Emerald City Expedition" />
-
-	<p class="btnwrap">
-		<BigBtn
-			isBlock={true}
-			href="/tt5"
-			text="Learn More"
-			color={['rgb(255,0,0)', 'rgb(128,0,0)']}
-			external={true}
-		/>
-	</p>
+<section class="picsection ttWrap">
+	<h2>
+		<span style="display: block; font-size: 0.8em;">Thanks For a Great</span>
+		<span style="font-size: 1.4em;">2024 Season</span>
+	</h2>
+	<div class="ttList">
+		<a href="/tt3" class="tt3">
+			<div class="textWrap">
+				<div class="textBlurWrap">
+					<svg aria-hidden="true">
+						<clipPath id="clipPath">
+							<text dominant-baseline="hanging" text-anchor="middle" x="50%" y="0%"
+								>Race Across</text
+							>
+							<text dominant-baseline="hanging" text-anchor="middle" x="50%" y="30%">Seattle</text>
+						</clipPath>
+					</svg>
+				</div>
+				<div class="textShadowWrap">
+					<h1>Race Across<br /><span>Seattle</span></h1>
+					<svg aria-hidden="true">
+						<mask id="maskPath">
+							<rect width="100%" height="100%" fill="white" />
+							<text color="black" dominant-baseline="hanging" text-anchor="middle" x="50%" y="0%"
+								>Race Across</text
+							>
+							<text color="black" dominant-baseline="hanging" text-anchor="middle" x="50%" y="30%"
+								>Seattle</text
+							>
+						</mask>
+					</svg>
+				</div>
+			</div>
+		</a>
+		<a href="/tt4" class="tt4"
+			>Hide and Seek
+			<img src={tt4Text} alt="" /></a
+		>
+		<a href="/tt5" class="tt5">
+			The Emerald City Expedition
+			<img src={tt5Text} alt="" />
+		</a>
+	</div>
 </section>
 
 <section class="midsection">
@@ -294,42 +324,175 @@
 		max-width: 600px;
 	}
 
-	.tt5::after {
-		background-image: url($lib/images/tt5/tt5_bg.jpg);
-		background-position: center;
-	}
-
-	.tt5::before {
+	.ttWrap::after {
 		display: none;
 	}
 
-	.tt5 h2 {
+	.ttWrap::before {
+		display: none;
+	}
+
+	.ttWrap h2 {
 		text-align: center;
 		width: 100%;
 		max-width: unset;
+		position: relative;
+		z-index: 2;
+		position: absolute;
+		top: 0;
 	}
 
-	.tt5 {
+	.ttWrap {
 		text-align: center;
-	}
-
-	.tt5 .btnwrap {
-		padding: 0;
-		text-align: center;
-
-		background: #d5b60a;
-		backdrop-filter: blur(10px);
-		box-shadow: 0 0 15px 0 black;
-
-		max-width: initial;
-		width: initial;
-		display: inline-block;
+		height: 600px;
 		box-sizing: border-box;
-		margin: 1vw auto;
+		position: relative;
+		padding: 0;
 	}
 
-	.tt5 img {
-		max-width: 90%;
+	.ttWrap .ttList {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		font-size: 0;
+		overflow: hidden;
+	}
+
+	.ttWrap .ttList a {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		width: calc(100% / 3);
+		height: 100%;
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		vertical-align: top;
+	}
+
+	.ttWrap .ttList a.tt3 {
+		background-image: url($lib/images/transit-trek-bg-wide.png);
+	}
+
+	.ttWrap .ttList a.tt4 {
+		background-image: url($lib/images/tt4/bg_graphic.png);
+		border-left: 5px black solid;
+		border-right: 5px black solid;
+		box-sizing: border-box;
+	}
+
+	.ttWrap .ttList a.tt5 {
+		background-image: url($lib/images/tt5/tt5_bg.jpg);
+	}
+
+	.ttWrap .ttList a img {
+		max-width: 100%;
+		max-height: 100%;
+		transform: scale(1);
+
+		transition: transform 0.25s ease-in-out;
+	}
+
+	.ttWrap .ttList a:hover img,
+	.ttWrap .ttList a:focus img {
+		transform: scale(1.1);
+	}
+
+	.ttWrap .ttList a:active img {
+		transform: scale(0.9);
+		transition: transform 0.05s ease-in-out;
+	}
+
+	.textWrap {
+		margin: 0;
+		height: 220px;
+		width: 800px;
+		position: absolute;
+
+		transform: translateY(-50%) translateZ(0) scale(1);
+		top: 50%;
+	}
+
+	.textBlurWrap text:nth-child(2),
+	.textShadowWrap svg text:nth-child(3),
+	.textShadowWrap h1 span {
+		font-size: 175px;
+	}
+
+	.textShadowWrap {
+		margin: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		mask: url(#maskPath);
+	}
+
+	.textShadowWrap h1 {
+		font-family: 'Noto Sans', 'Helvetica', sans-serif;
+		font-weight: 900;
+		font-size: 100px;
+		text-align: center;
+		margin: 0;
+		line-height: 90px;
+		transform: translateY(1px);
+
+		color: white;
+
+		text-shadow: black 0 0 15px;
+		-webkit-text-stroke: 13px black;
+		paint-order: stroke fill;
+	}
+
+	.textShadowWrap svg {
+		pointer-events: none;
+		font-family: 'Noto Sans', 'Helvetica', sans-serif;
+		font-weight: 900;
+		font-size: 100px;
+		text-align: center;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 250px;
+	}
+
+	#maskPath {
+		background: white;
+		color: black;
+	}
+
+	.textShadowWrap h1 span {
+		line-height: 130px;
+		-webkit-text-stroke: 18px black;
+	}
+
+	.textBlurWrap {
+		pointer-events: none;
+
+		backdrop-filter: invert(1) blur(5px);
+		clip-path: url(#clipPath);
+
+		margin: 0;
+
+		font-family: 'Noto Sans', 'Helvetica', sans-serif;
+		font-weight: 900;
+		font-size: 100px;
+		text-align: center;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.textBlurWrap svg {
+		width: 100%;
+		height: 250px;
 	}
 
 	.rules::after {
@@ -438,7 +601,7 @@
 	}
 
 	@media (max-width: 1000px) {
-		.picsection.tt5 {
+		.picsection.ttWrap {
 			padding-left: 0;
 			padding-right: 0;
 		}
@@ -455,11 +618,6 @@
 	}
 
 	@media (max-width: 800px) {
-		.tt5 .btnwrap {
-			max-width: unset;
-			margin-top: 50px;
-		}
-
 		.picsection::before {
 			z-index: -1;
 			background: rgba(0, 0, 0, 0.5);
@@ -474,7 +632,7 @@
 			max-width: unset;
 		}
 
-		.tt5 h2 {
+		.ttWrap h2 {
 			font-size: 5vw;
 		}
 	}
