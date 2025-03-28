@@ -23,17 +23,24 @@
 	<div class="q">
 		<p class="question">Does it cost money to participate?</p>
 		<p>
+			There is a nominal fee to participate in each Transit Trek. This is to ensure people signing
+			up are serious about participating, to pay for game supplies whenever necessary, and to fund
+			any costs we might need to incur for our future game development efforts. Essentially, this
+			fee goes towards improving your Transit Trek experience!
+		</p>
+		<p>
 			To join the game, you need a Transit Trek bandana. If you purchased one previously, you can
 			reuse it. If you need one, it's 50¢. You'll also need an ORCA card to use Seattle public
-			transit. Most of our participants work at Microsoft, where ORCA cards are fully paid for by
+			transit. Many of our participants work at Microsoft, where ORCA cards are fully paid for by
 			the company. However, if your employer does not give you an all-expenses paid ORCA card, be
 			sure the card has at least $6 to last you throughout the duration of the game.
 		</p>
 		<p>
-			In most games, there may be challenges that require a certain amount of money to complete. We
-			try to keep the amount spent per person in each game to under $20. It is sometimes possible to
-			complete most challenges without spending anything, but some challenges do require you to
-			spend something. We try our best to avoid making spending mandatory!
+			In some games, there may be challenges that require a certain amount of money to complete. We
+			try to keep the amount spent per person in each game to under $20. In recent Transit Treks,
+			it has been possible to complete all challenges without spending anything additional, but some
+			challenges might require you to spend something. We try our best to avoid making spending
+			mandatory!
 		</p>
 	</div>
 	<div class="q">
