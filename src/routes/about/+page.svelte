@@ -336,6 +336,11 @@
 			participants can easily cross the border between the United States and Canada. For these
 			reasons, we have thus far avoided planning Transit Treks in those two cities.
 		</p>
+		<p>
+			That doesn't stop us from dreaming big. Cities such as New York, Montreal, and Toronto are
+			feasible North American options. Beyond the two oceans, Tokyo, London, Paris, Berlin, Beijing,
+			Shanghai, etc. are all in the running. We hope to someday have Transit Treks around the world!
+		</p>
 	</div>
 </div>
 
@@ -350,6 +355,7 @@
 			doing so. If you want to volunteer, be sure you've participated in at least one prior Transit
 			Trek so you have the gist of what it's like.
 		</p>
+		<p>If you're interested, please email hello@transittrek.org to inquire.</p>
 	</div>
 	<div class="q">
 		<p class="question">Who runs the Transit Treks?</p>
@@ -361,7 +367,7 @@
 	</div>
 	<div class="q">
 		<p class="question">To whom may I direct my questions about the Transit Trek?</p>
-		<p>You can ask Jeffrey for more details.</p>
+		<p>You can email us at hello@transittrek.org.</p>
 	</div>
 	<div class="q">
 		<p class="question">Why does this website exist?</p>
