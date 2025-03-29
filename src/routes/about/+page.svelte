@@ -23,17 +23,24 @@
 	<div class="q">
 		<p class="question">Does it cost money to participate?</p>
 		<p>
+			There is a nominal fee to participate in each Transit Trek. This is to ensure people signing
+			up are serious about participating, to pay for game supplies whenever necessary, and to fund
+			any costs we might need to incur for our future game development efforts. Essentially, this
+			fee goes towards improving your Transit Trek experience!
+		</p>
+		<p>
 			To join the game, you need a Transit Trek bandana. If you purchased one previously, you can
 			reuse it. If you need one, it's 50¢. You'll also need an ORCA card to use Seattle public
-			transit. Most of our participants work at Microsoft, where ORCA cards are fully paid for by
+			transit. Many of our participants work at Microsoft, where ORCA cards are fully paid for by
 			the company. However, if your employer does not give you an all-expenses paid ORCA card, be
 			sure the card has at least $6 to last you throughout the duration of the game.
 		</p>
 		<p>
-			In most games, there may be challenges that require a certain amount of money to complete. We
-			try to keep the amount spent per person in each game to under $20. It is sometimes possible to
-			complete most challenges without spending anything, but some challenges do require you to
-			spend something. We try our best to avoid making spending mandatory!
+			In some games, there may be challenges that require a certain amount of money to complete. We
+			try to keep the amount spent per person in each game to under $20. In recent Transit Treks,
+			it has been possible to complete all challenges without spending anything additional, but some
+			challenges might require you to spend something. We try our best to avoid making spending
+			mandatory!
 		</p>
 	</div>
 	<div class="q">
@@ -96,8 +103,10 @@
 		<p>
 			We tend to finalize the date and the theme of the game about one month ahead, but sometimes we
 			might <s>procrastinate</s> be a bit more pressed for time, depending on the situation. Around this
-			time, you'll need to sign up for the Transit Trek. The cutoff to sign up will usually be one week
-			before the day of the Trek. This gives us enough time to create and assign teams.
+			time, you'll need to sign up for the Transit Trek. To help us create and assign teams better, we
+			highly recommend signing up at least one week before the Trek begins, but as a courtesy to those
+			who find time to join at the last minute, we allow same-day sign-ups (potentially with a late
+			registration fee).
 		</p>
 		<p>
 			The full list of challenges will only be released when the game starts at 2pm on the day of
@@ -106,7 +115,7 @@
 	</div>
 	<div class="q">
 		<p class="question">How accessible is the game?</p>
-		<p>We try to make the game as accessible as possible. For example:</p>
+		<p>We try to make the game as accessible as possible, within reason. For example:</p>
 		<ul>
 			<li>
 				You don't need to come prepared with your own team. We're happy to match you into a team!
@@ -175,10 +184,11 @@
 	<div class="q">
 		<p class="question">Can I get outside help?</p>
 		<p>
-			Using Google Maps, a search engine, or a chatbot is usually allowed unless expressly
+			Using Google Maps, a search engine, or an AI chatbot is usually allowed unless expressly
 			prohibited.
 		</p>
 		<p>Intentional communication with other teams and colluding are prohibited.</p>
+		<p>You may not communicate with people who are not participating in the game for their help.</p>
 	</div>
 	<div class="q">
 		<p class="question">Are there places I cannot go?</p>
