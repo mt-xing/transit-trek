@@ -27,21 +27,28 @@
 		<h2 class="date">April 12, 2025</h2>
 	</section>
 
-	<div class="textwrap">
-		<p class="midtext paper right">TODO</p>
+	<div class="textwrap card">
+		<p>
+			Seattle Transit Trek proudly presents our first ever transit trek on the Eastside!
+			<br />
+			Explore Bellevue and Redmond as you hop on transit, complete challenges, and compete to see who
+			can earn the most points! This is a full-on competitive scavenger hunt at city-sized scale.
+		</p>
 	</div>
 
-	<p class="midtext signupWrap upper">
-		<strong>Ready to Trek?</strong>
-		<BigBtn
-			isBlack={true}
-			href={PARTIFUL_LINK}
-			text="Sign Up"
-			color={['rgb(255,0,0)', 'rgb(128,0,0)']}
-		/>
-	</p>
+	<div class="signupWrap">
+		<p>Ready to Trek?</p>
+		<p>
+			<BigBtn
+				isBlack={true}
+				href={PARTIFUL_LINK}
+				text="Sign Up"
+				color={['rgb(255,0,0)', 'rgb(128,0,0)']}
+			/>
+		</p>
+	</div>
 
-	<div class="midtext paper full" style="margin-top: 100px;">
+	<div class="card" style="margin-top: 100px;">
 		<p>
 			Transit Treks are part scavenger hunt, part games of skill, strategy, and pure dumb luck
 			played across the Puget Sound.
@@ -379,7 +386,7 @@
 		</p>
 	</blockquote>
 
-	<div class="midtext paper big">
+	<div class="card wide">
 		<h2 style="text-align: center;">Acknowledgements</h2>
 		<p>Thank you to all of the people who worked to make the Seattle Transit Trek possible!</p>
 		<ul>
@@ -511,90 +518,81 @@
 		text-align: center;
 	}
 
-	.midtext {
-		text-align: center;
-		color: black;
-		text-shadow: 0 0 10px white;
-		paint-order: stroke fill;
+	.card {
+		background: rgb(240, 240, 240);
+		border-bottom: 5px black solid;
+
+		width: 80%;
+		max-width: 800px;
+		padding: min(5vw, 30px);
+		box-sizing: border-box;
+
 		font-size: 20px;
+		text-align: center;
+
 		position: relative;
-		z-index: 2;
-		max-width: 1000px;
+		z-index: 1;
+
 		margin: 0 auto;
+	}
+
+	.card.wide {
+		max-width: 1200px;
 	}
 
 	.textwrap {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-
-		margin-top: 150px;
-	}
-
-	.midtext.paper {
-		background-image: url($lib/images/tt5/og_paper.png);
-		background-size: contain;
-		background-position: center;
-		background-repeat: no-repeat;
-
-		width: 30vw;
-		height: 20vw;
-
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-
-		padding: 10vw 5vw;
-		box-sizing: border-box;
-		position: relative;
-
-		margin: 0;
-	}
-
-	.midtext.paper.full {
-		width: 60vw;
-		height: 40vw;
-		margin: 0 auto;
-
-		padding: 0 10vw;
-	}
-
-	.midtext.paper.big {
-		width: 80vw;
-		height: 53vw;
-		margin: 0 auto;
-		max-width: none;
-		padding: 7vw 15vw;
-	}
-
-	.midtext.paper.big ul {
-		max-width: 1000px;
-		text-align: left;
+		margin: 250px auto 100px auto;
 	}
 
 	.signupWrap {
 		font-size: 30px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-
-		background: rgb(255, 255, 128);
-		color: black;
-		box-shadow: -2px 2px 10px black;
-
-		width: 400px;
-		padding: 80px 0;
+		display: block;
+		width: 100%;
+		position: relative;
+		text-align: center;
 	}
 
-	.signupWrap.upper {
-		margin: 200px auto 50px auto;
+	.signupWrap::after {
+		content: '';
+		height: 2.1vw;
+		width: 100%;
+		position: absolute;
+		background: #00a0df;
+		left: 0;
+		top: 70px;
 	}
 
-	.signupWrap strong {
-		margin-bottom: 30px;
+	.signupWrap p {
+		position: relative;
+	}
+
+	.signupWrap p:first-child {
+		font-family: 'ClearSansBold', 'Arial', sans-serif;
+		margin-right: 20vw;
+	}
+
+	.signupWrap p:last-child {
+		margin-left: 20vw;
+		margin-top: 90px;
+	}
+
+	.signupWrap p::after {
+		content: '';
+		width: 2.1vw;
+		height: 30px;
+		position: absolute;
+		background: #00a0df;
+
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.signupWrap p:first-child::after {
+		bottom: -40px;
+	}
+
+	.signupWrap p:last-child::after {
+		top: -42px;
 	}
 
 	details {
@@ -612,46 +610,6 @@
 
 		backdrop-filter: blur(10px);
 		box-shadow: -2px 2px 10px black;
-	}
-
-	details:nth-child(odd) {
-		transform: translateX(5px) rotate(-0.1deg);
-	}
-
-	details:nth-child(even) {
-		transform: translateX(-5px) rotate(0.1deg);
-	}
-
-	details:nth-child(8) {
-		transform: translateX(-9px) rotate(0);
-	}
-
-	details::before,
-	.disclaimer::before,
-	.signupWrap::before,
-	.midtext.paper::before {
-		content: '';
-		position: absolute;
-		width: 50px;
-		height: 50px;
-		top: 5px;
-		left: 45%;
-		z-index: 1;
-		background-image: url($lib/images/tt5/pin.png);
-		background-size: contain;
-		background-repeat: no-repeat;
-		pointer-events: none;
-	}
-
-	.midtext.paper::before {
-		top: 2vw;
-	}
-
-	.midtext.paper.full::before,
-	.midtext.paper.big::before {
-		top: 6vw;
-		width: 60px;
-		height: 60px;
 	}
 
 	details summary {
@@ -708,164 +666,5 @@
 		z-index: 2;
 		margin: 0 20px;
 		padding: 10px 20px;
-	}
-
-	@media (max-width: 1500px) {
-		.midtext.paper.big {
-			width: 85vw;
-			height: 65vw;
-			margin: 0 auto;
-			max-width: none;
-			padding: 7vw 15vw;
-		}
-
-		.midtext.paper.big ul {
-			max-width: initial;
-		}
-	}
-
-	@media (max-width: 1300px) {
-		.textwrap {
-			margin-top: 50px;
-		}
-
-		.textwrap .midtext.paper {
-			width: 40vw;
-			height: 30vw;
-		}
-
-		.midtext.paper.big {
-			background-image: none;
-			background: #e2caa3;
-			box-shadow:
-				inset 0 0 40px 20px #ab6838,
-				-5px 5px 15px black;
-			height: unset;
-			padding: 2em 3em !important;
-
-			width: 80%;
-		}
-
-		.midtext.paper.big::before {
-			top: 10px;
-			width: 50px;
-			height: 50px;
-		}
-	}
-
-	@media (max-width: 1100px) {
-		details,
-		.midtext,
-		.disclaimer {
-			margin-left: 5vw;
-			margin-right: 5vw;
-		}
-
-		.disclaimer::before {
-			width: 60px;
-			height: 60px;
-		}
-
-		.midtext.paper.big {
-			background-image: none;
-			background: #e2caa3;
-			box-shadow:
-				inset 0 0 40px 20px #ab6838,
-				-5px 5px 15px black;
-			height: unset;
-			padding: 2em 3em !important;
-
-			width: 90%;
-			box-sizing: border-box;
-		}
-
-		.midtext.paper.big::before {
-			top: 10px;
-			width: 50px;
-			height: 50px;
-		}
-	}
-
-	@media (max-width: 900px) {
-		.textwrap {
-			flex-direction: column-reverse;
-			margin-top: 50px;
-		}
-
-		.textwrap .midtext.paper {
-			width: 60vw;
-			height: 45vw;
-			padding-left: 3em;
-			padding-right: 3em;
-		}
-
-		.textwrap .midtext.paper::before {
-			top: 50px;
-			width: 50px;
-			height: 50px;
-		}
-
-		.midtext.paper.full {
-			width: 85%;
-			height: 63vw;
-		}
-
-		.midtext.paper.full::before {
-			top: 10vw;
-		}
-	}
-
-	@media (max-width: 700px) {
-		.textwrap .midtext.paper {
-			width: 100%;
-			height: 80vw;
-			max-width: none;
-			max-height: none;
-
-			padding: 0 4.5em;
-		}
-
-		.textwrap .midtext.paper::before {
-			top: 12vw;
-		}
-
-		.midtext.paper.big {
-			padding: 2em 2em !important;
-		}
-	}
-
-	@media (max-width: 600px) {
-		.signupWrap {
-			flex-direction: column;
-			width: 75%;
-			padding-top: 2em;
-			padding-bottom: 2em;
-		}
-
-		.signupWrap strong {
-			margin-right: 0;
-			margin-bottom: 30px;
-		}
-
-		details {
-			padding-left: 10vw;
-			padding-right: 10vw;
-		}
-
-		.hero .date {
-			font-size: 8vw;
-		}
-
-		.midtext.paper.full {
-			width: 100%;
-			height: 80vw;
-
-			font-size: 1em;
-		}
-
-		.midtext.paper.full p {
-			display: flex;
-			flex-direction: column;
-		}
 	}
 </style>
