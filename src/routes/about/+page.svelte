@@ -37,8 +37,8 @@
 		</p>
 		<p>
 			In some games, there may be challenges that require a certain amount of money to complete. We
-			try to keep the amount spent per person in each game to under $20. In recent Transit Treks,
-			it has been possible to complete all challenges without spending anything additional, but some
+			try to keep the amount spent per person in each game to under $20. In recent Transit Treks, it
+			has been possible to complete all challenges without spending anything additional, but some
 			challenges might require you to spend something. We try our best to avoid making spending
 			mandatory!
 		</p>
@@ -105,8 +105,8 @@
 			might <s>procrastinate</s> be a bit more pressed for time, depending on the situation. Around this
 			time, you'll need to sign up for the Transit Trek. To help us create and assign teams better, we
 			highly recommend signing up at least one week before the Trek begins, but as a courtesy to those
-			who find time to join at the last minute, we allow same-day sign-ups (potentially with a late
-			registration fee).
+			who find time to join at the last minute, we allow same-day sign-ups (potentially with a late registration
+			fee).
 		</p>
 		<p>
 			The full list of challenges will only be released when the game starts at 2pm on the day of
@@ -336,6 +336,11 @@
 			participants can easily cross the border between the United States and Canada. For these
 			reasons, we have thus far avoided planning Transit Treks in those two cities.
 		</p>
+		<p>
+			That doesn't stop us from dreaming big. Cities such as New York, Montreal, and Toronto are
+			feasible North American options. Beyond the two oceans, Tokyo, London, Paris, Berlin, Beijing,
+			Shanghai, etc. are all in the running. We hope to someday have Transit Treks around the world!
+		</p>
 	</div>
 </div>
 
@@ -350,6 +355,11 @@
 			doing so. If you want to volunteer, be sure you've participated in at least one prior Transit
 			Trek so you have the gist of what it's like.
 		</p>
+		<p>
+			If you're interested, please email <a href="mailto:hello@transittrek.org"
+				>hello@transittrek.org</a
+			> to inquire.
+		</p>
 	</div>
 	<div class="q">
 		<p class="question">Who runs the Transit Treks?</p>
@@ -361,7 +371,7 @@
 	</div>
 	<div class="q">
 		<p class="question">To whom may I direct my questions about the Transit Trek?</p>
-		<p>You can ask Jeffrey for more details.</p>
+		<p>You can email us at <a href="mailto:hello@transittrek.org">hello@transittrek.org</a>.</p>
 	</div>
 	<div class="q">
 		<p class="question">Why does this website exist?</p>
