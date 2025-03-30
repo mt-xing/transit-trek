@@ -386,13 +386,13 @@
 		</p>
 	</blockquote>
 
-	<div class="card wide">
+	<div class="card wide ack">
 		<h2 style="text-align: center;">Acknowledgements</h2>
 		<p>Thank you to all of the people who worked to make the Seattle Transit Trek possible!</p>
 		<ul>
 			<li>
-				<strong>Michael Xing</strong>: Game coordinator, author of the Transit Trek web app, Transit
-				Trek 5 editor, Transit Trek co-organizer
+				<strong>Michael Xing</strong>: Game coordinator, author of the Transit Trek web app,
+				Eastside Transit Trek 1 editor, Transit Trek co-organizer
 			</li>
 			<li>
 				<strong>Arjun Pherwani</strong>: Doubter of Michael Xing, co-creator of the Transit Trek,
@@ -411,30 +411,10 @@
 			</li>
 		</ul>
 		<p>
-			Sincerely,<br /><strong>Jeffrey Wang</strong><br />Transit Trek 5 author, co-creator of the
-			Transit Trek, Transit Trek co-organizer
+			Sincerely,<br /><strong>Jeffrey Wang</strong><br />Eastside Transit Trek 1 author, co-creator
+			of the Transit Trek, Transit Trek co-organizer
 		</p>
 	</div>
-
-	<small class="credits">
-		<p>
-			This page includes photography by
-			<a href="https://www.pexels.com/photo/aerial-view-of-city-buildings-3964406/" target="_blank"
-				>Josh Fields</a
-			>
-			and
-			<a
-				href="https://www.pexels.com/photo/photo-of-white-ferris-wheel-across-city-buildings-2322707/"
-				target="_blank">Garrett Morrow</a
-			>
-			on Pexels, and photography by
-			<a href="https://unsplash.com/photos/public-market-center-signage-xsqF178XAhk" target="_blank"
-				>Sabine Ojeil</a
-			>
-			on Unsplash, as well as photography by
-			<a href="https://www.loc.gov/item/2018698702/" target="_blank">Carol Highsmith</a>.
-		</p>
-	</small>
 </div>
 
 <style>
@@ -655,16 +635,10 @@
 		font-size: 2em;
 	}
 
-	.credits,
-	.credits a {
-		color: black;
-	}
-
-	.credits {
-		display: block;
-		position: relative;
-		z-index: 2;
-		margin: 0 20px;
-		padding: 10px 20px;
+	.ack {
+		text-align: left;
+		margin-bottom: 70px;
+		padding-left: 70px;
+		padding-right: 70px;
 	}
 </style>
