@@ -15,7 +15,11 @@
 </svelte:head>
 
 <div id="outerWrap">
-	<TopLogo customStyles="text-shadow: none;" customImgStyles="box-shadow: none;" />
+	<div id="headerBg"></div>
+	<TopLogo
+		customStyles="text-shadow: none; opacity: 1; font-family: Noto Sans, Helvetica, sans-serif; top: 2vh; color: white;"
+		customImgStyles="box-shadow: none;"
+	/>
 
 	<section class="hero">
 		<img src={main_bg} alt="" />
@@ -455,6 +459,16 @@
 		font-family: 'ClearSans', 'Arial', sans-serif;
 	}
 
+	#headerBg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: calc(100px + 4vh);
+		background: #f24e69;
+		z-index: 5;
+	}
+
 	.hero {
 		width: 100%;
 		height: 100vh;
@@ -471,17 +485,17 @@
 	}
 
 	.hero h1 {
-		font-size: 7vw;
+		font-size: 8vw;
 		color: black;
 		font-family: 'ClearSansBold', 'Arial', sans-serif;
 		font-weight: 900;
 		z-index: 2;
-		max-width: 40vw;
+		max-width: 45vw;
 		margin-left: 40vw;
-		line-height: 7vw;
+		line-height: 8vw;
 
 		position: absolute;
-		top: 14vw;
+		top: 12vw;
 	}
 
 	.hero h2 {
@@ -489,7 +503,7 @@
 		z-index: 2;
 
 		top: 35vw;
-		margin-left: 48vw;
+		margin-left: 50vw;
 		color: black;
 
 		font-weight: 900;
