@@ -27,7 +27,7 @@
 		<h2 class="date">April 12, 2025</h2>
 	</section>
 
-	<div class="textwrap card">
+	<div class="textwrap card" style="margin-top: 70vw;">
 		<p>
 			Seattle Transit Trek proudly presents our first ever transit trek on the Eastside!
 			<br />
@@ -465,8 +465,10 @@
 		width: 100%;
 		height: 100vh;
 		overflow: visible;
-		position: relative;
+		position: absolute;
 		display: block;
+		top: 0;
+		left: 0;
 	}
 
 	.hero > img {
