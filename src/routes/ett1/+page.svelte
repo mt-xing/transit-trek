@@ -546,7 +546,7 @@
 		position: absolute;
 		background: #00a0df;
 		left: 0;
-		top: 70px;
+		top: calc(40px + 4vw);
 	}
 
 	.signupWrap p {
@@ -555,17 +555,20 @@
 
 	.signupWrap p:first-child {
 		margin-right: 20vw;
+		margin-bottom: 0;
+		padding-bottom: 4vw;
 	}
 
 	.signupWrap p:last-child {
 		margin-left: 20vw;
-		margin-top: 70px;
+		margin-top: 2vw;
+		padding-top: 4vw;
 	}
 
 	.signupWrap p::after {
 		content: '';
 		width: 2.1vw;
-		height: 30px;
+		height: 3vw;
 		position: absolute;
 		background: #00a0df;
 
@@ -574,11 +577,11 @@
 	}
 
 	.signupWrap p:first-child::after {
-		bottom: -40px;
+		bottom: 0;
 	}
 
 	.signupWrap p:last-child::after {
-		top: -22px;
+		top: 0;
 		z-index: 2;
 		transition: opacity 0.2s ease-in-out;
 	}
