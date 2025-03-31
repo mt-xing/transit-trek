@@ -456,7 +456,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		height: calc(100px + 4vh);
+		height: min(calc(100px + 4vh), calc(10vw + 4vh));
 		background: #f24e69;
 		z-index: 5;
 	}
