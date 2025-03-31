@@ -5,6 +5,9 @@
 	import { HOME_PAGE } from '../../utils/paths';
 
 	import main_bg from '$lib/images/ett1/ett1_web_bg.png';
+	import narrow_bg from '$lib/images/ett1/ett1_web_narrow.png';
+
+	let innerWidth = 1000;
 
 	const PARTIFUL_LINK = 'https://partiful.com/e/1B9zb9hUfnIKtEcq4Rmc';
 </script>
@@ -14,6 +17,8 @@
 	<meta name="description" content="Seattle Transit Trek's first ever Eastside Transit Trek" />
 </svelte:head>
 
+<svelte:window bind:innerWidth />
+
 <div id="outerWrap">
 	<div id="headerBg"></div>
 	<TopLogo
@@ -22,12 +27,12 @@
 	/>
 
 	<section class="hero">
-		<img src={main_bg} alt="" />
+		<img src={innerWidth <= 800 ? narrow_bg : main_bg} alt="" />
 		<h1>Eastside Transit Trek</h1>
 		<h2 class="date">April 12, 2025</h2>
 	</section>
 
-	<div class="textwrap card" style="margin-top: 70vw;">
+	<div class="textwrap card first">
 		<p>
 			Seattle Transit Trek proudly presents our first ever transit trek on the Eastside!
 			<br />
@@ -505,6 +510,10 @@
 		text-align: center;
 	}
 
+	.card.first {
+		margin-top: 70vw;
+	}
+
 	.card {
 		background: rgb(240, 240, 240);
 		border-bottom: 5px black solid;
@@ -717,6 +726,25 @@
 		margin-bottom: 70px;
 		padding-left: 70px;
 		padding-right: 70px;
+	}
+
+	@media (max-width: 800px) {
+		.hero h1 {
+			font-size: 12vw;
+			max-width: 100vw;
+			margin-left: 24vw;
+			top: 9vw;
+			line-height: 11vw;
+		}
+
+		.hero h2 {
+			top: 45vw;
+			margin-left: 45vw;
+		}
+
+		.card.first {
+			margin-top: 90vw;
+		}
 	}
 
 	@media (max-width: 500px) {
