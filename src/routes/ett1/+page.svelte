@@ -587,8 +587,9 @@
 		max-width: 1000px;
 		display: block;
 		margin: 10px auto;
-		padding: 2.5em 4em;
+		padding: 3em 4em;
 		box-sizing: border-box;
+		font-size: 18px;
 
 		z-index: 3;
 		position: relative;
@@ -608,18 +609,13 @@
 		content: '';
 		position: absolute;
 		left: -2.2vw;
-		top: 1.7vw;
+		top: 3vw;
 		width: 4vw;
 		height: 4vw;
 		border-radius: 4vw;
 		border: 0.8vw black solid;
 		background: white;
 		z-index: 4;
-		/* background: #8a2631;
-		width: 2.1vw;
-		height: 2.1vw;
-		left: 1.5vw;
-		top: 3.5vw; */
 	}
 
 	details summary {
@@ -636,7 +632,7 @@
 	}
 
 	.beginLine + details {
-		margin-top: -3.2vw;
+		margin-top: -5vw;
 	}
 
 	.beginLine {
@@ -673,7 +669,6 @@
 		max-width: 1000px;
 		display: block;
 		margin: 120px auto;
-		/* border: 5px red solid; */
 		color: black;
 		position: relative;
 		z-index: 2;
