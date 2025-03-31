@@ -548,7 +548,6 @@
 	}
 
 	.signupWrap p:first-child {
-		font-family: 'ClearSansBold', 'Arial', sans-serif;
 		margin-right: 20vw;
 	}
 
