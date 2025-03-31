@@ -43,7 +43,8 @@
 				isBlack={true}
 				href={PARTIFUL_LINK}
 				text="Sign Up"
-				color={['rgb(255,0,0)', 'rgb(128,0,0)']}
+				color={['rgb(128,255,255)', 'rgb(200,255,255)']}
+				customStyles="text-shadow: none; -webkit-text-stroke: unset; box-shadow: none; color: black; font-family: ClearSansBold, Arial, sans-serif; font-size: 30px;"
 			/>
 		</p>
 	</div>
@@ -553,7 +554,7 @@
 
 	.signupWrap p:last-child {
 		margin-left: 20vw;
-		margin-top: 90px;
+		margin-top: 70px;
 	}
 
 	.signupWrap p::after {
@@ -572,7 +573,9 @@
 	}
 
 	.signupWrap p:last-child::after {
-		top: -42px;
+		top: -22px;
+		z-index: 2;
+		transition: opacity 0.2s ease-in-out;
 	}
 
 	details {
