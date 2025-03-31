@@ -60,7 +60,9 @@
 		</p>
 	</div>
 
-	<details style="margin-top: 100px">
+	<div class="beginLine" />
+
+	<details>
 		<summary><h2>Requirements</h2></summary>
 		<ul>
 			<li>
@@ -355,8 +357,10 @@
 		<p>You can keep track of the score on your team dashboard.</p>
 	</details>
 
-	<blockquote class="disclaimer">
-		<h3>Safety Disclaimer</h3>
+	<div class="endLine" />
+
+	<blockquote class="card disclaimer">
+		<h3>⚠️ Safety Disclaimer</h3>
 		<p>
 			You (a Participant) and your safety are of paramount importance during your participation in
 			the Seattle Transit Trek (the “Game”). You are strongly advised to avoid areas that may
@@ -580,18 +584,42 @@
 	details {
 		color: black;
 
-		background: rgb(255, 255, 128);
 		max-width: 1000px;
 		display: block;
-		margin: 70px auto;
+		margin: 10px auto;
 		padding: 2.5em 4em;
 		box-sizing: border-box;
 
 		z-index: 3;
 		position: relative;
+	}
 
-		backdrop-filter: blur(10px);
-		box-shadow: -2px 2px 10px black;
+	details::before {
+		content: '';
+
+		width: 2.1vw;
+		height: calc(100% + 20px);
+		position: absolute;
+		left: -0.5vw;
+		background: #8a2631;
+	}
+
+	details summary::before {
+		content: '';
+		position: absolute;
+		left: -2.2vw;
+		top: 1.7vw;
+		width: 4vw;
+		height: 4vw;
+		border-radius: 4vw;
+		border: 0.8vw black solid;
+		background: white;
+		z-index: 4;
+		/* background: #8a2631;
+		width: 2.1vw;
+		height: 2.1vw;
+		left: 1.5vw;
+		top: 3.5vw; */
 	}
 
 	details summary {
@@ -607,34 +635,68 @@
 		margin: 0;
 	}
 
+	.beginLine + details {
+		margin-top: -3.2vw;
+	}
+
+	.beginLine {
+		height: 5vw;
+		width: calc(50vw - 500px - 0.9vw);
+
+		border-top-style: solid;
+		border-right-style: solid;
+		border-top-width: 2.1vw;
+		border-right-width: 2.1vw;
+		border-color: #8a2631;
+		border-top-right-radius: 5vw;
+
+		margin-top: 100px;
+		position: relative;
+	}
+
+	.endLine {
+		height: 5vw;
+		width: calc(50vw - 500px - 0.9vw);
+
+		border-bottom-style: solid;
+		border-right-style: solid;
+		border-bottom-width: 2.1vw;
+		border-right-width: 2.1vw;
+		border-color: #8a2631;
+		border-bottom-right-radius: 5vw;
+
+		margin-top: 4vw;
+		position: relative;
+	}
+
 	.disclaimer {
 		max-width: 1000px;
 		display: block;
 		margin: 120px auto;
-		border: 5px red solid;
-		background: rgb(255, 255, 128);
+		/* border: 5px red solid; */
 		color: black;
 		position: relative;
 		z-index: 2;
 		padding: 50px 70px;
 		box-sizing: border-box;
 		font-size: 1.2em;
+		text-align: left;
+		border: none;
 
-		box-shadow:
-			0 0 15px 20px red inset,
-			-5px 5px 15px black;
-	}
-
-	.disclaimer::before {
-		width: 4vw;
-		height: 4vw;
-		top: 30px;
-		left: 44%;
+		box-shadow: 0 0 20px 15px red;
 	}
 
 	.disclaimer h3 {
-		margin-top: 10px;
-		font-size: 2em;
+		background: black;
+		color: white;
+		padding: 50px 70px;
+		width: calc(100% + 140px);
+		position: relative;
+		left: -70px;
+		top: -50px;
+		margin: 0;
+		box-sizing: border-box;
+		font-size: 3em;
 	}
 
 	.ack {
