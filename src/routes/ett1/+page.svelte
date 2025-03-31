@@ -605,7 +605,7 @@
 		content: '';
 
 		width: 2.1vw;
-		height: calc(100% + 2vw);
+		height: calc(100% + 3vw);
 		position: absolute;
 		left: 0;
 		background: #8a2631;
@@ -717,5 +717,20 @@
 		margin-bottom: 70px;
 		padding-left: 70px;
 		padding-right: 70px;
+	}
+
+	@media (max-width: 500px) {
+		.disclaimer,
+		.ack {
+			padding-left: 5vw;
+			padding-right: 5vw;
+		}
+
+		.disclaimer h3 {
+			width: calc(100% + 10vw);
+			left: -5vw;
+			text-align: center;
+			font-size: 10vw;
+		}
 	}
 </style>
