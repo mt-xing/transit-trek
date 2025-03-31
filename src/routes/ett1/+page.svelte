@@ -600,7 +600,7 @@
 		content: '';
 
 		width: 2.1vw;
-		height: calc(100% + 20px);
+		height: calc(100% + 2vw);
 		position: absolute;
 		left: 0;
 		background: #8a2631;
@@ -635,7 +635,12 @@
 	}
 
 	.beginLine + details {
-		margin-top: -5vw;
+		padding-top: 0;
+		margin-top: 0;
+	}
+
+	.beginLine + details::before {
+		height: calc(100% + 60px + 2vw);
 	}
 
 	details.last {
@@ -645,7 +650,7 @@
 
 	.beginLine {
 		height: 5vw;
-		width: calc(50% - 500px);
+		width: max(calc(50% - 500px), 10%);
 
 		border-top-style: solid;
 		border-right-style: solid;
@@ -660,7 +665,7 @@
 
 	.endLine {
 		height: 5vw;
-		width: calc(50% - 500px);
+		width: max(calc(50% - 500px), 10%);
 
 		border-bottom-style: solid;
 		border-right-style: solid;
