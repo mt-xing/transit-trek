@@ -352,7 +352,7 @@
 		</ol>
 	</details>
 
-	<details>
+	<details class="last">
 		<summary><h2>Live Scoreboard</h2></summary>
 		<p>You can keep track of the score on your team dashboard.</p>
 	</details>
@@ -585,6 +585,7 @@
 		color: black;
 
 		max-width: 1000px;
+		width: 80%;
 		display: block;
 		margin: 10px auto;
 		padding: 3em 4em;
@@ -601,15 +602,16 @@
 		width: 2.1vw;
 		height: calc(100% + 20px);
 		position: absolute;
-		left: -0.5vw;
+		left: 0;
 		background: #8a2631;
 	}
 
 	details summary::before {
 		content: '';
 		position: absolute;
-		left: -2.2vw;
-		top: 3vw;
+		left: calc(-72px - 2.8vw + 1.05vw);
+		top: 50%;
+		transform: translateY(-50%);
 		width: 4vw;
 		height: 4vw;
 		border-radius: 4vw;
@@ -620,6 +622,7 @@
 
 	details summary {
 		cursor: pointer;
+		position: relative;
 	}
 
 	details summary::marker {
@@ -635,9 +638,14 @@
 		margin-top: -5vw;
 	}
 
+	details.last {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
 	.beginLine {
 		height: 5vw;
-		width: calc(50vw - 500px - 0.9vw);
+		width: calc(50% - 500px);
 
 		border-top-style: solid;
 		border-right-style: solid;
@@ -652,7 +660,7 @@
 
 	.endLine {
 		height: 5vw;
-		width: calc(50vw - 500px - 0.9vw);
+		width: calc(50% - 500px);
 
 		border-bottom-style: solid;
 		border-right-style: solid;
