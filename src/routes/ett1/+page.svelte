@@ -87,6 +87,11 @@
 						A $5.50 participation fee. In return, you will be given a bandana to be used throughout
 						the game (and to keep as a souvenir and for future Transit Treks!)
 					</li>
+					<li>
+						Roughly 24-48 hours before the event begins, the participation fee may be raised to be
+						higher than $5.50 because of the increased work we have to do to arrange teams
+						last-minute. Please try your best to register early; we appreciate it!
+					</li>
 				</ul>
 			</li>
 		</ul>
@@ -110,6 +115,10 @@
 			<li>3 to 4 people per team</li>
 			<li>4 hours long competition period</li>
 		</ul>
+		<p>
+			For more general information about all Transit Treks, please see:<br />
+			<a href="https://www.transittrek.org/about">the about/FAQ page</a>.
+		</p>
 	</details>
 
 	<details>
