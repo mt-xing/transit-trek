@@ -674,7 +674,7 @@
 		border-color: #8a2631;
 		border-bottom-right-radius: 5vw;
 
-		margin-top: 4vw;
+		margin-top: calc(50px + 2vw);
 		position: relative;
 	}
 
