@@ -71,21 +71,26 @@
 		<summary><h2>Requirements</h2></summary>
 		<ul>
 			<li>
-				ORCA card with either a pass or at least $10 loaded on it<br />
+				ORCA card with either a pass or at least $12 loaded on it<br />
 				<small>Microsoft- and Amazon-issued ORCA cards suffice for this requirement</small>
 			</li>
 			<li>
 				A smartphone<br />
-				<small>One team member must have an iPhone with Find My Friends enabled</small>
+				<small>One team member must have an iPhone with Find My enabled</small>
 			</li>
 			<li>Joined the Signal group</li>
 			<li>
 				Either:
 				<ul>
-					<li>A bandana from a prior Seattle Transit Trek and a $2 participation fee, or</li>
+					<li>A bandana from a prior Seattle Transit Trek and a $5 participation fee, or</li>
 					<li>
-						A $2.50 participation fee. In return, you will be given a bandana to be used throughout
+						A $5.50 participation fee. In return, you will be given a bandana to be used throughout
 						the game (and to keep as a souvenir and for future Transit Treks!)
+					</li>
+					<li>
+						Roughly 24-48 hours before the event begins, the participation fee may be raised to be
+						higher than $5.50 because of the increased work we have to do to arrange teams
+						last-minute. Please try your best to register early; we appreciate it!
 					</li>
 				</ul>
 			</li>
@@ -110,6 +115,10 @@
 			<li>3 to 4 people per team</li>
 			<li>4 hours long competition period</li>
 		</ul>
+		<p>
+			For more general information about all Transit Treks, please see:<br />
+			<a href="https://www.transittrek.org/about">the about/FAQ page</a>.
+		</p>
 	</details>
 
 	<details>
@@ -131,7 +140,7 @@
 			<li>Every player must be wearing a bandana provided by the organizers.</li>
 			<li>
 				For tracking purposes, one team member needs to share their location with the organizers on
-				Find My Friends.
+				Find My (formerly known as Find My Friends).
 			</li>
 			<li>
 				Players must travel by foot or public transit operated by the City of Seattle, the Seattle
@@ -311,7 +320,7 @@
 		<p>
 			The map linked below shows the official game boundaries:<br />
 			<a
-				href="https://www.google.com/maps/d/u/0/edit?mid=1VTRXC-T_dsomkPm0d4DNd_vsrOc9nAA&usp=sharing"
+				href="https://www.google.com/maps/d/edit?mid=1ZjdJiiigXPSlK5A53keaGrNxIp6iocM&usp=sharing"
 				target="_blank"
 				style="color: black;">Game Boundaries</a
 			>
@@ -322,13 +331,14 @@
 	<details>
 		<summary><h2>Starting Point</h2></summary>
 		<p>
-			Show up to McGraw Square <strong>by 1:00pm</strong>. Free parking is available in adjacent
-			Amazon buildings. The closest garages are the Day One or Doppler parking garages. The nearest
-			Link light rail station is Westlake Station, exit A. The rules will be explained and
-			participants will have the opportunity to ask clarifying questions to the organizers before
-			the game starts. You will also have the chance to meet your team and discuss basic strategy.
-			The game will begin when everyone is present and the organizers announce the start. Take your
-			time or hurry up. The choice is yours; <strong>don’t be late!</strong>
+			Show up to Bel-Red Station <strong>by 1:00pm</strong>. Free parking is available at the station's
+			parking lot. You can also park at Redmond Technology or South Bellevue Station, for free, in the
+			Sound Transit parking garages. If you're coming from Seattle, you can consider taking a Sound Transit
+			express bus that connects with a 2 Line station and then ride the 2 Line to Bel-Red Station. The
+			rules will be explained and participants will have the opportunity to ask clarifying questions
+			to the organizers before the game starts. You will also have the chance to meet your team and
+			discuss basic strategy. The game will begin when everyone is present and the organizers announce
+			the start. Take your time or hurry up. The choice is yours; <strong>don’t be late!</strong>
 		</p>
 		<p>
 			One member of your team should be designated as the primary representative, who will be
@@ -340,7 +350,7 @@
 
 	<details>
 		<summary><h2>Ending Point</h2></summary>
-		<p>The ending point will be Asean Streat in Westlake.</p>
+		<p>The ending point will be the Lincoln Square South food court in downtown Bellevue.</p>
 	</details>
 
 	<details>

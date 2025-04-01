@@ -261,8 +261,8 @@
 	<div class="q">
 		<p class="question">How many people have participated in the past?</p>
 		<p>
-			Transit Trek 2 featured about 45 participants. In the future, we hope to expand to accommodate
-			a larger number of participants.
+			Transit Trek 5 featured over 50 participants. Most Transit Treks have featured roughly this
+			number of participants. Please help us grow Transit Treks to have even more participants!
 		</p>
 	</div>
 	<div class="q">
@@ -294,8 +294,8 @@
 				It's only half a day on a Saturday, so you don't need to dedicate your whole weekend to it.
 			</li>
 			<li>
-				It's very cheap to participate. There's a requirement to buy a bandana, but it's 50¢ and you
-				can reuse it for future Transit Treks.
+				It's very cheap to participate. There's a nominal participation fee and a requirement to buy
+				a bandana, but it's 50¢ and you can reuse it for future Transit Treks.
 			</li>
 			<li>
 				No two Transit Treks are alike. The premise of the game changes each time. A team that won
