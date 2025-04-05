@@ -771,6 +771,11 @@
 	}
 
 	@media (max-width: 500px) {
+		.card {
+			padding-top: 0.1em;
+			padding-bottom: 0;
+		}
+
 		.disclaimer,
 		.ack {
 			padding-left: 5vw;
@@ -779,7 +784,7 @@
 
 		.disclaimer {
 			padding-top: 0;
-			padding-bottom: 1em;
+			padding-bottom: 0.1em;
 		}
 
 		.disclaimer h3 {
