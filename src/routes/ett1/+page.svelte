@@ -833,7 +833,7 @@
 
 		.signupWrap p:first-child {
 			margin: 0;
-			padding-top: 5vw;
+			padding-top: 7vw;
 			z-index: 2;
 		}
 
