@@ -331,14 +331,15 @@
 	<details>
 		<summary><h2>Starting Point</h2></summary>
 		<p>
-			Show up to Bel-Red Station <strong>by 1:00pm</strong>. Free parking is available at the station's
-			parking lot. You can also park at Redmond Technology or South Bellevue Station, for free, in the
-			Sound Transit parking garages. If you're coming from Seattle, you can consider taking a Sound Transit
-			express bus that connects with a 2 Line station and then ride the 2 Line to Bel-Red Station. The
-			rules will be explained and participants will have the opportunity to ask clarifying questions
-			to the organizers before the game starts. You will also have the chance to meet your team and
-			discuss basic strategy. The game will begin when everyone is present and the organizers announce
-			the start. Take your time or hurry up. The choice is yours; <strong>don’t be late!</strong>
+			Show up to Bel-Red Station <strong>by 1:00pm</strong>. Free parking is available at the
+			station's parking lot. You can also park at Redmond Technology or South Bellevue Station, for
+			free, in the Sound Transit parking garages. If you're coming from Seattle, you can consider
+			taking a Sound Transit express bus that connects with a 2 Line station and then ride the 2
+			Line to Bel-Red Station. The rules will be explained and participants will have the
+			opportunity to ask clarifying questions to the organizers before the game starts. You will
+			also have the chance to meet your team and discuss basic strategy. The game will begin when
+			everyone is present and the organizers announce the start. Take your time or hurry up. The
+			choice is yours; <strong>don’t be late!</strong>
 		</p>
 		<p>
 			One member of your team should be designated as the primary representative, who will be
@@ -797,6 +798,41 @@
 
 		.endLine {
 			margin-top: calc(35px + 2vw);
+		}
+
+		.signupWrap::after {
+			top: 0;
+		}
+
+		.signupWrap::before {
+			content: '';
+			position: absolute;
+
+			width: 4vw;
+			height: 4vw;
+			border-radius: 4vw;
+			border: 0.8vw black solid;
+			z-index: 4;
+			background: white;
+			top: calc(-2.8vw + 1.05vw);
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.signupWrap p:first-child {
+			margin: 0;
+			padding-top: 5vw;
+			z-index: 2;
+		}
+
+		.signupWrap p:last-child {
+			margin: -5vw 0 0 0;
+			padding-top: 0;
+			z-index: 1;
+		}
+
+		.signupWrap p::after {
+			display: none;
 		}
 	}
 </style>
