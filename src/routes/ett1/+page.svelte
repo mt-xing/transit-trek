@@ -732,18 +732,18 @@
 		.hero h1 {
 			font-size: 12vw;
 			max-width: 100vw;
-			margin-left: 24vw;
-			top: 9vw;
+			margin-left: 20vw;
+			top: 19vw;
 			line-height: 11vw;
 		}
 
 		.hero h2 {
-			top: 45vw;
+			top: 55vw;
 			margin-left: 45vw;
 		}
 
 		.card.first {
-			margin-top: 90vw;
+			margin-top: 95vw;
 		}
 	}
 
@@ -754,11 +754,39 @@
 			padding-right: 5vw;
 		}
 
+		.disclaimer {
+			padding-top: 0;
+			padding-bottom: 1em;
+		}
+
 		.disclaimer h3 {
 			width: calc(100% + 10vw);
 			left: -5vw;
 			text-align: center;
 			font-size: 10vw;
+			top: 0;
+		}
+
+		.ack {
+			padding-bottom: 0;
+		}
+
+		details {
+			width: 90%;
+			padding: 2em;
+		}
+
+		details summary::before {
+			left: calc(-36px - 2.8vw + 1.05vw);
+		}
+
+		.beginLine,
+		.endLine {
+			width: 5%;
+		}
+
+		.endLine {
+			margin-top: calc(35px + 2vw);
 		}
 	}
 </style>
