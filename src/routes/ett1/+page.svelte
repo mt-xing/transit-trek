@@ -7,8 +7,6 @@
 	import main_bg from '$lib/images/ett1/ett1_web_bg.png';
 	import narrow_bg from '$lib/images/ett1/ett1_web_narrow.png';
 
-	let innerWidth = 1000;
-
 	const PARTIFUL_LINK = 'https://partiful.com/e/1B9zb9hUfnIKtEcq4Rmc';
 </script>
 
@@ -16,8 +14,6 @@
 	<title>Eastside Transit Trek</title>
 	<meta name="description" content="Seattle Transit Trek's first ever Eastside Transit Trek" />
 </svelte:head>
-
-<svelte:window bind:innerWidth />
 
 <div id="outerWrap">
 	<div id="headerBg"></div>
@@ -27,7 +23,8 @@
 	/>
 
 	<section class="hero">
-		<img src={innerWidth <= 800 ? narrow_bg : main_bg} alt="" />
+		<img src={main_bg} id="wide_bg" alt="" />
+		<img src={narrow_bg} id="narrow_bg" alt="" />
 		<h1>Eastside Transit Trek</h1>
 		<h2 class="date">April 12, 2025</h2>
 	</section>
@@ -494,6 +491,10 @@
 		top: 0;
 	}
 
+	#narrow_bg {
+		display: none;
+	}
+
 	.hero h1 {
 		font-size: 8vw;
 		color: black;
@@ -740,6 +741,14 @@
 	}
 
 	@media (max-width: 800px) {
+		#narrow_bg {
+			display: unset;
+		}
+
+		#wide_bg {
+			display: none;
+		}
+
 		.hero h1 {
 			font-size: 12vw;
 			max-width: 100vw;
