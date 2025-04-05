@@ -318,8 +318,7 @@
 			The map linked below shows the official game boundaries:<br />
 			<a
 				href="https://www.google.com/maps/d/edit?mid=1ZjdJiiigXPSlK5A53keaGrNxIp6iocM&usp=sharing"
-				target="_blank"
-				style="color: black;">Game Boundaries</a
+				target="_blank">Game Boundaries</a
 			>
 		</p>
 		<p>The game will not require you to leave the marked zone.</p>
@@ -738,6 +737,10 @@
 		margin-bottom: 70px;
 		padding-left: 70px;
 		padding-right: 70px;
+	}
+
+	details a {
+		color: black;
 	}
 
 	@media (max-width: 800px) {
