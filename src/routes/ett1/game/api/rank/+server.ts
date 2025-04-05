@@ -1,8 +1,8 @@
-import { CosmosClient } from "@azure/cosmos";
-import { error, json } from "@sveltejs/kit";
-import { DB_URL, READ_KEY } from "$env/static/private";
-import type { RequestHandler } from "./$types";
-import type { ETT1Team } from "../../../../../types/ett1/team";
+import { CosmosClient } from '@azure/cosmos';
+import { error, json } from '@sveltejs/kit';
+import { DB_URL, READ_KEY } from '$env/static/private';
+import type { RequestHandler } from './$types';
+import type { ETT1Team } from '../../../../../types/ett1/team';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,
@@ -10,14 +10,17 @@ const client = new CosmosClient({
 });
 
 export const GET: RequestHandler = async ({ url }) => {
-	const secret = url.searchParams.get("id");
+	const secret = url.searchParams.get('id');
 	if (!secret) {
 		error(401);
 	}
 
 	const teamQuery = (
-		await client.database("transit-trek").container("ett1-teams").items
-			.readAll<ETT1Team>().fetchAll()
+		await client
+			.database('transit-trek')
+			.container('ett1-teams')
+			.items.readAll<ETT1Team>()
+			.fetchAll()
 	).resources;
 
 	return json(

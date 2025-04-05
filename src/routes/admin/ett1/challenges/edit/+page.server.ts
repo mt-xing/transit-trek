@@ -4,10 +4,10 @@ import type { Actions, PageServerLoad, RequestEvent } from './$types';
 import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
 import assertUnreachable from '../../../../../utils/assertUnreachable';
 import type {
-	TT5ChallengeCategory,
-	TT5ChallengeDefinition,
-	TT5ChallengeType,
-} from '../../../../../types/tt5/challenge';
+	ETT1ChallengeCategory,
+	ETT1ChallengeDefinition,
+	ETT1ChallengeType,
+} from '../../../../../types/ett1/challenge';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,
@@ -19,9 +19,9 @@ export const load: PageServerLoad = async ({ url }) => {
 	if (id) {
 		const res = await client
 			.database('transit-trek')
-			.container('tt5-challenges')
+			.container('ett1-challenges')
 			.item(id, id)
-			.read<TT5ChallengeDefinition>();
+			.read<ETT1ChallengeDefinition>();
 		return {
 			challenge: res.resource,
 		};
@@ -39,7 +39,7 @@ export const actions = {
 		const data = await event.request.formData();
 		const id = event.url.searchParams.get('id');
 		if (!id) {
-			redirect(303, '/admin/tt5/challenges');
+			redirect(303, '/admin/ett1/challenges');
 			return;
 		}
 
@@ -48,13 +48,13 @@ export const actions = {
 			title: data.get('title') as string,
 			desc: data.get('desc') as string,
 			points: parseFloat(data.get('points') as string),
-			category: data.get('category') as TT5ChallengeCategory,
+			category: data.get('category') as ETT1ChallengeCategory,
 			privateNotes: (data.get('privateNotes') as string) || undefined,
 			shrinkTitle: !!data.get('shrinkTitle'),
 			bonus: data.get('bonusEnabled') ? parseInt(data.get('bonusAmount') as string, 10) : undefined,
 		};
-		const type = data.get('type') as TT5ChallengeType;
-		const newChallengeInfo = ((): TT5ChallengeDefinition => {
+		const type = data.get('type') as ETT1ChallengeType;
+		const newChallengeInfo = ((): ETT1ChallengeDefinition => {
 			switch (type) {
 				case 'single':
 					return { type, ...challengeBase };
@@ -73,10 +73,10 @@ export const actions = {
 
 		await writeClient
 			.database('transit-trek')
-			.container('tt5-challenges')
+			.container('ett1-challenges')
 			.item(id, id)
 			.replace(newChallengeInfo);
 
-		redirect(303, '/admin/tt5/challenges');
+		redirect(303, '/admin/ett1/challenges');
 	},
 } satisfies Actions;

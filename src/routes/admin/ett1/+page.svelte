@@ -33,7 +33,6 @@
 <h2>Old Events</h2>
 <p><a href="/admin/tt3">TT3</a></p>
 <p><a href="/admin/tt4">TT4</a></p>
-<p><a href="/admin/tt5">TT5</a></p>
 
 <style>
 	h1,

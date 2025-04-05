@@ -1,13 +1,13 @@
 export type ETT1GameState =
 	| {
-		t: "pre";
-		countdown: boolean;
-	}
+			t: 'pre';
+			countdown: boolean;
+	  }
 	| {
-		t: "ongoing";
-	}
+			t: 'ongoing';
+	  }
 	| {
-		t: "post";
-	};
+			t: 'post';
+	  };
 
-export const GAME_KEY = "game";
+export const GAME_KEY = 'game';
