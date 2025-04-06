@@ -1,8 +1,8 @@
 import { CosmosClient } from '@azure/cosmos';
 import type { PageServerLoad } from './$types';
 import { DB_URL, READ_KEY } from '$env/static/private';
-import type { TT5Team } from '../../../../../types/tt5/team';
-import type { TT5ChallengeDefinition } from '../../../../../types/tt5/challenge';
+import type { ETT1Team } from '../../../../../types/ett1/team';
+import type { ETT1ChallengeDefinition } from '../../../../../types/ett1/challenge';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,
@@ -11,11 +11,11 @@ const client = new CosmosClient({
 
 export const load: PageServerLoad = async () => {
 	const [teamsRes, challengeRes] = await Promise.all([
-		client.database('transit-trek').container('tt5-teams').items.readAll<TT5Team>().fetchAll(),
+		client.database('transit-trek').container('ett1-teams').items.readAll<ETT1Team>().fetchAll(),
 		client
 			.database('transit-trek')
-			.container('tt5-challenges')
-			.items.readAll<TT5ChallengeDefinition>()
+			.container('ett1-challenges')
+			.items.readAll<ETT1ChallengeDefinition>()
 			.fetchAll(),
 	]);
 

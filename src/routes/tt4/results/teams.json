@@ -1,1008 +1,571 @@
 [
-    {
-        "teamNum": 1,
-        "name": "Light Rail 2025",
-        "score": 20,
-        "catchTimes": [],
-        "challengeProgress": {
-            "95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
-                "progress": [
-                    true
-                ]
-            },
-            "b2d3b8da-b366-4973-b080-cb909047b228": {
-                "progress": [
-                    true,
-                    false
-                ]
-            },
-            "55b692d1-902f-434c-9b33-28d03e0731c9": {
-                "progress": [
-                    true,
-                    false,
-                    false
-                ]
-            },
-            "f997d0db-4239-416e-b1cc-e514c2b3bc1e": {
-                "progress": [
-                    true,
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "b7448fcd-29f3-4936-93b4-528e2940d361": {
-                "progress": [
-                    true
-                ]
-            },
-            "5036203a-4533-424d-969b-0f1fe2fd574e": {
-                "progress": [
-                    true
-                ]
-            },
-            "c35d9c23-f940-41e0-9504-ceb9ceb88402": {
-                "progress": [
-                    true
-                ]
-            },
-            "10cd83bd-1cb5-4d78-8bb1-f5187359fb70": {
-                "progress": [
-                    true
-                ]
-            },
-            "5c5ea111-c3d4-4e76-89f4-34bf81205fc8": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "81a694f8-3b09-474c-86f5-d5ec4c8cef34": {
-                "progress": [
-                    true
-                ]
-            },
-            "23f3058d-6276-4a08-bc9e-678527c62350": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "5f36ac75-ab5a-43d1-a59b-c8f683f4bfc0": {
-                "progress": [
-                    true,
-                    false,
-                    false
-                ]
-            },
-            "4dcf3828-72fd-4c30-9275-efab42854599": {
-                "progress": [
-                    true
-                ]
-            },
-            "76c2a248-d182-46ad-ab04-725f6c9ac498": {
-                "manualComplete": false,
-                "progress": [
-                    false
-                ]
-            },
-            "c4c205fd-866d-4d62-af18-3af24ef0eef1": {
-                "progress": [
-                    true,
-                    true
-                ]
-            }
-        },
-        "bioBreakTaken": true,
-        "id": "bd8d9c64-1629-4371-83e1-cb4ce0d06b9a"
-    },
-    {
-        "teamNum": 2,
-        "name": "Just 2 More Lanes",
-        "score": 31,
-        "catchTimes": [
-            1722721087200
-        ],
-        "challengeProgress": {
-            "4dcf3828-72fd-4c30-9275-efab42854599": {
-                "progress": [
-                    true
-                ]
-            },
-            "5f36ac75-ab5a-43d1-a59b-c8f683f4bfc0": {
-                "progress": [
-                    true,
-                    false,
-                    false
-                ]
-            },
-            "980d790c-4062-4d8b-a449-37b8dcdfadb9": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "6438932e-c717-4ff1-88d5-1f9531ebc63d": {
-                "progress": [
-                    true
-                ]
-            },
-            "d96969b7-c2c7-490a-a928-68bfaf60f2a2": {
-                "progress": [
-                    true
-                ]
-            },
-            "d9fa56f6-0617-43a4-be66-c390618a4160": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "b7448fcd-29f3-4936-93b4-528e2940d361": {
-                "progress": [
-                    true
-                ]
-            },
-            "c4c205fd-866d-4d62-af18-3af24ef0eef1": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "3318a05c-56ae-4fe2-b003-12d0d7d976ea": {
-                "progress": [
-                    true
-                ]
-            },
-            "3b47d785-b5c7-44fb-b570-f65c369a2555": {
-                "progress": [
-                    true
-                ]
-            },
-            "0ecabee5-21da-4a19-b65d-039ca5b6d27b": {
-                "progress": [
-                    true
-                ]
-            },
-            "76c2a248-d182-46ad-ab04-725f6c9ac498": {
-                "manualComplete": false,
-                "progress": [
-                    false
-                ]
-            },
-            "d956c276-f320-4089-8f6c-4a061a8c8b3b": {
-                "progress": [
-                    true
-                ]
-            },
-            "95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
-                "progress": [
-                    true
-                ]
-            },
-            "57469233-ca1f-482b-a3b6-83e493c92961": {
-                "progress": [
-                    true
-                ]
-            },
-            "10cd83bd-1cb5-4d78-8bb1-f5187359fb70": {
-                "progress": [
-                    true
-                ]
-            }
-        },
-        "bioBreakTaken": true,
-        "id": "0247f4a2-0163-4816-bb2e-e781eb9efeec"
-    },
-    {
-        "teamNum": 3,
-        "name": "Bratz",
-        "score": 39,
-        "catchTimes": [
-            1722725871031
-        ],
-        "challengeProgress": {
-            "b7448fcd-29f3-4936-93b4-528e2940d361": {
-                "progress": [
-                    true
-                ]
-            },
-            "b2d3b8da-b366-4973-b080-cb909047b228": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
-                "progress": [
-                    true
-                ]
-            },
-            "eaffb8a4-5c3c-4c78-9160-3600dfe01309": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "5f36ac75-ab5a-43d1-a59b-c8f683f4bfc0": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "1d431c54-2a14-45ed-b301-78eef915c26c": {
-                "progress": [
-                    true
-                ]
-            },
-            "23f3058d-6276-4a08-bc9e-678527c62350": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "5c5ea111-c3d4-4e76-89f4-34bf81205fc8": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "601a0033-04e1-4df8-8efa-855e95414da7": {
-                "progress": [
-                    true
-                ]
-            },
-            "81a694f8-3b09-474c-86f5-d5ec4c8cef34": {
-                "progress": [
-                    true
-                ]
-            },
-            "c35d9c23-f940-41e0-9504-ceb9ceb88402": {
-                "progress": [
-                    true
-                ]
-            },
-            "10cd83bd-1cb5-4d78-8bb1-f5187359fb70": {
-                "progress": [
-                    true
-                ]
-            },
-            "cf098c06-9739-446b-a3aa-6a9a8f5055b0": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "ea6f022d-823a-46ba-8741-0d3515fbe180": {
-                "progress": [
-                    true
-                ]
-            },
-            "c4c205fd-866d-4d62-af18-3af24ef0eef1": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "f997d0db-4239-416e-b1cc-e514c2b3bc1e": {
-                "progress": [
-                    true,
-                    true,
-                    false,
-                    false
-                ]
-            },
-            "99e6d39f-d3d7-4bd3-b15d-5efd988ad915": {
-                "progress": [
-                    true,
-                    true,
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "57469233-ca1f-482b-a3b6-83e493c92961": {
-                "progress": [
-                    true
-                ]
-            },
-            "6438932e-c717-4ff1-88d5-1f9531ebc63d": {
-                "progress": [
-                    true
-                ]
-            },
-            "0039ccbb-0c11-45ad-8ae7-2de1f47484c9": {
-                "progress": [
-                    true
-                ]
-            },
-            "d956c276-f320-4089-8f6c-4a061a8c8b3b": {
-                "progress": [
-                    true
-                ]
-            },
-            "85144906-ddb0-4f7e-9e5b-cfdce6986615": {
-                "progress": [
-                    true
-                ]
-            },
-            "4dcf3828-72fd-4c30-9275-efab42854599": {
-                "progress": [
-                    true
-                ]
-            },
-            "76c2a248-d182-46ad-ab04-725f6c9ac498": {
-                "progress": [
-                    true
-                ]
-            }
-        },
-        "bioBreakTaken": true,
-        "id": "17145c05-06be-47ac-85de-e4cdd07be051"
-    },
-    {
-        "teamNum": 4,
-        "name": "Is it “team jaaga”",
-        "score": 25,
-        "catchTimes": [
-            1722721696636,
-            1722724702108
-        ],
-        "challengeProgress": {
-            "5f36ac75-ab5a-43d1-a59b-c8f683f4bfc0": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "5c5ea111-c3d4-4e76-89f4-34bf81205fc8": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "b7448fcd-29f3-4936-93b4-528e2940d361": {
-                "progress": [
-                    true
-                ]
-            },
-            "76c2a248-d182-46ad-ab04-725f6c9ac498": {
-                "manualComplete": false,
-                "progress": [
-                    false
-                ]
-            },
-            "f997d0db-4239-416e-b1cc-e514c2b3bc1e": {
-                "progress": [
-                    true,
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "cf098c06-9739-446b-a3aa-6a9a8f5055b0": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "99e6d39f-d3d7-4bd3-b15d-5efd988ad915": {
-                "progress": [
-                    true,
-                    true,
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
-                "progress": [
-                    true
-                ]
-            },
-            "6438932e-c717-4ff1-88d5-1f9531ebc63d": {
-                "progress": [
-                    true
-                ]
-            },
-            "c4c205fd-866d-4d62-af18-3af24ef0eef1": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "d956c276-f320-4089-8f6c-4a061a8c8b3b": {
-                "progress": [
-                    true
-                ]
-            },
-            "d9fa56f6-0617-43a4-be66-c390618a4160": {
-                "progress": [
-                    true,
-                    false
-                ]
-            },
-            "57469233-ca1f-482b-a3b6-83e493c92961": {
-                "progress": [
-                    true
-                ]
-            },
-            "2cc91dc2-ce04-4bdb-b491-b08f89ec433c": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "5036203a-4533-424d-969b-0f1fe2fd574e": {
-                "progress": [
-                    true
-                ]
-            },
-            "81a694f8-3b09-474c-86f5-d5ec4c8cef34": {
-                "progress": [
-                    true
-                ]
-            },
-            "23f3058d-6276-4a08-bc9e-678527c62350": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "10cd83bd-1cb5-4d78-8bb1-f5187359fb70": {
-                "progress": [
-                    true
-                ]
-            }
-        },
-        "bioBreakTaken": true,
-        "id": "a4e190c8-66de-4e91-8f2b-d332d9c82913"
-    },
-    {
-        "teamNum": 5,
-        "name": "Candi-out",
-        "score": 15,
-        "catchTimes": [
-            1722723246365
-        ],
-        "challengeProgress": {
-            "b7448fcd-29f3-4936-93b4-528e2940d361": {
-                "progress": [
-                    true
-                ]
-            },
-            "95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
-                "progress": [
-                    true
-                ]
-            },
-            "81a694f8-3b09-474c-86f5-d5ec4c8cef34": {
-                "progress": [
-                    true
-                ]
-            },
-            "5c5ea111-c3d4-4e76-89f4-34bf81205fc8": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "601a0033-04e1-4df8-8efa-855e95414da7": {
-                "progress": [
-                    true
-                ]
-            },
-            "23f3058d-6276-4a08-bc9e-678527c62350": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "5f36ac75-ab5a-43d1-a59b-c8f683f4bfc0": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "eaffb8a4-5c3c-4c78-9160-3600dfe01309": {
-                "progress": [
-                    true,
-                    false
-                ]
-            },
-            "6438932e-c717-4ff1-88d5-1f9531ebc63d": {
-                "progress": [
-                    true
-                ]
-            },
-            "c4c205fd-866d-4d62-af18-3af24ef0eef1": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "99e6d39f-d3d7-4bd3-b15d-5efd988ad915": {
-                "progress": [
-                    true,
-                    true,
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "f997d0db-4239-416e-b1cc-e514c2b3bc1e": {
-                "progress": [
-                    true,
-                    true,
-                    false,
-                    false
-                ]
-            },
-            "980d790c-4062-4d8b-a449-37b8dcdfadb9": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            }
-        },
-        "bioBreakTaken": true,
-        "id": "e126ccce-73d0-4550-9204-69c1386f2047"
-    },
-    {
-        "teamNum": 6,
-        "name": "Just One More Lane",
-        "score": 47,
-        "catchTimes": [],
-        "challengeProgress": {
-            "b7448fcd-29f3-4936-93b4-528e2940d361": {
-                "progress": [
-                    true
-                ]
-            },
-            "0f08578d-632b-4a30-b59d-3a0048ad1591": {
-                "progress": [
-                    false
-                ]
-            },
-            "eaffb8a4-5c3c-4c78-9160-3600dfe01309": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
-                "progress": [
-                    true
-                ]
-            },
-            "85144906-ddb0-4f7e-9e5b-cfdce6986615": {
-                "progress": [
-                    true
-                ]
-            },
-            "d956c276-f320-4089-8f6c-4a061a8c8b3b": {
-                "progress": [
-                    true
-                ]
-            },
-            "0ecabee5-21da-4a19-b65d-039ca5b6d27b": {
-                "progress": [
-                    true
-                ]
-            },
-            "3318a05c-56ae-4fe2-b003-12d0d7d976ea": {
-                "progress": [
-                    true
-                ]
-            },
-            "3b47d785-b5c7-44fb-b570-f65c369a2555": {
-                "progress": [
-                    true
-                ]
-            },
-            "d9fa56f6-0617-43a4-be66-c390618a4160": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "d96969b7-c2c7-490a-a928-68bfaf60f2a2": {
-                "progress": [
-                    true
-                ]
-            },
-            "4dcf3828-72fd-4c30-9275-efab42854599": {
-                "progress": [
-                    true
-                ]
-            },
-            "76c2a248-d182-46ad-ab04-725f6c9ac498": {
-                "manualComplete": false,
-                "progress": [
-                    false
-                ]
-            },
-            "99e6d39f-d3d7-4bd3-b15d-5efd988ad915": {
-                "progress": [
-                    true,
-                    true,
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "cf098c06-9739-446b-a3aa-6a9a8f5055b0": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "6438932e-c717-4ff1-88d5-1f9531ebc63d": {
-                "progress": [
-                    true
-                ]
-            },
-            "f997d0db-4239-416e-b1cc-e514c2b3bc1e": {
-                "progress": [
-                    true,
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "23f3058d-6276-4a08-bc9e-678527c62350": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "10cd83bd-1cb5-4d78-8bb1-f5187359fb70": {
-                "progress": [
-                    true
-                ]
-            }
-        },
-        "bioBreakTaken": true,
-        "id": "8a0c50c0-1148-4c74-8696-a5ba237b36dc"
-    },
-    {
-        "teamNum": 7,
-        "name": "The Fabulous Four",
-        "score": 11,
-        "catchTimes": [
-            1722725589964
-        ],
-        "challengeProgress": {
-            "ea6f022d-823a-46ba-8741-0d3515fbe180": {
-                "progress": [
-                    true
-                ]
-            },
-            "980d790c-4062-4d8b-a449-37b8dcdfadb9": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "b7448fcd-29f3-4936-93b4-528e2940d361": {
-                "progress": [
-                    true
-                ]
-            },
-            "0ecabee5-21da-4a19-b65d-039ca5b6d27b": {
-                "progress": [
-                    true
-                ]
-            },
-            "3b47d785-b5c7-44fb-b570-f65c369a2555": {
-                "progress": [
-                    true
-                ]
-            }
-        },
-        "bioBreakTaken": true,
-        "id": "0267e863-d401-4356-a864-eff30ddebd7d"
-    },
-    {
-        "teamNum": 8,
-        "name": "gaymanram",
-        "score": 1,
-        "catchTimes": [
-            1722720045033
-        ],
-        "challengeProgress": {
-            "b2d3b8da-b366-4973-b080-cb909047b228": {
-                "progress": [
-                    true,
-                    false
-                ]
-            },
-            "b7448fcd-29f3-4936-93b4-528e2940d361": {
-                "progress": [
-                    true
-                ]
-            },
-            "c35d9c23-f940-41e0-9504-ceb9ceb88402": {
-                "progress": [
-                    true
-                ]
-            },
-            "5f36ac75-ab5a-43d1-a59b-c8f683f4bfc0": {
-                "progress": [
-                    true,
-                    false,
-                    false
-                ]
-            },
-            "76c2a248-d182-46ad-ab04-725f6c9ac498": {
-                "manualComplete": false,
-                "progress": [
-                    false
-                ]
-            },
-            "95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
-                "progress": [
-                    true
-                ]
-            },
-            "5c5ea111-c3d4-4e76-89f4-34bf81205fc8": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "81a694f8-3b09-474c-86f5-d5ec4c8cef34": {
-                "progress": [
-                    true
-                ]
-            }
-        },
-        "bioBreakTaken": false,
-        "id": "d9b9e363-1f37-4a56-81d6-d99c86e8254d"
-    },
-    {
-        "teamNum": 9,
-        "name": "Golden State Warriors",
-        "score": 29,
-        "catchTimes": [
-            1722728895693,
-            1722731649149
-        ],
-        "challengeProgress": {
-            "4dcf3828-72fd-4c30-9275-efab42854599": {
-                "progress": [
-                    true
-                ]
-            },
-            "5f36ac75-ab5a-43d1-a59b-c8f683f4bfc0": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "b2d3b8da-b366-4973-b080-cb909047b228": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "1d431c54-2a14-45ed-b301-78eef915c26c": {
-                "progress": [
-                    true
-                ]
-            },
-            "76c2a248-d182-46ad-ab04-725f6c9ac498": {
-                "manualComplete": false,
-                "progress": [
-                    false
-                ]
-            },
-            "b7448fcd-29f3-4936-93b4-528e2940d361": {
-                "progress": [
-                    true
-                ]
-            },
-            "23f3058d-6276-4a08-bc9e-678527c62350": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
-                "progress": [
-                    true
-                ]
-            },
-            "5c5ea111-c3d4-4e76-89f4-34bf81205fc8": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "601a0033-04e1-4df8-8efa-855e95414da7": {
-                "progress": [
-                    true
-                ]
-            },
-            "81a694f8-3b09-474c-86f5-d5ec4c8cef34": {
-                "progress": [
-                    true
-                ]
-            },
-            "c35d9c23-f940-41e0-9504-ceb9ceb88402": {
-                "progress": [
-                    true
-                ]
-            },
-            "cf098c06-9739-446b-a3aa-6a9a8f5055b0": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "c4c205fd-866d-4d62-af18-3af24ef0eef1": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "ea6f022d-823a-46ba-8741-0d3515fbe180": {
-                "progress": [
-                    true
-                ]
-            },
-            "eaffb8a4-5c3c-4c78-9160-3600dfe01309": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "57469233-ca1f-482b-a3b6-83e493c92961": {
-                "progress": [
-                    true
-                ]
-            },
-            "d956c276-f320-4089-8f6c-4a061a8c8b3b": {
-                "progress": [
-                    true
-                ]
-            },
-            "d9fa56f6-0617-43a4-be66-c390618a4160": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "f997d0db-4239-416e-b1cc-e514c2b3bc1e": {
-                "progress": [
-                    true,
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "10cd83bd-1cb5-4d78-8bb1-f5187359fb70": {
-                "progress": [
-                    true
-                ]
-            }
-        },
-        "bioBreakTaken": true,
-        "id": "a8c3dc37-0f8d-4ecc-87fd-749d78cc9313"
-    },
-    {
-        "teamNum": 10,
-        "name": "Oh Hi Marc",
-        "score": 24,
-        "catchTimes": [
-            1722721785801
-        ],
-        "challengeProgress": {
-            "6438932e-c717-4ff1-88d5-1f9531ebc63d": {
-                "progress": [
-                    true
-                ]
-            },
-            "76c2a248-d182-46ad-ab04-725f6c9ac498": {
-                "manualComplete": false,
-                "progress": [
-                    false
-                ]
-            },
-            "b7448fcd-29f3-4936-93b4-528e2940d361": {
-                "progress": [
-                    true
-                ]
-            },
-            "99e6d39f-d3d7-4bd3-b15d-5efd988ad915": {
-                "progress": [
-                    true,
-                    true,
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "cf098c06-9739-446b-a3aa-6a9a8f5055b0": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "032a582d-0519-4f56-b885-dd26fe8eeb9b": {
-                "progress": [
-                    true,
-                    false,
-                    false
-                ]
-            },
-            "95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
-                "progress": [
-                    true
-                ]
-            },
-            "57469233-ca1f-482b-a3b6-83e493c92961": {
-                "progress": [
-                    true
-                ]
-            },
-            "b53b68ae-f1ce-4ed5-a77a-545ced94227c": {
-                "progress": [
-                    true,
-                    true,
-                    true
-                ]
-            },
-            "1d431c54-2a14-45ed-b301-78eef915c26c": {
-                "progress": [
-                    true
-                ]
-            },
-            "b2d3b8da-b366-4973-b080-cb909047b228": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "23f3058d-6276-4a08-bc9e-678527c62350": {
-                "progress": [
-                    true,
-                    true
-                ]
-            },
-            "d956c276-f320-4089-8f6c-4a061a8c8b3b": {
-                "progress": [
-                    true
-                ]
-            },
-            "85144906-ddb0-4f7e-9e5b-cfdce6986615": {
-                "progress": [
-                    true
-                ]
-            },
-            "f997d0db-4239-416e-b1cc-e514c2b3bc1e": {
-                "progress": [
-                    true,
-                    true,
-                    true,
-                    true
-                ]
-            }
-        },
-        "bioBreakTaken": true,
-        "id": "1ea3d86d-12db-420d-918c-49f69318b1d3"
-    }
+	{
+		"teamNum": 1,
+		"name": "Light Rail 2025",
+		"score": 20,
+		"catchTimes": [],
+		"challengeProgress": {
+			"95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
+				"progress": [true]
+			},
+			"b2d3b8da-b366-4973-b080-cb909047b228": {
+				"progress": [true, false]
+			},
+			"55b692d1-902f-434c-9b33-28d03e0731c9": {
+				"progress": [true, false, false]
+			},
+			"f997d0db-4239-416e-b1cc-e514c2b3bc1e": {
+				"progress": [true, true, true, true]
+			},
+			"b7448fcd-29f3-4936-93b4-528e2940d361": {
+				"progress": [true]
+			},
+			"5036203a-4533-424d-969b-0f1fe2fd574e": {
+				"progress": [true]
+			},
+			"c35d9c23-f940-41e0-9504-ceb9ceb88402": {
+				"progress": [true]
+			},
+			"10cd83bd-1cb5-4d78-8bb1-f5187359fb70": {
+				"progress": [true]
+			},
+			"5c5ea111-c3d4-4e76-89f4-34bf81205fc8": {
+				"progress": [true, true, true]
+			},
+			"81a694f8-3b09-474c-86f5-d5ec4c8cef34": {
+				"progress": [true]
+			},
+			"23f3058d-6276-4a08-bc9e-678527c62350": {
+				"progress": [true, true]
+			},
+			"5f36ac75-ab5a-43d1-a59b-c8f683f4bfc0": {
+				"progress": [true, false, false]
+			},
+			"4dcf3828-72fd-4c30-9275-efab42854599": {
+				"progress": [true]
+			},
+			"76c2a248-d182-46ad-ab04-725f6c9ac498": {
+				"manualComplete": false,
+				"progress": [false]
+			},
+			"c4c205fd-866d-4d62-af18-3af24ef0eef1": {
+				"progress": [true, true]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "bd8d9c64-1629-4371-83e1-cb4ce0d06b9a"
+	},
+	{
+		"teamNum": 2,
+		"name": "Just 2 More Lanes",
+		"score": 31,
+		"catchTimes": [1722721087200],
+		"challengeProgress": {
+			"4dcf3828-72fd-4c30-9275-efab42854599": {
+				"progress": [true]
+			},
+			"5f36ac75-ab5a-43d1-a59b-c8f683f4bfc0": {
+				"progress": [true, false, false]
+			},
+			"980d790c-4062-4d8b-a449-37b8dcdfadb9": {
+				"progress": [true, true, true]
+			},
+			"6438932e-c717-4ff1-88d5-1f9531ebc63d": {
+				"progress": [true]
+			},
+			"d96969b7-c2c7-490a-a928-68bfaf60f2a2": {
+				"progress": [true]
+			},
+			"d9fa56f6-0617-43a4-be66-c390618a4160": {
+				"progress": [true, true]
+			},
+			"b7448fcd-29f3-4936-93b4-528e2940d361": {
+				"progress": [true]
+			},
+			"c4c205fd-866d-4d62-af18-3af24ef0eef1": {
+				"progress": [true, true]
+			},
+			"3318a05c-56ae-4fe2-b003-12d0d7d976ea": {
+				"progress": [true]
+			},
+			"3b47d785-b5c7-44fb-b570-f65c369a2555": {
+				"progress": [true]
+			},
+			"0ecabee5-21da-4a19-b65d-039ca5b6d27b": {
+				"progress": [true]
+			},
+			"76c2a248-d182-46ad-ab04-725f6c9ac498": {
+				"manualComplete": false,
+				"progress": [false]
+			},
+			"d956c276-f320-4089-8f6c-4a061a8c8b3b": {
+				"progress": [true]
+			},
+			"95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
+				"progress": [true]
+			},
+			"57469233-ca1f-482b-a3b6-83e493c92961": {
+				"progress": [true]
+			},
+			"10cd83bd-1cb5-4d78-8bb1-f5187359fb70": {
+				"progress": [true]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "0247f4a2-0163-4816-bb2e-e781eb9efeec"
+	},
+	{
+		"teamNum": 3,
+		"name": "Bratz",
+		"score": 39,
+		"catchTimes": [1722725871031],
+		"challengeProgress": {
+			"b7448fcd-29f3-4936-93b4-528e2940d361": {
+				"progress": [true]
+			},
+			"b2d3b8da-b366-4973-b080-cb909047b228": {
+				"progress": [true, true]
+			},
+			"95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
+				"progress": [true]
+			},
+			"eaffb8a4-5c3c-4c78-9160-3600dfe01309": {
+				"progress": [true, true]
+			},
+			"5f36ac75-ab5a-43d1-a59b-c8f683f4bfc0": {
+				"progress": [true, true, true]
+			},
+			"1d431c54-2a14-45ed-b301-78eef915c26c": {
+				"progress": [true]
+			},
+			"23f3058d-6276-4a08-bc9e-678527c62350": {
+				"progress": [true, true]
+			},
+			"5c5ea111-c3d4-4e76-89f4-34bf81205fc8": {
+				"progress": [true, true, true]
+			},
+			"601a0033-04e1-4df8-8efa-855e95414da7": {
+				"progress": [true]
+			},
+			"81a694f8-3b09-474c-86f5-d5ec4c8cef34": {
+				"progress": [true]
+			},
+			"c35d9c23-f940-41e0-9504-ceb9ceb88402": {
+				"progress": [true]
+			},
+			"10cd83bd-1cb5-4d78-8bb1-f5187359fb70": {
+				"progress": [true]
+			},
+			"cf098c06-9739-446b-a3aa-6a9a8f5055b0": {
+				"progress": [true, true]
+			},
+			"ea6f022d-823a-46ba-8741-0d3515fbe180": {
+				"progress": [true]
+			},
+			"c4c205fd-866d-4d62-af18-3af24ef0eef1": {
+				"progress": [true, true]
+			},
+			"f997d0db-4239-416e-b1cc-e514c2b3bc1e": {
+				"progress": [true, true, false, false]
+			},
+			"99e6d39f-d3d7-4bd3-b15d-5efd988ad915": {
+				"progress": [true, true, true, true, true]
+			},
+			"57469233-ca1f-482b-a3b6-83e493c92961": {
+				"progress": [true]
+			},
+			"6438932e-c717-4ff1-88d5-1f9531ebc63d": {
+				"progress": [true]
+			},
+			"0039ccbb-0c11-45ad-8ae7-2de1f47484c9": {
+				"progress": [true]
+			},
+			"d956c276-f320-4089-8f6c-4a061a8c8b3b": {
+				"progress": [true]
+			},
+			"85144906-ddb0-4f7e-9e5b-cfdce6986615": {
+				"progress": [true]
+			},
+			"4dcf3828-72fd-4c30-9275-efab42854599": {
+				"progress": [true]
+			},
+			"76c2a248-d182-46ad-ab04-725f6c9ac498": {
+				"progress": [true]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "17145c05-06be-47ac-85de-e4cdd07be051"
+	},
+	{
+		"teamNum": 4,
+		"name": "Is it “team jaaga”",
+		"score": 25,
+		"catchTimes": [1722721696636, 1722724702108],
+		"challengeProgress": {
+			"5f36ac75-ab5a-43d1-a59b-c8f683f4bfc0": {
+				"progress": [true, true, true]
+			},
+			"5c5ea111-c3d4-4e76-89f4-34bf81205fc8": {
+				"progress": [true, true, true]
+			},
+			"b7448fcd-29f3-4936-93b4-528e2940d361": {
+				"progress": [true]
+			},
+			"76c2a248-d182-46ad-ab04-725f6c9ac498": {
+				"manualComplete": false,
+				"progress": [false]
+			},
+			"f997d0db-4239-416e-b1cc-e514c2b3bc1e": {
+				"progress": [true, true, true, true]
+			},
+			"cf098c06-9739-446b-a3aa-6a9a8f5055b0": {
+				"progress": [true, true]
+			},
+			"99e6d39f-d3d7-4bd3-b15d-5efd988ad915": {
+				"progress": [true, true, true, true, true]
+			},
+			"95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
+				"progress": [true]
+			},
+			"6438932e-c717-4ff1-88d5-1f9531ebc63d": {
+				"progress": [true]
+			},
+			"c4c205fd-866d-4d62-af18-3af24ef0eef1": {
+				"progress": [true, true]
+			},
+			"d956c276-f320-4089-8f6c-4a061a8c8b3b": {
+				"progress": [true]
+			},
+			"d9fa56f6-0617-43a4-be66-c390618a4160": {
+				"progress": [true, false]
+			},
+			"57469233-ca1f-482b-a3b6-83e493c92961": {
+				"progress": [true]
+			},
+			"2cc91dc2-ce04-4bdb-b491-b08f89ec433c": {
+				"progress": [true, true]
+			},
+			"5036203a-4533-424d-969b-0f1fe2fd574e": {
+				"progress": [true]
+			},
+			"81a694f8-3b09-474c-86f5-d5ec4c8cef34": {
+				"progress": [true]
+			},
+			"23f3058d-6276-4a08-bc9e-678527c62350": {
+				"progress": [true, true]
+			},
+			"10cd83bd-1cb5-4d78-8bb1-f5187359fb70": {
+				"progress": [true]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "a4e190c8-66de-4e91-8f2b-d332d9c82913"
+	},
+	{
+		"teamNum": 5,
+		"name": "Candi-out",
+		"score": 15,
+		"catchTimes": [1722723246365],
+		"challengeProgress": {
+			"b7448fcd-29f3-4936-93b4-528e2940d361": {
+				"progress": [true]
+			},
+			"95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
+				"progress": [true]
+			},
+			"81a694f8-3b09-474c-86f5-d5ec4c8cef34": {
+				"progress": [true]
+			},
+			"5c5ea111-c3d4-4e76-89f4-34bf81205fc8": {
+				"progress": [true, true, true]
+			},
+			"601a0033-04e1-4df8-8efa-855e95414da7": {
+				"progress": [true]
+			},
+			"23f3058d-6276-4a08-bc9e-678527c62350": {
+				"progress": [true, true]
+			},
+			"5f36ac75-ab5a-43d1-a59b-c8f683f4bfc0": {
+				"progress": [true, true, true]
+			},
+			"eaffb8a4-5c3c-4c78-9160-3600dfe01309": {
+				"progress": [true, false]
+			},
+			"6438932e-c717-4ff1-88d5-1f9531ebc63d": {
+				"progress": [true]
+			},
+			"c4c205fd-866d-4d62-af18-3af24ef0eef1": {
+				"progress": [true, true]
+			},
+			"99e6d39f-d3d7-4bd3-b15d-5efd988ad915": {
+				"progress": [true, true, true, true, true]
+			},
+			"f997d0db-4239-416e-b1cc-e514c2b3bc1e": {
+				"progress": [true, true, false, false]
+			},
+			"980d790c-4062-4d8b-a449-37b8dcdfadb9": {
+				"progress": [true, true, true]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "e126ccce-73d0-4550-9204-69c1386f2047"
+	},
+	{
+		"teamNum": 6,
+		"name": "Just One More Lane",
+		"score": 47,
+		"catchTimes": [],
+		"challengeProgress": {
+			"b7448fcd-29f3-4936-93b4-528e2940d361": {
+				"progress": [true]
+			},
+			"0f08578d-632b-4a30-b59d-3a0048ad1591": {
+				"progress": [false]
+			},
+			"eaffb8a4-5c3c-4c78-9160-3600dfe01309": {
+				"progress": [true, true]
+			},
+			"95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
+				"progress": [true]
+			},
+			"85144906-ddb0-4f7e-9e5b-cfdce6986615": {
+				"progress": [true]
+			},
+			"d956c276-f320-4089-8f6c-4a061a8c8b3b": {
+				"progress": [true]
+			},
+			"0ecabee5-21da-4a19-b65d-039ca5b6d27b": {
+				"progress": [true]
+			},
+			"3318a05c-56ae-4fe2-b003-12d0d7d976ea": {
+				"progress": [true]
+			},
+			"3b47d785-b5c7-44fb-b570-f65c369a2555": {
+				"progress": [true]
+			},
+			"d9fa56f6-0617-43a4-be66-c390618a4160": {
+				"progress": [true, true]
+			},
+			"d96969b7-c2c7-490a-a928-68bfaf60f2a2": {
+				"progress": [true]
+			},
+			"4dcf3828-72fd-4c30-9275-efab42854599": {
+				"progress": [true]
+			},
+			"76c2a248-d182-46ad-ab04-725f6c9ac498": {
+				"manualComplete": false,
+				"progress": [false]
+			},
+			"99e6d39f-d3d7-4bd3-b15d-5efd988ad915": {
+				"progress": [true, true, true, true, true]
+			},
+			"cf098c06-9739-446b-a3aa-6a9a8f5055b0": {
+				"progress": [true, true]
+			},
+			"6438932e-c717-4ff1-88d5-1f9531ebc63d": {
+				"progress": [true]
+			},
+			"f997d0db-4239-416e-b1cc-e514c2b3bc1e": {
+				"progress": [true, true, true, true]
+			},
+			"23f3058d-6276-4a08-bc9e-678527c62350": {
+				"progress": [true, true]
+			},
+			"10cd83bd-1cb5-4d78-8bb1-f5187359fb70": {
+				"progress": [true]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "8a0c50c0-1148-4c74-8696-a5ba237b36dc"
+	},
+	{
+		"teamNum": 7,
+		"name": "The Fabulous Four",
+		"score": 11,
+		"catchTimes": [1722725589964],
+		"challengeProgress": {
+			"ea6f022d-823a-46ba-8741-0d3515fbe180": {
+				"progress": [true]
+			},
+			"980d790c-4062-4d8b-a449-37b8dcdfadb9": {
+				"progress": [true, true, true]
+			},
+			"b7448fcd-29f3-4936-93b4-528e2940d361": {
+				"progress": [true]
+			},
+			"0ecabee5-21da-4a19-b65d-039ca5b6d27b": {
+				"progress": [true]
+			},
+			"3b47d785-b5c7-44fb-b570-f65c369a2555": {
+				"progress": [true]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "0267e863-d401-4356-a864-eff30ddebd7d"
+	},
+	{
+		"teamNum": 8,
+		"name": "gaymanram",
+		"score": 1,
+		"catchTimes": [1722720045033],
+		"challengeProgress": {
+			"b2d3b8da-b366-4973-b080-cb909047b228": {
+				"progress": [true, false]
+			},
+			"b7448fcd-29f3-4936-93b4-528e2940d361": {
+				"progress": [true]
+			},
+			"c35d9c23-f940-41e0-9504-ceb9ceb88402": {
+				"progress": [true]
+			},
+			"5f36ac75-ab5a-43d1-a59b-c8f683f4bfc0": {
+				"progress": [true, false, false]
+			},
+			"76c2a248-d182-46ad-ab04-725f6c9ac498": {
+				"manualComplete": false,
+				"progress": [false]
+			},
+			"95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
+				"progress": [true]
+			},
+			"5c5ea111-c3d4-4e76-89f4-34bf81205fc8": {
+				"progress": [true, true, true]
+			},
+			"81a694f8-3b09-474c-86f5-d5ec4c8cef34": {
+				"progress": [true]
+			}
+		},
+		"bioBreakTaken": false,
+		"id": "d9b9e363-1f37-4a56-81d6-d99c86e8254d"
+	},
+	{
+		"teamNum": 9,
+		"name": "Golden State Warriors",
+		"score": 29,
+		"catchTimes": [1722728895693, 1722731649149],
+		"challengeProgress": {
+			"4dcf3828-72fd-4c30-9275-efab42854599": {
+				"progress": [true]
+			},
+			"5f36ac75-ab5a-43d1-a59b-c8f683f4bfc0": {
+				"progress": [true, true, true]
+			},
+			"b2d3b8da-b366-4973-b080-cb909047b228": {
+				"progress": [true, true]
+			},
+			"1d431c54-2a14-45ed-b301-78eef915c26c": {
+				"progress": [true]
+			},
+			"76c2a248-d182-46ad-ab04-725f6c9ac498": {
+				"manualComplete": false,
+				"progress": [false]
+			},
+			"b7448fcd-29f3-4936-93b4-528e2940d361": {
+				"progress": [true]
+			},
+			"23f3058d-6276-4a08-bc9e-678527c62350": {
+				"progress": [true, true]
+			},
+			"95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
+				"progress": [true]
+			},
+			"5c5ea111-c3d4-4e76-89f4-34bf81205fc8": {
+				"progress": [true, true, true]
+			},
+			"601a0033-04e1-4df8-8efa-855e95414da7": {
+				"progress": [true]
+			},
+			"81a694f8-3b09-474c-86f5-d5ec4c8cef34": {
+				"progress": [true]
+			},
+			"c35d9c23-f940-41e0-9504-ceb9ceb88402": {
+				"progress": [true]
+			},
+			"cf098c06-9739-446b-a3aa-6a9a8f5055b0": {
+				"progress": [true, true]
+			},
+			"c4c205fd-866d-4d62-af18-3af24ef0eef1": {
+				"progress": [true, true]
+			},
+			"ea6f022d-823a-46ba-8741-0d3515fbe180": {
+				"progress": [true]
+			},
+			"eaffb8a4-5c3c-4c78-9160-3600dfe01309": {
+				"progress": [true, true]
+			},
+			"57469233-ca1f-482b-a3b6-83e493c92961": {
+				"progress": [true]
+			},
+			"d956c276-f320-4089-8f6c-4a061a8c8b3b": {
+				"progress": [true]
+			},
+			"d9fa56f6-0617-43a4-be66-c390618a4160": {
+				"progress": [true, true]
+			},
+			"f997d0db-4239-416e-b1cc-e514c2b3bc1e": {
+				"progress": [true, true, true, true]
+			},
+			"10cd83bd-1cb5-4d78-8bb1-f5187359fb70": {
+				"progress": [true]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "a8c3dc37-0f8d-4ecc-87fd-749d78cc9313"
+	},
+	{
+		"teamNum": 10,
+		"name": "Oh Hi Marc",
+		"score": 24,
+		"catchTimes": [1722721785801],
+		"challengeProgress": {
+			"6438932e-c717-4ff1-88d5-1f9531ebc63d": {
+				"progress": [true]
+			},
+			"76c2a248-d182-46ad-ab04-725f6c9ac498": {
+				"manualComplete": false,
+				"progress": [false]
+			},
+			"b7448fcd-29f3-4936-93b4-528e2940d361": {
+				"progress": [true]
+			},
+			"99e6d39f-d3d7-4bd3-b15d-5efd988ad915": {
+				"progress": [true, true, true, true, true]
+			},
+			"cf098c06-9739-446b-a3aa-6a9a8f5055b0": {
+				"progress": [true, true]
+			},
+			"032a582d-0519-4f56-b885-dd26fe8eeb9b": {
+				"progress": [true, false, false]
+			},
+			"95efa0e7-3f00-425d-af16-3e11dcd4d3a8": {
+				"progress": [true]
+			},
+			"57469233-ca1f-482b-a3b6-83e493c92961": {
+				"progress": [true]
+			},
+			"b53b68ae-f1ce-4ed5-a77a-545ced94227c": {
+				"progress": [true, true, true]
+			},
+			"1d431c54-2a14-45ed-b301-78eef915c26c": {
+				"progress": [true]
+			},
+			"b2d3b8da-b366-4973-b080-cb909047b228": {
+				"progress": [true, true]
+			},
+			"23f3058d-6276-4a08-bc9e-678527c62350": {
+				"progress": [true, true]
+			},
+			"d956c276-f320-4089-8f6c-4a061a8c8b3b": {
+				"progress": [true]
+			},
+			"85144906-ddb0-4f7e-9e5b-cfdce6986615": {
+				"progress": [true]
+			},
+			"f997d0db-4239-416e-b1cc-e514c2b3bc1e": {
+				"progress": [true, true, true, true]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "1ea3d86d-12db-420d-918c-49f69318b1d3"
+	}
 ]
