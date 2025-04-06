@@ -40,18 +40,12 @@
 </script>
 
 <section
-	transition:fly={isFloat ? { y: 200, x: -20 } : { duration: 0 }}
+	transition:fly={isFloat ? { y: 200, x: 0 } : { duration: 0 }}
 	class={`${challenge.category} ${isComplete ? 'complete' : 'incomplete'} ${isFloat ? '' : 'inline'}`}
 >
 	<span class="header">
 		{#if isComplete}
 			✅
-		{:else if challenge.category === 'find'}
-			📷
-		{:else if challenge.category === 'challenge'}
-			🎫
-		{:else}
-			🔓
 		{/if}
 	</span>
 
@@ -124,13 +118,16 @@
 
 <style>
 	section {
-		background-color: white;
+		background-color: rgb(250, 250, 250);
 		color: black;
 		box-sizing: border-box;
 		margin: 30px auto;
 		width: calc(100% - 20px);
+		max-height: calc(100vh - 60px);
+		max-height: calc(100svh - 60px);
 		max-width: 520px;
-		box-shadow: -5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+		border-bottom: 5px black solid;
 
 		position: fixed;
 		bottom: 0;
@@ -147,33 +144,18 @@
 		margin: 0 auto;
 	}
 
-	section.challenge .header {
-		background: rgba(39, 174, 96, 1);
-	}
-
-	.msg.challenge {
+	section.challenge {
 		--color: rgba(39, 174, 96, 1);
+		background: rgb(250, 253, 250);
 	}
 
-	section.find .header {
-		background: rgb(41, 128, 185);
-	}
-
-	.msg.find {
+	section.find {
 		--color: rgba(41, 128, 185, 1);
+		background: rgb(250, 250, 253);
 	}
 
 	.content {
-		overflow-y: auto;
-		padding: 30px;
-		max-height: calc(100vh - 220px);
-		max-height: calc(100svh - 220px);
-
-		background-image: url($lib/images/ett1/paper.png);
-		background-size: 100% auto;
-		background-position: center top;
-		background-repeat: repeat-y;
-		background-attachment: local;
+		padding: 0 30px 30px 30px;
 	}
 
 	section.inline .content {
@@ -185,16 +167,39 @@
 		align-items: center;
 		justify-content: center;
 
-		--color: #95a5a6;
-		background: var(--color);
 		box-sizing: border-box;
 
 		position: relative;
 		font-size: 45px;
 		width: 100%;
 		left: 0;
-		height: 100px;
+		height: 85px;
 		margin: 0;
+	}
+
+	.header::before {
+		content: '';
+		display: block;
+		height: 16px;
+		width: 100%;
+		background: var(--color);
+		position: absolute;
+
+		top: 42px;
+		left: 0;
+	}
+
+	.header::after {
+		content: '';
+		display: block;
+		height: 55px;
+		width: 55px;
+		border: 7px black solid;
+		background: white;
+		position: absolute;
+		border-radius: 40px;
+		top: 22.5px;
+		box-sizing: border-box;
 	}
 
 	section.complete {
@@ -208,7 +213,7 @@
 
 	.closeBtn {
 		position: absolute;
-		top: 40px;
+		top: 35px;
 		left: 30px;
 		background: none;
 		border: none;
@@ -228,6 +233,8 @@
 	h1 {
 		font-size: 32px;
 		margin-top: 0;
+		margin-bottom: 1.2em;
+		text-align: center;
 	}
 
 	h2 {
@@ -265,9 +272,10 @@
 	}
 
 	.msg {
-		--color: black;
-		border: 2px var(--color) solid;
-		border-left: 6px var(--color) solid;
+		/* border: 2px var(--color) solid;
+		border-left: 6px var(--color) solid; */
+		background: rgb(240, 240, 240);
+		border-bottom: 5px var(--color) solid;
 		padding: 1em 1.5em;
 		margin: 20px 0;
 	}

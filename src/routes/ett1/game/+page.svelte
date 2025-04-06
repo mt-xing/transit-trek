@@ -169,7 +169,7 @@
 </svelte:head>
 
 {#if team && gameState}
-	<h1><em>{team.name || 'Untitled Team'}</em><br />Team {team.teamNum} Dashboard</h1>
+	<h1>{team.name || 'Untitled Team'}<br />Team {team.teamNum} Dashboard</h1>
 
 	<div class="card">
 		<p>This page is private and should only be viewed by members of your team.</p>
@@ -196,6 +196,8 @@
 			<p>Game has not started yet.</p>
 		{:else if gameState?.t === 'post'}
 			<p>Game has concluded.</p>
+		{:else}
+			<span style="display: block; padding-bottom: 1em;"></span>
 		{/if}
 	</div>
 
@@ -323,45 +325,47 @@
 	}
 
 	h1 {
-		color: #a10000;
-		-webkit-text-stroke: 2px white;
-		paint-order: stroke fill;
-
-		font-family: 'Caveat', cursive;
-		font-optical-sizing: auto;
-		font-weight: 700;
-		font-style: normal;
+		font-family: 'ClearSansBold', 'Arial', sans-serif;
+		font-weight: 900;
 
 		margin-top: 0;
 		padding: 50px 20px 30px 20px;
 		box-sizing: border-box;
 		width: 100%;
 		font-size: 50px;
-		text-shadow: 0 0 20px white;
 	}
 
 	:global(body) {
 		margin: 0;
 		padding: 0;
+		background-color: white;
+		font-family: 'ClearSans', 'Arial', sans-serif;
+	}
 
-		background-image: url($lib/images/ett1/bg_repeat.jpg);
-		background-size: 100% auto;
-		background-repeat: repeat-y;
+	@font-face {
+		font-family: 'ClearSansBold';
+		src: url('/ett1/ClearSans-Bold.ttf');
+	}
+
+	@font-face {
+		font-family: 'ClearSans';
+		src: url('/ett1/ClearSans-Regular.ttf');
 	}
 
 	.card {
-		background: rgb(255, 255, 128);
-		color: black;
-		backdrop-filter: blur(10px);
-		border-top: 2px rgba(128, 0, 0, 0.5) solid;
-		box-shadow: -5px 5px 5px 0 rgba(0, 0, 0, 0.2);
-
 		max-width: 500px;
 		width: calc(100% - 50px);
 		margin: 20px auto;
 		padding: 30px 10px 20px 10px;
-		box-sizing: border-box;
-		overflow-x: hidden;
+
+		background: rgb(240, 240, 240);
+		border-bottom: 5px black solid;
+
+		font-size: 20px;
+		text-align: center;
+
+		position: relative;
+		z-index: 1;
 	}
 
 	.card::before {
@@ -383,18 +387,26 @@
 	}
 
 	.card.challenges {
-		padding: 0 0 0 20px;
-		border-top: none;
-		border-left: 10px var(--color) solid;
-		background: linear-gradient(to right, rgb(255, 255, 128), rgba(255, 255, 128, 0.5));
+		padding: 10px 20px;
+		background: none;
+		border: none;
 	}
 
-	.card.challenges::before {
-		display: none;
+	.card.challenges h3::before {
+		display: inline-block;
+		content: '';
+		height: 12px;
+		width: 48px;
+		background: var(--color);
+		margin-right: 1em;
 	}
 
 	.card.challenges h3 {
 		font-weight: normal;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.card.challenges.challenge {

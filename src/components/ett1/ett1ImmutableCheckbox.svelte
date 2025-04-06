@@ -39,7 +39,6 @@
 		height: 25px;
 		flex-shrink: 0;
 		font-size: 15px;
-		border-radius: 5px;
 		background: #c0392b;
 		color: white;
 		display: inline-flex;
