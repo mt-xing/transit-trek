@@ -239,6 +239,7 @@
 		margin-top: 0;
 		margin-bottom: 1.2em;
 		text-align: center;
+		font-family: 'ClearSansBold', 'Arial', sans-serif;
 	}
 
 	h2 {
@@ -276,8 +277,6 @@
 	}
 
 	.msg {
-		/* border: 2px var(--color) solid;
-		border-left: 6px var(--color) solid; */
 		background: rgb(240, 240, 240);
 		border-bottom: 5px var(--color) solid;
 		padding: 1em 1.5em;

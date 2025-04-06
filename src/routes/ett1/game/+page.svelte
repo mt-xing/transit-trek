@@ -437,7 +437,7 @@
 		box-sizing: border-box;
 		background: white;
 		position: absolute;
-		top: 10px;
+		top: 14px;
 		left: -15px;
 		border: 5px black solid;
 
@@ -456,7 +456,7 @@
 	}
 
 	.challengeList.find .station {
-		top: 26px;
+		top: 30px;
 	}
 
 	.challengeList .points {
@@ -467,12 +467,14 @@
 		font-size: 50px;
 		margin-left: 20px;
 		opacity: 0.6;
+		font-family: 'ClearSansBold', 'Arial', sans-serif;
 	}
 
 	.challengeList .points > span {
 		font-size: 12px;
 		padding-bottom: 10px;
 		padding-left: 2px;
+		font-family: 'ClearSans', 'Arial', sans-serif;
 	}
 
 	.challengeList .wrap {
@@ -485,6 +487,7 @@
 		font-size: 16px;
 		margin: 0 0 5px 0;
 		font-weight: bold;
+		font-family: 'ClearSansBold', 'Arial', sans-serif;
 
 		text-align: left;
 	}
