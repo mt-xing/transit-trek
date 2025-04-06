@@ -244,15 +244,11 @@
 				{#each sortedChallenges[category] as challenge}
 					<li>
 						<button on:click={() => openCallback(challenge)}>
-							<span class="icon">
-								{#if isEtt1ChallengeComplete(challenge, team.challengeProgress)}
-									<span style="transform: translateY(-5px)scale(0.8);">✅</span>
-								{:else if category === 'find'}
-									<span style="transform: translateY(-12px)">📷</span>
-								{:else if category === 'challenge'}
-									<span style="transform: translateY(-5px)">🎫</span>
-								{/if}
-							</span>
+							{#if isEtt1ChallengeComplete(challenge, team.challengeProgress)}
+								<span class="station done">✔</span>
+							{:else}
+								<span class="station"></span>
+							{/if}
 							<div class="wrap">
 								<h4>{challenge.title}</h4>
 								<p>{previewText(challenge.desc)}</p>
@@ -368,20 +364,6 @@
 		z-index: 1;
 	}
 
-	.card::before {
-		content: '';
-		position: absolute;
-		width: 40px;
-		height: 40px;
-		top: 5px;
-		left: 45%;
-		z-index: 1;
-		background-image: url($lib/images/ett1/pin.png);
-		background-size: contain;
-		background-repeat: no-repeat;
-		pointer-events: none;
-	}
-
 	.card h2 {
 		margin: 5px 0 10px 0;
 	}
@@ -428,7 +410,8 @@
 	}
 
 	.challengeList li {
-		margin-bottom: 10px;
+		margin: 0;
+		position: relative;
 	}
 
 	.challengeList button {
@@ -436,25 +419,43 @@
 		color: black;
 		width: 100%;
 		padding: 20px 30px;
-		background: linear-gradient(to bottom right, rgba(var(--color), 0.2), rgba(var(--color), 0) 50%),
-			white;
-		border-left: 5px rgb(var(--color)) solid;
+		background: white;
+		border-left: 12px rgb(var(--color)) solid;
 		cursor: pointer;
 
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-
-		box-shadow: -5px 5px 5px 0 rgba(0, 0, 0, 0.2);
 	}
 
-	.challengeList .icon {
+	.challengeList .station {
+		width: 40px;
+		height: 40px;
+		border-radius: 40px;
+		box-sizing: border-box;
+		background: white;
+		position: absolute;
+		top: 10px;
+		left: -15px;
+		border: 5px black solid;
+
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 40px;
-		margin-right: 20px;
+	}
+
+	.challengeList .station.done {
+		background: black;
+		font-size: 30px;
+		overflow: hidden;
+		border: none;
+		color: white;
+		font-weight: 900;
+	}
+
+	.challengeList.find .station {
+		top: 26px;
 	}
 
 	.challengeList .points {

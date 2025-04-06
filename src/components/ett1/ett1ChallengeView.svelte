@@ -43,17 +43,18 @@
 	transition:fly={isFloat ? { y: 200, x: 0 } : { duration: 0 }}
 	class={`${challenge.category} ${isComplete ? 'complete' : 'incomplete'} ${isFloat ? '' : 'inline'}`}
 >
+	{#if isFloat}
+		<button on:click={closeCallback} class="closeBtn" aria-label="Close">╳</button>
+	{/if}
+
 	<span class="header">
 		{#if isComplete}
-			✅
+			<span>✔</span>
 		{/if}
 	</span>
 
 	<div class="content">
 		<h1>{challenge.title}</h1>
-		{#if isFloat}
-			<button on:click={closeCallback} class="closeBtn" aria-label="Close">╳</button>
-		{/if}
 
 		{#if progress?.manualComplete !== undefined}
 			<p class="msg override">The status of this challenge has been overridden by Game Control.</p>
@@ -146,12 +147,12 @@
 
 	section.challenge {
 		--color: rgba(39, 174, 96, 1);
-		background: rgb(250, 253, 250);
+		background: rgb(250, 250, 250);
 	}
 
 	section.find {
 		--color: rgba(41, 128, 185, 1);
-		background: rgb(250, 250, 253);
+		background: rgb(250, 250, 255);
 	}
 
 	.content {
@@ -202,32 +203,37 @@
 		box-sizing: border-box;
 	}
 
-	section.complete {
-		box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.5);
+	.complete .header::after {
+		background: black;
 	}
 
-	section.complete .header {
-		font-weight: bold;
-		text-shadow: 0 0 30px white;
+	.complete .header span {
+		position: relative;
+		z-index: 5;
+		color: white;
+		font-weight: 900;
+		top: 6px;
 	}
 
 	.closeBtn {
 		position: absolute;
-		top: 35px;
-		left: 30px;
-		background: none;
+		top: 0;
+		left: 0;
 		border: none;
 		cursor: pointer;
 		font-weight: bold;
 		color: white;
 
-		background: rgba(0, 0, 0, 0.5);
-		width: 30px;
-		height: 30px;
+		background: black;
+		width: 36px;
+		height: 36px;
+		font-size: 20px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		border-radius: 15px;
+		z-index: 5;
+
+		/* box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5); */
 	}
 
 	h1 {
