@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { ETT1Team } from '../../../../../types/ett1/team';
+	import { getColor } from '../../../../../utils/ett1/colors';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -32,9 +33,8 @@
 			<ul>
 				{#each teamRank as team}
 					<li>
-						Team {team.teamNum}: {team.name ?? '🛑 NO TEAM NAME YET'}{team.bioBreakTaken
-							? ''
-							: ' - 🛑 NO BIO BREAK YET'}
+						<span class="colorBadge" style="--color: {getColor(team.teamNum)};"></span> Team {team.teamNum}:
+						{team.name ?? '🛑 NO TEAM NAME YET'}{team.bioBreakTaken ? '' : ' - 🛑 NO BIO BREAK YET'}
 					</li>
 				{/each}
 			</ul>
@@ -48,5 +48,11 @@
 	li {
 		font-size: 20px;
 		margin: 0.5em 0;
+	}
+	.colorBadge {
+		display: inline-block;
+		height: 1em;
+		width: 1em;
+		background: var(--color);
 	}
 </style>

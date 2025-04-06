@@ -5,6 +5,7 @@
 		type ETT1ChallengeDefinition,
 	} from '../../../../types/ett1/challenge';
 	import type { ETT1Team } from '../../../../types/ett1/team';
+	import { getColor } from '../../../../utils/ett1/colors';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -91,6 +92,7 @@
 
 {#if selectedTeam && selectedChallenge}
 	<h2>
+		<span class="colorBadge" style="--color: {getColor(selectedTeam.teamNum)};"></span>
 		{selectedTeam.teamNum}: {selectedTeam.name}
 		<br />
 		{ett1ChallengeCategoryNames[selectedChallenge.category]}: {selectedChallenge.title}
@@ -108,5 +110,11 @@
 <style>
 	select {
 		padding: 1em 2em;
+	}
+	.colorBadge {
+		display: inline-block;
+		height: 1em;
+		width: 1em;
+		background: var(--color);
 	}
 </style>

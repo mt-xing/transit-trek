@@ -11,6 +11,7 @@
 	import type { PageData } from './$types';
 	import type { ETT1GameState } from '../../../types/ett1/game';
 	import { isEtt1ChallengeComplete } from '../../../utils/ett1/challenge';
+	import { getColor } from '../../../utils/ett1/colors';
 
 	export let data: PageData;
 	let { allChallenges, gameState, team } = data;
@@ -174,7 +175,10 @@
 </svelte:head>
 
 {#if team && gameState}
-	<h1>{team.name || 'Untitled Team'}<br />Team {team.teamNum} Dashboard</h1>
+	<h1 class="topTitle">{team.name || '⚠️ Untitled Team'}</h1>
+	<h1 class="bottomTitle" style="--color: {getColor(team.teamNum)};">
+		Team {team.teamNum} Dashboard
+	</h1>
 
 	<div class="card">
 		<p>This page is private and should only be viewed by members of your team.</p>
@@ -336,6 +340,36 @@
 		box-sizing: border-box;
 		width: 100%;
 		font-size: 50px;
+	}
+
+	.topTitle {
+		padding-bottom: 35px;
+		margin-bottom: 0;
+		margin-top: 0;
+		padding-top: 26px;
+	}
+
+	.bottomTitle {
+		padding-top: 30px;
+		margin-top: 0;
+		position: relative;
+		border-top: 12px var(--color) solid;
+	}
+
+	.bottomTitle::before {
+		content: '';
+
+		width: 40px;
+		height: 40px;
+		border-radius: 40px;
+		box-sizing: border-box;
+		background: white;
+		position: absolute;
+		border: 5px black solid;
+
+		top: -26px;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	:global(body) {

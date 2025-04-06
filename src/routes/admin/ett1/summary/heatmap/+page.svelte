@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { isEtt1ChallengeComplete } from '../../../../../utils/ett1/challenge';
 	import type { PageData } from './$types';
+	import { getColor } from '../../../../../utils/ett1/colors';
 
 	export let data: PageData;
 
@@ -42,6 +43,7 @@
 	{#each teams as team}
 		<tr>
 			<th style="max-width: 200px;line-break: anywhere;">
+				<span class="colorBadge" style="--color: {getColor(team.teamNum)};"></span>
 				{team.teamNum}: {team.name} ({team.score} pts)
 
 				{#if !team.bioBreakTaken}
@@ -81,5 +83,12 @@
 		line-break: anywhere;
 		width: 3vw;
 		font-size: 12px;
+	}
+
+	.colorBadge {
+		display: inline-block;
+		height: 1em;
+		width: 1em;
+		background: var(--color);
 	}
 </style>

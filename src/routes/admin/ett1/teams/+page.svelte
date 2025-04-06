@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { getColor } from '../../../../utils/ett1/colors';
 	import type { PageData } from './$types';
 	import { copyGreeting } from './greetingMsg';
 
@@ -13,7 +14,11 @@
 <ul>
 	{#each teams as team}
 		<li>
-			<a href="/admin/ett1/teams/edit?id={team.id}">{team.teamNum}: {team.name}</a> -
+			<a href="/admin/ett1/teams/edit?id={team.id}">
+				<span class="colorBadge" style="--color: {getColor(team.teamNum)};"></span>
+				{team.teamNum}: {team.name}
+			</a>
+			-
 			<a target="_blank" href="/ett1/game?id={team.secret}">(View Dashboard)</a> -
 			<button on:click={copyGreeting.bind(undefined, team.secret, team.teamNum)}
 				>Copy Greeting</button
@@ -37,5 +42,12 @@
 
 	button {
 		padding: 0.5em 1em;
+	}
+
+	.colorBadge {
+		display: inline-block;
+		height: 1em;
+		width: 1em;
+		background: var(--color);
 	}
 </style>

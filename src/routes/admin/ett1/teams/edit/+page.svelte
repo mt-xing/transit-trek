@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { getColor } from '../../../../../utils/ett1/colors';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -15,7 +16,11 @@
 	let deleteString = '';
 </script>
 
-<h1>Edit: <em>Team {teamNum} - {name || 'Untitled Team'}</em></h1>
+<h1>
+	Edit:
+	<span class="colorBadge" style="--color: {getColor(team.teamNum)};"></span>
+	<em>Team {teamNum} - {name || 'Untitled Team'}</em>
+</h1>
 
 <form method="POST">
 	<p>
@@ -68,3 +73,12 @@
 		</p>
 	</form>
 </div>
+
+<style>
+	.colorBadge {
+		display: inline-block;
+		height: 1em;
+		width: 1em;
+		background: var(--color);
+	}
+</style>
