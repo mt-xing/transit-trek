@@ -394,11 +394,11 @@
 	}
 
 	.card.challenges.challenge {
-		--color: rgba(39, 174, 96, 1);
+		--color: #3dae2b;
 	}
 
 	.card.challenges.find {
-		--color: rgba(41, 128, 185, 1);
+		--color: #00a0df;
 	}
 
 	.challengeList {
@@ -509,13 +509,13 @@
 	.challengeList.challenge,
 	.curveIn.challenge,
 	.curveOut.challenge {
-		--color: 39, 174, 96;
+		--color: 61, 174, 43;
 	}
 
 	.challengeList.find,
 	.curveIn.find,
 	.curveOut.find {
-		--color: 41, 128, 185;
+		--color: 0, 160, 223;
 	}
 
 	.curveIn,
@@ -570,6 +570,7 @@
 		text-align: center;
 		font-size: 50px;
 		font-weight: bold;
+		font-family: 'ClearSansBold', 'Arial', sans-serif;
 		opacity: 0.5;
 		display: flex;
 		align-items: center;
