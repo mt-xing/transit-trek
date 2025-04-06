@@ -266,7 +266,7 @@
 			<div class={`curveOut ${category}`}></div>
 		{/each}
 
-		<div class="card">
+		<div class="card" style="margin-top: 50px;">
 			<h2>Standings</h2>
 			{#if rankings.length > 0}
 				<ol class="rankingList">
@@ -484,7 +484,7 @@
 	.challengeList .wrap h4 {
 		font-size: 16px;
 		margin: 0 0 5px 0;
-		font-weight: normal;
+		font-weight: bold;
 
 		text-align: left;
 	}
