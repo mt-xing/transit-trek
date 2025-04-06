@@ -51,13 +51,13 @@
 				{/if}
 			</th>
 			{#each challenges as challenge}
-				<td>
-					{#if isEtt1ChallengeComplete(challenge, team.challengeProgress)}
-						✅
-					{:else if team.challengeProgress[challenge.id]?.progress?.some((x) => !!x)}
-						🚸
-					{/if}
-				</td>
+				{#if isEtt1ChallengeComplete(challenge, team.challengeProgress)}
+					<td style="background:lightgreen;">✅</td>
+				{:else if team.challengeProgress[challenge.id]?.progress?.some((x) => !!x)}
+					<td style="background:yellow">🚸</td>
+				{:else}
+					<td style="background:rgb(255,128,128)"></td>
+				{/if}
 			{/each}
 		</tr>
 	{/each}
