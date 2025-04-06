@@ -106,7 +106,9 @@
 
 						clearInterval(challengeUpdateInterval);
 						if (newState.t !== 'pre') {
-							challengeUpdateInterval = setInterval(updateChallenges, challengeUpdateTime);
+							if (challengeUpdateInterval === undefined) {
+								challengeUpdateInterval = setInterval(updateChallenges, challengeUpdateTime);
+							}
 							if (newState.t === 'ongoing') {
 								updateChallenges();
 							}
@@ -147,8 +149,11 @@
 		setTimeout(updateGameState, 1000);
 		teamUpdateInterval = setInterval(updateTeamState, teamUpdateTime(gameState));
 		rankUpdateInterval = setInterval(updateRank, rankUpdateTime(gameState));
-
 		setTimeout(updateRank, 3000);
+
+		if (gameState?.t === 'ongoing') {
+			challengeUpdateInterval = setInterval(updateChallenges, challengeUpdateTime);
+		}
 	});
 
 	function previewText(x: string): string {
