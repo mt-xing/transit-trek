@@ -240,6 +240,7 @@
 				<h3>{ett1ChallengeCategoryNames[category]}</h3>
 			</div>
 
+			<div class={`curveIn ${category}`}></div>
 			<ul class={`challengeList ${category}`}>
 				{#each sortedChallenges[category] as challenge}
 					<li>
@@ -262,6 +263,7 @@
 					</li>
 				{/each}
 			</ul>
+			<div class={`curveOut ${category}`}></div>
 		{/each}
 
 		<div class="card">
@@ -400,13 +402,12 @@
 	}
 
 	.challengeList {
-		margin: 0;
 		padding: 0;
 		list-style: none;
 
 		max-width: 500px;
 		width: calc(100% - 50px);
-		margin: 20px auto;
+		margin: 0 auto;
 	}
 
 	.challengeList li {
@@ -502,12 +503,40 @@
 		-webkit-box-orient: vertical;
 	}
 
-	.challengeList.challenge {
+	.challengeList.challenge,
+	.curveIn.challenge,
+	.curveOut.challenge {
 		--color: 39, 174, 96;
 	}
 
-	.challengeList.find {
+	.challengeList.find,
+	.curveIn.find,
+	.curveOut.find {
 		--color: 41, 128, 185;
+	}
+
+	.curveIn,
+	.curveOut {
+		height: 30px;
+		width: max(calc(50% - 250px), 25px);
+
+		border-right-style: solid;
+		border-right-width: 12px;
+		border-color: rgb(var(--color));
+
+		position: relative;
+	}
+
+	.curveIn {
+		border-top-style: solid;
+		border-top-width: 12px;
+		border-top-right-radius: 30px;
+	}
+
+	.curveOut {
+		border-bottom-style: solid;
+		border-bottom-width: 12px;
+		border-bottom-right-radius: 30px;
 	}
 
 	.rankingList {
