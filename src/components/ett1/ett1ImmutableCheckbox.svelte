@@ -11,7 +11,7 @@
 
 	<span class="checkbox" class:checked>
 		{#if checked}
-			✓
+			✔
 		{:else}
 			╳
 		{/if}

@@ -232,8 +232,6 @@
 		align-items: center;
 		justify-content: center;
 		z-index: 5;
-
-		/* box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5); */
 	}
 
 	h1 {
