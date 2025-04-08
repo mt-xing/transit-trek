@@ -476,7 +476,7 @@
 		box-sizing: border-box;
 		background: white;
 		position: absolute;
-		top: 14px;
+		top: 16px;
 		left: -15px;
 		border: 5px black solid;
 
