@@ -321,7 +321,10 @@
 				target="_blank">Game Boundaries</a
 			>
 		</p>
-		<p>The game will not require you to leave the marked zone.</p>
+		<p>
+			The game will not require you to leave the marked zone. You may not complete challenges outside
+			of the game area.
+		</p>
 	</details>
 
 	<details>
@@ -347,7 +350,11 @@
 
 	<details>
 		<summary><h2>Ending Point</h2></summary>
-		<p>The ending point will be the Lincoln Square South food court in downtown Bellevue.</p>
+		<p>
+			The ending point will be at the northeast corner of Bellevue Downtown Park, as marked on the
+			game map. Be sure to show up there by <strong>6:00pm</strong>. We will hold the award
+			ceremonies there.
+		</p>
 	</details>
 
 	<details>
