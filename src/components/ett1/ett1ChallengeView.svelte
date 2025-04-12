@@ -103,7 +103,7 @@
 					For this challenge, follow the instructions. If a selfie is requested, all team members
 					must be visible unless explicitly stated otherwise.
 				{:else if challenge.category === 'hard'}
-					This is a end-game challenge. Your may not begin an attempt on this challenge until your
+					This is an end-game challenge. Your may not begin an attempt on this challenge until your
 					team has earned 80 points.
 				{/if}
 			</p>
