@@ -102,6 +102,7 @@
 		challenge={selectedChallenge}
 		challengeProgress={selectedTeam.challengeProgress}
 		teamId={selectedTeam.id}
+		teamScore={selectedTeam.score}
 	/>
 {/if}
 

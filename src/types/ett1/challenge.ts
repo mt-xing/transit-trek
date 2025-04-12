@@ -24,7 +24,7 @@ export type ETT1PublicChallengeDefinition = DistributiveOmit<
 >;
 
 export type ETT1ChallengeType = ETT1ChallengeDefinition['type'];
-export type ETT1ChallengeCategory = 'challenge' | 'find';
+export type ETT1ChallengeCategory = 'challenge' | 'find' | 'hard';
 
 export function sortEtt1Challenges<T extends ETT1PublicChallengeDefinition>(
 	list: T[],
@@ -37,6 +37,7 @@ export function sortEtt1Challenges<T extends ETT1PublicChallengeDefinition>(
 		{
 			challenge: [],
 			find: [],
+			hard: [],
 		} as Record<ETT1ChallengeCategory, T[]>,
 	);
 }
@@ -44,6 +45,7 @@ export function sortEtt1Challenges<T extends ETT1PublicChallengeDefinition>(
 export const ett1ChallengeCategoryNames: Record<ETT1ChallengeCategory, string> = {
 	challenge: 'Challenge Tasks',
 	find: 'Find This',
+	hard: 'End-Game Tasks'
 };
 
 export function iterateEtt1Categories<T>(x: Record<ETT1ChallengeCategory, T>) {

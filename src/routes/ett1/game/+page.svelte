@@ -249,6 +249,19 @@
 				<h3>{ett1ChallengeCategoryNames[category]}</h3>
 			</div>
 
+			{#if category === 'hard'}
+				<p style="width: 90%; max-width: 800px; margin: 0 auto 1em auto;">
+					You must have earned at least 80 points so far to <em style="text-decoration: underline;"
+						>begin</em
+					> these challenges.
+				</p>
+				{#if team.score < 80}
+					<p style="width: 90%; max-width: 800px; margin: 0 auto 1em auto;">
+						⚠️ Your team does not have enough points.
+					</p>
+				{/if}
+			{/if}
+
 			<div class={`curveIn ${category}`}></div>
 			<ul class={`challengeList ${category}`}>
 				{#each sortedChallenges[category] as challenge}
@@ -303,6 +316,7 @@
 					selectedChallenge = null;
 				}}
 				isFloat={true}
+				score={team.score}
 			/>
 		{/if}
 	{/if}
@@ -440,6 +454,10 @@
 		--color: #00a0df;
 	}
 
+	.card.challenges.hard {
+		--color: #8a2631;
+	}
+
 	.challengeList {
 		padding: 0;
 		list-style: none;
@@ -555,6 +573,12 @@
 	.curveIn.find,
 	.curveOut.find {
 		--color: 0, 160, 223;
+	}
+
+	.challengeList.hard,
+	.curveIn.hard,
+	.curveOut.hard {
+		--color: 138, 38, 49;
 	}
 
 	.curveIn,

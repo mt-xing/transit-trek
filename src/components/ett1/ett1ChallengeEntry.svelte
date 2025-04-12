@@ -6,6 +6,7 @@
 	export let teamId: string;
 	export let challenge: ETT1ChallengeDefinition;
 	export let challengeProgress: ETT1ChallengeProgress;
+	export let teamScore: number;
 
 	$: progress = challengeProgress[challenge.id];
 
@@ -38,7 +39,13 @@
 {#if progress}
 	<div class="secWrap" style="background: white;">
 		{#key challenge.id}
-			<Ett1ChallengeView isFloat={false} {challengeProgress} {challenge} closeCallback={() => {}} />
+			<Ett1ChallengeView
+				isFloat={false}
+				{challengeProgress}
+				{challenge}
+				closeCallback={() => {}}
+				score={teamScore}
+			/>
 		{/key}
 	</div>
 

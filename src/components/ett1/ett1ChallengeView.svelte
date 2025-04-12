@@ -11,6 +11,7 @@
 
 	export let challenge: ETT1PublicChallengeDefinition;
 	export let challengeProgress: ETT1ChallengeProgress;
+	export let score: number;
 	export let closeCallback: () => void;
 	export let isFloat: boolean;
 
@@ -63,6 +64,23 @@
 				</p>
 			{/if}
 
+			{#if challenge.category === 'hard'}
+				{#if score < 80}
+					<p class="msg override" style="font-size: 1.2em; display: flex; flex-direction: row;">
+						<span style="font-size: 3em; margin-right: 20px;">⚠️</span>
+						<span
+							>You may not <em style="text-decoration: underline;">begin</em> this challenge until your
+							team has earned 80 points.</span
+						>
+					</p>
+				{:else}
+					<p class="msg hard">
+						This challenge may only be attempted by teams with at least 80 points. You may begin
+						this challenge if you so choose.
+					</p>
+				{/if}
+			{/if}
+
 			<p class={`msg ${challenge.category}`}>
 				{challenge.points} point{challenge.points === 1 ? '' : 's'}
 			</p>
@@ -84,6 +102,9 @@
 				{:else if challenge.category === 'challenge'}
 					For this challenge, follow the instructions. If a selfie is requested, all team members
 					must be visible unless explicitly stated otherwise.
+				{:else if challenge.category === 'hard'}
+					This is a end-game challenge. Your may not begin an attempt on this challenge until your
+					team has earned 80 points.
 				{/if}
 			</p>
 
@@ -162,12 +183,17 @@
 
 	section.challenge {
 		--color: #3dae2b;
-		background: rgb(250, 250, 250);
+		background: rgb(253, 255, 253);
 	}
 
 	section.find {
 		--color: #00a0df;
 		background: rgb(250, 250, 255);
+	}
+
+	section.hard {
+		--color: #8a2631;
+		background: rgb(255, 253, 253);
 	}
 
 	.content {
