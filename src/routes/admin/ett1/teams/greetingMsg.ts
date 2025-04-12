@@ -1,5 +1,5 @@
 export function copyGreeting(teamSecretGuid: string, teamNum: number) {
-	const text = `Hi y'all! I'm Michael, and I'll be running Game Control today. Please ping me when you complete challenges so I can check off your progress. You can also ask me questions and I'll try my best to answer or direct you to someone who can.
+	const text = `Hi y'all! I'm Michael, and I'll be running Game Control today. Please ping me in this chat when you complete challenges so I can check off your progress. You can also ask me questions and I'll try my best to answer or direct you to someone who can.
 
 Your team's dashboard is available at this link: http://transittrek.org/ett1/game?id=${teamSecretGuid}
 Note that this URL is specific to your team and should be kept secret, so please don't share it with anyone outside your team. If your URL is accidentally leaked, please let me know immediately as I can invalidate and generate a new link for you.
