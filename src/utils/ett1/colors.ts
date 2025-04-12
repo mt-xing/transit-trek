@@ -24,6 +24,8 @@ export function getColor(teamNum: number) {
             return "#B36305";
         case 12:
             return "#84B817";
+        case 13:
+            return "#8480d7";
         default:
             return "hotpink";
     }
