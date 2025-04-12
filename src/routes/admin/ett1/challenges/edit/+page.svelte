@@ -15,7 +15,7 @@
 	let category = challenge?.category ?? 'selfie';
 	let privateNotes = challenge?.privateNotes ?? '';
 
-	let bonusEnabled = (challenge?.bonus ?? 0) > 0;
+	let bonusEnabled = (challenge?.bonus ?? 0) !== 0;
 	let bonusAmount = challenge?.bonus ?? 1;
 
 	let type: ETT1ChallengeType = challenge?.type ?? 'single';
