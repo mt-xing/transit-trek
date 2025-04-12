@@ -250,13 +250,13 @@
 			</div>
 
 			{#if category === 'hard'}
-				<p style="width: 90%; max-width: 800px; margin: 0 auto 1em auto;">
+				<p style="width: 90%; max-width: 800px; margin: 0 auto 1em auto; font-size: 18px;">
 					You must have earned at least 80 points so far to <em style="text-decoration: underline;"
 						>begin</em
 					> these challenges.
 				</p>
 				{#if team.score < 80}
-					<p style="width: 90%; max-width: 800px; margin: 0 auto 1em auto;">
+					<p style="width: 90%; max-width: 800px; margin: 0 auto 1.5em auto; font-size: 18px;">
 						⚠️ Your team does not have enough points.
 					</p>
 				{/if}
@@ -456,6 +456,7 @@
 
 	.card.challenges.hard {
 		--color: #8a2631;
+		margin-bottom: 0;
 	}
 
 	.challengeList {
