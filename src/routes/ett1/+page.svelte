@@ -322,8 +322,8 @@
 			>
 		</p>
 		<p>
-			The game will not require you to leave the marked zone. You may not complete challenges outside
-			of the game area.
+			The game will not require you to leave the marked zone. You may not complete challenges
+			outside of the game area.
 		</p>
 	</details>
 
@@ -620,7 +620,7 @@
 		width: 80%;
 		display: block;
 		margin: 10px auto;
-		padding: 3em 4em;
+		padding: 4vw 6vw;
 		box-sizing: border-box;
 		font-size: 18px;
 
@@ -641,7 +641,7 @@
 	details summary::before {
 		content: '';
 		position: absolute;
-		left: calc(-72px - 2.8vw + 1.05vw);
+		left: calc(-6vw - 2.8vw + 1.05vw);
 		top: 50%;
 		transform: translateY(-50%);
 		width: 4vw;
