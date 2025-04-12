@@ -115,7 +115,7 @@
 
 			{#if challenge.bonus}
 				<h3>Score Adjustments</h3>
-				<p>Score modified by {challenge.bonus} point{challenge.bonus === 1 ? '' : 's'}</p>
+				<p>Adjustment of {challenge.bonus} point{challenge.bonus === 1 ? '' : 's'}</p>
 				<ImmutableCheckbox
 					checked={progress?.bonus ?? false}
 					text={progress?.bonus ?? false ? 'Active' : 'Inactive'}
