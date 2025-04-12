@@ -19,6 +19,7 @@
 				'5c5ea111-c3d4-4e76-89f4-34bf81205fc8': { progress: [true, true, true] },
 			}}
 			isFloat={true}
+			score={0}
 		/>
 	{/if}
 </div>
