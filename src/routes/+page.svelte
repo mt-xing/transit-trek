@@ -6,6 +6,7 @@
 	import tt4Text from '$lib/images/tt4/text_clean_no_glow.png';
 	import tt5Bg from '$lib/images/tt5/tt5_bg.jpg';
 	import tt5Text from '$lib/images/tt5/tt5_logo_cropped.png';
+	import ett1Bg from '$lib/images/ett1/ett1_blur_preview.png';
 	import BigBtn from '../components/bigBtn.svelte';
 </script>
 
@@ -114,6 +115,12 @@
 <section class="picsection previousEvents">
 	<h2>Previous Events</h2>
 	<ul>
+		<li>
+			<a href="/ett1" style="background-image: url({ett1Bg});">
+				<h3>Eastside Transit Trek</h3>
+				<p>April 12, 2025</p>
+			</a>
+		</li>
 		<li>
 			<a href="/tt5" style="--num: '5';background-image: url({tt5Bg});">
 				<h3>Emerald City Expedition</h3>
