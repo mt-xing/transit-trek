@@ -231,6 +231,12 @@
 		</p>
 	</div>
 	<div class="q">
+		<p class="question">Do the creators of <i>Jet Lag: The Game</i> know about Transit Trek?</p>
+		<p>
+			Yes! Ben and Adam are aware of Transit Treks and think they're pretty cool.
+		</p>
+	</div>
+	<div class="q">
 		<p class="question">Is this a puzzle game?</p>
 		<p>
 			No, and the creators of the Transit Trek intend to keep it that way. We wanted to create a
