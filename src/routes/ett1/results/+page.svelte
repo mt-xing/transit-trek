@@ -94,7 +94,11 @@
 </svelte:head>
 
 <div id="outerWrap">
-	<TopLogo />
+	<div id="headerBg"></div>
+	<TopLogo
+		customStyles="text-shadow: none; opacity: 1; font-family: Noto Sans, Helvetica, sans-serif; top: 2vh; color: white;"
+		customImgStyles="box-shadow: none;"
+	/>
 
 	<h1 class="hero">Results</h1>
 
@@ -189,15 +193,11 @@
 					{#each challenges[category] as challenge}
 						<li>
 							<button on:click={() => openCallback(challenge)}>
-								<span class="icon">
-									{#if isEtt1ChallengeComplete(challenge, teamProgress)}
-										<span style="transform: translateY(-5px)scale(0.8);">✅</span>
-									{:else if category === 'find'}
-										<span style="transform: translateY(-12px)">📷</span>
-									{:else if category === 'challenge'}
-										<span style="transform: translateY(-5px)">🎫</span>
-									{/if}
-								</span>
+								{#if isEtt1ChallengeComplete(challenge, teamProgress)}
+									<span class="station done">✔</span>
+								{:else}
+									<span class="station"></span>
+								{/if}
 								<div class="wrap">
 									<h4>{challenge.title}</h4>
 									<p>{previewText(challenge.desc)}</p>
@@ -243,10 +243,18 @@
 		</div>
 	</section>
 
-	<section class="info midtext signupWrap lower">
-		<strong>Thanks For Playing!</strong>
-		<BigBtn isBlack={true} href="/ett1/" text="Back" color={['rgb(255,0,0)', 'rgb(128,0,0)']} />
-	</section>
+	<div class="signupWrap">
+		<p>Thanks For Playing!</p>
+		<p>
+			<BigBtn
+				isBlack={true}
+				href="/ett1/"
+				text="Back"
+				color={['rgb(128,255,255)', 'rgb(200,255,255)']}
+				customStyles="text-shadow: none; -webkit-text-stroke: unset; box-shadow: none; color: black; font-family: ClearSansBold, Arial, sans-serif; font-size: 30px;"
+			/>
+		</p>
+	</div>
 </div>
 
 {#if selectedChallenge !== null}
@@ -267,6 +275,16 @@
 		margin: 0;
 	}
 
+	#headerBg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: min(calc(100px + 4vh), calc(10vw + 4vh));
+		background: #f24e69;
+		z-index: 5;
+	}
+
 	#outerWrap {
 		position: relative;
 		width: 100%;
@@ -276,25 +294,44 @@
 		overflow-y: clip;
 		display: flow-root;
 		position: relative;
-
-		background-image: url($lib/images/ett1/bg_repeat.jpg);
-		background-size: 100% auto;
-		background-repeat: repeat-y;
+		background: white;
 	}
 
 	.hero {
-		color: white;
+		color: black;
 		font-size: min(150px, 20vw);
 		text-align: center;
-		margin-top: 250px;
-		text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
-		-webkit-text-stroke: 5px black;
-		paint-order: stroke fill;
+		margin-top: calc(250px + 5vw);
+		position: relative;
+	}
+
+	.hero::after {
+		content: '';
+		height: 2vw;
+		width: 100%;
+		position: absolute;
+		background: #00a0df;
+		left: 0;
+		top: calc(-4vw);
+	}
+
+	.hero::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: -3vw;
+		transform: translate(-50%, -50%);
+		width: 4vw;
+		height: 4vw;
+		border-radius: 4vw;
+		border: 0.8vw black solid;
+		background: white;
+		z-index: 4;
 	}
 
 	.midtext {
 		text-align: center;
-		color: white;
+		color: black;
 		font-size: 20px;
 		position: relative;
 		z-index: 2;
@@ -304,24 +341,65 @@
 
 	.signupWrap {
 		font-size: 30px;
-		display: flex !important;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
+		display: block;
+		width: 100%;
+		position: relative;
+		text-align: center;
 	}
 
-	.signupWrap.lower {
-		margin: 200px auto 250px auto;
+	.signupWrap::after {
+		content: '';
+		height: 2.1vw;
+		width: 100%;
+		position: absolute;
+		background: #00a0df;
+		left: 0;
+		top: calc(40px + 4vw);
 	}
 
-	.signupWrap strong {
-		margin-right: 50px;
+	.signupWrap p {
+		position: relative;
+	}
+
+	.signupWrap p:first-child {
+		margin-right: 20vw;
+		margin-bottom: 0;
+		padding-bottom: 4vw;
+	}
+
+	.signupWrap p:last-child {
+		margin-left: 20vw;
+		margin-top: 2vw;
+		padding-top: 4vw;
+	}
+
+	.signupWrap p::after {
+		content: '';
+		width: 2.1vw;
+		height: 3vw;
+		position: absolute;
+		background: #00a0df;
+
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.signupWrap p:first-child::after {
+		bottom: 0;
+	}
+
+	.signupWrap p:last-child::after {
+		top: 0;
+		z-index: 2;
+		transition: opacity 0.2s ease-in-out;
 	}
 
 	section.info {
 		color: black;
 
-		background: rgb(255, 255, 128);
+		background: rgb(240, 240, 240);
+		border-bottom: 5px black solid;
+
 		max-width: 1000px;
 		display: block;
 		margin: 70px auto;
@@ -330,23 +408,6 @@
 
 		z-index: 3;
 		position: relative;
-
-		backdrop-filter: blur(10px);
-		box-shadow: -2px 2px 10px black;
-	}
-
-	section.info::before {
-		content: '';
-		position: absolute;
-		width: 50px;
-		height: 50px;
-		top: 5px;
-		left: 45%;
-		z-index: 1;
-		background-image: url($lib/images/ett1/pin.png);
-		background-size: contain;
-		background-repeat: no-repeat;
-		pointer-events: none;
 	}
 
 	section.info h2 {
@@ -363,18 +424,46 @@
 	}
 
 	@media (max-width: 600px) {
-		.signupWrap {
-			flex-direction: column;
-		}
-
-		.signupWrap strong {
-			margin-right: 0;
-			margin-bottom: 30px;
-		}
-
 		section.info {
 			padding-left: 10vw;
 			padding-right: 10vw;
+		}
+	}
+
+	@media (max-width: 500px) {
+		.signupWrap::after {
+			top: 0;
+		}
+
+		.signupWrap::before {
+			content: '';
+			position: absolute;
+
+			width: 4vw;
+			height: 4vw;
+			border-radius: 4vw;
+			border: 0.8vw black solid;
+			z-index: 4;
+			background: white;
+			top: calc(-2.8vw + 1.05vw);
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.signupWrap p:first-child {
+			margin: 0;
+			padding-top: 7vw;
+			z-index: 2;
+		}
+
+		.signupWrap p:last-child {
+			margin: -5vw 0 0 0;
+			padding-top: 0;
+			z-index: 1;
+		}
+
+		.signupWrap p::after {
+			display: none;
 		}
 	}
 
@@ -547,35 +636,38 @@
 		}
 	}
 
-	.card.challenges {
-		padding: 0 0 0 20px;
-		border-top: none;
-		border-left: 2px var(--color) solid;
-		background: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+	.card.challenges h3::before {
+		display: inline-block;
+		content: '';
+		height: 12px;
+		width: 48px;
+		background: var(--color);
+		margin-right: 1em;
 	}
 
 	.card.challenges h3 {
 		font-weight: normal;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
 	}
 
-	.card.challenges.selfie {
-		--color: rgba(241, 196, 15, 1);
+	.card.challenges.challenge {
+		--color: #3dae2b;
 	}
 
-	.card.challenges.experience {
-		--color: rgba(39, 174, 96, 1);
+	.card.challenges.find {
+		--color: #00a0df;
 	}
 
-	.card.challenges.distraction {
-		--color: rgba(41, 128, 185, 1);
+	.card.challenges.hard {
+		--color: #8a2631;
+		margin-bottom: 0;
 	}
 
 	.card {
-		background: rgba(0, 0, 0, 0.5);
-		color: white;
-		backdrop-filter: blur(10px);
-		border-top: 2px rgba(255, 150, 255, 0.5) solid;
-		box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
+		color: black;
 
 		width: 100%;
 		margin: 20px auto;
@@ -598,30 +690,14 @@
 
 	.challengeList button {
 		border: none;
-		color: white;
 		width: 100%;
 		padding: 20px 30px;
-		background: radial-gradient(
-			farthest-corner at 0 0,
-			rgba(var(--color), 0.2),
-			rgba(0, 0, 0, 0.7) 65%
-		);
 		cursor: pointer;
 
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-
-		box-shadow: 0 0 10px 0 rgba(var(--color), 0.25);
-	}
-
-	.challengeList .icon {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 40px;
-		margin-right: 20px;
 	}
 
 	.challengeList .points {
@@ -742,8 +818,6 @@
 		padding: 0 0 0 20px;
 		color: black;
 		border-top: none;
-		border-left: 10px var(--color) solid;
-		background: white;
 	}
 
 	.card.challenges::before {
@@ -763,17 +837,17 @@
 	}
 
 	.challengeList {
-		margin: 0;
 		padding: 0;
 		list-style: none;
 
 		max-width: 500px;
 		width: calc(100% - 50px);
-		margin: 20px auto;
+		margin: 0 auto;
 	}
 
 	.challengeList li {
-		margin-bottom: 10px;
+		margin: 0;
+		position: relative;
 	}
 
 	.challengeList button {
@@ -781,25 +855,42 @@
 		color: black;
 		width: 100%;
 		padding: 20px 30px;
-		background: linear-gradient(to bottom right, rgba(var(--color), 0.2), rgba(var(--color), 0) 50%),
-			white;
-		border-left: 5px rgb(var(--color)) solid;
+		border-left: 12px rgb(var(--color)) solid;
 		cursor: pointer;
 
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-
-		box-shadow: -5px 5px 5px 0 rgba(0, 0, 0, 0.2);
 	}
 
-	.challengeList .icon {
+	.challengeList .station {
+		width: 40px;
+		height: 40px;
+		border-radius: 40px;
+		box-sizing: border-box;
+		background: white;
+		position: absolute;
+		top: 16px;
+		left: -15px;
+		border: 5px black solid;
+
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 40px;
-		margin-right: 20px;
+	}
+
+	.challengeList .station.done {
+		background: black;
+		font-size: 30px;
+		overflow: hidden;
+		border: none;
+		color: white;
+		font-weight: 900;
+	}
+
+	.challengeList.find .station {
+		top: 30px;
 	}
 
 	.challengeList .points {
@@ -810,12 +901,14 @@
 		font-size: 50px;
 		margin-left: 20px;
 		opacity: 0.6;
+		font-family: 'ClearSansBold', 'Arial', sans-serif;
 	}
 
 	.challengeList .points > span {
 		font-size: 12px;
 		padding-bottom: 10px;
 		padding-left: 2px;
+		font-family: 'ClearSans', 'Arial', sans-serif;
 	}
 
 	.challengeList .wrap {
@@ -827,7 +920,8 @@
 	.challengeList .wrap h4 {
 		font-size: 16px;
 		margin: 0 0 5px 0;
-		font-weight: normal;
+		font-weight: bold;
+		font-family: 'ClearSansBold', 'Arial', sans-serif;
 
 		text-align: left;
 	}
@@ -844,13 +938,5 @@
 		line-clamp: 2;
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
-	}
-
-	.challengeList.challenge {
-		--color: 39, 174, 96;
-	}
-
-	.challengeList.find {
-		--color: 41, 128, 185;
 	}
 </style>
