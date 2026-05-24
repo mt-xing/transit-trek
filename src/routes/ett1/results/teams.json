@@ -1,0 +1,2457 @@
+[
+	{
+		"teamNum": 1,
+		"secret": "59985ce5-7128-4d46-b14a-0ce9d217cc3c",
+		"name": "Just One More Lane 🛣",
+		"score": 88,
+		"challengeProgress": {
+			"d4477b7f-c620-42d3-8700-31e6d9b9890d": {
+				"progress": [
+					true
+				]
+			},
+			"05c59df8-8153-4022-8fcf-048c5a8c933a": {
+				"progress": [
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			"dfb111a7-d0a2-4bf8-ace9-8392f3e7a108": {
+				"progress": [
+					true
+				]
+			},
+			"694dd52f-1a4c-4f7f-8204-6fb4929e9c80": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"db457c21-d3da-4291-a700-eea41d2cc753": {
+				"progress": [
+					true
+				]
+			},
+			"bed5ce25-f1cf-403f-b465-846cd26834b7": {
+				"progress": [
+					false,
+					true,
+					false
+				]
+			},
+			"d3d6bd84-87aa-4925-a5b8-62f8ac620381": {
+				"progress": [
+					true
+				]
+			},
+			"eb89c280-b913-4334-b30b-4d2f07b90cf2": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"e6a2ba5d-60f2-446d-8208-9390a21a41fd": {
+				"progress": [
+					true
+				]
+			},
+			"1fdca0ff-64d6-4611-b0fd-55f11526522f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"5be1c420-0683-4b96-9898-d0d5da45f6d4": {
+				"progress": [
+					true
+				]
+			},
+			"a29cc449-52bd-4916-b0ae-3a86142eb4cd": {
+				"progress": [
+					true
+				]
+			},
+			"e3f46229-d984-4103-bb3d-ab3fad3c782a": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"1a1d3999-65eb-4566-b4a3-af4da2f384c7": {
+				"progress": [
+					true
+				]
+			},
+			"30d1d0ff-aa32-45e7-aa05-2ffefd2c4e14": {
+				"progress": [
+					true
+				]
+			},
+			"b4c3fc12-7145-4a74-bdd4-2d5d9310d4d7": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"eba4c784-ffe3-41de-8dd8-41f1428a243f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"9fd10e1a-7226-448f-9ced-e94a8d9a47e1": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"9ff8ce54-a1de-4a3b-a32c-d6a35de365a3": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"9539f831-89b1-49a3-8a6b-d18ff3be958b": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"0db82f01-40e2-46b0-ba56-0d7395750690": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"e0263c53-3d55-4ebf-942f-fba462fa24e5": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"88654b88-488e-4661-a937-f3c93b9245a3": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"d84fa99c-aa09-4ab0-982c-7cf2d33cc21f": {
+				"progress": [
+					true
+				]
+			},
+			"66ecfdb7-adf7-4c19-9bcf-60c365f170a1": {
+				"progress": [
+					true
+				]
+			},
+			"f60e2db3-92c8-4ae3-bb94-6f66ed7c8919": {
+				"progress": [
+					true
+				]
+			},
+			"381ba935-9d6e-49d8-9a00-936bb66de7a3": {
+				"progress": [
+					true
+				]
+			},
+			"24cb5c0d-1909-4f2a-9bd6-d664afe67059": {
+				"progress": [
+					true
+				]
+			},
+			"d9e8b40a-0a2a-4f1e-82d6-dd91ae9b57bd": {
+				"progress": [
+					true
+				]
+			},
+			"69805700-cc62-4874-b92a-1ddaae4095c3": {
+				"progress": [
+					true
+				]
+			},
+			"c80b6a49-3a1a-496f-b04a-e2575f210879": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"17924eda-042e-4882-ba67-58010ac4db7f": {
+				"progress": [
+					true
+				]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "a25f05ad-0e4f-4e09-b509-532aac4ad3a0",
+		"_rid": "NT1TAL9wnL0CAAAAAAAAAA==",
+		"_self": "dbs/NT1TAA==/colls/NT1TAL9wnL0=/docs/NT1TAL9wnL0CAAAAAAAAAA==/",
+		"_etag": "\"5c00c850-0000-0700-0000-67fb0d700000\"",
+		"_attachments": "attachments/",
+		"_ts": 1744506224
+	},
+	{
+		"teamNum": 2,
+		"secret": "6a40fb7a-a1db-46fc-8489-a9d55acf917a",
+		"name": "Team Low Battery",
+		"score": 35,
+		"challengeProgress": {
+			"d3d6bd84-87aa-4925-a5b8-62f8ac620381": {
+				"progress": [
+					true
+				]
+			},
+			"694dd52f-1a4c-4f7f-8204-6fb4929e9c80": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"d4477b7f-c620-42d3-8700-31e6d9b9890d": {
+				"progress": [
+					true
+				]
+			},
+			"9ff8ce54-a1de-4a3b-a32c-d6a35de365a3": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"d84fa99c-aa09-4ab0-982c-7cf2d33cc21f": {
+				"progress": [
+					true
+				]
+			},
+			"fc331872-9dd5-420a-b3ed-0d93934f8cbb": {
+				"progress": [
+					true
+				]
+			},
+			"15dfeb74-cabb-4a71-9131-8e0ac4641fbb": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"a22bc2ec-dc6f-4783-91f7-40cd125cf5c7": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"66ecfdb7-adf7-4c19-9bcf-60c365f170a1": {
+				"progress": [
+					true
+				]
+			},
+			"d9e8b40a-0a2a-4f1e-82d6-dd91ae9b57bd": {
+				"progress": [
+					true
+				]
+			},
+			"c80b6a49-3a1a-496f-b04a-e2575f210879": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"dfb111a7-d0a2-4bf8-ace9-8392f3e7a108": {
+				"progress": [
+					true
+				]
+			},
+			"e3f46229-d984-4103-bb3d-ab3fad3c782a": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"b4c3fc12-7145-4a74-bdd4-2d5d9310d4d7": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"c4671f90-64a4-4d73-9085-491b9deb62a3": {
+				"progress": [
+					true
+				]
+			},
+			"17924eda-042e-4882-ba67-58010ac4db7f": {
+				"progress": [
+					true
+				]
+			},
+			"69805700-cc62-4874-b92a-1ddaae4095c3": {
+				"progress": [
+					true
+				]
+			},
+			"bed5ce25-f1cf-403f-b465-846cd26834b7": {
+				"progress": [
+					false,
+					true,
+					true
+				]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "4c4aa2af-944a-492d-be4c-618b6435eac6",
+		"_rid": "NT1TAL9wnL0DAAAAAAAAAA==",
+		"_self": "dbs/NT1TAA==/colls/NT1TAL9wnL0=/docs/NT1TAL9wnL0DAAAAAAAAAA==/",
+		"_etag": "\"5a00edda-0000-0700-0000-67fb09b90000\"",
+		"_attachments": "attachments/",
+		"_ts": 1744505273
+	},
+	{
+		"teamNum": 3,
+		"secret": "4a69f236-09b0-43ce-8c78-9a13d1720183",
+		"name": "Faze Bang",
+		"score": 55,
+		"challengeProgress": {
+			"694dd52f-1a4c-4f7f-8204-6fb4929e9c80": {
+				"progress": [
+					false,
+					true,
+					false
+				]
+			},
+			"d3d6bd84-87aa-4925-a5b8-62f8ac620381": {
+				"progress": [
+					true
+				]
+			},
+			"bed5ce25-f1cf-403f-b465-846cd26834b7": {
+				"progress": [
+					false,
+					true,
+					false
+				]
+			},
+			"e0263c53-3d55-4ebf-942f-fba462fa24e5": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"69805700-cc62-4874-b92a-1ddaae4095c3": {
+				"progress": [
+					true
+				]
+			},
+			"dfb111a7-d0a2-4bf8-ace9-8392f3e7a108": {
+				"progress": [
+					true
+				]
+			},
+			"e3f46229-d984-4103-bb3d-ab3fad3c782a": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"30d1d0ff-aa32-45e7-aa05-2ffefd2c4e14": {
+				"progress": [
+					true
+				]
+			},
+			"9fd10e1a-7226-448f-9ced-e94a8d9a47e1": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"a29cc449-52bd-4916-b0ae-3a86142eb4cd": {
+				"progress": [
+					true
+				]
+			},
+			"0db82f01-40e2-46b0-ba56-0d7395750690": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"e6a2ba5d-60f2-446d-8208-9390a21a41fd": {
+				"progress": [
+					true
+				]
+			},
+			"9ff8ce54-a1de-4a3b-a32c-d6a35de365a3": {
+				"progress": [
+					true,
+					true,
+					false
+				]
+			},
+			"db457c21-d3da-4291-a700-eea41d2cc753": {
+				"progress": [
+					true
+				]
+			},
+			"eba4c784-ffe3-41de-8dd8-41f1428a243f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"8d011084-7783-4dfc-a858-0cc623061e59": {
+				"progress": [
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			"d4477b7f-c620-42d3-8700-31e6d9b9890d": {
+				"progress": [
+					true
+				]
+			},
+			"381ba935-9d6e-49d8-9a00-936bb66de7a3": {
+				"progress": [
+					true
+				]
+			},
+			"eb89c280-b913-4334-b30b-4d2f07b90cf2": {
+				"progress": [
+					true,
+					false
+				]
+			},
+			"24cb5c0d-1909-4f2a-9bd6-d664afe67059": {
+				"progress": [
+					true
+				]
+			},
+			"d9e8b40a-0a2a-4f1e-82d6-dd91ae9b57bd": {
+				"progress": [
+					true
+				]
+			},
+			"c80b6a49-3a1a-496f-b04a-e2575f210879": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"1fdca0ff-64d6-4611-b0fd-55f11526522f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"b4c3fc12-7145-4a74-bdd4-2d5d9310d4d7": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"17924eda-042e-4882-ba67-58010ac4db7f": {
+				"progress": [
+					true
+				]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "16e59ea2-4415-4915-a869-816c4be27a2a",
+		"_rid": "NT1TAL9wnL0EAAAAAAAAAA==",
+		"_self": "dbs/NT1TAA==/colls/NT1TAL9wnL0=/docs/NT1TAL9wnL0EAAAAAAAAAA==/",
+		"_etag": "\"5b00a6c7-0000-0700-0000-67fb0c180000\"",
+		"_attachments": "attachments/",
+		"_ts": 1744505880
+	},
+	{
+		"teamNum": 4,
+		"secret": "b887b9ab-46c5-488e-a3ef-43db3ecce853",
+		"name": "N/A",
+		"score": 0,
+		"challengeProgress": {},
+		"bioBreakTaken": false,
+		"id": "f9aaff72-9db6-4bca-9429-adf8a9e0802d",
+		"_rid": "NT1TAL9wnL0FAAAAAAAAAA==",
+		"_self": "dbs/NT1TAA==/colls/NT1TAL9wnL0=/docs/NT1TAL9wnL0FAAAAAAAAAA==/",
+		"_etag": "\"5900c853-0000-0700-0000-67fad2490000\"",
+		"_attachments": "attachments/",
+		"_ts": 1744491081
+	},
+	{
+		"teamNum": 5,
+		"secret": "184c331a-8df5-4712-bb6b-610885c3ff63",
+		"name": "Houthi PC Small Group",
+		"score": 81,
+		"challengeProgress": {
+			"381ba935-9d6e-49d8-9a00-936bb66de7a3": {
+				"progress": [
+					true
+				]
+			},
+			"d84fa99c-aa09-4ab0-982c-7cf2d33cc21f": {
+				"progress": [
+					true
+				]
+			},
+			"05c59df8-8153-4022-8fcf-048c5a8c933a": {
+				"progress": [
+					false,
+					true,
+					false,
+					false
+				]
+			},
+			"5be1c420-0683-4b96-9898-d0d5da45f6d4": {
+				"progress": [
+					true
+				]
+			},
+			"69805700-cc62-4874-b92a-1ddaae4095c3": {
+				"progress": [
+					true
+				]
+			},
+			"24cb5c0d-1909-4f2a-9bd6-d664afe67059": {
+				"progress": [
+					true
+				]
+			},
+			"c80b6a49-3a1a-496f-b04a-e2575f210879": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"eba4c784-ffe3-41de-8dd8-41f1428a243f": {
+				"progress": [
+					true,
+					false
+				]
+			},
+			"bed5ce25-f1cf-403f-b465-846cd26834b7": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"9fd10e1a-7226-448f-9ced-e94a8d9a47e1": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"eb89c280-b913-4334-b30b-4d2f07b90cf2": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"f60e2db3-92c8-4ae3-bb94-6f66ed7c8919": {
+				"progress": [
+					true
+				]
+			},
+			"dfb111a7-d0a2-4bf8-ace9-8392f3e7a108": {
+				"progress": [
+					true
+				]
+			},
+			"d3d6bd84-87aa-4925-a5b8-62f8ac620381": {
+				"progress": [
+					true
+				]
+			},
+			"17924eda-042e-4882-ba67-58010ac4db7f": {
+				"progress": [
+					true
+				]
+			},
+			"e0263c53-3d55-4ebf-942f-fba462fa24e5": {
+				"progress": [
+					false,
+					true
+				]
+			},
+			"fc331872-9dd5-420a-b3ed-0d93934f8cbb": {
+				"progress": [
+					true
+				]
+			},
+			"e6a2ba5d-60f2-446d-8208-9390a21a41fd": {
+				"progress": [
+					true
+				]
+			},
+			"d9e8b40a-0a2a-4f1e-82d6-dd91ae9b57bd": {
+				"progress": [
+					true
+				]
+			},
+			"11512acd-7fb7-48b7-8494-9b4b4ba1db70": {
+				"progress": [
+					true
+				]
+			},
+			"15dfeb74-cabb-4a71-9131-8e0ac4641fbb": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"a22bc2ec-dc6f-4783-91f7-40cd125cf5c7": {
+				"progress": [
+					true,
+					false,
+					false
+				]
+			},
+			"3f0299ca-de1d-4ea5-a297-d447e77a49a5": {
+				"progress": [
+					true,
+					false
+				]
+			},
+			"b4c3fc12-7145-4a74-bdd4-2d5d9310d4d7": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"9ff8ce54-a1de-4a3b-a32c-d6a35de365a3": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"c4671f90-64a4-4d73-9085-491b9deb62a3": {
+				"progress": [
+					true
+				]
+			},
+			"e3f46229-d984-4103-bb3d-ab3fad3c782a": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"1fdca0ff-64d6-4611-b0fd-55f11526522f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"30d1d0ff-aa32-45e7-aa05-2ffefd2c4e14": {
+				"progress": [
+					true
+				]
+			},
+			"9539f831-89b1-49a3-8a6b-d18ff3be958b": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"a29cc449-52bd-4916-b0ae-3a86142eb4cd": {
+				"progress": [
+					true
+				]
+			},
+			"1a1d3999-65eb-4566-b4a3-af4da2f384c7": {
+				"progress": [
+					true
+				]
+			},
+			"0db82f01-40e2-46b0-ba56-0d7395750690": {
+				"progress": [
+					true,
+					true
+				]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "ec894c22-2015-4edf-a3ea-9f0f62eb754b",
+		"_rid": "NT1TAL9wnL0GAAAAAAAAAA==",
+		"_self": "dbs/NT1TAA==/colls/NT1TAL9wnL0=/docs/NT1TAL9wnL0GAAAAAAAAAA==/",
+		"_etag": "\"5b006c1f-0000-0700-0000-67fb0a6c0000\"",
+		"_attachments": "attachments/",
+		"_ts": 1744505452
+	},
+	{
+		"teamNum": 6,
+		"secret": "b51e9af9-d17a-41c5-99cf-504c9e232b31",
+		"name": "🪿",
+		"score": 81,
+		"challengeProgress": {
+			"d4477b7f-c620-42d3-8700-31e6d9b9890d": {
+				"progress": [
+					true
+				]
+			},
+			"15dfeb74-cabb-4a71-9131-8e0ac4641fbb": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"d3d6bd84-87aa-4925-a5b8-62f8ac620381": {
+				"progress": [
+					true
+				]
+			},
+			"d84fa99c-aa09-4ab0-982c-7cf2d33cc21f": {
+				"progress": [
+					true
+				]
+			},
+			"40d3ba33-9c97-418e-ad10-804f726f832b": {
+				"progress": [
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			"9ff8ce54-a1de-4a3b-a32c-d6a35de365a3": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"e0263c53-3d55-4ebf-942f-fba462fa24e5": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"66ecfdb7-adf7-4c19-9bcf-60c365f170a1": {
+				"progress": [
+					true
+				]
+			},
+			"a22bc2ec-dc6f-4783-91f7-40cd125cf5c7": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"9539f831-89b1-49a3-8a6b-d18ff3be958b": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"c4671f90-64a4-4d73-9085-491b9deb62a3": {
+				"progress": [
+					true
+				]
+			},
+			"a29cc449-52bd-4916-b0ae-3a86142eb4cd": {
+				"progress": [
+					true
+				]
+			},
+			"5be1c420-0683-4b96-9898-d0d5da45f6d4": {
+				"progress": [
+					true
+				]
+			},
+			"0db82f01-40e2-46b0-ba56-0d7395750690": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"eb89c280-b913-4334-b30b-4d2f07b90cf2": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"9fd10e1a-7226-448f-9ced-e94a8d9a47e1": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"e3f46229-d984-4103-bb3d-ab3fad3c782a": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"30d1d0ff-aa32-45e7-aa05-2ffefd2c4e14": {
+				"progress": [
+					true
+				]
+			},
+			"8d011084-7783-4dfc-a858-0cc623061e59": {
+				"progress": [
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			"05c59df8-8153-4022-8fcf-048c5a8c933a": {
+				"progress": [
+					false,
+					false,
+					false,
+					true
+				]
+			},
+			"dfb111a7-d0a2-4bf8-ace9-8392f3e7a108": {
+				"progress": [
+					true
+				]
+			},
+			"eba4c784-ffe3-41de-8dd8-41f1428a243f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"db457c21-d3da-4291-a700-eea41d2cc753": {
+				"progress": [
+					true
+				]
+			},
+			"c80b6a49-3a1a-496f-b04a-e2575f210879": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"69805700-cc62-4874-b92a-1ddaae4095c3": {
+				"progress": [
+					true
+				]
+			},
+			"b4c3fc12-7145-4a74-bdd4-2d5d9310d4d7": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"88654b88-488e-4661-a937-f3c93b9245a3": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"381ba935-9d6e-49d8-9a00-936bb66de7a3": {
+				"progress": [
+					true
+				]
+			},
+			"24cb5c0d-1909-4f2a-9bd6-d664afe67059": {
+				"progress": [
+					true
+				]
+			},
+			"17924eda-042e-4882-ba67-58010ac4db7f": {
+				"progress": [
+					true
+				]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "8ca7b6c6-4f62-4f97-8fe1-30d231cf54fc",
+		"_rid": "NT1TAL9wnL0HAAAAAAAAAA==",
+		"_self": "dbs/NT1TAA==/colls/NT1TAL9wnL0=/docs/NT1TAL9wnL0HAAAAAAAAAA==/",
+		"_etag": "\"5b0066f7-0000-0700-0000-67fb0c910000\"",
+		"_attachments": "attachments/",
+		"_ts": 1744506001
+	},
+	{
+		"teamNum": 7,
+		"secret": "b013ff50-48ec-4c72-beb0-3b706022907b",
+		"name": "Directionally Challenged",
+		"score": 64,
+		"challengeProgress": {
+			"d3d6bd84-87aa-4925-a5b8-62f8ac620381": {
+				"progress": [
+					true
+				]
+			},
+			"d4477b7f-c620-42d3-8700-31e6d9b9890d": {
+				"progress": [
+					true
+				]
+			},
+			"dfb111a7-d0a2-4bf8-ace9-8392f3e7a108": {
+				"progress": [
+					true
+				]
+			},
+			"05c59df8-8153-4022-8fcf-048c5a8c933a": {
+				"progress": [
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			"694dd52f-1a4c-4f7f-8204-6fb4929e9c80": {
+				"progress": [
+					false,
+					true,
+					false
+				]
+			},
+			"db457c21-d3da-4291-a700-eea41d2cc753": {
+				"progress": [
+					true
+				]
+			},
+			"30d1d0ff-aa32-45e7-aa05-2ffefd2c4e14": {
+				"progress": [
+					true
+				]
+			},
+			"a29cc449-52bd-4916-b0ae-3a86142eb4cd": {
+				"progress": [
+					true
+				]
+			},
+			"9fd10e1a-7226-448f-9ced-e94a8d9a47e1": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"5be1c420-0683-4b96-9898-d0d5da45f6d4": {
+				"progress": [
+					true
+				]
+			},
+			"c4671f90-64a4-4d73-9085-491b9deb62a3": {
+				"progress": [
+					true
+				]
+			},
+			"0db82f01-40e2-46b0-ba56-0d7395750690": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"1fdca0ff-64d6-4611-b0fd-55f11526522f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"eb89c280-b913-4334-b30b-4d2f07b90cf2": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"e0263c53-3d55-4ebf-942f-fba462fa24e5": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"d9e8b40a-0a2a-4f1e-82d6-dd91ae9b57bd": {
+				"progress": [
+					true
+				]
+			},
+			"e6a2ba5d-60f2-446d-8208-9390a21a41fd": {
+				"progress": [
+					true
+				]
+			},
+			"e3f46229-d984-4103-bb3d-ab3fad3c782a": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"b4c3fc12-7145-4a74-bdd4-2d5d9310d4d7": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"fc331872-9dd5-420a-b3ed-0d93934f8cbb": {
+				"progress": [
+					true
+				]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "e33d716e-76b1-4785-bc01-cd48108cdb93",
+		"_rid": "NT1TAL9wnL0IAAAAAAAAAA==",
+		"_self": "dbs/NT1TAA==/colls/NT1TAL9wnL0=/docs/NT1TAL9wnL0IAAAAAAAAAA==/",
+		"_etag": "\"5c000322-0000-0700-0000-67fb0cfc0000\"",
+		"_attachments": "attachments/",
+		"_ts": 1744506108
+	},
+	{
+		"teamNum": 8,
+		"secret": "a3d2c525-f213-4e26-8901-a9df6321a5ce",
+		"name": "See Something Suspicious",
+		"score": 35,
+		"challengeProgress": {
+			"d4477b7f-c620-42d3-8700-31e6d9b9890d": {
+				"progress": [
+					true
+				]
+			},
+			"694dd52f-1a4c-4f7f-8204-6fb4929e9c80": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"15dfeb74-cabb-4a71-9131-8e0ac4641fbb": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"d3d6bd84-87aa-4925-a5b8-62f8ac620381": {
+				"progress": [
+					true
+				]
+			},
+			"05c59df8-8153-4022-8fcf-048c5a8c933a": {
+				"progress": [
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			"db457c21-d3da-4291-a700-eea41d2cc753": {
+				"progress": [
+					true
+				]
+			},
+			"dfb111a7-d0a2-4bf8-ace9-8392f3e7a108": {
+				"progress": [
+					true
+				]
+			},
+			"40d3ba33-9c97-418e-ad10-804f726f832b": {
+				"progress": [
+					true,
+					true,
+					false,
+					false
+				]
+			},
+			"eba4c784-ffe3-41de-8dd8-41f1428a243f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"e3f46229-d984-4103-bb3d-ab3fad3c782a": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"a22bc2ec-dc6f-4783-91f7-40cd125cf5c7": {
+				"progress": [
+					true,
+					false,
+					false
+				]
+			},
+			"9ff8ce54-a1de-4a3b-a32c-d6a35de365a3": {
+				"progress": [
+					true,
+					false,
+					false
+				]
+			},
+			"e0263c53-3d55-4ebf-942f-fba462fa24e5": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"9539f831-89b1-49a3-8a6b-d18ff3be958b": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"3f0299ca-de1d-4ea5-a297-d447e77a49a5": {
+				"progress": [
+					true,
+					false
+				]
+			},
+			"66ecfdb7-adf7-4c19-9bcf-60c365f170a1": {
+				"progress": [
+					true
+				]
+			},
+			"eb89c280-b913-4334-b30b-4d2f07b90cf2": {
+				"progress": [
+					true,
+					false
+				]
+			},
+			"381ba935-9d6e-49d8-9a00-936bb66de7a3": {
+				"progress": [
+					true
+				]
+			},
+			"d9e8b40a-0a2a-4f1e-82d6-dd91ae9b57bd": {
+				"progress": [
+					true
+				]
+			},
+			"c80b6a49-3a1a-496f-b04a-e2575f210879": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "83b65157-2b35-49ef-adaa-9c06251f9cee",
+		"_rid": "NT1TAL9wnL0JAAAAAAAAAA==",
+		"_self": "dbs/NT1TAA==/colls/NT1TAL9wnL0=/docs/NT1TAL9wnL0JAAAAAAAAAA==/",
+		"_etag": "\"5a00b831-0000-0700-0000-67fb07ee0000\"",
+		"_attachments": "attachments/",
+		"_ts": 1744504814
+	},
+	{
+		"teamNum": 9,
+		"secret": "e458d222-967d-4f81-9a75-241cff3c2ef7",
+		"name": "Official Market Manipulation GC",
+		"score": 9,
+		"challengeProgress": {
+			"d3d6bd84-87aa-4925-a5b8-62f8ac620381": {
+				"progress": [
+					true
+				]
+			},
+			"8d011084-7783-4dfc-a858-0cc623061e59": {
+				"progress": [
+					true,
+					false,
+					true,
+					true
+				]
+			},
+			"05c59df8-8153-4022-8fcf-048c5a8c933a": {
+				"progress": [
+					false,
+					false,
+					false,
+					true
+				]
+			},
+			"9ff8ce54-a1de-4a3b-a32c-d6a35de365a3": {
+				"progress": [
+					true,
+					true,
+					false
+				]
+			},
+			"40d3ba33-9c97-418e-ad10-804f726f832b": {
+				"progress": [
+					true,
+					true,
+					false,
+					false
+				]
+			},
+			"db457c21-d3da-4291-a700-eea41d2cc753": {
+				"progress": [
+					true
+				]
+			},
+			"1fdca0ff-64d6-4611-b0fd-55f11526522f": {
+				"manualComplete": false,
+				"progress": [
+					false,
+					false
+				]
+			},
+			"0db82f01-40e2-46b0-ba56-0d7395750690": {
+				"bonus": true,
+				"progress": [
+					true,
+					false
+				]
+			},
+			"a29cc449-52bd-4916-b0ae-3a86142eb4cd": {
+				"progress": [
+					true
+				]
+			},
+			"9fd10e1a-7226-448f-9ced-e94a8d9a47e1": {
+				"progress": [
+					true,
+					false
+				]
+			},
+			"e3f46229-d984-4103-bb3d-ab3fad3c782a": {
+				"progress": [
+					true,
+					false
+				]
+			},
+			"30d1d0ff-aa32-45e7-aa05-2ffefd2c4e14": {
+				"progress": [
+					true
+				]
+			},
+			"b4c3fc12-7145-4a74-bdd4-2d5d9310d4d7": {
+				"progress": [
+					true,
+					false
+				]
+			},
+			"c4671f90-64a4-4d73-9085-491b9deb62a3": {
+				"progress": [
+					true
+				]
+			},
+			"c80b6a49-3a1a-496f-b04a-e2575f210879": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"1a1d3999-65eb-4566-b4a3-af4da2f384c7": {
+				"progress": [
+					true
+				]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "fe9089f5-8cad-492c-9268-544f583ee302",
+		"_rid": "NT1TAL9wnL0KAAAAAAAAAA==",
+		"_self": "dbs/NT1TAA==/colls/NT1TAL9wnL0=/docs/NT1TAL9wnL0KAAAAAAAAAA==/",
+		"_etag": "\"5a006947-0000-0700-0000-67fb08280000\"",
+		"_attachments": "attachments/",
+		"_ts": 1744504872
+	},
+	{
+		"teamNum": 10,
+		"secret": "6d8071e0-a2d4-409f-919d-0749b8b292ec",
+		"name": "👺",
+		"score": 61,
+		"challengeProgress": {
+			"d4477b7f-c620-42d3-8700-31e6d9b9890d": {
+				"progress": [
+					true
+				]
+			},
+			"eb89c280-b913-4334-b30b-4d2f07b90cf2": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"8d011084-7783-4dfc-a858-0cc623061e59": {
+				"progress": [
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			"d9e8b40a-0a2a-4f1e-82d6-dd91ae9b57bd": {
+				"progress": [
+					true
+				]
+			},
+			"e3f46229-d984-4103-bb3d-ab3fad3c782a": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"9ff8ce54-a1de-4a3b-a32c-d6a35de365a3": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"05c59df8-8153-4022-8fcf-048c5a8c933a": {
+				"progress": [
+					false,
+					true,
+					false,
+					false
+				]
+			},
+			"b4c3fc12-7145-4a74-bdd4-2d5d9310d4d7": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"fc331872-9dd5-420a-b3ed-0d93934f8cbb": {
+				"progress": [
+					true
+				]
+			},
+			"a22bc2ec-dc6f-4783-91f7-40cd125cf5c7": {
+				"progress": [
+					true,
+					false,
+					true
+				]
+			},
+			"dfb111a7-d0a2-4bf8-ace9-8392f3e7a108": {
+				"progress": [
+					true
+				]
+			},
+			"d3d6bd84-87aa-4925-a5b8-62f8ac620381": {
+				"progress": [
+					true
+				]
+			},
+			"15dfeb74-cabb-4a71-9131-8e0ac4641fbb": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"c80b6a49-3a1a-496f-b04a-e2575f210879": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"9539f831-89b1-49a3-8a6b-d18ff3be958b": {
+				"progress": [
+					true,
+					false
+				]
+			},
+			"5be1c420-0683-4b96-9898-d0d5da45f6d4": {
+				"progress": [
+					true
+				]
+			},
+			"e6a2ba5d-60f2-446d-8208-9390a21a41fd": {
+				"progress": [
+					true
+				]
+			},
+			"1fdca0ff-64d6-4611-b0fd-55f11526522f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"a29cc449-52bd-4916-b0ae-3a86142eb4cd": {
+				"progress": [
+					true
+				]
+			},
+			"9fd10e1a-7226-448f-9ced-e94a8d9a47e1": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"0db82f01-40e2-46b0-ba56-0d7395750690": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"30d1d0ff-aa32-45e7-aa05-2ffefd2c4e14": {
+				"progress": [
+					true
+				]
+			},
+			"1a1d3999-65eb-4566-b4a3-af4da2f384c7": {
+				"progress": [
+					true
+				]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "31c1b4fb-b048-4c7b-a02a-fb5444415358",
+		"_rid": "NT1TAL9wnL0LAAAAAAAAAA==",
+		"_self": "dbs/NT1TAA==/colls/NT1TAL9wnL0=/docs/NT1TAL9wnL0LAAAAAAAAAA==/",
+		"_etag": "\"5b0018dc-0000-0700-0000-67fb0c4c0000\"",
+		"_attachments": "attachments/",
+		"_ts": 1744505932
+	},
+	{
+		"teamNum": 11,
+		"secret": "c14bb754-6aeb-4590-babf-228973439d6b",
+		"name": "Teem Tu",
+		"score": 65,
+		"challengeProgress": {
+			"d3d6bd84-87aa-4925-a5b8-62f8ac620381": {
+				"progress": [
+					true
+				]
+			},
+			"dfb111a7-d0a2-4bf8-ace9-8392f3e7a108": {
+				"progress": [
+					true
+				]
+			},
+			"88654b88-488e-4661-a937-f3c93b9245a3": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"e0263c53-3d55-4ebf-942f-fba462fa24e5": {
+				"progress": [
+					false,
+					true
+				]
+			},
+			"66ecfdb7-adf7-4c19-9bcf-60c365f170a1": {
+				"progress": [
+					true
+				]
+			},
+			"9539f831-89b1-49a3-8a6b-d18ff3be958b": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"69805700-cc62-4874-b92a-1ddaae4095c3": {
+				"progress": [
+					true
+				]
+			},
+			"db457c21-d3da-4291-a700-eea41d2cc753": {
+				"progress": [
+					true
+				]
+			},
+			"e6a2ba5d-60f2-446d-8208-9390a21a41fd": {
+				"progress": [
+					true
+				]
+			},
+			"eba4c784-ffe3-41de-8dd8-41f1428a243f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"b4c3fc12-7145-4a74-bdd4-2d5d9310d4d7": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"a29cc449-52bd-4916-b0ae-3a86142eb4cd": {
+				"progress": [
+					true
+				]
+			},
+			"0db82f01-40e2-46b0-ba56-0d7395750690": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"5be1c420-0683-4b96-9898-d0d5da45f6d4": {
+				"progress": [
+					true
+				]
+			},
+			"eb89c280-b913-4334-b30b-4d2f07b90cf2": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"c80b6a49-3a1a-496f-b04a-e2575f210879": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"30d1d0ff-aa32-45e7-aa05-2ffefd2c4e14": {
+				"progress": [
+					true
+				]
+			},
+			"9fd10e1a-7226-448f-9ced-e94a8d9a47e1": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"1a1d3999-65eb-4566-b4a3-af4da2f384c7": {
+				"progress": [
+					true
+				]
+			},
+			"e3f46229-d984-4103-bb3d-ab3fad3c782a": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"c4671f90-64a4-4d73-9085-491b9deb62a3": {
+				"progress": [
+					true
+				]
+			},
+			"40d3ba33-9c97-418e-ad10-804f726f832b": {
+				"progress": [
+					true,
+					true,
+					false,
+					false
+				]
+			},
+			"d4477b7f-c620-42d3-8700-31e6d9b9890d": {
+				"progress": [
+					true
+				]
+			},
+			"694dd52f-1a4c-4f7f-8204-6fb4929e9c80": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"d84fa99c-aa09-4ab0-982c-7cf2d33cc21f": {
+				"progress": [
+					true
+				]
+			},
+			"17924eda-042e-4882-ba67-58010ac4db7f": {
+				"progress": [
+					true
+				]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "8cfffc07-21df-472d-a571-6f59a6019a92",
+		"_rid": "NT1TAL9wnL0MAAAAAAAAAA==",
+		"_self": "dbs/NT1TAA==/colls/NT1TAL9wnL0=/docs/NT1TAL9wnL0MAAAAAAAAAA==/",
+		"_etag": "\"5b003ea6-0000-0700-0000-67fb0bc40000\"",
+		"_attachments": "attachments/",
+		"_ts": 1744505796
+	},
+	{
+		"teamNum": 12,
+		"secret": "bede063d-4cbc-42e3-8350-954988fe598d",
+		"name": "Team Second to Last",
+		"score": 75,
+		"challengeProgress": {
+			"d3d6bd84-87aa-4925-a5b8-62f8ac620381": {
+				"progress": [
+					true
+				]
+			},
+			"dfb111a7-d0a2-4bf8-ace9-8392f3e7a108": {
+				"progress": [
+					true
+				]
+			},
+			"c4671f90-64a4-4d73-9085-491b9deb62a3": {
+				"progress": [
+					true
+				]
+			},
+			"9ff8ce54-a1de-4a3b-a32c-d6a35de365a3": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"e3f46229-d984-4103-bb3d-ab3fad3c782a": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"69805700-cc62-4874-b92a-1ddaae4095c3": {
+				"progress": [
+					true
+				]
+			},
+			"5be1c420-0683-4b96-9898-d0d5da45f6d4": {
+				"progress": [
+					true
+				]
+			},
+			"9539f831-89b1-49a3-8a6b-d18ff3be958b": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"eba4c784-ffe3-41de-8dd8-41f1428a243f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"66ecfdb7-adf7-4c19-9bcf-60c365f170a1": {
+				"progress": [
+					true
+				]
+			},
+			"15dfeb74-cabb-4a71-9131-8e0ac4641fbb": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"0db82f01-40e2-46b0-ba56-0d7395750690": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"a29cc449-52bd-4916-b0ae-3a86142eb4cd": {
+				"progress": [
+					true
+				]
+			},
+			"30d1d0ff-aa32-45e7-aa05-2ffefd2c4e14": {
+				"progress": [
+					true
+				]
+			},
+			"db457c21-d3da-4291-a700-eea41d2cc753": {
+				"progress": [
+					true
+				]
+			},
+			"694dd52f-1a4c-4f7f-8204-6fb4929e9c80": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"d4477b7f-c620-42d3-8700-31e6d9b9890d": {
+				"progress": [
+					true
+				]
+			},
+			"d84fa99c-aa09-4ab0-982c-7cf2d33cc21f": {
+				"progress": [
+					true
+				]
+			},
+			"381ba935-9d6e-49d8-9a00-936bb66de7a3": {
+				"progress": [
+					true
+				]
+			},
+			"d9e8b40a-0a2a-4f1e-82d6-dd91ae9b57bd": {
+				"progress": [
+					true
+				]
+			},
+			"e6a2ba5d-60f2-446d-8208-9390a21a41fd": {
+				"progress": [
+					true
+				]
+			},
+			"eb89c280-b913-4334-b30b-4d2f07b90cf2": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"fc331872-9dd5-420a-b3ed-0d93934f8cbb": {
+				"progress": [
+					true
+				]
+			},
+			"b4c3fc12-7145-4a74-bdd4-2d5d9310d4d7": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"1fdca0ff-64d6-4611-b0fd-55f11526522f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"24cb5c0d-1909-4f2a-9bd6-d664afe67059": {
+				"progress": [
+					true
+				]
+			},
+			"9fd10e1a-7226-448f-9ced-e94a8d9a47e1": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"17924eda-042e-4882-ba67-58010ac4db7f": {
+				"progress": [
+					true
+				]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "483fc42e-33b9-4dd6-bfa4-f63ddd29306a",
+		"_rid": "NT1TAL9wnL0NAAAAAAAAAA==",
+		"_self": "dbs/NT1TAA==/colls/NT1TAL9wnL0=/docs/NT1TAL9wnL0NAAAAAAAAAA==/",
+		"_etag": "\"5b009db7-0000-0700-0000-67fb0bf00000\"",
+		"_attachments": "attachments/",
+		"_ts": 1744505840
+	},
+	{
+		"teamNum": 13,
+		"secret": "d57b4a9f-0e30-4b53-ae85-876f11766673",
+		"name": "The Poncho People",
+		"score": 43,
+		"challengeProgress": {
+			"d3d6bd84-87aa-4925-a5b8-62f8ac620381": {
+				"progress": [
+					true
+				]
+			},
+			"dfb111a7-d0a2-4bf8-ace9-8392f3e7a108": {
+				"progress": [
+					true
+				]
+			},
+			"d4477b7f-c620-42d3-8700-31e6d9b9890d": {
+				"progress": [
+					true
+				]
+			},
+			"d84fa99c-aa09-4ab0-982c-7cf2d33cc21f": {
+				"progress": [
+					true
+				]
+			},
+			"15dfeb74-cabb-4a71-9131-8e0ac4641fbb": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"9539f831-89b1-49a3-8a6b-d18ff3be958b": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"69805700-cc62-4874-b92a-1ddaae4095c3": {
+				"progress": [
+					true
+				]
+			},
+			"66ecfdb7-adf7-4c19-9bcf-60c365f170a1": {
+				"progress": [
+					true
+				]
+			},
+			"694dd52f-1a4c-4f7f-8204-6fb4929e9c80": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"fc331872-9dd5-420a-b3ed-0d93934f8cbb": {
+				"progress": [
+					true
+				]
+			},
+			"bed5ce25-f1cf-403f-b465-846cd26834b7": {
+				"progress": [
+					false,
+					true,
+					true
+				]
+			},
+			"a22bc2ec-dc6f-4783-91f7-40cd125cf5c7": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"24cb5c0d-1909-4f2a-9bd6-d664afe67059": {
+				"progress": [
+					true
+				]
+			},
+			"eb89c280-b913-4334-b30b-4d2f07b90cf2": {
+				"progress": [
+					true,
+					false
+				]
+			},
+			"d9e8b40a-0a2a-4f1e-82d6-dd91ae9b57bd": {
+				"progress": [
+					true
+				]
+			},
+			"e3f46229-d984-4103-bb3d-ab3fad3c782a": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"8d011084-7783-4dfc-a858-0cc623061e59": {
+				"progress": [
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			"b4c3fc12-7145-4a74-bdd4-2d5d9310d4d7": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"17924eda-042e-4882-ba67-58010ac4db7f": {
+				"progress": [
+					true
+				]
+			},
+			"c4671f90-64a4-4d73-9085-491b9deb62a3": {
+				"progress": [
+					true
+				]
+			},
+			"c80b6a49-3a1a-496f-b04a-e2575f210879": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"e6a2ba5d-60f2-446d-8208-9390a21a41fd": {
+				"progress": [
+					true
+				]
+			},
+			"381ba935-9d6e-49d8-9a00-936bb66de7a3": {
+				"progress": [
+					true
+				]
+			},
+			"e0263c53-3d55-4ebf-942f-fba462fa24e5": {
+				"progress": [
+					true,
+					true
+				]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "8ee7f334-c394-4bfe-845d-d06d33117adf",
+		"_rid": "NT1TAL9wnL0OAAAAAAAAAA==",
+		"_self": "dbs/NT1TAA==/colls/NT1TAL9wnL0=/docs/NT1TAL9wnL0OAAAAAAAAAA==/",
+		"_etag": "\"5900b655-0000-0700-0000-67fb05650000\"",
+		"_attachments": "attachments/",
+		"_ts": 1744504165
+	},
+	{
+		"teamNum": 14,
+		"secret": "3baad657-bfc2-459c-b586-6dd034dcc15e",
+		"name": "!Javu?",
+		"score": 45,
+		"challengeProgress": {
+			"15dfeb74-cabb-4a71-9131-8e0ac4641fbb": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"d3d6bd84-87aa-4925-a5b8-62f8ac620381": {
+				"progress": [
+					true
+				]
+			},
+			"dfb111a7-d0a2-4bf8-ace9-8392f3e7a108": {
+				"progress": [
+					true
+				]
+			},
+			"eba4c784-ffe3-41de-8dd8-41f1428a243f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"05c59df8-8153-4022-8fcf-048c5a8c933a": {
+				"progress": [
+					true,
+					false,
+					false,
+					true
+				]
+			},
+			"fc331872-9dd5-420a-b3ed-0d93934f8cbb": {
+				"progress": [
+					true
+				]
+			},
+			"e0263c53-3d55-4ebf-942f-fba462fa24e5": {
+				"progress": [
+					true,
+					false
+				]
+			},
+			"381ba935-9d6e-49d8-9a00-936bb66de7a3": {
+				"progress": [
+					true
+				]
+			},
+			"d4477b7f-c620-42d3-8700-31e6d9b9890d": {
+				"progress": [
+					true
+				]
+			},
+			"bed5ce25-f1cf-403f-b465-846cd26834b7": {
+				"progress": [
+					false,
+					true,
+					false
+				]
+			},
+			"40d3ba33-9c97-418e-ad10-804f726f832b": {
+				"progress": [
+					true,
+					true,
+					false,
+					false
+				]
+			},
+			"a22bc2ec-dc6f-4783-91f7-40cd125cf5c7": {
+				"progress": [
+					true,
+					false,
+					false
+				]
+			},
+			"9539f831-89b1-49a3-8a6b-d18ff3be958b": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"e3f46229-d984-4103-bb3d-ab3fad3c782a": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"db457c21-d3da-4291-a700-eea41d2cc753": {
+				"progress": [
+					true
+				]
+			},
+			"b4c3fc12-7145-4a74-bdd4-2d5d9310d4d7": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"30d1d0ff-aa32-45e7-aa05-2ffefd2c4e14": {
+				"progress": [
+					true
+				]
+			},
+			"e6a2ba5d-60f2-446d-8208-9390a21a41fd": {
+				"progress": [
+					true
+				]
+			},
+			"eb89c280-b913-4334-b30b-4d2f07b90cf2": {
+				"progress": [
+					true,
+					false
+				]
+			},
+			"1fdca0ff-64d6-4611-b0fd-55f11526522f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"0db82f01-40e2-46b0-ba56-0d7395750690": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"c80b6a49-3a1a-496f-b04a-e2575f210879": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"1a1d3999-65eb-4566-b4a3-af4da2f384c7": {
+				"progress": [
+					true
+				]
+			},
+			"9fd10e1a-7226-448f-9ced-e94a8d9a47e1": {
+				"progress": [
+					true,
+					false
+				]
+			},
+			"a29cc449-52bd-4916-b0ae-3a86142eb4cd": {
+				"progress": [
+					true
+				]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "900f9fd1-e76c-4c82-b6cc-c947671ee9b1",
+		"_rid": "NT1TAL9wnL0PAAAAAAAAAA==",
+		"_self": "dbs/NT1TAA==/colls/NT1TAL9wnL0=/docs/NT1TAL9wnL0PAAAAAAAAAA==/",
+		"_etag": "\"5c00151e-0000-0700-0000-67fb0cf20000\"",
+		"_attachments": "attachments/",
+		"_ts": 1744506098
+	},
+	{
+		"teamNum": 15,
+		"secret": "308ab1a3-fbeb-4959-ac9a-bd896de8d114",
+		"name": "TODD (Transit Oriented Development Dudes)",
+		"score": 87,
+		"challengeProgress": {
+			"15dfeb74-cabb-4a71-9131-8e0ac4641fbb": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"d3d6bd84-87aa-4925-a5b8-62f8ac620381": {
+				"progress": [
+					true
+				]
+			},
+			"05c59df8-8153-4022-8fcf-048c5a8c933a": {
+				"progress": [
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			"dfb111a7-d0a2-4bf8-ace9-8392f3e7a108": {
+				"progress": [
+					true
+				]
+			},
+			"694dd52f-1a4c-4f7f-8204-6fb4929e9c80": {
+				"progress": [
+					false,
+					true,
+					false
+				]
+			},
+			"d4477b7f-c620-42d3-8700-31e6d9b9890d": {
+				"progress": [
+					true
+				]
+			},
+			"bed5ce25-f1cf-403f-b465-846cd26834b7": {
+				"progress": [
+					false,
+					true,
+					false
+				]
+			},
+			"db457c21-d3da-4291-a700-eea41d2cc753": {
+				"progress": [
+					true
+				]
+			},
+			"8d011084-7783-4dfc-a858-0cc623061e59": {
+				"progress": [
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			"eba4c784-ffe3-41de-8dd8-41f1428a243f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"e3f46229-d984-4103-bb3d-ab3fad3c782a": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"40d3ba33-9c97-418e-ad10-804f726f832b": {
+				"progress": [
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			"69805700-cc62-4874-b92a-1ddaae4095c3": {
+				"progress": [
+					true
+				]
+			},
+			"c80b6a49-3a1a-496f-b04a-e2575f210879": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"5be1c420-0683-4b96-9898-d0d5da45f6d4": {
+				"progress": [
+					true
+				]
+			},
+			"a29cc449-52bd-4916-b0ae-3a86142eb4cd": {
+				"progress": [
+					true
+				]
+			},
+			"0db82f01-40e2-46b0-ba56-0d7395750690": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"9fd10e1a-7226-448f-9ced-e94a8d9a47e1": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"30d1d0ff-aa32-45e7-aa05-2ffefd2c4e14": {
+				"progress": [
+					true
+				]
+			},
+			"c4671f90-64a4-4d73-9085-491b9deb62a3": {
+				"progress": [
+					true
+				]
+			},
+			"9ff8ce54-a1de-4a3b-a32c-d6a35de365a3": {
+				"progress": [
+					true,
+					false,
+					false
+				]
+			},
+			"eb89c280-b913-4334-b30b-4d2f07b90cf2": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"66ecfdb7-adf7-4c19-9bcf-60c365f170a1": {
+				"progress": [
+					true
+				]
+			},
+			"f60e2db3-92c8-4ae3-bb94-6f66ed7c8919": {
+				"progress": [
+					true
+				]
+			},
+			"d84fa99c-aa09-4ab0-982c-7cf2d33cc21f": {
+				"progress": [
+					true
+				]
+			},
+			"381ba935-9d6e-49d8-9a00-936bb66de7a3": {
+				"progress": [
+					true
+				]
+			},
+			"e0263c53-3d55-4ebf-942f-fba462fa24e5": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"24cb5c0d-1909-4f2a-9bd6-d664afe67059": {
+				"progress": [
+					true
+				]
+			},
+			"d9e8b40a-0a2a-4f1e-82d6-dd91ae9b57bd": {
+				"progress": [
+					true
+				]
+			},
+			"e6a2ba5d-60f2-446d-8208-9390a21a41fd": {
+				"progress": [
+					true
+				]
+			},
+			"fc331872-9dd5-420a-b3ed-0d93934f8cbb": {
+				"progress": [
+					true
+				]
+			},
+			"b4c3fc12-7145-4a74-bdd4-2d5d9310d4d7": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"1fdca0ff-64d6-4611-b0fd-55f11526522f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"17924eda-042e-4882-ba67-58010ac4db7f": {
+				"progress": [
+					true
+				]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "bd2a9d1f-5bee-4550-8094-205f81bed411",
+		"_rid": "NT1TAL9wnL0QAAAAAAAAAA==",
+		"_self": "dbs/NT1TAA==/colls/NT1TAL9wnL0=/docs/NT1TAL9wnL0QAAAAAAAAAA==/",
+		"_etag": "\"5b00ddcf-0000-0700-0000-67fb0c2d0000\"",
+		"_attachments": "attachments/",
+		"_ts": 1744505901
+	},
+	{
+		"teamNum": 16,
+		"secret": "2175b3e3-a790-43c2-a0d5-596889e2752b",
+		"name": "The Trainspotters",
+		"score": 81,
+		"challengeProgress": {
+			"d4477b7f-c620-42d3-8700-31e6d9b9890d": {
+				"progress": [
+					true
+				]
+			},
+			"d3d6bd84-87aa-4925-a5b8-62f8ac620381": {
+				"progress": [
+					true
+				]
+			},
+			"15dfeb74-cabb-4a71-9131-8e0ac4641fbb": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"694dd52f-1a4c-4f7f-8204-6fb4929e9c80": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"d84fa99c-aa09-4ab0-982c-7cf2d33cc21f": {
+				"progress": [
+					true
+				]
+			},
+			"fc331872-9dd5-420a-b3ed-0d93934f8cbb": {
+				"progress": [
+					true
+				]
+			},
+			"40d3ba33-9c97-418e-ad10-804f726f832b": {
+				"progress": [
+					true,
+					true,
+					false,
+					false
+				]
+			},
+			"05c59df8-8153-4022-8fcf-048c5a8c933a": {
+				"progress": [
+					true,
+					true,
+					false,
+					false
+				]
+			},
+			"9539f831-89b1-49a3-8a6b-d18ff3be958b": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"b4c3fc12-7145-4a74-bdd4-2d5d9310d4d7": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"1a1d3999-65eb-4566-b4a3-af4da2f384c7": {
+				"progress": [
+					true
+				]
+			},
+			"66ecfdb7-adf7-4c19-9bcf-60c365f170a1": {
+				"progress": [
+					true
+				]
+			},
+			"e0263c53-3d55-4ebf-942f-fba462fa24e5": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"d9e8b40a-0a2a-4f1e-82d6-dd91ae9b57bd": {
+				"progress": [
+					true
+				]
+			},
+			"11512acd-7fb7-48b7-8494-9b4b4ba1db70": {
+				"progress": [
+					true
+				]
+			},
+			"c80b6a49-3a1a-496f-b04a-e2575f210879": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"8d011084-7783-4dfc-a858-0cc623061e59": {
+				"progress": [
+					true,
+					true,
+					true,
+					true
+				]
+			},
+			"a22bc2ec-dc6f-4783-91f7-40cd125cf5c7": {
+				"progress": [
+					true,
+					true,
+					true
+				]
+			},
+			"e3f46229-d984-4103-bb3d-ab3fad3c782a": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"eb89c280-b913-4334-b30b-4d2f07b90cf2": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"24cb5c0d-1909-4f2a-9bd6-d664afe67059": {
+				"progress": [
+					true
+				]
+			},
+			"0db82f01-40e2-46b0-ba56-0d7395750690": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"5be1c420-0683-4b96-9898-d0d5da45f6d4": {
+				"progress": [
+					true
+				]
+			},
+			"9fd10e1a-7226-448f-9ced-e94a8d9a47e1": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"a29cc449-52bd-4916-b0ae-3a86142eb4cd": {
+				"progress": [
+					true
+				]
+			},
+			"30d1d0ff-aa32-45e7-aa05-2ffefd2c4e14": {
+				"progress": [
+					true
+				]
+			},
+			"c4671f90-64a4-4d73-9085-491b9deb62a3": {
+				"progress": [
+					true
+				]
+			},
+			"1fdca0ff-64d6-4611-b0fd-55f11526522f": {
+				"progress": [
+					true,
+					true
+				]
+			},
+			"17924eda-042e-4882-ba67-58010ac4db7f": {
+				"progress": [
+					true
+				]
+			}
+		},
+		"bioBreakTaken": true,
+		"id": "68b1110b-9774-48db-a2e7-04060e5938d6",
+		"_rid": "NT1TAL9wnL0RAAAAAAAAAA==",
+		"_self": "dbs/NT1TAA==/colls/NT1TAL9wnL0=/docs/NT1TAL9wnL0RAAAAAAAAAA==/",
+		"_etag": "\"5c001b1a-0000-0700-0000-67fb0ce80000\"",
+		"_attachments": "attachments/",
+		"_ts": 1744506088
+	}
+]
