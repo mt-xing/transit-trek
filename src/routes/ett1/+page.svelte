@@ -7,7 +7,7 @@
 	import main_bg from '$lib/images/ett1/ett1_web_bg.png';
 	import narrow_bg from '$lib/images/ett1/ett1_web_narrow.png';
 
-	const PARTIFUL_LINK = 'https://partiful.com/e/1B9zb9hUfnIKtEcq4Rmc';
+	// const PARTIFUL_LINK = 'https://partiful.com/e/1B9zb9hUfnIKtEcq4Rmc';
 </script>
 
 <svelte:head>
@@ -39,12 +39,20 @@
 	</div>
 
 	<div class="signupWrap">
-		<p>Ready to Trek?</p>
+		<!-- <p>Ready to Trek?</p> -->
+		<p>Thanks For Playing!</p>
 		<p>
-			<BigBtn
+			<!-- <BigBtn
 				isBlack={true}
 				href={PARTIFUL_LINK}
 				text="Sign Up"
+				color={['rgb(128,255,255)', 'rgb(200,255,255)']}
+				customStyles="text-shadow: none; -webkit-text-stroke: unset; box-shadow: none; color: black; font-family: ClearSansBold, Arial, sans-serif; font-size: 30px;"
+			/> -->
+			<BigBtn
+				isBlack={true}
+				href="/ett1/results"
+				text="Results"
 				color={['rgb(128,255,255)', 'rgb(200,255,255)']}
 				customStyles="text-shadow: none; -webkit-text-stroke: unset; box-shadow: none; color: black; font-family: ClearSansBold, Arial, sans-serif; font-size: 30px;"
 			/>

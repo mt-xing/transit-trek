@@ -872,15 +872,50 @@
 	.challengeList button {
 		border: none;
 		color: black;
+		background: none;
 		width: 100%;
-		padding: 20px 30px;
-		border-left: 12px rgb(var(--color)) solid;
+		padding: 20px 30px 20px 40px;
 		cursor: pointer;
 
+		position: relative;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
+	}
+
+	.challengeList.challenge {
+		--color: 61, 174, 43;
+	}
+
+	.challengeList.find {
+		--color: 0, 160, 223;
+	}
+
+	.challengeList.hard {
+		--color: 138, 38, 49;
+	}
+
+	.challengeList li:first-child button {
+		padding-top: 40px;
+	}
+
+	.challengeList.find li:first-child button .station {
+		top: 45px;
+	}
+
+	.challengeList li:first-child button .station {
+		top: 30px;
+	}
+
+	.challengeList button::before {
+		width: 10px;
+		height: 100%;
+		position: absolute;
+		background: rgb(var(--color));
+		content: '';
+		top: 0;
+		left: 0px;
 	}
 
 	.challengeList .station {
@@ -890,7 +925,7 @@
 		box-sizing: border-box;
 		background: white;
 		position: absolute;
-		top: 16px;
+		top: 10px;
 		left: -15px;
 		border: 5px black solid;
 
@@ -909,7 +944,7 @@
 	}
 
 	.challengeList.find .station {
-		top: 30px;
+		top: 25px;
 	}
 
 	.challengeList .points {
