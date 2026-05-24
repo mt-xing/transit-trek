@@ -13,6 +13,7 @@
 		type ETT1PublicChallengeDefinition,
 	} from '../../../types/ett1/challenge';
 	import { isEtt1ChallengeComplete } from '../../../utils/ett1/challenge';
+	import { getColor } from '../../../utils/ett1/colors';
 
 	const teams: ETT1Team[] = teamsRaw as unknown as ETT1Team[];
 	const teamsUnsorted = [...teams].sort((a, b) => a.teamNum - b.teamNum);
@@ -108,7 +109,10 @@
 		{#each teams as team, i}
 			<div class={`place${i + 1}`}>
 				<span class="rank">{i + 1}</span>
-				<h3>Team {team.teamNum}: {team.name}</h3>
+				<h3>
+					<span class="colorBadge" style="--color: {getColor(team.teamNum)};"></span> Team {team.teamNum}:
+					{team.name}
+				</h3>
 				<p>
 					Total Score: <code>{Math.floor(team.score)}</code>
 				</p>
@@ -164,6 +168,7 @@
 								value={team.teamNum}
 								bind:group={selectedTeam}
 							/>
+							<span class="colorBadge" style="--color: {getColor(team.teamNum)};"></span> Team {team.teamNum}:
 							Team {team.teamNum}:
 							{team.name}
 							<span style="font-size: 0.7em"
@@ -222,11 +227,14 @@
 				<tr>
 					<th>Challenge</th>
 					{#each teamsUnsorted as team}
-						<td
-							><span style="font-size: 1.5em;">{team.teamNum}</span><br /><span
-								style="font-size: 0.8em;">{team.name}</span
-							></td
-						>
+						<td>
+							<span style="font-size: 1.5em;white-space:nowrap;"
+								><span class="colorBadge" style="--color: {getColor(team.teamNum)};"></span>
+								{team.teamNum}</span
+							>
+							<br />
+							<span style="font-size: 0.8em;">{team.name}</span>
+						</td>
 					{/each}
 				</tr>
 				{#each challengeIdArray as challengeId}
@@ -542,8 +550,19 @@
 	.podium .place11 .rank,
 	.podium .place12 .rank,
 	.podium .place13 .rank,
-	.podium .place14 .rank {
+	.podium .place14 .rank,
+	.podium .place15 .rank,
+	.podium .place16 .rank {
 		left: 0;
+	}
+
+	.colorBadge {
+		display: inline-block;
+		height: 1em;
+		width: 1em;
+		background: var(--color);
+		transform: translateY(3px);
+		border: 1px black solid;
 	}
 
 	.podium code {
