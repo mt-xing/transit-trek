@@ -87,7 +87,7 @@
 </script>
 
 <svelte:head>
-	<title>Eastside Transit Trek Expedition Results</title>
+	<title>Eastside Transit Trek Results</title>
 	<meta
 		name="description"
 		content="Final standings from Seattle Transit Trek's April 2025 event, The Eastside Transit Trek"
