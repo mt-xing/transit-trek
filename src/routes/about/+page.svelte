@@ -160,20 +160,25 @@
 		<p class="question">What can I travel on during the Transit Trek?</p>
 		<p>
 			You can either travel as a pedestrian or on public transit. The forms of public transit
-			permitted are: (1) anything either branded as Sound Transit or operated by King County Metro,
-			(2) the Seattle Center Monorail, and (3) the Seattle Streetcars.
+			permitted are: (1) anything either branded as Sound Transit or operated by King County Metro
+			(with one exception), (2) the Seattle Center Monorail, and (3) the Seattle Streetcars.
+		</p>
+		<p>
+			King County Metro Flex, despite being operated by King County Metro, is prohibited from use
+			during all Transit Treks.
 		</p>
 		<p>
 			An easy way to tell if you can travel on a mode of transportation or not is: do they accept
-			ORCA cards and accept ORCA regional day or monthly passes? If so, you can use it!
+			ORCA cards, can fit more than a few people in each vehicle, and accept ORCA regional day or
+			monthly passes? If so, you can use it!
 		</p>
 		<p>
-			Prohibited modes of transportation include but are not limited to: privately owned automobiles
-			(including those used to provide rideshare services), police cars, fire trucks, ambulances,
-			semi-trailer trucks, motorcycles, scooters (whether electric or manual), bicycles (whether
-			electric, electric-assisted, or manual), unicycles, boats (including canoes and kayaks),
-			paddleboards, jet skis, ships (including ferries operated by Washington State Ferries),
-			airplanes, hydroplanes, seaplanes, and gliders.
+			Prohibited modes of transportation include but are not limited to: King County Metro Flex,
+			privately owned automobiles (including those used to provide rideshare services),
+			police cars, fire trucks, ambulances, semi-trailer trucks, motorcycles, scooters (whether
+			electric or manual), bicycles (whether electric, electric-assisted, or manual), unicycles,
+			boats (including canoes and kayaks), paddleboards, jet skis, ships (including ferries operated
+			by Washington State Ferries), airplanes, hydroplanes, seaplanes, and gliders.
 		</p>
 		<p>
 			Washington State Ferries technically accept ORCA cards but they do not accept ORCA regional
