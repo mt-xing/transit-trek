@@ -116,7 +116,7 @@
 	<h2>Previous Events</h2>
 	<ul>
 		<li>
-			<a href="/ett1" style="background-image: url({ett1Bg});">
+			<a href="/ett1" rel="external" style="background-image: url({ett1Bg});">
 				<h3>Eastside Transit Trek</h3>
 				<p>April 12, 2025</p>
 			</a>

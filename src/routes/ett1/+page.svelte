@@ -53,6 +53,7 @@
 				isBlack={true}
 				href="/ett1/results"
 				text="Results"
+				external={true}
 				color={['rgb(128,255,255)', 'rgb(200,255,255)']}
 				customStyles="text-shadow: none; -webkit-text-stroke: unset; box-shadow: none; color: black; font-family: ClearSansBold, Arial, sans-serif; font-size: 30px;"
 			/>
