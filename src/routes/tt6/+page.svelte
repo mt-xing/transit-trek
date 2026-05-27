@@ -47,11 +47,14 @@
 			</video>
 		{/key}
 		<h1>
-			<span class="cWrap"
+			<span class="cWrap cw1"
 				><span class="card c1"><span class="c11">Cross</span><span class="c12">lake</span></span
 				></span
 			>
-			<span class="card c2"><span class="c21">Cross</span><span class="c22">over</span></span>
+			<span class="cWrap cw2"
+				><span class="card c2"><span class="c21">Cross</span><span class="c22">over</span></span
+				></span
+			>
 		</h1>
 		<h2 class="date">June 13, 2026</h2>
 	</section>
@@ -112,11 +115,10 @@
 
 	.hero .card {
 		position: relative;
+		display: inline-block;
 		background: none;
-		display: block;
 		text-align: center;
 		padding: 0em 0.2em;
-		box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
 		border-radius: 1vh;
 		margin: 1vh;
 		overflow: hidden;
@@ -176,8 +178,11 @@
 		-webkit-text-stroke: 1px rgba(79, 228, 192, 0.6);
 	}
 
-	.hero .c1 {
+	.hero .cw1 {
 		transform: translateX(-25%);
+	}
+
+	.hero .c1 {
 		clip-path: shape(
 			from var(--radius) 0,
 			line to calc(100% - var(--radius)) 0,
@@ -202,20 +207,47 @@
 		transform: translateY(-0.1em);
 	}
 
-	.hero .c2 {
-		margin-top: 0.2em;
+	.hero .cw2 {
+		margin-top: -0.4em;
 		transform: translateX(25%);
+	}
+
+	.hero .c2 {
+		clip-path: shape(
+			from var(--radius) 100%,
+			line to calc(100% - var(--radius)) 100%,
+			arc to 100% calc(100% - var(--radius)) of var(--radius) ccw,
+			line to 100% var(--radius),
+			arc to calc(100% - var(--radius)) 0 of var(--radius) ccw,
+			line to calc(53.5% + var(--a)) 0,
+			arc to calc(53.5% - var(--b)) calc(var(--b)) of var(--radius) ccw,
+			line to calc(46.5% + var(--b)) calc(25% - var(--b)),
+			arc to calc(46.5% - var(--a)) 25% of var(--radius) cw,
+			line to calc(5% + var(--a)) 25%,
+			arc to calc(5% - var(--b)) calc(25% + var(--b)) of var(--radius) ccw,
+			line to var(--b) calc(25% + 25% * 5 / 7 - var(--b)),
+			arc to 0 calc(25% + 25% * 5 / 7 + var(--a)) of var(--radius) ccw,
+			line to 0 calc(100% - var(--radius)),
+			arc to var(--radius) 100% of var(--radius) ccw,
+			close
+		);
 	}
 
 	.cWrap {
 		filter: url(#knockout-glow);
-		display: inline-block;
+		display: block;
 	}
 
 	.hero .date {
 		position: absolute;
 		bottom: 1vh;
-		color: white;
+		color: rgb(128, 255, 255);
 		font-size: 4vh;
+
+		/* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(128, 255, 255, 1));
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent; */
+		text-shadow: 0 0 5px black;
 	}
 </style>
