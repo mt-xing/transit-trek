@@ -4,6 +4,7 @@
 	import bg1 from '$lib/images/tt6/bg1.mp4';
 	import bg2 from '$lib/images/tt6/bg2.mp4';
 	import bgImg from '$lib/images/tt6/bg.jpg';
+	import Tt6Card from '../../components/tt6/tt6Card.svelte';
 
 	let firstVideoDone = false;
 	let video2El: HTMLVideoElement | undefined;
@@ -39,15 +40,16 @@
 		</filter>
 	</svg>
 
-	<section class="hero">
-		<video muted loop poster={bgImg} bind:this={video2El}>
-			<source src={bg2} type="video/mp4" />
+	<video muted loop poster={bgImg} bind:this={video2El}>
+		<source src={bg2} type="video/mp4" />
+	</video>
+	{#if !firstVideoDone}
+		<video autoplay muted on:ended={handleEnd} poster={bgImg}>
+			<source src={bg1} type="video/mp4" />
 		</video>
-		{#if !firstVideoDone}
-			<video autoplay muted on:ended={handleEnd} poster={bgImg}>
-				<source src={bg1} type="video/mp4" />
-			</video>
-		{/if}
+	{/if}
+
+	<section class="hero">
 		<h1>
 			<span class="cWrap cw1"
 				><span class="card c1"><span class="c11">Cross</span><span class="c12">lake</span></span
@@ -62,10 +64,14 @@
 	</section>
 </div>
 
+<Tt6Card>Once upon a time,</Tt6Card>
+
 <style>
 	:global(body) {
 		padding: 0;
 		margin: 0;
+
+		overflow-x: hidden;
 	}
 
 	#outerWrap {
@@ -89,10 +95,10 @@
 		flex-direction: column;
 	}
 
-	.hero video {
+	video {
 		object-fit: cover;
 		object-position: center;
-		position: absolute;
+		position: fixed;
 		z-index: -1;
 		top: 0;
 		left: 0;
