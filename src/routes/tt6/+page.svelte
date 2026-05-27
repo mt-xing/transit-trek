@@ -6,9 +6,11 @@
 	import bgImg from '$lib/images/tt6/bg.jpg';
 
 	let firstVideoDone = false;
+	let video2El: HTMLVideoElement | undefined;
 	function handleEnd() {
 		if (!firstVideoDone) {
 			firstVideoDone = true;
+			video2El?.play();
 		}
 	}
 </script>
@@ -21,9 +23,6 @@
 <div id="outerWrap">
 	<TopLogo />
 
-	<video id="preload" muted>
-		<source src={bg2} type="video/mp4" />
-	</video>
 	<svg width="0" height="0" style="position: absolute;">
 		<filter id="knockout-glow">
 			<feComponentTransfer in="SourceAlpha" result="solid-alpha">
@@ -41,11 +40,14 @@
 	</svg>
 
 	<section class="hero">
-		{#key firstVideoDone}
-			<video autoplay muted loop={firstVideoDone} on:ended={handleEnd} poster={bgImg}>
-				<source src={firstVideoDone ? bg2 : bg1} type="video/mp4" />
+		<video muted loop poster={bgImg} bind:this={video2El}>
+			<source src={bg2} type="video/mp4" />
+		</video>
+		{#if !firstVideoDone}
+			<video autoplay muted on:ended={handleEnd} poster={bgImg}>
+				<source src={bg1} type="video/mp4" />
 			</video>
-		{/key}
+		{/if}
 		<h1>
 			<span class="cWrap cw1"
 				><span class="card c1"><span class="c11">Cross</span><span class="c12">lake</span></span
@@ -96,14 +98,6 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-	}
-
-	video#preload {
-		position: absolute;
-		top: -1px;
-		left: -1px;
-		width: 0;
-		height: 0;
 	}
 
 	.hero h1 {
