@@ -14,6 +14,14 @@
 			video2El?.play();
 		}
 	}
+	function handleVid2Loaded() {
+		if (video2El && !firstVideoDone) {
+			video2El.currentTime = 0;
+			video2El.pause();
+		} else if (!video2El) {
+			requestAnimationFrame(handleVid2Loaded);
+		}
+	}
 </script>
 
 <svelte:head>
@@ -40,14 +48,18 @@
 		</filter>
 	</svg>
 
-	<video muted loop poster={bgImg} bind:this={video2El}>
+	<video muted loop bind:this={video2El} on:loadedmetadata={handleVid2Loaded}>
 		<source src={bg2} type="video/mp4" />
 	</video>
-	{#if !firstVideoDone}
-		<video autoplay muted on:ended={handleEnd} poster={bgImg}>
-			<source src={bg1} type="video/mp4" />
-		</video>
-	{/if}
+	<video
+		autoplay
+		muted
+		on:ended={handleEnd}
+		poster={bgImg}
+		style={firstVideoDone ? 'display: none' : ''}
+	>
+		<source src={bg1} type="video/mp4" />
+	</video>
 
 	<section class="hero">
 		<h1>
@@ -64,7 +76,7 @@
 	</section>
 </div>
 
-<Tt6Card>Once upon a time,</Tt6Card>
+<Tt6Card>Throughout the ages, the disconnected lands of Seattle and the Eastside had never</Tt6Card>
 
 <style>
 	:global(body) {
@@ -72,6 +84,7 @@
 		margin: 0;
 
 		overflow-x: hidden;
+		background: black;
 	}
 
 	#outerWrap {
@@ -212,6 +225,7 @@
 		margin-top: -0.4em;
 		--xAmt: 25%;
 		--delay: 2s;
+		--speed: 1.5s;
 	}
 
 	.hero .c2 {
@@ -241,11 +255,12 @@
 
 		--xAmt: 0;
 		--delay: 1.8s;
+		--speed: 1s;
 		transform: translateX(var(--xAmt)) scale(1);
 		opacity: 1;
 		transition:
-			transform 1s cubic-bezier(0.23, 1, 0.32, 1) var(--delay),
-			opacity 1s cubic-bezier(0.23, 1, 0.32, 1) var(--delay);
+			transform var(--speed) cubic-bezier(0.23, 1, 0.32, 1) var(--delay),
+			opacity var(--speed) cubic-bezier(0.23, 1, 0.32, 1) var(--delay);
 
 		@starting-style {
 			transform: translateX(var(--xAmt)) scale(1.2);
