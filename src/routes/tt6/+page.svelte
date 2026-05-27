@@ -109,7 +109,7 @@
 	.hero h1 {
 		color: white;
 		text-align: center;
-		font-size: 15vh;
+		font-size: min(15vh, 10vw);
 		font-weight: 900;
 	}
 
@@ -244,10 +244,21 @@
 		color: rgb(128, 255, 255);
 		font-size: 4vh;
 
-		/* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(128, 255, 255, 1));
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent; */
 		text-shadow: 0 0 5px black;
+	}
+
+	@media (max-width: 800px) {
+		.hero h1 {
+			font-size: min(15vh, 15vw);
+		}
+
+		.hero .cw1 {
+			transform: translateX(-7%);
+		}
+
+		.hero .cw2 {
+			transform: translateX(7%);
+			margin-top: -0.2em;
+		}
 	}
 </style>
