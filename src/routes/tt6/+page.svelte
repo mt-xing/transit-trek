@@ -174,7 +174,7 @@
 
 	.hero .cw1 {
 		margin-top: 0.3em;
-		transform: translateX(-25%);
+		--xAmt: -25%;
 	}
 
 	.hero .c1 {
@@ -204,7 +204,8 @@
 
 	.hero .cw2 {
 		margin-top: -0.4em;
-		transform: translateX(25%);
+		--xAmt: 25%;
+		--delay: 2s;
 	}
 
 	.hero .c2 {
@@ -231,6 +232,19 @@
 	.cWrap {
 		filter: url(#knockout-glow);
 		display: block;
+
+		--xAmt: 0;
+		--delay: 1.8s;
+		transform: translateX(var(--xAmt)) scale(1);
+		opacity: 1;
+		transition:
+			transform 1s cubic-bezier(0.23, 1, 0.32, 1) var(--delay),
+			opacity 1s cubic-bezier(0.23, 1, 0.32, 1) var(--delay);
+
+		@starting-style {
+			transform: translateX(var(--xAmt)) scale(1.2);
+			opacity: 0;
+		}
 	}
 
 	.hero .date {
@@ -241,7 +255,12 @@
 		font-weight: 900;
 
 		text-shadow: 0 0 5px black;
+		transition: opacity 1s ease-out 3s;
 		opacity: 0.6;
+
+		@starting-style {
+			opacity: 0;
+		}
 	}
 
 	@media (max-width: 800px) {
@@ -250,11 +269,11 @@
 		}
 
 		.hero .cw1 {
-			transform: translateX(-7%);
+			--xAmt: -7%;
 		}
 
 		.hero .cw2 {
-			transform: translateX(7%);
+			--xAmt: 7%;
 			margin-top: -0.2em;
 		}
 	}
