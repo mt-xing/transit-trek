@@ -179,6 +179,7 @@
 	}
 
 	.hero .cw1 {
+		margin-top: 0.3em;
 		transform: translateX(-25%);
 	}
 
@@ -240,11 +241,13 @@
 
 	.hero .date {
 		position: absolute;
-		bottom: 1vh;
-		color: rgb(128, 255, 255);
-		font-size: 4vh;
+		bottom: min(1vw, 1vh);
+		color: rgba(128, 255, 255);
+		font-size: min(50px, 8vw);
+		font-weight: 900;
 
 		text-shadow: 0 0 5px black;
+		opacity: 0.6;
 	}
 
 	@media (max-width: 800px) {
