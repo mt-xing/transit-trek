@@ -4,6 +4,8 @@
 	import bg1 from '$lib/images/tt6/bg1.mp4';
 	import bg2 from '$lib/images/tt6/bg2.mp4';
 	import bgImg from '$lib/images/tt6/bg.jpg';
+	import img1 from '$lib/images/tt6/img1.png';
+	import img2 from '$lib/images/tt6/img2.png';
 	import Tt6Card from '../../components/tt6/tt6Card.svelte';
 	import BigBtn from '../../components/bigBtn.svelte';
 	import SmallBtn from '../../components/smallBtn.svelte';
@@ -81,22 +83,36 @@
 	</section>
 </div>
 
-<div style="width: 60%; margin-left: 30vw;">
-	<Tt6Card>
-		Throughout the ages, the disconnected lands of Seattle and the Eastside have been long
-		separated, divided by impossible travel conditions and arduous journeys. Untold eons were spent
-		by the unsuspecting travellers making the trip, and countless Transit Treks were played with
-		only one side of the board.
-	</Tt6Card>
+<div class="cardWrap left">
+	<div style="width: 25%;">
+		<Tt6Card>
+			<img src={img1} alt="" style="max-width: 20vw" />
+		</Tt6Card>
+	</div>
+	<div style="width: 65%; margin-left: 5vw; max-width: 800px;">
+		<Tt6Card>
+			Throughout the ages, the disconnected lands of Seattle and the Eastside have been long
+			separated, divided by impossible travel conditions and arduous journeys. Untold eons were
+			spent by the unsuspecting travellers making the trip, and countless Transit Treks were played
+			with only one side of the board.
+		</Tt6Card>
+	</div>
 </div>
 
-<div style="width: 60%; margin-left: 10vw;">
-	<Tt6Card>
-		But then, one day, a new technology shook the universe as we knew it. For the first time, a
-		futuristic transport, consistent in speed, frequent in time, and grade separated from traffic,
-		linked the two disparate worlds. Finally, people could travel easily in these smooth new
-		vehicles that the engineers called "trains."
-	</Tt6Card>
+<div class="cardWrap right">
+	<div style="width: 25%;">
+		<Tt6Card>
+			<img src={img2} alt="" style="max-width: 20vw" />
+		</Tt6Card>
+	</div>
+	<div style="width: 65%; margin-right: 5vw; max-width: 800px;">
+		<Tt6Card>
+			But then, one day, a new technology shook the universe as we knew it. For the first time, a
+			futuristic transport, consistent in speed, frequent in time, and grade separated from traffic,
+			linked the two disparate worlds. Finally, people could travel easily in these smooth new
+			vehicles that the engineers called "trains."
+		</Tt6Card>
+	</div>
 </div>
 
 <div style="width: 60%; margin-left: 20vw;">
@@ -408,5 +424,22 @@
 
 	.disclaimer {
 		font-size: 1.2em;
+	}
+
+	.cardWrap {
+		width: 90%;
+		margin: 20vh auto;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.cardWrap.left {
+		flex-direction: row;
+	}
+
+	.cardWrap.right {
+		flex-direction: row-reverse;
 	}
 </style>
