@@ -858,6 +858,7 @@
 
 	details h2 {
 		display: inline-block;
+		padding-left: 0.25em;
 	}
 
 	@media (max-width: 1200px) {
