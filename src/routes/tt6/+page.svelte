@@ -453,8 +453,7 @@
 			<p>
 				One member of your team should be designated as the primary representative, who will be
 				responsible for communicating with the organizers. In addition, one member of the team (who
-				may also be the primary representative) must share their location with the chasers. They
-				will then be able to see the chasers’ locations too.
+				may also be the primary representative) must share their location with the chasers.
 			</p>
 		</details>
 	</Tt6Card>
@@ -859,5 +858,47 @@
 
 	details h2 {
 		display: inline-block;
+	}
+
+	@media (max-width: 1200px) {
+		.standardCardWrap,
+		.rulesCardWrap {
+			width: 80%;
+			margin-left: 10vw;
+		}
+	}
+
+	@media (max-width: 900px) {
+		.cardWrap {
+			width: 90%;
+			margin: 10vh auto 0 auto;
+		}
+
+		.cardWrap.left,
+		.cardWrap.right {
+			flex-direction: column-reverse;
+		}
+
+		.cardWrap .imgWrap {
+			width: min(100%, 360px);
+		}
+
+		.cardWrap img {
+			max-width: min(100%, 300px);
+		}
+
+		.cardWrap .textWrap {
+			width: 100%;
+			margin: 5vh 0;
+			max-width: unset;
+		}
+	}
+
+	@media (max-width: 700px) {
+		.standardCardWrap,
+		.rulesCardWrap {
+			width: 90%;
+			margin-left: 5vw;
+		}
 	}
 </style>
