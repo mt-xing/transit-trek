@@ -5,6 +5,11 @@
 	import bg2 from '$lib/images/tt6/bg2.mp4';
 	import bgImg from '$lib/images/tt6/bg.jpg';
 	import Tt6Card from '../../components/tt6/tt6Card.svelte';
+	import BigBtn from '../../components/bigBtn.svelte';
+	import SmallBtn from '../../components/smallBtn.svelte';
+	import { HOME_PAGE } from '../../utils/paths';
+
+	const PARTIFUL_LINK = 'https://partiful.com/e/hyNg3l3efh0tWMENkwo3';
 
 	let firstVideoDone = false;
 	let video2El: HTMLVideoElement | undefined;
@@ -100,6 +105,31 @@
 		<strong>both</strong> Seattle <strong>and</strong> the Eastside! Aided by the newly opened Link connections,
 		ride transit and complete challenges across both sides of Lake Washington as you compete with other
 		teams to see who can earn the most points, no longer burdeoned by the limits of geography.
+	</Tt6Card>
+</div>
+
+<div style="text-align: center; margin-top: 10vh">
+	<Tt6Card>
+		<h2>Ready to Trek?</h2>
+		<BigBtn
+			href={PARTIFUL_LINK}
+			text="Sign Up"
+			color={['rgb(0, 160, 223)', 'rgba(255, 255, 255, 0.1)']}
+			customStyles="color: rgba(128, 255, 255); box-shadow: none;"
+		/>
+	</Tt6Card>
+</div>
+
+<div style="width: 60%; margin-left: 20vw; margin-top: 10vh;">
+	<Tt6Card>
+		<p>
+			Transit Treks are part scavenger hunt, part games of skill, strategy, and pure dumb luck
+			played across the Puget Sound.
+			<SmallBtn href={HOME_PAGE} text="Learn More" />
+		</p>
+		<p style="margin-top: 1em;">
+			Read on for detailed game rules, instructions, and important notices.
+		</p>
 	</Tt6Card>
 </div>
 
