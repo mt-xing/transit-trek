@@ -246,6 +246,10 @@
 								Absolutely no traveling on cars, trucks, boats, planes, bikes, scooters, or Segways.
 								Doing so could result in penalties up to / including disqualification.
 							</li>
+							<li>
+								King County Metro Flex on-demand rides are not regularly scheduled transit and thus
+								are considered cars, which are not permitted.
+							</li>
 						</ul>
 					</li>
 					<li>Players must stay within the bounds of the game.</li>

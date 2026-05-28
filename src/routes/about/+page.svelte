@@ -169,16 +169,16 @@
 		</p>
 		<p>
 			An easy way to tell if you can travel on a mode of transportation or not is: do they accept
-			ORCA cards, can fit more than a few people in each vehicle, and accept ORCA regional day or
-			monthly passes? If so, you can use it!
+			ORCA cards, run regularly scheduled routes, and accept ORCA regional day or monthly passes? If
+			so, you can use it!
 		</p>
 		<p>
 			Prohibited modes of transportation include but are not limited to: King County Metro Flex,
-			privately owned automobiles (including those used to provide rideshare services),
-			police cars, fire trucks, ambulances, semi-trailer trucks, motorcycles, scooters (whether
-			electric or manual), bicycles (whether electric, electric-assisted, or manual), unicycles,
-			boats (including canoes and kayaks), paddleboards, jet skis, ships (including ferries operated
-			by Washington State Ferries), airplanes, hydroplanes, seaplanes, and gliders.
+			privately owned automobiles (including those used to provide rideshare services), police cars,
+			fire trucks, ambulances, semi-trailer trucks, motorcycles, scooters (whether electric or
+			manual), bicycles (whether electric, electric-assisted, or manual), unicycles, boats
+			(including canoes and kayaks), paddleboards, jet skis, ships (including ferries operated by
+			Washington State Ferries), airplanes, hydroplanes, seaplanes, and gliders.
 		</p>
 		<p>
 			Washington State Ferries technically accept ORCA cards but they do not accept ORCA regional
@@ -237,9 +237,7 @@
 	</div>
 	<div class="q">
 		<p class="question">Do the creators of <i>Jet Lag: The Game</i> know about Transit Trek?</p>
-		<p>
-			Yes! Ben and Adam are aware of Transit Treks and think they're pretty cool.
-		</p>
+		<p>Yes! Ben and Adam are aware of Transit Treks and think they're pretty cool.</p>
 	</div>
 	<div class="q">
 		<p class="question">Is this a puzzle game?</p>
