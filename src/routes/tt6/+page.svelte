@@ -76,7 +76,32 @@
 	</section>
 </div>
 
-<Tt6Card>Throughout the ages, the disconnected lands of Seattle and the Eastside had never</Tt6Card>
+<div style="width: 60%; margin-left: 30vw;">
+	<Tt6Card>
+		Throughout the ages, the disconnected lands of Seattle and the Eastside have been long
+		separated, divided by impossible travel conditions and arduous journeys. Untold eons were spent
+		by the unsuspecting travellers making the trip, and countless Transit Treks were played with
+		only one side of the board.
+	</Tt6Card>
+</div>
+
+<div style="width: 60%; margin-left: 10vw;">
+	<Tt6Card>
+		But then, one day, a new technology shook the universe as we knew it. For the first time, a
+		futuristic transport, consistent in speed, frequent in time, and grade separated from traffic,
+		linked the two disparate worlds. Finally, people could travel easily in these smooth new
+		vehicles that the engineers called "trains."
+	</Tt6Card>
+</div>
+
+<div style="width: 60%; margin-left: 20vw;">
+	<Tt6Card>
+		For the very first time, the Crosslake Crossover is a Transit Trek that will use
+		<strong>both</strong> Seattle <strong>and</strong> the Eastside! Aided by the newly opened Link connections,
+		ride transit and complete challenges across both sides of Lake Washington as you compete with other
+		teams to see who can earn the most points, no longer burdeoned by the limits of geography.
+	</Tt6Card>
+</div>
 
 <style>
 	:global(body) {
@@ -256,16 +281,23 @@
 		--xAmt: 0;
 		--delay: 1.8s;
 		--speed: 1s;
-		transform: translateX(var(--xAmt)) scale(1);
+		--zoom: 1;
+		transform: translateX(var(--xAmt)) scale(var(--zoom));
 		opacity: 1;
 		transition:
-			transform var(--speed) cubic-bezier(0.23, 1, 0.32, 1) var(--delay),
+			--zoom var(--speed) cubic-bezier(0.23, 1, 0.32, 1) var(--delay),
 			opacity var(--speed) cubic-bezier(0.23, 1, 0.32, 1) var(--delay);
 
 		@starting-style {
-			transform: translateX(var(--xAmt)) scale(1.2);
+			--zoom: 1.2;
 			opacity: 0;
 		}
+	}
+
+	@property --zoom {
+		syntax: '<number>';
+		inherits: true;
+		initial-value: 1;
 	}
 
 	.hero .date {

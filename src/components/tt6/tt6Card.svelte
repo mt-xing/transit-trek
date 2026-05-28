@@ -52,7 +52,7 @@
 		display: inline-block;
 		background: none;
 		text-align: center;
-		padding: 0.5em 1em;
+		padding: 0.5em 1em 1.75em 1em;
 		border-radius: 1vh;
 		margin: 1vh;
 		overflow: hidden;
@@ -63,6 +63,7 @@
 		--radius: 2vh;
 		--a: calc(var(--radius) / tan(67.5deg));
 		--b: calc(var(--radius) / tan(67.5deg) / sqrt(2));
+		--notch: 0.5em;
 
 		clip-path: shape(
 			from var(--radius) 0,
@@ -70,14 +71,12 @@
 			arc to 100% var(--radius) of var(--radius) cw,
 			line to 100% calc(100% - var(--radius)),
 			arc to calc(100% - var(--radius)) 100% of var(--radius) cw,
-			line to calc(53.5% + var(--a)) 100%,
-			arc to calc(53.5% - var(--b)) calc(100% - var(--b)) of var(--radius) cw,
-			line to calc(46.5% + var(--b)) calc(75% + var(--b)),
-			arc to calc(46.5% - var(--a)) 75% of var(--radius) ccw,
-			line to calc(5% + var(--a)) 75%,
-			arc to calc(5% - var(--b)) calc(75% - var(--b)) of var(--radius) cw,
-			line to var(--b) calc(75% - 25% * 5 / 7 + var(--b)),
-			arc to 0 calc(75% - 25% * 5 / 7 - var(--a)) of var(--radius) cw,
+			line to calc(50% + var(--notch) + var(--a)) 100%,
+			arc to calc(50% + var(--notch) - var(--b)) calc(100% - var(--b)) of var(--radius) cw,
+			line to calc(50% - var(--notch) + var(--b)) calc(100% - 2 * var(--notch) + var(--b)),
+			arc to calc(50% - var(--notch) - var(--a)) calc(100% - 2 * var(--notch)) of var(--radius) ccw,
+			line to var(--radius) calc(100% - 2 * var(--notch)),
+			arc to 0 calc(100% - 2 * var(--notch) - var(--radius)) of var(--radius) cw,
 			line to 0 var(--radius),
 			arc to var(--radius) 0 of var(--radius) cw,
 			close
