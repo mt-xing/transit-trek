@@ -541,8 +541,8 @@
 		<p>Thank you to all of the people who worked to make the Seattle Transit Trek possible!</p>
 		<ul style="text-align: left;">
 			<li>
-				<strong>Michael Xing</strong>: Game coordinator, author of the Transit Trek web app,
-				Eastside Transit Trek 1 editor, Transit Trek co-organizer
+				<strong>Michael Xing</strong>: Game coordinator, author of the Transit Trek web app, Transit
+				Trek 6 editor, Transit Trek co-organizer
 			</li>
 			<li>
 				<strong>Arjun Pherwani</strong>: Doubter of Michael Xing, co-creator of the Transit Trek,
@@ -561,8 +561,8 @@
 			</li>
 		</ul>
 		<p>
-			Sincerely,<br /><strong>Jeffrey Wang</strong><br />Eastside Transit Trek 1 author, co-creator
-			of the Transit Trek, Transit Trek co-organizer
+			Sincerely,<br /><strong>Jeffrey Wang</strong><br />Transit Trek 6 author, co-creator of the
+			Transit Trek, Transit Trek co-organizer
 		</p>
 	</Tt6Card>
 </div>
