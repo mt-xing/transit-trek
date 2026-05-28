@@ -1,5 +1,6 @@
 <script lang="ts">
 	let visible = false;
+	export let isRed: boolean = false;
 
 	function onVisible(node: HTMLElement) {
 		const observer = new IntersectionObserver(
@@ -24,7 +25,7 @@
 	}
 </script>
 
-<section class={`cardWrap${visible ? ' visible' : ''}`} use:onVisible>
+<section class={`cardWrap${visible ? ' visible' : ''}${isRed ? ' red' : ''}`} use:onVisible>
 	<div class="card">
 		<slot />
 	</div>
@@ -96,6 +97,15 @@
 			rgba(4, 100, 176, 0.5),
 			rgba(1, 47, 104, 0.7) 30%,
 			rgba(2, 14, 34, 0.7)
+		);
+	}
+
+	.red .card::before {
+		background: linear-gradient(
+			to top,
+			rgba(128, 1, 1, 0.7),
+			rgba(64, 4, 8, 0.5) 30%,
+			rgba(34, 2, 5, 0.7)
 		);
 	}
 </style>

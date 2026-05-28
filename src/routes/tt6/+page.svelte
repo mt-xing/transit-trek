@@ -135,6 +135,43 @@
 	</Tt6Card>
 </div>
 
+<div style="width: 60%; margin-left: 20vw; margin-top: 10vh;">
+	<Tt6Card isRed={true}>
+		<div class="disclaimer">
+			<h2>Safety Disclaimer</h2>
+			<p>
+				You (a Participant) and your safety are of paramount importance during your participation in
+				the Seattle Transit Trek (the “Game”). You are strongly advised to avoid areas that may
+				present imminent danger to you or your fellow Participants. In case a diversion needs to be
+				made, you should report it to the Organizers and appropriate compensation in terms of points
+				and/or time will be made for you, including but not limited to, bonus points, the waiver of
+				a late return penalty, etc.
+			</p>
+			<p>
+				You may also not engage in any illegal activity to gain an unfair advantage in the Game.
+				Doing so will result in penalties including/up to disqualification.
+			</p>
+			<p>
+				By participating in the Game, you agree that you are playing the Game at your own risk. You
+				furthermore agree to hold the Organizers harmless and hold your fellow Participants
+				harmless, even by the negligence of the Organizers or fellow Participants.
+			</p>
+			<p>
+				<strong>
+					IN NO EVENT WILL THE ORGANIZERS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT,
+					INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES ARISING FROM
+					YOUR PARTICIPATION IN THIS GAME, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH
+					DAMAGES. BY PARTICIPATING IN THIS GAME, YOU HEREBY WAIVE, RELEASE, AND DISCHARGE THE
+					ORGANIZERS AND THEIR AGENTS OF ANY AND ALL LIABILITY OR DAMAGES OF ANY KIND RELATED TO,
+					ARISING FROM, OR IN ANY WAY CONNECTED WITH, YOUR PARTICIPATION IN THIS GAME, INCLUDING
+					THOSE ALLEGEDLY ATTRIBUTED TO THE NEGLIGENT ACTS OR OMISSIONS OF THE AFOREMENTIONED
+					PARTIES.
+				</strong>
+			</p>
+		</div>
+	</Tt6Card>
+</div>
+
 <style>
 	:global(body) {
 		padding: 0;
@@ -367,5 +404,9 @@
 		text-shadow: 0 0 15px black;
 		-webkit-text-stroke: 2px black;
 		paint-order: stroke fill;
+	}
+
+	.disclaimer {
+		font-size: 1.2em;
 	}
 </style>
