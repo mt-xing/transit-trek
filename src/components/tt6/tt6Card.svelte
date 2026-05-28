@@ -1,6 +1,7 @@
 <script lang="ts">
 	let visible = false;
 	export let isRed: boolean = false;
+	export let fillWidth: boolean = false;
 
 	function onVisible(node: HTMLElement) {
 		const observer = new IntersectionObserver(
@@ -25,7 +26,10 @@
 	}
 </script>
 
-<section class={`cardWrap${visible ? ' visible' : ''}${isRed ? ' red' : ''}`} use:onVisible>
+<section
+	class={`cardWrap${visible ? ' visible' : ''}${isRed ? ' red' : ''}${fillWidth ? ' fill' : ''}`}
+	use:onVisible
+>
 	<div class="card">
 		<slot />
 	</div>
@@ -50,7 +54,8 @@
 
 	.card {
 		position: relative;
-		display: inline-block;
+		display: inline-flex;
+		flex-direction: column;
 		background: none;
 		text-align: center;
 		padding: 0.5em 1em 1.75em 1em;
@@ -107,5 +112,9 @@
 			rgba(64, 4, 8, 0.5) 30%,
 			rgba(34, 2, 5, 0.7)
 		);
+	}
+
+	.fill .card {
+		display: flex;
 	}
 </style>
