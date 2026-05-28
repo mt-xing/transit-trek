@@ -857,8 +857,12 @@
 	}
 
 	details h2 {
-		display: inline-block;
+		display: inline;
 		padding-left: 0.25em;
+	}
+
+	details summary {
+		padding: 1em;
 	}
 
 	@media (max-width: 1200px) {
