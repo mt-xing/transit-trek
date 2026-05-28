@@ -101,10 +101,12 @@
 
 <div style="width: 60%; margin-left: 20vw;">
 	<Tt6Card>
-		For the very first time, the Crosslake Crossover is a Transit Trek that will use
-		<strong>both</strong> Seattle <strong>and</strong> the Eastside! Aided by the newly opened Link connections,
-		ride transit and complete challenges across both sides of Lake Washington as you compete with other
-		teams to see who can earn the most points, no longer burdeoned by the limits of geography.
+		Your mission, should you choose to accept it, is to travel these new lands and complete
+		challenges as you go to bridge these new frontiers. For the very first time, the Crosslake
+		Crossover is a Transit Trek that spans both Seattle and the Eastside! Aided by the newly opened
+		Link connections, ride transit and complete challenges across both sides of Lake Washington as
+		you compete with other teams to see who can earn the most points, no longer burdeoned by the
+		limits of geography.
 	</Tt6Card>
 </div>
 
@@ -115,7 +117,7 @@
 			href={PARTIFUL_LINK}
 			text="Sign Up"
 			color={['rgb(0, 160, 223)', 'rgba(255, 255, 255, 0.1)']}
-			customStyles="color: rgba(128, 255, 255); box-shadow: none;"
+			customStyles="box-shadow: none; clip-path: polygon(1em 0%, 100% 0%, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0% 100%, 0% 1em)"
 		/>
 	</Tt6Card>
 </div>
@@ -359,5 +361,11 @@
 			--xAmt: 7%;
 			margin-top: -0.2em;
 		}
+	}
+
+	h2 {
+		text-shadow: 0 0 15px black;
+		-webkit-text-stroke: 2px black;
+		paint-order: stroke fill;
 	}
 </style>

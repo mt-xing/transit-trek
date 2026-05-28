@@ -58,9 +58,9 @@
 		overflow: hidden;
 
 		color: white;
-		font-size: min(2vh, 2vw);
+		font-size: 20px;
 
-		--radius: 2vh;
+		--radius: 1em;
 		--a: calc(var(--radius) / tan(67.5deg));
 		--b: calc(var(--radius) / tan(67.5deg) / sqrt(2));
 		--notch: 0.5em;
