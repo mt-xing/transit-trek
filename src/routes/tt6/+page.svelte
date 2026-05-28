@@ -591,6 +591,7 @@
 	.hero {
 		width: 100%;
 		height: 100vh;
+		height: 100svh;
 		overflow: hidden;
 		position: relative;
 
@@ -609,6 +610,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+		height: 100lvh;
 	}
 
 	.hero h1 {
