@@ -3,9 +3,7 @@
 	import linkStation from '$lib/images/link_station.jpg';
 	import tt3Bg from '$lib/images/transit-trek-bg-wide.png';
 	import tt4Bg from '$lib/images/tt4/bg_graphic.png';
-	import tt4Text from '$lib/images/tt4/text_clean_no_glow.png';
 	import tt5Bg from '$lib/images/tt5/tt5_bg.jpg';
-	import tt5Text from '$lib/images/tt5/tt5_logo_cropped.png';
 	import ett1Bg from '$lib/images/ett1/ett1_blur_preview.png';
 	import BigBtn from '../components/bigBtn.svelte';
 </script>
@@ -41,46 +39,44 @@
 	</p>
 </section>
 
-<section class="picsection ttWrap">
-	<h2>Thanks For a Great 2024 Season!</h2>
-	<div class="ttList">
-		<a href="/tt3" class="tt3">
-			<div class="textWrap">
-				<div class="textBlurWrap">
-					<svg aria-hidden="true">
-						<clipPath id="clipPath">
-							<text dominant-baseline="hanging" text-anchor="middle" x="50%" y="0%"
-								>Race Across</text
-							>
-							<text dominant-baseline="hanging" text-anchor="middle" x="50%" y="30%">Seattle</text>
-						</clipPath>
-					</svg>
-				</div>
-				<div class="textShadowWrap">
-					<h1>Race Across<br /><span>Seattle</span></h1>
-					<svg aria-hidden="true">
-						<mask id="maskPath">
-							<rect width="100%" height="100%" fill="white" />
-							<text color="black" dominant-baseline="hanging" text-anchor="middle" x="50%" y="0%"
-								>Race Across</text
-							>
-							<text color="black" dominant-baseline="hanging" text-anchor="middle" x="50%" y="30%"
-								>Seattle</text
-							>
-						</mask>
-					</svg>
-				</div>
-			</div>
-		</a>
-		<a href="/tt4" class="tt4" rel="external"
-			>Hide and Seek
-			<img src={tt4Text} alt="" /></a
+<svg width="0" height="0" style="position: absolute;">
+	<filter id="knockout-glow">
+		<feComponentTransfer in="SourceAlpha" result="solid-alpha">
+			<feFuncA type="linear" slope="100" />
+		</feComponentTransfer>
+		<feGaussianBlur in="solid-alpha" stdDeviation="8" result="glow-blur" />
+		<feFlood flood-color="#ffffff" result="glow-color" />
+		<feComposite in="glow-color" in2="glow-blur" operator="in" result="colored-glow" />
+		<feComposite in="colored-glow" in2="solid-alpha" operator="out" result="glow-outside-only" />
+		<feMerge>
+			<feMergeNode in="glow-outside-only" />
+			<feMergeNode in="SourceGraphic" />
+		</feMerge>
+	</filter>
+</svg>
+<section class="picsection tt6">
+	<h2>Upcoming Game</h2>
+
+	<div>
+		<span class="cWrap cw1"
+			><span class="card c1"><span class="c11">Cross</span><span class="c12">lake</span></span
+			></span
 		>
-		<a href="/tt5" class="tt5">
-			The Emerald City Expedition
-			<img src={tt5Text} alt="" />
-		</a>
+		<span class="cWrap cw2"
+			><span class="card c2"><span class="c21">Cross</span><span class="c22">over</span></span
+			></span
+		>
 	</div>
+
+	<p class="btnwrap">
+		<BigBtn
+			isBlock={true}
+			href="/tt6"
+			text="Learn More"
+			color={['rgb(0, 160, 223)', 'rgba(255, 255, 255, 0.1)']}
+			customStyles="box-shadow: none; clip-path: polygon(1em 0%, 100% 0%, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0% 100%, 0% 1em)"
+		/>
+	</p>
 </section>
 
 <section class="midsection">
@@ -328,199 +324,6 @@
 		max-width: 600px;
 	}
 
-	.ttWrap::after {
-		display: none;
-	}
-
-	.ttWrap::before {
-		content: '';
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		box-shadow: inset 0px 0px 15px black;
-		z-index: 4;
-		background: none;
-		mask-image: none;
-		backdrop-filter: none;
-		pointer-events: none;
-	}
-
-	.ttWrap h2 {
-		text-align: center;
-		width: 100%;
-		max-width: unset;
-		position: relative;
-		z-index: 2;
-		position: absolute;
-		top: 0;
-	}
-
-	.ttWrap {
-		text-align: center;
-		height: 600px;
-		box-sizing: border-box;
-		position: relative;
-		padding: 0;
-	}
-
-	.ttWrap .ttList {
-		position: relative;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		font-size: 0;
-		overflow: hidden;
-	}
-
-	.ttWrap .ttList a {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-
-		width: calc(100% / 3);
-		height: 100%;
-		position: relative;
-		background-size: cover;
-		background-position: center;
-		vertical-align: top;
-	}
-
-	.ttWrap .ttList a.tt3 {
-		background-image: url($lib/images/transit-trek-bg-wide.png);
-	}
-
-	.ttWrap .ttList a.tt4 {
-		background-image: url($lib/images/tt4/bg_graphic.png);
-		border-left: 5px black solid;
-		border-right: 5px black solid;
-		box-sizing: border-box;
-	}
-
-	.ttWrap .ttList a.tt5 {
-		background-image: url($lib/images/tt5/tt5_bg.jpg);
-	}
-
-	.ttWrap .ttList a img {
-		max-width: 100%;
-		max-height: 100%;
-		transform: scale(1);
-
-		transition: transform 0.25s ease-in-out;
-	}
-
-	.ttWrap .ttList a:hover img,
-	.ttWrap .ttList a:focus img {
-		transform: scale(1.1);
-	}
-
-	.ttWrap .ttList a:active img {
-		transform: scale(0.9);
-		transition: transform 0.05s ease-in-out;
-	}
-
-	.ttWrap .ttList a.tt3:hover .textWrap,
-	.ttWrap .ttList a.tt3:focus .textWrap {
-		transform: translateY(-50%) translateZ(0) scale(1.1);
-	}
-
-	.ttWrap .ttList a.tt3:active .textWrap {
-		transform: translateY(-50%) translateZ(0) scale(0.9);
-		transition: transform 0.05s ease-in-out;
-	}
-
-	.textWrap {
-		margin: 0;
-		height: 8.8vw;
-		width: 100%;
-		position: absolute;
-
-		transform: translateY(-50%) translateZ(0) scale(1);
-		top: 50%;
-		transition: transform 0.25s ease-in-out;
-	}
-
-	.textBlurWrap text:nth-child(2),
-	.textShadowWrap svg text:nth-child(3),
-	.textShadowWrap h1 span {
-		font-size: 7vw;
-	}
-
-	.textShadowWrap {
-		margin: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-
-		mask: url(#maskPath);
-	}
-
-	.textShadowWrap h1 {
-		font-family: 'Noto Sans', 'Helvetica', sans-serif;
-		font-weight: 900;
-		font-size: 4vw;
-		text-align: center;
-		margin: 0;
-		line-height: 3.6vw;
-		transform: translateY(1px);
-
-		color: white;
-
-		text-shadow: black 0 0 0.6vw;
-		-webkit-text-stroke: 0.52vw black;
-		paint-order: stroke fill;
-	}
-
-	.textShadowWrap svg {
-		pointer-events: none;
-		font-family: 'Noto Sans', 'Helvetica', sans-serif;
-		font-weight: 900;
-		font-size: 4vw;
-		text-align: center;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		height: 10vw;
-	}
-
-	#maskPath {
-		background: white;
-		color: black;
-	}
-
-	.textShadowWrap h1 span {
-		line-height: 5.2vw;
-		-webkit-text-stroke: 0.72vw black;
-	}
-
-	.textBlurWrap {
-		pointer-events: none;
-
-		backdrop-filter: invert(1) blur(5px);
-		clip-path: url(#clipPath);
-
-		margin: 0;
-
-		font-family: 'Noto Sans', 'Helvetica', sans-serif;
-		font-weight: 900;
-		font-size: 4vw;
-		text-align: center;
-
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-	}
-
-	.textBlurWrap svg {
-		width: 100%;
-		height: 10vw;
-	}
-
 	.rules::after {
 		background-image: url($lib/images/pexels-josh-fields-seattle.jpg);
 		background-position: center right;
@@ -627,11 +430,6 @@
 	}
 
 	@media (max-width: 1000px) {
-		.picsection.ttWrap {
-			padding-left: 0;
-			padding-right: 0;
-		}
-
 		.topLogo .text {
 			font-size: 8vw;
 			-webkit-text-stroke: 1vw black;
@@ -657,10 +455,6 @@
 			width: 100%;
 			max-width: unset;
 		}
-
-		.ttWrap h2 {
-			font-size: 5vw;
-		}
 	}
 
 	@media (max-width: 600px) {
@@ -670,96 +464,208 @@
 		}
 	}
 
+	.tt6::after {
+		background-image: url($lib/images/tt6/bg.jpg);
+		background-position: center;
+
+		background-attachment: unset;
+		position: fixed;
+	}
+
+	.tt6::before {
+		display: none;
+	}
+
+	.tt6 h2 {
+		text-align: center;
+		width: 100%;
+		max-width: unset;
+	}
+
+	.tt6 {
+		text-align: center;
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+
+	.tt6 .btnwrap {
+		padding: 0;
+		text-align: center;
+
+		max-width: initial;
+		width: initial;
+		display: inline-block;
+		box-sizing: border-box;
+		margin: 1vw auto;
+	}
+
+	@media (max-width: 1000px) {
+		.picsection.tt6 {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
 	@media (max-width: 800px) {
-		.ttWrap {
-			height: 800px;
+		.tt6 .btnwrap {
+			max-width: unset;
+			margin-top: 50px;
 		}
 
-		.ttWrap h2 {
-			background: black;
-			margin-top: 0;
-			position: absolute;
-			padding-top: 1vw;
+		.tt6 h2 {
+			font-size: 5vw;
+		}
+	}
+
+	.tt6 .cWrap {
+		filter: url(#knockout-glow);
+		display: block;
+
+		--xAmt: 0;
+		transform: translateX(var(--xAmt));
+		opacity: 1;
+	}
+
+	.tt6 > div {
+		color: white;
+		text-align: center;
+		font-size: min(15vh, 10vw);
+		font-weight: 900;
+	}
+
+	.tt6 .card {
+		position: relative;
+		display: inline-block;
+		background: none;
+		text-align: center;
+		padding: 0em 0.2em;
+		border-radius: 1vh;
+		margin: 1vh;
+		overflow: hidden;
+
+		--radius: 2vh;
+		--a: calc(var(--radius) / tan(67.5deg));
+		--b: calc(var(--radius) / tan(67.5deg) / sqrt(2));
+	}
+
+	.tt6 .card::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		background: linear-gradient(
+			to top,
+			rgba(4, 100, 176, 0.5),
+			rgba(1, 47, 104, 0.7) 30%,
+			rgba(2, 14, 34, 0.7)
+		);
+	}
+
+	.tt6 .card span {
+		mix-blend-mode: add;
+		vertical-align: top;
+		display: inline-block;
+	}
+
+	.tt6 .card .c12 {
+		margin-top: 0.3em;
+	}
+
+	.tt6 .card .c21 {
+		margin-top: 0.3em;
+	}
+
+	.tt6 .card .c11,
+	.tt6 .card .c22 {
+		background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgb(0, 160, 223));
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: transparent;
+		-webkit-text-stroke: 1px rgba(105, 255, 255, 0.6);
+	}
+
+	.tt6 .card .c12,
+	.tt6 .card .c21 {
+		background: linear-gradient(to bottom, rgba(230, 248, 227, 0.1), rgba(61, 174, 43, 0.8));
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: transparent;
+		-webkit-text-stroke: 1px rgba(79, 228, 192, 0.6);
+	}
+
+	.tt6 .cw1 {
+		margin-top: 0.3em;
+		--xAmt: max(-20vh, -15vw);
+	}
+
+	.tt6 .c1 {
+		clip-path: shape(
+			from var(--radius) 0,
+			line to calc(100% - var(--radius)) 0,
+			arc to 100% var(--radius) of var(--radius) cw,
+			line to 100% calc(100% - var(--radius)),
+			arc to calc(100% - var(--radius)) 100% of var(--radius) cw,
+			line to calc(53.5% + var(--a)) 100%,
+			arc to calc(53.5% - var(--b)) calc(100% - var(--b)) of var(--radius) cw,
+			line to calc(46.5% + var(--b)) calc(75% + var(--b)),
+			arc to calc(46.5% - var(--a)) 75% of var(--radius) ccw,
+			line to calc(5% + var(--a)) 75%,
+			arc to calc(5% - var(--b)) calc(75% - var(--b)) of var(--radius) cw,
+			line to var(--b) calc(75% - 25% * 5 / 7 + var(--b)),
+			arc to 0 calc(75% - 25% * 5 / 7 - var(--a)) of var(--radius) cw,
+			line to 0 var(--radius),
+			arc to var(--radius) 0 of var(--radius) cw,
+			close
+		);
+	}
+
+	.tt6 .c1 span {
+		transform: translateY(-0.1em);
+	}
+
+	.tt6 .cw2 {
+		margin-top: -0.4em;
+		--xAmt: min(20vh, 15vw);
+	}
+
+	.tt6 .c2 {
+		clip-path: shape(
+			from var(--radius) 100%,
+			line to calc(100% - var(--radius)) 100%,
+			arc to 100% calc(100% - var(--radius)) of var(--radius) ccw,
+			line to 100% var(--radius),
+			arc to calc(100% - var(--radius)) 0 of var(--radius) ccw,
+			line to calc(53.5% + var(--a)) 0,
+			arc to calc(53.5% - var(--b)) calc(var(--b)) of var(--radius) ccw,
+			line to calc(46.5% + var(--b)) calc(25% - var(--b)),
+			arc to calc(46.5% - var(--a)) 25% of var(--radius) cw,
+			line to calc(5% + var(--a)) 25%,
+			arc to calc(5% - var(--b)) calc(25% + var(--b)) of var(--radius) ccw,
+			line to var(--b) calc(25% + 25% * 5 / 7 - var(--b)),
+			arc to 0 calc(25% + 25% * 5 / 7 + var(--a)) of var(--radius) ccw,
+			line to 0 calc(100% - var(--radius)),
+			arc to var(--radius) 100% of var(--radius) ccw,
+			close
+		);
+	}
+
+	@media (max-width: 800px) {
+		.tt6 > div {
+			font-size: min(15vh, 15vw);
 		}
 
-		.ttWrap h2::after {
-			content: '';
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: 100%;
-			height: 5vw;
-			background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+		.tt6 .cw1 {
+			--xAmt: max(-5vh, -5vw);
 		}
 
-		.ttWrap .ttList {
-			padding-top: 5vw;
-		}
-
-		.ttWrap .ttList a {
-			height: calc(100% / 3);
-			width: 100%;
-		}
-
-		.ttWrap .ttList a.tt4 {
-			border-left: none;
-			border-right: none;
-			border-top: 5px black solid;
-			border-bottom: 5px black solid;
-		}
-
-		.textWrap {
-			height: 17.6vw;
-		}
-
-		.textBlurWrap text:nth-child(2),
-		.textShadowWrap svg text:nth-child(3),
-		.textShadowWrap h1 span {
-			font-size: 14vw;
-		}
-
-		.textShadowWrap h1 {
-			font-size: 8vw;
-			line-height: 7.2vw;
-			text-shadow: black 0 0 1.2vw;
-			-webkit-text-stroke: 1.04vw black;
-		}
-
-		.textShadowWrap svg {
-			font-size: 8vw;
-			height: 20vw;
-		}
-
-		.textShadowWrap h1 span {
-			line-height: 10.4vw;
-			-webkit-text-stroke: 1.44vw black;
-		}
-
-		.textBlurWrap {
-			font-size: 8vw;
-		}
-
-		.textBlurWrap svg {
-			height: 20vw;
-		}
-
-		.ttWrap::before {
-			content: '';
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: -5vw;
-			box-shadow: inset 0px 0px 15px black;
-			z-index: 4;
-			background: none;
-			mask-image: none;
-			backdrop-filter: none;
-			pointer-events: none;
-		}
-
-		.ttWrap .ttList a.tt4 img {
-			max-width: 80%;
+		.tt6 .cw2 {
+			--xAmt: min(5vh, 5vw);
+			margin-top: -0.2em;
 		}
 	}
 </style>
