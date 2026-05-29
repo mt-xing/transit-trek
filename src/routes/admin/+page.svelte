@@ -14,26 +14,27 @@
 	{/if}
 </p>
 
-<h1>ETT1</h1>
+<h1>TT6</h1>
 
 <h2>Setup</h2>
-<p><a href="/admin/ett1/challenges">Edit Challenges</a></p>
-<p><a href="/admin/ett1/teams">Edit Teams</a></p>
+<p><a href="/admin/tt6/challenges">Edit Challenges</a></p>
+<p><a href="/admin/tt6/teams">Edit Teams</a></p>
 
 <h2>Game Operations</h2>
-<p><a href="/admin/ett1/game">Game State</a></p>
-<p><a href="/admin/ett1/entry">Challenge Status Entry</a></p>
-<p><a href="/admin/ett1/teamInfo">Team Info</a></p>
-<p><a href="/admin/ett1/logs">Logs</a></p>
+<p><a href="/admin/tt6/game">Game State</a></p>
+<p><a href="/admin/tt6/entry">Challenge Status Entry</a></p>
+<p><a href="/admin/tt6/teamInfo">Team Info</a></p>
+<p><a href="/admin/tt6/logs">Logs</a></p>
 
 <h2>Progress Overview</h2>
-<p><a href="/admin/ett1/summary/standings">Standings</a></p>
-<p><a href="/admin/ett1/summary/heatmap">Heat Map</a></p>
+<p><a href="/admin/tt6/summary/standings">Standings</a></p>
+<p><a href="/admin/tt6/summary/heatmap">Heat Map</a></p>
 
 <h2>Old Events</h2>
 <p><a href="/admin/tt3">TT3</a></p>
 <p><a href="/admin/tt4">TT4</a></p>
 <p><a href="/admin/tt5">TT5</a></p>
+<p><a href="/admin/ett1">ETT1</a></p>
 
 <style>
 	h1,

@@ -1,0 +1,82 @@
+import { CosmosClient } from '@azure/cosmos';
+import { redirect } from '@sveltejs/kit';
+import type { Actions, PageServerLoad, RequestEvent } from './$types';
+import { DB_URL, READ_KEY, WRITE_KEY } from '$env/static/private';
+import assertUnreachable from '../../../../../utils/assertUnreachable';
+import type {
+	TT6ChallengeCategory,
+	TT6ChallengeDefinition,
+	TT6ChallengeType,
+} from '../../../../../types/tt6/challenge';
+
+const client = new CosmosClient({
+	endpoint: DB_URL,
+	key: READ_KEY,
+});
+
+export const load: PageServerLoad = async ({ url }) => {
+	const id = url.searchParams.get('id');
+	if (id) {
+		const res = await client
+			.database('transit-trek')
+			.container('tt6-challenges')
+			.item(id, id)
+			.read<TT6ChallengeDefinition>();
+		return {
+			challenge: res.resource,
+		};
+	}
+	return {};
+};
+
+const writeClient = new CosmosClient({
+	endpoint: DB_URL,
+	key: WRITE_KEY,
+});
+
+export const actions = {
+	default: async (event: RequestEvent) => {
+		const data = await event.request.formData();
+		const id = event.url.searchParams.get('id');
+		if (!id) {
+			redirect(303, '/admin/tt6/challenges');
+			return;
+		}
+
+		const challengeBase = {
+			id,
+			title: data.get('title') as string,
+			desc: data.get('desc') as string,
+			points: parseFloat(data.get('points') as string),
+			category: data.get('category') as TT6ChallengeCategory,
+			privateNotes: (data.get('privateNotes') as string) || undefined,
+			shrinkTitle: !!data.get('shrinkTitle'),
+			bonus: data.get('bonusEnabled') ? parseInt(data.get('bonusAmount') as string, 10) : undefined,
+		};
+		const type = data.get('type') as TT6ChallengeType;
+		const newChallengeInfo = ((): TT6ChallengeDefinition => {
+			switch (type) {
+				case 'single':
+					return { type, ...challengeBase };
+				case 'multi':
+					return {
+						...challengeBase,
+						type: 'multi',
+						partDescs: Array.from(Array(parseInt(data.get('partDescsLength') as string, 10))).map(
+							(_, i) => data.get(`partDescs${i}`) as string,
+						),
+					};
+				default:
+					return assertUnreachable(type);
+			}
+		})();
+
+		await writeClient
+			.database('transit-trek')
+			.container('tt6-challenges')
+			.item(id, id)
+			.replace(newChallengeInfo);
+
+		redirect(303, '/admin/tt6/challenges');
+	},
+} satisfies Actions;
