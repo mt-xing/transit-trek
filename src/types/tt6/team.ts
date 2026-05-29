@@ -1,14 +1,14 @@
-export type ETT1Team = {
+export type TT6Team = {
 	id: string;
 	teamNum: number;
 	secret: string;
 	name: string;
 	score: number;
-	challengeProgress: ETT1ChallengeProgress;
+	challengeProgress: TT6ChallengeProgress;
 	bioBreakTaken: boolean;
 };
 
-export type ETT1ChallengeProgress = Record<
+export type TT6ChallengeProgress = Record<
 	string,
 	{
 		manualComplete?: boolean;
