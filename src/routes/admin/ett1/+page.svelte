@@ -30,10 +30,8 @@
 <p><a href="/admin/ett1/summary/standings">Standings</a></p>
 <p><a href="/admin/ett1/summary/heatmap">Heat Map</a></p>
 
-<h2>Old Events</h2>
-<p><a href="/admin/tt3">TT3</a></p>
-<p><a href="/admin/tt4">TT4</a></p>
-<p><a href="/admin/tt5">TT5</a></p>
+<h2>Back</h2>
+<p><a href="/admin">Back</a></p>
 
 <style>
 	h1,
