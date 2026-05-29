@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { TT6ChallengeProgress, TT6Team } from '../../../../../types/tt6/team';
 	import { isTt6ChallengeComplete } from '../../../../../utils/tt6/challenge';
-	import { getColor } from '../../../../../utils/tt6/colors';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -37,7 +36,6 @@
 			<ul>
 				{#each teamRank as team}
 					<li>
-						<span class="colorBadge" style="--color: {getColor(team.teamNum)};"></span> Team {team.teamNum}:
 						{team.name ?? '🛑 NO TEAM NAME YET'}{team.bioBreakTaken ? '' : ' - 🛑 NO BIO BREAK YET'}
 						<br />
 						Completed Challenges: {numChallengesComplete(team.challengeProgress)}
@@ -54,11 +52,5 @@
 	li {
 		font-size: 20px;
 		margin: 0.5em 0;
-	}
-	.colorBadge {
-		display: inline-block;
-		height: 1em;
-		width: 1em;
-		background: var(--color);
 	}
 </style>

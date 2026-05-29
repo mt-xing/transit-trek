@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { getColor } from '../../../../utils/tt6/colors';
 	import type { PageData } from './$types';
 	import { copyGreeting } from './greetingMsg';
 
@@ -15,7 +14,6 @@
 	{#each teams as team}
 		<li>
 			<a href="/admin/tt6/teams/edit?id={team.id}">
-				<span class="colorBadge" style="--color: {getColor(team.teamNum)};"></span>
 				{team.teamNum}: {team.name}
 			</a>
 			-
@@ -42,12 +40,5 @@
 
 	button {
 		padding: 0.5em 1em;
-	}
-
-	.colorBadge {
-		display: inline-block;
-		height: 1em;
-		width: 1em;
-		background: var(--color);
 	}
 </style>

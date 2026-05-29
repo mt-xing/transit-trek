@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { getColor } from '../../../../../utils/tt6/colors';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -16,7 +15,7 @@
 </script>
 
 <h1>
-	Edit Team Info: <span class="colorBadge" style="--color: {getColor(team.teamNum)};"></span>
+	Edit Team Info:
 	<em>Team {teamNum} - {name || 'Untitled Team'}</em>
 </h1>
 
@@ -52,12 +51,3 @@
 </form>
 
 <a href="/admin/tt6/teamInfo" style="display: block; margin-top: 100px;">Discard and Return</a>
-
-<style>
-	.colorBadge {
-		display: inline-block;
-		height: 1em;
-		width: 1em;
-		background: var(--color);
-	}
-</style>

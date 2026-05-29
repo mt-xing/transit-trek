@@ -11,7 +11,6 @@
 	import type { PageData } from './$types';
 	import type { TT6GameState } from '../../../types/tt6/game';
 	import { isTt6ChallengeComplete } from '../../../utils/tt6/challenge';
-	import { getColor } from '../../../utils/tt6/colors';
 
 	export let data: PageData;
 	let { allChallenges, gameState, team } = data;
@@ -176,7 +175,7 @@
 
 {#if team && gameState}
 	<h1 class="topTitle">{team.name || '⚠️ Untitled Team'}</h1>
-	<h1 class="bottomTitle" style="--color: {getColor(team.teamNum)};">
+	<h1 class="bottomTitle">
 		Team {team.teamNum} Dashboard
 	</h1>
 

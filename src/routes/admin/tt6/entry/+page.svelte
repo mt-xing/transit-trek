@@ -5,7 +5,6 @@
 		type TT6ChallengeDefinition,
 	} from '../../../../types/tt6/challenge';
 	import type { TT6Team } from '../../../../types/tt6/team';
-	import { getColor } from '../../../../utils/tt6/colors';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -92,7 +91,6 @@
 
 {#if selectedTeam && selectedChallenge}
 	<h2>
-		<span class="colorBadge" style="--color: {getColor(selectedTeam.teamNum)};"></span>
 		{selectedTeam.teamNum}: {selectedTeam.name}
 		<br />
 		{tt6ChallengeCategoryNames[selectedChallenge.category]}: {selectedChallenge.title}
@@ -111,11 +109,5 @@
 <style>
 	select {
 		padding: 1em 2em;
-	}
-	.colorBadge {
-		display: inline-block;
-		height: 1em;
-		width: 1em;
-		background: var(--color);
 	}
 </style>
