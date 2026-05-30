@@ -44,124 +44,186 @@
 	transition:fly={isFloat ? { y: 200, x: 0 } : { duration: 0 }}
 	class={`${challenge.category} ${isComplete ? 'complete' : 'incomplete'} ${isFloat ? '' : 'inline'}`}
 >
-	{#if isFloat}
-		<button on:click={closeCallback} class="closeBtn" aria-label="Close">╳</button>
-	{/if}
+	<div class="card">
+		{#if isFloat}
+			<button on:click={closeCallback} class="closeBtn" aria-label="Close"
+				>╳ <span>Close</span></button
+			>
+		{/if}
 
-	<div class="contentWrap">
-		<span class="header">
-			{#if isComplete}
-				<span>✔</span>
-			{/if}
-		</span>
+		<div class="contentWrap">
+			<span class="header">
+				{#if isComplete}
+					<span>✔</span>
+				{/if}
+			</span>
 
-		<div class="content">
-			<h1>{challenge.title}</h1>
+			<div class="content">
+				<h1>{challenge.title}</h1>
 
-			{#if progress?.manualComplete !== undefined}
-				<p class="msg override">
-					The status of this challenge has been overridden by Game Control.
-				</p>
-			{/if}
-
-			{#if challenge.category === 'hard'}
-				{#if score < 80}
-					<p class="msg override" style="font-size: 1.2em; display: flex; flex-direction: row;">
-						<span style="font-size: 3em; margin-right: 20px;">⚠️</span>
-						<span
-							>You may not <em style="text-decoration: underline;">begin</em> this challenge until your
-							team has earned 80 points.</span
-						>
-					</p>
-				{:else}
-					<p class="msg hard">
-						This challenge may only be attempted by teams with at least 80 points. You may begin
-						this challenge if you so choose.
+				{#if progress?.manualComplete !== undefined}
+					<p class="msg override">
+						The status of this challenge has been overridden by Game Control.
 					</p>
 				{/if}
-			{/if}
 
-			<p class={`msg ${challenge.category}`}>
-				{challenge.points} point{challenge.points === 1 ? '' : 's'}
-			</p>
-
-			<img
-				style="max-width: 60px;{imgLoaded !== false ? 'display: none' : ''}"
-				src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Ajax_loader_metal_512.gif"
-				alt=""
-			/>
-
-			<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-			<p bind:this={descWrap}>{@html challenge.desc}</p>
-
-			<p class={`msg ${challenge.category}`}>
-				<span class="big">{tt6ChallengeCategoryNames[challenge.category]}</span>
-				{#if challenge.category === 'find'}
-					Within the game area, try to find where this is located. Once found, take a team selfie
-					and let us know where you found it.
-				{:else if challenge.category === 'challenge'}
-					For this challenge, follow the instructions. If a selfie is requested, all team members
-					must be visible unless explicitly stated otherwise.
-				{:else if challenge.category === 'hard'}
-					This is an end-game challenge. Your may not begin an attempt on this challenge until your
-					team has earned 80 points.
+				{#if challenge.category === 'hard'}
+					{#if score < 80}
+						<p class="msg override" style="font-size: 1.2em; display: flex; flex-direction: row;">
+							<span style="font-size: 3em; margin-right: 20px;">⚠️</span>
+							<span
+								>You may not <em style="text-decoration: underline;">begin</em> this challenge until
+								your team has earned 80 points.</span
+							>
+						</p>
+					{:else}
+						<p class="msg hard">
+							This challenge may only be attempted by teams with at least 80 points. You may begin
+							this challenge if you so choose.
+						</p>
+					{/if}
 				{/if}
-			</p>
 
-			<h2>Progress</h2>
-
-			{#if progress?.manualComplete === true}
-				<p class="msg override">
-					<ImmutableCheckbox checked={true} />
-					This challenge has been marked as complete by Game Control, regardless of the status shown
-					below.
+				<p class={`msg ${challenge.category}`}>
+					{challenge.points} point{challenge.points === 1 ? '' : 's'}
 				</p>
-			{:else if progress?.manualComplete === false}
-				<p class="msg override">
-					<ImmutableCheckbox checked={false} />
-					This challenge has been marked as incomplete by Game Control, regardless of the status shown
-					below.
-				</p>
-			{/if}
 
-			{#if challenge.type === 'single'}
-				<ImmutableCheckbox checked={progress?.progress?.[0] ?? false} />
-			{:else if challenge.type === 'multi'}
-				<ol class="multiList" role="list">
-					{#each challenge.partDescs as c, i}
-						<li><ImmutableCheckbox checked={progress?.progress?.[i] ?? false} text={c} /></li>
-					{/each}
-				</ol>
-			{/if}
-
-			{#if challenge.bonus}
-				<h3>Score Adjustments</h3>
-				<p>Adjustment of {challenge.bonus} point{challenge.bonus === 1 ? '' : 's'}</p>
-				<ImmutableCheckbox
-					checked={progress?.bonus ?? false}
-					text={progress?.bonus ?? false ? 'Active' : 'Inactive'}
+				<img
+					style="max-width: 60px;{imgLoaded !== false ? 'display: none' : ''}"
+					src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Ajax_loader_metal_512.gif"
+					alt=""
 				/>
-			{/if}
+
+				<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+				<p bind:this={descWrap}>{@html challenge.desc}</p>
+
+				<p class={`msg ${challenge.category}`}>
+					<span class="big">{tt6ChallengeCategoryNames[challenge.category]}</span>
+					{#if challenge.category === 'find'}
+						Within the game area, try to find where this is located. Once found, take a team selfie
+						and let us know where you found it.
+					{:else if challenge.category === 'challenge'}
+						For this challenge, follow the instructions. If a selfie is requested, all team members
+						must be visible unless explicitly stated otherwise.
+					{:else if challenge.category === 'hard'}
+						This is an end-game challenge. Your may not begin an attempt on this challenge until
+						your team has earned 80 points.
+					{/if}
+				</p>
+
+				<h2>Progress</h2>
+
+				{#if progress?.manualComplete === true}
+					<p class="msg override">
+						<ImmutableCheckbox checked={true} />
+						This challenge has been marked as complete by Game Control, regardless of the status shown
+						below.
+					</p>
+				{:else if progress?.manualComplete === false}
+					<p class="msg override">
+						<ImmutableCheckbox checked={false} />
+						This challenge has been marked as incomplete by Game Control, regardless of the status shown
+						below.
+					</p>
+				{/if}
+
+				{#if challenge.type === 'single'}
+					<ImmutableCheckbox checked={progress?.progress?.[0] ?? false} />
+				{:else if challenge.type === 'multi'}
+					<ol class="multiList" role="list">
+						{#each challenge.partDescs as c, i}
+							<li><ImmutableCheckbox checked={progress?.progress?.[i] ?? false} text={c} /></li>
+						{/each}
+					</ol>
+				{/if}
+
+				{#if challenge.bonus}
+					<h3>Score Adjustments</h3>
+					<p>Adjustment of {challenge.bonus} point{challenge.bonus === 1 ? '' : 's'}</p>
+					<ImmutableCheckbox
+						checked={progress?.bonus ?? false}
+						text={progress?.bonus ?? false ? 'Active' : 'Inactive'}
+					/>
+				{/if}
+			</div>
 		</div>
 	</div>
 </section>
 
 <style>
 	section {
-		background-color: rgb(250, 250, 250);
-		color: black;
-		box-sizing: border-box;
-		margin: 30px auto;
+		filter: url(#knockout-glow);
+		display: block;
+
 		width: calc(100% - 20px);
 		max-width: 520px;
-		box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
-		border-bottom: 5px black solid;
+		box-sizing: border-box;
+		padding: 0.5em 1em 1.75em 1em;
 
+		margin: 0 auto;
 		position: fixed;
 		bottom: 0;
 		left: 0;
 		right: 0;
 		z-index: 5;
+	}
+
+	.card {
+		position: relative;
+		display: inline-flex;
+		flex-direction: column;
+		background: none;
+		text-align: center;
+		border-radius: 1vh;
+		margin: 1vh;
+		overflow: hidden;
+
+		color: white;
+		font-size: 20px;
+
+		--radius: 1em;
+		--a: calc(var(--radius) / tan(67.5deg));
+		--b: calc(var(--radius) / tan(67.5deg) / sqrt(2));
+		--notch: 0.6em;
+		--close: 5em;
+
+		clip-path: shape(
+			from var(--radius) 0,
+			line to calc(var(--radius) + var(--close) - var(--a)) 0,
+			arc to calc(var(--radius) + var(--close) + var(--b)) var(--b) of var(--radius) cw,
+			line to calc(var(--radius) + var(--close) + 2 * var(--notch)) calc(2 * var(--notch)),
+			arc to calc(var(--radius) + var(--close) + 2 * var(--notch) + var(--a))
+				calc(2 * var(--notch) + var(--b)) of var(--radius) ccw,
+			line to calc(100% - var(--radius)) calc(2 * var(--notch) + var(--b)),
+			arc to 100% calc(2 * var(--notch) + var(--b) + var(--radius)) of var(--radius) cw,
+			line to 100% calc(100% - var(--radius)),
+			arc to calc(100% - var(--radius)) 100% of var(--radius) cw,
+			line to calc(50% + var(--notch) + var(--a)) 100%,
+			arc to calc(50% + var(--notch) - var(--b)) calc(100% - var(--b)) of var(--radius) cw,
+			line to calc(50% - var(--notch) + var(--b)) calc(100% - 2 * var(--notch) + var(--b)),
+			arc to calc(50% - var(--notch) - var(--a)) calc(100% - 2 * var(--notch)) of var(--radius) ccw,
+			line to var(--radius) calc(100% - 2 * var(--notch)),
+			arc to 0 calc(100% - 2 * var(--notch) - var(--radius)) of var(--radius) cw,
+			line to 0 var(--radius),
+			arc to var(--radius) 0 of var(--radius) cw,
+			close
+		);
+	}
+
+	.card::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		background: linear-gradient(
+			to top,
+			rgba(4, 100, 176, 0.5),
+			rgba(1, 47, 104, 0.7) 30%,
+			rgba(2, 14, 34, 0.7)
+		);
 	}
 
 	.contentWrap {
@@ -182,18 +244,16 @@
 	}
 
 	section.challenge {
-		--color: #3dae2b;
-		background: rgb(253, 255, 253);
+		--color: rgb(12, 60, 15);
+		--accent-color: #3dae2b;
 	}
 
 	section.find {
 		--color: #00a0df;
-		background: rgb(250, 250, 255);
 	}
 
 	section.hard {
 		--color: #8a2631;
-		background: rgb(255, 253, 253);
 	}
 
 	.content {
@@ -219,43 +279,6 @@
 		margin: 0;
 	}
 
-	.header::before {
-		content: '';
-		display: block;
-		height: 16px;
-		width: 100%;
-		background: var(--color);
-		position: absolute;
-
-		top: 42px;
-		left: 0;
-	}
-
-	.header::after {
-		content: '';
-		display: block;
-		height: 55px;
-		width: 55px;
-		border: 7px black solid;
-		background: white;
-		position: absolute;
-		border-radius: 40px;
-		top: 22.5px;
-		box-sizing: border-box;
-	}
-
-	.complete .header::after {
-		background: black;
-	}
-
-	.complete .header span {
-		position: relative;
-		z-index: 5;
-		color: white;
-		font-weight: 900;
-		top: 6px;
-	}
-
 	.closeBtn {
 		position: absolute;
 		top: 0;
@@ -265,17 +288,21 @@
 		font-weight: bold;
 		color: white;
 
-		background: black;
-		width: 36px;
 		height: 36px;
 		font-size: 20px;
+		width: 100%;
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: start;
 		z-index: 5;
+		background: none;
+		padding-left: 1em;
 
-		border-bottom-right-radius: 10px;
-		box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+		background: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0));
+	}
+
+	.closeBtn span {
+		padding-left: 0.7em;
 	}
 
 	h1 {
@@ -321,8 +348,17 @@
 	}
 
 	.msg {
-		background: rgb(240, 240, 240);
-		border-bottom: 5px var(--color) solid;
+		border-top: 2px solid var(--accent-color);
+		background: linear-gradient(to bottom, var(--color) 30%, rgba(2, 14, 34, 0.7));
+		--notch: 1.5em;
+		clip-path: polygon(
+			var(--notch) 0%,
+			100% 0%,
+			100% calc(100% - var(--notch)),
+			calc(100% - var(--notch)) 100%,
+			0% 100%,
+			0% var(--notch)
+		);
 		padding: 1em 1.5em;
 		margin: 20px 0;
 	}

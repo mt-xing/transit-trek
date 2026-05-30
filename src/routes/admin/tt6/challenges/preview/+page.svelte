@@ -6,6 +6,22 @@
 	const { challenge } = data;
 </script>
 
+<svg width="0" height="0" style="position: absolute;">
+	<filter id="knockout-glow">
+		<feComponentTransfer in="SourceAlpha" result="solid-alpha">
+			<feFuncA type="linear" slope="100" />
+		</feComponentTransfer>
+		<feGaussianBlur in="solid-alpha" stdDeviation="8" result="glow-blur" />
+		<feFlood flood-color="#ffffff" result="glow-color" />
+		<feComposite in="glow-color" in2="glow-blur" operator="in" result="colored-glow" />
+		<feComposite in="colored-glow" in2="solid-alpha" operator="out" result="glow-outside-only" />
+		<feMerge>
+			<feMergeNode in="glow-outside-only" />
+			<feMergeNode in="SourceGraphic" />
+		</feMerge>
+	</filter>
+</svg>
+
 <div id="wrap">
 	{#if challenge}
 		<Tt6ChallengeView
