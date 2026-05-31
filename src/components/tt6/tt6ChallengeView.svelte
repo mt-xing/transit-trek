@@ -244,16 +244,18 @@
 	}
 
 	section.challenge {
-		--color: rgb(12, 60, 15);
+		--color: rgb(12, 50, 15);
 		--accent-color: #3dae2b;
 	}
 
 	section.find {
-		--color: #00a0df;
+		--color: rgb(12, 25, 60);
+		--accent-color: #00a0df;
 	}
 
 	section.hard {
-		--color: #8a2631;
+		--color: rgb(64, 4, 8);
+		--accent-color: #8a2631;
 	}
 
 	.content {
@@ -288,7 +290,8 @@
 		font-weight: bold;
 		color: white;
 
-		height: 36px;
+		height: 1.5em;
+		box-sizing: border-box;
 		font-size: 20px;
 		width: 100%;
 		display: flex;
@@ -296,9 +299,18 @@
 		justify-content: start;
 		z-index: 5;
 		background: none;
-		padding-left: 1em;
+		padding: 0.5em 0 0 1em;
+	}
 
+	.closeBtn::before {
 		background: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0));
+		content: '';
+		z-index: -1;
+		width: 100%;
+		height: 50px;
+		top: 0;
+		left: 0;
+		position: absolute;
 	}
 
 	.closeBtn span {
