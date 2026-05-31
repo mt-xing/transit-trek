@@ -303,6 +303,7 @@
 	}
 
 	.closeBtn::before {
+		pointer-events: none;
 		background: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0));
 		content: '';
 		z-index: -1;
