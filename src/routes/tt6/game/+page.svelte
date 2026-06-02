@@ -280,16 +280,10 @@
 				{/if}
 			{/if}
 
-			<div class={`curveIn ${category}`}></div>
 			<ul class={`challengeList ${category}`}>
 				{#each sortedChallenges[category] as challenge}
 					<li>
 						<button on:click={() => openCallback(challenge)}>
-							{#if isTt6ChallengeComplete(challenge, team.challengeProgress)}
-								<span class="station done">✔</span>
-							{:else}
-								<span class="station"></span>
-							{/if}
 							<div class="wrap">
 								<h4>{challenge.title}</h4>
 								<p>{previewText(challenge.desc)}</p>
@@ -303,7 +297,6 @@
 					</li>
 				{/each}
 			</ul>
-			<div class={`curveOut ${category}`}></div>
 		{/each}
 
 		<Tt6DashboardCard>
@@ -484,35 +477,6 @@
 		justify-content: center;
 	}
 
-	.challengeList .station {
-		width: 40px;
-		height: 40px;
-		border-radius: 40px;
-		box-sizing: border-box;
-		background: white;
-		position: absolute;
-		top: 16px;
-		left: -15px;
-		border: 5px black solid;
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.challengeList .station.done {
-		background: black;
-		font-size: 30px;
-		overflow: hidden;
-		border: none;
-		color: white;
-		font-weight: 900;
-	}
-
-	.challengeList.find .station {
-		top: 30px;
-	}
-
 	.challengeList .points {
 		display: flex;
 		flex-direction: row;
@@ -560,46 +524,16 @@
 		-webkit-box-orient: vertical;
 	}
 
-	.challengeList.challenge,
-	.curveIn.challenge,
-	.curveOut.challenge {
+	.challengeList.challenge {
 		--color: 61, 174, 43;
 	}
 
-	.challengeList.find,
-	.curveIn.find,
-	.curveOut.find {
+	.challengeList.find {
 		--color: 0, 160, 223;
 	}
 
-	.challengeList.hard,
-	.curveIn.hard,
-	.curveOut.hard {
+	.challengeList.hard {
 		--color: 138, 38, 49;
-	}
-
-	.curveIn,
-	.curveOut {
-		height: 30px;
-		width: max(calc(50% - 250px), 25px);
-
-		border-right-style: solid;
-		border-right-width: 12px;
-		border-color: rgb(var(--color));
-
-		position: relative;
-	}
-
-	.curveIn {
-		border-top-style: solid;
-		border-top-width: 12px;
-		border-top-right-radius: 30px;
-	}
-
-	.curveOut {
-		border-bottom-style: solid;
-		border-bottom-width: 12px;
-		border-bottom-right-radius: 30px;
 	}
 
 	.rankingList {
