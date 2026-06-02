@@ -1,9 +1,13 @@
 <script lang="ts">
-	let visible = false;
 	export let isRed: boolean = false;
 	export let fillWidth: boolean = false;
+	export let animate: boolean = true;
+	let visible = !animate;
 
 	function onVisible(node: HTMLElement) {
+		if (!animate) {
+			return;
+		}
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
@@ -27,7 +31,7 @@
 </script>
 
 <section
-	class={`cardWrap${visible ? ' visible' : ''}${isRed ? ' red' : ''}${fillWidth ? ' fill' : ''}`}
+	class={`cardWrap${!animate ? ' static' : ''}${animate && visible ? ' visible' : ''}${isRed ? ' red' : ''}${fillWidth ? ' fill' : ''}`}
 	use:onVisible
 >
 	<div class="card">
@@ -47,9 +51,14 @@
 			opacity 1s cubic-bezier(0.23, 1, 0.32, 1);
 	}
 
-	.cardWrap.visible {
+	.cardWrap.visible,
+	.cardWrap.static {
 		transform: scale(1);
 		opacity: 1;
+	}
+
+	.cardWrap.static {
+		transition: none;
 	}
 
 	.card {

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
+	import { fade, scale } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import {
 		tt6ChallengeCategoryNames,
@@ -40,8 +40,11 @@
 	});
 </script>
 
+{#if isFloat}
+	<div transition:fade|global={{ duration: 200 }} class="blurBg"></div>
+{/if}
 <section
-	transition:fly={isFloat ? { y: 200, x: 0 } : { duration: 0 }}
+	transition:scale={isFloat ? { start: 1.2 } : { duration: 0 }}
 	class={`${challenge.category} ${isComplete ? 'complete' : 'incomplete'} ${isFloat ? '' : 'inline'}`}
 >
 	<div class="card">
@@ -166,6 +169,18 @@
 		left: 0;
 		right: 0;
 		z-index: 5;
+	}
+
+	.blurBg {
+		width: 100vw;
+		height: 100vh;
+		z-index: 4;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.2);
+		backdrop-filter: blur(10px);
+		transform: scale(1);
 	}
 
 	.card {

@@ -11,6 +11,7 @@
 	import type { PageData } from './$types';
 	import type { TT6GameState } from '../../../types/tt6/game';
 	import { isTt6ChallengeComplete } from '../../../utils/tt6/challenge';
+	import Tt6DashboardCard from '../../../components/tt6/tt6DashboardCard.svelte';
 
 	export let data: PageData;
 	let { allChallenges, gameState, team } = data;
@@ -173,21 +174,39 @@
 	/>
 </svelte:head>
 
+<svg width="0" height="0" style="position: absolute;">
+	<filter id="knockout-glow">
+		<feComponentTransfer in="SourceAlpha" result="solid-alpha">
+			<feFuncA type="linear" slope="100" />
+		</feComponentTransfer>
+		<feGaussianBlur in="solid-alpha" stdDeviation="8" result="glow-blur" />
+		<feFlood flood-color="#ffffff" result="glow-color" />
+		<feComposite in="glow-color" in2="glow-blur" operator="in" result="colored-glow" />
+		<feComposite in="colored-glow" in2="solid-alpha" operator="out" result="glow-outside-only" />
+		<feMerge>
+			<feMergeNode in="glow-outside-only" />
+			<feMergeNode in="SourceGraphic" />
+		</feMerge>
+	</filter>
+</svg>
+
+<div id="bg"></div>
+
 {#if team && gameState}
 	<h1 class="topTitle">{team.name || '⚠️ Untitled Team'}</h1>
 	<h1 class="bottomTitle">
 		Team {team.teamNum} Dashboard
 	</h1>
 
-	<div class="card">
+	<Tt6DashboardCard>
 		<p>This page is private and should only be viewed by members of your team.</p>
 		<p>
 			Keep the URL secret. If it's exposed, let Game Control know via Signal and we can generate a
 			new link for you.
 		</p>
-	</div>
+	</Tt6DashboardCard>
 
-	<div class="card">
+	<Tt6DashboardCard>
 		<div class="multiCard">
 			<div>
 				<h2>Score</h2>
@@ -207,10 +226,10 @@
 		{:else}
 			<span style="display: block; padding-bottom: 1em;"></span>
 		{/if}
-	</div>
+	</Tt6DashboardCard>
 
 	{#if !team.name || (!team.bioBreakTaken && gameState?.t === 'ongoing')}
-		<div class="card">
+		<Tt6DashboardCard>
 			<h2>Notice</h2>
 			{#if !team.name}
 				<p>
@@ -225,23 +244,23 @@
 					know when you start and end your break.
 				</p>
 			{/if}
-		</div>
+		</Tt6DashboardCard>
 	{/if}
 
 	{#if gameState.t === 'pre'}
-		<div class="card">
+		<Tt6DashboardCard>
 			<h2>Challenges</h2>
 			<p style="font-size: 100px;margin: 0;">🔒</p>
 			<p>Challenges will be revealed when the game starts.</p>
-		</div>
+		</Tt6DashboardCard>
 	{:else if allChallenges !== undefined}
-		<div class="card">
+		<Tt6DashboardCard>
 			<h2>Challenges</h2>
 			<p>Complete challenges to earn points.<br />Tap on any to see more details.</p>
 			<label style="text-align: center;display: block; cursor: pointer;"
 				><input type="checkbox" bind:checked={hideComplete} style="cursor: pointer;" /> Hide Completed</label
 			>
-		</div>
+		</Tt6DashboardCard>
 
 		{#each iterateTt6Categories(sortedChallenges) as category}
 			<div class={`card challenges ${category}`}>
@@ -287,7 +306,7 @@
 			<div class={`curveOut ${category}`}></div>
 		{/each}
 
-		<div class="card" style="margin-top: 50px;">
+		<Tt6DashboardCard>
 			<h2>Standings</h2>
 			{#if rankings.length > 0}
 				<ol class="rankingList">
@@ -305,7 +324,7 @@
 			{:else}
 				<p>Rankings will be shown here in a few seconds.</p>
 			{/if}
-		</div>
+		</Tt6DashboardCard>
 
 		{#if selectedChallenge !== null}
 			<ChallengeView
@@ -322,15 +341,34 @@
 {:else}
 	<h1>Invalid Link :(</h1>
 
-	<div class="card">
+	<Tt6DashboardCard>
 		<p>This team URL is not valid.</p>
 		<p>
 			If this used to be your team's link, it may have been changed. Contact Game Control for help.
 		</p>
-	</div>
+	</Tt6DashboardCard>
 {/if}
 
 <style>
+	:global(body) {
+		margin: 0;
+		padding: 0;
+		background: black;
+		color: white;
+	}
+
+	#bg {
+		background-image: url($lib/images/tt6/bg.jpg);
+		background-position: center;
+		background-size: cover;
+		position: fixed;
+		z-index: -1;
+		left: 0;
+		top: 0;
+		height: 100vh;
+		width: 100vw;
+	}
+
 	h1,
 	h2,
 	p {
@@ -345,7 +383,6 @@
 	}
 
 	h1 {
-		font-family: 'ClearSansBold', 'Arial', sans-serif;
 		font-weight: 900;
 
 		margin-top: 0;
@@ -356,50 +393,14 @@
 	}
 
 	.topTitle {
-		padding-bottom: 35px;
-		margin-bottom: 0;
-		margin-top: 0;
-		padding-top: 26px;
+		margin: 1em 0 0 0;
+		padding: 0;
 	}
 
 	.bottomTitle {
-		padding-top: 30px;
-		margin-top: 0;
-		position: relative;
-		border-top: 12px var(--color) solid;
-	}
-
-	.bottomTitle::before {
-		content: '';
-
-		width: 40px;
-		height: 40px;
-		border-radius: 40px;
-		box-sizing: border-box;
-		background: white;
-		position: absolute;
-		border: 5px black solid;
-
-		top: -26px;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-
-	:global(body) {
 		margin: 0;
 		padding: 0;
-		background-color: white;
-		font-family: 'ClearSans', 'Arial', sans-serif;
-	}
-
-	@font-face {
-		font-family: 'ClearSansBold';
-		src: url('/tt6/ClearSans-Bold.ttf');
-	}
-
-	@font-face {
-		font-family: 'ClearSans';
-		src: url('/tt6/ClearSans-Regular.ttf');
+		position: relative;
 	}
 
 	.card {
@@ -416,10 +417,6 @@
 
 		position: relative;
 		z-index: 1;
-	}
-
-	.card h2 {
-		margin: 5px 0 10px 0;
 	}
 
 	.card.challenges {
@@ -645,14 +642,22 @@
 		padding-left: 30px;
 	}
 
-	.card .multiCard {
+	.multiCard {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
 	}
 
-	.card .multiCard > div {
+	.multiCard h2 {
+		margin-bottom: 0.5em;
+	}
+
+	.multiCard > div {
 		flex-grow: 1;
+	}
+
+	h2 {
+		margin-bottom: 0;
 	}
 </style>
