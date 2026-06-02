@@ -69,8 +69,8 @@
 
 				{#if challenge.category === 'hard'}
 					{#if score < 80}
-						<p class="msg override" style="font-size: 1.2em; display: flex; flex-direction: row;">
-							<span style="font-size: 3em; margin-right: 20px;">⚠️</span>
+						<p class="msg override hardWarning">
+							<span class="icon">⚠️</span>
 							<span
 								>You may not <em style="text-decoration: underline;">begin</em> this challenge until
 								your team has earned 80 points.</span
@@ -173,19 +173,18 @@
 		display: inline-flex;
 		flex-direction: column;
 		background: none;
-		text-align: center;
+		text-align: left;
 		border-radius: 1vh;
 		margin: 1vh;
 		overflow: hidden;
 
 		color: white;
-		font-size: 20px;
 
 		--radius: 1em;
 		--a: calc(var(--radius) / tan(67.5deg));
 		--b: calc(var(--radius) / tan(67.5deg) / sqrt(2));
-		--notch: 0.6em;
-		--close: 5em;
+		--notch: 0.8em;
+		--close: 6em;
 
 		clip-path: shape(
 			from var(--radius) 0,
@@ -374,6 +373,7 @@
 		);
 		padding: 1em 1.5em;
 		margin: 20px 0;
+		text-align: center;
 	}
 
 	.msg .big {
@@ -385,8 +385,33 @@
 
 	.msg.override {
 		font-weight: bold;
-		border: 2px black solid;
+		border: none;
+		background: rgba(0, 0, 0, 0.4);
 		padding: 1.5em 2em;
 		margin: 30px 0;
+	}
+
+	.msg.hardWarning {
+		font-size: 1.2em;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.msg.hardWarning .icon {
+		font-size: 3em;
+		margin-right: 20px;
+		transform: translateY(-0.1em);
+	}
+
+	@media (max-width: 450px) {
+		.msg.hardWarning {
+			flex-direction: column;
+			padding-top: 1em;
+		}
+
+		.msg.hardWarning .icon {
+			margin-right: 0;
+		}
 	}
 </style>
