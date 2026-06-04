@@ -83,7 +83,9 @@
 		<option value={undefined}>-- SELECT A CHALLENGE --</option>
 		{#each challenges.filter( (x) => (filter ? cleanStr(x.title).indexOf(cleanStr(filter)) !== -1 : true), ) as challenge}
 			<option value={challenge}
-				>{tt6ChallengeCategoryNames[challenge.category]}: {challenge.title}</option
+				>{tt6ChallengeCategoryNames[challenge.category]}: {challenge.shrinkTitle
+					? challenge.title.split('.')[0]
+					: challenge.title}</option
 			>
 		{/each}
 	</select>
@@ -93,7 +95,9 @@
 	<h2>
 		{selectedTeam.teamNum}: {selectedTeam.name}
 		<br />
-		{tt6ChallengeCategoryNames[selectedChallenge.category]}: {selectedChallenge.title}
+		{tt6ChallengeCategoryNames[selectedChallenge.category]}: {selectedChallenge.shrinkTitle
+			? selectedChallenge.title.split('.')[0]
+			: selectedChallenge.title}
 	</h2>
 
 	<ChallengeEntry

@@ -8,6 +8,7 @@
 	import ImmutableCheckbox from './tt6ImmutableCheckbox.svelte';
 	import { isTt6ChallengeComplete } from '../../utils/tt6/challenge';
 	import type { TT6ChallengeProgress } from '../../types/tt6/team';
+	import Tt6ShrinkingTitle from './tt6ShrinkingTitle.svelte';
 
 	export let challenge: TT6PublicChallengeDefinition;
 	export let challengeProgress: TT6ChallengeProgress;
@@ -56,7 +57,13 @@
 
 		<div class="contentWrap">
 			<div class="content">
-				<h1>{challenge.title}</h1>
+				<h1>
+					{#if challenge.shrinkTitle}
+						<Tt6ShrinkingTitle text={challenge.title} />
+					{:else}
+						{challenge.title}
+					{/if}
+				</h1>
 
 				{#if isComplete}
 					<p class="msg override hardWarning">

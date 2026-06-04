@@ -36,7 +36,9 @@
 	<tr>
 		<th style="max-width: 200px;">Team Name</th>
 		{#each challenges as challenge}
-			<td class="challengeName">{challenge.title}</td>
+			<td class="challengeName"
+				>{challenge.shrinkTitle ? challenge.title.split('.')[0] : challenge.title}</td
+			>
 		{/each}
 	</tr>
 	{#each teams as team}

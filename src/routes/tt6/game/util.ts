@@ -18,6 +18,7 @@ export function publicTt6ChallengeFilter(
 		bonus: x.bonus,
 		failureMsg: x.failureMsg,
 		failurePenalty: x.failurePenalty,
+		shrinkTitle: x.shrinkTitle,
 	};
 	switch (x.type) {
 		case 'single':

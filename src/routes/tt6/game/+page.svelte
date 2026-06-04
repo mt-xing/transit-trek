@@ -13,6 +13,7 @@
 	import { isTt6ChallengeComplete } from '../../../utils/tt6/challenge';
 	import Tt6DashboardCard from '../../../components/tt6/tt6DashboardCard.svelte';
 	import { tt6ColorName } from '../../../utils/tt6/colorName';
+	import Tt6ShrinkingTitle from '../../../components/tt6/tt6ShrinkingTitle.svelte';
 
 	export let data: PageData;
 	let { allChallenges, gameState, team } = data;
@@ -296,7 +297,13 @@
 								class={`${isTt6ChallengeComplete(challenge, team.challengeProgress) ? 'done' : ''}${team.challengeProgress[challenge.id]?.failed ? 'failed' : ''}`}
 							>
 								<div class="wrap">
-									<h4>{challenge.title}</h4>
+									{#if challenge.shrinkTitle}
+										<h4 style="margin-bottom: 2em;">
+											<Tt6ShrinkingTitle text={challenge.title} />
+										</h4>
+									{:else}
+										<h4>{challenge.title}</h4>
+									{/if}
 									<p>{previewText(challenge.desc)}</p>
 								</div>
 								<span class="points">

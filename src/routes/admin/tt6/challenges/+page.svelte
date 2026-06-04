@@ -18,7 +18,9 @@
 	<h2>{tt6ChallengeCategoryNames[category]}</h2>
 	{#each challenges[category] as challenge}
 		<li>
-			<a href="/admin/tt6/challenges/edit?id={challenge.id}">{category}: {challenge.title}</a>
+			<a href="/admin/tt6/challenges/edit?id={challenge.id}"
+				>{category}: {challenge.shrinkTitle ? challenge.title.split('.')[0] : challenge.title}</a
+			>
 			(<a href="/admin/tt6/challenges/preview?id={challenge.id}">Preview</a>)
 		</li>
 	{/each}
