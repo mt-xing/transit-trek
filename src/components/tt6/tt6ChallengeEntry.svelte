@@ -7,6 +7,7 @@
 	export let challenge: TT6ChallengeDefinition;
 	export let challengeProgress: TT6ChallengeProgress;
 	export let teamScore: number;
+	export let teamNum: number;
 
 	$: progress = challengeProgress[challenge.id];
 
@@ -55,6 +56,7 @@
 				{challenge}
 				closeCallback={() => {}}
 				score={teamScore}
+				{teamNum}
 			/>
 		{/key}
 	</div>

@@ -9,10 +9,13 @@
 	import { isTt6ChallengeComplete } from '../../utils/tt6/challenge';
 	import type { TT6ChallengeProgress } from '../../types/tt6/team';
 	import Tt6ShrinkingTitle from './tt6ShrinkingTitle.svelte';
+	import Katex from '../katex.svelte';
+	import processTt6MathSupplement from '../../utils/tt6/mathSupplement';
 
 	export let challenge: TT6PublicChallengeDefinition;
 	export let challengeProgress: TT6ChallengeProgress;
 	export let score: number;
+	export let teamNum: number;
 	export let closeCallback: () => void;
 	export let isFloat: boolean;
 
@@ -119,6 +122,16 @@
 
 				<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 				<p bind:this={descWrap}>{@html challenge.desc}</p>
+
+				{#if challenge.mathSupplement}
+					<p class="msg override">
+						Your math problem is:
+						<Katex
+							displayMode={true}
+							math={processTt6MathSupplement(challenge.mathSupplement, teamNum)}
+						/>
+					</p>
+				{/if}
 
 				<p class={`msg ${challenge.category}`}>
 					<span class="big">{tt6ChallengeCategoryNames[challenge.category]}</span>

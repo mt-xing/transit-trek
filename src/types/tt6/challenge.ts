@@ -12,6 +12,7 @@ export type TT6ChallengeDefinition =
 		failureMsg?: string;
 		failurePenalty?: number;
 		shrinkTitle?: boolean;
+		mathSupplement?: string;
 	}
 	& (
 		| {

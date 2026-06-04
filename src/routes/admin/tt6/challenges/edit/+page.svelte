@@ -14,6 +14,7 @@
 	let points = challenge?.points ?? 0;
 	let category = challenge?.category ?? 'selfie';
 	let privateNotes = challenge?.privateNotes ?? '';
+	let mathSupplement = challenge?.mathSupplement ?? '';
 	let shrinkTitle = challenge?.shrinkTitle ?? false;
 
 	let bonusEnabled = (challenge?.bonus ?? 0) !== 0;
@@ -92,6 +93,11 @@
 	<p>
 		Private Notes:
 		<textarea bind:value={privateNotes} name="privateNotes"></textarea>
+	</p>
+
+	<p>
+		Math supplement (use <code>a</code>, <code>a^2</code>, and <code>b</code>):
+		<input type="text" bind:value={mathSupplement} name="mathSupplement" />
 	</p>
 
 	<p>

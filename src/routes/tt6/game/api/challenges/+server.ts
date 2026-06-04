@@ -64,6 +64,11 @@ export const GET: RequestHandler = async ({ url }) => {
 	}
 
 	return json(
-		challengeRes.resources.filter(isVisible).map(publicTt6ChallengeFilter),
+		challengeRes.resources.filter(isVisible).map(
+			publicTt6ChallengeFilter.bind(
+				undefined,
+				teamQuery[0].challengeProgress,
+			),
+		),
 	);
 };

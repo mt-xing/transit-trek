@@ -61,7 +61,7 @@
 		}
 	};
 	const teamUpdateTime = (gs?: TT6GameState) => (gs?.t === 'ongoing' ? 10 * 1000 : 30 * 1000);
-	const challengeUpdateTime = 60 * 1000;
+	const challengeUpdateTime = 20 * 1000;
 	const rankUpdateTime = (gs?: TT6GameState) => (gs?.t === 'ongoing' ? 15 * 1000 : 60 * 1000);
 
 	let teamUpdateInterval: ReturnType<typeof setInterval> | undefined;
@@ -91,6 +91,13 @@
 					const newChallenges = await newChallengesRes.json();
 					if (newChallenges) {
 						allChallenges = newChallenges as TT6PublicChallengeDefinition[];
+						if (selectedChallenge) {
+							const { id } = selectedChallenge;
+							const found = allChallenges.find((x) => x.id === id);
+							if (found) {
+								selectedChallenge = found;
+							}
+						}
 					}
 				} catch (e) {
 					// eslint-disable-next-line no-console
@@ -350,6 +357,7 @@
 				}}
 				isFloat={true}
 				score={team.score}
+				teamNum={team.teamNum}
 			/>
 		{/if}
 	{/if}
