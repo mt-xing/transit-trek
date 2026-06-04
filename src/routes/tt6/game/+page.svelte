@@ -444,21 +444,17 @@
 	}
 
 	.challengeList button {
-		--notch: 3em;
-		clip-path: polygon(
-			var(--notch) 0%,
-			100% 0%,
-			100% calc(100% - var(--notch)),
-			calc(100% - var(--notch)) 100%,
-			0% 100%,
-			0% var(--notch)
-		);
+		border-radius: 0.5em;
+		border-top-left-radius: 3em;
+		border-bottom-right-radius: 3em;
 
 		border: none;
-		border-top: 2px solid var(--accent-color);
+		border-top: 3px solid var(--accent-color);
 		color: white;
+		box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 
-		width: 100%;
+		width: calc(100% - 20px);
+		margin: 0 auto;
 		padding: 20px 30px;
 		cursor: pointer;
 
