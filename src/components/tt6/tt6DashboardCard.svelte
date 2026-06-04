@@ -19,7 +19,7 @@
 	}
 
 	.tt6DashCard.small {
-		max-width: 400px;
-		width: calc(100% - 150px);
+		max-width: 450px;
+		width: calc(100% - 100px);
 	}
 </style>
