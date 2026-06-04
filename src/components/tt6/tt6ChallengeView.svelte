@@ -55,8 +55,6 @@
 		{/if}
 
 		<div class="contentWrap">
-			<span class="header" />
-
 			<div class="content">
 				<h1>{challenge.title}</h1>
 
@@ -276,26 +274,11 @@
 	}
 
 	.content {
-		padding: 0 30px 30px 30px;
+		padding: 85px 30px 30px 30px;
 	}
 
 	section.inline .content {
 		max-height: initial;
-	}
-
-	.header {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		box-sizing: border-box;
-
-		position: relative;
-		font-size: 45px;
-		width: 100%;
-		left: 0;
-		height: 85px;
-		margin: 0;
 	}
 
 	.closeBtn {
