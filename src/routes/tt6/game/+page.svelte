@@ -193,10 +193,12 @@
 <div id="bg"></div>
 
 {#if team && gameState}
-	<h1 class="topTitle">{team.name || '⚠️ Untitled Team'}</h1>
-	<h1 class="bottomTitle">
-		Team {team.teamNum} Dashboard
-	</h1>
+	<Tt6DashboardCard>
+		<h1 class="topTitle">{team.name || '⚠️ Untitled Team'}</h1>
+		<h1 class="bottomTitle">
+			Team {team.teamNum} Dashboard
+		</h1>
+	</Tt6DashboardCard>
 
 	<Tt6DashboardCard>
 		<p>This page is private and should only be viewed by members of your team.</p>
@@ -386,12 +388,13 @@
 	}
 
 	.topTitle {
-		margin: 1em 0 0 0;
+		margin: 0.5em 0 0 0;
 		padding: 0;
+		font-weight: normal;
 	}
 
 	.bottomTitle {
-		margin: 0;
+		margin: 0 0 0.25em 0;
 		padding: 0;
 		position: relative;
 	}
