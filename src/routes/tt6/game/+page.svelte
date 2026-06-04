@@ -399,41 +399,6 @@
 		position: relative;
 	}
 
-	.card {
-		max-width: 500px;
-		width: calc(100% - 50px);
-		margin: 20px auto;
-		padding: 30px 10px 20px 10px;
-
-		background: rgb(240, 240, 240);
-		border-bottom: 5px black solid;
-
-		font-size: 20px;
-		text-align: center;
-
-		position: relative;
-		z-index: 1;
-	}
-
-	.card.challenges {
-		padding: 10px 20px;
-		background: none;
-		border: none;
-	}
-
-	.card.challenges.challenge {
-		--color: #3dae2b;
-	}
-
-	.card.challenges.find {
-		--color: #00a0df;
-	}
-
-	.card.challenges.hard {
-		--color: #8a2631;
-		margin-bottom: 0;
-	}
-
 	.challengeList {
 		padding: 0;
 		list-style: none;
@@ -444,17 +409,57 @@
 	}
 
 	.challengeList li {
-		margin: 0;
+		margin: 1em 0;
 		position: relative;
 	}
 
+	.challengeList.challenge button {
+		background: linear-gradient(
+			to top,
+			rgba(1, 128, 1, 0.7),
+			rgba(4, 64, 8, 0.7) 30%,
+			rgba(2, 34, 5, 0.7)
+		);
+		--accent-color: #3dae2b;
+	}
+
+	.challengeList.find button {
+		background: linear-gradient(
+			to top,
+			rgba(64, 1, 128, 0.7),
+			rgba(32, 4, 64, 0.5) 30%,
+			rgba(15, 2, 34, 0.7)
+		);
+		--accent-color: #af50df;
+	}
+
+	.challengeList.hard button {
+		background: linear-gradient(
+			to top,
+			rgba(128, 1, 1, 0.7),
+			rgba(64, 4, 8, 0.5) 30%,
+			rgba(34, 2, 5, 0.7)
+		);
+		--accent-color: #8a2631;
+	}
+
 	.challengeList button {
+		--notch: 3em;
+		clip-path: polygon(
+			var(--notch) 0%,
+			100% 0%,
+			100% calc(100% - var(--notch)),
+			calc(100% - var(--notch)) 100%,
+			0% 100%,
+			0% var(--notch)
+		);
+
 		border: none;
-		color: black;
+		border-top: 2px solid var(--accent-color);
+		color: white;
+
 		width: 100%;
 		padding: 20px 30px;
-		background: white;
-		border-left: 12px rgb(var(--color)) solid;
 		cursor: pointer;
 
 		display: flex;
@@ -471,14 +476,12 @@
 		font-size: 50px;
 		margin-left: 20px;
 		opacity: 0.6;
-		font-family: 'ClearSansBold', 'Arial', sans-serif;
 	}
 
 	.challengeList .points > span {
 		font-size: 12px;
 		padding-bottom: 10px;
 		padding-left: 2px;
-		font-family: 'ClearSans', 'Arial', sans-serif;
 	}
 
 	.challengeList .wrap {
@@ -491,7 +494,6 @@
 		font-size: 16px;
 		margin: 0 0 5px 0;
 		font-weight: bold;
-		font-family: 'ClearSansBold', 'Arial', sans-serif;
 
 		text-align: left;
 	}
@@ -550,7 +552,6 @@
 		text-align: center;
 		font-size: 50px;
 		font-weight: bold;
-		font-family: 'ClearSansBold', 'Arial', sans-serif;
 		opacity: 0.5;
 		display: flex;
 		align-items: center;
