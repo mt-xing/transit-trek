@@ -124,6 +124,8 @@
 					{:else if challenge.category === 'hard'}
 						This is an end-game challenge. Your may not begin an attempt on this challenge until
 						your team has earned 30 points.
+					{:else if challenge.category === 'hidden'}
+						This hidden secret challenge is only visible if you meet its conditions.
 					{/if}
 				</p>
 
