@@ -218,6 +218,7 @@
 		border-radius: 1vh;
 		margin: 1vh;
 		overflow: hidden;
+		width: 100%;
 
 		color: white;
 
