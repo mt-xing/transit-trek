@@ -285,7 +285,10 @@
 			<ul class={`challengeList ${category}`}>
 				{#each sortedChallenges[category] as challenge}
 					<li>
-						<button on:click={() => openCallback(challenge)}>
+						<button
+							on:click={() => openCallback(challenge)}
+							class={isTt6ChallengeComplete(challenge, team.challengeProgress) ? 'done' : ''}
+						>
 							<div class="wrap">
 								<h4>{challenge.title}</h4>
 								<p>{previewText(challenge.desc)}</p>
@@ -441,6 +444,26 @@
 			rgba(34, 2, 5, 0.7)
 		);
 		--accent-color: #8a2631;
+	}
+
+	.challengeList button.done {
+		background: linear-gradient(
+			to top,
+			rgba(80, 80, 80, 0.5),
+			rgba(20, 20, 20, 0.7) 30%,
+			rgba(5, 5, 5, 0.7)
+		);
+		position: relative;
+	}
+
+	.challengeList button.done::before {
+		content: '✔';
+		opacity: 0.2;
+		pointer-events: none;
+		font-weight: bold;
+		font-size: 100px;
+		left: 20px;
+		position: absolute;
 	}
 
 	.challengeList button {

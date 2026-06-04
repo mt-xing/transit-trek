@@ -55,14 +55,17 @@
 		{/if}
 
 		<div class="contentWrap">
-			<span class="header">
-				{#if isComplete}
-					<span>✔</span>
-				{/if}
-			</span>
+			<span class="header" />
 
 			<div class="content">
 				<h1>{challenge.title}</h1>
+
+				{#if isComplete}
+					<p class="msg override hardWarning">
+						<span class="icon">✅</span>
+						<span>Challenge Complete</span>
+					</p>
+				{/if}
 
 				{#if progress?.manualComplete !== undefined}
 					<p class="msg override">
@@ -80,7 +83,7 @@
 							>
 						</p>
 					{:else}
-						<p class="msg hard">
+						<p class="msg override">
 							This challenge may only be attempted by teams with at least 30 points. You may begin
 							this challenge if you so choose.
 						</p>
@@ -411,6 +414,7 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		justify-content: center;
 	}
 
 	.msg.hardWarning .icon {
