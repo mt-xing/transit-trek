@@ -24,10 +24,12 @@ export type TT6ChallengeDefinition =
 		}
 	);
 
-export type TT6PublicChallengeDefinition = DistributiveOmit<
-	TT6ChallengeDefinition,
-	"privateNotes"
->;
+export type TT6PublicChallengeDefinition =
+	& DistributiveOmit<
+		TT6ChallengeDefinition,
+		"privateNotes"
+	>
+	& { hasMathSupplement?: boolean };
 
 export type TT6ChallengeType = TT6ChallengeDefinition["type"];
 export type TT6ChallengeCategory = "challenge" | "find" | "hard" | "hidden";

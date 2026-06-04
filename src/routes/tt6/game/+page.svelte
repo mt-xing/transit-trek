@@ -76,6 +76,12 @@
 					const newTeam = await newTeamRes.json();
 					if (newTeam) {
 						team = newTeam;
+
+						if (selectedChallenge?.hasMathSupplement) {
+							if (newTeam?.challengeProgress[selectedChallenge.id]?.progress?.[0]) {
+								updateChallenges();
+							}
+						}
 					}
 				} catch (e) {
 					// eslint-disable-next-line no-console

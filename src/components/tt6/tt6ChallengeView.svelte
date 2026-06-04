@@ -131,6 +131,8 @@
 							math={processTt6MathSupplement(challenge.mathSupplement, teamNum)}
 						/>
 					</p>
+				{:else if challenge.hasMathSupplement}
+					<p class="msg override">Your math problem will appear here once you request it.</p>
 				{/if}
 
 				<p class={`msg ${challenge.category}`}>
