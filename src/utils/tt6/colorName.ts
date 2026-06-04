@@ -8,6 +8,7 @@ export function tt6ColorName(category: TT6ChallengeCategory) {
         case "find":
             return "purple" as const;
         case "hard":
+        case "hidden":
             return "red" as const;
         default:
             return assertUnreachable(category);

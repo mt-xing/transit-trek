@@ -29,7 +29,7 @@ export type TT6PublicChallengeDefinition = DistributiveOmit<
 >;
 
 export type TT6ChallengeType = TT6ChallengeDefinition["type"];
-export type TT6ChallengeCategory = "challenge" | "find" | "hard";
+export type TT6ChallengeCategory = "challenge" | "find" | "hard" | "hidden";
 
 export function sortTt6Challenges<T extends TT6PublicChallengeDefinition>(
 	list: T[],
@@ -40,6 +40,7 @@ export function sortTt6Challenges<T extends TT6PublicChallengeDefinition>(
 			return a;
 		},
 		{
+			hidden: [],
 			challenge: [],
 			find: [],
 			hard: [],
@@ -48,6 +49,7 @@ export function sortTt6Challenges<T extends TT6PublicChallengeDefinition>(
 }
 
 export const tt6ChallengeCategoryNames: Record<TT6ChallengeCategory, string> = {
+	hidden: "Secret Challenges",
 	challenge: "Challenge Tasks",
 	find: "Find This",
 	hard: "End-Game Tasks",

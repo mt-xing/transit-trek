@@ -271,45 +271,47 @@
 		</Tt6DashboardCard>
 
 		{#each iterateTt6Categories(sortedChallenges) as category}
-			<Tt6DashboardCard color={tt6ColorName(category)} small>
-				<h3>{tt6ChallengeCategoryNames[category]}</h3>
-				{#if category === 'hard'}
-					<p style="width: 90%; max-width: 800px; margin: 0 auto 1em auto; font-size: 18px;">
-						You must have earned at least 30 points so far to <em
-							style="text-decoration: underline;">begin</em
-						> these challenges.
-					</p>
-					{#if team.score < 30}
-						<p style="width: 90%; max-width: 800px; margin: 0 auto 1.5em auto; font-size: 18px;">
-							⚠️ Your team does not have enough points.
+			{#if category !== 'hidden' || sortedChallenges[category].length > 0}
+				<Tt6DashboardCard color={tt6ColorName(category)} small>
+					<h3>{tt6ChallengeCategoryNames[category]}</h3>
+					{#if category === 'hard'}
+						<p style="width: 90%; max-width: 800px; margin: 0 auto 1em auto; font-size: 18px;">
+							You must have earned at least 30 points so far to <em
+								style="text-decoration: underline;">begin</em
+							> these challenges.
 						</p>
+						{#if team.score < 30}
+							<p style="width: 90%; max-width: 800px; margin: 0 auto 1.5em auto; font-size: 18px;">
+								⚠️ Your team does not have enough points.
+							</p>
+						{/if}
 					{/if}
-				{/if}
-			</Tt6DashboardCard>
+				</Tt6DashboardCard>
 
-			<ul class={`challengeList ${category}`}>
-				{#each sortedChallenges[category] as challenge}
-					<li>
-						<button
-							on:click={() => openCallback(challenge)}
-							class={`${isTt6ChallengeComplete(challenge, team.challengeProgress) ? 'done' : ''}${team.challengeProgress[challenge.id]?.failed ? 'failed' : ''}`}
-						>
-							<div class="wrap">
-								<h4>{challenge.title}</h4>
-								<p>{previewText(challenge.desc)}</p>
-							</div>
-							<span class="points">
-								{challenge.points}<span style={challenge.points === 1 ? 'margin-right: 5px;' : ''}
-									>pt{challenge.points === 1 ? '' : 's'}</span
-								>
-							</span>
-						</button>
-					</li>
-				{/each}
-				{#if sortedChallenges[category].length === 0}
-					<li><span class="nothing">No challenges left</span></li>
-				{/if}
-			</ul>
+				<ul class={`challengeList ${category}`}>
+					{#each sortedChallenges[category] as challenge}
+						<li>
+							<button
+								on:click={() => openCallback(challenge)}
+								class={`${isTt6ChallengeComplete(challenge, team.challengeProgress) ? 'done' : ''}${team.challengeProgress[challenge.id]?.failed ? 'failed' : ''}`}
+							>
+								<div class="wrap">
+									<h4>{challenge.title}</h4>
+									<p>{previewText(challenge.desc)}</p>
+								</div>
+								<span class="points">
+									{challenge.points}<span style={challenge.points === 1 ? 'margin-right: 5px;' : ''}
+										>pt{challenge.points === 1 ? '' : 's'}</span
+									>
+								</span>
+							</button>
+						</li>
+					{/each}
+					{#if sortedChallenges[category].length === 0}
+						<li><span class="nothing">No challenges left</span></li>
+					{/if}
+				</ul>
+			{/if}
 		{/each}
 
 		<Tt6DashboardCard>
@@ -444,7 +446,8 @@
 		--accent-color: #af50df;
 	}
 
-	.challengeList.hard button {
+	.challengeList.hard button,
+	.challengeList.hidden button {
 		background: linear-gradient(
 			to top,
 			rgba(128, 1, 1, 0.7),

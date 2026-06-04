@@ -5,6 +5,8 @@ import { DB_URL, READ_KEY } from '$env/static/private';
 import type { TT6ChallengeDefinition } from '../../../types/tt6/challenge';
 import { type TT6GameState, GAME_KEY } from '../../../types/tt6/game';
 import { gameStateTt6Filter, publicTt6ChallengeFilter, teamTt6Filter } from './util';
+import type { TT6Team } from '../../../types/tt6/team';
+import { isTt6ChallengeComplete } from '../../../utils/tt6/challenge';
 
 const client = new CosmosClient({
 	endpoint: DB_URL,
@@ -49,8 +51,23 @@ export const load: PageServerLoad = async ({ url }) => {
 					.fetchAll()
 			: { resources: [] };
 
+	function isVisible(c: TT6ChallengeDefinition) {
+		if (c.category !== "hidden") { return true; }
+		const team: TT6Team = teamQuery[0];
+		if (team.challengeProgress[c.id]?.failed) {
+			return true;
+		}
+		if (isTt6ChallengeComplete(c, team.challengeProgress)) {
+			return true;
+		}
+		if (team.challengeProgress[c.id]?.manualComplete !== undefined) {
+			return true;
+		}
+		return false;
+	}
+
 	return {
-		allChallenges: challengeRes.resources.map(publicTt6ChallengeFilter),
+		allChallenges: challengeRes.resources.filter(isVisible).map(publicTt6ChallengeFilter),
 		gameState,
 		team: teamTt6Filter(teamQuery[0]),
 	};

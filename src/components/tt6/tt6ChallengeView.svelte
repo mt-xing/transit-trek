@@ -293,7 +293,8 @@
 		--accent-color: #af50df;
 	}
 
-	section.hard {
+	section.hard,
+	section.hidden {
 		--color: rgb(64, 4, 8);
 		--accent-color: #8a2631;
 	}
