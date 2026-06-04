@@ -34,10 +34,20 @@
 
 		challengeProgress = { ...challengeProgress, [challenge.id]: progress };
 	}
+
+	function changeFailed() {
+		if (progress.failed) {
+			progress.failed = false;
+		} else {
+			progress.failed = true;
+		}
+
+		challengeProgress = { ...challengeProgress, [challenge.id]: progress };
+	}
 </script>
 
 {#if progress}
-	<div class="secWrap" style="background: white;">
+	<div class="secWrap" style="background: black;">
 		{#key challenge.id}
 			<Tt6ChallengeView
 				isFloat={false}
@@ -85,6 +95,18 @@
 			{/if}
 
 			<h2>Overrides</h2>
+			<p>
+				<label>
+					<input
+						type="checkbox"
+						name="failedProgress"
+						value="true"
+						checked={progress?.failed ?? false}
+						on:change={() => changeFailed()}
+					/>
+					Mark as Failed</label
+				>
+			</p>
 			<p>
 				Complete status:
 				<select bind:value={progress.manualComplete} name="manualComplete">

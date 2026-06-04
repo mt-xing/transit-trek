@@ -9,6 +9,9 @@ export type TT6ChallengeDefinition =
 		category: TT6ChallengeCategory;
 		privateNotes?: string;
 		bonus?: number;
+		failureMsg?: string;
+		failurePenalty?: number;
+		shrinkTitle?: boolean;
 	}
 	& (
 		| {

@@ -67,6 +67,7 @@ export const actions = {
 		const manualComplete = boolOrUndef(data.get('manualComplete'));
 
 		const bonus = boolOrUndef(data.get('bonusProgress'));
+		const failed = boolOrUndef(data.get('failedProgress'));
 
 		const max = parseInt(data.get('max') as string, 10);
 
@@ -82,6 +83,7 @@ export const actions = {
 			manualComplete,
 			bonus,
 			progress,
+			failed,
 		};
 
 		const patchOps: PatchRequestBody = [
@@ -134,6 +136,21 @@ export const actions = {
 					op: 'incr',
 					path: '/score',
 					value: -1 * (challenge.bonus ?? 0),
+				});
+			}
+
+			const originalFailed = existingTeam.challengeProgress[challenge.id]?.failed === true;
+			if (!originalFailed && failed) {
+				patchOps.push({
+					op: 'incr',
+					path: '/score',
+					value: -1 * (challenge.failurePenalty ?? 0),
+				});
+			} else if (originalFailed && !failed) {
+				patchOps.push({
+					op: 'incr',
+					path: '/score',
+					value: challenge.failurePenalty ?? 0,
 				});
 			}
 		}

@@ -28,7 +28,11 @@
 
 	$: sortedChallenges = sortTt6Challenges(
 		(hideComplete
-			? allChallenges?.filter((x) => !isTt6ChallengeComplete(x, team?.challengeProgress ?? {}))
+			? allChallenges?.filter(
+					(x) =>
+						!isTt6ChallengeComplete(x, team?.challengeProgress ?? {}) &&
+						team?.challengeProgress[x.id]?.failed !== true,
+				)
 			: allChallenges) ?? [],
 	);
 
@@ -261,7 +265,8 @@
 			<h2>Challenges</h2>
 			<p>Complete challenges to earn points.<br />Tap on any to see more details.</p>
 			<label style="text-align: center;display: block; cursor: pointer;"
-				><input type="checkbox" bind:checked={hideComplete} style="cursor: pointer;" /> Hide Completed</label
+				><input type="checkbox" bind:checked={hideComplete} style="cursor: pointer;" /> Hide Completed
+				and Failed</label
 			>
 		</Tt6DashboardCard>
 
@@ -287,7 +292,7 @@
 					<li>
 						<button
 							on:click={() => openCallback(challenge)}
-							class={isTt6ChallengeComplete(challenge, team.challengeProgress) ? 'done' : ''}
+							class={`${isTt6ChallengeComplete(challenge, team.challengeProgress) ? 'done' : ''}${team.challengeProgress[challenge.id]?.failed ? 'failed' : ''}`}
 						>
 							<div class="wrap">
 								<h4>{challenge.title}</h4>
@@ -301,6 +306,9 @@
 						</button>
 					</li>
 				{/each}
+				{#if sortedChallenges[category].length === 0}
+					<li><span class="nothing">No challenges left</span></li>
+				{/if}
 			</ul>
 		{/each}
 
@@ -454,10 +462,32 @@
 			rgba(5, 5, 5, 0.7)
 		);
 		position: relative;
+		overflow: hidden;
 	}
 
 	.challengeList button.done::before {
 		content: '✔';
+		opacity: 0.2;
+		pointer-events: none;
+		font-weight: bold;
+		font-size: 100px;
+		left: 20px;
+		position: absolute;
+	}
+
+	.challengeList button.failed {
+		background: linear-gradient(
+			to top,
+			rgba(80, 80, 80, 0.5),
+			rgba(20, 20, 20, 0.7) 30%,
+			rgba(5, 5, 5, 0.7)
+		);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.challengeList button.failed::before {
+		content: '❌';
 		opacity: 0.2;
 		pointer-events: none;
 		font-weight: bold;
@@ -480,6 +510,32 @@
 		margin: 0 auto;
 		padding: 20px 30px;
 		cursor: pointer;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.challengeList .nothing {
+		border-radius: 0.5em;
+		border-top-left-radius: 3em;
+		border-bottom-right-radius: 3em;
+
+		border: none;
+		border-top: 3px solid var(--accent-color);
+		color: white;
+		box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+		background: linear-gradient(
+			to top,
+			rgba(80, 80, 80, 0.5),
+			rgba(20, 20, 20, 0.7) 30%,
+			rgba(5, 5, 5, 0.7)
+		);
+
+		width: calc(100% - 250px);
+		margin: 0 auto;
+		padding: 20px 30px;
 
 		display: flex;
 		flex-direction: row;

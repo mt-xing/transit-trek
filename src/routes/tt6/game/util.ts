@@ -16,6 +16,8 @@ export function publicTt6ChallengeFilter(
 		points: x.points,
 		category: x.category,
 		bonus: x.bonus,
+		failureMsg: x.failureMsg,
+		failurePenalty: x.failurePenalty,
 	};
 	switch (x.type) {
 		case 'single':

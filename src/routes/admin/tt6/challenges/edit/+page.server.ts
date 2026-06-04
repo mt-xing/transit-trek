@@ -52,6 +52,8 @@ export const actions = {
 			privateNotes: (data.get('privateNotes') as string) || undefined,
 			shrinkTitle: !!data.get('shrinkTitle'),
 			bonus: data.get('bonusEnabled') ? parseInt(data.get('bonusAmount') as string, 10) : undefined,
+			failureMsg: (data.get('failureMsg') as string) || undefined,
+			failurePenalty: parseInt(data.get('failurePenalty') as string, 10) || undefined,
 		};
 		const type = data.get('type') as TT6ChallengeType;
 		const newChallengeInfo = ((): TT6ChallengeDefinition => {

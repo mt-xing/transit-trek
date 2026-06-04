@@ -18,6 +18,9 @@
 	let bonusEnabled = (challenge?.bonus ?? 0) !== 0;
 	let bonusAmount = challenge?.bonus ?? 1;
 
+	let failureMsg = challenge?.failureMsg ?? '';
+	let failurePenalty = challenge?.failurePenalty ?? 0;
+
 	let type: TT6ChallengeType = challenge?.type ?? 'single';
 
 	let multiPartDescs = challenge?.type === 'multi' ? challenge.partDescs : ['', ''];
@@ -109,6 +112,15 @@
 			{/each}
 		</ol>
 	{/if}
+
+	<p>
+		Failure Message:
+		<input type="text" bind:value={failureMsg} name="failureMsg" />
+	</p>
+	<p>
+		Failure Penalty:
+		<input type="number" bind:value={failurePenalty} name="failurePenalty" step="any" />
+	</p>
 
 	<button>Save</button>
 </form>

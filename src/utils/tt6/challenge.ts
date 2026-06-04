@@ -11,6 +11,11 @@ export function isTt6ChallengeComplete(
 		return manual;
 	}
 
+	const failed = challengeProgress[challenge.id]?.failed;
+	if (failed === true) {
+		return false;
+	}
+
 	const progress = challengeProgress[challenge.id];
 
 	switch (challenge.type) {

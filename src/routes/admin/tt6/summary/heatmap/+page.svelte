@@ -51,6 +51,8 @@
 			{#each challenges as challenge}
 				{#if isTt6ChallengeComplete(challenge, team.challengeProgress)}
 					<td style="background:lightgreen;">✅</td>
+				{:else if team.challengeProgress[challenge.id]?.failed === true}
+					<td style="background:red; color: white;">F</td>
 				{:else if team.challengeProgress[challenge.id]?.progress?.some((x) => !!x)}
 					<td style="background:yellow">🚸</td>
 				{:else}

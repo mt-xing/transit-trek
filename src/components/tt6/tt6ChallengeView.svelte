@@ -65,6 +65,18 @@
 					</p>
 				{/if}
 
+				{#if progress?.failed === true}
+					<p class="msg override hardWarning">
+						<span class="icon">❌</span>
+						<span>
+							Challenge Failed
+							{#if challenge.failureMsg}
+								<span style="font-weight: normal; display: block;">{challenge.failureMsg}</span>
+							{/if}
+						</span>
+					</p>
+				{/if}
+
 				{#if progress?.manualComplete !== undefined}
 					<p class="msg override">
 						The status of this challenge has been overridden by Game Control.
@@ -118,16 +130,29 @@
 				<h2>Progress</h2>
 
 				{#if progress?.manualComplete === true}
-					<p class="msg override">
+					<p class="msg override" style="text-align: left;">
 						<ImmutableCheckbox checked={true} />
 						This challenge has been marked as complete by Game Control, regardless of the status shown
 						below.
 					</p>
 				{:else if progress?.manualComplete === false}
-					<p class="msg override">
+					<p class="msg override" style="text-align: left;">
 						<ImmutableCheckbox checked={false} />
 						This challenge has been marked as incomplete by Game Control, regardless of the status shown
 						below.
+					</p>
+				{:else if progress?.failed === true}
+					<p class="msg override" style="text-align: left;">
+						<ImmutableCheckbox checked={false} />
+						This challenge has been marked as failed by Game Control, regardless of the status shown
+						below.
+						{#if challenge.failurePenalty}
+							<span style="display: block; font-weight: normal; margin-top: 0.5em;">
+								A penalty of {challenge.failurePenalty} point{challenge.failurePenalty === 1
+									? ''
+									: 's'} has been applied to your score.
+							</span>
+						{/if}
 					</p>
 				{/if}
 
