@@ -263,8 +263,8 @@
 	}
 
 	section.find {
-		--color: rgb(12, 25, 60);
-		--accent-color: #00a0df;
+		--color: rgb(25, 12, 60);
+		--accent-color: #af50df;
 	}
 
 	section.hard {

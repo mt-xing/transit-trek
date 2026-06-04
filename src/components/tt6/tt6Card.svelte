@@ -1,7 +1,8 @@
 <script lang="ts">
-	export let isRed: boolean = false;
+	export let color: 'blue' | 'red' | 'green' | 'purple' | 'black' | 'white' = 'blue';
 	export let fillWidth: boolean = false;
 	export let animate: boolean = true;
+	export let reducedPadding: boolean = false;
 	let visible = !animate;
 
 	function onVisible(node: HTMLElement) {
@@ -31,7 +32,16 @@
 </script>
 
 <section
-	class={`cardWrap${!animate ? ' static' : ''}${animate && visible ? ' visible' : ''}${isRed ? ' red' : ''}${fillWidth ? ' fill' : ''}`}
+	class={[
+		'cardWrap',
+		!animate ? 'static' : false,
+		animate && visible ? 'visible' : false,
+		color,
+		fillWidth ? 'fill' : false,
+		reducedPadding ? 'short' : false,
+	]
+		.filter((x) => !!x)
+		.join(' ')}
 	use:onVisible
 >
 	<div class="card">
@@ -98,6 +108,10 @@
 		);
 	}
 
+	.short .card {
+		padding: 0em 1em 0.75em 1em;
+	}
+
 	.card::before {
 		content: '';
 		position: absolute;
@@ -120,6 +134,24 @@
 			rgba(128, 1, 1, 0.7),
 			rgba(64, 4, 8, 0.5) 30%,
 			rgba(34, 2, 5, 0.7)
+		);
+	}
+
+	.green .card::before {
+		background: linear-gradient(
+			to top,
+			rgba(1, 128, 1, 0.7),
+			rgba(4, 64, 8, 0.5) 30%,
+			rgba(2, 34, 5, 0.7)
+		);
+	}
+
+	.purple .card::before {
+		background: linear-gradient(
+			to top,
+			rgba(64, 1, 128, 0.7),
+			rgba(32, 4, 64, 0.5) 30%,
+			rgba(15, 2, 34, 0.7)
 		);
 	}
 

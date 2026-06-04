@@ -505,7 +505,7 @@
 	<!-- RULES END -->
 
 	<div class="standardCardWrap">
-		<Tt6Card isRed={true}>
+		<Tt6Card color="red">
 			<div class="disclaimer">
 				<h2>Safety Disclaimer</h2>
 				<p>

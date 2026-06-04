@@ -12,6 +12,7 @@
 	import type { TT6GameState } from '../../../types/tt6/game';
 	import { isTt6ChallengeComplete } from '../../../utils/tt6/challenge';
 	import Tt6DashboardCard from '../../../components/tt6/tt6DashboardCard.svelte';
+	import { tt6ColorName } from '../../../utils/tt6/colorName';
 
 	export let data: PageData;
 	let { allChallenges, gameState, team } = data;
@@ -265,22 +266,21 @@
 		</Tt6DashboardCard>
 
 		{#each iterateTt6Categories(sortedChallenges) as category}
-			<div class={`card challenges ${category}`}>
+			<Tt6DashboardCard color={tt6ColorName(category)} small>
 				<h3>{tt6ChallengeCategoryNames[category]}</h3>
-			</div>
-
-			{#if category === 'hard'}
-				<p style="width: 90%; max-width: 800px; margin: 0 auto 1em auto; font-size: 18px;">
-					You must have earned at least 80 points so far to <em style="text-decoration: underline;"
-						>begin</em
-					> these challenges.
-				</p>
-				{#if team.score < 80}
-					<p style="width: 90%; max-width: 800px; margin: 0 auto 1.5em auto; font-size: 18px;">
-						⚠️ Your team does not have enough points.
+				{#if category === 'hard'}
+					<p style="width: 90%; max-width: 800px; margin: 0 auto 1em auto; font-size: 18px;">
+						You must have earned at least 80 points so far to <em
+							style="text-decoration: underline;">begin</em
+						> these challenges.
 					</p>
+					{#if team.score < 80}
+						<p style="width: 90%; max-width: 800px; margin: 0 auto 1.5em auto; font-size: 18px;">
+							⚠️ Your team does not have enough points.
+						</p>
+					{/if}
 				{/if}
-			{/if}
+			</Tt6DashboardCard>
 
 			<ul class={`challengeList ${category}`}>
 				{#each sortedChallenges[category] as challenge}
@@ -419,23 +419,6 @@
 		padding: 10px 20px;
 		background: none;
 		border: none;
-	}
-
-	.card.challenges h3::before {
-		display: inline-block;
-		content: '';
-		height: 12px;
-		width: 48px;
-		background: var(--color);
-		margin-right: 1em;
-	}
-
-	.card.challenges h3 {
-		font-weight: normal;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
 	}
 
 	.card.challenges.challenge {
