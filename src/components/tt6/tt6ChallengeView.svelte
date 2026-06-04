@@ -71,17 +71,17 @@
 				{/if}
 
 				{#if challenge.category === 'hard'}
-					{#if score < 80}
+					{#if score < 30}
 						<p class="msg override hardWarning">
 							<span class="icon">⚠️</span>
 							<span
 								>You may not <em style="text-decoration: underline;">begin</em> this challenge until
-								your team has earned 80 points.</span
+								your team has earned 30 points.</span
 							>
 						</p>
 					{:else}
 						<p class="msg hard">
-							This challenge may only be attempted by teams with at least 80 points. You may begin
+							This challenge may only be attempted by teams with at least 30 points. You may begin
 							this challenge if you so choose.
 						</p>
 					{/if}
@@ -110,7 +110,7 @@
 						must be visible unless explicitly stated otherwise.
 					{:else if challenge.category === 'hard'}
 						This is an end-game challenge. Your may not begin an attempt on this challenge until
-						your team has earned 80 points.
+						your team has earned 30 points.
 					{/if}
 				</p>
 

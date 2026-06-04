@@ -270,11 +270,11 @@
 				<h3>{tt6ChallengeCategoryNames[category]}</h3>
 				{#if category === 'hard'}
 					<p style="width: 90%; max-width: 800px; margin: 0 auto 1em auto; font-size: 18px;">
-						You must have earned at least 80 points so far to <em
+						You must have earned at least 30 points so far to <em
 							style="text-decoration: underline;">begin</em
 						> these challenges.
 					</p>
-					{#if team.score < 80}
+					{#if team.score < 30}
 						<p style="width: 90%; max-width: 800px; margin: 0 auto 1.5em auto; font-size: 18px;">
 							⚠️ Your team does not have enough points.
 						</p>
