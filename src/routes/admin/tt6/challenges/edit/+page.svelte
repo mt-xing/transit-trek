@@ -23,6 +23,9 @@
 	let failureMsg = challenge?.failureMsg ?? '';
 	let failurePenalty = challenge?.failurePenalty ?? 0;
 
+	let isLinkTarget = challenge?.isLinkTarget ?? false;
+	let linkId = challenge?.linkId ?? '';
+
 	let type: TT6ChallengeType = challenge?.type ?? 'single';
 
 	let multiPartDescs = challenge?.type === 'multi' ? challenge.partDescs : ['', ''];
@@ -57,6 +60,11 @@
 			Title shrinks for comedic effect
 			<input type="checkbox" bind:checked={shrinkTitle} name="shrinkTitle" />
 		</label>
+	</p>
+
+	<p>
+		Task ID:
+		{challenge?.id}
 	</p>
 
 	<p>
@@ -98,6 +106,18 @@
 	<p>
 		Math supplement (use <code>a</code>, <code>a^2</code>, and <code>b</code>):
 		<input type="text" bind:value={mathSupplement} name="mathSupplement" />
+	</p>
+
+	<p>
+		<label>
+			Is Link Target:
+			<input type="checkbox" bind:checked={isLinkTarget} name="isLinkTarget" />
+		</label>
+	</p>
+
+	<p>
+		ID of Task to Link to:
+		<input type="text" bind:value={linkId} name="linkId" />
 	</p>
 
 	<p>

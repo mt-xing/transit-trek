@@ -55,6 +55,8 @@ export const actions = {
 			failureMsg: (data.get('failureMsg') as string) || undefined,
 			failurePenalty: parseInt(data.get('failurePenalty') as string, 10) || undefined,
 			mathSupplement: (data.get('mathSupplement') as string) || undefined,
+			isLinkTarget: !!data.get('isLinkTarget'),
+			linkId: (data.get('linkId') as string) || undefined,
 		};
 		const type = data.get('type') as TT6ChallengeType;
 		const newChallengeInfo = ((): TT6ChallengeDefinition => {

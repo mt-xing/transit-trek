@@ -13,6 +13,8 @@ export type TT6ChallengeDefinition =
 		failurePenalty?: number;
 		shrinkTitle?: boolean;
 		mathSupplement?: string;
+		linkId?: string;
+		isLinkTarget?: boolean;
 	}
 	& (
 		| {
