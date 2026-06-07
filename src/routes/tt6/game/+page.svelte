@@ -366,6 +366,7 @@
 		{#if selectedChallenge !== null}
 			<ChallengeView
 				challenge={selectedChallenge}
+				{allChallenges}
 				challengeProgress={team.challengeProgress}
 				closeCallback={() => {
 					selectedChallenge = null;

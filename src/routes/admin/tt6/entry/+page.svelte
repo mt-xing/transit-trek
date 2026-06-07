@@ -102,6 +102,7 @@
 
 	<ChallengeEntry
 		challenge={selectedChallenge}
+		allChallenges={challenges}
 		challengeProgress={selectedTeam.challengeProgress}
 		teamId={selectedTeam.id}
 		teamScore={selectedTeam.score}

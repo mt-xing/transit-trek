@@ -5,6 +5,7 @@
 
 	export let teamId: string;
 	export let challenge: TT6ChallengeDefinition;
+	export let allChallenges: TT6ChallengeDefinition[];
 	export let challengeProgress: TT6ChallengeProgress;
 	export let teamScore: number;
 	export let teamNum: number;
@@ -52,6 +53,7 @@
 		{#key challenge.id}
 			<Tt6ChallengeView
 				isFloat={false}
+				{allChallenges}
 				{challengeProgress}
 				{challenge}
 				closeCallback={() => {}}

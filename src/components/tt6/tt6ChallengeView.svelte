@@ -13,11 +13,16 @@
 	import processTt6MathSupplement from '../../utils/tt6/mathSupplement';
 
 	export let challenge: TT6PublicChallengeDefinition;
+	export let allChallenges: TT6PublicChallengeDefinition[];
 	export let challengeProgress: TT6ChallengeProgress;
 	export let score: number;
 	export let teamNum: number;
 	export let closeCallback: () => void;
 	export let isFloat: boolean;
+
+	$: parentChallenge = challenge.linkId
+		? allChallenges.find((x) => x.id === challenge.linkId)
+		: undefined;
 
 	$: progress = challengeProgress[challenge.id];
 
@@ -67,6 +72,10 @@
 						{challenge.title}
 					{/if}
 				</h1>
+
+				{#if parentChallenge}
+					<p class="parentTitle">Part of: {parentChallenge.title}</p>
+				{/if}
 
 				{#if isComplete}
 					<p class="msg override hardWarning">
@@ -197,6 +206,26 @@
 						checked={progress?.bonus ?? false}
 						text={progress?.bonus ?? false ? 'Active' : 'Inactive'}
 					/>
+				{/if}
+
+				{#if parentChallenge}
+					<h3>Linked Challenge Status</h3>
+					{#if parentChallenge.type === 'single'}
+						<ImmutableCheckbox
+							checked={challengeProgress[parentChallenge.id]?.progress?.[0] ?? false}
+						/>
+					{:else if parentChallenge.type === 'multi'}
+						<ol class="multiList" role="list">
+							{#each parentChallenge.partDescs as c, i}
+								<li>
+									<ImmutableCheckbox
+										checked={challengeProgress[parentChallenge.id]?.progress?.[i] ?? false}
+										text={c}
+									/>
+								</li>
+							{/each}
+						</ol>
+					{/if}
 				{/if}
 			</div>
 		</div>
@@ -466,5 +495,10 @@
 		.msg.hardWarning .icon {
 			margin-right: 0;
 		}
+	}
+
+	.parentTitle {
+		text-align: center;
+		transform: translateY(-1em);
 	}
 </style>
