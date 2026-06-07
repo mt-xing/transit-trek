@@ -307,7 +307,13 @@
 						<li>
 							<button
 								on:click={() => openCallback(challenge)}
-								class={`${isTt6ChallengeComplete(challenge, team.challengeProgress) ? 'done' : ''}${team.challengeProgress[challenge.id]?.failed ? 'failed' : ''}`}
+								class={[
+									isTt6ChallengeComplete(challenge, team.challengeProgress) ? 'done' : false,
+									team.challengeProgress[challenge.id]?.failed ? 'failed' : false,
+									challenge.linkId ? 'linked' : false,
+								]
+									.filter((x) => !!x)
+									.join(' ')}
 							>
 								<div class="wrap">
 									{#if challenge.shrinkTitle}
@@ -319,11 +325,14 @@
 									{/if}
 									<p>{previewText(challenge.desc)}</p>
 								</div>
-								<span class="points">
-									{challenge.points}<span style={challenge.points === 1 ? 'margin-right: 5px;' : ''}
-										>pt{challenge.points === 1 ? '' : 's'}</span
-									>
-								</span>
+								{#if !challenge.isLinkTarget}
+									<span class="points">
+										{challenge.points}<span
+											style={challenge.points === 1 ? 'margin-right: 5px;' : ''}
+											>pt{challenge.points === 1 ? '' : 's'}</span
+										>
+									</span>
+								{/if}
 							</button>
 						</li>
 					{/each}
@@ -542,6 +551,11 @@
 		justify-content: center;
 	}
 
+	.challengeList button.linked {
+		width: calc(100% - 70px);
+		transform: translateX(25px);
+	}
+
 	.challengeList .nothing {
 		border-radius: 0.5em;
 		border-top-left-radius: 3em;
@@ -566,6 +580,7 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
+		text-align: center;
 	}
 
 	.challengeList .points {

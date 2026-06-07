@@ -22,6 +22,8 @@ export function publicTt6ChallengeFilter(
 		shrinkTitle: x.shrinkTitle,
 		mathSupplement: undefined as (string | undefined),
 		hasMathSupplement: !!x.mathSupplement,
+		linkId: x.linkId,
+		isLinkTarget: x.isLinkTarget,
 	};
 	if (x.mathSupplement) {
 		if (challengeProgress[x.id]?.progress?.[0]) {
