@@ -19,10 +19,15 @@
 	export let teamNum: number;
 	export let closeCallback: () => void;
 	export let isFloat: boolean;
+	export let iteration: number = 0;
 
 	$: parentChallenge = challenge.linkId
 		? allChallenges.find((x) => x.id === challenge.linkId)
 		: undefined;
+	$: childChallenges = challenge.isLinkTarget
+		? allChallenges.filter((x) => x.linkId === challenge.id)
+		: undefined;
+	let openChallenge: TT6PublicChallengeDefinition | undefined;
 
 	$: progress = challengeProgress[challenge.id];
 
@@ -54,6 +59,7 @@
 {/if}
 <section
 	transition:scale={isFloat ? { start: 1.2 } : { duration: 0 }}
+	style={openChallenge !== undefined ? 'filter: blur(10px); pointer-events: none;' : ''}
 	class={`${challenge.category} ${isComplete ? 'complete' : 'incomplete'} ${isFloat ? '' : 'inline'}`}
 >
 	<div class="card">
@@ -63,7 +69,7 @@
 			>
 		{/if}
 
-		<div class="contentWrap">
+		<div class="contentWrap" style="--iteration: {iteration}">
 			<div class="content">
 				<h1>
 					{#if challenge.shrinkTitle}
@@ -119,9 +125,11 @@
 					{/if}
 				{/if}
 
-				<p class={`msg ${challenge.category}`}>
-					{challenge.points} point{challenge.points === 1 ? '' : 's'}
-				</p>
+				{#if !challenge.isLinkTarget || challenge.points !== 0}
+					<p class={`msg ${challenge.category}`}>
+						{challenge.points} point{challenge.points === 1 ? '' : 's'}
+					</p>
+				{/if}
 
 				<img
 					style="max-width: 60px;{imgLoaded !== false ? 'display: none' : ''}"
@@ -227,10 +235,44 @@
 						</ol>
 					{/if}
 				{/if}
+
+				{#if childChallenges}
+					<h3>Linked Challenges</h3>
+					<ol class="multiList" role="list">
+						{#each childChallenges as c}
+							<li>
+								<ImmutableCheckbox
+									text={c.title}
+									checked={isTt6ChallengeComplete(c, challengeProgress)}
+									callback={() => {
+										if (openChallenge === undefined) {
+											openChallenge = c;
+										}
+									}}
+								/>
+							</li>
+						{/each}
+					</ol>
+				{/if}
 			</div>
 		</div>
 	</div>
 </section>
+
+{#if openChallenge}
+	<svelte:self
+		challenge={openChallenge}
+		{allChallenges}
+		{challengeProgress}
+		{score}
+		{teamNum}
+		iteration={iteration + 1}
+		closeCallback={() => {
+			openChallenge = undefined;
+		}}
+		isFloat={true}
+	/>
+{/if}
 
 <style>
 	section {
@@ -321,8 +363,10 @@
 	}
 
 	.contentWrap {
-		max-height: calc(100vh - 60px);
-		max-height: calc(100svh - 60px);
+		--iteration: 0;
+
+		max-height: calc(100vh - 60px - (var(--iteration) * 50px));
+		max-height: calc(100svh - 60px - (var(--iteration) * 50px));
 
 		overflow-y: auto;
 	}

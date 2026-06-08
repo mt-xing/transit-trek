@@ -59,6 +59,7 @@
 		border: none;
 		text-decoration: underline;
 		text-align: left;
+		color: white;
 	}
 
 	button::after {
