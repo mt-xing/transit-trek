@@ -3,7 +3,7 @@
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-	const { challenge } = data;
+	const { challenge, allChallenges } = data;
 </script>
 
 <svg width="0" height="0" style="position: absolute;">
@@ -26,6 +26,8 @@
 	{#if challenge}
 		<Tt6ChallengeView
 			{challenge}
+			{allChallenges}
+			teamNum={1}
 			closeCallback={() => {
 				// eslint-disable-next-line no-restricted-globals
 				location.href = '/admin/tt6/challenges';

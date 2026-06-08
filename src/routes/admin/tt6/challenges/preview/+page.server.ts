@@ -14,10 +14,16 @@ export const load: PageServerLoad = async ({ url }) => {
 		const res = await client
 			.database('transit-trek')
 			.container('tt6-challenges')
-			.item(id, id)
-			.read<TT6ChallengeDefinition>();
+			.items.readAll<TT6ChallengeDefinition>()
+			.fetchAll();
+		const allChallenges = res.resources;
+		const challenge = allChallenges.find(x => x.id === id);
+		if (!challenge) {
+			return {};
+		}
 		return {
-			challenge: res.resource,
+			challenge,
+			allChallenges,
 		};
 	}
 	return {};
