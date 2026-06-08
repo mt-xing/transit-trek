@@ -244,11 +244,13 @@
 								<ImmutableCheckbox
 									text={c.title}
 									checked={isTt6ChallengeComplete(c, challengeProgress)}
-									callback={() => {
-										if (openChallenge === undefined) {
-											openChallenge = c;
-										}
-									}}
+									callback={isFloat
+										? () => {
+												if (openChallenge === undefined) {
+													openChallenge = c;
+												}
+											}
+										: undefined}
 								/>
 							</li>
 						{/each}
