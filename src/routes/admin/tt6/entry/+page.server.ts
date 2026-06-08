@@ -105,10 +105,51 @@ export const actions = {
 		const score = challenge.points;
 		if (existingTeam && challenge && score) {
 			const originallyComplete = isTt6ChallengeComplete(challenge, existingTeam.challengeProgress);
-			const nowComplete = isTt6ChallengeComplete(challenge, {
+			
+			const newProgress = {
 				...existingTeam.challengeProgress,
 				[challengeId]: newVal,
-			});
+			};
+
+			if (data.get('linkJson')) {
+				const linkedChallenge = JSON.parse(data.get('linkJson') as string);
+				const linkedOgComplete = isTt6ChallengeComplete(linkedChallenge, existingTeam.challengeProgress);
+				const progress = Array.from(Array(parseInt(data.get('linkMax') as string, 10))).fill(false);
+				data
+					.getAll('linkProgress')
+					.map((x: unknown) => parseInt(x as string, 10))
+					.forEach((x) => {
+						progress[x] = true;
+					});
+				if (!newProgress[linkedChallenge.id]) {
+					newProgress[linkedChallenge.id] = { progress: progress };
+				} else {
+					newProgress[linkedChallenge.id].progress = progress;
+				}
+
+				patchOps.push({
+					op: 'add',
+					path: `/challengeProgress/${linkedChallenge.id}`,
+					value: newProgress[linkedChallenge.id],
+				});
+
+				const linkedNowComplete = isTt6ChallengeComplete(linkedChallenge, newProgress);
+				if (!linkedOgComplete && linkedNowComplete) {
+					patchOps.push({
+						op: 'incr',
+						path: '/score',
+						value: linkedChallenge.points,
+					});
+				} else if (linkedOgComplete && !linkedNowComplete) {
+					patchOps.push({
+						op: 'incr',
+						path: '/score',
+						value: -1 * linkedChallenge.points,
+					});
+				}
+			}
+			
+			const nowComplete = isTt6ChallengeComplete(challenge, newProgress);
 
 			if (!originallyComplete && nowComplete) {
 				patchOps.push({

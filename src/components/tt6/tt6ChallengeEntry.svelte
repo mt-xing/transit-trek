@@ -12,7 +12,12 @@
 
 	$: progress = challengeProgress[challenge.id];
 
+	$: linkedChallenge = challenge.linkId
+		? allChallenges.find((x) => x.id === challenge.linkId)
+		: undefined;
+
 	$: challengeJson = JSON.stringify(challenge);
+	$: linkedChallengeJson = JSON.stringify(linkedChallenge);
 
 	function changeCheckbox(index: number) {
 		const current = progress.progress?.[index] ?? false;
@@ -25,6 +30,28 @@
 		progress.progress[index] = !current;
 
 		challengeProgress = { ...challengeProgress, [challenge.id]: progress };
+	}
+
+	function changeLinkedCheckbox(index: number) {
+		if (!linkedChallenge) {
+			return;
+		}
+		const current = challengeProgress[linkedChallenge.id]?.progress?.[index] ?? false;
+		if (challengeProgress[linkedChallenge.id] === undefined) {
+			challengeProgress[linkedChallenge.id] = {
+				progress: [],
+			};
+		}
+		const linkedProgress = challengeProgress[linkedChallenge.id];
+		if (linkedProgress.progress === undefined) {
+			linkedProgress.progress = [];
+		}
+		for (let i = linkedProgress.progress.length; i < index; i++) {
+			linkedProgress.progress[i] = false;
+		}
+		linkedProgress.progress[index] = !current;
+
+		challengeProgress = { ...challengeProgress, [linkedChallenge.id]: linkedProgress };
 	}
 
 	function changeBonus() {
@@ -96,6 +123,39 @@
 					{/each}
 				</ol>
 				<input type="hidden" value={challenge.partDescs.length} name="max" />
+			{/if}
+
+			{#if linkedChallenge}
+				<h2>Linked Challenge: {linkedChallenge.title}</h2>
+				{#if linkedChallenge.type === 'single'}
+					<input
+						type="checkbox"
+						name="linkProgress"
+						value="0"
+						checked={challengeProgress[linkedChallenge.id]?.progress?.[0] ?? false}
+						on:change={() => changeLinkedCheckbox(0)}
+					/>
+					<input type="hidden" value={1} name="linkMax" />
+				{:else if linkedChallenge.type === 'multi'}
+					<ol class="multiList" role="list">
+						{#each linkedChallenge.partDescs as c, i}
+							<li>
+								<label>
+									<input
+										type="checkbox"
+										name="linkProgress"
+										value={`${i}`}
+										checked={challengeProgress[linkedChallenge.id]?.progress?.[i] ?? false}
+										on:change={() => changeLinkedCheckbox(i)}
+									/>
+									{c}</label
+								>
+							</li>
+						{/each}
+					</ol>
+					<input type="hidden" value={linkedChallenge.partDescs.length} name="linkMax" />
+				{/if}
+				<input type="hidden" value={linkedChallengeJson} name="linkJson" />
 			{/if}
 
 			<h2>Overrides</h2>
