@@ -61,7 +61,7 @@
 		}
 	};
 	const teamUpdateTime = (gs?: TT6GameState) => (gs?.t === 'ongoing' ? 10 * 1000 : 30 * 1000);
-	const challengeUpdateTime = 20 * 1000;
+	const challengeUpdateTime = 60 * 1000;
 	const rankUpdateTime = (gs?: TT6GameState) => (gs?.t === 'ongoing' ? 15 * 1000 : 60 * 1000);
 
 	let teamUpdateInterval: ReturnType<typeof setInterval> | undefined;
