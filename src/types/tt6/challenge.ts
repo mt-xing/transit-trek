@@ -8,6 +8,7 @@ export type TT6ChallengeDefinition =
 		points: number;
 		category: TT6ChallengeCategory;
 		privateNotes?: string;
+		sort: number;
 		bonus?: number;
 		failureMsg?: string;
 		failurePenalty?: number;

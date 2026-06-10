@@ -34,12 +34,19 @@ const writeClient = new CosmosClient({
 
 export const actions = {
 	newChallenge: async () => {
+		const numEntries: number = (await client
+			.database('transit-trek')
+			.container('tt6-challenges')
+			.items.query({ query: "SELECT VALUE COUNT(1) FROM c" })
+			.fetchAll()).resources[0];
+
 		const emptyChallenge: DistributiveOmit<TT6ChallengeDefinition, 'id'> = {
 			title: '',
 			desc: '',
 			type: 'single',
 			points: 0,
 			category: 'challenge',
+			sort: numEntries * 10,
 		};
 		await writeClient
 			.database('transit-trek')

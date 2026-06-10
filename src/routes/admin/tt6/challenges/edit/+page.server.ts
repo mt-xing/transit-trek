@@ -50,6 +50,7 @@ export const actions = {
 			points: parseFloat(data.get('points') as string),
 			category: data.get('category') as TT6ChallengeCategory,
 			privateNotes: (data.get('privateNotes') as string) || undefined,
+			sort: parseInt(data.get('sort') as string, 10),
 			shrinkTitle: !!data.get('shrinkTitle'),
 			bonus: data.get('bonusEnabled') ? parseInt(data.get('bonusAmount') as string, 10) : undefined,
 			failureMsg: (data.get('failureMsg') as string) || undefined,

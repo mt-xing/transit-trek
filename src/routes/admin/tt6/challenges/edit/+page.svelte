@@ -14,6 +14,7 @@
 	let points = challenge?.points ?? 0;
 	let category = challenge?.category ?? 'selfie';
 	let privateNotes = challenge?.privateNotes ?? '';
+	let sort = challenge?.sort ?? 0;
 	let mathSupplement = challenge?.mathSupplement ?? '';
 	let shrinkTitle = challenge?.shrinkTitle ?? false;
 
@@ -65,6 +66,11 @@
 	<p>
 		Task ID:
 		{challenge?.id}
+	</p>
+
+	<p>
+		Sort Order:
+		<input type="number" bind:value={sort} name="sort" step="any" />
 	</p>
 
 	<p>
