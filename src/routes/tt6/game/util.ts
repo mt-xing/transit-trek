@@ -24,6 +24,7 @@ export function publicTt6ChallengeFilter(
 		hasMathSupplement: !!x.mathSupplement,
 		linkId: x.linkId,
 		isLinkTarget: x.isLinkTarget,
+		sort: x.sort,
 	};
 	if (x.mathSupplement) {
 		if (challengeProgress[x.id]?.progress?.[0]) {
