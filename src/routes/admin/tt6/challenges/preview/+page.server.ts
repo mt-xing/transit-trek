@@ -14,7 +14,7 @@ export const load: PageServerLoad = async ({ url }) => {
 		const res = await client
 			.database('transit-trek')
 			.container('tt6-challenges')
-			.items.readAll<TT6ChallengeDefinition>()
+			.items.query({query: 'SELECT * FROM c ORDER BY c.sort ASC'})
 			.fetchAll();
 		const allChallenges = res.resources;
 		const challenge = allChallenges.find(x => x.id === id);

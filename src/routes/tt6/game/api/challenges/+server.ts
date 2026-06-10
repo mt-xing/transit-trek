@@ -45,7 +45,7 @@ export const GET: RequestHandler = async ({ url }) => {
 	const challengeRes = await client
 		.database("transit-trek")
 		.container("tt6-challenges")
-		.items.readAll<TT6ChallengeDefinition>()
+		.items.query({query: 'SELECT * FROM c ORDER BY c.sort ASC'})
 		.fetchAll();
 
 	function isVisible(c: TT6ChallengeDefinition) {
