@@ -425,18 +425,18 @@
 		<Tt6Card fillWidth={true}>
 			<details>
 				<summary><h2>Game Zone + Boundaries</h2></summary>
-				<!-- <p>
-				The map linked below shows the official game boundaries:<br />
-				<a
-					href="https://www.google.com/maps/d/edit?mid=1ZjdJiiigXPSlK5A53keaGrNxIp6iocM&usp=sharing"
-					target="_blank">Game Boundaries</a
-				>
-			</p>
-			<p>
-				The game will not require you to leave the marked zone. You may not complete challenges
-				outside of the game area.
-			</p> -->
-				<p>Official game boundaries will be released closer to the start of the game.</p>
+				<p>
+					The map linked below shows the official game boundaries:<br />
+					<a
+						href="https://www.google.com/maps/d/u/0/edit?mid=1u1sOh-pVrCusZtYAGzoh6h1-g3Wy81U&usp=sharing"
+						target="_blank">Game Boundaries</a
+					>
+				</p>
+				<p>
+					The game will not require you to leave the marked zone. You may not complete challenges
+					outside of the game area.
+				</p>
+				<!-- <p>Official game boundaries will be released closer to the start of the game.</p> -->
 			</details>
 		</Tt6Card>
 	</div>
@@ -469,7 +469,7 @@
 		<Tt6Card fillWidth={true}>
 			<details>
 				<summary><h2>Ending Point</h2></summary>
-				<p>The ending point will be Asean Streats in downtown Seattle.</p>
+				<p>The ending point will in the game boundaries, announced at a later time.</p>
 			</details>
 		</Tt6Card>
 	</div>
