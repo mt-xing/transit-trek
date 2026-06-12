@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import TopLogo from '../../components/topLogo.svelte';
 
 	import bg1 from '$lib/images/tt6/bg1.mp4';
@@ -29,6 +30,12 @@
 			requestAnimationFrame(handleVid2Loaded);
 		}
 	}
+
+	let isIPhone = false;
+
+	onMount(() => {
+		isIPhone = /iPhone/i.test(navigator.userAgent);
+	});
 </script>
 
 <svelte:head>
@@ -55,18 +62,22 @@
 		</filter>
 	</svg>
 
-	<video muted loop bind:this={video2El} on:loadedmetadata={handleVid2Loaded}>
-		<source src={bg2} type="video/mp4" />
-	</video>
-	<video
-		autoplay
-		muted
-		on:ended={handleEnd}
-		poster={bgImg}
-		style={firstVideoDone ? 'display: none' : ''}
-	>
-		<source src={bg1} type="video/mp4" />
-	</video>
+	{#if !isIPhone}
+		<video muted loop bind:this={video2El} on:loadedmetadata={handleVid2Loaded}>
+			<source src={bg2} type="video/mp4" />
+		</video>
+		<video
+			autoplay
+			muted
+			on:ended={handleEnd}
+			poster={bgImg}
+			style={firstVideoDone ? 'display: none' : ''}
+		>
+			<source src={bg1} type="video/mp4" />
+		</video>
+	{:else}
+		<img src={bgImg} alt="" class="fallbackBgImg" />
+	{/if}
 
 	<section class="hero">
 		<h1>
@@ -214,7 +225,7 @@
 	</div>
 
 	<div class="rulesCardWrap">
-		<Tt6Card fillWidth={true}>
+		<Tt6Card fillWidth={true} iosHack={isIPhone}>
 			<details>
 				<summary>
 					<h2>Rules</h2>
@@ -605,7 +616,8 @@
 		flex-direction: column;
 	}
 
-	video {
+	video,
+	.fallbackBgImg {
 		object-fit: cover;
 		object-position: center;
 		position: fixed;

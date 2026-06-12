@@ -3,6 +3,7 @@
 	export let fillWidth: boolean = false;
 	export let animate: boolean = true;
 	export let reducedPadding: boolean = false;
+	export let iosHack: boolean = false;
 	let visible = !animate;
 
 	function onVisible(node: HTMLElement) {
@@ -39,6 +40,7 @@
 		color,
 		fillWidth ? 'fill' : false,
 		reducedPadding ? 'short' : false,
+		iosHack ? 'iosHack' : false,
 	]
 		.filter((x) => !!x)
 		.join(' ')}
@@ -59,6 +61,10 @@
 		transition:
 			transform 1s cubic-bezier(0.23, 1, 0.32, 1),
 			opacity 1s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	.cardWrap.iosHack {
+		filter: none;
 	}
 
 	.cardWrap.visible,
