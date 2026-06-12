@@ -165,7 +165,9 @@
 	<button>Save</button>
 </form>
 
-<a href="/admin/tt6/challenges">Discard and Return</a>
+<p>
+	<a href="/admin/tt6/challenges">Discard and Return</a>
+</p>
 
 <div>
 	<h2>Danger Zone</h2>
@@ -187,5 +189,9 @@
 	textarea {
 		min-width: 400px;
 		min-height: 10em;
+	}
+
+	button {
+		padding: 1em;
 	}
 </style>

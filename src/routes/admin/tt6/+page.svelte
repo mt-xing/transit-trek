@@ -29,6 +29,7 @@
 <h2>Progress Overview</h2>
 <p><a href="/admin/tt6/summary/standings">Standings</a></p>
 <p><a href="/admin/tt6/summary/heatmap">Heat Map</a></p>
+<p><a href="/admin/tt6/dashboardPreview">Team Dashboards</a></p>
 
 <h2>Old Events</h2>
 <p><a href="/admin/tt3">TT3</a></p>
