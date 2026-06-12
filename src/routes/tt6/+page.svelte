@@ -288,13 +288,13 @@
 						soon as they are completed (for verification and tabulation purposes).
 						<ul>
 							<li>
-								If a task requires you to complete multiple stages/steps, you may report each
+								If a task requires you to complete multiple stages/steps, you should report each
 								stage/step to the organizers separately.
 							</li>
 							<li>
-								However, if you complete a task in its entirety, you must report it immediately. If
-								you don’t report it within 5 minutes of completing it, you won’t be eligible for
-								earning points on that task.
+								When you complete a task in its entirety, you must report it immediately. If you
+								don’t report it within 5 minutes of completing it, you won’t be eligible for earning
+								points on that task.
 							</li>
 							<li>
 								If the organizers inform the team that their task was not successfully completed,
