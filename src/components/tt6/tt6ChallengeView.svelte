@@ -131,14 +131,14 @@
 					</p>
 				{/if}
 
+				<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+				<p bind:this={descWrap}>{@html challenge.desc}</p>
+
 				<img
-					style="max-width: 60px;{imgLoaded !== false ? 'display: none' : ''}"
+					style="max-width: 60px;{imgLoaded !== false ? 'display: none' : 'display: block'}"
 					src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Ajax_loader_metal_512.gif"
 					alt=""
 				/>
-
-				<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-				<p bind:this={descWrap}>{@html challenge.desc}</p>
 
 				{#if challenge.mathSupplement}
 					<p class="msg override">
