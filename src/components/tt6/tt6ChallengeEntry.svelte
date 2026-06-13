@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { TT6ChallengeDefinition } from '../../types/tt6/challenge';
 	import type { TT6ChallengeProgress } from '../../types/tt6/team';
+	import assertUnreachable from '../../utils/assertUnreachable';
 	import Tt6ChallengeView from './tt6ChallengeView.svelte';
 
 	export let teamId: string;
@@ -9,6 +10,49 @@
 	export let challengeProgress: TT6ChallengeProgress;
 	export let teamScore: number;
 	export let teamNum: number;
+
+	let submitRef: HTMLButtonElement | undefined;
+
+	type ChangeValue =
+		| {
+				t: 'toggleCompletion';
+				boxId: number;
+		  }
+		| {
+				t: 'commit';
+		  }
+		| {
+				t: 'toggleFail';
+		  }
+		| {
+				t: 'toggleBonus';
+		  }
+		| {
+				t: 'override';
+				status: boolean | undefined;
+		  };
+	export function keyOption(value: ChangeValue) {
+		switch (value.t) {
+			case 'toggleCompletion':
+				changeCheckbox(value.boxId);
+				break;
+			case 'commit':
+				submitRef?.click();
+				break;
+			case 'toggleFail':
+				changeFailed();
+				break;
+			case 'toggleBonus':
+				changeBonus();
+				break;
+			case 'override': {
+				progress.manualComplete = value.status;
+				break;
+			}
+			default:
+				assertUnreachable(value);
+		}
+	}
 
 	$: progress = challengeProgress[challenge.id];
 
@@ -20,6 +64,13 @@
 	$: linkedChallengeJson = JSON.stringify(linkedChallenge);
 
 	function changeCheckbox(index: number) {
+		if (challenge.type === 'single' && index > 0) {
+			return;
+		}
+		if (challenge.type === 'multi' && index >= challenge.partDescs.length) {
+			return;
+		}
+
 		const current = progress.progress?.[index] ?? false;
 		if (progress.progress === undefined) {
 			progress.progress = [];
@@ -73,6 +124,8 @@
 
 		challengeProgress = { ...challengeProgress, [challenge.id]: progress };
 	}
+
+	const entryShortcuts = 'qwertyuiop';
 </script>
 
 {#if progress}
@@ -104,6 +157,7 @@
 					checked={progress?.progress?.[0] ?? false}
 					on:change={() => changeCheckbox(0)}
 				/>
+				<code class="shortcut">[Q]</code>
 				<input type="hidden" value={1} name="max" />
 			{:else if challenge.type === 'multi'}
 				<ol class="multiList" role="list">
@@ -117,6 +171,9 @@
 									checked={progress?.progress?.[i] ?? false}
 									on:change={() => changeCheckbox(i)}
 								/>
+								{#if i < entryShortcuts.length}
+									<code class="shortcut">[{entryShortcuts.charAt(i).toUpperCase()}]</code>
+								{/if}
 								{c}</label
 							>
 						</li>
@@ -168,7 +225,7 @@
 						checked={progress?.failed ?? false}
 						on:change={() => changeFailed()}
 					/>
-					Mark as Failed</label
+					<code class="shortcut">[F]</code> Mark as Failed</label
 				>
 			</p>
 			<p>
@@ -178,6 +235,8 @@
 					<option value={true}>COMPLETE manual</option>
 					<option value={false}>INCOMPLETE manual</option>
 				</select>
+				(<code class="shortcut">[A]</code> = none, <code class="shortcut">[S]</code> = complete,
+				<code class="shortcut">[D]</code> = incomplete)
 			</p>
 			<input type="hidden" bind:value={teamId} name="teamId" />
 			<input type="hidden" bind:value={challenge.id} name="challengeId" />
@@ -193,10 +252,12 @@
 						checked={progress?.bonus ?? false}
 						on:change={() => changeBonus()}
 					/>
+					<code class="shortcut">[B]</code>
 				</p>
 			{/if}
 
-			<button type="submit">Commit Changes (for this task only)</button>
+			<button type="submit" bind:this={submitRef}>Commit Changes (for this task only)</button>
+			<code class="shortcut">[Z]</code>
 		</form>
 	</section>
 {/if}
@@ -279,5 +340,11 @@
 			vertical-align: top;
 			margin: 25px;
 		}
+	}
+
+	code.shortcut {
+		padding: 0 0.2em;
+		background: rgb(255, 255, 0);
+		font-size: 16px;
 	}
 </style>
