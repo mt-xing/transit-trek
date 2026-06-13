@@ -31,6 +31,7 @@
 	<button type="submit">Create New Challenge</button>
 </form>
 
+<p><a href="/admin/tt6/challenges/print">Print Preview</a></p>
 <p><a href="/admin">Back</a></p>
 
 <style>
