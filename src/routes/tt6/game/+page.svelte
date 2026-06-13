@@ -408,6 +408,12 @@
 		width: 100vw;
 	}
 
+	@media (max-width: 600px) {
+		#bg {
+			background-image: url($lib/images/tt6/bgSmall.jpg);
+		}
+	}
+
 	h1,
 	h2,
 	p {
