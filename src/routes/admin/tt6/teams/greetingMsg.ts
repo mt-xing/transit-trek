@@ -6,6 +6,7 @@ Your team's dashboard is available at this link: http://transittrek.org/tt6/game
 Note that this URL is specific to your team and should be kept secret, so please don't share it with anyone outside your team. If your URL is accidentally leaked, please let me know immediately as I can invalidate and generate a new link for you.
 
 On your dashboard, once the game starts, you will be able to see all the challenges available to you, your team's score, rank, and other important progress information.
+As a bit of advice, a lot of challenges involve parts on both sides of the lake, so it may be worthwhile to check all the challenges before you commit to spending the time needed to cross the lake. Repeat crossings can really eat into your time.
 
 Please know that I built this site back in 2023 before AI and it's thus composed of 100% artisanal, hand-crafted garbage code, so I apologize in advance if it breaks or goes down during the game. Fingers crossed it'll be okay though.
 
