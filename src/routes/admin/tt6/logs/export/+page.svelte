@@ -1,12 +1,15 @@
 <script lang="ts">
+	import { sortTt6Challenges } from '../../../../../types/tt6/challenge';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
 
-	const { challenges, teams } = data;
-	if (!challenges || !teams) {
+	const { rawChallenges, teams } = data;
+	if (!rawChallenges || !teams) {
 		throw new Error();
 	}
+
+	const challenges = sortTt6Challenges(rawChallenges);
 </script>
 
 <h1>Challenges</h1>

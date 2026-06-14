@@ -29,7 +29,7 @@ export const load: PageServerLoad = async ({ locals }) => {
 	]);
 
 	return {
-		challenges: res.resources as TT6ChallengeDefinition[],
+		rawChallenges: res.resources as TT6ChallengeDefinition[],
 		teams: teamRes.resources,
 	};
 };
