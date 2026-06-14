@@ -3,6 +3,7 @@
 	import TopLogo from '../../../components/topLogo.svelte';
 	import ChallengeView from '../../../components/tt6/tt6ChallengeView.svelte';
 	import bgImg from '$lib/images/tt6/bg.jpg';
+	import bgImgSmall from '$lib/images/tt6/bgSmall.jpg';
 
 	import teamsRaw from './teams.json';
 	import challengesRaw from './challenges.json';
@@ -54,6 +55,17 @@
 		{},
 	);
 	const challengeIdArray = rawChallengesList.map((x) => x.id);
+	rawChallengesList.forEach((c) => {
+		if (!c.isLinkTarget) {
+			return;
+		}
+		const childChallenges = rawChallengesList.filter((cc) => cc.linkId === c.id);
+		const numCompleteChildChallenge = childChallenges.reduce(
+			(a, cc) => a + numCompleteEachChallenge[cc.id],
+			0,
+		);
+		numCompleteEachChallenge[c.id] = numCompleteChildChallenge / childChallenges.length;
+	});
 
 	const overallChallengeProgress: TT6ChallengeProgress = {
 		...rawChallengesList.reduce(
@@ -99,7 +111,8 @@
 </svelte:head>
 
 <div id="outerWrap">
-	<img src={bgImg} alt="" class="fallbackBgImg" />
+	<img src={bgImg} id="bg1" alt="" class="fallbackBgImg" />
+	<img src={bgImgSmall} id="bg2" alt="" class="fallbackBgImg" />
 
 	<svg width="0" height="0" style="position: absolute;">
 		<filter id="knockout-glow">
@@ -157,12 +170,20 @@
 					{#each challengeIdArray
 						.map((cid) => ({ cid, num: numCompleteEachChallenge[cid] }))
 						.sort((a, b) => b.num - a.num) as challengeId}
+						{@const { linkId } = challengeMap[challengeId.cid]}
 						<tr>
 							<td style="max-width: 100px">
 								{#if challengeMap[challengeId.cid].shrinkTitle}
 									<Tt6ShrinkingTitle text={challengeMap[challengeId.cid].title} />
 								{:else}
 									{challengeMap[challengeId.cid].title}
+								{/if}
+								{#if linkId}
+									<span class="linkTitle">
+										(from {challengeMap[linkId].title})
+									</span>
+								{:else if challengeMap[challengeId.cid].isLinkTarget}
+									<span class="linkTitle"> (has multiple parts) </span>
 								{/if}
 							</td>
 							<td>
@@ -348,6 +369,21 @@
 		height: 100%;
 		height: 100lvh;
 	}
+	#bg2 {
+		display: none;
+	}
+	#bg1 {
+		display: block;
+	}
+
+	@media (max-width: 600px) {
+		#bg1 {
+			display: none;
+		}
+		#bg2 {
+			display: block;
+		}
+	}
 
 	#outerWrap {
 		position: relative;
@@ -526,61 +562,6 @@
 		margin: 0 auto;
 	}
 
-	.signupWrap {
-		font-size: 30px;
-		display: block;
-		width: 100%;
-		position: relative;
-		text-align: center;
-	}
-
-	.signupWrap::after {
-		content: '';
-		height: 2.1vw;
-		width: 100%;
-		position: absolute;
-		background: #00a0df;
-		left: 0;
-		top: calc(40px + 4vw);
-	}
-
-	.signupWrap p {
-		position: relative;
-	}
-
-	.signupWrap p:first-child {
-		margin-right: 20vw;
-		margin-bottom: 0;
-		padding-bottom: 4vw;
-	}
-
-	.signupWrap p:last-child {
-		margin-left: 20vw;
-		margin-top: 2vw;
-		padding-top: 4vw;
-	}
-
-	.signupWrap p::after {
-		content: '';
-		width: 2.1vw;
-		height: 3vw;
-		position: absolute;
-		background: #00a0df;
-
-		left: 50%;
-		transform: translateX(-50%);
-	}
-
-	.signupWrap p:first-child::after {
-		bottom: 0;
-	}
-
-	.signupWrap p:last-child::after {
-		top: 0;
-		z-index: 2;
-		transition: opacity 0.2s ease-in-out;
-	}
-
 	section.info {
 		max-width: 1000px;
 		display: block;
@@ -609,43 +590,6 @@
 		section.info {
 			padding-left: 10vw;
 			padding-right: 10vw;
-		}
-	}
-
-	@media (max-width: 500px) {
-		.signupWrap::after {
-			top: 0;
-		}
-
-		.signupWrap::before {
-			content: '';
-			position: absolute;
-
-			width: 4vw;
-			height: 4vw;
-			border-radius: 4vw;
-			border: 0.8vw black solid;
-			z-index: 4;
-			background: white;
-			top: calc(-2.8vw + 1.05vw);
-			left: 50%;
-			transform: translateX(-50%);
-		}
-
-		.signupWrap p:first-child {
-			margin: 0;
-			padding-top: 7vw;
-			z-index: 2;
-		}
-
-		.signupWrap p:last-child {
-			margin: -5vw 0 0 0;
-			padding-top: 0;
-			z-index: 1;
-		}
-
-		.signupWrap p::after {
-			display: none;
 		}
 	}
 
@@ -826,13 +770,15 @@
 	}
 
 	@media (max-width: 1100px) {
-		section.info {
+		.standardCardWrap {
 			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 
 	@media (max-width: 800px) {
-		section.info {
+		.standardCardWrap {
 			width: 95%;
 		}
 
@@ -1008,6 +954,11 @@
 
 		.challengeWrap > div:first-child {
 			position: relative;
+			margin: 0 auto 4em auto;
+		}
+
+		.challengeWrap > div:first-child h2 {
+			margin-bottom: 0.5em;
 		}
 
 		.challengeWrap > div:first-child ul {
@@ -1044,6 +995,10 @@
 
 	.card.challenges.find {
 		--color: rgba(41, 128, 185, 1);
+	}
+
+	.linkTitle {
+		font-size: 0.6em;
 	}
 
 	.challengeList {
