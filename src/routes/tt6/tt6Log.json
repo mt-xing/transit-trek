@@ -1,0 +1,5243 @@
+[
+    {
+        "t": "teamEdit",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "text": "Team Name Set: yee-haw-ers",
+        "time": 1781384258206
+    },
+    {
+        "t": "teamEdit",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "text": "Team Name Set: SEA Biscuit",
+        "time": 1781384335297
+    },
+    {
+        "t": "gameState",
+        "teamId": "",
+        "text": "Start Game",
+        "time": 1781384696782
+    },
+    {
+        "t": "teamEdit",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "text": "Team Name Set: wet floor",
+        "time": 1781384705543
+    },
+    {
+        "t": "teamEdit",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "text": "Team Name Set: The Winning Team",
+        "time": 1781384717173
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "1831fc67-9c64-4aaf-b5d3-caba4cebabbe",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781385018889
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "d3c90a90-6571-488f-967b-9491baa82c7c",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781385134011
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781385184951
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781385255053
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "b3c4856b-5aaf-4393-b0a0-6ab34c571f12",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781385286683
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "b3c4856b-5aaf-4393-b0a0-6ab34c571f12",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781385305383
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                false,
+                true,
+                false
+            ]
+        },
+        "time": 1781385321934
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "a5258975-2b4f-4061-962c-550c872c28ea",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781385361555
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "b3c4856b-5aaf-4393-b0a0-6ab34c571f12",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781385391445
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                false,
+                true,
+                false
+            ]
+        },
+        "time": 1781385414455
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "b3c4856b-5aaf-4393-b0a0-6ab34c571f12",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781385417925
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "a5258975-2b4f-4061-962c-550c872c28ea",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781385495121
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781385511364
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781385549708
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "b67f0c5c-2bea-40f2-99c7-e9ba32b4c4bb",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781385565642
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "db03ae66-6f5e-4a84-ac95-51f6847237ab",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781385613078
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "b67f0c5c-2bea-40f2-99c7-e9ba32b4c4bb",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781385708189
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "b3c4856b-5aaf-4393-b0a0-6ab34c571f12",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781385717149
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781385745970
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781385782611
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "b67f0c5c-2bea-40f2-99c7-e9ba32b4c4bb",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781385811903
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781385862640
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "4c868559-6b13-4891-b932-19ef2184204b",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781385980434
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "4c868559-6b13-4891-b932-19ef2184204b",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781385989964
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "4c868559-6b13-4891-b932-19ef2184204b",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781386046934
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "009fe39f-7d0f-4a6f-9cfe-066d59b13ff6",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781386162396
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                false,
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781386191037
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "1d3c7595-b766-43f8-81a1-ba191d03a93e",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781386202688
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "b67f0c5c-2bea-40f2-99c7-e9ba32b4c4bb",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781386219558
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781386231799
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "17ee5dfc-59aa-4be1-bf3b-48ae35972bfa",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781386244230
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "13ace31a-c54d-48ee-b91e-4d0c7a50e4bd",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781386288219
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "7713a03d-95dd-467e-bb03-79ef07493a1d",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781386355192
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "17ee5dfc-59aa-4be1-bf3b-48ae35972bfa",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781386364901
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                false,
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781386373942
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "c3488545-e32a-4ec3-a8a8-4fbaf090a33a",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781386383752
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "1d3c7595-b766-43f8-81a1-ba191d03a93e",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781386413803
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "1d3c7595-b766-43f8-81a1-ba191d03a93e",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781386473103
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "1831fc67-9c64-4aaf-b5d3-caba4cebabbe",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781386535675
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "1fe92746-4190-440c-afd2-652f55d64fcd",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781386577577
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                false,
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781386606987
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "66625a64-9aa3-45ce-91e7-2452d1ff2c37",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781386645588
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "1fe92746-4190-440c-afd2-652f55d64fcd",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781386660518
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781386676730
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                false,
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781386721210
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "b67f0c5c-2bea-40f2-99c7-e9ba32b4c4bb",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781386761310
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "1d3c7595-b766-43f8-81a1-ba191d03a93e",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781386770001
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "13ace31a-c54d-48ee-b91e-4d0c7a50e4bd",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781386793551
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781386807452
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "66625a64-9aa3-45ce-91e7-2452d1ff2c37",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781386821753
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "8866f55e-3f2b-4a28-9220-81e32e5f366e",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781386833393
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "dbe96e76-e1b5-4d69-ae86-2f59077554e6",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781386874044
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781386887265
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "db03ae66-6f5e-4a84-ac95-51f6847237ab",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781386921566
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781387012817
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                false,
+                true,
+                false
+            ]
+        },
+        "time": 1781387023457
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781387036618
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "db03ae66-6f5e-4a84-ac95-51f6847237ab",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781387043309
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781387057858
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "ccb402f9-34af-4380-aef8-a035782b457e",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781387062468
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "1d3c7595-b766-43f8-81a1-ba191d03a93e",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781387088772
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                false,
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781387092349
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "db03ae66-6f5e-4a84-ac95-51f6847237ab",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781387130260
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781387168881
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "2b6ae423-df45-47d7-964b-93b7f7cc7fc8",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781387250283
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "66625a64-9aa3-45ce-91e7-2452d1ff2c37",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781387303924
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "66625a64-9aa3-45ce-91e7-2452d1ff2c37",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781387322475
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "db03ae66-6f5e-4a84-ac95-51f6847237ab",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781387330297
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "00bff0d3-e9db-41ca-a7dd-58d8e0552b3f",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781387337905
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781387348705
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781387372915
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "c3488545-e32a-4ec3-a8a8-4fbaf090a33a",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781387432627
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "be42eb23-3509-4b31-922b-cd519c3d5e2f",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781387437508
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "1d3c7595-b766-43f8-81a1-ba191d03a93e",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781387452370
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781387468858
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781387511250
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "57cc76d2-ba06-4a18-b775-9e2af188140b",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781387545640
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "7292a48e-3d2b-41df-beb3-40a996473803",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781387609501
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                false,
+                true,
+                false
+            ]
+        },
+        "time": 1781387623131
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781387631172
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "13ace31a-c54d-48ee-b91e-4d0c7a50e4bd",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781387670162
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781387697772
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "82d77bac-ee6f-4ab1-9ebf-e6ba75165ac6",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781387718002
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "13ace31a-c54d-48ee-b91e-4d0c7a50e4bd",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781387772244
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "b3c4856b-5aaf-4393-b0a0-6ab34c571f12",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781387784774
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "7292a48e-3d2b-41df-beb3-40a996473803",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781387849276
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781387852887
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "db03ae66-6f5e-4a84-ac95-51f6847237ab",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781387862087
+    },
+    {
+        "t": "teamEdit",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "text": "Team Name Set: Oceans 11",
+        "time": 1781387868958
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "54c55601-6a69-48b1-916e-93eb3aee0a2a",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781387900489
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "d3c90a90-6571-488f-967b-9491baa82c7c",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781387921758
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781387953689
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "db320325-8596-49f9-8991-ade24b4bee3d",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781388033531
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "e571557f-0473-47aa-83ff-787d11b765b1",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781388072973
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781388080852
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "009fe39f-7d0f-4a6f-9cfe-066d59b13ff6",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781388090282
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "db03ae66-6f5e-4a84-ac95-51f6847237ab",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781388104193
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false,
+                false,
+                false
+            ]
+        },
+        "time": 1781388125843
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "1831fc67-9c64-4aaf-b5d3-caba4cebabbe",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781388135589
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "db320325-8596-49f9-8991-ade24b4bee3d",
+        "value": {
+            "progress": [
+                false
+            ]
+        },
+        "time": 1781388152004
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "e571557f-0473-47aa-83ff-787d11b765b1",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781388171596
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "00bff0d3-e9db-41ca-a7dd-58d8e0552b3f",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781388223726
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "54c55601-6a69-48b1-916e-93eb3aee0a2a",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781388235518
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "4c868559-6b13-4891-b932-19ef2184204b",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781388258256
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "4c868559-6b13-4891-b932-19ef2184204b",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781388262490
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "2b6ae423-df45-47d7-964b-93b7f7cc7fc8",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781388345849
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "1831fc67-9c64-4aaf-b5d3-caba4cebabbe",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781388355780
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "db03ae66-6f5e-4a84-ac95-51f6847237ab",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781388369329
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "e3b27635-d8e2-4696-9fa0-691bc588ac60",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781388435130
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "a5258975-2b4f-4061-962c-550c872c28ea",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781388484884
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "2da8933e-19dd-41dc-965d-6d5f87111708",
+        "value": {
+            "progress": [
+                false
+            ]
+        },
+        "time": 1781388511633
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "989896de-b55d-4767-8b47-b6f474f47111",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781388559984
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781388568434
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "4c868559-6b13-4891-b932-19ef2184204b",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781388615274
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "4c868559-6b13-4891-b932-19ef2184204b",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781388623895
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                false,
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781388645826
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781388684916
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781388700919
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "2da8933e-19dd-41dc-965d-6d5f87111708",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781388743228
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781388765879
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "d3c90a90-6571-488f-967b-9491baa82c7c",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781388833791
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "2da8933e-19dd-41dc-965d-6d5f87111708",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781388857120
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781388885030
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "bcb338d1-304f-4f22-b27c-3de19453b5b4",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781388901731
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "a5258975-2b4f-4061-962c-550c872c28ea",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781388915602
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false,
+                false,
+                false
+            ]
+        },
+        "time": 1781388931212
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "b67f0c5c-2bea-40f2-99c7-e9ba32b4c4bb",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781389008183
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "54c55601-6a69-48b1-916e-93eb3aee0a2a",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781389017714
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "2da8933e-19dd-41dc-965d-6d5f87111708",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781389031504
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "6786b6e2-abaf-44d9-9d02-3b3e407fe543",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781389065185
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "dbe96e76-e1b5-4d69-ae86-2f59077554e6",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781389085325
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "82d77bac-ee6f-4ab1-9ebf-e6ba75165ac6",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781389093314
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "d3c90a90-6571-488f-967b-9491baa82c7c",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781389103335
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781389113976
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "57cc76d2-ba06-4a18-b775-9e2af188140b",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781389134575
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "ccb402f9-34af-4380-aef8-a035782b457e",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781389137236
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781389145035
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "54c55601-6a69-48b1-916e-93eb3aee0a2a",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781389155296
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "17ee5dfc-59aa-4be1-bf3b-48ae35972bfa",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781389165887
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "2da8933e-19dd-41dc-965d-6d5f87111708",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781389180006
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "2da8933e-19dd-41dc-965d-6d5f87111708",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781389194617
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "17e175a4-b551-447b-8bbf-d99aa7a356f6",
+        "value": {
+            "progress": [
+                false,
+                false,
+                false,
+                true,
+                false
+            ]
+        },
+        "time": 1781389200117
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                false,
+                true,
+                false
+            ]
+        },
+        "time": 1781389215997
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                false,
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781389342601
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                false,
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781389418834
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "8fda3b98-0441-49ff-9dff-b9ad890505e3",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781389450635
+    },
+    {
+        "t": "teamEdit",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "text": "Team Name Set: Untitled",
+        "time": 1781389474855
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781389483336
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "dd52a53e-7042-43e5-b1d9-19e42fbf9b61",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781389574120
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "db320325-8596-49f9-8991-ade24b4bee3d",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781389595349
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781389609659
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781389617069
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "c3488545-e32a-4ec3-a8a8-4fbaf090a33a",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781389627080
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "c3488545-e32a-4ec3-a8a8-4fbaf090a33a",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781389634088
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781389672310
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "6abedd74-90fd-4ed2-94d6-24cf56009662",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781389716951
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "2da8933e-19dd-41dc-965d-6d5f87111708",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781389745041
+    },
+    {
+        "t": "bioBreak",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "taken": true,
+        "time": 1781389755422
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "bcb338d1-304f-4f22-b27c-3de19453b5b4",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781389797743
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "7713a03d-95dd-467e-bb03-79ef07493a1d",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781390046169
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "13ace31a-c54d-48ee-b91e-4d0c7a50e4bd",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781390061880
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "1d3c7595-b766-43f8-81a1-ba191d03a93e",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781390073399
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781390077210
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781390091710
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781390144651
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "be42eb23-3509-4b31-922b-cd519c3d5e2f",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781390157432
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781390220273
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "e571557f-0473-47aa-83ff-787d11b765b1",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781390230524
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "2b6ae423-df45-47d7-964b-93b7f7cc7fc8",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781390264364
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781390310974
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "1fe92746-4190-440c-afd2-652f55d64fcd",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781390317854
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "2da8933e-19dd-41dc-965d-6d5f87111708",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781390345455
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "db03ae66-6f5e-4a84-ac95-51f6847237ab",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781390358625
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "bcb338d1-304f-4f22-b27c-3de19453b5b4",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781390374286
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "dabfd461-b6d2-47e4-b815-2ff776daf4ee",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781390390256
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "1fe92746-4190-440c-afd2-652f55d64fcd",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781390469418
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781390600880
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781390608410
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "1fe92746-4190-440c-afd2-652f55d64fcd",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781390642610
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781390668001
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "bcb338d1-304f-4f22-b27c-3de19453b5b4",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781390720943
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "1fe92746-4190-440c-afd2-652f55d64fcd",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781390755692
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781390818637
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "2b6ae423-df45-47d7-964b-93b7f7cc7fc8",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781390841957
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                false,
+                true,
+                false
+            ]
+        },
+        "time": 1781390879038
+    },
+    {
+        "t": "bioBreak",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "taken": true,
+        "time": 1781390898828
+    },
+    {
+        "t": "bioBreak",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "taken": true,
+        "time": 1781390922249
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "1d3c7595-b766-43f8-81a1-ba191d03a93e",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781390947450
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "7713a03d-95dd-467e-bb03-79ef07493a1d",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781390966150
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "8fda3b98-0441-49ff-9dff-b9ad890505e3",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781390983860
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "d3c90a90-6571-488f-967b-9491baa82c7c",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781391018362
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781391028413
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781391063602
+    },
+    {
+        "t": "bioBreak",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "taken": true,
+        "time": 1781391074643
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "6abedd74-90fd-4ed2-94d6-24cf56009662",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781391132825
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781391162515
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "7713a03d-95dd-467e-bb03-79ef07493a1d",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781391192929
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781391202566
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        "time": 1781391216656
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "6abedd74-90fd-4ed2-94d6-24cf56009662",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781391226597
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        "time": 1781391249597
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781391307839
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "1d3c7595-b766-43f8-81a1-ba191d03a93e",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781391310609
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "82d77bac-ee6f-4ab1-9ebf-e6ba75165ac6",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781391372480
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781391441412
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "fb3bcee5-4b2e-478b-a00c-c4e64a8e7d76",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781391470222
+    },
+    {
+        "t": "bioBreak",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "taken": true,
+        "time": 1781391489753
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "db03ae66-6f5e-4a84-ac95-51f6847237ab",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781391590435
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "2da8933e-19dd-41dc-965d-6d5f87111708",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781391625116
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "66625a64-9aa3-45ce-91e7-2452d1ff2c37",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781391660396
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "4c868559-6b13-4891-b932-19ef2184204b",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781391738025
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "ccb402f9-34af-4380-aef8-a035782b457e",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781391748608
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "fb3bcee5-4b2e-478b-a00c-c4e64a8e7d76",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781391822840
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "e9514313-cea4-4d7a-95a5-1f80f142d92c",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781391891101
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "d1bc4052-30e2-40d0-a472-e544c4604fc1",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781391925961
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781391937041
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781392135065
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781392145305
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "dbe96e76-e1b5-4d69-ae86-2f59077554e6",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781392176165
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781392205846
+    },
+    {
+        "t": "bioBreak",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "taken": true,
+        "time": 1781392215956
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "d3c90a90-6571-488f-967b-9491baa82c7c",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781392259597
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781392287297
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "82d77bac-ee6f-4ab1-9ebf-e6ba75165ac6",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781392355643
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781392383224
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "db03ae66-6f5e-4a84-ac95-51f6847237ab",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781392412245
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "72bf0388-1b3b-436a-9d6f-ba95ea8fbe41",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781392455226
+    },
+    {
+        "t": "bioBreak",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "taken": true,
+        "time": 1781392472417
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "72bf0388-1b3b-436a-9d6f-ba95ea8fbe41",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781392483576
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "66625a64-9aa3-45ce-91e7-2452d1ff2c37",
+        "value": {
+            "progress": [
+                false,
+                false
+            ]
+        },
+        "time": 1781392548738
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "66625a64-9aa3-45ce-91e7-2452d1ff2c37",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781392555097
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "c3488545-e32a-4ec3-a8a8-4fbaf090a33a",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781392624769
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781392765144
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "00bff0d3-e9db-41ca-a7dd-58d8e0552b3f",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781392799785
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781392819225
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781392849556
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781392865945
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "bcb338d1-304f-4f22-b27c-3de19453b5b4",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781392874515
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781392890546
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781392918777
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781392956089
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "d3c90a90-6571-488f-967b-9491baa82c7c",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781392967788
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781393011959
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781393021079
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "fb3bcee5-4b2e-478b-a00c-c4e64a8e7d76",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781393031510
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "54c55601-6a69-48b1-916e-93eb3aee0a2a",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781393042533
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "6abedd74-90fd-4ed2-94d6-24cf56009662",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781393125052
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "72bf0388-1b3b-436a-9d6f-ba95ea8fbe41",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781393231263
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "e571557f-0473-47aa-83ff-787d11b765b1",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781393301844
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781393319934
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "391d8388-bbf0-49b2-9483-aba6c0d95099",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781393365445
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "be42eb23-3509-4b31-922b-cd519c3d5e2f",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781393376125
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781393390235
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "1d3c7595-b766-43f8-81a1-ba191d03a93e",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781393433896
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "82d77bac-ee6f-4ab1-9ebf-e6ba75165ac6",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781393442346
+    },
+    {
+        "t": "bioBreak",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "taken": true,
+        "time": 1781393470126
+    },
+    {
+        "t": "bioBreak",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "taken": true,
+        "time": 1781393476647
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "009fe39f-7d0f-4a6f-9cfe-066d59b13ff6",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781393483597
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "1831fc67-9c64-4aaf-b5d3-caba4cebabbe",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781393538587
+    },
+    {
+        "t": "bioBreak",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "taken": true,
+        "time": 1781393564458
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "13ace31a-c54d-48ee-b91e-4d0c7a50e4bd",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781393572078
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "8fda3b98-0441-49ff-9dff-b9ad890505e3",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781393636639
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "1fe92746-4190-440c-afd2-652f55d64fcd",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781393650748
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "b67f0c5c-2bea-40f2-99c7-e9ba32b4c4bb",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781393693220
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781393766021
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781393776991
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "e571557f-0473-47aa-83ff-787d11b765b1",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781393782811
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "00bff0d3-e9db-41ca-a7dd-58d8e0552b3f",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781393790371
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "b3c4856b-5aaf-4393-b0a0-6ab34c571f12",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781393815642
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "66625a64-9aa3-45ce-91e7-2452d1ff2c37",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781393833648
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "1fe92746-4190-440c-afd2-652f55d64fcd",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781393858589
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781393899984
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "1fe92746-4190-440c-afd2-652f55d64fcd",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781393927901
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "1fe92746-4190-440c-afd2-652f55d64fcd",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781394013132
+    },
+    {
+        "t": "bioBreak",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "taken": true,
+        "time": 1781394038603
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781394182947
+    },
+    {
+        "t": "bioBreak",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "taken": true,
+        "time": 1781394189397
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "2da8933e-19dd-41dc-965d-6d5f87111708",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781394209677
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "d3c90a90-6571-488f-967b-9491baa82c7c",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781394219878
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "7292a48e-3d2b-41df-beb3-40a996473803",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781394231848
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781394285429
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781394329771
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "1831fc67-9c64-4aaf-b5d3-caba4cebabbe",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781394343920
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781394354331
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "66625a64-9aa3-45ce-91e7-2452d1ff2c37",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781394370564
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "1d3c7595-b766-43f8-81a1-ba191d03a93e",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781394374532
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781394378692
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781394426011
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "4c868559-6b13-4891-b932-19ef2184204b",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781394437392
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "1d3c7595-b766-43f8-81a1-ba191d03a93e",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781394452942
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781394512444
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "b3c4856b-5aaf-4393-b0a0-6ab34c571f12",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781394519794
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "1831fc67-9c64-4aaf-b5d3-caba4cebabbe",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781394594694
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "b67f0c5c-2bea-40f2-99c7-e9ba32b4c4bb",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781394661138
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "4c868559-6b13-4891-b932-19ef2184204b",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781394671935
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "989896de-b55d-4767-8b47-b6f474f47111",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781394716397
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781394724188
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "97987d5a-287e-4864-8bf8-7b690a516eaa",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781394771648
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781394783378
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "1bd1f699-85a2-4459-a69f-00c072a9d371",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781394816918
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "1831fc67-9c64-4aaf-b5d3-caba4cebabbe",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781394828359
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "be42eb23-3509-4b31-922b-cd519c3d5e2f",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781394842479
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781394954211
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "72bf0388-1b3b-436a-9d6f-ba95ea8fbe41",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781394961802
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "17ee5dfc-59aa-4be1-bf3b-48ae35972bfa",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781395031121
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781395040002
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "c3488545-e32a-4ec3-a8a8-4fbaf090a33a",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781395050462
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781395056533
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "72bf0388-1b3b-436a-9d6f-ba95ea8fbe41",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781395079962
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "d1bc4052-30e2-40d0-a472-e544c4604fc1",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781395146908
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "1d3c7595-b766-43f8-81a1-ba191d03a93e",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781395154167
+    },
+    {
+        "t": "bioBreak",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "taken": true,
+        "time": 1781395313213
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "e9514313-cea4-4d7a-95a5-1f80f142d92c",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781395348495
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781395528409
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "54c55601-6a69-48b1-916e-93eb3aee0a2a",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781395531328
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781395545989
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781395553619
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781395565600
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781395590720
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "7292a48e-3d2b-41df-beb3-40a996473803",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781395623522
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "8fda3b98-0441-49ff-9dff-b9ad890505e3",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781395631741
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "6786b6e2-abaf-44d9-9d02-3b3e407fe543",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781395778394
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "82d77bac-ee6f-4ab1-9ebf-e6ba75165ac6",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781395788525
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "009fe39f-7d0f-4a6f-9cfe-066d59b13ff6",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781395896026
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "dbe96e76-e1b5-4d69-ae86-2f59077554e6",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781395908086
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781395915127
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781396018087
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "391d8388-bbf0-49b2-9483-aba6c0d95099",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781396110959
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "2b6ae423-df45-47d7-964b-93b7f7cc7fc8",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781396133300
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "c3488545-e32a-4ec3-a8a8-4fbaf090a33a",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781396147721
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "1831fc67-9c64-4aaf-b5d3-caba4cebabbe",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781396169569
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                false,
+                true,
+                false
+            ]
+        },
+        "time": 1781396190053
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781396199641
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781396222364
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781396260372
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "7713a03d-95dd-467e-bb03-79ef07493a1d",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781396268414
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781396283112
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "391d8388-bbf0-49b2-9483-aba6c0d95099",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781396307093
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "66625a64-9aa3-45ce-91e7-2452d1ff2c37",
+        "value": {
+            "progress": [
+                false,
+                true
+            ]
+        },
+        "time": 1781396374593
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "1831fc67-9c64-4aaf-b5d3-caba4cebabbe",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781396493946
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "6abedd74-90fd-4ed2-94d6-24cf56009662",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781396546177
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "1831fc67-9c64-4aaf-b5d3-caba4cebabbe",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781396567127
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781396580118
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "66625a64-9aa3-45ce-91e7-2452d1ff2c37",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781396585907
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "dbe96e76-e1b5-4d69-ae86-2f59077554e6",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781396599978
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781396610979
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "66625a64-9aa3-45ce-91e7-2452d1ff2c37",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781396617209
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "1831fc67-9c64-4aaf-b5d3-caba4cebabbe",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781396626030
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781396666668
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "7292a48e-3d2b-41df-beb3-40a996473803",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781396721060
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "d3c90a90-6571-488f-967b-9491baa82c7c",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781396799639
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "989896de-b55d-4767-8b47-b6f474f47111",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781396872961
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "e9514313-cea4-4d7a-95a5-1f80f142d92c",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781396908712
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "8fda3b98-0441-49ff-9dff-b9ad890505e3",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781396982345
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "b114c5df-c1c5-4a01-a219-4fb62c233993",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781397005524
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "8fda3b98-0441-49ff-9dff-b9ad890505e3",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781397025155
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                false,
+                true,
+                false
+            ]
+        },
+        "time": 1781397052645
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "db03ae66-6f5e-4a84-ac95-51f6847237ab",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781397114055
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "17ee5dfc-59aa-4be1-bf3b-48ae35972bfa",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781397324580
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "d1bc4052-30e2-40d0-a472-e544c4604fc1",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781397371340
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "66625a64-9aa3-45ce-91e7-2452d1ff2c37",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781397390530
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "989896de-b55d-4767-8b47-b6f474f47111",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781397399461
+    },
+    {
+        "t": "entry",
+        "teamId": "6f161edd-73ec-48c9-8cbe-bc99769da36b",
+        "challengeId": "e9514313-cea4-4d7a-95a5-1f80f142d92c",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781397454511
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "97987d5a-287e-4864-8bf8-7b690a516eaa",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781397469052
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                false,
+                true,
+                true
+            ]
+        },
+        "time": 1781397490523
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "b114c5df-c1c5-4a01-a219-4fb62c233993",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781397498612
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "97987d5a-287e-4864-8bf8-7b690a516eaa",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781397505983
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "82616281-f0ef-414e-b8db-eec0133a0e93",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781397518242
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "2da8933e-19dd-41dc-965d-6d5f87111708",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781397538032
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781397551952
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "7292a48e-3d2b-41df-beb3-40a996473803",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781397617884
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781397623485
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "39707596-bcea-4a15-aab3-3045ae1bdad7",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781397648674
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781397656014
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "b114c5df-c1c5-4a01-a219-4fb62c233993",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781397666529
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781397719265
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "989896de-b55d-4767-8b47-b6f474f47111",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781397775097
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781397803537
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "a5258975-2b4f-4061-962c-550c872c28ea",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781397876978
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781397899798
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "b114c5df-c1c5-4a01-a219-4fb62c233993",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781397912728
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781397921479
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "ccb402f9-34af-4380-aef8-a035782b457e",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781397969900
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "637f4c05-be1f-4728-b951-63891a14d233",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781398000760
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781398014400
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781398037481
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "b114c5df-c1c5-4a01-a219-4fb62c233993",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781398108510
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781398158443
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "a5258975-2b4f-4061-962c-550c872c28ea",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781398170694
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "66625a64-9aa3-45ce-91e7-2452d1ff2c37",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781398182763
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "66625a64-9aa3-45ce-91e7-2452d1ff2c37",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781398219464
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781398224264
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "b67f0c5c-2bea-40f2-99c7-e9ba32b4c4bb",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781398295975
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781398310544
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781398322555
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "13ace31a-c54d-48ee-b91e-4d0c7a50e4bd",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781398360496
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781398364196
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781398369846
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "97987d5a-287e-4864-8bf8-7b690a516eaa",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781398374107
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781398406817
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "653a2650-6be2-420d-a4a5-0172394bd8c0",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781398445098
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "50c47384-cf73-4eca-8802-4d092bf5897e",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781398549409
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "653a2650-6be2-420d-a4a5-0172394bd8c0",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781398583820
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781398590781
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                true,
+                true,
+                false
+            ]
+        },
+        "time": 1781398627940
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "915a6f32-e0f8-40a2-a2cc-506108a5c076",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false
+            ]
+        },
+        "time": 1781398650981
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "989896de-b55d-4767-8b47-b6f474f47111",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781398659311
+    },
+    {
+        "t": "entry",
+        "teamId": "489e544e-bd0a-428e-9f32-1a63dea40161",
+        "challengeId": "7713a03d-95dd-467e-bb03-79ef07493a1d",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781398670232
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "db320325-8596-49f9-8991-ade24b4bee3d",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781398682501
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781398717652
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "b114c5df-c1c5-4a01-a219-4fb62c233993",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781398734582
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "4c868559-6b13-4891-b932-19ef2184204b",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781398768832
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "b67f0c5c-2bea-40f2-99c7-e9ba32b4c4bb",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781398811253
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "b114c5df-c1c5-4a01-a219-4fb62c233993",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781398821054
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781398835054
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781398837904
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "653a2650-6be2-420d-a4a5-0172394bd8c0",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781398865194
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "ddfec216-3550-45a8-a312-d5b1cf1bb153",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781398921835
+    },
+    {
+        "t": "entry",
+        "teamId": "4eb82719-01f1-41db-b446-6ea73f20ce9f",
+        "challengeId": "4c868559-6b13-4891-b932-19ef2184204b",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781398953555
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "2da8933e-19dd-41dc-965d-6d5f87111708",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781398974876
+    },
+    {
+        "t": "entry",
+        "teamId": "fa2c58ba-a14b-4e3e-a6cb-29cae87565bf",
+        "challengeId": "b114c5df-c1c5-4a01-a219-4fb62c233993",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781398983376
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "653a2650-6be2-420d-a4a5-0172394bd8c0",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781399012167
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "time": 1781399021307
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                true,
+                false,
+                true
+            ]
+        },
+        "time": 1781399025406
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "2da8933e-19dd-41dc-965d-6d5f87111708",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781399031557
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "a5258975-2b4f-4061-962c-550c872c28ea",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781399071378
+    },
+    {
+        "t": "entry",
+        "teamId": "7b3a9141-9fde-48a5-bc31-59cea6115550",
+        "challengeId": "4c868559-6b13-4891-b932-19ef2184204b",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781399076288
+    },
+    {
+        "t": "entry",
+        "teamId": "9d5e5571-b0d6-4be9-a9bf-d9903abcafde",
+        "challengeId": "1a45172e-659e-4fc8-a424-8f4a774a9673",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781399094748
+    },
+    {
+        "t": "entry",
+        "teamId": "239e9b28-b469-4ea4-830e-35e224a942b6",
+        "challengeId": "4c868559-6b13-4891-b932-19ef2184204b",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781399136978
+    },
+    {
+        "t": "entry",
+        "teamId": "f572e18e-4863-4c7c-97f8-c5498a04b09c",
+        "challengeId": "4c868559-6b13-4891-b932-19ef2184204b",
+        "value": {
+            "progress": [
+                true,
+                true
+            ]
+        },
+        "time": 1781399147619
+    },
+    {
+        "t": "entry",
+        "teamId": "efc3278d-5c15-4626-8f8f-f11cff789686",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781399154569
+    },
+    {
+        "t": "entry",
+        "teamId": "101510b5-0e0a-4b7b-905e-91818cfd5287",
+        "challengeId": "7713a03d-95dd-467e-bb03-79ef07493a1d",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781399188145
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "b114c5df-c1c5-4a01-a219-4fb62c233993",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781399201480
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "a5258975-2b4f-4061-962c-550c872c28ea",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781399218050
+    },
+    {
+        "t": "gameState",
+        "teamId": "",
+        "text": "End Game",
+        "time": 1781399250535
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "4c868559-6b13-4891-b932-19ef2184204b",
+        "value": {
+            "progress": [
+                true,
+                false
+            ]
+        },
+        "time": 1781399307772
+    },
+    {
+        "t": "entry",
+        "teamId": "f60d175e-4047-4890-a0a7-8481f86d8ab1",
+        "challengeId": "11058829-0e7b-4739-8420-32a813ce217f",
+        "value": {
+            "progress": [
+                true,
+                true,
+                true
+            ]
+        },
+        "time": 1781399457983
+    },
+    {
+        "t": "entry",
+        "teamId": "d526afdc-416b-4bdc-89f1-9453c4aafd2d",
+        "challengeId": "db320325-8596-49f9-8991-ade24b4bee3d",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781400007023
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "7292a48e-3d2b-41df-beb3-40a996473803",
+        "value": {
+            "progress": [
+                true
+            ]
+        },
+        "time": 1781400150907
+    },
+    {
+        "t": "entry",
+        "teamId": "1b2768f5-5712-460f-aede-256415573255",
+        "challengeId": "2b6ae423-df45-47d7-964b-93b7f7cc7fc8",
+        "value": {
+            "progress": [
+                false
+            ]
+        },
+        "time": 1781400155557
+    }
+]
