@@ -36,7 +36,9 @@
 			<ul>
 				{#each teamRank as team}
 					<li>
-						{team.name ?? '🛑 NO TEAM NAME YET'}{team.bioBreakTaken ? '' : ' - 🛑 NO BIO BREAK YET'}
+						Team {team.teamNum}: {team.name ?? '🛑 NO TEAM NAME YET'}{team.bioBreakTaken
+							? ''
+							: ' - 🛑 NO BIO BREAK YET'}
 						<br />
 						Completed Challenges: {numChallengesComplete(team.challengeProgress)}
 					</li>
