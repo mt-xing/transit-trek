@@ -2,6 +2,7 @@
 	import BigBtn from '../../../components/bigBtn.svelte';
 	import TopLogo from '../../../components/topLogo.svelte';
 	import ChallengeView from '../../../components/tt6/tt6ChallengeView.svelte';
+	import bgImg from '$lib/images/tt6/bg.jpg';
 
 	import teamsRaw from './teams.json';
 	import challengesRaw from './challenges.json';
@@ -86,21 +87,42 @@
 </script>
 
 <svelte:head>
-	<title>Eastside Transit Trek Results</title>
+	<title>Crosslake Crossover Results</title>
 	<meta
 		name="description"
-		content="Final standings from Seattle Transit Trek's April 2025 event, The Eastside Transit Trek"
+		content="Final standings from Seattle Transit Trek's June 2026 event, the Crosslake Crossover"
 	/>
 </svelte:head>
 
 <div id="outerWrap">
-	<div id="headerBg"></div>
-	<TopLogo
-		customStyles="text-shadow: none; opacity: 1; font-family: Noto Sans, Helvetica, sans-serif; top: 2vh; color: white;"
-		customImgStyles="box-shadow: none;"
-	/>
+	<img src={bgImg} alt="" class="fallbackBgImg" />
 
-	<h1 class="hero">Results</h1>
+	<svg width="0" height="0" style="position: absolute;">
+		<filter id="knockout-glow">
+			<feComponentTransfer in="SourceAlpha" result="solid-alpha">
+				<feFuncA type="linear" slope="100" />
+			</feComponentTransfer>
+			<feGaussianBlur in="solid-alpha" stdDeviation="8" result="glow-blur" />
+			<feFlood flood-color="#ffffff" result="glow-color" />
+			<feComposite in="glow-color" in2="glow-blur" operator="in" result="colored-glow" />
+			<feComposite in="colored-glow" in2="solid-alpha" operator="out" result="glow-outside-only" />
+			<feMerge>
+				<feMergeNode in="glow-outside-only" />
+				<feMergeNode in="SourceGraphic" />
+			</feMerge>
+		</filter>
+	</svg>
+
+	<TopLogo />
+
+	<section class="hero">
+		<h1>
+			<span class="cWrap cw1"
+				><span class="card c1"><span class="c11">Res</span><span class="c12">ults</span></span
+				></span
+			>
+		</h1>
+	</section>
 
 	<section class="info podium">
 		<h2>Podium</h2>
@@ -280,14 +302,16 @@
 		margin: 0;
 	}
 
-	#headerBg {
-		position: absolute;
+	.fallbackBgImg {
+		object-fit: cover;
+		object-position: center;
+		position: fixed;
+		z-index: -1;
 		top: 0;
 		left: 0;
-		right: 0;
-		height: min(calc(100px + 4vh), calc(10vw + 4vh));
-		background: #f24e69;
-		z-index: 5;
+		width: 100%;
+		height: 100%;
+		height: 100lvh;
 	}
 
 	#outerWrap {
@@ -299,39 +323,155 @@
 		overflow-y: clip;
 		display: flow-root;
 		position: relative;
-		background: white;
 	}
 
 	.hero {
-		color: black;
-		font-size: min(150px, 20vw);
-		text-align: center;
-		margin-top: calc(250px + 5vw);
-		position: relative;
-	}
-
-	.hero::after {
-		content: '';
-		height: 2vw;
 		width: 100%;
-		position: absolute;
-		background: #00a0df;
-		left: 0;
-		top: calc(-4vw);
+		overflow: hidden;
+		position: relative;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
 	}
 
-	.hero::before {
+	.fallbackBgImg {
+		object-fit: cover;
+		object-position: center;
+		position: fixed;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		height: 100lvh;
+	}
+
+	.hero h1 {
+		color: white;
+		text-align: center;
+		font-size: min(15vh, 10vw);
+		font-weight: 900;
+
+		margin-top: 250px;
+	}
+
+	.hero .card {
+		position: relative;
+		display: inline-block;
+		background: none;
+		text-align: center;
+		padding: 0em 0.2em;
+		border-radius: 1vh;
+		margin: 1vh;
+		overflow: hidden;
+
+		--radius: 2vh;
+		--a: calc(var(--radius) / tan(67.5deg));
+		--b: calc(var(--radius) / tan(67.5deg) / sqrt(2));
+	}
+
+	.hero .card::before {
 		content: '';
 		position: absolute;
-		left: 50%;
-		top: -3vw;
-		transform: translate(-50%, -50%);
-		width: 4vw;
-		height: 4vw;
-		border-radius: 4vw;
-		border: 0.8vw black solid;
-		background: white;
-		z-index: 4;
+		z-index: -1;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		background: linear-gradient(
+			to top,
+			rgba(4, 100, 176, 0.5),
+			rgba(1, 47, 104, 0.7) 30%,
+			rgba(2, 14, 34, 0.7)
+		);
+	}
+
+	.hero .card span {
+		mix-blend-mode: add;
+		vertical-align: top;
+		display: inline-block;
+	}
+
+	.hero .card .c12 {
+		padding-bottom: 0.3em;
+	}
+
+	.hero .card .c11 {
+		background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgb(0, 160, 223));
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: transparent;
+		-webkit-text-stroke: 1px rgba(105, 255, 255, 0.6);
+	}
+
+	.hero .card .c12 {
+		background: linear-gradient(to bottom, rgba(230, 248, 227, 0.1), rgba(61, 174, 43, 0.8));
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: transparent;
+		-webkit-text-stroke: 1px rgba(79, 228, 192, 0.6);
+	}
+
+	.hero .cw1 {
+		margin-top: 0;
+		--xAmt: 0;
+	}
+
+	.hero .c1 {
+		clip-path: shape(
+			from var(--radius) 0,
+			line to calc(100% - var(--radius)) 0,
+			arc to 100% var(--radius) of var(--radius) cw,
+			line to 100% calc(100% - var(--radius)),
+			arc to calc(100% - var(--radius)) 100% of var(--radius) cw,
+			line to calc(53.5% + var(--a)) 100%,
+			arc to calc(53.5% - var(--b)) calc(100% - var(--b)) of var(--radius) cw,
+			line to calc(46.5% + var(--b)) calc(75% + var(--b)),
+			arc to calc(46.5% - var(--a)) 75% of var(--radius) ccw,
+			line to calc(5% + var(--a)) 75%,
+			arc to calc(5% - var(--b)) calc(75% - var(--b)) of var(--radius) cw,
+			line to var(--b) calc(75% - 25% * 5 / 7 + var(--b)),
+			arc to 0 calc(75% - 25% * 5 / 7 - var(--a)) of var(--radius) cw,
+			line to 0 var(--radius),
+			arc to var(--radius) 0 of var(--radius) cw,
+			close
+		);
+	}
+
+	.hero .c1 span {
+		transform: translateY(-0.1em);
+	}
+
+	.cWrap {
+		filter: url(#knockout-glow);
+		display: block;
+
+		--xAmt: 0;
+		--delay: 1.8s;
+		--speed: 1s;
+		--zoom: 1;
+		transform: translateX(var(--xAmt)) scale(var(--zoom));
+		opacity: 1;
+	}
+
+	@media (max-width: 800px) {
+		.hero h1 {
+			font-size: min(15vh, 15vw);
+		}
+
+		.hero .cw1 {
+			--xAmt: 0;
+		}
+	}
+
+	h2 {
+		text-shadow: 0 0 15px black;
+		-webkit-text-stroke: 2px black;
+		paint-order: stroke fill;
 	}
 
 	.midtext {

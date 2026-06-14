@@ -183,7 +183,10 @@
 
 <svelte:head>
 	<title>Transit Trek: Team {team?.teamNum} Dashboard</title>
-	<meta name="description" content="Seattle Transit Trek's August 2024 event, Hide and Seek 2" />
+	<meta
+		name="description"
+		content="Seattle Transit Trek's June 2026 event, the Crosslake Crossover"
+	/>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
