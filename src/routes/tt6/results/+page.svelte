@@ -289,7 +289,7 @@
 
 	<div style="text-align: center; margin-top: 10vh; margin-bottom: 20vh;">
 		<Tt6Card animate={false}>
-			<h2>Thanks for Playing!</h2>
+			<h2 style="margin: 1em 2em;">Thanks for Playing!</h2>
 			<BigBtn
 				href="/tt6/"
 				text="Back"
