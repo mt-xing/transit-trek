@@ -16,6 +16,7 @@
 
 <textarea readonly>{JSON.stringify(log, null, 2)}</textarea>
 
+<p><a href="/admin/tt6/logs/export">Challenge and Team Export</a></p>
 <p><a href="/admin">Back</a></p>
 
 <form action="?/resetDanger" method="POST">

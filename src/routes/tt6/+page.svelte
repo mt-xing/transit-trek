@@ -12,7 +12,7 @@
 	import SmallBtn from '../../components/smallBtn.svelte';
 	import { HOME_PAGE } from '../../utils/paths';
 
-	const PARTIFUL_LINK = 'https://partiful.com/e/hyNg3l3efh0tWMENkwo3';
+	// const PARTIFUL_LINK = 'https://partiful.com/e/hyNg3l3efh0tWMENkwo3';
 
 	let firstVideoDone = false;
 	let video2El: HTMLVideoElement | undefined;
@@ -138,10 +138,17 @@
 
 	<div style="text-align: center; margin-top: 10vh; margin-bottom: 20vh;">
 		<Tt6Card>
-			<h2>Ready to Trek?</h2>
+			<!-- <h2>Ready to Trek?</h2>
 			<BigBtn
 				href={PARTIFUL_LINK}
 				text="Sign Up"
+				color={['rgb(0, 160, 223)', 'rgba(255, 255, 255, 0.1)']}
+				customStyles="box-shadow: none; clip-path: polygon(1em 0%, 100% 0%, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0% 100%, 0% 1em)"
+			/> -->
+			<h2>Thanks for Playing!</h2>
+			<BigBtn
+				href="/tt6/results"
+				text="Results"
 				color={['rgb(0, 160, 223)', 'rgba(255, 255, 255, 0.1)']}
 				customStyles="box-shadow: none; clip-path: polygon(1em 0%, 100% 0%, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0% 100%, 0% 1em)"
 			/>
