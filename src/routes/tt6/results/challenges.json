@@ -1,24 +1,4 @@
 {
-    "hidden": [
-        {
-            "type": "single",
-            "id": "a43ebc7a-0f1c-441b-9617-efaef2c44ad2",
-            "title": "67",
-            "desc": "Do not name your team 67.",
-            "points": -67,
-            "category": "hidden",
-            "sort": 3000000,
-            "shrinkTitle": false,
-            "failureMsg": "You may rename your team if you wish",
-            "failurePenalty": 67,
-            "isLinkTarget": false,
-            "_rid": "NT1TAKoee01FAAAAAAAAAA==",
-            "_self": "dbs/NT1TAA==/colls/NT1TAKoee00=/docs/NT1TAKoee01FAAAAAAAAAA==/",
-            "_etag": "\"0a009abb-0000-0700-0000-6a28d5fe0000\"",
-            "_attachments": "attachments/",
-            "_ts": 1781061118
-        }
-    ],
     "challenge": [
         {
             "type": "single",

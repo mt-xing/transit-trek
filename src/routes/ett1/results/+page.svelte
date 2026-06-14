@@ -168,7 +168,7 @@
 								value={team.teamNum}
 								bind:group={selectedTeam}
 							/>
-							<span class="colorBadge" style="--color: {getColor(team.teamNum)};"></span> Team {team.teamNum}:
+							<span class="colorBadge" style="--color: {getColor(team.teamNum)};"></span>
 							Team {team.teamNum}:
 							{team.name}
 							<span style="font-size: 0.7em"

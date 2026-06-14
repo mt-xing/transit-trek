@@ -1,31 +1,30 @@
 <script lang="ts">
 	import BigBtn from '../../../components/bigBtn.svelte';
 	import TopLogo from '../../../components/topLogo.svelte';
-	import ChallengeView from '../../../components/ett1/ett1ChallengeView.svelte';
+	import ChallengeView from '../../../components/tt6/tt6ChallengeView.svelte';
 
 	import teamsRaw from './teams.json';
 	import challengesRaw from './challenges.json';
-	import type { ETT1ChallengeProgress, ETT1Team } from '../../../types/ett1/team';
+	import type { TT6ChallengeProgress, TT6Team } from '../../../types/tt6/team';
 	import {
-		iterateEtt1Categories,
-		ett1ChallengeCategoryNames,
-		type ETT1ChallengeCategory,
-		type ETT1PublicChallengeDefinition,
-	} from '../../../types/ett1/challenge';
-	import { isEtt1ChallengeComplete } from '../../../utils/ett1/challenge';
-	import { getColor } from '../../../utils/ett1/colors';
+		iterateTt6Categories,
+		tt6ChallengeCategoryNames,
+		type TT6ChallengeCategory,
+		type TT6PublicChallengeDefinition,
+	} from '../../../types/tt6/challenge';
+	import { isTt6ChallengeComplete } from '../../../utils/tt6/challenge';
 
-	const teams: ETT1Team[] = teamsRaw as unknown as ETT1Team[];
+	const teams: TT6Team[] = teamsRaw as unknown as TT6Team[];
 	const teamsUnsorted = [...teams].sort((a, b) => a.teamNum - b.teamNum);
 	$: teams.sort((a, b) => b.score - a.score);
 
 	const challenges = challengesRaw as unknown as Record<
-		ETT1ChallengeCategory,
-		ETT1PublicChallengeDefinition[]
+		TT6ChallengeCategory,
+		TT6PublicChallengeDefinition[]
 	>;
 	const rawChallengesList = [...challenges.challenge, ...challenges.find, ...challenges.hard];
 
-	const challengeMap: Record<string, ETT1PublicChallengeDefinition> = rawChallengesList.reduce(
+	const challengeMap: Record<string, TT6PublicChallengeDefinition> = rawChallengesList.reduce(
 		(a, x) => ({ ...a, [x.id]: x }),
 		{},
 	);
@@ -35,7 +34,7 @@
 			...a,
 			[x.id]: new Set(
 				rawChallengesList
-					.filter((c) => isEtt1ChallengeComplete(c, x.challengeProgress))
+					.filter((c) => isTt6ChallengeComplete(c, x.challengeProgress))
 					.map((c) => c.id),
 			),
 		}),
@@ -51,7 +50,7 @@
 	);
 	const challengeIdArray = rawChallengesList.map((x) => x.id);
 
-	const overallChallengeProgress: ETT1ChallengeProgress = {
+	const overallChallengeProgress: TT6ChallengeProgress = {
 		...rawChallengesList.reduce(
 			(a, c) => ({
 				...a,
@@ -70,9 +69,9 @@
 		return x.replace(/<[^>]*>?/gm, '');
 	}
 
-	let selectedChallenge: null | ETT1PublicChallengeDefinition = null;
+	let selectedChallenge: null | TT6PublicChallengeDefinition = null;
 
-	const openCallback = (c: ETT1PublicChallengeDefinition) => {
+	const openCallback = (c: TT6PublicChallengeDefinition) => {
 		if (selectedChallenge === null) {
 			selectedChallenge = c;
 		}
@@ -110,7 +109,6 @@
 			<div class={`place${i + 1}`}>
 				<span class="rank">{i + 1}</span>
 				<h3>
-					<span class="colorBadge" style="--color: {getColor(team.teamNum)};"></span> Team {team.teamNum}:
 					{team.name}
 				</h3>
 				<p>
@@ -168,7 +166,6 @@
 								value={team.teamNum}
 								bind:group={selectedTeam}
 							/>
-							<span class="colorBadge" style="--color: {getColor(team.teamNum)};"></span> Team {team.teamNum}:
 							Team {team.teamNum}:
 							{team.name}
 							<span style="font-size: 0.7em"
@@ -189,16 +186,16 @@
 			</select>
 		</div>
 		<div>
-			{#each iterateEtt1Categories(challenges) as category}
+			{#each iterateTt6Categories(challenges) as category}
 				<div class={`card challenges ${category}`}>
-					<h3>{ett1ChallengeCategoryNames[category]}</h3>
+					<h3>{tt6ChallengeCategoryNames[category]}</h3>
 				</div>
 
 				<ul class={`challengeList ${category}`}>
 					{#each challenges[category] as challenge}
 						<li>
 							<button on:click={() => openCallback(challenge)}>
-								{#if isEtt1ChallengeComplete(challenge, teamProgress)}
+								{#if isTt6ChallengeComplete(challenge, teamProgress)}
 									<span class="station done">✔</span>
 								{:else}
 									<span class="station"></span>
@@ -228,10 +225,7 @@
 					<th>Challenge</th>
 					{#each teamsUnsorted as team}
 						<td>
-							<span style="font-size: 1.5em;white-space:nowrap;"
-								><span class="colorBadge" style="--color: {getColor(team.teamNum)};"></span>
-								{team.teamNum}</span
-							>
+							<span style="font-size: 1.5em;white-space:nowrap;">{team.teamNum}</span>
 							<br />
 							<span style="font-size: 0.8em;">{team.name}</span>
 						</td>
@@ -269,6 +263,8 @@
 {#if selectedChallenge !== null}
 	<ChallengeView
 		challenge={selectedChallenge}
+		allChallenges={rawChallengesList}
+		teamNum={selectedTeam >= 0 ? teamsUnsorted[selectedTeam - 1].teamNum : 1}
 		challengeProgress={teamProgress}
 		closeCallback={() => {
 			selectedChallenge = null;
