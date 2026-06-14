@@ -15,6 +15,7 @@
 	} from '../../../types/tt6/challenge';
 	import { isTt6ChallengeComplete } from '../../../utils/tt6/challenge';
 	import Tt6Card from '../../../components/tt6/tt6Card.svelte';
+	import Tt6ShrinkingTitle from '../../../components/tt6/tt6ShrinkingTitle.svelte';
 
 	const teams: TT6Team[] = teamsRaw as unknown as TT6Team[];
 	const teamsUnsorted = [...teams].sort((a, b) => a.teamNum - b.teamNum);
@@ -145,29 +146,37 @@
 		</Tt6Card>
 	</section>
 
-	<section class="info challengePopularity">
-		<h2>Challenge Popularity</h2>
-		<table>
-			<tr><th>Challenge</th><th>Completion</th></tr>
-			{#each challengeIdArray
-				.map((cid) => ({ cid, num: numCompleteEachChallenge[cid] }))
-				.sort((a, b) => b.num - a.num) as challengeId}
-				<tr>
-					<td style="max-width: 100px">
-						{challengeMap[challengeId.cid].title}
-					</td>
-					<td>
-						<span
-							class="percentBar"
-							style={`width: ${(numCompleteEachChallenge[challengeId.cid] * 100) / teams.length}%;`}
-						></span>
-						<span class="percentText">
-							{Math.round((numCompleteEachChallenge[challengeId.cid] * 100) / teams.length)}%
-						</span>
-					</td>
-				</tr>
-			{/each}
-		</table>
+	<section class="standardCardWrap">
+		<Tt6Card animate={false} fillWidth>
+			<div class="challengePopularity">
+				<h2>Challenge Popularity</h2>
+				<table>
+					<tr><th>Challenge</th><th>Completion</th></tr>
+					{#each challengeIdArray
+						.map((cid) => ({ cid, num: numCompleteEachChallenge[cid] }))
+						.sort((a, b) => b.num - a.num) as challengeId}
+						<tr>
+							<td style="max-width: 100px">
+								{#if challengeMap[challengeId.cid].shrinkTitle}
+									<Tt6ShrinkingTitle text={challengeMap[challengeId.cid].title} />
+								{:else}
+									{challengeMap[challengeId.cid].title}
+								{/if}
+							</td>
+							<td>
+								<span
+									class="percentBar"
+									style={`width: ${(numCompleteEachChallenge[challengeId.cid] * 100) / teams.length}%;`}
+								></span>
+								<span class="percentText">
+									{Math.round((numCompleteEachChallenge[challengeId.cid] * 100) / teams.length)}%
+								</span>
+							</td>
+						</tr>
+					{/each}
+				</table>
+			</div>
+		</Tt6Card>
 	</section>
 
 	<section class="info challengeWrap">
@@ -272,18 +281,16 @@
 		</div>
 	</section>
 
-	<div class="signupWrap">
-		<p>Thanks For Playing!</p>
-		<p>
+	<div style="text-align: center; margin-top: 10vh; margin-bottom: 20vh;">
+		<Tt6Card animate={false}>
+			<h2>Thanks for Playing!</h2>
 			<BigBtn
-				isBlack={true}
 				href="/tt6/"
 				text="Back"
-				external={true}
-				color={['rgb(128,255,255)', 'rgb(200,255,255)']}
-				customStyles="text-shadow: none; -webkit-text-stroke: unset; box-shadow: none; color: black; font-size: 30px;"
+				color={['rgb(0, 160, 223)', 'rgba(255, 255, 255, 0.1)']}
+				customStyles="box-shadow: none; clip-path: polygon(1em 0%, 100% 0%, 100% calc(100% - 1em), calc(100% - 1em) 100%, 0% 100%, 0% 1em)"
 			/>
-		</p>
+		</Tt6Card>
 	</div>
 </div>
 
@@ -722,6 +729,7 @@
 
 	.challengePopularity table {
 		border-collapse: collapse;
+		text-align: left;
 	}
 
 	.challengePopularity td,
@@ -730,7 +738,7 @@
 	}
 
 	.challengePopularity table tr:nth-child(even) {
-		background: rgba(0, 0, 0, 0.05);
+		background: rgba(255, 255, 255, 0.05);
 	}
 
 	.challengePopularity td {
@@ -741,10 +749,19 @@
 		position: absolute;
 		z-index: 0;
 		height: calc(100% - 2px);
-		background: linear-gradient(to right, white, #0596cf 100%);
+		background: linear-gradient(to right, #150f37, #0596cf 100%);
 		left: 0;
 		top: 1px;
 		box-sizing: border-box;
+		--notch: 0.6em;
+		clip-path: polygon(
+			var(--notch) 0%,
+			100% 0%,
+			100% calc(100% - var(--notch)),
+			calc(100% - var(--notch)) 100%,
+			0% 100%,
+			0% var(--notch)
+		);
 	}
 
 	.challengePopularity .percentText {
