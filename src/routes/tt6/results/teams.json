@@ -776,7 +776,7 @@
         "teamNum": 6,
         "secret": "0c2fb37c-98a6-4646-8205-cee10936517a",
         "name": "The Winning Team",
-        "score": 53,
+        "score": 53.001,
         "challengeProgress": {
             "c3488545-e32a-4ec3-a8a8-4fbaf090a33a": {
                 "progress": [
@@ -1603,7 +1603,7 @@
         "teamNum": 11,
         "secret": "caab96ba-27f6-4ffb-8efe-f9ce3392856c",
         "name": "Oceans 11",
-        "score": 30,
+        "score": 30.001,
         "challengeProgress": {
             "b3c4856b-5aaf-4393-b0a0-6ab34c571f12": {
                 "progress": [
@@ -1713,7 +1713,7 @@
         "teamNum": 12,
         "secret": "59bc2962-ccec-45db-8ffc-a5ff74893b8d",
         "name": "SEA Biscuit",
-        "score": 37,
+        "score": 37.001,
         "challengeProgress": {
             "637f4c05-be1f-4728-b951-63891a14d233": {
                 "progress": [
