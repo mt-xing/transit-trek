@@ -4,6 +4,7 @@
 	import tt3Bg from '$lib/images/transit-trek-bg-wide.png';
 	import tt4Bg from '$lib/images/tt4/bg_graphic.png';
 	import tt5Bg from '$lib/images/tt5/tt5_bg.jpg';
+	import tt6Bg from '$lib/images/tt6/bg.jpg';
 	import ett1Bg from '$lib/images/ett1/ett1_blur_preview.png';
 	import BigBtn from '../components/bigBtn.svelte';
 </script>
@@ -55,7 +56,7 @@
 	</filter>
 </svg>
 <section class="picsection tt6">
-	<h2>Upcoming Game</h2>
+	<h2>Most Recent Game</h2>
 
 	<div>
 		<span class="cWrap cw1"
@@ -111,6 +112,12 @@
 <section class="picsection previousEvents">
 	<h2>Previous Events</h2>
 	<ul>
+		<li>
+			<a href="/tt6" style="--num: '6';background-image: url({tt6Bg});">
+				<h3>Crosslake Crossover</h3>
+				<p>June 13, 2026</p>
+			</a>
+		</li>
 		<li>
 			<a href="/ett1" rel="external" style="background-image: url({ett1Bg});">
 				<h3>Eastside Transit Trek</h3>
