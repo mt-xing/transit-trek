@@ -253,32 +253,38 @@
 		</div>
 	</section>
 
-	<section class="info">
-		<h2>Team Breakdown</h2>
-		<div class="teamBreakdownWrap">
-			<table class="teamBreakdown">
-				<tr>
-					<th>Challenge</th>
-					{#each teamsUnsorted as team}
-						<td>
-							<span style="font-size: 1.5em;white-space:nowrap;">{team.teamNum}</span>
-							<br />
-							<span style="font-size: 0.8em;">{team.name}</span>
-						</td>
-					{/each}
-				</tr>
-				{#each challengeIdArray as challengeId}
+	<section class="standardCardWrap">
+		<Tt6Card animate={false} fillWidth>
+			<h2>Team Breakdown</h2>
+			<div class="teamBreakdownWrap">
+				<table class="teamBreakdown">
 					<tr>
-						<td>
-							{challengeMap[challengeId].title}
-						</td>
+						<th>Challenge</th>
 						{#each teamsUnsorted as team}
-							<td>{teamsCompletedChallenges[team.id].has(challengeId) ? '✅' : ''}</td>
+							<td>
+								<span style="font-size: 1.5em;white-space:nowrap;">{team.teamNum}</span>
+								<br />
+								<span style="font-size: 0.8em;">{team.name}</span>
+							</td>
 						{/each}
 					</tr>
-				{/each}
-			</table>
-		</div>
+					{#each challengeIdArray as challengeId}
+						<tr>
+							<td>
+								{#if challengeMap[challengeId].shrinkTitle}
+									{challengeMap[challengeId].title.split('.')[0]}
+								{:else}
+									{challengeMap[challengeId].title}
+								{/if}
+							</td>
+							{#each teamsUnsorted as team}
+								<td>{teamsCompletedChallenges[team.id].has(challengeId) ? '✅' : ''}</td>
+							{/each}
+						</tr>
+					{/each}
+				</table>
+			</div>
+		</Tt6Card>
 	</section>
 
 	<div style="text-align: center; margin-top: 10vh; margin-bottom: 20vh;">
@@ -791,7 +797,7 @@
 	}
 
 	.teamBreakdown tr:nth-child(even) {
-		background: rgba(0, 0, 0, 0.05);
+		background: rgba(255, 255, 255, 0.05);
 	}
 
 	.teamBreakdown tr:first-child td {
