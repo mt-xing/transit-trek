@@ -246,7 +246,7 @@
 							>
 								<div class="wrap">
 									{#if challenge.shrinkTitle}
-										<h4 style="margin-bottom: 2em;">
+										<h4 style="margin-bottom: 0.5em;">
 											<Tt6ShrinkingTitle text={challenge.title} />
 										</h4>
 									{:else}
