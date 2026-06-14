@@ -14,6 +14,7 @@
 		type TT6PublicChallengeDefinition,
 	} from '../../../types/tt6/challenge';
 	import { isTt6ChallengeComplete } from '../../../utils/tt6/challenge';
+	import Tt6Card from '../../../components/tt6/tt6Card.svelte';
 
 	const teams: TT6Team[] = teamsRaw as unknown as TT6Team[];
 	const teamsUnsorted = [...teams].sort((a, b) => a.teamNum - b.teamNum);
@@ -124,20 +125,24 @@
 		</h1>
 	</section>
 
-	<section class="info podium">
-		<h2>Podium</h2>
+	<section class="standardCardWrap">
+		<Tt6Card animate={false} fillWidth>
+			<div class="podium">
+				<h2>Podium</h2>
 
-		{#each teams as team, i}
-			<div class={`place${i + 1}`}>
-				<span class="rank">{i + 1}</span>
-				<h3>
-					{team.name}
-				</h3>
-				<p>
-					Total Score: <code>{Math.floor(team.score)}</code>
-				</p>
+				{#each teams as team, i}
+					<div class={`place${i + 1}`}>
+						<span class="rank">{i + 1}</span>
+						<h3>
+							Team {team.teamNum}: {team.name}
+						</h3>
+						<p>
+							Total Score: <code>{Math.floor(team.score)}</code>
+						</p>
+					</div>
+				{/each}
 			</div>
-		{/each}
+		</Tt6Card>
 	</section>
 
 	<section class="info challengePopularity">
@@ -472,6 +477,13 @@
 		text-shadow: 0 0 15px black;
 		-webkit-text-stroke: 2px black;
 		paint-order: stroke fill;
+		font-size: 40px;
+	}
+
+	.standardCardWrap {
+		width: 60%;
+		margin-left: 20vw;
+		margin-top: 10vh;
 	}
 
 	.midtext {
@@ -614,7 +626,7 @@
 
 	.podium > div {
 		position: relative;
-		padding-left: 50px;
+		padding-left: 80px;
 		height: 6em;
 		display: flex;
 		flex-direction: column;
@@ -665,10 +677,12 @@
 
 	.podium > div > h3 {
 		margin: 0;
+		text-align: left;
 	}
 
 	.podium > div > p {
 		margin: 5px 0 0 0;
+		text-align: left;
 	}
 
 	.podium .rank {
