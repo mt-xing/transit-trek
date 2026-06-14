@@ -16,6 +16,8 @@
 	import { isTt6ChallengeComplete } from '../../../utils/tt6/challenge';
 	import Tt6Card from '../../../components/tt6/tt6Card.svelte';
 	import Tt6ShrinkingTitle from '../../../components/tt6/tt6ShrinkingTitle.svelte';
+	import Tt6DashboardCard from '../../../components/tt6/tt6DashboardCard.svelte';
+	import { tt6ColorName } from '../../../utils/tt6/colorName';
 
 	const teams: TT6Team[] = teamsRaw as unknown as TT6Team[];
 	const teamsUnsorted = [...teams].sort((a, b) => a.teamNum - b.teamNum);
@@ -181,70 +183,85 @@
 
 	<section class="info challengeWrap">
 		<div>
-			<h2>Progress</h2>
-			<ul>
-				<li class={selectedTeam === -1 ? 'selected' : ''}>
-					<label
-						><input
-							type="radio"
-							name="teamSelect"
-							value={-1}
-							bind:group={selectedTeam}
-						/>Overview</label
-					>
-				</li>
-				{#each teams as team}
-					<li class={selectedTeam === team.teamNum ? 'selected' : ''}>
-						<label>
-							<input
+			<Tt6Card animate={false}>
+				<h2>Progress</h2>
+				<ul>
+					<li class={selectedTeam === -1 ? 'selected' : ''}>
+						<label
+							><input
 								type="radio"
 								name="teamSelect"
-								value={team.teamNum}
+								value={-1}
 								bind:group={selectedTeam}
-							/>
-							Team {team.teamNum}:
-							{team.name}
-							<span style="font-size: 0.7em"
-								>({Math.floor(team.score)} pt{team.score === 1 ? '' : 's'})</span
-							>
-						</label>
+							/>Overview</label
+						>
 					</li>
-				{/each}
-			</ul>
-			<select bind:value={selectedTeam}>
-				<option value={-1}>Overview</option>
-				{#each teams as team}
-					<option value={team.teamNum}>
-						Team {team.teamNum}:
-						{team.name} ({Math.floor(team.score)} pt{team.score === 1 ? '' : 's'})
-					</option>
-				{/each}
-			</select>
+					{#each teams as team}
+						<li class={selectedTeam === team.teamNum ? 'selected' : ''}>
+							<label>
+								<input
+									type="radio"
+									name="teamSelect"
+									value={team.teamNum}
+									bind:group={selectedTeam}
+								/>
+								Team {team.teamNum}:
+								{team.name}
+								<span style="font-size: 0.7em"
+									>({Math.floor(team.score)} pt{team.score === 1 ? '' : 's'})</span
+								>
+							</label>
+						</li>
+					{/each}
+				</ul>
+				<select bind:value={selectedTeam}>
+					<option value={-1}>Overview</option>
+					{#each teams as team}
+						<option value={team.teamNum}>
+							Team {team.teamNum}:
+							{team.name} ({Math.floor(team.score)} pt{team.score === 1 ? '' : 's'})
+						</option>
+					{/each}
+				</select>
+			</Tt6Card>
 		</div>
 		<div>
 			{#each iterateTt6Categories(challenges) as category}
-				<div class={`card challenges ${category}`}>
+				<Tt6DashboardCard color={tt6ColorName(category)} small>
 					<h3>{tt6ChallengeCategoryNames[category]}</h3>
-				</div>
+				</Tt6DashboardCard>
 
 				<ul class={`challengeList ${category}`}>
 					{#each challenges[category] as challenge}
 						<li>
-							<button on:click={() => openCallback(challenge)}>
-								{#if isTt6ChallengeComplete(challenge, teamProgress)}
-									<span class="station done">✔</span>
-								{:else}
-									<span class="station"></span>
-								{/if}
+							<button
+								on:click={() => openCallback(challenge)}
+								class={[
+									isTt6ChallengeComplete(challenge, teamProgress) ? 'done' : false,
+									teamProgress[challenge.id]?.failed ? 'failed' : false,
+									challenge.linkId ? 'linked' : false,
+								]
+									.filter((x) => !!x)
+									.join(' ')}
+							>
 								<div class="wrap">
-									<h4>{challenge.title}</h4>
+									{#if challenge.shrinkTitle}
+										<h4 style="margin-bottom: 2em;">
+											<Tt6ShrinkingTitle text={challenge.title} />
+										</h4>
+									{:else}
+										<h4>{challenge.title}</h4>
+									{/if}
 									<p>{previewText(challenge.desc)}</p>
 								</div>
-								<span class="points">
-									{challenge.points}<span style={challenge.points === 1 ? 'margin-right: 5px;' : ''}
-										>pt{challenge.points === 1 ? '' : 's'}</span
-									>
-								</span>
+								{#if !challenge.isLinkTarget}
+									<span class="points">
+										{challenge.points}<span
+											style={challenge.points === 1 ? 'margin-right: 5px;' : ''}
+											>pt{challenge.points === 1 ? '' : 's'}</span
+										>
+									</span>
+								{/if}
 							</button>
 						</li>
 					{/each}
@@ -565,15 +582,10 @@
 	}
 
 	section.info {
-		color: black;
-
-		background: rgb(240, 240, 240);
-		border-bottom: 5px black solid;
-
 		max-width: 1000px;
 		display: block;
 		margin: 70px auto;
-		padding: 2.5em 4em;
+		padding: 0;
 		box-sizing: border-box;
 
 		z-index: 3;
@@ -954,16 +966,21 @@
 	}
 
 	.challengeWrap > div:first-child {
-		width: 350px;
+		width: 400px;
 		position: sticky;
-		top: 0;
+		top: 1em;
 		vertical-align: top;
 		box-sizing: border-box;
+	}
+
+	.challengeWrap > div:first-child h2 {
+		margin: 0.5em 0 0 0;
 	}
 
 	.challengeWrap > div:first-child ul {
 		list-style: none;
 		padding: 0;
+		text-align: left;
 	}
 
 	.challengeWrap > div:first-child li {
@@ -975,7 +992,7 @@
 	}
 
 	.challengeWrap > div:last-child {
-		width: calc(100% - 355px);
+		width: calc(100% - 405px);
 	}
 
 	.challengeWrap select {
@@ -1039,86 +1056,134 @@
 	}
 
 	.challengeList li {
-		margin: 0;
+		margin: 1em 0;
 		position: relative;
 	}
 
+	.challengeList.challenge button {
+		background: linear-gradient(
+			to top,
+			rgba(1, 128, 1, 0.7),
+			rgba(4, 64, 8, 0.7) 30%,
+			rgba(2, 34, 5, 0.7)
+		);
+		--accent-color: #3dae2b;
+	}
+
+	.challengeList.find button {
+		background: linear-gradient(
+			to top,
+			rgba(64, 1, 128, 0.7),
+			rgba(32, 4, 64, 0.5) 30%,
+			rgba(15, 2, 34, 0.7)
+		);
+		--accent-color: #af50df;
+	}
+
+	.challengeList.hard button,
+	.challengeList.hidden button {
+		background: linear-gradient(
+			to top,
+			rgba(128, 1, 1, 0.7),
+			rgba(64, 4, 8, 0.5) 30%,
+			rgba(34, 2, 5, 0.7)
+		);
+		--accent-color: #8a2631;
+	}
+
+	.challengeList button.done {
+		background: linear-gradient(
+			to top,
+			rgba(80, 80, 80, 0.5),
+			rgba(20, 20, 20, 0.7) 30%,
+			rgba(5, 5, 5, 0.7)
+		);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.challengeList button.done::before {
+		content: '✔';
+		opacity: 0.2;
+		pointer-events: none;
+		font-weight: bold;
+		font-size: 100px;
+		left: 20px;
+		position: absolute;
+	}
+
+	.challengeList button.failed {
+		background: linear-gradient(
+			to top,
+			rgba(80, 80, 80, 0.5),
+			rgba(20, 20, 20, 0.7) 30%,
+			rgba(5, 5, 5, 0.7)
+		);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.challengeList button.failed::before {
+		content: '❌';
+		opacity: 0.2;
+		pointer-events: none;
+		font-weight: bold;
+		font-size: 100px;
+		left: 20px;
+		position: absolute;
+	}
+
 	.challengeList button {
+		border-radius: 0.5em;
+		border-top-left-radius: 3em;
+		border-bottom-right-radius: 3em;
+
 		border: none;
-		color: black;
-		background: none;
-		width: 100%;
-		padding: 20px 30px 20px 40px;
+		border-top: 3px solid var(--accent-color);
+		color: white;
+		box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+		width: calc(100% - 20px);
+		margin: 0 auto;
+		padding: 20px 30px;
 		cursor: pointer;
 
-		position: relative;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
 	}
 
-	.challengeList.challenge {
-		--color: 61, 174, 43;
+	.challengeList button.linked {
+		width: calc(100% - 70px);
+		transform: translateX(25px);
 	}
 
-	.challengeList.find {
-		--color: 0, 160, 223;
-	}
+	.challengeList .nothing {
+		border-radius: 0.5em;
+		border-top-left-radius: 3em;
+		border-bottom-right-radius: 3em;
 
-	.challengeList.hard {
-		--color: 138, 38, 49;
-	}
+		border: none;
+		border-top: 3px solid var(--accent-color);
+		color: white;
+		box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+		background: linear-gradient(
+			to top,
+			rgba(80, 80, 80, 0.5),
+			rgba(20, 20, 20, 0.7) 30%,
+			rgba(5, 5, 5, 0.7)
+		);
 
-	.challengeList li:first-child button {
-		padding-top: 40px;
-	}
-
-	.challengeList.find li:first-child button .station {
-		top: 45px;
-	}
-
-	.challengeList li:first-child button .station {
-		top: 30px;
-	}
-
-	.challengeList button::before {
-		width: 10px;
-		height: 100%;
-		position: absolute;
-		background: rgb(var(--color));
-		content: '';
-		top: 0;
-		left: 0px;
-	}
-
-	.challengeList .station {
-		width: 40px;
-		height: 40px;
-		border-radius: 40px;
-		box-sizing: border-box;
-		background: white;
-		position: absolute;
-		top: 10px;
-		left: -15px;
-		border: 5px black solid;
+		width: calc(100% - 250px);
+		margin: 0 auto;
+		padding: 20px 30px;
 
 		display: flex;
+		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-	}
-
-	.challengeList .station.done {
-		background: black;
-		font-size: 30px;
-		overflow: hidden;
-		border: none;
-		color: white;
-		font-weight: 900;
-	}
-
-	.challengeList.find .station {
-		top: 25px;
+		text-align: center;
 	}
 
 	.challengeList .points {
@@ -1147,7 +1212,6 @@
 		font-size: 16px;
 		margin: 0 0 5px 0;
 		font-weight: bold;
-		font-family: 'ClearSansBold', 'Arial', sans-serif;
 
 		text-align: left;
 	}
@@ -1164,5 +1228,17 @@
 		line-clamp: 2;
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
+	}
+
+	.challengeList.challenge {
+		--color: 61, 174, 43;
+	}
+
+	.challengeList.find {
+		--color: 0, 160, 223;
+	}
+
+	.challengeList.hard {
+		--color: 138, 38, 49;
 	}
 </style>
